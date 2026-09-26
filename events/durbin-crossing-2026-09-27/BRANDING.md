@@ -15,10 +15,18 @@
 
 ## Wheel center (hub)
 
-**Critters on Call text only** (`.wheel-hub-brand`: “Critters” / “on Call”).
+**Critters on Call Gold Membership medallion** — metallic gold gradient hub (`.gold-card-hub`) with embossed card feel, generic chip accent, and `.wheel-hub-brand` text: “Critters on Call” / “GOLD” / “Member”. Evokes premium gold membership card marketing; not a bank trademark 1:1.
+
+**Betty & Gus** (farm guardians from Homestead Defender / Pyrenees Guard):
+
+| Character | Role | Asset |
+|-----------|------|-------|
+| Betty | Barn Queen · cream Great Pyrenees | `assets/betty.png` (from `/workspace/critters-play/assets/betty.png`) |
+| Gus | Night Scout · black-and-tan Pyrenees mix | `assets/gus.png` (from `/workspace/critters-play/assets/gus.png`) |
+
+Placed as fixed chrome flanking the wheel (`.wheel-mascot--betty` / `--gus`) so they do **not** spin with the wheel.
 
 - Sheehan Homestead / chicken-in-circle logo is **not** placed in the hub (source file used only to sample green).
-- Decorative hen mark under the title removed.
 - Header favicon + small brand chip may still use `hen-mark-gold.png` (monochrome/gold Critters mark).
 
 ## Event details (on-page)
