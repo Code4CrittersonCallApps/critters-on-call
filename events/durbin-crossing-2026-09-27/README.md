@@ -35,6 +35,19 @@ http://localhost:8766/events/durbin-crossing-2026-09-27/
 4. Claim panel also shows **farm address** + optional Google review. No tour push.
 5. Max **3 spins** per device (localStorage spin counter only). **Free spin does not count** against the 3.
 
+## Tester reset
+
+Open this URL to clear the spin counters for this event and reload the wheel:
+
+https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?reset=1
+
+The reset clears only these event-scoped localStorage keys:
+
+- `coc_dc_device_v2_durbin-crossing-2026-09-27`
+- `coc_dc_identity_spins_v1_durbin-crossing-2026-09-27`
+
+It does not clear leads, claims, or any production rules. The `reset=1` parameter is removed before the reload.
+
 ## Rules (client-side)
 
 - Max **3 spins** · free-spin wedge does **not** decrement

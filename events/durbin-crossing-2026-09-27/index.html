@@ -417,6 +417,27 @@
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
+  /* Tester-only reset: clear this event's spin counters, then remove the
+     query parameter and reload so a shared reset link is safe to reuse. */
+  function resetSpinStateIfRequested() {
+    try {
+      var params = new URLSearchParams(location.search);
+      if (params.get("reset") !== "1") return false;
+      localStorage.removeItem(STORE_DEVICE);
+      localStorage.removeItem(STORE_IDENTITY);
+      params.delete("reset");
+      var cleanQuery = params.toString();
+      var cleanUrl = location.pathname + (cleanQuery ? "?" + cleanQuery : "") + location.hash;
+      history.replaceState(null, "", cleanUrl);
+      location.reload();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  if (resetSpinStateIfRequested()) return;
+
   /* 6 segments — equal 60° wedges; weights can vary */
   var PRIZES = [
     {
