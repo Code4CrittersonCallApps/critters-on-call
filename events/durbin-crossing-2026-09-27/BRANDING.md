@@ -15,17 +15,14 @@
 
 ## Wheel center (hub)
 
-**Critters on Call Gold Membership medallion** — metallic gold gradient hub (`.gold-card-hub`) with embossed card feel, generic chip accent, and `.wheel-hub-brand` text: “Critters on Call” / “GOLD” / “Member”. Evokes premium gold membership card marketing; not a bank trademark 1:1.
+**Critters on Call Gold Membership card art** — real shipped card (Sophie the Great Pyrenees + goat-with-phone + pig + duck + ducklings), circular crop covering the hub disk.
 
-**Betty & Gus** (farm guardians from Homestead Defender / Pyrenees Guard):
+| Asset | Source |
+|-------|--------|
+| `assets/gold-card-hub.jpg` | Crop of `exec/collateral/gold-card.jpg` (same art as flyers / gold-card brochure / membership one-pagers). Centered on the animal medallion + “CRITTERS ON CALL” card framing. |
 
-| Character | Role | Asset |
-|-----------|------|-------|
-| Betty | Barn Queen · cream Great Pyrenees | `assets/betty.png` (from `/workspace/critters-play/assets/betty.png`) |
-| Gus | Night Scout · black-and-tan Pyrenees mix | `assets/gus.png` (from `/workspace/critters-play/assets/gus.png`) |
-
-Placed as fixed chrome flanking the wheel (`.wheel-mascot--betty` / `--gus`) so they do **not** spin with the wheel.
-
+- No CSS fake metallic medallion.
+- No Betty / Gus flanking chrome on this event page.
 - Sheehan Homestead / chicken-in-circle logo is **not** placed in the hub (source file used only to sample green).
 - Header favicon + small brand chip may still use `hen-mark-gold.png` (monochrome/gold Critters mark).
 
@@ -33,6 +30,6 @@ Placed as fixed chrome flanking the wheel (`.wheel-mascot--betty` / `--gus`) so 
 
 Visible in `.event-details` on `index.html`: Sunday Sep 27 2026 · 10 AM–1 PM · Durbin Crossing · 145 South Durbin Parkway, St Johns FL 32259 · Animal pickup 8:45 AM · Kate Smith / Vesta CDD line.
 
-## Wheel labels (v3 voice)
+## Wheel labels
 
-Scoped under `.dc-wheel`: font ~0.48rem, `span` `top: 0.32rem` (toward rim), width ~2.85rem, two-line shorts (`$10<br>THRIFT`, etc.) so each label stays inside its 45° wedge.
+Scoped under `.dc-wheel`: font ~0.48rem, mid-wedge placement via JS (`i*60°` with conic from `-30deg`), two-line shorts so each label stays inside its 60° wedge.
