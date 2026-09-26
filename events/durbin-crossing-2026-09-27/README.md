@@ -26,7 +26,12 @@ http://localhost:8766/events/durbin-crossing-2026-09-27/
 
 1. **Spin without email/phone** — no gate before the wheel.
 2. Prize result shows **immediately** when the wheel stops.
-3. Tap **“Claim your prize”** → visible contact: **mailto** `sheehanhomestead@gmail.com` (subject/body prefilled with prize + Durbin Crossing) and **sms** `914-263-1311` (body e.g. `Durbin prize: $10 thrift gift`). Honest fallback — page does **not** capture claims server-side.
+3. Tap **“Claim your prize”** → on-screen claim paths (any one works):
+   - Text **PRIZE** to **914-263-1311**
+   - DM on Facebook (**Sheehan Homestead** — `https://www.facebook.com/profile.php?id=61556795506312`)
+   - Email **sheehanhomestead@gmail.com** (mailto prefilled with prize + Durbin Crossing)
+   - Website booking help: **https://www.sheehanhomestead.com/booking-help**
+   Honest fallback — page does **not** capture claims server-side.
 4. Claim panel also shows **farm address** + optional Google review. No tour push.
 5. Max **3 spins** per device (localStorage spin counter only). **Free spin does not count** against the 3.
 
@@ -35,7 +40,7 @@ http://localhost:8766/events/durbin-crossing-2026-09-27/
 - Max **3 spins** · free-spin wedge does **not** decrement
 - **Grand prize** = Critters on Call Gold Membership ($100 · $50 membership · $25 farm tour · $25 thrift or farm gift) — **uncapped**
 - Separate **Gold membership** wedge remains uncapped
-- Claims: email / text staff (not browser-only). Review link after claim reveal: `https://g.page/r/CS74JMTm3xrWEAE/review`
+- Claims: text PRIZE / Facebook DM / email / booking-help (not browser-only). Review link after claim reveal: `https://g.page/r/CS74JMTm3xrWEAE/review`
 - Staff `admin.html` (PIN `0927`) is legacy tooling only
 
 ## Wheel (6 segments · equal 60° wedges) · weights sum 100%
@@ -54,6 +59,7 @@ http://localhost:8766/events/durbin-crossing-2026-09-27/
 ## Files
 
 - `index.html` — wheel + claim-after-spin + farm address + expiry  
+- `assets/qr-wheel.png` — QR to live wheel URL  
 - `admin.html` — CSV export / mailto stub  
 - `hen-mark-gold.png` — hen mark (header/favicon only)  
 - `qr/` — print QRs  
