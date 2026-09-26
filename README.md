@@ -23,6 +23,7 @@ http://localhost:8766/
 - Goat QRs: `?goat=01` … `?goat=12` — see `events/durbin-crossing-2026-09-27/QR-STICKERS.md`
 - Staff CSV: `events/durbin-crossing-2026-09-27/admin.html` (PIN 0927)
 - Outline (CRM + mom app): `events/durbin-crossing-2026-09-27/OUTLINE.md`
+- **Claim paths:** Text `PRIZE` to `914-263-1311`; DM **Sheehan Homestead** on Facebook; email `sheehanhomestead@gmail.com`; or use https://www.sheehanhomestead.com/booking-help
 
 ## Prize wheel (“How Sweet It Is”)
 Eight slices: spin-again (Priceless) ×2 · Gold Membership ($50) ×2 · free farm gift ($25) · free thrift gift ($25) · free farm tour ($25) · Gold Pro nomination ($299).
