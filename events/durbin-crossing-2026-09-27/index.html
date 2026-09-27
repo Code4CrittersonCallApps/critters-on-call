@@ -74,6 +74,17 @@
     pointer-events: none;
     user-select: none;
   }
+  /* Keep the hen in step with the Sophie/animal artwork: one shared, gentle
+     breathe instead of a separate bob or wiggle. */
+  .dc-wheel .wheel-hub .gold-card-art,
+  .dc-wheel .wheel-hub .hub-chicken {
+    animation: dc-hub-animal-breathe 4.2s ease-in-out infinite;
+    transform-origin: center center;
+  }
+  @keyframes dc-hub-animal-breathe {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-1px) scale(1.01); }
+  }
   /* Small real hen mark from exec/collateral, kept on a quiet plaque so the
      Sophie Gold Card artwork remains the visual anchor. */
   .dc-wheel .wheel-hub .hub-chicken {
@@ -89,16 +100,11 @@
     background: rgba(26,21,8,0.56);
     box-shadow: 0 1px 4px rgba(0,0,0,0.45);
     object-fit: contain;
-    transform-origin: 52% 82%;
-    animation: dc-chicken-bob 3.8s ease-in-out infinite;
     pointer-events: none;
     user-select: none;
   }
-  @keyframes dc-chicken-bob {
-    0%, 100% { transform: translateY(0) rotate(-2deg); }
-    50% { transform: translateY(-2px) rotate(3deg); }
-  }
   @media (prefers-reduced-motion: reduce) {
+    .dc-wheel .wheel-hub .gold-card-art,
     .dc-wheel .wheel-hub .hub-chicken { animation: none; }
   }
   .goat-chip {
@@ -110,18 +116,20 @@
     font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;
   }
   .spin-meta strong { color: var(--fg); }
-  /* 8 equal 45° wedges — midpoints at i*45+22.5 */
+  /* 8 equal 45° wedges — midpoints at i*45+22.5. Each prize gets its
+     own homestead green, gold, or warm accent; Gold Card is the brightest,
+     most premium finish. */
   .prize-wheel.dc-wheel {
     background: conic-gradient(
       from 0deg,
-      #c9a227 0deg 45deg,
-      #4C6458 45deg 90deg,
-      #E8D48C 90deg 135deg,
-      #3A4F45 135deg 180deg,
-      #B8923A 180deg 225deg,
-      #5A7366 225deg 270deg,
-      #D4B84A 270deg 315deg,
-      #2F4038 315deg 360deg
+      #F2C94C 0deg 45deg,
+      #587A5B 45deg 90deg,
+      #D99A3D 90deg 135deg,
+      #2F5D50 135deg 180deg,
+      #C96F4A 180deg 225deg,
+      #86A65B 225deg 270deg,
+      #B85C38 270deg 315deg,
+      #1F4A3C 315deg 360deg
     );
     box-shadow:
       0 0 0 3px rgba(76,100,88,0.6),
@@ -132,6 +140,17 @@
   .wheel-label.is-gift { color: #fff8e6; }
   .wheel-label.is-again { color: #F3EEE4; font-weight: 700; }
   .wheel-label.is-membership { color: #1a1508; font-weight: 800; }
+  /* Every label receives contrast for its specific wedge, including the two
+     warm accents and the premium Gold Card wedge. */
+  .dc-wheel .wheel-label[data-wedge="0"],
+  .dc-wheel .wheel-label[data-wedge="2"],
+  .dc-wheel .wheel-label[data-wedge="4"],
+  .dc-wheel .wheel-label[data-wedge="5"],
+  .dc-wheel .wheel-label[data-wedge="6"] { color: #211708; font-weight: 800; }
+  .dc-wheel .wheel-label[data-wedge="1"],
+  .dc-wheel .wheel-label[data-wedge="3"],
+  .dc-wheel .wheel-label[data-wedge="7"] { color: #fff8e6; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+  .dc-wheel .wheel-label[data-wedge="0"] { text-shadow: 0 1px 0 rgba(255,248,230,0.3); }
   .field { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.75rem; }
   .field label { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
   .field input {
@@ -703,6 +722,7 @@
       else if (p.kind === "again") cls += "is-again";
       else cls += (i % 2 === 0 ? "is-light" : "is-dark");
       el.className = cls;
+      el.dataset.wedge = String(i);
       el.style.transform = "rotate(" + deg + "deg)";
       el.innerHTML = '<span' + (flip ? ' class="is-flipped"' : '') + '>' +
         p.short + (p.kind === "grand" ? " ★" : "") + "</span>";
