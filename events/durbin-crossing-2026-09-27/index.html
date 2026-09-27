@@ -298,7 +298,6 @@
           <strong>Sunday, September 27, 2026</strong> · 10 AM – 1 PM<br />
           <span class="addr">Durbin Crossing · 145 South Durbin Parkway<br />St Johns, FL 32259</span>
           <p class="pickup">Animal pickup 8:45 AM</p>
-          <p class="host">Kate Smith / Vesta CDD · Critters on Call event wheel</p>
         </div>
         <p class="goat-chip" id="goat-chip" hidden></p>
       </div>
@@ -515,6 +514,12 @@
       fulfill: "Free $25 farm ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
     }
   ];
+
+  /* Exactly one Gold Card top-prize wedge; the other seven are non-gold prizes. */
+  var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
+  if (PRIZES.length !== 8 || goldCardCount !== 1) {
+    throw new Error("Durbin wheel must have exactly one Gold Card prize and seven other prizes");
+  }
 
   /* Weights sum 100. Gold Card is rare; free spin is more common; $25 wedges are rarer. */
   var WEIGHTS = [5, 18, 15, 10, 10, 22, 10, 10];
