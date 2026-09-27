@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-ROOT = Path("/workspace/dashboard/exec-suite")
+ROOT = Path("/workspace/critters-on-call/exec")
 
 # page -> (face, chip)
 PAGES = {

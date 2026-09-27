@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Jacksonville geo · Investor view · Sheehan Homestead</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--warn:#ffb020;--bad:#ff5d6c;--violet:#a78bfa;--gold:#c9a227}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45;display:flex;flex-direction:column}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.top{flex:0 0 auto;padding:12px 16px 8px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0e1626,#0b1220)}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 6px}.crumb a{color:#fde68a;font-weight:600}
+h1{font-size:clamp(1.15rem,2.5vw,1.45rem);margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.82rem;margin:0 0 8px;max-width:72ch}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 11px;min-width:88px}
+.kpi .l{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font-size:1.05rem;font-weight:800;color:#9dffc5}
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.filters select,.filters input{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:7px 10px;border-radius:999px;font-size:.72rem;min-height:34px}
+.filters input{min-width:140px;flex:1}
+.filters button{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:7px 11px;border-radius:999px;font-size:.7rem;font-weight:700;cursor:pointer;min-height:34px}
+.filters button.on{border-color:#3dd68c88;background:#13281d;color:#9dffc5}
+.filters button.gold.on{border-color:#c9a22788;background:#2a2210;color:#fde68a}
+.legend{font-size:.68rem;color:var(--muted);margin:6px 0 0}
+.legend b{color:#c5d0e6;font-weight:600}
+.main{flex:1;min-height:0;display:grid;grid-template-columns:1fr minmax(300px,380px)}
+@media(max-width:860px){.main{grid-template-columns:1fr;grid-template-rows:55vh 1fr}}
+#map{width:100%;height:100%;background:#0a1020;min-height:320px}
+.side{border-left:1px solid var(--line);background:var(--panel);overflow:auto;padding:12px 14px 28px}
+@media(max-width:860px){.side{border-left:0;border-top:1px solid var(--line)}}
+.side h2{font-size:.95rem;margin:0 0 8px}
+.side .empty{color:var(--muted);font-size:.82rem;padding:12px 0}
+.chip{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.cust{border-color:#3dd68c88;color:#9dffc5;font-weight:700}
+.chip.lapse{border-color:#ffb02088;color:#fde68a;font-weight:700}
+.chip.pros{border-color:#5b8cff66;color:#93c5fd}
+.chip.tier-s{border-color:#ff6b4a88;color:#ff8a70;font-weight:800}
+.chip.tier-a{border-color:#3dd68c88;color:#9dffc5;font-weight:800}
+.chip.tier-b{border-color:#93a0b888;color:#93a0b8}
+.chip.nat{border-color:#a78bfa88;color:#c4b5fd;font-weight:700}
+.chip.reg{border-color:#67e8f988;color:#a5f3fc;font-weight:700}
+.chip.loc{border-color:#c9a22766;color:#fde68a}
+.chip.est{border-color:#ffb02055;color:#fde68a}
+.meta{font-size:.78rem;color:var(--muted);margin:0 0 8px}
+.meta b{color:#c5d0e6;font-weight:600}
+.related{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);max-height:160px;overflow:auto}
+.related h4{margin:0 0 6px;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.related a{display:block;font-size:.74rem;padding:3px 0;color:#93c5fd;cursor:pointer}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.links a{font-size:.72rem;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;font-weight:650;text-decoration:none}
+.links a:hover{border-color:var(--accent);text-decoration:none}
+.links a.pri{border-color:#3dd68c88;color:#9dffc5;background:#13281d}
+.links a.gold{border-color:#c9a22788;color:#fde68a;background:#2a2210}
+.county-list{margin:0 0 12px}
+.county-list button{display:flex;justify-content:space-between;width:100%;text-align:left;appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 10px;border-radius:10px;margin:0 0 5px;cursor:pointer;font-size:.78rem}
+.county-list button:hover,.county-list button.on{border-color:#5b8cff88;background:#152238}
+.county-list .n{color:#9dffc5;font-weight:700}
+.note{font-size:.68rem;color:var(--muted);margin-top:14px}
+.leaflet-container{background:#0a1020;font:inherit}
+.leaflet-popup-content-wrapper{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:12px}
+.leaflet-popup-tip{background:var(--card)}
+.leaflet-popup-content{margin:10px 12px;font-size:.78rem}
+.pin-dot{width:12px;height:12px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #0006}
+.county-bubble{background:#152238ee;border:1px solid #5b8cff88;color:#e8eefc;border-radius:999px;padding:4px 10px;font-size:.72rem;font-weight:700;white-space:nowrap;box-shadow:0 2px 8px #0008}
+.county-bubble span{color:#9dffc5;margin-left:4px}
+</style>
+</head>
+<body>
+<header class="top">
+  <p class="crumb"><a href="investor-home.html">Investor</a> · <a href="index.html">Ops hub</a> · <a href="growth-investor.html">Growth</a> · <a href="expansion-tampa.html">Tampa</a> → <b>Jax geo</b></p>
+  <h1>Jacksonville geographic investor view</h1>
+  <p class="sub">Map-first Jax metro (Duval · St. Johns · Clay · Nassau +). Click a county or account → manager family · wallet tier (honest s_tier) · related CDDs · dunk / TAM in two clicks. Geo pins = city/county centroids → <b>Estimated</b>.</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="filters" id="filters">
+    <button type="button" class="on gold" data-focus="1" title="Managed / customer / S·A / Regional Enterprise">Investor focus</button>
+    <button type="button" data-focus="0">All TAM</button>
+    <button type="button" data-status="customer">Customers</button>
+    <button type="button" data-status="prospect">Prospects</button>
+    <button type="button" data-status="lapsed">Lapsed</button>
+    <button type="button" data-managed="1">Has manager</button>
+    <button type="button" data-cdd="1">CDD/HOA-ish</button>
+    <select id="f-county"><option value="">All counties</option></select>
+    <select id="f-mgmt"><option value="">All managers</option></select>
+    <select id="f-sector"><option value="">All sectors</option></select>
+    <select id="f-tier"><option value="">All s_tier</option><option>S</option><option>A</option><option>B</option><option>C</option><option>D</option></select>
+    <select id="f-scale"><option value="">All manager scales</option><option value="national">National</option><option value="regional">Regional</option><option value="local">Local</option></select>
+    <input id="q" type="search" placeholder="Search org / contact / place…" autocomplete="off"/>
+  </div>
+  <p class="legend"><b>Wallet:</b> S/A/B/C/D from <code>s_tier</code> (not AA/AAA) · <b>Customer vs prospect:</b> penetration (+ Vesta cluster / dialer is_customer) · <b>Pipeline:</b> strong bookings title match</p>
+</header>
+<div class="main">
+  <div id="map" role="application" aria-label="Jacksonville metro map"></div>
+  <aside class="side" id="side">
+    <h2>Start from geography</h2>
+    <p class="meta">Click a county bubble or pin. Default lens = investor focus (managed · customer · S/A · Regional Enterprise / CDD-ish).</p>
+    <div class="county-list" id="county-list"></div>
+    <div id="detail"><div class="empty">Select a county or account pin → detail drawer.</div></div>
+    <p class="note" id="src-note">Loading data…</p>
+  </aside>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  const map = L.map('map', {zoomControl:true, attributionControl:true}).setView([30.25, -81.55], 9);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> · pins Estimated centroids'
+  }).addTo(map);
+
+  const pinLayer = L.layerGroup().addTo(map);
+  const countyLayer = L.layerGroup().addTo(map);
+
+  let DATA = null;
+  let state = {focus:true, status:'', managed:false, cdd:false, county:'', mgmt:'', sector:'', tier:'', scale:'', q:''};
+  let selectedId = null;
+
+  function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function money(n){if(n==null||n==='')return '—'; return '$'+Number(n).toLocaleString('en-US')}
+
+  function pinColor(p){
+    if(p.status==='customer') return '#3dd68c';
+    if(p.status==='lapsed') return '#ffb020';
+    if(p.s_tier==='S') return '#ff6b4a';
+    if(p.s_tier==='A') return '#5b8cff';
+    if(p.management_company) return '#a78bfa';
+    return '#64748b';
+  }
+
+  function matches(p){
+    if(state.focus && !p.investor_focus) return false;
+    if(state.status && p.status !== state.status) return false;
+    if(state.managed && !p.management_company) return false;
+    if(state.cdd && !p.is_cddish) return false;
+    if(state.county && p.county !== state.county) return false;
+    if(state.mgmt && p.management_company !== state.mgmt) return false;
+    if(state.sector && p.sector !== state.sector) return false;
+    if(state.tier && p.s_tier !== state.tier) return false;
+    if(state.scale && p.manager_scale !== state.scale) return false;
+    if(state.q){
+      const hay = [p.company_name,p.county,p.place_label,p.management_company,p.contact,p.email,p.sector,p.seat,(p.tags||[]).join(' ')].join(' ').toLowerCase();
+      if(!hay.includes(state.q)) return false;
+    }
+    return true;
+  }
+
+  function filtered(){return (DATA.pins||[]).filter(matches)}
+
+  function renderKpis(list){
+    const cust = list.filter(p=>p.status==='customer').length;
+    const managed = list.filter(p=>p.management_company).length;
+    const withEmail = list.filter(p=>p.email).length;
+    const acv = list.reduce((s,p)=>s+(p.target_acv||0),0);
+    document.getElementById('kpis').innerHTML = [
+      ['Pins shown', list.length],
+      ['Customers', cust],
+      ['Managed', managed],
+      ['With email', withEmail],
+      ['Σ target ACV', money(acv)],
+    ].map(([l,v])=>`<div class="kpi"><div class="l">${esc(l)}</div><div class="v">${esc(v)}</div></div>`).join('');
+  }
+
+  function renderCounties(){
+    const el = document.getElementById('county-list');
+    const counts = {};
+    filtered().forEach(p=>{const c=p.county||'(blank)'; counts[c]=(counts[c]||0)+1});
+    el.innerHTML = (DATA.counties||[]).map(c=>{
+      const n = counts[c.county]||0;
+      if(!n && state.focus) return '';
+      const on = state.county===c.county ? ' on':'';
+      return `<button type="button" data-county="${esc(c.county)}" class="${on}"><span>${esc(c.county)} · ${esc(c.place_label||'')}</span><span class="n">${n}</span></button>`;
+    }).join('') || '<div class="empty">No counties in filter.</div>';
+    el.querySelectorAll('button[data-county]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const c = btn.getAttribute('data-county');
+        state.county = state.county===c ? '' : c;
+        document.getElementById('f-county').value = state.county;
+        const cent = (DATA.counties||[]).find(x=>x.county===c);
+        if(cent && cent.lat!=null) map.setView([cent.lat, cent.lng], 10);
+        refresh();
+      });
+    });
+  }
+
+  function showDetail(p){
+    selectedId = p.id;
+    const tags = [];
+    tags.push(`<span class="chip ${p.status==='customer'?'cust':p.status==='lapsed'?'lapse':'pros'}">${esc(p.status)}</span>`);
+    if(p.pipeline) tags.push('<span class="chip cust">pipeline</span>');
+    if(p.management_company) tags.push(`<span class="chip">Mgr: ${esc(p.management_company)}</span>`);
+    if(p.manager_scale==='national') tags.push(`<span class="chip nat">${esc(p.manager_scale_label||'National')}</span>`);
+    else if(p.manager_scale==='regional') tags.push(`<span class="chip reg">${esc(p.manager_scale_label||'Regional')}</span>`);
+    else if(p.manager_scale==='local') tags.push(`<span class="chip loc">${esc(p.manager_scale_label||'Local')}</span>`);
+    const tc = p.s_tier==='S'?'tier-s':p.s_tier==='A'?'tier-a':'tier-b';
+    tags.push(`<span class="chip ${tc}">${esc(p.wallet_tag||('s_tier '+p.s_tier))}</span>`);
+    if(p.market_tier) tags.push(`<span class="chip">${esc(p.market_tier)}</span>`);
+    if(p.sector) tags.push(`<span class="chip">${esc(p.sector)}</span>`);
+    tags.push('<span class="chip est">Geo Estimated</span>');
+
+    let related = '';
+    if(p.related_cdds && p.related_cdds.length){
+      related = `<div class="related"><h4>Related under ${esc(p.management_company)} (${p.related_count})</h4>`
+        + p.related_cdds.slice(0,25).map(r=>{
+            return `<a data-rel="${esc(r.account_id)}" href="#">${esc(r.company_name)}</a>`;
+          }).join('')
+        + (p.related_count>25?`<div class="meta">+${p.related_count-25} more in TAM</div>`:'')
+        + `</div>`;
+    }
+
+    const book = (p.pipeline_bookings||[]).map(b=>`<div class="meta">Booking: <b>${esc(b.title)}</b> · ${esc(b.status)}</div>`).join('');
+
+    const links = [];
+    links.push(`<a class="pri" href="principal-dunk.html">Dunk board</a>`);
+    links.push(`<a class="pri" href="bdr-tam.html">RevOps TAM / dialer</a>`);
+    if(p.account_page) links.push(`<a class="gold" href="${esc(p.account_page)}">Account page</a>`);
+    if(p.email) links.push(`<a href="mailto:${esc(p.email)}">mailto ${esc(p.email)}</a>`);
+    links.push(`<a href="growth-investor.html">Growth sprint</a>`);
+    links.push(`<a href="investor-home.html">Investor home</a>`);
+
+    document.getElementById('detail').innerHTML = `
+      <h2>${esc(p.company_name)}</h2>
+      <div>${tags.join('')}</div>
+      <div class="meta"><b>${esc(p.county||'—')}</b> · ${esc(p.place_label||'')} · seat ${esc(p.seat||'—')}</div>
+      <div class="meta">Target ACV ${money(p.target_acv)} · high ${money(p.high_acv)} · status src: ${esc(p.status_source||'')}</div>
+      ${p.contact?`<div class="meta">Contact: <b>${esc(p.contact)}</b>${p.title?(' · '+esc(p.title)):''}${p.phone?(' · '+esc(p.phone)):''}</div>`:''}
+      ${p.one_liner?`<div class="meta">${esc(p.one_liner)}</div>`:''}
+      ${book}
+      ${related}
+      <div class="links">${links.join('')}</div>
+    `;
+    document.getElementById('detail').querySelectorAll('a[data-rel]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('data-rel');
+        const other = DATA.pins.find(x=>String(x.id)===String(id));
+        if(other){
+          map.setView([other.lat, other.lng], 12);
+          showDetail(other);
+          // ensure visible under filters — if filtered out, briefly clear focus/mgmt
+          if(!matches(other)){
+            state.focus=false; state.mgmt=''; state.status=''; state.county=other.county||'';
+            document.querySelectorAll('#filters button[data-focus]').forEach(b=>b.classList.toggle('on', b.getAttribute('data-focus')==='0'));
+            document.getElementById('f-mgmt').value='';
+            document.getElementById('f-county').value=state.county;
+            refresh();
+            showDetail(other);
+          }
+        }
+      });
+    });
+  }
+
+  function renderPins(list){
+    pinLayer.clearLayers();
+    countyLayer.clearLayers();
+
+    // County bubbles from full county meta, sized by filtered counts
+    const byC = {};
+    list.forEach(p=>{const c=p.county||'(blank)'; byC[c]=(byC[c]||0)+1});
+    (DATA.counties||[]).forEach(c=>{
+      if(c.lat==null) return;
+      const n = byC[c.county]||0;
+      if(!n) return;
+      const icon = L.divIcon({
+        className:'',
+        html:`<div class="county-bubble">${esc(c.county)}<span>${n}</span></div>`,
+        iconSize:[120,28], iconAnchor:[60,14]
+      });
+      const m = L.marker([c.lat, c.lng], {icon, zIndexOffset:500}).addTo(countyLayer);
+      m.on('click', ()=>{
+        state.county = c.county;
+        document.getElementById('f-county').value = c.county;
+        map.setView([c.lat, c.lng], 10);
+        refresh();
+      });
+    });
+
+    // Cap markers if huge — still show all under investor focus (~500)
+    const maxPins = 900;
+    const show = list.length > maxPins ? list.slice(0, maxPins) : list;
+    show.forEach(p=>{
+      const color = pinColor(p);
+      const icon = L.divIcon({
+        className:'',
+        html:`<div class="pin-dot" style="background:${color}"></div>`,
+        iconSize:[12,12], iconAnchor:[6,6]
+      });
+      const m = L.marker([p.lat, p.lng], {icon, title:p.company_name}).addTo(pinLayer);
+      m.bindPopup(`<b>${esc(p.company_name)}</b><br/>${esc(p.county||'')} · ${esc(p.status)} · ${esc(p.wallet_tag||'')}<br/><span style="color:#fde68a">Estimated geo</span>`);
+      m.on('click', ()=>showDetail(p));
+    });
+  }
+
+  function refresh(){
+    const list = filtered();
+    renderKpis(list);
+    renderCounties();
+    renderPins(list);
+    document.getElementById('src-note').textContent =
+      `Source: data/investor_jax_geo.json · ${DATA.as_of||''} · showing ${list.length} / ${DATA.pins.length} pins · ${DATA.rule||''}`;
+    if(selectedId){
+      const p = list.find(x=>x.id===selectedId) || DATA.pins.find(x=>x.id===selectedId);
+      if(p) showDetail(p);
+    }
+  }
+
+  function fillSelects(){
+    const counties = [...new Set(DATA.pins.map(p=>p.county).filter(Boolean))].sort();
+    const mgmt = [...new Set(DATA.pins.map(p=>p.management_company).filter(Boolean))].sort();
+    const sectors = [...new Set(DATA.pins.map(p=>p.sector).filter(Boolean))].sort();
+    const fc = document.getElementById('f-county');
+    counties.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;fc.appendChild(o)});
+    const fm = document.getElementById('f-mgmt');
+    mgmt.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;fm.appendChild(o)});
+    const fs = document.getElementById('f-sector');
+    sectors.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;fs.appendChild(o)});
+  }
+
+  document.getElementById('filters').addEventListener('click', e=>{
+    const btn = e.target.closest('button');
+    if(!btn) return;
+    if(btn.hasAttribute('data-focus')){
+      state.focus = btn.getAttribute('data-focus')==='1';
+      document.querySelectorAll('#filters button[data-focus]').forEach(b=>b.classList.toggle('on', b===btn));
+      refresh(); return;
+    }
+    if(btn.hasAttribute('data-status')){
+      const v = btn.getAttribute('data-status');
+      state.status = state.status===v ? '' : v;
+      document.querySelectorAll('#filters button[data-status]').forEach(b=>b.classList.toggle('on', state.status && b.getAttribute('data-status')===state.status));
+      refresh(); return;
+    }
+    if(btn.hasAttribute('data-managed')){
+      state.managed = !state.managed;
+      btn.classList.toggle('on', state.managed);
+      refresh(); return;
+    }
+    if(btn.hasAttribute('data-cdd')){
+      state.cdd = !state.cdd;
+      btn.classList.toggle('on', state.cdd);
+      refresh(); return;
+    }
+  });
+  document.getElementById('f-county').addEventListener('change', e=>{state.county=e.target.value; refresh()});
+  document.getElementById('f-mgmt').addEventListener('change', e=>{state.mgmt=e.target.value; refresh()});
+  document.getElementById('f-sector').addEventListener('change', e=>{state.sector=e.target.value; refresh()});
+  document.getElementById('f-tier').addEventListener('change', e=>{state.tier=e.target.value; refresh()});
+  document.getElementById('f-scale').addEventListener('change', e=>{state.scale=e.target.value; refresh()});
+  document.getElementById('q').addEventListener('input', e=>{state.q=(e.target.value||'').trim().toLowerCase(); refresh()});
+
+  fetch('data/investor_jax_geo.json').then(r=>r.json()).then(d=>{
+    DATA = d;
+    fillSelects();
+    refresh();
+    // Deep-link ?id= or ?q=
+    const params = new URLSearchParams(location.search);
+    const q = params.get('q');
+    const id = params.get('id');
+    if(q){ state.q=q.toLowerCase(); document.getElementById('q').value=q; state.focus=false; refresh(); }
+    if(id){
+      const p = DATA.pins.find(x=>String(x.id)===String(id) || (x.company_name||'').toLowerCase().includes(id.toLowerCase()));
+      if(p){ state.focus=false; state.county=p.county||''; refresh(); map.setView([p.lat,p.lng],12); showDetail(p); }
+    }
+  }).catch(err=>{
+    document.getElementById('detail').innerHTML = `<div class="empty">Failed to load data/investor_jax_geo.json — ${esc(err)}</div>`;
+  });
+})();
+</script>
+</body></html>

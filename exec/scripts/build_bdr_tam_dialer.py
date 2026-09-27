@@ -21,7 +21,7 @@ except ImportError:
     import openpyxl
 
 ET = ZoneInfo("America/New_York")
-OUT = Path("/workspace/dashboard/exec-suite/data/bdr_tam_dialer.json")
+OUT = Path("/workspace/critters-on-call/exec/data/bdr_tam_dialer.json")
 AS_OF = datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")
 
 # Canonical segment labels (chip order — Tier1 focus sectors first)
@@ -512,10 +512,10 @@ def main():
 
     # 1) Enterprise / BDR primary dialers
     for path, src in [
-        ("/workspace/dashboard/exec-suite/data/enterprise_call_now.json", "enterprise_call_now"),
-        ("/workspace/dashboard/exec-suite/data/enterprise_dialer.json", "enterprise_dialer"),
-        ("/workspace/dashboard/exec-suite/data/bdr_enterprise_dialer.json", "bdr_enterprise_dialer"),
-        ("/workspace/dashboard/exec-suite/data/bdr_primary_dialer.json", "bdr_primary_dialer"),
+        ("/workspace/critters-on-call/exec/data/enterprise_call_now.json", "enterprise_call_now"),
+        ("/workspace/critters-on-call/exec/data/enterprise_dialer.json", "enterprise_dialer"),
+        ("/workspace/critters-on-call/exec/data/bdr_enterprise_dialer.json", "bdr_enterprise_dialer"),
+        ("/workspace/critters-on-call/exec/data/bdr_primary_dialer.json", "bdr_primary_dialer"),
     ]:
         for r in load_json_list(path):
             D.add(
@@ -537,7 +537,7 @@ def main():
             )
 
     # 2) Fall priority
-    for r in load_json_list("/workspace/dashboard/exec-suite/data/fall_priority.json"):
+    for r in load_json_list("/workspace/critters-on-call/exec/data/fall_priority.json"):
         D.add(
             make_row(
                 account=r.get("company") or r.get("event"),
@@ -555,7 +555,7 @@ def main():
         )
 
     # 3) Org whitespace contacts
-    ow_path = Path("/workspace/dashboard/exec-suite/data/org_whitespace.json")
+    ow_path = Path("/workspace/critters-on-call/exec/data/org_whitespace.json")
     if ow_path.exists():
         ow = json.loads(ow_path.read_text())
         for o in ow.get("orgs") or []:
@@ -973,7 +973,7 @@ def main():
 
 
     # 10) Consumer inbound JSON (Violet fruit — never invent emails)
-    ci_path = Path("/workspace/dashboard/exec-suite/data/consumer_inbound.json")
+    ci_path = Path("/workspace/critters-on-call/exec/data/consumer_inbound.json")
     if ci_path.exists():
         ci = json.loads(ci_path.read_text())
         for r in ci.get("contacts") or []:

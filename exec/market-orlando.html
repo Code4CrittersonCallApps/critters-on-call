@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Orlando · Franchise template · Sheehan Homestead</title>
+<title>Orlando Expansion · Sheehan Homestead</title>
 <style>
-:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#5b8cff;--good:#3dd68c;--gold:#c9a227;--violet:#a78bfa}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:880px;margin:0 auto;padding:32px 22px 64px}
+.wrap{max-width:920px;margin:0 auto;padding:28px 22px 64px}
 .crumb{font-size:.82rem;color:var(--muted);margin:0 0 14px}.crumb a{color:#9ec1ff;font-weight:600}
-h1{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 6px;letter-spacing:-.02em}
-.sub{color:var(--muted);font-size:.95rem;max-width:52ch}
-.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;background:#1a1f2e;color:#93a0b8;border:1px solid #2a3548;margin-left:8px;vertical-align:middle}
-.banner{margin:18px 0 22px;padding:14px 16px;border:1px dashed #2a3548;border-radius:14px;background:#0f1728;font-size:.88rem;color:#c5d0e6}
+h1{font-size:clamp(1.4rem,3vw,1.9rem);margin:0 0 6px}
+.sub{color:var(--muted);font-size:.95rem;max-width:56ch}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:6px;border:1px solid #a78bfa88;color:#c4b5fd;background:#1a1430;margin-left:8px}
+.banner{margin:18px 0;padding:14px 16px;border:1px solid #a78bfa66;border-radius:14px;background:#14102a;font-size:.88rem;color:#c5d0e6}
 .sec-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 10px}
-.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:22px}
-.hub a{display:block;padding:18px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none;opacity:.75;cursor:default;pointer-events:none}
-.hub a h3{margin:0 0 4px;font-size:1.05rem}.hub a p{margin:0;color:var(--muted);font-size:.78rem}
-.hub a.ops{border-color:#fbbf2444}.hub a.growth{border-color:#5b8cff44}.hub a.support{border-color:#3dd68c44}
-.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.links a{font-size:.82rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none;font-weight:600}
-.links a:hover{border-color:var(--accent);color:#fff}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+.hub a{display:block;padding:18px 16px;border-radius:16px;border:1px solid var(--line);background:var(--card);color:inherit;text-decoration:none}
+.hub a:hover{transform:translateY(-2px);text-decoration:none}
+.hub a h3{margin:0 0 4px}.hub a p{margin:0;color:var(--muted);font-size:.78rem}
+.hub a.ops{border-color:#c9a22788}.hub a.ops h3{color:#fde68a}
+.hub a.growth{border-color:#3dd68c88}.hub a.growth h3{color:#9dffc5}
+.hub a.support{border-color:#3dd68c66}.hub a .go{margin-top:12px;font-size:.85rem;font-weight:800;color:#9dffc5}
+.fly{margin:0 0 22px;padding:14px 16px;border:1px solid #3dd68c66;border-radius:14px;background:linear-gradient(135deg,#13281d,#121a2b);font-size:.86rem}
+.fly h3{margin:0 0 8px;color:#9dffc5}.fly .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.fly .links a{font-size:.78rem;padding:8px 14px;border-radius:999px;border:1px solid #3dd68c66;background:#0e1626;color:#9dffc5;font-weight:700;text-decoration:none}
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px;margin:0 0 18px}
+.counts .k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.counts .l{font-size:.62rem;color:var(--muted);text-transform:uppercase}.counts .v{font-size:1.1rem;font-weight:800;color:#9dffc5}
+.links{display:flex;flex-wrap:wrap;gap:12px}.links a{font-size:.82rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:#c5d0e6;text-decoration:none;font-weight:600}
 .note{color:var(--muted);font-size:.78rem;margin-top:28px}
-</style></head>
-<body><div class="wrap">
-<p class="crumb"><a href="index.html">Layer Zero</a> → <b>Orlando</b></p>
+.stitch{margin:0 0 18px;padding:12px 14px;border:1px dashed #a78bfa66;border-radius:12px;background:#14102a;font-size:.8rem;color:#c5d0e6}
+</style></head><body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator hub (Ops primary)</a> → <b>Orlando Expansion</b></p>
 <header>
-  <h1>Orlando Homestead <span class="badge">Template</span></h1>
-  <p class="sub">Franchise market template · not live ops. Same pattern as Jacksonville: Ops · Growth · Support.</p>
+  <h1>Orlando Homestead <span class="badge">Expansion</span></h1>
+  <p class="sub">Same Florida playbook as Jax / Tampa — research-filled Expansion (not live ops revenue). Triangle: Jax live → Tampa → Orlando twin.</p>
 </header>
-<div class="banner">Sample market closest to Jax. Content TBD — no invented contacts, revenue, or live KPIs.</div>
-<div class="sec-label">Pattern (placeholder)</div>
-<nav class="hub" aria-label="Ops Growth Support placeholders">
-  <a class="ops" href="#"><h3>Ops</h3><p>Can we operate today? · TBD</p></a>
-  <a class="growth" href="#"><h3>Growth</h3><p>Customer path · TBD</p></a>
-  <a class="support" href="#"><h3>Support</h3><p>Catalog / giveables · TBD</p></a>
+<div class="banner"><b>Investor IA:</b> Homepage = Ops. Growth → dunk + map. Excel workbook is the primary TAM deliverable. Stay private with animals; fly local banner.</div>
+<div class="sec-label">Primary entry · Ops / Growth / Support</div>
+<nav class="hub">
+  <a class="ops" href="ops-today.html"><h3>Ops</h3><p>Operational view — Jax live ops pattern; Orlando not live revenue yet.</p><div class="go">Open Ops (Jax live) →</div></a>
+  <a class="growth" href="expansion-orlando.html"><h3>Growth</h3><p>High flyer → Orlando dunk board + map (207 metro + 8 stitch).</p><div class="go">Dunk Orlando seats →</div></a>
+  <a class="support" href="support-home.html"><h3>Support</h3><p>Catalog / enablement — same Support surface as Jax.</p><div class="go">Open Support →</div></a>
 </nav>
+<div class="fly">
+  <h3>Dunk high flyer · Growth</h3>
+  <p>Compose-only dunk + clickable prospect map. Excel = Jax-depth list math.</p>
+  <div class="links">
+    <a href="expansion-orlando.html">Orlando expansion seats</a>
+    <a href="expansion-orlando-map.html">Orlando prospect map</a>
+    <a href="data/EXPANSION_ORLANDO_TAM_Accounts.xlsx">Orlando TAM Excel</a>
+    <a href="expansion-tampa.html">Tampa twin dunk</a>
+    <a href="principal-dunk.html">Jax principal dunk</a>
+  </div>
+</div>
+<div class="sec-label">Orlando seat counts (research)</div>
+<div class="counts">
+  <div class="k"><div class="l">Orlando seats</div><div class="v">207</div></div>
+  <div class="k"><div class="l">With email</div><div class="v">6</div></div>
+  <div class="k"><div class="l">Stitch</div><div class="v">8</div></div>
+  <div class="k"><div class="l">CDD/HOA</div><div class="v">73</div></div>
+  <div class="k"><div class="l">Church</div><div class="v">22</div></div>
+  <div class="k"><div class="l">School/VPK</div><div class="v">25</div></div>
+  <div class="k"><div class="l">Senior</div><div class="v">23</div></div>
+  <div class="k"><div class="l">Map pins</div><div class="v">215</div></div>
+</div>
+<div class="stitch"><b>National stitch lane (Estimated ARR frame):</b> ~$250/site × ~4 sites/market → illustrative only. Brooks = pattern, unpaid/open. Do not claim Jax Primary TAM $.</div>
 <div class="links">
-  <a href="index.html">← Back to Layer Zero</a>
-  <a href="franchise-peer-cities.html">Peer cities research</a>
+  <a href="index.html">← Operator hub (Ops)</a>
+  <a href="market-tampa.html">Tampa Expansion hub</a>
+  <a href="expansion-orlando-map.html">Orlando map</a>
+  <a href="investor-home.html">Investor home</a>
   <a href="owner-operator.html">Live: Jacksonville Operator</a>
 </div>
-<p class="note">Template stub · 2026-09-23 · investor-safe · not a live market</p>
+<p class="note">Expansion hub · 2026-09-26 7:25 PM ET · 207 metro · Excel primary · twin MD EXPANSION_ORLANDO.md</p>
 </div></body></html>

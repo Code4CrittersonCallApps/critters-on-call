@@ -13,7 +13,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
-ROOT = Path("/workspace/dashboard/exec-suite")
+ROOT = Path("/workspace/critters-on-call/exec")
 IN = ROOT / "data" / "bdr_tam_dialer.json"
 OUT = IN
 AS_OF = datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")

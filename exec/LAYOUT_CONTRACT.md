@@ -1,7 +1,7 @@
 # Exec suite layout contract (match this)
 
-**Hub:** `/workspace/dashboard/exec-suite/index.html`  
-**Money page (live v0):** `/workspace/dashboard/exec-suite/money-cfo.html`  
+**Hub:** `/workspace/critters-on-call/exec/index.html`  
+**Money page (live v0):** `/workspace/critters-on-call/exec/money-cfo.html`  
 **Charter:** `/workspace/dashboard/exec-bots/02-exec-money-cfo.md`  
 **Dump-home:** Dashboard Bit — specs land here; App Builder renders from these files.
 

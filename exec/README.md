@@ -1,6 +1,6 @@
 # Sheehan Homestead — Executive Dashboard Suite
 
-**Path:** `/workspace/dashboard/exec-suite/`  
+**Path:** `/workspace/critters-on-call/exec/`  
 **Owner dump-home:** Dashboard Bit  
 **Theme:** Dark ops BI · self-contained HTML+JS+CSS · Chart.js CDN · no Power BI  
 **Built:** 2026-09-22 (America/New_York) · BDR TAM all-segment dialer live
@@ -8,7 +8,7 @@
 Open `index.html` in a browser (`file://` works — data is embedded) or:
 
 ```bash
-cd /workspace/dashboard/exec-suite && python3 -m http.server 8765
+cd /workspace/critters-on-call/exec && python3 -m http.server 8765
 ```
 
 ## Pages
@@ -77,27 +77,27 @@ See [LAYOUT_CONTRACT.md](LAYOUT_CONTRACT.md) for shared visual tokens and Money 
 
 ## Public
 
-- GitHub: https://github.com/onchainoffgrid-hub/sheehan-exec-suite
-- Pages: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/
-- Consumer: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/consumer-inbound.html
-- BDR TAM: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html
-- Hail Mary (TAM lane): https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html?lane=Hail%20Mary
-- Bazillionaires filter: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/bdr-tam.html?lane=Hail%20Mary&hail=Bazillionaires
-- Easy Attack (mass-touch): https://onchainoffgrid-hub.github.io/sheehan-exec-suite/easy-attack.html
+- GitHub: https://github.com/onchainoffgrid-hub/critters-on-call/tree/main/exec
+- Pages: https://onchainoffgrid-hub.github.io/critters-on-call/exec/
+- Consumer: https://onchainoffgrid-hub.github.io/critters-on-call/exec/consumer-inbound.html
+- BDR TAM: https://onchainoffgrid-hub.github.io/critters-on-call/exec/bdr-tam.html
+- Hail Mary (TAM lane): https://onchainoffgrid-hub.github.io/critters-on-call/exec/bdr-tam.html?lane=Hail%20Mary
+- Bazillionaires filter: https://onchainoffgrid-hub.github.io/critters-on-call/exec/bdr-tam.html?lane=Hail%20Mary&hail=Bazillionaires
+- Easy Attack (mass-touch): https://onchainoffgrid-hub.github.io/critters-on-call/exec/easy-attack.html
 - Sell catalog: Franchise + Consulting LIVE; gray = not ready · `data/sell_catalog.json` · mass plays `data/mass_touch_ideas.json` (no HubSpot)
-- Jax Buzz: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/jax-local-buzz.html
+- Jax Buzz: https://onchainoffgrid-hub.github.io/critters-on-call/exec/jax-local-buzz.html
 
 
 ### BDR TAM v2 rebuild
 
 ```bash
-cd /workspace/dashboard/exec-suite && python3 scripts/build_bdr_tam_dialer.py && python3 scripts/enrich_bdr_tam_v2.py
+cd /workspace/critters-on-call/exec && python3 scripts/build_bdr_tam_dialer.py && python3 scripts/enrich_bdr_tam_v2.py
 ```
 
 localStorage keys: `sheehan_bdr_v2_notes`, `sheehan_bdr_v2_customers`, `sheehan_bdr_v2_tags`, `sheehan_bdr_v2_done`.
 
 ## Investor readiness
 
-- Checklist: https://onchainoffgrid-hub.github.io/sheehan-exec-suite/investor-checklist.html
+- Checklist: https://onchainoffgrid-hub.github.io/critters-on-call/exec/investor-checklist.html
 - Data: `data/investor_readiness.json` · localStorage `sheehan_investor_readiness`
 - Critters mirror: https://onchainoffgrid-hub.github.io/critters-on-call/exec/investor-checklist.html

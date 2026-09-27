@@ -42,3 +42,10 @@ Consumer path from Critters Play unlocks:
    - Facebook: https://www.facebook.com/profile.php?id=61556795506312
 
 Demo re-show: `wheel.html?earn=gus&demo=1` (reopens claimed earn).
+
+## Canonical investor / expansion surfaces
+- Jax investor geo: https://onchainoffgrid-hub.github.io/critters-on-call/exec/investor-jax-geo.html
+- Tampa expansion + map: https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-tampa.html · https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-tampa-map.html
+- Orlando expansion + map: https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-orlando.html · https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-orlando-map.html
+- Operator dashboard: https://onchainoffgrid-hub.github.io/critters-on-call/exec/operator-dashboard.html
+- Peer cities: https://onchainoffgrid-hub.github.io/critters-on-call/exec/franchise-peer-cities.html

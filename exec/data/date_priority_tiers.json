@@ -1,12 +1,12 @@
 {
   "as_of": "2026-09-25T11:05:00-04:00",
   "sources": [
-    "sheehan-exec-suite/data/ops_delivery_calendar.json (18mo operator hot/open)",
-    "sheehan-exec-suite/data/bookings_pipeline.json (as_of 2026-09-24)",
-    "sheehan-exec-suite/data/fall_priority.json (129 CDD/HOA heat leads)",
+    "critters-on-call/exec/data/ops_delivery_calendar.json (18mo operator hot/open)",
+    "critters-on-call/exec/data/bookings_pipeline.json (as_of 2026-09-24)",
+    "critters-on-call/exec/data/fall_priority.json (129 CDD/HOA heat leads)",
     "BOOKINGS_NEXT_ACTIONS.md",
-    "sheehan-exec-suite/data/date_liquidation.json known_blocked",
-    "sheehan-exec-suite/data/ops_unpaid_watch.json"
+    "critters-on-call/exec/data/date_liquidation.json known_blocked",
+    "critters-on-call/exec/data/ops_unpaid_watch.json"
   ],
   "rules": {
     "P0": "HOT protect/close \u2014 owes answer, deposit incoming, peak Sat, or hot_watch",
