@@ -219,20 +219,18 @@
   }
   .again-banner strong { color: var(--card-gold); }
   .farm-claim {
-    margin-top: 0.75rem; padding: 0.9rem;
-    border-radius: 0.85rem;
-    border: 2px solid rgba(201,162,39,0.55);
-    background: rgba(26,36,28,0.92);
-    text-align: center;
+    margin-top: 0.75rem; text-align: center;
   }
-  .farm-claim strong {
-    color: var(--card-gold); font-size: 1.05rem; display: block; margin-bottom: 0.4rem;
+  .farm-claim .btn-maps {
+    display: block; text-decoration: none; text-align: center;
+    padding: 0.85rem 1rem; border-radius: 0.85rem;
+    border: 2px solid rgba(201,162,39,0.65);
+    background: linear-gradient(160deg, rgba(76,100,88,0.55), rgba(26,36,28,0.95));
+    color: var(--card-gold); font-weight: 700; font-size: 0.95rem;
   }
-  .farm-claim .farm-addr {
-    font-size: 0.9rem; color: var(--cream); line-height: 1.45; font-weight: 600;
-  }
-  .farm-claim .farm-hint {
-    font-size: 0.72rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.35;
+  .farm-claim .btn-maps small {
+    display: block; margin-top: 0.25rem;
+    font-size: 0.72rem; font-weight: 500; color: var(--muted);
   }
   /* Labels on shared radius, radial midline of each 45° wedge (JS: i*45+22.5). */
   .dc-wheel .wheel-label {
@@ -354,9 +352,10 @@
         </div>
 
         <div class="farm-claim" id="farm-claim" hidden>
-          <strong>Come to the farm to claim</strong>
-          <p class="farm-addr">44065 Cushman Road<br />Callahan, FL 32011</p>
-          <p class="farm-hint">Show this screen at the farm. No tour required — claim and go.</p>
+          <a class="btn-maps" id="farm-maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=44065+Cushman+Road,+Callahan,+FL+32011" target="_blank" rel="noopener">
+            Gift pickup · Open in Google Maps
+            <small>Show this screen · no tour required</small>
+          </a>
         </div>
 
         <div class="review-prompt" id="review-prompt" hidden>
@@ -394,6 +393,7 @@
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
   var FARM_ADDRESS = "44065 Cushman Road, Callahan, FL 32011";
+  var FARM_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=44065+Cushman+Road,+Callahan,+FL+32011";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
   var CLAIM_SMS = "9142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
@@ -792,7 +792,7 @@
     var body = "Hi Critters on Call —\n\nI spun the Durbin Crossing wheel and won:\n" + prizeLabel;
     if (goatId) body += "\nGoat sticker: #" + goatId;
     body += "\nEvent: Durbin Crossing " + EVENT_DATE;
-    body += "\nFarm claim: " + FARM_ADDRESS + "\n";
+    body += "\nGift pickup (Google Maps): " + FARM_MAPS_URL + "\n";
     return "mailto:" + CLAIM_EMAIL +
       "?subject=" + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(body);
@@ -991,7 +991,8 @@
     readLeads: readLeads,
     isExpired: isExpired,
     REVIEW_URL: REVIEW_URL,
-    FARM_ADDRESS: FARM_ADDRESS
+    FARM_ADDRESS: FARM_ADDRESS,
+    FARM_MAPS_URL: FARM_MAPS_URL
   };
 })();
 </script>
