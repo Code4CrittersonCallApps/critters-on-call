@@ -221,17 +221,20 @@
   .farm-claim .farm-hint {
     font-size: 0.72rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.35;
   }
-  /* Labels mid-wedge: JS uses i*60° with conic from -30deg (centers 0/60/120/180/240/300) */
+  /* Labels sit on the centerline of each wedge, clear of the hub and rim. */
   .dc-wheel .wheel-label {
-    font-size: 0.48rem;
-    letter-spacing: 0.01em;
+    font-size: 0.5rem;
+    letter-spacing: 0.015em;
   }
   .dc-wheel .wheel-label span {
-    top: 0.4rem;
-    width: 2.85rem;
-    max-width: 28%;
-    line-height: 1.05;
+    top: 2rem;
+    width: 3.4rem;
+    max-width: 30%;
+    line-height: 1.08;
     word-break: break-word;
+  }
+  .dc-wheel .wheel-label span.is-flipped {
+    transform: translateX(-50%) rotate(180deg);
   }
   .ended-banner {
     margin: 0.75rem auto 0; max-width: 22rem;
@@ -671,7 +674,7 @@
       else cls += (i % 2 === 0 ? "is-light" : "is-dark");
       el.className = cls;
       el.style.transform = "rotate(" + deg + "deg)";
-      el.innerHTML = "<span" + (flip ? ' style="transform:rotate(180deg)"' : "") + ">" +
+      el.innerHTML = '<span' + (flip ? ' class="is-flipped"' : '') + '>' +
         p.short + (p.kind === "grand" ? " ★" : "") + "</span>";
       wheel.appendChild(el);
 
