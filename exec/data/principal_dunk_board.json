@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-27T17:50:17-04:00",
-  "board_version": "2.9.9",
+  "as_of": "2026-09-27T17:58:34-04:00",
+  "board_version": "2.9.10",
   "label": "Principal dunk board v2.9 — Friday weekend programmers + Jax universities + Corporate Friday",
   "rule": "Compose-only. Friday filter = weekend programmers (church / CDD amenity / apartments / corporate-district) + secondary consumer rebook. University = separate filter, NOT Friday default. Published emails only. Done key sheehan_principal_dunk_done_v2 · Notes sheehan_dunk_notes_v1.",
   "compose_authuser": "sheehanhomestead@gmail.com",
@@ -125,6 +125,7 @@
   "next40_ids": [
     "owe-westminster-kori-dual-mini",
     "owe-westminster-l-ratley-julington",
+    "owe-vesta-group-oct-checkin",
     "president-landrumpto-com-alice-b-landrum-middle-school-pto-pto-president",
     "alimacanipta-gmail-com-alimacani-elementary-pta-pta-president-vp-programs-even",
     "atlanticcoasthsptsa-gmail-com-atlantic-coast-high-ptsa-ptsa-president",
@@ -161,8 +162,7 @@
     "eva-taraseviciute-aircommunities-com-air-communities-jacksonville-region-regiona",
     "sherry-naydeck-greystar-com-aspire-at-silverleaf-greystar-leasing-manager",
     "rshoemaker-cimarronegolf-com-cimarrone-golf-club-general-manager",
-    "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy",
-    "phyllis-ameliamuseum-org-amelia-island-museum-of-history-executive-director"
+    "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy"
   ],
   "sections": [
     {
@@ -185,7 +185,7 @@
           "email": "kmontague@wservices.org",
           "website": "https://www.westminsterstaugustinefl.org/",
           "subject": "RE: November Monday double dip",
-          "owe_reason": "PINNED TOP · IN-THREAD reply · RE: November Monday double dip · $275 mini / Bunny Haven · drafts only never auto-send",
+          "owe_reason": "PINNED TOP · IN-THREAD · no budget $375 · counter: mini 90min @$275 OR Bunny Haven @$199 · 50% Violet partial · .org · drafts only",
           "why": "Highest priority · open mailto (same subject = nest in this morning's thread) or open Gmail thread and Reply. Drafts only.",
           "form_url": "https://westminstercommunitiesfl.org/westminster-woods/contact-us/",
           "quick_body": "Hey Kori,\n\nNo worries — budgets are what they are. We were trying to give you a full petting zoo at the mini price. Let's try the next rung down: a mini for the cost of a Bunny Haven — $275 for 90 minutes. A mini still gets you at least six animals, and that's a 50% partial donation off our standard list pricing, thanks to the Violet ticket for qualifying orgs. Let us know if that works for you guys as is, or if we need to keep at it.\n",
@@ -197,7 +197,9 @@
             "In-thread",
             "$275 mini",
             ".org",
-            "Westminster"
+            "Westminster",
+            "$199 Bunny Haven",
+            "Violet 50%"
           ],
           "lead_source": "Gmail · RE: November Monday double dip",
           "lead_source_type": "gmail",
@@ -214,7 +216,12 @@
           "pin_priority": 1,
           "priority_rank": 1,
           "thread_url": "https://mail.google.com/mail/?authuser=sheehanhomestead@gmail.com#all/thread-f:1877146459103089714",
-          "gmail_compose": "https://mail.google.com/mail/?authuser=sheehanhomestead%40gmail.com&view=cm&fs=1&to=kmontague%40wservices.org&cc=LRATLEY%40wservices.org&su=RE%3A%20November%20Monday%20double%20dip&body=Hey%20Kori%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A"
+          "gmail_compose": "https://mail.google.com/mail/?authuser=sheehanhomestead%40gmail.com&view=cm&fs=1&to=kmontague%40wservices.org&cc=LRATLEY%40wservices.org&su=RE%3A%20November%20Monday%20double%20dip&body=Hey%20Kori%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A",
+          "pricing_counter": {
+            "mini_90": 275,
+            "bunny_haven": 199,
+            "rejected": 375
+          }
         },
         {
           "id": "owe-westminster-l-ratley-julington",
@@ -231,7 +238,7 @@
           "tier": "S",
           "website": "https://westminstercommunitiesfl.org/",
           "subject": "RE: November Monday double dip",
-          "owe_reason": "PINNED TOP · IN-THREAD reply · RE: November Monday double dip · $275 mini / Bunny Haven · drafts only never auto-send",
+          "owe_reason": "PINNED TOP · IN-THREAD · no budget $375 · counter: mini 90min @$275 OR Bunny Haven @$199 · 50% Violet partial · .org · drafts only",
           "why": "Highest priority · open mailto (same subject = nest in this morning's thread) or open Gmail thread and Reply. Drafts only.",
           "quick_body": "Hi there,\n\nNo worries — budgets are what they are. We were trying to give you a full petting zoo at the mini price. Let's try the next rung down: a mini for the cost of a Bunny Haven — $275 for 90 minutes. A mini still gets you at least six animals, and that's a 50% partial donation off our standard list pricing, thanks to the Violet ticket for qualifying orgs. Let us know if that works for you guys as is, or if we need to keep at it.\n",
           "quick_email": true,
@@ -240,7 +247,9 @@
             "In-thread",
             "$275 mini",
             ".org",
-            "Westminster"
+            "Westminster",
+            "$199 Bunny Haven",
+            "Violet 50%"
           ],
           "lead_source": "Gmail · CC on RE: November Monday double dip",
           "lead_source_type": "gmail",
@@ -260,7 +269,50 @@
           "pin_priority": 2,
           "priority_rank": 2,
           "thread_url": "https://mail.google.com/mail/?authuser=sheehanhomestead@gmail.com#all/thread-f:1877146459103089714",
-          "gmail_compose": "https://mail.google.com/mail/?authuser=sheehanhomestead%40gmail.com&view=cm&fs=1&to=LRATLEY%40wservices.org&cc=kmontague%40wservices.org&su=RE%3A%20November%20Monday%20double%20dip&body=Hi%20there%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A"
+          "gmail_compose": "https://mail.google.com/mail/?authuser=sheehanhomestead%40gmail.com&view=cm&fs=1&to=LRATLEY%40wservices.org&cc=kmontague%40wservices.org&su=RE%3A%20November%20Monday%20double%20dip&body=Hi%20there%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A",
+          "pricing_counter": {
+            "mini_90": 275,
+            "bunny_haven": 199,
+            "rejected": 375
+          }
+        },
+        {
+          "id": "owe-vesta-group-oct-checkin",
+          "account": "Vesta group (Ross Ruben)",
+          "contact": "Ross Ruben",
+          "title": "Director of Lifestyle · NE FL amenity network",
+          "email": "rruben@vestapropertyservices.com",
+          "phone": "904-355-1831",
+          "city": "Jacksonville / St. Johns",
+          "segment": "CDD / Amenity · Vesta",
+          "persona": "cdd",
+          "kind": "mailto",
+          "lane": "owe",
+          "tier": "S",
+          "friday": true,
+          "pinned": true,
+          "pin_priority": 3,
+          "priority_rank": 3,
+          "quick_email": true,
+          "subject": "Durbin was fun — soft Oct date for the group?",
+          "quick_body": "Hey Ross,\n\nQuick one — Ann-Marie crushed it at Durbin Crossing today. Here’s a peek: https://www.facebook.com/sheehan.homestead\n\nIf any of the other communities want an October date, happy to hold one. No pressure.\n\n(Cool leftover from Durbin if useful: https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/)\n",
+          "mailto": "mailto:rruben@vestapropertyservices.com?subject=Durbin%20was%20fun%20%E2%80%94%20soft%20Oct%20date%20for%20the%20group%3F&body=Hey%20Ross%2C%0A%0AQuick%20one%20%E2%80%94%20Ann-Marie%20crushed%20it%20at%20Durbin%20Crossing%20today.%20Here%E2%80%99s%20a%20peek%3A%20https%3A//www.facebook.com/sheehan.homestead%0A%0AIf%20any%20of%20the%20other%20communities%20want%20an%20October%20date%2C%20happy%20to%20hold%20one.%20No%20pressure.%0A%0A%28Cool%20leftover%20from%20Durbin%20if%20useful%3A%20https%3A//onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/%29%0A",
+          "owe_reason": "OVERDUE · tomorrow (Mon) casual check-in · Durbin FB social proof · soft Oct date · goal=book a date. Ross supportive (foam). Keep light.",
+          "why": "Vesta group overdue. Plan: Ann-Marie Durbin FB link + soft October ask + one cool extra (wheel). Drafts only.",
+          "chip_tags": [
+            "PINNED",
+            "Vesta",
+            "Ross",
+            "OVERDUE",
+            "Tomorrow",
+            "Draft only"
+          ],
+          "lead_source": "Voice · Sep 27 pipeline dump",
+          "lead_source_date": "2026-09-27",
+          "area": "Metro Jax · Vesta portfolio",
+          "website": "https://www.vestapropertyservices.com/",
+          "fb_link_note": "Swap FB URL to exact Ann-Marie Durbin Crossing post when it goes live",
+          "cool_extra": "https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/"
         },
         {
           "id": "owe-beatrix-mali-vai-apology-reconnect",
@@ -518,8 +570,8 @@
           "persona": "school",
           "kind": "mailto",
           "lane": "owe",
-          "why": "WAITING_YES on Oct 2 meet — push date / soft assume-the-sale. Invoice open.",
-          "owe_reason": "Pipeline soft_yes · Oct 2 PZ / activities · invoice open",
+          "why": "Sep 27 email “Sheehan Homestead”: excited for Incentive Day Oct 2; back field setup; asked arrival time; CC Lockey/McKnight/Erdogan/Dijana. Do not auto-reply.",
+          "owe_reason": "CONFIRMED Oct 2 Violet Package · team looped · AWAITING our arrival time · invoice path via McKnight",
           "tier": "S",
           "legacy_tier": 1,
           "area": "Metro Jax · Southside",
@@ -554,10 +606,18 @@
             }
           ],
           "chip_tags": [
-            "PayPal invoice · Sep 24"
+            "PayPal invoice · Sep 24",
+            "RCSA",
+            "Oct 2",
+            "Violet",
+            "Arrival time"
           ],
           "phone": "240-561-0782",
-          "phone_updated": "2026-09-27 16:58 ET"
+          "phone_updated": "2026-09-27 16:58 ET",
+          "pipeline_status": "confirmed_awaiting_arrival_time",
+          "event_date": "2026-10-02",
+          "subject": "RE: Sheehan Homestead",
+          "board_note": "Reply when ready: arrival time only. Drafts only / explicit permission."
         }
       ]
     },
@@ -581,15 +641,19 @@
           "email": "lburnette@rivercityscience.org",
           "website": "https://www.rivercityscience.org/",
           "subject": "Oct 2 petting zoo — lock details?",
-          "why": "WAITING_YES on Oct 2 meet — push date / soft assume-the-sale. Invoice open.",
-          "owe_reason": "Pipeline soft_yes · Oct 2 PZ / activities · invoice open",
+          "why": "Sep 27 email “Sheehan Homestead”: excited for Incentive Day Oct 2; back field setup; asked arrival time; CC Lockey/McKnight/Erdogan/Dijana. Do not auto-reply.",
+          "owe_reason": "CONFIRMED Oct 2 Violet Package · team looped · AWAITING our arrival time · invoice path via McKnight",
           "form_url": "",
           "area": "Metro Jax · Southside",
           "role_chip": "Activities",
           "fancy": false,
           "rcsa": true,
           "chip_tags": [
-            "PayPal invoice · Sep 24"
+            "PayPal invoice · Sep 24",
+            "RCSA",
+            "Oct 2",
+            "Violet",
+            "Arrival time"
           ],
           "lead_source": "PayPal invoice · Sep 24",
           "lead_source_type": "invoice",
@@ -619,7 +683,10 @@
               "source": "consumer_inbound"
             }
           ],
-          "phone_updated": "2026-09-27 16:58 ET"
+          "phone_updated": "2026-09-27 16:58 ET",
+          "pipeline_status": "confirmed_awaiting_arrival_time",
+          "event_date": "2026-10-02",
+          "board_note": "Reply when ready: arrival time only. Drafts only / explicit permission."
         },
         {
           "phone": "904-489-4037",
@@ -1097,8 +1164,8 @@
           "email": "marieljaster@gmail.com",
           "website": "https://www.sheehanhomestead.com/services",
           "subject": "mobile petting zoo — another date?",
-          "why": "Friday secondary — consumer rebook card (weekend visit / mobile date). Proven prior mobile/mini PZ — mobile rebook (best money path). [one-touch:mobile; inbound:mobile; bucket:action_queue]",
-          "owe_reason": "MONEY · mobile rebook",
+          "why": "Sep 27: Mariel agreed to leave a Google review; link sent; waiting. Do not nag yet.",
+          "owe_reason": "REVIEW · agreed · link sent · pending",
           "form_url": "",
           "area": "Metro Jax · Consumer",
           "role_chip": "Customer",
@@ -1108,18 +1175,20 @@
             "PayPal invoice · Sep 26 · $386.9",
             "Consumer",
             "Prior mobile",
-            "Friday"
+            "Friday",
+            "Review pending",
+            "Link sent"
           ],
           "quick_body": "Hi there,\n\nWant another mobile date this fall (weekday or Saturday)? Happy to hold whatever works on our side.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
-          "review_status": "unknown",
+          "review_status": "agreed_link_sent_pending",
           "review_match_confidence": "none",
           "history_lane": "prior_mobile",
           "history_lane_label": "C · Prior mobile",
-          "north_star": "money",
-          "north_star_label": "MONEY · mobile rebook",
+          "north_star": "review",
+          "north_star_label": "Review pending",
           "history_proven": true,
           "friday": true,
           "friday_class": "consumer_rebook",
@@ -10799,7 +10868,9 @@
             "PayPal invoice · Apr 24 · $1256.66",
             "Friday",
             "Vesta",
-            "Site booker"
+            "Site booker",
+            "Durbin Sep 27",
+            "Delivered"
           ],
           "lead_source": "PayPal invoice · Apr 24 · $1256.66",
           "lead_source_type": "invoice",
@@ -10831,7 +10902,7 @@
           "management_company": "Vesta",
           "ross_type": "Site booker",
           "wallet_class": "A",
-          "board_note": "Durbin site booker — money lands here; converts without Ross/Mindy on thread.",
+          "board_note": "Sep 27 Durbin Crossing delivery day · wheel live · expand Oct soft ask via Ross group draft",
           "role_chip": "Site booker"
         },
         {
@@ -11562,12 +11633,15 @@
           "chip_tags": [
             "Friday",
             "Vesta",
-            "Ross-type"
+            "Ross-type",
+            "Supportive",
+            "Foam",
+            "OVERDUE follow-up"
           ],
           "management_company": "Vesta",
           "ross_type": "Ross-type",
           "wallet_class": "A",
-          "board_note": "List intro — not every Vesta buy. Pair with site bookers for money. Mindy = HQ L&L/pizza door; Winslow = NE Amenity Ops.",
+          "board_note": "Sep 27: Ross supportive; hooked up foam people. Vesta group check-in overdue → see owe-vesta-group-oct-checkin (tomorrow).",
           "role_chip": "Ross-type"
         },
         {
@@ -18410,7 +18484,9 @@
             "PayPal invoice · Apr 24 · $1256.66",
             "Friday",
             "Vesta",
-            "Site booker"
+            "Site booker",
+            "Durbin Sep 27",
+            "Delivered"
           ],
           "lead_source": "PayPal invoice · Apr 24 · $1256.66",
           "lead_source_type": "invoice",
@@ -18442,7 +18518,7 @@
           "management_company": "Vesta",
           "ross_type": "Site booker",
           "wallet_class": "A",
-          "board_note": "Durbin site booker — money lands here; converts without Ross/Mindy on thread.",
+          "board_note": "Sep 27 Durbin Crossing delivery day · wheel live · expand Oct soft ask via Ross group draft",
           "role_chip": "Site booker"
         },
         {
@@ -18842,12 +18918,15 @@
           "chip_tags": [
             "Friday",
             "Vesta",
-            "Ross-type"
+            "Ross-type",
+            "Supportive",
+            "Foam",
+            "OVERDUE follow-up"
           ],
           "management_company": "Vesta",
           "ross_type": "Ross-type",
           "wallet_class": "A",
-          "board_note": "List intro — not every Vesta buy. Pair with site bookers for money. Mindy = HQ L&L/pizza door; Winslow = NE Amenity Ops.",
+          "board_note": "Sep 27: Ross supportive; hooked up foam people. Vesta group check-in overdue → see owe-vesta-group-oct-checkin (tomorrow).",
           "role_chip": "Ross-type"
         },
         {
@@ -22572,10 +22651,87 @@
       "owe-action-news-jax-shoutout"
     ]
   },
-  "pin_note": "Westminster Kori + L. Ratley PINNED TOP · in-thread RE: November Monday double dip · $275 mini",
+  "pin_note": "TOP: Westminster Kori+Ratley (in-thread $275/$199) · then Vesta Ross Oct check-in (tomorrow). Drafts only.",
   "outbound_policy": "DRAFTS ONLY · never auto-send without Michael explicit permission",
   "board_pins": [
     "owe-westminster-kori-dual-mini",
-    "owe-westminster-l-ratley-julington"
-  ]
+    "owe-westminster-l-ratley-julington",
+    "owe-vesta-group-oct-checkin"
+  ],
+  "day_status_2026_09_27": {
+    "as_of": "2026-09-27 17:57 ET",
+    "google_reviews_showing": 87,
+    "google_reviews_est_total": 105,
+    "google_reviews_delta_since_start": 60,
+    "mariel_jasterzenski": "Agreed to review · link sent · pending",
+    "vesta_group": "OVERDUE · plan Mon Sep 28: casual check-in + Ann-Marie Durbin FB + soft Oct date · Ross supportive (foam people). Goal=date. Keep light.",
+    "ross_ruben": "Supportive · hooked up foam people · Vesta portfolio gatekeeper",
+    "westminster": {
+      "kori": "kmontague@wservices.org",
+      "ratley": "LRATLEY@wservices.org",
+      "note": "No budget for $375. In-thread counter drafted (pinned TOP): mini 90min @$275 each OR Bunny Haven @$199 · 50% Violet partial donation · .org"
+    },
+    "lauren_burnett_rcsa": "Oct 2 Violet Package CONFIRMED · team looped (Lockey/McKnight/Erdogan/Dijana) · AWAITING arrival time from us · phone 240-561-0782",
+    "competitors_started": [
+      "Jax Carriage / Bonnie Doone",
+      "Pinto Carriage Works",
+      "Diamond D",
+      "Critter Caravan (stale)"
+    ],
+    "contacts_saved": {
+      "Corey Dahlberg": "386-986-6977",
+      "Lauren Burnett": "240-561-0782",
+      "Mariel Jasterzenski": "570-574-6819"
+    },
+    "pricing": {
+      "full_90min_consumer": 499,
+      "mini_90min": 275,
+      "bunny_haven": "150-250 (counter uses ~199)"
+    },
+    "product_sketches": "Homestead Facts + Step Right Up reorg DONE not shipped; membership/Ann-Marie lessons flagged later",
+    "idea_stage": [
+      "Physical wheel + testimonial ticket",
+      "App play party"
+    ],
+    "outbound_policy": "DRAFTS ONLY · never auto-send"
+  },
+  "campaign_metrics": {
+    "google_reviews_showing": 87,
+    "google_reviews_est_total": 105,
+    "google_reviews_gained_since_start": 60,
+    "as_of": "2026-09-27"
+  },
+  "pricing_ref": {
+    "full_90min_consumer": 499,
+    "mini_90min": 275,
+    "bunny_haven_range": [
+      150,
+      250
+    ],
+    "bunny_haven_counter_example": 199
+  },
+  "competitors_jax_2026_09_27": {
+    "status": "started",
+    "names": [
+      "Jax Carriage / Bonnie Doone",
+      "Pinto Carriage Works (clearest direct)",
+      "Diamond D",
+      "Critter Caravan (stale)"
+    ],
+    "wedge": "mobile multi-species + STEM/education + homestead — not carriage-first"
+  },
+  "product_backlog": {
+    "shipped_sketches_not_live": [
+      "Homestead Facts quiz",
+      "Step Right Up resources reorg"
+    ],
+    "flagged_later": [
+      "Membership tier",
+      "Ann-Marie lessons"
+    ],
+    "idea_stage": [
+      "Physical wheel + testimonial ticket",
+      "App play party"
+    ]
+  }
 }

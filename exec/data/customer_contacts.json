@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Mariel Jasterzenski",
+    "email": "marieljaster@gmail.com",
+    "phone": "570-574-6819",
+    "address": "13118 Chets Creek Dr N, Jacksonville, FL",
+    "address_source": "Google Calendar Mini petting zoo 2026-09-26 location field",
+    "phone_source": "Michael voice call 2026-09-27",
+    "updated": "2026-09-27 17:57 ET",
+    "notes": "Agreed to Google review Sep 27; link sent; pending. Inv 184 Mini PZ."
+  },
+  {
+    "name": "Lauren Burnett",
+    "name_alt_spelling": "Lauren Burnette",
+    "email": "lburnette@rivercityscience.org",
+    "phone": "240-561-0782",
+    "org": "River City Science Academy",
+    "campus": "Bay Meadows / Innovation",
+    "phone_source": "Michael voice call 2026-09-27",
+    "updated": "2026-09-27 17:57 ET",
+    "notes": "Oct 2 Violet confirmed; awaiting our arrival time. Phone from voice."
+  },
+  {
+    "name": "Corey Dahlberg",
+    "phone": "386-986-6977",
+    "phone_type": "cell",
+    "email": "",
+    "org": "",
+    "phone_source": "Michael voice call 2026-09-27",
+    "updated": "2026-09-27 17:57 ET",
+    "notes": "Saved voice Sep 27. Do not auto-message.",
+    "do_not_auto_message": true
+  }
+]

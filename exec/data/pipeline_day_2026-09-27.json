@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-09-27 17:57 ET",
+  "summary": {
+    "as_of": "2026-09-27 17:57 ET",
+    "google_reviews_showing": 87,
+    "google_reviews_est_total": 105,
+    "google_reviews_delta_since_start": 60,
+    "mariel_jasterzenski": "Agreed to review \u00b7 link sent \u00b7 pending",
+    "vesta_group": "OVERDUE \u00b7 plan Mon Sep 28: casual check-in + Ann-Marie Durbin FB + soft Oct date \u00b7 Ross supportive (foam people). Goal=date. Keep light.",
+    "ross_ruben": "Supportive \u00b7 hooked up foam people \u00b7 Vesta portfolio gatekeeper",
+    "westminster": {
+      "kori": "kmontague@wservices.org",
+      "ratley": "LRATLEY@wservices.org",
+      "note": "No budget for $375. In-thread counter drafted (pinned TOP): mini 90min @$275 each OR Bunny Haven @$199 \u00b7 50% Violet partial donation \u00b7 .org"
+    },
+    "lauren_burnett_rcsa": "Oct 2 Violet Package CONFIRMED \u00b7 team looped (Lockey/McKnight/Erdogan/Dijana) \u00b7 AWAITING arrival time from us \u00b7 phone 240-561-0782",
+    "competitors_started": [
+      "Jax Carriage / Bonnie Doone",
+      "Pinto Carriage Works",
+      "Diamond D",
+      "Critter Caravan (stale)"
+    ],
+    "contacts_saved": {
+      "Corey Dahlberg": "386-986-6977",
+      "Lauren Burnett": "240-561-0782",
+      "Mariel Jasterzenski": "570-574-6819"
+    },
+    "pricing": {
+      "full_90min_consumer": 499,
+      "mini_90min": 275,
+      "bunny_haven": "150-250 (counter uses ~199)"
+    },
+    "product_sketches": "Homestead Facts + Step Right Up reorg DONE not shipped; membership/Ann-Marie lessons flagged later",
+    "idea_stage": [
+      "Physical wheel + testimonial ticket",
+      "App play party"
+    ],
+    "outbound_policy": "DRAFTS ONLY \u00b7 never auto-send"
+  },
+  "vesta_draft": {
+    "to": "rruben@vestapropertyservices.com",
+    "subject": "Durbin was fun \u2014 soft Oct date for the group?",
+    "body": "Hey Ross,\n\nQuick one \u2014 Ann-Marie crushed it at Durbin Crossing today. Here\u2019s a peek: https://www.facebook.com/sheehan.homestead\n\nIf any of the other communities want an October date, happy to hold one. No pressure.\n\n(Cool leftover from Durbin if useful: https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/)\n",
+    "mailto": "mailto:rruben@vestapropertyservices.com?subject=Durbin%20was%20fun%20%E2%80%94%20soft%20Oct%20date%20for%20the%20group%3F&body=Hey%20Ross%2C%0A%0AQuick%20one%20%E2%80%94%20Ann-Marie%20crushed%20it%20at%20Durbin%20Crossing%20today.%20Here%E2%80%99s%20a%20peek%3A%20https%3A//www.facebook.com/sheehan.homestead%0A%0AIf%20any%20of%20the%20other%20communities%20want%20an%20October%20date%2C%20happy%20to%20hold%20one.%20No%20pressure.%0A%0A%28Cool%20leftover%20from%20Durbin%20if%20useful%3A%20https%3A//onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/%29%0A",
+    "do_not_send": true,
+    "fb_note": "Replace FB URL with exact Ann-Marie Durbin Crossing post when available"
+  }
+}
