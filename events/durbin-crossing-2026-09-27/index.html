@@ -74,10 +74,9 @@
     pointer-events: none;
     user-select: none;
   }
-  /* Keep the hen in step with the Sophie/animal artwork: one shared, gentle
-     breathe instead of a separate bob or wiggle. */
-  .dc-wheel .wheel-hub .gold-card-art,
-  .dc-wheel .wheel-hub .hub-chicken {
+  /* Give the card artwork a subtle, shared breathe without layering another
+     image over the painted animal medallion. */
+  .dc-wheel .wheel-hub .gold-card-art {
     animation: dc-hub-animal-breathe 4.2s ease-in-out infinite;
     transform-origin: center center;
   }
@@ -85,27 +84,8 @@
     0%, 100% { transform: translateY(0) scale(1); }
     50% { transform: translateY(-1px) scale(1.01); }
   }
-  /* Small real hen mark from exec/collateral, kept on a quiet plaque so the
-     Sophie Gold Card artwork remains the visual anchor. */
-  .dc-wheel .wheel-hub .hub-chicken {
-    position: absolute;
-    z-index: 2;
-    right: 8%;
-    top: 46%;
-    width: 23%;
-    height: auto;
-    padding: 2.5%;
-    border: 1px solid rgba(240,216,120,0.72);
-    border-radius: 50%;
-    background: rgba(26,21,8,0.56);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.45);
-    object-fit: contain;
-    pointer-events: none;
-    user-select: none;
-  }
   @media (prefers-reduced-motion: reduce) {
-    .dc-wheel .wheel-hub .gold-card-art,
-    .dc-wheel .wheel-hub .hub-chicken { animation: none; }
+    .dc-wheel .wheel-hub .gold-card-art { animation: none; }
   }
   /* Use the centered hen mark in the header; the old flyer crop was visibly off-center. */
   .dc-brand-logo {
@@ -344,7 +324,6 @@
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
             <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20260927a" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
-            <img class="hub-chicken" src="assets/chicken-photo.png?v=20260927a" alt="" aria-hidden="true" width="124" height="132" decoding="async" />
           </span>
         </div>
       </div>
