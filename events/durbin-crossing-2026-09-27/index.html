@@ -107,6 +107,11 @@
     .dc-wheel .wheel-hub .gold-card-art,
     .dc-wheel .wheel-hub .hub-chicken { animation: none; }
   }
+  /* Use the centered hen mark in the header; the old flyer crop was visibly off-center. */
+  .dc-brand-logo {
+    object-fit: contain;
+    padding: 0.18rem;
+  }
   .goat-chip {
     text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--card-gold);
     margin-top: 0.35rem;
@@ -116,20 +121,20 @@
     font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;
   }
   .spin-meta strong { color: var(--fg); }
-  /* 8 equal 45° wedges — midpoints at i*45+22.5. Each prize gets its
-     own homestead green, gold, or warm accent; Gold Card is the brightest,
-     most premium finish. */
+  /* 8 equal 45° wedges — midpoints at i*45+22.5. Keep the wheel itself
+     in the original equal green/gold palette; prize colors belong to the
+     square legend tiles below. */
   .prize-wheel.dc-wheel {
     background: conic-gradient(
       from 0deg,
-      #F2C94C 0deg 45deg,
-      #587A5B 45deg 90deg,
-      #D99A3D 90deg 135deg,
-      #2F5D50 135deg 180deg,
-      #C96F4A 180deg 225deg,
-      #86A65B 225deg 270deg,
-      #B85C38 270deg 315deg,
-      #1F4A3C 315deg 360deg
+      #c9a227 0deg 45deg,
+      #4C6458 45deg 90deg,
+      #E8D48C 90deg 135deg,
+      #3A4F45 135deg 180deg,
+      #B8923A 180deg 225deg,
+      #5A7366 225deg 270deg,
+      #D4B84A 270deg 315deg,
+      #2F4038 315deg 360deg
     );
     box-shadow:
       0 0 0 3px rgba(76,100,88,0.6),
@@ -140,17 +145,23 @@
   .wheel-label.is-gift { color: #fff8e6; }
   .wheel-label.is-again { color: #F3EEE4; font-weight: 700; }
   .wheel-label.is-membership { color: #1a1508; font-weight: 800; }
-  /* Every label receives contrast for its specific wedge, including the two
-     warm accents and the premium Gold Card wedge. */
-  .dc-wheel .wheel-label[data-wedge="0"],
-  .dc-wheel .wheel-label[data-wedge="2"],
-  .dc-wheel .wheel-label[data-wedge="4"],
-  .dc-wheel .wheel-label[data-wedge="5"],
-  .dc-wheel .wheel-label[data-wedge="6"] { color: #211708; font-weight: 800; }
-  .dc-wheel .wheel-label[data-wedge="1"],
-  .dc-wheel .wheel-label[data-wedge="3"],
-  .dc-wheel .wheel-label[data-wedge="7"] { color: #fff8e6; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
-  .dc-wheel .wheel-label[data-wedge="0"] { text-shadow: 0 1px 0 rgba(255,248,230,0.3); }
+  /* Prize color is intentionally applied to the legend tiles, not wedges. */
+  .prize-list li[data-kind="grand"] {
+    background: #c9a227; border-color: #f0d878; color: #1a1508;
+  }
+  .prize-list li[data-kind="gift"] {
+    background: #4C6458; border-color: #86A093; color: #F3EEE4;
+  }
+  .prize-list li[data-kind="again"] {
+    background: #E8D48C; border-color: #f0d878; color: #1a1508;
+  }
+  .prize-list li[data-kind="ticket"] {
+    background: #5A7366; border-color: #9db5a5; color: #F3EEE4;
+  }
+  .prize-list li[data-kind] .muted { color: inherit; opacity: 0.82; }
+  .prize-list li[data-kind].is-won {
+    box-shadow: 0 0 0 2px rgba(240,216,120,0.9), 0 3px 10px rgba(0,0,0,0.24);
+  }
   .field { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.75rem; }
   .field label { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
   .field input {
@@ -300,7 +311,7 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a class="brand" href="../../index.html">
-        <img class="brand-logo" src="hen-mark-gold.png?v=20260927a" alt="" width="36" height="36" />
+        <img class="brand-logo dc-brand-logo" src="assets/brand-chicken.png?v=20260927a" alt="" width="36" height="36" />
         <span>
           <span class="brand-title">Critters on Call</span>
           <span class="brand-sub">× Durbin Crossing</span>
@@ -333,7 +344,7 @@
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
             <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20260927a" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
-            <img class="hub-chicken" src="assets/chicken-overlay.png?v=20260927a" alt="" aria-hidden="true" width="124" height="132" decoding="async" />
+            <img class="hub-chicken" src="assets/chicken-photo.png?v=20260927a" alt="" aria-hidden="true" width="124" height="132" decoding="async" />
           </span>
         </div>
       </div>
@@ -722,7 +733,6 @@
       else if (p.kind === "again") cls += "is-again";
       else cls += (i % 2 === 0 ? "is-light" : "is-dark");
       el.className = cls;
-      el.dataset.wedge = String(i);
       el.style.transform = "rotate(" + deg + "deg)";
       el.innerHTML = '<span' + (flip ? ' class="is-flipped"' : '') + '>' +
         p.short + (p.kind === "grand" ? " ★" : "") + "</span>";
@@ -730,6 +740,7 @@
 
       var li = document.createElement("li");
       li.dataset.id = p.id;
+      li.dataset.kind = p.kind;
       var teaser = p.teaser ? '<p class="text-xs muted teaser" style="margin:0.15rem 0 0">' + p.teaser + "</p>" : "";
       li.innerHTML = '<p class="text-xs" style="font-weight:600;margin:0">' + p.label +
         '</p><p class="text-xs muted" style="margin:0">' + p.value + "</p>" + teaser;
