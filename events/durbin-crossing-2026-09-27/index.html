@@ -10,11 +10,11 @@
 <meta property="og:description" content="Event-only prize wheel — Sep 27, 2026. Scan a Golden Goat, spin, claim your prize." />
 <meta property="og:type" content="website" />
 <title>Spin · Critters on Call × Durbin Crossing · Sep 27 2026</title>
-<link rel="icon" type="image/png" href="hen-mark-gold.png" />
+<link rel="icon" type="image/png" href="hen-mark-gold.png?v=20260927a" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../../css/styles.css" />
+<link rel="stylesheet" href="../../css/styles.css?v=20260927a" />
 <style>
   /* Forest greens sampled from wife chicken-in-circle logo — NOT website leaf. Hub uses real gold-card art. */
   :root {
@@ -84,16 +84,18 @@
     font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;
   }
   .spin-meta strong { color: var(--fg); }
-  /* 6 equal 60° wedges */
+  /* 8 equal 45° wedges — midpoints at i*45+22.5 */
   .prize-wheel.dc-wheel {
     background: conic-gradient(
-      from -30deg,
-      #c9a227 0deg 60deg,
-      #4C6458 60deg 120deg,
-      #E8D48C 120deg 180deg,
-      #3A4F45 180deg 240deg,
-      #B8923A 240deg 300deg,
-      #5A7366 300deg 360deg
+      from 0deg,
+      #c9a227 0deg 45deg,
+      #4C6458 45deg 90deg,
+      #E8D48C 90deg 135deg,
+      #3A4F45 135deg 180deg,
+      #B8923A 180deg 225deg,
+      #5A7366 225deg 270deg,
+      #D4B84A 270deg 315deg,
+      #2F4038 315deg 360deg
     );
     box-shadow:
       0 0 0 3px rgba(76,100,88,0.6),
@@ -221,17 +223,18 @@
   .farm-claim .farm-hint {
     font-size: 0.72rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.35;
   }
-  /* Labels sit on the centerline of each wedge, clear of the hub and rim. */
+  /* Labels on shared radius, radial midline of each 45° wedge (JS: i*45+22.5). */
   .dc-wheel .wheel-label {
-    font-size: 0.5rem;
-    letter-spacing: 0.015em;
+    font-size: 0.48rem;
+    letter-spacing: 0.01em;
   }
   .dc-wheel .wheel-label span {
-    top: 2rem;
-    width: 3.4rem;
-    max-width: 30%;
+    top: 1.15rem;
+    width: 3.1rem;
+    max-width: 28%;
     line-height: 1.08;
     word-break: break-word;
+    transform: translateX(-50%);
   }
   .dc-wheel .wheel-label span.is-flipped {
     transform: translateX(-50%) rotate(180deg);
@@ -270,7 +273,7 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a class="brand" href="../../index.html">
-        <img class="brand-logo" src="hen-mark-gold.png" alt="" width="36" height="36" />
+        <img class="brand-logo" src="hen-mark-gold.png?v=20260927a" alt="" width="36" height="36" />
         <span>
           <span class="brand-title">Critters on Call</span>
           <span class="brand-sub">× Durbin Crossing</span>
@@ -304,7 +307,7 @@
         <div class="wheel-pointer" aria-hidden="true">▼</div>
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
-            <img src="assets/gold-card-hub.jpg" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
+            <img src="assets/gold-card-hub.jpg?v=20260927a" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
           </span>
         </div>
       </div>
@@ -430,7 +433,7 @@
 
   if (resetSpinStateIfRequested()) return;
 
-  /* 6 segments — equal 60° wedges; weights can vary */
+  /* 8 segments — equal 45° wedges; midpoints at i*45+22.5; weights can vary */
   var PRIZES = [
     {
       id: "thrift-10",
@@ -490,11 +493,29 @@
       kind: "ticket",
       codePrefix: "DC25X",
       fulfill: "Free $25 two-person farm tour ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
+    },
+    {
+      id: "free-spin-2",
+      label: "Free spin",
+      short: "FREE<br>SPIN",
+      value: "Extra spin · does not count against your 3",
+      teaser: "",
+      kind: "again",
+      fulfill: "You get another spin! This free spin does not count against your 3-spin limit."
+    },
+    {
+      id: "free-spin-3",
+      label: "Free spin",
+      short: "FREE<br>SPIN",
+      value: "Extra spin · does not count against your 3",
+      teaser: "",
+      kind: "again",
+      fulfill: "You get another spin! This free spin does not count against your 3-spin limit."
     }
   ];
 
   /* Weights sum 100. Indices match PRIZES. Grand prize uncapped. */
-  var WEIGHTS = [35, 20, 8, 10, 15, 12];
+  var WEIGHTS = [28, 16, 6, 8, 10, 12, 10, 10];
 
   var slice = 360 / PRIZES.length;
   var rotation = 0;
@@ -660,10 +681,10 @@
   }
 
   function buildLabels() {
-    /* Mid-wedge: conic from -30deg → centers at i*60 (0,60,120,180,240,300).
-       Old math used i*60+30 which sat on color boundaries. */
+    /* Perfect 8-part: equal 45° arcs, shared label radius, midpoints i*45+22.5.
+       Opposite wedges differ by 180° → mirrored alignment across the diameter. */
     PRIZES.forEach(function (p, i) {
-      var deg = i * slice; /* offset 0° vs former +30° boundary placement */
+      var deg = i * slice + slice / 2; /* i*45+22.5 with 8 wedges */
       var flip = deg > 90 && deg < 270;
       var el = document.createElement("span");
       var cls = "wheel-label ";
@@ -753,8 +774,8 @@
   }
 
   function targetRotation(index, current) {
-    /* Mid-wedge under pointer: matches buildLabels (i*slice) with conic from -30deg */
-    var center = index * slice;
+    /* Mid-wedge under pointer: matches buildLabels (i*slice + slice/2) */
+    var center = index * slice + slice / 2;
     var normalized = ((current % 360) + 360) % 360;
     var needed = ((360 - center) % 360 - normalized + 360) % 360;
     var spins = 5 + Math.floor(Math.random() * 3);
@@ -966,7 +987,7 @@
     wheel.classList.add("is-spinning");
 
     if (reduceMotion) {
-      var needed = ((360 - (index * slice)) - (rotation % 360) + 360) % 360;
+      var needed = ((360 - (index * slice + slice / 2)) - (rotation % 360) + 360) % 360;
       rotation = rotation + needed;
       wheel.style.transition = "none";
       wheel.style.transform = "rotate(" + rotation + "deg)";

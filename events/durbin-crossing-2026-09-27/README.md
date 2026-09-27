@@ -56,18 +56,22 @@ It does not clear leads, claims, or any production rules. The `reset=1` paramete
 - Claims: text PRIZE / Facebook DM / email / booking-help (not browser-only). Review link after claim reveal: `https://g.page/r/CS74JMTm3xrWEAE/review`
 - Staff `admin.html` (PIN `0927`) is legacy tooling only
 
-## Wheel (6 segments · equal 60° wedges) · weights sum 100%
+## Wheel (8 segments · equal 45° wedges) · weights sum 100%
+
+Geometry: conic from `0deg`, labels at midpoints `i*45+22.5`, shared label radius. Opposite wedges differ by 180°.
 
 | # | Prize | Weight | Notes |
 |---|--------|--------|------|
-| 0 | $10 thrift gift | **35%** | Teaser: comic book, basketball cards, tumbler · `DC10T-*` |
-| 1 | $10 farm gift | **20%** | Teaser: elephant ear, sweet potato slip, fertilizer, eggs · `DC10F-*` |
-| 2 | Critters on Call Gold Membership (GOLD CARD) | **8%** | GRAND PRIZE — $100 · uncapped · `$50 membership · $25 farm tour · $25 thrift or farm gift` |
-| 3 | Gold membership (GOLD MEMBER) | **10%** | $100 framing · uncapped |
-| 4 | Free spin | **15%** | Does **not** count against 3-spin limit |
+| 0 | $10 thrift gift | **28%** | Teaser: comic book, basketball cards, tumbler · `DC10T-*` |
+| 1 | $10 farm gift | **16%** | Teaser: elephant ear, sweet potato slip, fertilizer, eggs · `DC10F-*` |
+| 2 | Critters on Call Gold Membership (GOLD CARD) | **6%** | GRAND PRIZE — $100 · uncapped · `$50 membership · $25 farm tour · $25 thrift or farm gift` |
+| 3 | Gold membership (GOLD MEMBER) | **8%** | $100 framing · uncapped |
+| 4 | Free spin | **10%** | Does **not** count against 3-spin limit |
 | 5 | Free $25 two-person farm tour ticket | **12%** | Teaser: bring a friend, no tour required to claim · `DC25X-*` |
+| 6 | Free spin (filler) | **10%** | Same free-spin rules |
+| 7 | Free spin (filler) | **10%** | Same free-spin rules |
 
-**Removed:** $50 ticket, $25 thrift, $25 farm (as separate wedges), old spin-again label (replaced by Free spin). Ticket ceiling stays at $25.
+**Removed:** $50 ticket, $25 thrift, $25 farm (as separate wedges), old spin-again label (replaced by Free spin). Ticket ceiling stays at $25. Footer chrome (Staff tools / CRM / Goat QR / Branding / palette) is not on the guest wheel page.
 
 ## Files
 
