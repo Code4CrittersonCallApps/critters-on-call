@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#c9a227" />
-<meta name="description" content="Critters on Call × Durbin Crossing — Sunday Sep 27, 2026 prize wheel. Spin for thrift & farm gifts, farm ticket, Gold membership, Gold Membership package. St. Johns FL." />
+<meta name="description" content="Critters on Call × Durbin Crossing — Sunday Sep 27, 2026 prize wheel. Spin for thrift & farm gifts, farm tickets, or the Gold Card top-prize bundle. St. Johns FL." />
 <meta name="robots" content="noindex, nofollow" />
 <meta property="og:title" content="Spin the Wheel · Critters on Call × Durbin Crossing" />
 <meta property="og:description" content="Event-only prize wheel — Sep 27, 2026. Scan a Golden Goat, spin, claim your prize." />
@@ -329,8 +329,8 @@
         <div class="code-box" id="win-code" hidden></div>
         <p class="code-hint" id="win-code-hint" hidden></p>
         <div class="premium-banner" id="premium-banner" hidden>
-          <strong>GRAND PRIZE — Critters on Call Gold Membership</strong>
-          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">$100 value · $50 membership · $25 farm tour · $25 thrift or farm gift. Come to the farm to claim.</p>
+          <strong>GOLD CARD — TOP PRIZE</strong>
+          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">$100 bundle · $50 Gold Card + $25 farm ticket + $25 gift. You won the top prize — spins are now closed.</p>
         </div>
         <div class="again-banner" id="again-banner" hidden>
           <strong>Free spin!</strong>
@@ -400,7 +400,7 @@
   var EXPIRES_D = 29;
   var STORE_LEADS = "coc_dc_leads_v1";
   var STORE_DEVICE = "coc_dc_device_v2_" + EVENT_ID;
-  var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID; /* legacy key; grand prize no longer capped */
+  var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID; /* legacy key retained for compatibility; not used */
   var STORE_IDENTITY = "coc_dc_identity_spins_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
@@ -436,6 +436,16 @@
   /* 8 segments — equal 45° wedges; midpoints at i*45+22.5; weights can vary */
   var PRIZES = [
     {
+      id: "gold-card",
+      label: "GOLD CARD — TOP PRIZE",
+      short: "GOLD<br>CARD",
+      value: "TOP PRIZE — $100 bundle",
+      teaser: "$50 Gold Card + $25 farm ticket + $25 gift",
+      kind: "grand",
+      codePrefix: "DCGOLD",
+      fulfill: "GOLD CARD — TOP PRIZE. $100 bundle: $50 card + $25 farm ticket + $25 gift. Come to the farm to claim."
+    },
+    {
       id: "thrift-10",
       label: "$10 thrift gift",
       short: "$10<br>THRIFT",
@@ -456,24 +466,24 @@
       fulfill: "Show this code for a $10 farm gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
-      id: "gold-pkg",
-      label: "Critters on Call Gold Membership",
-      short: "GOLD<br>CARD",
-      value: "GRAND PRIZE — $100 value",
-      teaser: "$50 membership · $25 farm tour · $25 thrift or farm gift",
-      kind: "grand",
-      codePrefix: "DCGPKG",
-      fulfill: "Critters on Call Gold Membership · $100 value. $50 membership · $25 farm tour · $25 thrift or farm gift. Come to the farm to claim."
+      id: "thrift-25",
+      label: "$25 thrift gift",
+      short: "$25<br>THRIFT",
+      value: "Thrift gift credit",
+      teaser: "a bigger thrift-side gift",
+      kind: "gift",
+      codePrefix: "DC25T",
+      fulfill: "Show this code at the farm / thrift for a $25 thrift gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
-      id: "gold-membership",
-      label: "Gold membership",
-      short: "GOLD<br>MEMBER",
-      value: "$100 value · $50 membership + free 2-person farm ticket + free $25 thrift or farm gift",
-      teaser: "full gold card package",
-      kind: "membership",
-      codePrefix: "DCGOLD",
-      fulfill: "Critter Gold membership package ($100 value). Show staff this screen to activate."
+      id: "farm-25",
+      label: "$25 farm gift",
+      short: "$25<br>FARM",
+      value: "Farm gift credit",
+      teaser: "a bigger farm-side gift",
+      kind: "gift",
+      codePrefix: "DC25F",
+      fulfill: "Show this code for a $25 farm gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
       id: "free-spin",
@@ -485,37 +495,29 @@
       fulfill: "You get another spin! This free spin does not count against your 3-spin limit."
     },
     {
-      id: "farm-ticket-25",
-      label: "Free $25 two-person farm tour ticket",
-      short: "$25<br>FARM TIX",
-      value: "Two-person farm tour ticket · $25 value",
+      id: "farm-ticket-25-a",
+      label: "$25 farm ticket",
+      short: "$25<br>FARM TICKET",
+      value: "Farm ticket · $25 value",
       teaser: "bring a friend, no tour required to claim",
       kind: "ticket",
-      codePrefix: "DC25X",
-      fulfill: "Free $25 two-person farm tour ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
+      codePrefix: "DC25TIX",
+      fulfill: "Free $25 farm ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
-      id: "free-spin-2",
-      label: "Free spin",
-      short: "FREE<br>SPIN",
-      value: "Extra spin · does not count against your 3",
-      teaser: "",
-      kind: "again",
-      fulfill: "You get another spin! This free spin does not count against your 3-spin limit."
-    },
-    {
-      id: "free-spin-3",
-      label: "Free spin",
-      short: "FREE<br>SPIN",
-      value: "Extra spin · does not count against your 3",
-      teaser: "",
-      kind: "again",
-      fulfill: "You get another spin! This free spin does not count against your 3-spin limit."
+      id: "farm-ticket-25-b",
+      label: "$25 farm ticket",
+      short: "$25<br>FARM TICKET",
+      value: "Farm ticket · $25 value",
+      teaser: "bring a friend, no tour required to claim",
+      kind: "ticket",
+      codePrefix: "DC25TIX",
+      fulfill: "Free $25 farm ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
     }
   ];
 
-  /* Weights sum 100. Indices match PRIZES. Grand prize uncapped. */
-  var WEIGHTS = [28, 16, 6, 8, 10, 12, 10, 10];
+  /* Weights sum 100. Gold Card is rare; free spin is more common; $25 wedges are rarer. */
+  var WEIGHTS = [5, 18, 15, 10, 10, 22, 10, 10];
 
   var slice = 360 / PRIZES.length;
   var rotation = 0;
@@ -526,6 +528,7 @@
   var pendingClaimed = false;
   var goatId = null;
   var claimFormOpen = false;
+  var topPrizeWon = !!readDevice().top_prize_won;
 
   var wheel = document.getElementById("prize-wheel");
   var spinBtn = document.getElementById("spin-btn");
@@ -590,11 +593,11 @@
       var raw = localStorage.getItem(STORE_DEVICE);
       var obj = raw ? JSON.parse(raw) : null;
       if (!obj || typeof obj !== "object") {
-        obj = { event_id: EVENT_ID, spins: 0, email_norm: null, phone_norm: null, lastLeadId: null };
+        obj = { event_id: EVENT_ID, spins: 0, email_norm: null, phone_norm: null, lastLeadId: null, top_prize_won: false };
       }
       return obj;
     } catch (e) {
-      return { event_id: EVENT_ID, spins: 0, email_norm: null, phone_norm: null, lastLeadId: null };
+      return { event_id: EVENT_ID, spins: 0, email_norm: null, phone_norm: null, lastLeadId: null, top_prize_won: false };
     }
   }
 
@@ -666,7 +669,18 @@
     return Math.max(0, MAX_SPINS - effectiveSpinsUsed());
   }
 
+  function hasTopPrizeWon() {
+    return topPrizeWon || !!readDevice().top_prize_won;
+  }
+
   function refreshSpinUI() {
+    if (hasTopPrizeWon()) {
+      spinsLeftEl.textContent = "0";
+      spinBtn.disabled = true;
+      spinBtn.classList.add("is-locked");
+      spinBtn.textContent = "Top prize won";
+      return;
+    }
     var left = spinsRemaining();
     spinsLeftEl.textContent = String(left);
     if (left <= 0) {
@@ -858,6 +872,12 @@
 
     var isAgain = prize.kind === "again";
     var isGrand = prize.kind === "grand";
+    if (isGrand) {
+      topPrizeWon = true;
+      var topState = readDevice();
+      topState.top_prize_won = true;
+      writeDevice(topState);
+    }
     document.getElementById("win-kicker").textContent =
       isAgain ? "Lucky wedge" : (isGrand ? "GRAND PRIZE" : "You won");
     winLabel.textContent = prize.label;
@@ -910,7 +930,7 @@
         '<button class="btn btn-primary btn-block" type="button" id="open-claim-btn">Claim your prize</button>';
       document.getElementById("open-claim-btn").addEventListener("click", openClaimContacts);
       var left2 = spinsRemaining();
-      if (left2 > 0) {
+      if (!isGrand && left2 > 0) {
         winCtas.innerHTML = '<button class="btn btn-outline btn-block" type="button" id="spin-more-cta">Spin again (' + left2 + ' left)</button>';
         document.getElementById("spin-more-cta").addEventListener("click", function () {
           spinBtn.click();
@@ -918,7 +938,7 @@
       }
     } else {
       var left3 = spinsRemaining();
-      if (left3 > 0) {
+      if (!isGrand && left3 > 0) {
         winCtas.innerHTML = '<button class="btn btn-outline btn-block" type="button" id="spin-more-cta2">Spin again (' + left3 + ' left)</button>';
         document.getElementById("spin-more-cta2").addEventListener("click", function () {
           spinBtn.click();
@@ -963,7 +983,7 @@
     }
 
     var code = pending.codePrefix ? makeCode(pending.codePrefix) : makeCode("DCVX");
-    if (pending.kind === "grand") code = "GPKG-" + (goatId || "XX") + "-" + code.slice(-4);
+    if (pending.kind === "grand") code = "GOLD-" + (goatId || "XX") + "-" + code.slice(-4);
     if (pending.kind === "membership") code = "GOLD-" + (goatId || "XX") + "-" + code.slice(-4);
     pendingCode = code;
     showPrize(pending, code, false);
@@ -971,6 +991,7 @@
 
   spinBtn.addEventListener("click", function () {
     if (spinning) return;
+    if (hasTopPrizeWon()) { toast("Top prize won — spins are closed"); return; }
     if (isExpired()) { toast("Event ended — wheel is closed"); applyExpiryUI(); return; }
     if (spinsRemaining() <= 0) { toast("No spins left (max 3)"); return; }
 

@@ -51,8 +51,8 @@ It does not clear leads, claims, or any production rules. The `reset=1` paramete
 ## Rules (client-side)
 
 - Max **3 spins** · free-spin wedge does **not** decrement
-- **Grand prize** = Critters on Call Gold Membership ($100 · $50 membership · $25 farm tour · $25 thrift or farm gift) — **uncapped**
-- Separate **Gold membership** wedge remains uncapped
+- **Gold Card — TOP PRIZE** = $100 bundle: $50 Gold Card + $25 farm ticket + $25 gift; landing this wedge closes further spins
+- **Free spin** does not decrement the 3-spin limit
 - Claims: text PRIZE / Facebook DM / email / booking-help (not browser-only). Review link after claim reveal: `https://g.page/r/CS74JMTm3xrWEAE/review`
 - Staff `admin.html` (PIN `0927`) is legacy tooling only
 
@@ -62,16 +62,18 @@ Geometry: conic from `0deg`, labels at midpoints `i*45+22.5`, shared label radiu
 
 | # | Prize | Weight | Notes |
 |---|--------|--------|------|
-| 0 | $10 thrift gift | **28%** | Teaser: comic book, basketball cards, tumbler · `DC10T-*` |
-| 1 | $10 farm gift | **16%** | Teaser: elephant ear, sweet potato slip, fertilizer, eggs · `DC10F-*` |
-| 2 | Critters on Call Gold Membership (GOLD CARD) | **6%** | GRAND PRIZE — $100 · uncapped · `$50 membership · $25 farm tour · $25 thrift or farm gift` |
-| 3 | Gold membership (GOLD MEMBER) | **8%** | $100 framing · uncapped |
-| 4 | Free spin | **10%** | Does **not** count against 3-spin limit |
-| 5 | Free $25 two-person farm tour ticket | **12%** | Teaser: bring a friend, no tour required to claim · `DC25X-*` |
-| 6 | Free spin (filler) | **10%** | Same free-spin rules |
-| 7 | Free spin (filler) | **10%** | Same free-spin rules |
+| 0 | **GOLD CARD — TOP PRIZE** | **5%** | $100 bundle: $50 Gold Card + $25 farm ticket + $25 gift; locks further spins · `DCGOLD-*` |
+| 1 | $10 thrift gift | **18%** | Teaser: comic book, basketball cards, tumbler · `DC10T-*` |
+| 2 | $10 farm gift | **14%** | Teaser: elephant ear, sweet potato slip, fertilizer, eggs · `DC10F-*` |
+| 3 | $25 thrift gift | **10%** | `DC25T-*` |
+| 4 | $25 farm gift | **10%** | `DC25F-*` |
+| 5 | Free spin | **20%** | Does **not** count against 3-spin limit |
+| 6 | $25 farm ticket | **10%** | Separate ticket wedge · `DC25TIX-*` |
+| 7 | $25 farm ticket | **10%** | Separate duplicate ticket wedge · `DC25TIX-*` |
 
-**Removed:** $50 ticket, $25 thrift, $25 farm (as separate wedges), old spin-again label (replaced by Free spin). Ticket ceiling stays at $25. Footer chrome (Staff tools / CRM / Goat QR / Branding / palette) is not on the guest wheel page.
+Gold Card is the clearly marked best prize. Its result copy spells out the $50 card + $25 ticket + $25 gift bundle, and the wheel disables all further spins after it lands.
+
+Footer chrome (Staff tools / CRM / Goat QR / Branding / palette) is not on the guest wheel page.
 
 ## Files
 

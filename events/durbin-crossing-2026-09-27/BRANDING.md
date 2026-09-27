@@ -32,4 +32,4 @@ Visible in `.event-details` on `index.html`: Sunday Sep 27 2026 · 10 AM–1 PM 
 
 ## Wheel labels
 
-Scoped under `.dc-wheel`: font ~0.48rem, mid-wedge placement via JS (`i*60°` with conic from `-30deg`), two-line shorts so each label stays inside its 60° wedge.
+Scoped under `.dc-wheel`: font ~0.48rem, mid-wedge placement via JS (`i*45°+22.5°` with conic from `0deg`), short labels so each label stays inside its 45° wedge.
