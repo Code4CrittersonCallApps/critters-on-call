@@ -202,24 +202,6 @@
     font-weight: 600; font-size: 0.9rem; padding: 0.7rem;
     border-radius: 0.75rem; border: 1px solid rgba(201,162,39,0.3);
   }
-  .claim-ways {
-    list-style: none; margin: 0; padding: 0;
-    display: flex; flex-direction: column; gap: 0.55rem;
-  }
-  .claim-ways li {
-    font-size: 0.88rem; line-height: 1.4; color: var(--cream);
-    text-align: left; padding: 0.55rem 0.65rem;
-    border-radius: 0.65rem;
-    background: rgba(26,36,28,0.55);
-    border: 1px solid rgba(201,162,39,0.28);
-  }
-  .claim-ways li strong {
-    color: var(--card-gold); display: block; font-size: 0.78rem;
-    letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.15rem;
-  }
-  .claim-ways a {
-    color: var(--card-gold); font-weight: 700; text-decoration: underline;
-  }
   .secondary-unlock {
     margin-top: 0.85rem; padding-top: 0.75rem;
     border-top: 1px solid rgba(201,162,39,0.25);
@@ -368,25 +350,7 @@
 
         <div class="claim-panel" id="claim-panel" hidden>
           <h3>Claim your prize</h3>
-          <p class="claim-sub">Tell us you won — use <strong>any</strong> of these — then come to the farm. This page does <strong>not</strong> save claims by itself.</p>
-          <ul class="claim-ways" id="claim-ways">
-            <li>
-              <strong>Text</strong>
-              Text <strong>PRIZE</strong> to <a id="claim-sms-link" href="sms:9142631311?body=PRIZE">914-263-1311</a>
-            </li>
-            <li>
-              <strong>Facebook DM</strong>
-              DM us on Facebook — <a id="claim-fb-link" href="https://www.facebook.com/profile.php?id=61556795506312" target="_blank" rel="noopener">Sheehan Homestead</a>
-            </li>
-            <li>
-              <strong>Email</strong>
-              <a id="claim-mail-link" href="mailto:sheehanhomestead@gmail.com">sheehanhomestead@gmail.com</a>
-            </li>
-            <li>
-              <strong>Website</strong>
-              Booking help — <a id="claim-book-link" href="https://www.sheehanhomestead.com/booking-help" target="_blank" rel="noopener">sheehanhomestead.com/booking-help</a>
-            </li>
-          </ul>
+          <p class="claim-sub">Tell us you won using <strong>any option below</strong>, then come to the farm. This page does <strong>not</strong> save claims by itself.</p>
           <div class="cta-row" id="claim-contact-row"></div>
           <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. Staff confirm by your message or code — not by anything stored in the browser alone.</p>
         </div>
@@ -872,14 +836,6 @@
         '<a class="btn-mail btn-block" href="' + mail + '" id="claim-mail-cta">Email ' + CLAIM_EMAIL + '</a>' +
         '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Website booking help</a>';
     }
-    var mailLink = document.getElementById("claim-mail-link");
-    var smsLink = document.getElementById("claim-sms-link");
-    var fbLink = document.getElementById("claim-fb-link");
-    var bookLink = document.getElementById("claim-book-link");
-    if (mailLink) mailLink.href = mail;
-    if (smsLink) smsLink.href = sms;
-    if (fbLink) fbLink.href = FB_URL;
-    if (bookLink) bookLink.href = BOOKING_URL;
   }
 
   function openClaimContacts() {
