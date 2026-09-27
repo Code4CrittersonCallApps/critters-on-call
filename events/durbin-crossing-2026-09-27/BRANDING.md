@@ -28,7 +28,7 @@
 
 ## Event details (on-page)
 
-Visible in `.event-details` on `index.html`: Sunday Sep 27 2026 · 10 AM–1 PM · Durbin Crossing · 145 South Durbin Parkway, St Johns FL 32259 · Animal pickup 8:45 AM.
+Visible in `.event-details` on `index.html`: Sunday Sep 27 2026 · 10 AM–1 PM · Durbin Crossing · 145 South Durbin Parkway, St Johns FL 32259.
 
 ## Wheel labels
 
