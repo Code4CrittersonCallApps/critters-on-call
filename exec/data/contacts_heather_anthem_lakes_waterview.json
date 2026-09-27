@@ -1,0 +1,24 @@
+{
+  "name": "Heather",
+  "org": "Anthem Lakes Waterview Senior Living",
+  "org_short": "Anthem Lakes Waterview",
+  "phone": "904-853-8796",
+  "phone_raw": "9048538796",
+  "phone_type": "cell",
+  "email": "",
+  "city": "Atlantic Beach",
+  "segment": "Senior / IL-AL",
+  "phone_source": "Michael voice call 2026-09-27",
+  "updated": "2026-09-27 18:03 ET",
+  "notes": "Texted Michael and said she'd pass his information on to the right people. Follow up in a few days if nothing comes back. Do not auto-message.",
+  "do_not_auto_message": true,
+  "follow_up": {
+    "when": "in a few days from 2026-09-27",
+    "if": "nothing comes back",
+    "dunk_id": "owe-heather-anthem-lakes-waterview-followup"
+  },
+  "related_dunk_ids": [
+    "life-anthemlakes-com-anthem-lakes-waterview-senior-living-life-enrichment-director",
+    "owe-heather-anthem-lakes-waterview-followup"
+  ]
+}

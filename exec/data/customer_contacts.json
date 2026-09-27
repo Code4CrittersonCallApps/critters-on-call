@@ -30,5 +30,27 @@
     "updated": "2026-09-27 17:57 ET",
     "notes": "Saved voice Sep 27. Do not auto-message.",
     "do_not_auto_message": true
+  },
+  {
+    "name": "Julie Pettigrew",
+    "email": "jpettigrew713@gmail.com",
+    "phone": "931-999-3833",
+    "address": "8202 Elston Street",
+    "address_booking_alt": "8202 Elsdon Street, Jacksonville, FL 32219",
+    "phone_source": "Michael voice call 2026-09-27",
+    "updated": "2026-09-27 18:01 ET",
+    "notes": "Mobile Mini PZ Nov 7 2026 11:00 ET. Double-paid PayPal+website $175 each; declined refund. Staffed by Emery. Do not auto-message.",
+    "do_not_auto_message": true,
+    "staffed_by": "Emery",
+    "order_id": "C-3C67EBAF16DE409E"
+  },
+  {
+    "name": "Heather",
+    "org": "Anthem Lakes Waterview Senior Living",
+    "phone": "904-853-8796",
+    "phone_source": "Michael voice call 2026-09-27",
+    "updated": "2026-09-27 18:03 ET",
+    "notes": "Texted Michael and said she'd pass his information on to the right people. Follow up in a few days if nothing comes back. Do not auto-message.",
+    "do_not_auto_message": true
   }
 ]
