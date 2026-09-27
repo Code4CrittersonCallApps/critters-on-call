@@ -62,9 +62,9 @@ Geometry: conic from `0deg`, labels at midpoints `i*45+22.5`, shared label radiu
 | # | Prize | Weight | Notes |
 |---|--------|--------|------|
 | 0 | **GOLD CARD — TOP PRIZE** | **5%** | $100 bundle: $50 Gold Card + $25 farm ticket + $25 gift; locks further spins · `DCGOLD-*` |
-| 1 | $10 thrift gift | **18%** | Teaser: comic book, basketball cards, tumbler · `DC10T-*` |
+| 1 | $10 thrift / toy gift | **18%** | Teaser: toy, comic book, basketball cards, tumbler · `DC10T-*` |
 | 2 | $10 farm gift | **15%** | Teaser: elephant ear, sweet potato slip, fertilizer, eggs · `DC10F-*` |
-| 3 | $25 thrift gift | **10%** | `DC25T-*` |
+| 3 | $25 thrift / toy gift | **10%** | `DC25T-*` |
 | 4 | $25 farm gift | **10%** | `DC25F-*` |
 | 5 | Free spin | **22%** | Does **not** count against 3-spin limit |
 | 6 | $25 farm ticket | **10%** | Separate ticket wedge · `DC25TIX-*` |
