@@ -16,7 +16,7 @@ Captured fields (v1 localStorage → CSV / mailto / optional webhook):
 2. Tag every row in CRM / sheet: `source=durbin-crossing-wheel`, `event_date=2026-09-27`, `goat_id`, `prize`.
 3. Deduplicate on email **and** phone (wheel already blocks double unlock; still clean merges).
 4. Fulfill queue by prize kind:
-   - **thrift-10 / farm-10 / thrift-25 / farm-25** — honor codes (`DC10T-*` / `DC10F-*` / `DC25T-*` / `DC25F-*`) at thrift or farm redeem.
+   - **thrift-10 / farm-10 / thrift-25 / farm-25** — honor Claim message + on-screen prize at thrift or farm redeem.
    - **ticket-25 / ticket-50** — free $25 / $50 ticket; show screen to staff (do not advertise what for on the wheel).
    - **gold-membership** — activate Critter Gold; show staff screen (`GOLD-*` codes).
    - **spin-again** — no claim / no lead required; still counts as a spin toward max 3.
@@ -25,7 +25,7 @@ Captured fields (v1 localStorage → CSV / mailto / optional webhook):
 ### Warming sequence (suggested, not built)
 | Day | Channel | Intent |
 |-----|---------|--------|
-| +0–1 | SMS or email | “Thanks for spinning at Durbin Crossing — here’s your code / how to redeem.” |
+| +0–1 | SMS or email | “Thanks for spinning at Durbin Crossing — tap Claim and show your screen at the farm.” |
 | +3 | Email | Soft Visit Us / services link; mention prize still valid. |
 | +7 | Email / SMS | Mom-resource nudge (see §2) — value first, not hard sell. |
 | +14 | Email | One clear CTA: book Visit Us or next Mommy & Me / goat yoga. |

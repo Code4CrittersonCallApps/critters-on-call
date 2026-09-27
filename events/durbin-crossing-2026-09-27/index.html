@@ -154,13 +154,6 @@
     text-align: center; font-size: 0.72rem; color: var(--muted);
     font-weight: 600; margin: 0.55rem 0 0; letter-spacing: 0.04em;
   }
-  .code-box {
-    margin-top: 0.75rem; padding: 0.75rem; border-radius: 0.75rem;
-    border: 1px dashed rgba(201,162,39,0.55); background: rgba(201,162,39,0.1);
-    text-align: center; font-family: ui-monospace, monospace;
-    font-size: 1.15rem; font-weight: 700; color: var(--card-gold); letter-spacing: 0.06em;
-  }
-  .code-hint { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 0.35rem; line-height: 1.35; }
   .premium-banner {
     border-radius: 0.85rem; border: 2px solid var(--card-gold);
     background: linear-gradient(145deg, #2a2414, #1c1410);
@@ -342,8 +335,6 @@
         <p class="text-sm" id="win-value" style="margin-top:0.25rem;color:var(--card-gold);font-weight:600"></p>
         <p class="teaser" id="win-teaser" style="margin-top:0.35rem"></p>
         <p class="text-sm muted" id="win-note" style="margin-top:0.45rem;line-height:1.45"></p>
-        <div class="code-box" id="win-code" hidden></div>
-        <p class="code-hint" id="win-code-hint" hidden></p>
         <div class="premium-banner" id="premium-banner" hidden>
           <strong>GOLD CARD — TOP PRIZE</strong>
           <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">$100 bundle · $50 Gold Card + $25 farm ticket + $25 gift. You won the top prize — spins are now closed.</p>
@@ -359,13 +350,13 @@
           <h3>Claim your prize</h3>
           <p class="claim-sub">Tell us you won using <strong>any option below</strong>, then come to the farm. This page does <strong>not</strong> save claims by itself.</p>
           <div class="cta-row" id="claim-contact-row"></div>
-          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. Staff confirm by your message or code — not by anything stored in the browser alone.</p>
+          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. Staff confirm by your message — not by anything stored in the browser alone.</p>
         </div>
 
         <div class="farm-claim" id="farm-claim" hidden>
           <strong>Come to the farm to claim</strong>
           <p class="farm-addr">44065 Cushman Road<br />Callahan, FL 32011</p>
-          <p class="farm-hint">Show this screen or your code at the farm. No tour required — claim and go.</p>
+          <p class="farm-hint">Show this screen at the farm. No tour required — claim and go.</p>
         </div>
 
         <div class="review-prompt" id="review-prompt" hidden>
@@ -440,8 +431,7 @@
       value: "TOP PRIZE — $100 bundle",
       teaser: "$50 Gold Card + $25 farm ticket + $25 gift",
       kind: "grand",
-      codePrefix: "DCGOLD",
-      fulfill: "GOLD CARD — TOP PRIZE. $100 bundle: $50 card + $25 farm ticket + $25 gift. Come to the farm to claim."
+      fulfill: "GOLD CARD — TOP PRIZE. $100 bundle: $50 card + $25 farm ticket + $25 gift. Tap Claim, then come to the farm."
     },
     {
       id: "thrift-10",
@@ -450,8 +440,7 @@
       value: "Thrift or toy gift credit",
       teaser: "think toy, comic book, basketball cards, tumbler",
       kind: "gift",
-      codePrefix: "DC10T",
-      fulfill: "Show this code at the farm / thrift for a $10 thrift or toy gift. Event-only · Durbin Crossing Sep 27 2026."
+      fulfill: "Tap Claim, then show this screen at the farm / thrift for a $10 thrift or toy gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
       id: "farm-10",
@@ -460,8 +449,7 @@
       value: "Farm gift credit",
       teaser: "think elephant ear, sweet potato slip, fertilizer, eggs",
       kind: "gift",
-      codePrefix: "DC10F",
-      fulfill: "Show this code for a $10 farm gift. Event-only · Durbin Crossing Sep 27 2026."
+      fulfill: "Tap Claim, then show this screen for a $10 farm gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
       id: "thrift-25",
@@ -470,8 +458,7 @@
       value: "Thrift or toy gift credit",
       teaser: "a bigger thrift or toy gift",
       kind: "gift",
-      codePrefix: "DC25T",
-      fulfill: "Show this code at the farm / thrift for a $25 thrift or toy gift. Event-only · Durbin Crossing Sep 27 2026."
+      fulfill: "Tap Claim, then show this screen at the farm / thrift for a $25 thrift or toy gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
       id: "farm-25",
@@ -480,8 +467,7 @@
       value: "Farm gift credit",
       teaser: "a bigger farm-side gift",
       kind: "gift",
-      codePrefix: "DC25F",
-      fulfill: "Show this code for a $25 farm gift. Event-only · Durbin Crossing Sep 27 2026."
+      fulfill: "Tap Claim, then show this screen for a $25 farm gift. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
       id: "free-spin",
@@ -499,8 +485,7 @@
       value: "Farm ticket · $25 value",
       teaser: "bring a friend, no tour required to claim",
       kind: "ticket",
-      codePrefix: "DC25TIX",
-      fulfill: "Free $25 farm ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
+      fulfill: "Free $25 farm ticket. Tap Claim, bring a friend — no tour required at the farm. Event-only · Durbin Crossing Sep 27 2026."
     },
     {
       id: "farm-ticket-25-b",
@@ -509,8 +494,7 @@
       value: "Farm ticket · $25 value",
       teaser: "bring a friend, no tour required to claim",
       kind: "ticket",
-      codePrefix: "DC25TIX",
-      fulfill: "Free $25 farm ticket. Bring a friend — no tour required to claim at the farm. Event-only · Durbin Crossing Sep 27 2026."
+      fulfill: "Free $25 farm ticket. Tap Claim, bring a friend — no tour required at the farm. Event-only · Durbin Crossing Sep 27 2026."
     }
   ];
 
@@ -528,7 +512,6 @@
   var spinning = false;
   var reduceMotion = false;
   var pending = null;
-  var pendingCode = null;
   var pendingClaimed = false;
   var goatId = null;
   var claimFormOpen = false;
@@ -542,8 +525,6 @@
   var winValue = document.getElementById("win-value");
   var winTeaser = document.getElementById("win-teaser");
   var winNote = document.getElementById("win-note");
-  var winCode = document.getElementById("win-code");
-  var winCodeHint = document.getElementById("win-code-hint");
   var premiumBanner = document.getElementById("premium-banner");
   var againBanner = document.getElementById("again-banner");
   var claimPanel = document.getElementById("claim-panel");
@@ -651,13 +632,6 @@
     var d = String(p || "").replace(/\D/g, "");
     if (d.length === 11 && d.charAt(0) === "1") d = d.slice(1);
     return d;
-  }
-
-  function makeCode(prefix) {
-    var alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-    var out = "";
-    for (var i = 0; i < 4; i++) out += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-    return (prefix || "DC") + "-" + out;
   }
 
   function effectiveSpinsUsed() {
@@ -813,10 +787,9 @@
     } catch (e) {}
   }
 
-  function claimMailHref(prizeLabel, code) {
+  function claimMailHref(prizeLabel) {
     var subject = "Durbin Crossing prize — " + prizeLabel;
     var body = "Hi Critters on Call —\n\nI spun the Durbin Crossing wheel and won:\n" + prizeLabel;
-    if (code) body += "\nCode: " + code;
     if (goatId) body += "\nGoat sticker: #" + goatId;
     body += "\nEvent: Durbin Crossing " + EVENT_DATE;
     body += "\nFarm claim: " + FARM_ADDRESS + "\n";
@@ -832,7 +805,7 @@
 
   function fillClaimContacts() {
     var label = pending ? pending.label : "prize";
-    var mail = claimMailHref(label, pendingCode);
+    var mail = claimMailHref(label);
     var sms = "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent("PRIZE");
     if (claimContactRow) {
       claimContactRow.innerHTML =
@@ -860,9 +833,8 @@
     toast("Text · Facebook · email · or booking help — then come to the farm");
   }
 
-  function showPrize(prize, code, claimed) {
+  function showPrize(prize, claimed) {
     pending = prize;
-    pendingCode = code || null;
     pendingClaimed = !!claimed;
     claimFormOpen = false;
     winCard.hidden = false;
@@ -882,16 +854,6 @@
     winTeaser.textContent = prize.teaser || "";
     winTeaser.hidden = !prize.teaser;
     winNote.textContent = prize.fulfill;
-
-    if (code && !isAgain) {
-      winCode.hidden = false;
-      winCode.textContent = code;
-      winCodeHint.hidden = false;
-      winCodeHint.textContent = "Show this phone or print · redeem at the farm · event " + EVENT_ID;
-    } else {
-      winCode.hidden = true;
-      winCodeHint.hidden = true;
-    }
 
     premiumBanner.hidden = !isGrand;
     againBanner.hidden = !isAgain;
@@ -973,17 +935,7 @@
 
     refreshSpinUI();
 
-    if (pending.kind === "again") {
-      pendingCode = null;
-      showPrize(pending, null, false);
-      return;
-    }
-
-    var code = pending.codePrefix ? makeCode(pending.codePrefix) : makeCode("DCVX");
-    if (pending.kind === "grand") code = "GOLD-" + (goatId || "XX") + "-" + code.slice(-4);
-    if (pending.kind === "membership") code = "GOLD-" + (goatId || "XX") + "-" + code.slice(-4);
-    pendingCode = code;
-    showPrize(pending, code, false);
+    showPrize(pending, false);
   }
 
   spinBtn.addEventListener("click", function () {
@@ -994,7 +946,6 @@
 
     var index = pickIndex();
     pending = PRIZES[index];
-    pendingCode = null;
     pendingClaimed = false;
     winCard.hidden = true;
     claimPanel.hidden = true;
