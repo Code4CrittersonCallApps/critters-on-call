@@ -3,74 +3,73 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Operator · Sheehan Homestead · Sat Sep 26, 2026</title>
+<title>Operator · Sheehan Homestead · Mon Sep 28, 2026</title>
 <style>
 :root{
   --bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;
   --text:#e8eefc;--muted:#93a0b8;--dim:#7a879e;
   --green:#3dd68c;--gold:#fbbf24;--gold-dim:#c9a227;--warn:#ffb020;--bad:#ff5d6c;--blue:#5b8cff;
+  --cyan:#22d3ee;--yellow:#facc15;--white:#e8eefc;--red:#ff5d6c;
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.4;font-size:14px}
 a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1100px;margin:0 auto;padding:16px 14px 56px}
-header{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-start;justify-content:space-between;margin:0 0 12px}
+.wrap{max-width:1120px;margin:0 auto;padding:16px 14px 64px}
+header{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-start;justify-content:space-between;margin:0 0 10px}
 h1{margin:0;font-size:clamp(1.15rem,3vw,1.55rem);letter-spacing:-.02em;font-weight:750}
 .sub{color:var(--muted);font-size:.78rem;margin:4px 0 0}
 .stamps{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.badge{font-size:.62rem;font-weight:800;padding:3px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em;border:1px solid}
+.badge{font-size:.62rem;font-weight:800;padding:3px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em;border:1px solid;display:inline-block}
 .badge.v{background:#13281d;color:var(--green);border-color:#3dd68c66}
 .badge.e{background:#2a2416;color:var(--warn);border-color:#ffb02066}
 .badge.o{background:#1a1f2e;color:#a8b4c8;border-color:var(--line)}
 .badge.c{background:#1a1014;color:var(--bad);border-color:#ff5d6c66}
 .badge.g{background:#1a160c;color:var(--gold);border-color:#c9a22766}
 .hair{height:2px;border:0;margin:0 0 14px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);opacity:.55}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 12px}
-@media(max-width:900px){.pillars{grid-template-columns:1fr}}
-.pillar{padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
-.pillar.ops{border-color:#c9a22777;background:linear-gradient(160deg,#2a2210,#121a2b 70%)}
-.pillar.growth{border-color:#3dd68c66;background:linear-gradient(160deg,#13281d,#121a2b 70%)}
-.pillar.support{border-color:#5b8cff55;background:linear-gradient(160deg,#101828,#121a2b 70%)}
-.pillar h2{margin:0 0 4px;font-size:.95rem;letter-spacing:-.01em}
-.pillar .kick{font-size:.62rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:0 0 6px}
-.pillar ul{margin:0;padding:0 0 0 16px;color:#c5d0e6;font-size:.78rem}
-.pillar li{margin:2px 0}
-.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:10px}
-@media(max-width:900px){.grid{grid-template-columns:1fr}}
-.card{padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);margin:0 0 10px}
-.card h3{margin:0 0 8px;font-size:.88rem;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
-.card h3 .t{letter-spacing:-.01em}
-.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-table{width:100%;border-collapse:collapse;font-size:.78rem}
-th,td{padding:5px 6px;text-align:left;border-bottom:1px solid #1a2438;vertical-align:top}
-th{color:var(--muted);font-weight:650;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em}
-.mono{font-variant-numeric:tabular-nums}
-.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:6px;margin:0 0 8px}
-.kpi .b{padding:8px 10px;border-radius:10px;background:var(--panel);border:1px solid #1a2438}
+.card{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);margin:0 0 12px}
+.card.star{border-color:#c9a22788;background:linear-gradient(160deg,#2a2210,#121a2b 65%)}
+.card h2{margin:0 0 8px;font-size:1rem;letter-spacing:-.01em;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.card h3{margin:12px 0 6px;font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:0 0 8px}
+.kpi .b{padding:10px 12px;border-radius:12px;background:var(--panel);border:1px solid #1a2438}
 .kpi .l{font-size:.58rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.kpi .v{font-size:1.05rem;font-weight:750;margin-top:2px;color:var(--gold)}
-.kpi .s{font-size:.68rem;color:var(--dim);margin-top:2px}
-.alert{padding:8px 10px;border-radius:10px;border:1px solid #ff5d6c55;background:#1a1014;font-size:.78rem;margin:6px 0;color:#ffb4bc}
+.kpi .v{font-size:1.2rem;font-weight:750;margin-top:3px;color:var(--gold)}
+.kpi .v.big{font-size:1.45rem}
+.kpi .v.bad{color:var(--bad)}
+.kpi .v.ok{color:var(--green)}
+.kpi .s{font-size:.68rem;color:var(--dim);margin-top:3px}
+.note{font-size:.7rem;color:var(--dim);margin-top:6px}
+.mm{font-size:.68rem;color:var(--muted);margin-top:2px}
+.gold{color:var(--gold);font-weight:700}
+.mono{font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+th,td{padding:6px 6px;text-align:left;border-bottom:1px solid #1a2438;vertical-align:top}
+th{color:var(--muted);font-weight:650;font-size:.62rem;text-transform:uppercase;letter-spacing:.04em}
+.alert{padding:8px 10px;border-radius:10px;border:1px solid #ff5d6c55;background:#1a1014;font-size:.78rem;margin:8px 0;color:#ffb4bc}
 .prompt{padding:8px 10px;border-radius:10px;border:1px dashed #ffb02066;background:#16140f;font-size:.78rem;color:var(--warn);margin:6px 0}
-.note{font-size:.68rem;color:var(--dim);margin-top:6px}
-.book{padding:8px 10px;border-radius:10px;background:var(--panel);border:1px solid #1a2438;margin:5px 0 0}
-.book .tt{font-weight:700;font-size:.82rem}
-.book .mm{font-size:.72rem;color:var(--muted);margin-top:2px}
-.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:6px;border:1px solid var(--line);color:var(--muted);margin:2px 3px 0 0}
-.chip.ft{border-color:#ffb02066;color:var(--warn)}
-.chip.ok{border-color:#3dd68c55;color:var(--green)}
-.chip.open{border-color:#5b8cff55;color:#9ec1ff}
-.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.links a{font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6;text-decoration:none}
-.links a:hover{border-color:var(--green);color:#fff}
-.wx{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px}
-@media(max-width:600px){.wx{grid-template-columns:repeat(2,1fr)}}
-.wx .b{padding:8px;border-radius:10px;background:var(--panel);border:1px solid #1a2438}
-.wx .l{font-size:.58rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
-.wx .v{font-size:.95rem;font-weight:700;color:var(--gold);margin-top:2px}
-.conflict{margin-top:6px;padding:7px 9px;border-radius:8px;border:1px dashed #ffb02066;background:#16140f;font-size:.72rem;color:var(--warn)}
-footer{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:.68rem;color:var(--dim)}
+.okbox{padding:8px 10px;border-radius:10px;border:1px solid #3dd68c44;background:#0f1a14;font-size:.78rem;margin:6px 0;color:#b7f5d0}
+.bkts{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px;margin:8px 0}
+.bkt{padding:8px;border-radius:10px;background:var(--panel);border:1px solid #1a2438;text-align:center}
+.bkt .l{font-size:.58rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.bkt .v{font-size:.95rem;font-weight:700;color:var(--gold);margin-top:2px}
+.bkt .s{font-size:.62rem;color:var(--dim)}
 .legend{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.chipd{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 5px;margin:2px;border-radius:7px;font-size:.65rem;font-weight:700;border:1px solid #1a2438;color:#0b1220}
+.chipd.cyan{background:var(--cyan);border-color:#67e8f9}
+.chipd.green{background:var(--green);border-color:#6ee7b7}
+.chipd.yellow{background:var(--yellow);border-color:#fde047;color:#422006}
+.chipd.white{background:#1a2438;border-color:#2a3a58;color:#c5d0e6}
+.chipd.red{background:var(--red);border-color:#fda4af;color:#fff}
+.month{margin:0 0 10px}
+.month .ml{font-size:.72rem;font-weight:700;color:var(--muted);margin:0 0 4px}
+.chips{display:flex;flex-wrap:wrap}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.links a{font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:#c5d0e6;text-decoration:none}
+.links a:hover{border-color:var(--green);color:#fff}
+ul.prog{margin:4px 0 0;padding:0 0 0 18px;font-size:.8rem;color:#c5d0e6}
+ul.prog li{margin:4px 0}
+footer{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:.68rem;color:var(--dim)}
+.empty{padding:12px;border-radius:10px;border:1px dashed #2a3a58;background:var(--panel);color:var(--muted);font-size:.82rem}
 </style>
 </head>
 <body>
@@ -79,280 +78,244 @@ footer{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-si
 <header>
   <div>
     <h1>Operator · Sheehan Homestead</h1>
-    <p class="sub">Michael Sheehan · Critters on Call · Sat Sep 26, 2026 (ET) · instrument panel, not a pitch</p>
+    <p class="sub">Michael Sheehan · Critters on Call · Mon Sep 28, 2026 (ET) · bare-bones state of the union · not a pitch</p>
   </div>
   <div class="stamps">
     <span class="badge g">Live day</span>
     <span class="badge v">Verified</span>
     <span class="badge e">Estimated</span>
-    <span class="badge o">Open</span>
-    <span class="badge c">Caller stated</span>
+    <span class="badge c">Caller-stated</span>
   </div>
 </header>
 <hr class="hair"/>
 
-<div class="legend">
-  <span class="badge v">Payments / Calendar = Verified</span>
-  <span class="badge e">Labor / weather / attendance = Estimated</span>
-  <span class="badge c">Bills / review counts from caller = Caller stated</span>
-  <span class="badge o">Hires / compliance = Open</span>
-</div>
-
-<nav class="pillars" aria-label="Three pillars">
-  <div class="pillar ops">
-    <div class="kick">Pillar 1</div>
-    <h2>Operations</h2>
-    <ul>
-      <li>Roster + first-timers</li>
-      <li>Today P&amp;L · tomorrow Durbin</li>
-      <li>Weather · red-light bills · empty days</li>
-    </ul>
-  </div>
-  <div class="pillar growth">
-    <div class="kick">Pillar 2</div>
-    <h2>Growth</h2>
-    <ul>
-      <li>Pipeline · $250k by Dec 23</li>
-      <li>555 reviews · apps</li>
-      <li>Durbin wheel live</li>
-    </ul>
-  </div>
-  <div class="pillar support">
-    <div class="kick">Pillar 3</div>
-    <h2>Support</h2>
-    <ul>
-      <li>Calendar · payments book</li>
-      <li>Corporate bots</li>
-      <li>LLC / insurance / permit</li>
-    </ul>
-  </div>
-</nav>
-
-<div class="grid">
-<!-- ===================== LEFT: OPS ===================== -->
-<div>
-
-<section class="card" id="ops-roster">
-  <h3><span class="t">Ops · Team roster</span><span class="badge v">Calendar</span></h3>
-  <table>
-    <thead><tr><th>Name</th><th>Role</th><th>Flags</th><th>Today / Sun</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><b>Madison</b></td>
-        <td>Helper</td>
-        <td><span class="chip ft">first-timer?</span> <span class="chip">$75 paid today · Est.</span></td>
-        <td>Mariel Mini PZ invite (needsAction) · failingforwardfarm</td>
-      </tr>
-      <tr>
-        <td><b>Crystal Oliver</b></td>
-        <td>Helper</td>
-        <td><span class="chip ok">accepted</span></td>
-        <td>Durbin · pickup note 8:45 <span class="badge v">Cal</span></td>
-      </tr>
-      <tr>
-        <td><b>Audrey</b></td>
-        <td>Helper</td>
-        <td><span class="chip ok">accepted</span></td>
-        <td>Durbin <span class="badge v">Cal</span></td>
-      </tr>
-      <tr>
-        <td><b>Ann-Marie</b></td>
-        <td>COO / GM</td>
-        <td><span class="chip ok">not first-timer</span></td>
-        <td>Ops book · programming · care</td>
-      </tr>
-      <tr>
-        <td><b>New woman w/ truck</b></td>
-        <td>Helper candidate</td>
-        <td><span class="chip ft">first-timer</span> <span class="chip open">name OPEN</span></td>
-        <td>Possible: Holly 12:00 / Samantha 12:45 interviews — not rostered until hired</td>
-      </tr>
-      <tr>
-        <td colspan="4" style="color:var(--dim);font-size:.72rem;padding-top:8px"><b>OPEN seats (HIRE_PRIORITIES)</b> — not filled:</td>
-      </tr>
-      <tr>
-        <td>Regional enterprise BDR</td><td>Seat #1</td><td><span class="chip open">OPEN</span></td><td>CDD/HOA / amenity dialer ready</td>
-      </tr>
-      <tr>
-        <td>Regional subscription BDR</td><td>Seat #2</td><td><span class="chip open">OPEN</span></td><td>Sr / PPEC / ADC / AL</td>
-      </tr>
-      <tr>
-        <td>Violet / events BDR</td><td>Seat #3</td><td><span class="chip open">OPEN</span></td><td>PTA / indie schools / churches</td>
-      </tr>
-      <tr>
-        <td>B2C conversion</td><td>Seat #4</td><td><span class="chip open">OPEN</span></td><td>Inbound → site buy</td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="note">Holly / Samantha = interview pipeline only. Alexander Mon 11:30 interview — not roster.</p>
-</section>
-
-<section class="card" id="ops-pnl">
-  <h3><span class="t">Ops · Today P&amp;L · Sat Sep 26</span></h3>
+<!-- ========== 1) SPRINT NORTH STAR ========== -->
+<section class="card star" id="north-star">
+  <h2>Sprint north star <span class="badge g">Only thing due</span> <span class="badge o">Dec 23, 2026</span></h2>
   <div class="kpi">
-    <div class="b"><div class="l">Mariel Mini PZ</div><div class="v mono">$386.90</div><div class="s"><span class="badge v">Payments</span> Inv 184 · Completed</div></div>
-    <div class="b"><div class="l">− Madison labor</div><div class="v mono" style="color:var(--bad)">−$75</div><div class="s"><span class="badge e">Estimated</span> cash out</div></div>
-    <div class="b"><div class="l">Net after labor</div><div class="v mono">~$312</div><div class="s"><span class="badge e">Estimated</span></div></div>
-    <div class="b"><div class="l">Mommy &amp; Me</div><div class="v mono">+$50?</div><div class="s"><span class="badge c">Caller</span> not in 9/25 payments book</div></div>
+    <div class="b">
+      <div class="l">Bookings goal</div>
+      <div class="v big">$250,000</div>
+      <div class="s">Due Dec 23, 2026</div>
+    </div>
+    <div class="b">
+      <div class="l">Booked-to-date</div>
+      <div class="v">$61,937</div>
+      <div class="s"><span class="badge v">Verified</span> Payments face</div>
+    </div>
+    <div class="b">
+      <div class="l">Gap to $250k</div>
+      <div class="v bad">$188,063</div>
+      <div class="s">booked face only</div>
+    </div>
+    <div class="b">
+      <div class="l">Google reviews</div>
+      <div class="v">87 <span style="font-size:.7rem;color:var(--dim)">/ ~105 est</span></div>
+      <div class="s"><span class="badge c">Caller-stated</span> gap to 555 = 468 (showing)</div>
+    </div>
   </div>
-  <div class="book">
-    <div class="tt">Calendar today</div>
-    <div class="mm">10:00–11:00 Mommy &amp; Me · 44065 Cushman Rd · <span class="badge v">Cal</span></div>
-    <div class="mm">12:00 Holly interview · 12:45 Samantha interview · <span class="badge o">hire pipeline</span></div>
-    <div class="mm">13:00–14:15 Mini PZ Mariel · 13118 Chets Creek Dr N · Madison on invite · <span class="badge v">Cal + $386.90 Payments</span></div>
-  </div>
-  <p class="note">Caller said ~$387 from $175+$211.90 ≈ $386.90 — matches Payments sheet exactly. +2 reviews = caller dump only · <span class="badge c">Caller stated</span> / <span class="badge e">Est.</span></p>
+  <p class="note">Verified · Payments past-completed + future on-book face (ops noise excluded) · incl. past-due open would be $63,223. Reviews: Caller-stated (pipeline_day_2026-09-27.json) · Maps scrape failed.</p>
+  <p class="prompt">Contributing daily KPI placeholder (multiplier later) — note only; do <b>not</b> fake KPIs.</p>
 </section>
 
-<section class="card" id="ops-durbin">
-  <h3><span class="t">Ops · Tomorrow · Durbin Crossing</span><span class="badge v">Cal + Payments</span></h3>
-  <div class="book">
-    <div class="tt">Mobile PZ + CoT · Sun Sep 27 · 10:00–13:00</div>
-    <div class="mm">145 S Durbin Pkwy, St Johns, FL 32259 · Kate Smith / Vesta CDD</div>
-    <div class="mm">Animal pickup <b>8:45</b> (Crystal on note) · Accepted: Kate Smith, Audrey, Crystal Oliver</div>
-  </div>
-  <div class="kpi" style="margin-top:8px">
-    <div class="b"><div class="l">Payment book</div><div class="v mono">$1,256.66</div><div class="s"><span class="badge v">Payments</span> Inv 172 · Completed · klsmith@vesta…</div></div>
-    <div class="b"><div class="l">Caller said</div><div class="v mono">$1,200</div><div class="s"><span class="badge c">Caller</span> book is +$56.66 — use book</div></div>
-    <div class="b"><div class="l">CDD size</div><div class="v" style="font-size:.9rem">~2,500 homes</div><div class="s"><span class="badge v">Public listings</span> ~2,498 units / ~2,086 acres</div></div>
-    <div class="b"><div class="l">Attendance</div><div class="v" style="font-size:.9rem">50–200</div><div class="s"><span class="badge e">Estimated</span> no public amenity data</div></div>
-  </div>
-  <div class="links">
-    <a href="https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/" target="_blank" rel="noopener">Durbin wheel app →</a>
-  </div>
-</section>
+<!-- ========== 2) STATE OF THE UNION ========== -->
+<section class="card" id="sotu">
+  <h2>State of the union · KPIs</h2>
 
-<section class="card" id="ops-weather">
-  <h3><span class="t">Ops · Weather · Sun Sep 27 (outdoor)</span><span class="badge e">Forecast</span></h3>
-  <div class="wx">
-    <div class="b"><div class="l">High / Low</div><div class="v">~83° / 65°F</div></div>
-    <div class="b"><div class="l">Precip (WU)</div><div class="v">~3%</div></div>
-    <div class="b"><div class="l">Wind</div><div class="v">NW 5–10</div></div>
-    <div class="b"><div class="l">Sky</div><div class="v" style="font-size:.85rem">Mixed sun/cloud</div></div>
+  <h3>Owed / open invoices (AR face)</h3>
+  <div class="kpi">
+    <div class="b">
+      <div class="l">Open face total</div>
+      <div class="v">$29,455</div>
+      <div class="s"><span class="badge v">Verified</span> 103 rows · Final≠Completed</div>
+    </div>
+    <div class="b">
+      <div class="l">Past-due subset</div>
+      <div class="v bad">$1,286</div>
+      <div class="s">8 rows · event date &lt; today</div>
+    </div>
+    <div class="b">
+      <div class="l">Future booked Final=No</div>
+      <div class="v">$28,169</div>
+      <div class="s">95 rows · still collectible</div>
+    </div>
   </div>
-  <div class="conflict"><b>Conflict:</b> Weather Underground hourly St. Augustine (Durbin corridor) = low precip / nice. Geek Weather / Yahoo “St Johns FL” = thunderstorms / high precip odds. <b>Prefer WU for corridor; check radar Sunday AM before load-out.</b> Source: wunderground.com hourly date/2026-9-27 · <span class="badge e">Estimated/forecast</span></div>
-</section>
+  <p class="note">Source: AnnMarie_Payments_2026-09-28.xlsx · Final Payment ≠ Completed. Memory band (~$31k / ~$28k future / ~$1.7–3k past-due) ≈ computed.</p>
 
-<section class="card" id="ops-bills">
-  <h3><span class="t">Ops · Red-light bills</span><span class="badge c">Caller stated</span></h3>
+  <div class="alert">
+    <b>Risky write-off · Amelia Springs ALF</b> — face <b>$231.00</b>
+    <span class="badge v">Verified</span> <span class="badge c">pattern</span>
+    <ul style="margin:6px 0 0;padding-left:18px"><li>2024-09-19 · Amelia Springs Assisted Living  · <b>$106.00</b> · Final=No</li><li>2025-08-25 · manager@ameliaspringsalf.com · <b>$125.00</b> · Final=No</li></ul>
+    <div class="mm">Caller-stated ~$231; Payments Verified open rows sum to this face (2024 Sophie $106 + 2025 Bunny $125 = $231) · Pause further bookings until digital pay (ops_unpaid_watch).</div>
+  </div>
+
+  <h3 style="margin-top:14px">Past-due detail</h3>
   <table>
-    <thead><tr><th>Item</th><th>Status</th><th>Tag</th></tr></thead>
-    <tbody>
-      <tr><td>Mortgage (Sep)</td><td>Unpaid</td><td><span class="badge c">Caller</span> — not bank-pulled</td></tr>
-      <tr><td>Mortgage (Oct)</td><td>About to ding</td><td><span class="badge c">Caller</span></td></tr>
-      <tr><td>Student loans</td><td>Pressure</td><td><span class="badge c">Caller</span></td></tr>
-      <tr><td>~$300 Navient / Ad Advantage (Michael)</td><td>Due / watch</td><td><span class="badge c">Caller</span></td></tr>
-    </tbody>
+    <thead><tr><th>Date</th><th>Customer</th><th>Type</th><th>$</th><th>Notes</th></tr></thead>
+    <tbody><tr><td class='mono'>2026-03-11</td><td>christina.dutcher@gardensmemorycare.com</td><td>Bunny Haven</td><td class='mono'>$125.00</td><td>—</td></tr><tr><td class='mono'>2026-07-21</td><td>diazcarla@cypressvillageretirement.com</td><td>Bunny Haven</td><td class='mono'>$179.30</td><td>—</td></tr><tr><td class='mono'>2026-08-18</td><td>diazcarla@cypressvillageretirement.com</td><td>Bunny Haven</td><td class='mono'>$179.30</td><td>—</td></tr><tr><td class='mono'>2026-08-18</td><td>dee.stanziano@gardensmemorycare.com</td><td>Bunny Haven</td><td class='mono'>$153.70</td><td>—</td></tr><tr><td class='mono'>2026-09-09</td><td>ecooks@fletcherstendercare.com</td><td>Bunny Haven</td><td class='mono'>$159.00</td><td>—</td></tr><tr><td class='mono'>2026-09-16</td><td>deandre.stringer@legendseniorliving.com</td><td>Bunny Haven</td><td class='mono'>$185.50</td><td>—</td></tr><tr><td class='mono'>2026-09-17</td><td>tracy.levanich@gardensmemorycare.com</td><td>Bunny Haven</td><td class='mono'>$125.00</td><td>—</td></tr><tr><td class='mono'>2026-09-21</td><td>diazcarla@cypressvillageretirement.com</td><td>Bunny Haven</td><td class='mono'>$179.30</td><td>Need to reschedule</td></tr></tbody>
   </table>
-  <p class="note">Personal vs LLC cash — keep mortgage talk off Critters P&amp;L docs (ops plan). Not verified from bank.</p>
-</section>
 
-<section class="card" id="ops-empty">
-  <h3><span class="t">Ops · Empty-day fill</span></h3>
-  <div class="prompt"><b>Mon Sep 28 — nothing booked for revenue.</b> Alexander interview 11:30 only. Fill tomorrow? Push a Mini PZ / Visit Us / Bunny slot.</div>
-  <div class="prompt" style="margin-top:6px"><b>Oct 10 Saturday — EMPTY</b> (calendar skeleton) — priority fill premium Saturday.</div>
-  <div class="prompt" style="margin-top:6px">Oct 17 &amp; Oct 31 thin · Oct 24 packed (capacity orange).</div>
-</section>
-
-</div>
-
-<!-- ===================== RIGHT: GROWTH + SUPPORT ===================== -->
-<div>
-
-<section class="card" id="growth">
-  <h3><span class="t">Growth · Pipeline &amp; targets</span></h3>
-  <table>
-    <thead><tr><th>Lead</th><th>Status</th><th>Tag</th></tr></thead>
-    <tbody>
-      <tr><td><b>Kate Smith / Vesta</b> · Durbin</td><td>Paid event Sun · Inv 172</td><td><span class="badge v">Hot / booked</span></td></tr>
-      <tr><td><b>Ross Ruben</b> · Vesta / PM lane</td><td>Warm portfolio path (w/ Mindy / Winslow)</td><td><span class="badge e">Ops notes</span></td></tr>
-      <tr><td>Other Vesta bookers</td><td>Tallaksen / Fitzhugh / etc. on fall calendar</td><td><span class="badge v">Payments</span></td></tr>
-      <tr><td>First Coast CMS · MAY / GMS / FSR</td><td>PM territory map</td><td><span class="badge e">Named warm</span></td></tr>
-    </tbody>
-  </table>
-  <div class="kpi" style="margin-top:8px">
-    <div class="b"><div class="l">Target</div><div class="v" style="font-size:.95rem">$250k</div><div class="s">by Dec 23 · <span class="badge e">Aspirational / ops target</span></div></div>
-    <div class="b"><div class="l">Reviews</div><div class="v" style="font-size:.95rem">555</div><div class="s">~87 showing / ~100 actual · <span class="badge e">Caller Est.</span></div></div>
+  <h3 style="margin-top:16px">Weighted Q4 pipeline <span class="badge e">HubSpot-style clones</span></h3>
+  <div class="kpi">
+    <div class="b">
+      <div class="l">Face pipeline</div>
+      <div class="v">$15,997</div>
+      <div class="s">38 opps · not yet on Payments book</div>
+    </div>
+    <div class="b">
+      <div class="l">Weighted $</div>
+      <div class="v ok">$7,910</div>
+      <div class="s">Σ mid × win%</div>
+    </div>
+    <div class="b">
+      <div class="l">Gap (booked + weighted → $250k)</div>
+      <div class="v bad">$180,153</div>
+      <div class="s">$61,937 + $7,910</div>
+    </div>
   </div>
-  <div class="prompt" style="margin-top:10px"><b>Dunk high flyer · Growth</b> — <a href="principal-dunk.html">Jax principal dunk</a> · <a href="expansion-tampa.html">Tampa expansion seats</a> · hub <a href="market-tampa.html">Tampa Expansion</a>. Compose-only.</div>
-  <div class="prompt" style="margin-top:6px"><b>Jax geo · investor entry</b> — <a href="investor-jax-geo.html">Map-first Jacksonville</a> · Excel <code>data/INVESTOR_JAX_GEO.xlsx</code> (TAM rigor).</div>
-  <p class="note">$250k framing from caller + investor-capital page — treat as ops target, not bank covenant. Expansion = research-filled, not live Tampa revenue.</p>
-</section>
 
-<section class="card" id="apps">
-  <h3><span class="t">Growth · Apps</span></h3>
+  <div class="bkts"><div class="bkt"><div class="l">25%</div><div class="v">$481</div><div class="s">face $1,925</div></div><div class="bkt"><div class="l">50%</div><div class="v">$5,858</div><div class="s">face $11,716</div></div><div class="bkt"><div class="l">75%</div><div class="v">$1,036</div><div class="s">face $1,727</div></div><div class="bkt"><div class="l">85% (~75–95)</div><div class="v">$535</div><div class="s">face $629</div></div></div>
+  <p class="note">Buckets = weighted $ by win%. 85% band holds Brooks (~75–95%).</p>
+
+  <div class="okbox">
+    <b>Invoiced ≈ booked @ 95%</b> — future Final=No face <b>$28,169</b> → $26,760 at 95%.
+    <div class="mm">Future Final=No on Payments — already counted in booked-to-date face. Shown here as 95% confidence with overdue-risk note; NOT added again into weighted_total.</div>
+  </div>
+
+  <h3>Top 8 weighted rows</h3>
   <table>
-    <thead><tr><th>App</th><th>Status</th></tr></thead>
-    <tbody>
-      <tr><td>Wheel (Durbin live)</td><td><a href="https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/" target="_blank" rel="noopener">github.io event page</a> · <span class="badge v">Live URL</span></td></tr>
-      <tr><td>Educational quiz</td><td>In suite / build tree · <span class="badge o">confirm deploy</span></td></tr>
-      <tr><td>Resource app (VPK / ELC / Step Up / PEP)</td><td>Resource lane · <span class="badge o">status OPEN</span></td></tr>
-      <tr><td>Micro co-op</td><td>Concept / build · <span class="badge o">OPEN</span></td></tr>
-    </tbody>
+    <thead><tr><th>#</th><th>Opportunity</th><th>Win</th><th>Mid $</th><th>Weighted</th><th>Label</th></tr></thead>
+    <tbody><tr>
+      <td class="mono">1</td>
+      <td><b>RiverTown / Rivers Edge CDD (Vesta) — Kim Fatuch</b><div class="mm">Kimberly Fatuch · clone_rebook</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$2,500.00</td>
+      <td class="mono gold">$1,250.00</td>
+      <td><span class="badge c">Caller-stated</span></td>
+    </tr><tr>
+      <td class="mono">2</td>
+      <td><b>Brooks Bartram Lakes — 3-hr PZ (Nov 21)</b><div class="mm">Kate Woodcock-Sharp · WAITING_MONDAY</div></td>
+      <td class="mono">85%</td>
+      <td class="mono">$629.00</td>
+      <td class="mono gold">$534.65</td>
+      <td><span class="badge v">Verified quote</span></td>
+    </tr><tr>
+      <td class="mono">3</td>
+      <td><b>Martin Matthews</b><div class="mm">Martin Matthews · clone_renew</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$851.90</td>
+      <td class="mono gold">$425.95</td>
+      <td><span class="badge v">paypal_invoice</span></td>
+    </tr><tr>
+      <td class="mono">4</td>
+      <td><b>Silver Leaf · First Coast CMS</b><div class="mm">Elizabeth Giacobbi · clone_renew</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$811.52</td>
+      <td class="mono gold">$405.76</td>
+      <td><span class="badge v">paypal_invoice</span></td>
+    </tr><tr>
+      <td class="mono">5</td>
+      <td><b>Goddard School - Julington Creek</b><div class="mm">Niral Patel · clone_renew</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$742.00</td>
+      <td class="mono gold">$371.00</td>
+      <td><span class="badge v">paypal_invoice</span></td>
+    </tr><tr>
+      <td class="mono">6</td>
+      <td><b>Tabatha Onorato — Bartram Springs PTA (ToT + Science Night)</b><div class="mm">Tabatha Onorato · CALL_OFFERED</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$700.00</td>
+      <td class="mono gold">$350.00</td>
+      <td><span class="badge e">Estimated</span></td>
+    </tr><tr>
+      <td class="mono">7</td>
+      <td><b>Kelsey Taylor</b><div class="mm">Kelsey Taylor · clone_renew</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$700.00</td>
+      <td class="mono gold">$350.00</td>
+      <td><span class="badge v">paypal_invoice</span></td>
+    </tr><tr>
+      <td class="mono">8</td>
+      <td><b>Westminster — dual mini Mondays (Kori)</b><div class="mm">Kori Montague · awaiting_reply</div></td>
+      <td class="mono">50%</td>
+      <td class="mono">$550.00</td>
+      <td class="mono gold">$275.00</td>
+      <td><span class="badge e">Estimated</span></td>
+    </tr></tbody>
   </table>
+  <p class="note">Full auditable rows: <code>data/operator_state_2026-09-28.json</code> · sources: growth_clone_pipeline, growth_reply_pipeline, bookings_pipeline, principal dunk, Michael-named.</p>
 </section>
 
-<section class="card" id="support">
-  <h3><span class="t">Support · Systems</span></h3>
-  <table>
-    <thead><tr><th>System</th><th>Path / note</th></tr></thead>
-    <tbody>
-      <tr><td>Google Calendar</td><td>Source of truth for roster / empty days · pulled Sat Sep 26 ET</td></tr>
-      <tr><td>Payments book</td><td><code>/workspace/paypal-statements/AnnMarie_Payments_2026-09-25.xlsx</code> · rollup same folder</td></tr>
-      <tr><td>Ops plan</td><td><code>/workspace/assets/OPS_SPRINT_BUSINESS_PLAN_bank_style.md</code></td></tr>
-      <tr><td>Hire priorities</td><td><code>/workspace/bdr/HIRE_PRIORITIES.md</code></td></tr>
-      <tr><td>Exec suite</td><td><code>/workspace/critters-on-call/exec/</code> · also <code>critters-on-call/exec/</code></td></tr>
-    </tbody>
-  </table>
+<!-- ========== 3) TODAY ========== -->
+<section class="card" id="today">
+  <h2>Today · Mon Sep 28, 2026</h2>
+  <div class="empty">
+    <b>Calendar empty</b> for delivery gigs — bargain / white day.
+    <div class="mm" style="margin-top:6px">Google Calendar MCP 403 today — used ops_delivery_calendar.json (as_of Sep 24) + Payments. Sep 28 delivery events = 0.</div>
+  </div>
+  <div class="prompt" style="margin-top:8px">
+    Owner cash (Caller-stated · OWNER_CASH_NOTES): Madeline full PZ tour cash deposit <b>$3.99</b> · Ann-Marie 7 bunnies <b>$70</b> · bunny feed <b>$ TBD</b> (do not invent).
+    <div class="mm">Tomorrow flag: Montessori after-school booked $40 — pull ≥ $100 (raise rate OR add kids).</div>
+  </div>
+  <p class="note">Staffing: no delivery roster required for empty day. Use white space for dunk / programming fills — not a chase-today panic.</p>
 </section>
 
-<section class="card" id="bots">
-  <h3><span class="t">Support · Corporate bots (brief)</span></h3>
-  <ul style="margin:0;padding:0 0 0 16px;font-size:.78rem;color:#c5d0e6">
-    <li><b>Talk-Deputy</b> — talk / dump capture lane</li>
-    <li><b>Right Now</b> — tip-of-sword / immediate act</li>
-    <li><b>Money CFO</b> — <code>money-cfo.html</code> · customer $ vs owner transfers</li>
-    <li><b>Date Liquidation</b> — <code>date-liquidation.html</code> · fill dead inventory</li>
-    <li><b>Bookings &amp; Dates</b> · <b>BDR Pipeline</b> · <b>Team &amp; Hire</b> · <b>Ann-Marie Ops</b> · <b>Actions Overdue</b></li>
+<!-- ========== 4) CALENDAR HEALTH ========== -->
+<section class="card" id="calendar">
+  <h2>Calendar health · now → Jun 1, 2027</h2>
+  <div class="legend">
+    <span class="chipd cyan">CYAN</span><span class="mm" style="margin-right:8px">≥$1,500 or ≥3 events</span>
+    <span class="chipd green">GREEN</span><span class="mm" style="margin-right:8px">≥$500</span>
+    <span class="chipd yellow">YELLOW</span><span class="mm" style="margin-right:8px">&lt;$500 but something on cal</span>
+    <span class="chipd white">WHITE</span><span class="mm" style="margin-right:8px">empty / bargain</span>
+    <span class="chipd red">RED</span><span class="mm">beachfront Sat &lt;$500</span>
+  </div>
+  <div class="kpi">
+    <div class="b"><div class="l">Cyan</div><div class="v" style="color:var(--cyan)">5</div></div>
+    <div class="b"><div class="l">Green</div><div class="v ok">7</div></div>
+    <div class="b"><div class="l">Yellow</div><div class="v" style="color:var(--yellow)">45</div></div>
+    <div class="b"><div class="l">White</div><div class="v" style="color:#c5d0e6">162</div></div>
+    <div class="b"><div class="l">Red beachfront Sats</div><div class="v bad">28</div><div class="s">today → Jun 1</div></div>
+  </div>
+
+  <h3>Expiring tail (D+1…D+4) — underfilled · TODAY not a chase target</h3>
+  <div class="chips" style="margin-bottom:10px"><span class='chipd yellow' title='2026-09-29 $40.0'>09-29 Tue</span> <span class='chipd white' title='2026-09-30 $0'>09-30 Wed</span> <span class='chipd yellow' title='2026-10-01 $0'>10-01 Thu</span> <span class='chipd yellow' title='2026-10-02 $0'>10-02 Fri</span> </div>
+  <p class="note">D+1 through D+4 (Tue–Fri Sep 29–Oct 2) — TODAY excluded from chase</p>
+
+  <h3>Month strips</h3>
+  <div class="month"><div class="ml">Sep 2026</div><div class="chips"><span class="chipd yellow" title="2026-09-28 Mon · $4 · 1 evt · YELLOW">28</span><span class="chipd yellow" title="2026-09-29 Tue · $40 · 1 evt · YELLOW">29</span><span class="chipd white" title="2026-09-30 Wed · $0 · 0 evt · WHITE">30</span></div></div><div class="month"><div class="ml">Oct 2026</div><div class="chips"><span class="chipd yellow" title="2026-10-01 Thu · $0 · 1 evt · YELLOW">1</span><span class="chipd yellow" title="2026-10-02 Fri · $0 · 1 evt · YELLOW">2</span><span class="chipd cyan" title="2026-10-03 Sat · $900 · 4 evt · CYAN">3</span><span class="chipd white" title="2026-10-04 Sun · $0 · 0 evt · WHITE">4</span><span class="chipd white" title="2026-10-05 Mon · $0 · 0 evt · WHITE">5</span><span class="chipd white" title="2026-10-06 Tue · $0 · 0 evt · WHITE">6</span><span class="chipd white" title="2026-10-07 Wed · $0 · 0 evt · WHITE">7</span><span class="chipd white" title="2026-10-08 Thu · $0 · 0 evt · WHITE">8</span><span class="chipd white" title="2026-10-09 Fri · $0 · 0 evt · WHITE">9</span><span class="chipd red" title="2026-10-10 Sat · $0 · 0 evt · RED">10</span><span class="chipd green" title="2026-10-11 Sun · $847 · 1 evt · GREEN">11</span><span class="chipd yellow" title="2026-10-12 Mon · $186 · 1 evt · YELLOW">12</span><span class="chipd yellow" title="2026-10-13 Tue · $186 · 1 evt · YELLOW">13</span><span class="chipd yellow" title="2026-10-14 Wed · $159 · 1 evt · YELLOW">14</span><span class="chipd yellow" title="2026-10-15 Thu · $400 · 1 evt · YELLOW">15</span><span class="chipd white" title="2026-10-16 Fri · $0 · 0 evt · WHITE">16</span><span class="chipd green" title="2026-10-17 Sat · $1,182 · 1 evt · GREEN">17</span><span class="chipd white" title="2026-10-18 Sun · $0 · 0 evt · WHITE">18</span><span class="chipd white" title="2026-10-19 Mon · $0 · 0 evt · WHITE">19</span><span class="chipd yellow" title="2026-10-20 Tue · $333 · 2 evt · YELLOW">20</span><span class="chipd yellow" title="2026-10-21 Wed · $125 · 1 evt · YELLOW">21</span><span class="chipd white" title="2026-10-22 Thu · $0 · 0 evt · WHITE">22</span><span class="chipd cyan" title="2026-10-23 Fri · $1,921 · 3 evt · CYAN">23</span><span class="chipd cyan" title="2026-10-24 Sat · $3,737 · 6 evt · CYAN">24</span><span class="chipd yellow" title="2026-10-25 Sun · $0 · 1 evt · YELLOW">25</span><span class="chipd white" title="2026-10-26 Mon · $0 · 0 evt · WHITE">26</span><span class="chipd white" title="2026-10-27 Tue · $0 · 0 evt · WHITE">27</span><span class="chipd yellow" title="2026-10-28 Wed · $159 · 1 evt · YELLOW">28</span><span class="chipd green" title="2026-10-29 Thu · $742 · 1 evt · GREEN">29</span><span class="chipd green" title="2026-10-30 Fri · $1,227 · 2 evt · GREEN">30</span><span class="chipd green" title="2026-10-31 Sat · $600 · 1 evt · GREEN">31</span></div></div><div class="month"><div class="ml">Nov 2026</div><div class="chips"><span class="chipd white" title="2026-11-01 Sun · $0 · 0 evt · WHITE">1</span><span class="chipd white" title="2026-11-02 Mon · $0 · 0 evt · WHITE">2</span><span class="chipd yellow" title="2026-11-03 Tue · $0 · 1 evt · YELLOW">3</span><span class="chipd white" title="2026-11-04 Wed · $0 · 0 evt · WHITE">4</span><span class="chipd white" title="2026-11-05 Thu · $0 · 0 evt · WHITE">5</span><span class="chipd white" title="2026-11-06 Fri · $0 · 0 evt · WHITE">6</span><span class="chipd cyan" title="2026-11-07 Sat · $1,714 · 4 evt · CYAN">7</span><span class="chipd white" title="2026-11-08 Sun · $0 · 0 evt · WHITE">8</span><span class="chipd white" title="2026-11-09 Mon · $0 · 0 evt · WHITE">9</span><span class="chipd yellow" title="2026-11-10 Tue · $186 · 1 evt · YELLOW">10</span><span class="chipd white" title="2026-11-11 Wed · $0 · 0 evt · WHITE">11</span><span class="chipd white" title="2026-11-12 Thu · $0 · 0 evt · WHITE">12</span><span class="chipd yellow" title="2026-11-13 Fri · $0 · 1 evt · YELLOW">13</span><span class="chipd red" title="2026-11-14 Sat · $0 · 0 evt · RED">14</span><span class="chipd white" title="2026-11-15 Sun · $0 · 0 evt · WHITE">15</span><span class="chipd white" title="2026-11-16 Mon · $0 · 0 evt · WHITE">16</span><span class="chipd yellow" title="2026-11-17 Tue · $179 · 1 evt · YELLOW">17</span><span class="chipd white" title="2026-11-18 Wed · $0 · 0 evt · WHITE">18</span><span class="chipd white" title="2026-11-19 Thu · $0 · 0 evt · WHITE">19</span><span class="chipd white" title="2026-11-20 Fri · $0 · 0 evt · WHITE">20</span><span class="chipd red" title="2026-11-21 Sat · $0 · 0 evt · RED">21</span><span class="chipd white" title="2026-11-22 Sun · $0 · 0 evt · WHITE">22</span><span class="chipd white" title="2026-11-23 Mon · $0 · 0 evt · WHITE">23</span><span class="chipd yellow" title="2026-11-24 Tue · $350 · 1 evt · YELLOW">24</span><span class="chipd white" title="2026-11-25 Wed · $0 · 0 evt · WHITE">25</span><span class="chipd white" title="2026-11-26 Thu · $0 · 0 evt · WHITE">26</span><span class="chipd white" title="2026-11-27 Fri · $0 · 0 evt · WHITE">27</span><span class="chipd red" title="2026-11-28 Sat · $0 · 0 evt · RED">28</span><span class="chipd white" title="2026-11-29 Sun · $0 · 0 evt · WHITE">29</span><span class="chipd yellow" title="2026-11-30 Mon · $175 · 1 evt · YELLOW">30</span></div></div><div class="month"><div class="ml">Dec 2026</div><div class="chips"><span class="chipd white" title="2026-12-01 Tue · $0 · 0 evt · WHITE">1</span><span class="chipd white" title="2026-12-02 Wed · $0 · 0 evt · WHITE">2</span><span class="chipd white" title="2026-12-03 Thu · $0 · 0 evt · WHITE">3</span><span class="chipd white" title="2026-12-04 Fri · $0 · 0 evt · WHITE">4</span><span class="chipd cyan" title="2026-12-05 Sat · $610 · 3 evt · CYAN">5</span><span class="chipd white" title="2026-12-06 Sun · $0 · 0 evt · WHITE">6</span><span class="chipd white" title="2026-12-07 Mon · $0 · 0 evt · WHITE">7</span><span class="chipd yellow" title="2026-12-08 Tue · $186 · 1 evt · YELLOW">8</span><span class="chipd white" title="2026-12-09 Wed · $0 · 0 evt · WHITE">9</span><span class="chipd white" title="2026-12-10 Thu · $0 · 0 evt · WHITE">10</span><span class="chipd white" title="2026-12-11 Fri · $0 · 0 evt · WHITE">11</span><span class="chipd red" title="2026-12-12 Sat · $0 · 0 evt · RED">12</span><span class="chipd white" title="2026-12-13 Sun · $0 · 0 evt · WHITE">13</span><span class="chipd white" title="2026-12-14 Mon · $0 · 0 evt · WHITE">14</span><span class="chipd yellow" title="2026-12-15 Tue · $333 · 2 evt · YELLOW">15</span><span class="chipd yellow" title="2026-12-16 Wed · $310 · 2 evt · YELLOW">16</span><span class="chipd white" title="2026-12-17 Thu · $0 · 0 evt · WHITE">17</span><span class="chipd white" title="2026-12-18 Fri · $0 · 0 evt · WHITE">18</span><span class="chipd red" title="2026-12-19 Sat · $225 · 1 evt · RED">19</span><span class="chipd white" title="2026-12-20 Sun · $0 · 0 evt · WHITE">20</span><span class="chipd white" title="2026-12-21 Mon · $0 · 0 evt · WHITE">21</span><span class="chipd yellow" title="2026-12-22 Tue · $125 · 1 evt · YELLOW">22</span><span class="chipd white" title="2026-12-23 Wed · $0 · 0 evt · WHITE">23</span><span class="chipd white" title="2026-12-24 Thu · $0 · 0 evt · WHITE">24</span><span class="chipd white" title="2026-12-25 Fri · $0 · 0 evt · WHITE">25</span><span class="chipd red" title="2026-12-26 Sat · $0 · 0 evt · RED">26</span><span class="chipd white" title="2026-12-27 Sun · $0 · 0 evt · WHITE">27</span><span class="chipd white" title="2026-12-28 Mon · $0 · 0 evt · WHITE">28</span><span class="chipd yellow" title="2026-12-29 Tue · $350 · 1 evt · YELLOW">29</span><span class="chipd white" title="2026-12-30 Wed · $0 · 0 evt · WHITE">30</span><span class="chipd white" title="2026-12-31 Thu · $0 · 0 evt · WHITE">31</span></div></div><div class="month"><div class="ml">Jan 2027</div><div class="chips"><span class="chipd white" title="2027-01-01 Fri · $0 · 0 evt · WHITE">1</span><span class="chipd red" title="2027-01-02 Sat · $0 · 2 evt · RED">2</span><span class="chipd white" title="2027-01-03 Sun · $0 · 0 evt · WHITE">3</span><span class="chipd white" title="2027-01-04 Mon · $0 · 0 evt · WHITE">4</span><span class="chipd yellow" title="2027-01-05 Tue · $350 · 1 evt · YELLOW">5</span><span class="chipd white" title="2027-01-06 Wed · $0 · 0 evt · WHITE">6</span><span class="chipd white" title="2027-01-07 Thu · $0 · 0 evt · WHITE">7</span><span class="chipd white" title="2027-01-08 Fri · $0 · 0 evt · WHITE">8</span><span class="chipd red" title="2027-01-09 Sat · $0 · 0 evt · RED">9</span><span class="chipd white" title="2027-01-10 Sun · $0 · 0 evt · WHITE">10</span><span class="chipd white" title="2027-01-11 Mon · $0 · 0 evt · WHITE">11</span><span class="chipd yellow" title="2027-01-12 Tue · $186 · 1 evt · YELLOW">12</span><span class="chipd white" title="2027-01-13 Wed · $0 · 0 evt · WHITE">13</span><span class="chipd white" title="2027-01-14 Thu · $0 · 0 evt · WHITE">14</span><span class="chipd white" title="2027-01-15 Fri · $0 · 0 evt · WHITE">15</span><span class="chipd red" title="2027-01-16 Sat · $0 · 0 evt · RED">16</span><span class="chipd white" title="2027-01-17 Sun · $0 · 0 evt · WHITE">17</span><span class="chipd white" title="2027-01-18 Mon · $0 · 0 evt · WHITE">18</span><span class="chipd yellow" title="2027-01-19 Tue · $179 · 1 evt · YELLOW">19</span><span class="chipd white" title="2027-01-20 Wed · $0 · 0 evt · WHITE">20</span><span class="chipd white" title="2027-01-21 Thu · $0 · 0 evt · WHITE">21</span><span class="chipd white" title="2027-01-22 Fri · $0 · 0 evt · WHITE">22</span><span class="chipd red" title="2027-01-23 Sat · $0 · 0 evt · RED">23</span><span class="chipd white" title="2027-01-24 Sun · $0 · 0 evt · WHITE">24</span><span class="chipd white" title="2027-01-25 Mon · $0 · 0 evt · WHITE">25</span><span class="chipd white" title="2027-01-26 Tue · $0 · 0 evt · WHITE">26</span><span class="chipd white" title="2027-01-27 Wed · $0 · 0 evt · WHITE">27</span><span class="chipd white" title="2027-01-28 Thu · $0 · 0 evt · WHITE">28</span><span class="chipd white" title="2027-01-29 Fri · $0 · 0 evt · WHITE">29</span><span class="chipd red" title="2027-01-30 Sat · $0 · 0 evt · RED">30</span><span class="chipd white" title="2027-01-31 Sun · $0 · 0 evt · WHITE">31</span></div></div><div class="month"><div class="ml">Feb 2027</div><div class="chips"><span class="chipd white" title="2027-02-01 Mon · $0 · 0 evt · WHITE">1</span><span class="chipd white" title="2027-02-02 Tue · $0 · 0 evt · WHITE">2</span><span class="chipd white" title="2027-02-03 Wed · $0 · 0 evt · WHITE">3</span><span class="chipd white" title="2027-02-04 Thu · $0 · 0 evt · WHITE">4</span><span class="chipd white" title="2027-02-05 Fri · $0 · 0 evt · WHITE">5</span><span class="chipd red" title="2027-02-06 Sat · $0 · 2 evt · RED">6</span><span class="chipd white" title="2027-02-07 Sun · $0 · 0 evt · WHITE">7</span><span class="chipd white" title="2027-02-08 Mon · $0 · 0 evt · WHITE">8</span><span class="chipd yellow" title="2027-02-09 Tue · $186 · 1 evt · YELLOW">9</span><span class="chipd white" title="2027-02-10 Wed · $0 · 0 evt · WHITE">10</span><span class="chipd white" title="2027-02-11 Thu · $0 · 0 evt · WHITE">11</span><span class="chipd white" title="2027-02-12 Fri · $0 · 0 evt · WHITE">12</span><span class="chipd red" title="2027-02-13 Sat · $0 · 0 evt · RED">13</span><span class="chipd white" title="2027-02-14 Sun · $0 · 0 evt · WHITE">14</span><span class="chipd white" title="2027-02-15 Mon · $0 · 0 evt · WHITE">15</span><span class="chipd yellow" title="2027-02-16 Tue · $179 · 1 evt · YELLOW">16</span><span class="chipd white" title="2027-02-17 Wed · $0 · 0 evt · WHITE">17</span><span class="chipd white" title="2027-02-18 Thu · $0 · 0 evt · WHITE">18</span><span class="chipd white" title="2027-02-19 Fri · $0 · 0 evt · WHITE">19</span><span class="chipd red" title="2027-02-20 Sat · $0 · 0 evt · RED">20</span><span class="chipd white" title="2027-02-21 Sun · $0 · 0 evt · WHITE">21</span><span class="chipd yellow" title="2027-02-22 Mon · $175 · 1 evt · YELLOW">22</span><span class="chipd yellow" title="2027-02-23 Tue · $125 · 1 evt · YELLOW">23</span><span class="chipd white" title="2027-02-24 Wed · $0 · 0 evt · WHITE">24</span><span class="chipd white" title="2027-02-25 Thu · $0 · 0 evt · WHITE">25</span><span class="chipd white" title="2027-02-26 Fri · $0 · 0 evt · WHITE">26</span><span class="chipd red" title="2027-02-27 Sat · $0 · 0 evt · RED">27</span><span class="chipd white" title="2027-02-28 Sun · $0 · 0 evt · WHITE">28</span></div></div><div class="month"><div class="ml">Mar 2027</div><div class="chips"><span class="chipd white" title="2027-03-01 Mon · $0 · 0 evt · WHITE">1</span><span class="chipd white" title="2027-03-02 Tue · $0 · 0 evt · WHITE">2</span><span class="chipd white" title="2027-03-03 Wed · $0 · 0 evt · WHITE">3</span><span class="chipd white" title="2027-03-04 Thu · $0 · 0 evt · WHITE">4</span><span class="chipd white" title="2027-03-05 Fri · $0 · 0 evt · WHITE">5</span><span class="chipd red" title="2027-03-06 Sat · $0 · 2 evt · RED">6</span><span class="chipd white" title="2027-03-07 Sun · $0 · 0 evt · WHITE">7</span><span class="chipd white" title="2027-03-08 Mon · $0 · 0 evt · WHITE">8</span><span class="chipd yellow" title="2027-03-09 Tue · $186 · 1 evt · YELLOW">9</span><span class="chipd yellow" title="2027-03-10 Wed · $154 · 1 evt · YELLOW">10</span><span class="chipd yellow" title="2027-03-11 Thu · $159 · 1 evt · YELLOW">11</span><span class="chipd white" title="2027-03-12 Fri · $0 · 0 evt · WHITE">12</span><span class="chipd red" title="2027-03-13 Sat · $0 · 0 evt · RED">13</span><span class="chipd white" title="2027-03-14 Sun · $0 · 0 evt · WHITE">14</span><span class="chipd yellow" title="2027-03-15 Mon · $125 · 1 evt · YELLOW">15</span><span class="chipd green" title="2027-03-16 Tue · $529 · 2 evt · GREEN">16</span><span class="chipd yellow" title="2027-03-17 Wed · $186 · 1 evt · YELLOW">17</span><span class="chipd yellow" title="2027-03-18 Thu · $350 · 1 evt · YELLOW">18</span><span class="chipd white" title="2027-03-19 Fri · $0 · 0 evt · WHITE">19</span><span class="chipd red" title="2027-03-20 Sat · $0 · 0 evt · RED">20</span><span class="chipd white" title="2027-03-21 Sun · $0 · 0 evt · WHITE">21</span><span class="chipd white" title="2027-03-22 Mon · $0 · 0 evt · WHITE">22</span><span class="chipd white" title="2027-03-23 Tue · $0 · 0 evt · WHITE">23</span><span class="chipd white" title="2027-03-24 Wed · $0 · 0 evt · WHITE">24</span><span class="chipd white" title="2027-03-25 Thu · $0 · 0 evt · WHITE">25</span><span class="chipd white" title="2027-03-26 Fri · $0 · 0 evt · WHITE">26</span><span class="chipd red" title="2027-03-27 Sat · $0 · 0 evt · RED">27</span><span class="chipd yellow" title="2027-03-28 Sun · $485 · 1 evt · YELLOW">28</span><span class="chipd white" title="2027-03-29 Mon · $0 · 0 evt · WHITE">29</span><span class="chipd white" title="2027-03-30 Tue · $0 · 0 evt · WHITE">30</span><span class="chipd white" title="2027-03-31 Wed · $0 · 0 evt · WHITE">31</span></div></div><div class="month"><div class="ml">Apr 2027</div><div class="chips"><span class="chipd white" title="2027-04-01 Thu · $0 · 0 evt · WHITE">1</span><span class="chipd white" title="2027-04-02 Fri · $0 · 0 evt · WHITE">2</span><span class="chipd red" title="2027-04-03 Sat · $0 · 2 evt · RED">3</span><span class="chipd white" title="2027-04-04 Sun · $0 · 0 evt · WHITE">4</span><span class="chipd white" title="2027-04-05 Mon · $0 · 0 evt · WHITE">5</span><span class="chipd white" title="2027-04-06 Tue · $0 · 0 evt · WHITE">6</span><span class="chipd white" title="2027-04-07 Wed · $0 · 0 evt · WHITE">7</span><span class="chipd white" title="2027-04-08 Thu · $0 · 0 evt · WHITE">8</span><span class="chipd white" title="2027-04-09 Fri · $0 · 0 evt · WHITE">9</span><span class="chipd red" title="2027-04-10 Sat · $0 · 0 evt · RED">10</span><span class="chipd white" title="2027-04-11 Sun · $0 · 0 evt · WHITE">11</span><span class="chipd white" title="2027-04-12 Mon · $0 · 0 evt · WHITE">12</span><span class="chipd yellow" title="2027-04-13 Tue · $186 · 1 evt · YELLOW">13</span><span class="chipd yellow" title="2027-04-14 Wed · $159 · 1 evt · YELLOW">14</span><span class="chipd white" title="2027-04-15 Thu · $0 · 0 evt · WHITE">15</span><span class="chipd white" title="2027-04-16 Fri · $0 · 0 evt · WHITE">16</span><span class="chipd red" title="2027-04-17 Sat · $0 · 0 evt · RED">17</span><span class="chipd white" title="2027-04-18 Sun · $0 · 0 evt · WHITE">18</span><span class="chipd white" title="2027-04-19 Mon · $0 · 0 evt · WHITE">19</span><span class="chipd yellow" title="2027-04-20 Tue · $179 · 1 evt · YELLOW">20</span><span class="chipd yellow" title="2027-04-21 Wed · $125 · 1 evt · YELLOW">21</span><span class="chipd white" title="2027-04-22 Thu · $0 · 0 evt · WHITE">22</span><span class="chipd white" title="2027-04-23 Fri · $0 · 0 evt · WHITE">23</span><span class="chipd green" title="2027-04-24 Sat · $1,257 · 1 evt · GREEN">24</span><span class="chipd white" title="2027-04-25 Sun · $0 · 0 evt · WHITE">25</span><span class="chipd white" title="2027-04-26 Mon · $0 · 0 evt · WHITE">26</span><span class="chipd white" title="2027-04-27 Tue · $0 · 0 evt · WHITE">27</span><span class="chipd white" title="2027-04-28 Wed · $0 · 0 evt · WHITE">28</span><span class="chipd white" title="2027-04-29 Thu · $0 · 0 evt · WHITE">29</span><span class="chipd white" title="2027-04-30 Fri · $0 · 0 evt · WHITE">30</span></div></div><div class="month"><div class="ml">May 2027</div><div class="chips"><span class="chipd red" title="2027-05-01 Sat · $0 · 2 evt · RED">1</span><span class="chipd white" title="2027-05-02 Sun · $0 · 0 evt · WHITE">2</span><span class="chipd white" title="2027-05-03 Mon · $0 · 0 evt · WHITE">3</span><span class="chipd white" title="2027-05-04 Tue · $0 · 0 evt · WHITE">4</span><span class="chipd white" title="2027-05-05 Wed · $0 · 0 evt · WHITE">5</span><span class="chipd white" title="2027-05-06 Thu · $0 · 0 evt · WHITE">6</span><span class="chipd white" title="2027-05-07 Fri · $0 · 0 evt · WHITE">7</span><span class="chipd red" title="2027-05-08 Sat · $0 · 0 evt · RED">8</span><span class="chipd white" title="2027-05-09 Sun · $0 · 0 evt · WHITE">9</span><span class="chipd white" title="2027-05-10 Mon · $0 · 0 evt · WHITE">10</span><span class="chipd yellow" title="2027-05-11 Tue · $186 · 1 evt · YELLOW">11</span><span class="chipd yellow" title="2027-05-12 Wed · $159 · 1 evt · YELLOW">12</span><span class="chipd white" title="2027-05-13 Thu · $0 · 0 evt · WHITE">13</span><span class="chipd white" title="2027-05-14 Fri · $0 · 0 evt · WHITE">14</span><span class="chipd red" title="2027-05-15 Sat · $0 · 0 evt · RED">15</span><span class="chipd white" title="2027-05-16 Sun · $0 · 0 evt · WHITE">16</span><span class="chipd white" title="2027-05-17 Mon · $0 · 0 evt · WHITE">17</span><span class="chipd yellow" title="2027-05-18 Tue · $179 · 1 evt · YELLOW">18</span><span class="chipd white" title="2027-05-19 Wed · $0 · 0 evt · WHITE">19</span><span class="chipd white" title="2027-05-20 Thu · $0 · 0 evt · WHITE">20</span><span class="chipd white" title="2027-05-21 Fri · $0 · 0 evt · WHITE">21</span><span class="chipd red" title="2027-05-22 Sat · $0 · 0 evt · RED">22</span><span class="chipd white" title="2027-05-23 Sun · $0 · 0 evt · WHITE">23</span><span class="chipd yellow" title="2027-05-24 Mon · $175 · 1 evt · YELLOW">24</span><span class="chipd white" title="2027-05-25 Tue · $0 · 0 evt · WHITE">25</span><span class="chipd white" title="2027-05-26 Wed · $0 · 0 evt · WHITE">26</span><span class="chipd white" title="2027-05-27 Thu · $0 · 0 evt · WHITE">27</span><span class="chipd white" title="2027-05-28 Fri · $0 · 0 evt · WHITE">28</span><span class="chipd red" title="2027-05-29 Sat · $0 · 0 evt · RED">29</span><span class="chipd white" title="2027-05-30 Sun · $0 · 0 evt · WHITE">30</span><span class="chipd white" title="2027-05-31 Mon · $0 · 0 evt · WHITE">31</span></div></div><div class="month"><div class="ml">Jun 2027</div><div class="chips"><span class="chipd white" title="2027-06-01 Tue · $0 · 0 evt · WHITE">1</span></div></div>
+  <p class="note">Source: Payments customer rows + ops_delivery_calendar.json (GCal MCP 403 on rebuild). Hover chips for $ / event count.</p>
+</section>
+
+<!-- ========== 5) PROGRAMMING CADENCE ========== -->
+<section class="card" id="programming">
+  <h2>Programming cadence <span class="badge o">Gaps / fill plan</span></h2>
+  <p class="note">Direct Programming notes — <b>not</b> fake booked events / not investor framing.</p>
+  <ul class="prog">
+    <li>Something buyable on calendar every day (even 2 people = $50 + reviews)</li><li>Mommy & Me denser (aspirational daily)</li><li>Goat yoga ~2×/week</li><li>Homeschool / micro-school opportunity (Summer Scholars path) — ops note, NOT investor pitch</li><li>Vendor/partner Tom Sawyer model (e.g. Melissa boozy — lower fee $35 trial then up if sells)</li>
   </ul>
+</section>
+
+<!-- ========== 6) LINKS ========== -->
+<section class="card" id="links">
+  <h2>Links</h2>
   <div class="links">
-    <a href="money-cfo.html">CFO</a>
-    <a href="date-liquidation.html">Date Liquidation</a>
-    <a href="ops-today.html">Ops today</a>
-    <a href="team-hire.html">Team &amp; Hire</a>
-    <a href="index.html">Operator hub</a>
+    <a href="principal-dunk.html">Dunk board</a>
+    <a href="bookings-dates.html">Bookings dates</a>
+    <a href="growth-pipeline.html">Growth pipeline</a>
+    <a href="customers-no-next-date.html">Customers · no next date</a>
+    <a href="money-cfo.html">CFO notes</a>
+    <a href="programming.html">Programming menu</a>
+    <a href="ops-delivery.html">Delivery calendar</a>
+    <a href="data/operator_state_2026-09-28.json">Audit JSON</a>
   </div>
 </section>
-
-<section class="card" id="compliance">
-  <h3><span class="t">Support · LLC / insurance / permit / zero-incident</span></h3>
-  <table>
-    <thead><tr><th>Item</th><th>Status</th></tr></thead>
-    <tbody>
-      <tr><td>LLC standing</td><td><span class="badge o">OPEN / unknown</span> — not confirmed in this pull</td></tr>
-      <tr><td>Mobile insurance current</td><td><span class="badge o">OPEN</span> — ops plan says keep current; no cert pulled</td></tr>
-      <tr><td>Permits / agri-tourism</td><td><span class="badge o">OPEN</span> — gray-area while small; counsel before scale</td></tr>
-      <tr><td>Zero-incident checklist</td><td><span class="badge o">OPEN</span> — no signed checklist found in assets</td></tr>
-    </tbody>
-  </table>
-  <p class="note">Honest unknown &gt; invented green. Pull certs into next ops pass.</p>
-</section>
-
-<section class="card" id="research">
-  <h3><span class="t">Research fold-in · Durbin size</span></h3>
-  <p style="margin:0;font-size:.78rem;color:#c5d0e6">
-    Master plan ~<b>2,086 acres</b> · ~<b>2,498 units</b> planned (1,551 SF + 947 MF). Market copy often ~2,500 homes.
-    Sources: SouthStar / liveinjax / bringyouhome listing pages · <span class="badge v">Public</span>.
-    Typical Sunday amenity petting-zoo attendance: <b>no public data</b>. Reasoned operator range for CDD amenity + mobile PZ: <b>50–200 walk-ups</b> depending on promo/weather · <span class="badge e">Estimated</span>.
-  </p>
-</section>
-
-</div>
-</div>
 
 <footer>
-  Built Sat Sep 26, 2026 ET · sources: Google Calendar pull · AnnMarie_Payments_2026-09-25.xlsx · OPERATOR_SKELETON · HIRE_PRIORITIES · OPS_SPRINT_BUSINESS_PLAN · WU St. Augustine hourly · CDD public listings · caller dump labeled.<br/>
-  Files: <code>/workspace/assets/operator-dashboard.html</code> · twin <code>/workspace/assets/OPERATOR_DASHBOARD.md</code> · canonical copy under critters-on-call/exec; local assets mirror.
+  Operator bare bones · rebuilt Mon Sep 28, 2026 ET · data/operator_state_2026-09-28.json ·
+  hard-refresh <code>?v=ops2-20260928</code> ·
+  no outbound send · no personal/bill-pay on dunk · investor view is separate.
+  <div style="margin-top:4px">Missing / estimated: Google Calendar MCP list_calendars/list_events returned 403 — used ops_delivery_calendar.json (as_of 2026-09-24) + Payments dates; Google reviews Maps scrape failed — using Caller-stated 87 showing / ~105 est from pipeline_day_2026-09-27.json; Kathlene (Michael-named with Denise) — no contact row found in local files; Denise Powers included only; Several weighted mids Estimated (menu/placeholder) where no quote on file — labeled</div>
 </footer>
 
 </div>
