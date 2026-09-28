@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#c9a227" />
+<title>Kids animal facts · Critters on Call</title>
+<link rel="icon" type="image/png" href="../../assets/pyrenees-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../hub.css" />
+</head>
+<body>
+<div class="app">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">
+        <img class="brand-logo" src="../../assets/pyrenees-logo.png" alt="" width="36" height="36" />
+        <span class="min-w-0">
+          <span class="brand-title">Animal Facts Game</span>
+          <span class="brand-sub">Kids · public beta</span>
+        </span>
+      </a>
+      <a class="back-link" href="../">Hubs</a>
+    </div>
+  </header>
+  <main class="main">
+    <section id="panel-intro" class="panel on" aria-label="Intro">
+      <div class="hero">
+        <span class="pill">KIDS · GAME</span>
+        <h1>Animal facts</h1>
+        <p class="lead">Read a short homestead fact, then answer one gentle question. Bunnies are live; goats, chickens, and ducks are expanding stubs.</p>
+        <p class="tiny" style="margin-top:.55rem">28 public facts · no prizes · phone-first</p>
+        <div class="tabs" style="margin-top:.85rem" role="tablist" aria-label="Filter">
+          <button type="button" class="tab on" data-filter="all" onclick="setFilter('all', this)">All</button>
+          <button type="button" class="tab" data-filter="bunnies" onclick="setFilter('bunnies', this)">🐰 Bunnies</button>
+          <button type="button" class="tab" data-filter="goats" onclick="setFilter('goats', this)">🐐 Goats</button>
+          <button type="button" class="tab" data-filter="chickens" onclick="setFilter('chickens', this)">🐔 Chickens</button>
+          <button type="button" class="tab" data-filter="ducks" onclick="setFilter('ducks', this)">🦆 Ducks</button>
+        </div>
+        <button class="btn btn-primary btn-block" style="margin-top:1rem" onclick="startFacts()">Start playing</button>
+        <a class="btn btn-ghost btn-block" style="margin-top:.45rem" href="../">Back to persona hubs</a>
+      </div>
+    </section>
+
+    <section id="panel-fact" class="panel" aria-label="Fact">
+      <div class="progress-row"><span id="fact-progress">Fact 1</span><span>Learn</span></div>
+      <div class="meter"><i id="fact-meter"></i></div>
+      <div class="fact-card">
+        <div class="emoji" id="fact-emoji">🐰</div>
+        <div class="tag" id="fact-tag">Bunnies</div>
+        <h2 id="fact-title">Title</h2>
+        <p id="fact-body">Body</p>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="showQuiz()">Got it — quiz me</button>
+    </section>
+
+    <section id="panel-quiz" class="panel" aria-label="Quiz">
+      <div class="progress-row"><span id="quiz-progress">Fact 1</span><span>Check-in</span></div>
+      <div class="meter"><i id="quiz-meter"></i></div>
+      <p class="quiz-q" id="quiz-q">Question?</p>
+      <div id="quiz-choices"></div>
+      <div id="quiz-feedback" hidden></div>
+      <button class="btn btn-primary btn-block" id="btn-next" hidden onclick="nextFact()">Next fact</button>
+    </section>
+
+    <section id="panel-done" class="panel" aria-label="Done">
+      <div class="hero" style="text-align:center">
+        <span class="pill teal">DONE FOR NOW</span>
+        <h1 style="margin-top:.45rem">Nice exploring.</h1>
+        <p class="lead" style="margin:.5rem auto 1rem">You peeked at homestead animal facts. Come back anytime — still no prizes, just knowing the farm better.</p>
+        <button class="btn btn-primary btn-block" onclick="startFacts()">Play again</button>
+        <a class="btn btn-outline btn-block" style="margin-top:.45rem" href="../parents/">Parent resources</a>
+        <a class="btn btn-ghost btn-block" style="margin-top:.45rem" href="../">Persona hubs</a>
+        <a class="btn btn-ghost btn-block" style="margin-top:.45rem" href="https://onchainoffgrid-hub.github.io/critters-play/" target="_blank" rel="noopener">More games · Critters Play</a>
+      </div>
+    </section>
+  </main>
+</div>
+<script>
+const ALL_FACTS = [
+{emoji:"🐰",tag:"Bunnies · colony",animal:"bunnies",title:"Colony life",body:"Our rabbits live together in a bunny hut as a colony — social, not solo cages. People often rehome bunnies to us when they can no longer care for them.",q:"How do our homestead rabbits usually live?",opts:[{t:"In a social colony together",ok:true},{t:"Only alone in separate cages",ok:false},{t:"In the pond with the ducks",ok:false}],whyOk:"Colony life is the homestead way — rabbits prefer company.",whyNo:"They're social colony rabbits, not solo-cage pets or pond ducks."},
+{emoji:"🐰",tag:"Bunnies · body",animal:"bunnies",title:"Teeth never stop growing",body:"A rabbit's teeth grow their whole life. They need hay, wood, or safe chew toys so teeth stay the right length.",q:"What do rabbits need because their teeth never stop growing?",opts:[{t:"Hay, wood, or chew toys",ok:true},{t:"Only soft bread",ok:false},{t:"No food at all",ok:false}],whyOk:"Chewing keeps those forever-growing teeth healthy.",whyNo:"Bread isn't a chew plan — hay and safe toys are."},
+{emoji:"🐰",tag:"Bunnies · senses",animal:"bunnies",title:"Almost 360° vision",body:"Rabbit eyes sit on the sides of the head. That gives them nearly full-circle vision so they can spot predators.",q:"Why are rabbit eyes on the sides of their head?",opts:[{t:"Nearly full-circle vision for predators",ok:true},{t:"So they can read better",ok:false},{t:"So they look like goats",ok:false}],whyOk:"Side-mounted eyes = wide awareness.",whyNo:"It's about spotting danger, not reading or looking like goats."},
+{emoji:"🐰",tag:"Bunnies · happy",animal:"bunnies",title:"Binkies mean happy",body:"A binky is a jump-twist-kick in the air. When a bunny does that, they're excited and happy!",q:"What does a bunny 'binky' usually mean?",opts:[{t:"They're happy and excited",ok:true},{t:"They're angry at the goat",ok:false},{t:"They want to drive the truck",ok:false}],whyOk:"Hop-twist-kick = joy.",whyNo:"Binkies are happy hops — not anger or truck dreams."},
+{emoji:"🐰",tag:"Bunnies · talk",animal:"bunnies",title:"The thump",body:"Rabbits are usually quiet. A hard hind-leg thump can mean 'danger!' or 'I'm upset.' Listen with your eyes too.",q:"What can a rabbit's hind-leg thump mean?",opts:[{t:"Danger or upset",ok:true},{t:"They're asking for pizza",ok:false},{t:"Time for goat yoga",ok:false}],whyOk:"Thump = alert or mad. Reset calmly.",whyNo:"Thumps aren't food orders — they're warnings."},
+{emoji:"🐰",tag:"Bunnies · types",animal:"bunnies",title:"Lops & upright ears",body:"You'll meet colony rescues, lops (ears fold down — calm lap-bunny look), and upright-ear mixes that look classic and curious.",q:"What are 'lops'?",opts:[{t:"Rabbits whose ears fold down",ok:true},{t:"Tiny chickens",ok:false},{t:"Great Pyrenees puppies",ok:false}],whyOk:"Lops = folded ears. Guests love the calm look.",whyNo:"Lops are rabbits with fold-down ears."},
+{emoji:"🐰",tag:"Bunnies · babies",animal:"bunnies",title:"Escape-artist babies",body:"Baby / junior bunnies are extra escape-y. Helpers use small fencing so they can't slip out of puppy pens.",q:"Why do baby bunnies need small fencing?",opts:[{t:"So they can't slip out of pens",ok:true},{t:"So they can fly",ok:false},{t:"Because they hate hay",ok:false}],whyOk:"Little bodies = little gaps. Fence tight.",whyNo:"Babies slip through gaps — fencing stops escapes."},
+{emoji:"🐰",tag:"Bunnies · handle",animal:"bunnies",title:"Never by the ears",body:"Never pick up a bunny by the ears. Never dangle. Never chase. Support the chest and the hindquarters — the caboose!",q:"Which way should you NEVER pick up a bunny?",opts:[{t:"By the ears",ok:true},{t:"Supporting chest and hindquarters",ok:false},{t:"Holding close to your body",ok:false}],whyOk:"Ears are a hard stop — never.",whyNo:"Chest + hind support is correct; ears are forbidden."},
+{emoji:"🐰",tag:"Bunnies · set-down",animal:"bunnies",title:"Rear feet first",body:"When you set a bunny down, put rear feet first, then front — don't drop. That keeps the back safe.",q:"How should you set a bunny down?",opts:[{t:"Rear feet first, then front",ok:true},{t:"Drop from waist height",ok:false},{t:"Toss gently into the pen",ok:false}],whyOk:"Caboose lands first — soft and safe.",whyNo:"Never drop or toss. Rear feet first."},
+{emoji:"🐰",tag:"Bunnies · kids",animal:"bunnies",title:"Soft pets only",body:"Kids should sit or kneel. Soft pets on the back or head — not grabbing face or ears. Close-toe shoes help when bunnies hop near feet.",q:"What's a good kid rule with bunnies?",opts:[{t:"Soft pets; seated or kneeling",ok:true},{t:"Chase them for fun",ok:false},{t:"Pull the ears to say hi",ok:false}],whyOk:"Calm hands, low body = safe pets.",whyNo:"No chasing, no ear pulls."},
+{emoji:"🐰",tag:"Bunnies · job",animal:"bunnies",title:"Bunny Haven = bunnies only",body:"Bunny Haven visits are bunnies only — calm, cuddly, great for parties, classrooms, and memory care. Full Critters zoos bring more species.",q:"What animals come on a Bunny Haven job?",opts:[{t:"Bunnies only",ok:true},{t:"Goats, ducks, and horses",ok:false},{t:"Only Great Pyrenees",ok:false}],whyOk:"Bunny Haven stays bunny-focused.",whyNo:"Haven = rabbits. Full zoos are a different SKU."},
+{emoji:"🐰",tag:"Bunnies · breed",animal:"bunnies",title:"Fast breeders",body:"A doe can have multiple litters a year — that's why rehomes matter. We don't run 'one breed only' shows; guests meet real homestead rabbits.",q:"Why do bunny rehomes matter so much?",opts:[{t:"Does can have multiple litters a year",ok:true},{t:"Bunnies never have babies",ok:false},{t:"They only live underwater",ok:false}],whyOk:"Fast breeding → lots of rehomes needed.",whyNo:"Rabbits breed quickly — rehomes keep them safe."},
+{emoji:"🐰",tag:"Bunnies · count",animal:"bunnies",title:"About a dozen",body:"The homestead keeps roughly ~12 bunnies. Soft, calm, and perfect for gentle hands on Critters on Call visits.",q:"About how many bunnies live at the homestead?",opts:[{t:"About a dozen (~12)",ok:true},{t:"Exactly 2",ok:false},{t:"About 200",ok:false}],whyOk:"Ops inventory: ~12.",whyNo:"It's a proper bunny crew of about twelve."},
+{emoji:"🐰",tag:"Bunnies · reset",animal:"bunnies",title:"If they kick or thump",body:"If a bunny kicks, squirms, or thumps — return them to the pen calmly and reset. Don't force cuddles. Wash hands before and after.",q:"What should you do if a bunny kicks or thumps?",opts:[{t:"Return to pen calmly and reset",ok:true},{t:"Hold tighter until they stop",ok:false},{t:"Chase them around the yard",ok:false}],whyOk:"Calm reset beats forced cuddles.",whyNo:"Never squeeze harder or chase."},
+{emoji:"🐐",tag:"Goats · travel",animal:"goats",title:"Boys corral travel set",body:"Four intact bucks — Kneepad Senior, Gomez, Dunkaroo, and Romeo — often travel as a set of four for mobile Critters visits (~30–40 lb).",q:"Which four goats make the boys corral travel set?",opts:[{t:"Kneepad Senior, Gomez, Dunkaroo & Romeo",ok:true},{t:"Sophie, Gus, Betty & Elon",ok:false},{t:"Only Zip alone",ok:false}],whyOk:"Those four bucks are the travel quartet.",whyNo:"Sophie/Gus/Betty are Pyrenees; Elon is a duck!"},
+{emoji:"🐐",tag:"Goats · S-tier",animal:"goats",title:"Divvy = Dividends",body:"Divvy (short for Dividends) is an S-tier Nigerian Dwarf with Kneepads Junior — standouts for kid-friendly farm visits.",q:"True or false: Divvy's longer name is Dividends.",opts:[{t:"True",ok:true},{t:"False",ok:false}],whyOk:"Divvy = Dividends.",whyNo:"It is true — Dividends!"},
+{emoji:"🐐",tag:"Goats · smart",animal:"goats",title:"Zip is clever",body:"Zip is noted as very smart — watch her. Clever goats figure out gates before you do. Stub: more goat facts coming.",q:"Which goat is noted 'very smart — watch'?",opts:[{t:"Zip",ok:true},{t:"Romeo",ok:false},{t:"Gus",ok:false}],whyOk:"Zip's ops note: very smart — watch.",whyNo:"Zip is the clever one; Gus is a Pyr."},
+{emoji:"🐐",tag:"Goats · handle",animal:"goats",title:"Scoop chest + hind",body:"Nigerian Dwarfs: scoop under chest and support the hind. Don't drag by collar or horn area. Latch pens — escape artists! (More goat module soon.)",q:"How do you pick up a Nigerian Dwarf goat?",opts:[{t:"Scoop chest + support hind",ok:true},{t:"Pull by the horns",ok:false},{t:"Lift by the tail",ok:false}],whyOk:"Chest + caboose — same protocol family as bunnies.",whyNo:"Never horns or tail."},
+{emoji:"🐐",tag:"Goats · stub",animal:"goats",title:"More goat facts coming",body:"Stub lane: goat yoga vibes, Dolly (traveler of the Shania–Moses–Dolly trio), and weight notes (~40–50 lb heaviest). Expand in next pass.",q:"Which goat in the Shania–Moses–Dolly trio travels off-farm?",opts:[{t:"Dolly",ok:true},{t:"Shania",ok:false},{t:"Moses",ok:false}],whyOk:"Only Dolly of that trio is comfortable off-farm.",whyNo:"Shania and Moses prefer to stay home."},
+{emoji:"🐔",tag:"Chickens · breeds",animal:"chickens",title:"Serama, Silkie & RIR",body:"Petting-zoo chickens include tiny Serama show birds, fluffy Silkies, and classic Rhode Island Reds. Specialty birds only on helper gigs: Serama/bantam OR silkie/cochin.",q:"Which is a tiny show chicken breed on the farm?",opts:[{t:"Serama",ok:true},{t:"Toulouse",ok:false},{t:"Pekin",ok:false}],whyOk:"Seramas are the little show birds.",whyNo:"Toulouse is a goose; Pekin is a duck."},
+{emoji:"🐔",tag:"Chickens · handle",animal:"chickens",title:"Both hands for birds",body:"Birds need both hands — wings tucked, feet supported. No one-handed wing grabs. Set down gently inside the pen. (Chicken module expands next.)",q:"How should you hold a chicken?",opts:[{t:"Both hands: wings tucked, feet supported",ok:true},{t:"One-handed by a wing",ok:false},{t:"By the beak",ok:false}],whyOk:"Two hands, wings in, feet supported.",whyNo:"Never one-handed wing grabs."},
+{emoji:"🐔",tag:"Chickens · count",animal:"chickens",title:"About ~10 zoo chickens",body:"About ~10 petting-zoo chickens travel with Critters on Call and Ann-Marie's STEM framing. Stub: more breed facts soon.",q:"About how many petting-zoo chickens are in the mobile set?",opts:[{t:"About 10",ok:true},{t:"About 1000",ok:false},{t:"Zero — chickens stay home always",ok:false}],whyOk:"Ops count ~10 for the mobile experience.",whyNo:"A small curated flock, not a factory."},
+{emoji:"🐔",tag:"Chickens · stub",animal:"chickens",title:"More chicken facts coming",body:"Stub: egg talk, Silkie fluff science, and why specialty breeds matter for gentle kid hands. Expand in next content pass.",q:"True or false: Silkies are known for fluffy feathers.",opts:[{t:"True",ok:true},{t:"False",ok:false}],whyOk:"Silkies are famously fluffy.",whyNo:"True — fluff is the Silkie signature."},
+{emoji:"🦆",tag:"Ducks · flock",animal:"ducks",title:"About ~20 ducks",body:"The homestead keeps about ~20 ducks — Pekin-heavy, plus runners, mallards, and Muscovy.",q:"About how many ducks live at the homestead?",opts:[{t:"About 20",ok:true},{t:"About 2",ok:false},{t:"About 200",ok:false}],whyOk:"Ops count ~20 (Pekin-heavy).",whyNo:"A busy pond crew of roughly twenty."},
+{emoji:"🦆",tag:"Ducks · names",animal:"ducks",title:"Elon & Halle Berry",body:"Elon (Muscovy — star of Evade Elon) and Halle Berry are the named Muscovy pair kids remember from play and visits.",q:"Who is Elon on the homestead?",opts:[{t:"A Muscovy duck",ok:true},{t:"A Great Pyrenees",ok:false},{t:"A Nigerian Dwarf goat",ok:false}],whyOk:"Elon is the Muscovy duck.",whyNo:"Pyrenees are Sophie/Gus/Betty; Elon is a duck!"},
+{emoji:"🦆",tag:"Ducks · game",animal:"ducks",title:"Evade Elon",body:"Kids can play Evade Elon in Critters Play — then claim a free spin on the live wheel when they earn it. Stub: more duck science soon.",q:"What Critters Play game features Elon the duck?",opts:[{t:"Evade Elon",ok:true},{t:"Pyrenees Guard only",ok:false},{t:"Barn Cat only",ok:false}],whyOk:"Evade Elon is the duck chase/arcade lane.",whyNo:"Elon's game is Evade Elon."},
+{emoji:"🦆",tag:"Ducks · stub",animal:"ducks",title:"More duck facts coming",body:"Stub: dabbling vs diving, why Pekins are calm crowd favorites, and water-safety notes for mobile events. Expand next.",q:"True or false: the flock is Pekin-heavy.",opts:[{t:"True",ok:true},{t:"False",ok:false}],whyOk:"Pekin-heavy is the ops note.",whyNo:"True — lots of Pekins in the ~20."},
+{emoji:"🏡",tag:"Homestead",animal:"all",title:"Callahan, Florida",body:"Sheehan Homestead sits at 44065 Cushman Road in Callahan, FL. Ann-Marie frames STEM on Call; Critters on Call brings the mobile petting zoo to schools and communities.",q:"Where is Sheehan Homestead?",opts:[{t:"Callahan, Florida",ok:true},{t:"Orlando theme-park row",ok:false},{t:"Atlanta suburbs",ok:false}],whyOk:"Callahan, FL — North Florida educational farm.",whyNo:"North Florida near Jacksonville metro."}
+];
+let deck = ALL_FACTS.slice();
+let filter = "all";
+let idx = 0;
+let locked = false;
+
+function setFilter(f, btn) {
+  filter = f;
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("on"));
+  if (btn) btn.classList.add("on");
+}
+function show(id) {
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("on"));
+  document.getElementById(id).classList.add("on");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function buildDeck() {
+  deck = filter === "all" ? ALL_FACTS.slice() : ALL_FACTS.filter(x => x.animal === filter);
+  if (!deck.length) deck = ALL_FACTS.slice();
+}
+function startFacts() {
+  buildDeck();
+  idx = 0; locked = false;
+  renderFact(); show("panel-fact");
+}
+function pct() { return Math.round(((idx + 1) / deck.length) * 100); }
+function label() { return "Fact " + (idx + 1) + " of " + deck.length; }
+function renderFact() {
+  const f = deck[idx];
+  document.getElementById("fact-progress").textContent = label();
+  document.getElementById("fact-meter").style.width = pct() + "%";
+  document.getElementById("fact-emoji").textContent = f.emoji;
+  document.getElementById("fact-tag").textContent = f.tag;
+  document.getElementById("fact-title").textContent = f.title;
+  document.getElementById("fact-body").textContent = f.body;
+}
+function showQuiz() {
+  const f = deck[idx]; locked = false;
+  document.getElementById("quiz-progress").textContent = label();
+  document.getElementById("quiz-meter").style.width = pct() + "%";
+  document.getElementById("quiz-q").textContent = f.q;
+  document.getElementById("quiz-choices").innerHTML = f.opts.map((o, i) =>
+    '<button type="button" class="choice" onclick="answer(' + i + ')">' + o.t + "</button>"
+  ).join("");
+  const fb = document.getElementById("quiz-feedback");
+  fb.hidden = true; fb.className = "feedback"; fb.textContent = "";
+  document.getElementById("btn-next").hidden = true;
+  show("panel-quiz");
+}
+function answer(i) {
+  if (locked) return; locked = true;
+  const f = deck[idx];
+  [...document.querySelectorAll("#quiz-choices .choice")].forEach((b, n) => {
+    if (f.opts[n].ok) b.classList.add("good");
+    if (n === i && !f.opts[n].ok) b.classList.add("bad");
+  });
+  const ok = f.opts[i].ok;
+  const fb = document.getElementById("quiz-feedback");
+  fb.hidden = false;
+  fb.className = "feedback " + (ok ? "ok" : "no");
+  fb.textContent = (ok ? "Nice! " : "Almost — ") + (ok ? f.whyOk : f.whyNo);
+  const next = document.getElementById("btn-next");
+  next.hidden = false;
+  next.textContent = idx >= deck.length - 1 ? "Done for now" : "Next fact";
+}
+function nextFact() {
+  if (idx >= deck.length - 1) { show("panel-done"); return; }
+  idx++; locked = false; renderFact(); show("panel-fact");
+}
+</script>
+</body>
+</html>

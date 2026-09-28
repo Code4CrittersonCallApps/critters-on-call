@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#164e4a" />
+<title>Helper training hub · Critters on Call</title>
+<link rel="icon" type="image/png" href="../../assets/pyrenees-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../hub.css" />
+</head>
+<body>
+<div class="app">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">
+        <img class="brand-logo" src="../../assets/pyrenees-logo.png" alt="" width="36" height="36" />
+        <span class="min-w-0">
+          <span class="brand-title">Helper training</span>
+          <span class="brand-sub">Crew · hoop + caboose · incidents</span>
+        </span>
+      </a>
+      <a class="back-link" href="../">Hubs</a>
+    </div>
+  </header>
+  <main class="main">
+    <div class="stack">
+      <section class="hero">
+        <span class="pill teal">HELPER BETA</span>
+        <h1>Training hub</h1>
+        <p class="lead">Handling + hoop/caboose · 55 facts (public twin + HELPER-SECRET extras) · incident playbooks. Informal gig work — clear expectations, no pressure.</p>
+      </section>
+
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab on" data-tab="home" onclick="tab('home', this)">Home</button>
+        <button type="button" class="tab" data-tab="hoop" onclick="tab('hoop', this)">Hoop + caboose</button>
+        <button type="button" class="tab" data-tab="facts" onclick="tab('facts', this)">Facts quiz</button>
+        <button type="button" class="tab" data-tab="incidents" onclick="tab('incidents', this)">Incidents</button>
+      </div>
+
+      <div id="tab-home" class="panel on">
+        <div class="card">
+          <h2>1) Pay &amp; terms</h2>
+          <ul class="list">
+            <li><b>Usually $20–25/hr</b> · Zelle · aim ≤24h · pay told ahead · heat/drive incentives</li>
+            <li><b>Gig / 1099</b> · W-9 → 1099 past $600 · not W-2</li>
+            <li><b>Boundaries</b> · no forced neighborhoods or tough/special-needs sites · saying no is fine</li>
+            <li>Close-toe shoes · Critters tee · birds = Serama/bantam <b>OR</b> silkie/cochin only</li>
+            <li><b>Homestead dogs:</b> leave them alone</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>2) Pickup &amp; setup</h2>
+          <ul class="list">
+            <li>Homestead at pickup <b>OR</b> on-site ~30 min early</li>
+            <li>≥2 puppy pens · hair ties join · small fencing for babies · tent if no shade</li>
+            <li><b>Mobility &gt; fancy</b> · Bunny Haven = bunnies only (must know bunny handle)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>3) Gig workflow</h2>
+          <ul class="list">
+            <li>Ask → pay Q → yes/no → Calendar invite</li>
+            <li>Night-before / morning-of “still good?” · short yes</li>
+            <li>If no: backup or owners · ask for grace</li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-block" href="#" onclick="tab('hoop', document.querySelector('[data-tab=hoop]')); return false;">Open hoop + caboose →</a>
+        <a class="btn btn-outline btn-block" style="margin-top:.45rem" href="#" onclick="tab('facts', document.querySelector('[data-tab=facts]')); return false;">Facts quiz (55) →</a>
+        <a class="btn btn-ghost btn-block" style="margin-top:.45rem" href="../kids/">Public kids facts twin</a>
+      </div>
+
+      <div id="tab-hoop" class="panel">
+        <div class="secret-banner" role="note"><strong>PROPRIETARY IP</strong> — “Make a hoop, secure the caboose.”™ Teach consistently; don’t publish step-for-step outside the crew / training app.</div>
+        <div class="card" style="margin-top:.75rem;border-color:rgba(42,143,138,.45);background:linear-gradient(160deg,#0f2a28,#1c1a16)">
+          <h2 style="font-style:italic;color:#e8d48c">“Make a hoop, secure the caboose.”</h2>
+          <p class="muted" style="margin-top:.35rem">Mnemonic + textbook containment. Same steps for helpers, member gifts, and field ops — voice differs; motion does not.</p>
+        </div>
+        <div class="card">
+          <h2>Four beats</h2>
+          <ul class="list">
+            <li><b>01 Cue</b> — say the rhyme before child contact or handoff</li>
+            <li><b>02 Hoop</b> — calm closed boundary (arms/body/pen edge), never a squeeze</li>
+            <li><b>03 Caboose</b> — chest/shoulders <em>and</em> hindquarters before lift/pass</li>
+            <li><b>04 Reset</b> — staff retain control; struggle → re-hoop or return to pen</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Hard stops</h2>
+          <ul class="list">
+            <li>Never lift by tail, ears, horns, neck, or legs</li>
+            <li>Stop if animal <b>or</b> child is distressed</li>
+            <li>No chasing · no dangling · no one-handed wing/ear grabs</li>
+            <li>Event pens: kids generally do not enter</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Species notes</h2>
+          <ul class="list">
+            <li><b>Goats:</b> scoop chest + hind · latch pens</li>
+            <li><b>Bunnies:</b> never ears/scruff-only · rear-feet set-down</li>
+            <li><b>Birds:</b> both hands — wings tucked, feet supported</li>
+            <li><b>Babies:</b> small fencing · hoop at pen edge before lift</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="tab-facts" class="panel">
+        <div class="secret-banner"><strong>HELPER-SECRET</strong> extras are crew-only (pay, packing, IP, workflow). Public twin lives in the kids game.</div>
+        <div class="tabs" style="margin-top:.65rem">
+          <button type="button" class="tab on" id="ff-all" onclick="setFactFilter('all', this)">All 55</button>
+          <button type="button" class="tab" onclick="setFactFilter('public', this)">Public</button>
+          <button type="button" class="tab" onclick="setFactFilter('secret', this)">HELPER-SECRET</button>
+        </div>
+        <div id="fact-shell" style="margin-top:.75rem">
+          <button class="btn btn-primary btn-block" onclick="startFacts()">Start facts quiz</button>
+        </div>
+        <div id="fact-play" hidden>
+          <div class="progress-row"><span id="fp">Fact 1</span><span id="fkind">Learn</span></div>
+          <div class="meter"><i id="fm"></i></div>
+          <div class="fact-card">
+            <div class="emoji" id="fe">🔐</div>
+            <div class="tag" id="ft">Tag</div>
+            <h2 id="ftitle">Title</h2>
+            <p id="fb">Body</p>
+          </div>
+          <button class="btn btn-primary btn-block" id="btn-quiz" onclick="showQuiz()">Quiz me</button>
+          <div id="quiz-box" hidden>
+            <p class="quiz-q" id="fq"></p>
+            <div id="fc"></div>
+            <div id="ffb" class="feedback" hidden></div>
+            <button class="btn btn-primary btn-block" id="fn" hidden onclick="nextFact()">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-incidents" class="panel">
+        <p class="sec-h">Incident playbooks</p>
+        <div class="playbook">
+          <h3>Running late</h3>
+          <ul class="list">
+            <li><b>After pickup:</b> text the chain with <b>Ann-Marie + Michael</b> immediately — don’t wait until you’re almost there.</li>
+            <li><b>Have the venue address</b> in the thread (copy from calendar) so anyone can nav-help or call the host.</li>
+            <li><b>Communicate ETA + reason</b> in one short text (traffic / load / animal reset). Update if ETA slips again.</li>
+            <li><b>Host call:</b> if &gt;10–15 min late, one of AM/Michael or you (if asked) rings the booker with the new ETA.</li>
+            <li><b>On arrival:</b> calm setup — mobility over fancy; apologize once, then deliver.</li>
+            <li class="tiny">Stub expand: rain delay script · multi-helper relay · customer credit ownership.</li>
+          </ul>
+        </div>
+        <div class="playbook stub">
+          <h3>Animal escape · STUB</h3>
+          <ul class="list">
+            <li>Stop the crowd calmly · one person tracks · hoop/caboose on recapture · count inventory before reopen.</li>
+            <li>Text AM/Michael if off-property or longer than a minute. Stub: species-specific notes.</li>
+          </ul>
+        </div>
+        <div class="playbook stub">
+          <h3>Kid scare / distress · STUB</h3>
+          <ul class="list">
+            <li>Return animal to pen · soft voice to child + guardian · no blame · offer reset or different animal.</li>
+            <li>If bite/scratch: first-aid + notify AM/Michael + host. Stub: incident form path.</li>
+          </ul>
+        </div>
+        <div class="playbook stub">
+          <h3>Weather · STUB</h3>
+          <ul class="list">
+            <li>Lightning / severe: animals secured, people to cover, pause petting. Shade-first; tarp/hay as needed.</li>
+            <li>Text chain if cancel/shorten. Stub: heat index / cold thresholds.</li>
+          </ul>
+        </div>
+        <div class="playbook stub">
+          <h3>No-show (helper or host) · STUB</h3>
+          <ul class="list">
+            <li>Helper no-show: backup list → owners cover → notify booker if delayed.</li>
+            <li>Host no-show / locked site: text AM/Michael · wait window · photo proof · don’t leave animals unattended. Stub: billing ownership.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="foot">Critters on Call · Sheehan Homestead · Helper beta · PDFs in collateral preserved</p>
+    </div>
+  </main>
+</div>
+<script>
+const ALL = [
+{emoji:"🐰",tag:"Bunnies",title:"Colony life",body:"Rabbits live in a social colony hut — not solo cages. Many are rescues/rehomes.",q:"How do homestead rabbits usually live?",opts:[{t:"Social colony together",ok:true},{t:"Solo cages only",ok:false},{t:"In the duck pond",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Teeth never stop",body:"Hay/wood/chew toys keep forever-growing teeth in check.",q:"What keeps rabbit teeth healthy?",opts:[{t:"Hay, wood, or chew toys",ok:true},{t:"Only soft bread",ok:false},{t:"No chewing ever",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"360° vision",body:"Side-mounted eyes → nearly full-circle predator awareness.",q:"Why side-mounted eyes?",opts:[{t:"Nearly full-circle vision",ok:true},{t:"Better reading",ok:false},{t:"Look like goats",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Binkies",body:"Jump-twist-kick = happy/excited.",q:"A binky usually means?",opts:[{t:"Happy and excited",ok:true},{t:"Angry at goats",ok:false},{t:"Wants the truck",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Thump",body:"Hind-leg thump can mean danger or upset.",q:"A thump can mean?",opts:[{t:"Danger or upset",ok:true},{t:"Pizza order",ok:false},{t:"Goat yoga time",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Lops",body:"Folded-ear rabbits — calm lap-bunny look guests love.",q:"What are lops?",opts:[{t:"Ears fold down",ok:true},{t:"Tiny chickens",ok:false},{t:"Pyrenees pups",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Baby fencing",body:"Juniors slip out — use small fencing in puppy pens.",q:"Why small fencing for babies?",opts:[{t:"Stop slip-outs",ok:true},{t:"So they fly",ok:false},{t:"They hate hay",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Never by ears",body:"Never ears, dangle, or chase. Chest + hindquarters.",q:"Never pick up by?",opts:[{t:"Ears",ok:true},{t:"Chest + hind support",ok:false},{t:"Holding close",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Rear feet first",body:"Set down rear feet first, then front.",q:"Set-down order?",opts:[{t:"Rear feet first",ok:true},{t:"Drop from waist",ok:false},{t:"Toss in",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Kids soft pets",body:"Seated/kneeling; soft pets on back/head; close-toe shoes.",q:"Kid rule?",opts:[{t:"Soft pets; seated/kneeling",ok:true},{t:"Chase for fun",ok:false},{t:"Pull ears",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Bunny Haven",body:"Bunny Haven = bunnies only.",q:"Bunny Haven animals?",opts:[{t:"Bunnies only",ok:true},{t:"Goats + horses",ok:false},{t:"Only Pyrs",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Fast breeders",body:"Does can have multiple litters/year — rehomes matter.",q:"Why rehomes matter?",opts:[{t:"Multiple litters/year",ok:true},{t:"Never breed",ok:false},{t:"Live underwater",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"~12 bunnies",body:"Homestead keeps roughly a dozen.",q:"About how many bunnies?",opts:[{t:"~12",ok:true},{t:"Exactly 2",ok:false},{t:"~200",ok:false}],secret:false},
+{emoji:"🐰",tag:"Bunnies",title:"Kick/thump reset",body:"Return to pen calmly; don't force cuddles; sanitize.",q:"If bunny kicks?",opts:[{t:"Calm reset to pen",ok:true},{t:"Hold tighter",ok:false},{t:"Chase",ok:false}],secret:false},
+{emoji:"🐐",tag:"Goats",title:"Travel set",body:"Kneepad Senior, Gomez, Dunkaroo, Romeo — travel set of four.",q:"Boys corral travel set?",opts:[{t:"Kneepad Sr, Gomez, Dunkaroo, Romeo",ok:true},{t:"Sophie Gus Betty Elon",ok:false},{t:"Zip alone",ok:false}],secret:false},
+{emoji:"🐐",tag:"Goats",title:"Divvy",body:"Divvy = Dividends · S-tier with Kneepads Junior.",q:"Divvy's long name?",opts:[{t:"Dividends",ok:true},{t:"Dunkaroo",ok:false},{t:"Dolly",ok:false}],secret:false},
+{emoji:"🐐",tag:"Goats",title:"Zip",body:"Zip is very smart — watch the gate.",q:"Very smart — watch?",opts:[{t:"Zip",ok:true},{t:"Romeo",ok:false},{t:"Gus",ok:false}],secret:false},
+{emoji:"🐐",tag:"Goats",title:"Handle",body:"Scoop chest + support hind; latch pens; escape artists.",q:"Pick up ND goat how?",opts:[{t:"Chest + hind",ok:true},{t:"By horns",ok:false},{t:"By tail",ok:false}],secret:false},
+{emoji:"🐐",tag:"Goats",title:"Dolly travels",body:"Of Shania–Moses–Dolly, only Dolly is comfortable off-farm.",q:"Traveler of the trio?",opts:[{t:"Dolly",ok:true},{t:"Shania",ok:false},{t:"Moses",ok:false}],secret:false},
+{emoji:"🐔",tag:"Chickens",title:"Serama",body:"Tiny show birds; also Silkies + RIR in zoo set.",q:"Tiny show chicken?",opts:[{t:"Serama",ok:true},{t:"Toulouse",ok:false},{t:"Pekin",ok:false}],secret:false},
+{emoji:"🐔",tag:"Chickens",title:"Both hands",body:"Wings tucked, feet supported — no one-handed wing grabs.",q:"Hold a chicken how?",opts:[{t:"Both hands, wings tucked",ok:true},{t:"One wing",ok:false},{t:"By beak",ok:false}],secret:false},
+{emoji:"🐔",tag:"Chickens",title:"~10 zoo",body:"About ~10 petting-zoo chickens in mobile set.",q:"About how many zoo chickens?",opts:[{t:"~10",ok:true},{t:"~1000",ok:false},{t:"Zero always",ok:false}],secret:false},
+{emoji:"🐔",tag:"Chickens",title:"Specialty only",body:"Helper bird jobs: Serama/bantam OR silkie/cochin only.",q:"Allowed specialty birds?",opts:[{t:"Serama/bantam OR silkie/cochin",ok:true},{t:"Any rooster",ok:false},{t:"Emus only",ok:false}],secret:false},
+{emoji:"🦆",tag:"Ducks",title:"~20 flock",body:"Pekin-heavy flock ~20 + runners/mallards/Muscovy.",q:"About how many ducks?",opts:[{t:"~20",ok:true},{t:"~2",ok:false},{t:"~200",ok:false}],secret:false},
+{emoji:"🦆",tag:"Ducks",title:"Elon",body:"Elon is a Muscovy (Evade Elon game).",q:"Who is Elon?",opts:[{t:"Muscovy duck",ok:true},{t:"Great Pyrenees",ok:false},{t:"ND goat",ok:false}],secret:false},
+{emoji:"🦆",tag:"Ducks",title:"Halle Berry",body:"Named Muscovy pair with Elon.",q:"Elon's Muscovy pair partner?",opts:[{t:"Halle Berry",ok:true},{t:"Sophie",ok:false},{t:"Zip",ok:false}],secret:false},
+{emoji:"🏡",tag:"Homestead",title:"Callahan",body:"44065 Cushman Rd, Callahan FL · STEM on Call + Critters.",q:"Where is the homestead?",opts:[{t:"Callahan, FL",ok:true},{t:"Orlando parks",ok:false},{t:"Atlanta",ok:false}],secret:false},
+{emoji:"🐕",tag:"Guardians",title:"Sophie",body:"Sophie = Lead Guardian Great Pyrenees (leave homestead dogs alone on gigs).",q:"Lead Guardian Pyr?",opts:[{t:"Sophie",ok:true},{t:"Dunkaroo",ok:false},{t:"Elon",ok:false}],secret:false},
+{emoji:"🔐",tag:"HELPER-SECRET · Pay",title:"$20–25/hr Zelle",body:"Usually $20–25/hr by Zelle; aim ≤24h after gig; tell pay ahead. Heat/drive incentives possible.",q:"Typical helper pay framing?",opts:[{t:"$20–25/hr Zelle",ok:true},{t:"$5/hr cash only",ok:false},{t:"Unpaid internship",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Tax",title:"W-9 → 1099",body:"Independent gig: send W-9; 1099 once past $600. Not W-2 punch-clock.",q:"Tax form path?",opts:[{t:"W-9 then 1099 after $600",ok:true},{t:"Always W-2 weekly",ok:false},{t:"No forms ever",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Boundaries",title:"Say no is fine",body:"No forced neighborhoods or special-needs/tough sites. Passing a gig is fine.",q:"If site isn't a fit?",opts:[{t:"Say no — no big deal",ok:true},{t:"Must take every gig",ok:false},{t:"Ghost with no text",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Arrive",title:"30 min early / pickup",body:"Homestead at allotted pickup OR on-site ~30 min early. Close-toe + Critters tee.",q:"Site timing rule?",opts:[{t:"~30 min early or pickup slot",ok:true},{t:"Fashionably late OK",ok:false},{t:"Skip the tee",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Pens",title:"≥2 puppy pens",body:"Hair ties join pens; small fencing for chicks/baby bunnies; vendor tent if no shade.",q:"Minimum pens?",opts:[{t:"At least 2 puppy pens",ok:true},{t:"Zero pens",ok:false},{t:"One cardboard box",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Hoop",title:"Make a hoop",body:"Calm closed boundary with arms/body or pen edge — never a squeeze. Soft circle.",q:"What is the hoop?",opts:[{t:"Calm closed boundary, not a squeeze",ok:true},{t:"A crush restraint",ok:false},{t:"A vendor tent",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Caboose",title:"Secure the caboose",body:"Support chest/shoulders AND hindquarters before lift/pass. Stops rearward escape.",q:"Caboose means?",opts:[{t:"Hindquarter support before lift",ok:true},{t:"Ignore the rear",ok:false},{t:"Lift by tail",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Rhyme",title:"Say it aloud",body:"Cue: “Make a hoop, secure the caboose.” Teach early — helpers, kids, backyard practice.",q:"Signature handling cue?",opts:[{t:"Make a hoop, secure the caboose",ok:true},{t:"Yeet the goat",ok:false},{t:"No talking ever",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Hard stops",title:"Never lift by…",body:"Never tail, ears, horns, neck, or legs. Stop if animal OR child distressed. No chase/dangle.",q:"Hard-stop lifts include?",opts:[{t:"Tail, ears, horns, neck, legs",ok:true},{t:"Only ears are fine",ok:false},{t:"Legs are preferred",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Events",title:"Kids out of pens",body:"B2B/festival: kids usually can't enter pens; staff present animals; send smaller/dwarf goats first.",q:"At festival pens, kids…?",opts:[{t:"Usually stay out; staff present animals",ok:true},{t:"Climb in freely",ok:false},{t:"Chase goats alone",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Pack",title:"Two small loads",body:"Escape/small truck: two smaller transports; carriers by type; stack low+secure; 20+ animals fit Escape.",q:"Packing method?",opts:[{t:"Two smaller loads + typed carriers",ok:true},{t:"One giant crate wall always",ok:false},{t:"Loose in cabin",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Lift",title:"Heaviest ~40–50 lb",body:"Heaviest goat ~40–50 lb — lift with legs. Sometimes walk gear in from parking.",q:"Heaviest goat approx?",opts:[{t:"~40–50 lb",ok:true},{t:"~5 lb",ok:false},{t:"~200 lb",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Ground",title:"Tarp / hay",body:"Tarp if needed. Rare asphalt → hay down and charge for hay.",q:"Asphalt workaround?",opts:[{t:"Hay down + charge for hay",ok:true},{t:"Skip animals",ok:false},{t:"Hose the lot",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Workflow",title:"Text → calendar",body:"Ask want gig? → pay Q → yes/no → Google Calendar → night-before/morning still-good? check-in.",q:"After a yes?",opts:[{t:"Calendar invite + short check-ins",ok:true},{t:"No calendar ever",ok:false},{t:"All-day chat required",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Evolution",title:"First gig shown",body:"First gig: come solo and get shown. Grow into field marketing / 3rd-person lead capture / spin wheel.",q:"First gig includes?",opts:[{t:"We show you the first time",ok:true},{t:"Solo with zero training",ok:false},{t:"Only desk work",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Spin role",title:"~$50 / 2 hrs",body:"3rd person: emails, handouts, spin-the-wheel. Example ~$50/2 hrs — goal = leads not chat.",q:"Spin-wheel coverage goal?",opts:[{t:"Emails / leads",ok:true},{t:"Stand and chat only",ok:false},{t:"Ignore guests",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Dogs",title:"Leave Pyrs alone",body:"Homestead dogs (Sophie/Gus/Betty) — leave them alone on helper days.",q:"Homestead dogs rule?",opts:[{t:"Leave them alone",ok:true},{t:"Free play required",ok:false},{t:"Walk them off-site",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Wet pickup",title:"Tell us if wet",body:"If pickup is wet, tell us; most times you can drive in back.",q:"Wet pickup?",opts:[{t:"Tell us; often drive in back",ok:true},{t:"Cancel silently",ok:false},{t:"Park on the lawn always",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Mobility",title:"Mobility > fancy",body:"Sun moves; spaces tighten. Keep setup simple and movable. Shade-first placement.",q:"Setup philosophy?",opts:[{t:"Mobility beats fancy",ok:true},{t:"Permanent cement pens",ok:false},{t:"Ignore shade",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · IP",title:"Keep know-how in-house",body:"Hoop/caboose + Speedy-style packing are proprietary. Learn on gig; don't publish step-for-step outside crew.",q:"Franchise IP posture?",opts:[{t:"Keep step-for-step in-house",ok:true},{t:"Post full checklist publicly",ok:false},{t:"Ignore the rhyme",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Tent",title:"Partner preferred",body:"Michael prefers shade/indoor; hates solo tent setup. Tent skill is valued.",q:"Tent preference?",opts:[{t:"Shade/indoor; partnered setup valued",ok:true},{t:"Solo tent required always",ok:false},{t:"No shade ever",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Sanitize",title:"Between animals",body:"Wash/sanitize hands before/after and between animal types on full zoos.",q:"Sanitize when?",opts:[{t:"Before/after and between types",ok:true},{t:"Never",ok:false},{t:"Only yearly",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Vehicle",title:"Crossover min",body:"Crossover minimum to deliver full zoo; Bunny Haven can be small car if caged+ventilated.",q:"Full zoo vehicle floor?",opts:[{t:"Crossover minimum",ok:true},{t:"Bicycle only",ok:false},{t:"Motorcycle sidecar",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Ghosting",title:"Backup / grace",body:"Ghosting happens. If no: backup helper or owners cover — ask for that grace.",q:"If helper ghosts?",opts:[{t:"Backup or owners; ask grace",ok:true},{t:"Shame publicly",ok:false},{t:"Ignore the gig",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Member gift",title:"Same steps softer voice",body:"Member/backyard practice uses same hoop+caboose steps; adult supervision; softer voice.",q:"Member practice vs staff?",opts:[{t:"Same steps; softer voice; supervised",ok:true},{t:"Different unsafe steps",ok:false},{t:"Kids alone unsupervised",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Set-down",title:"Release hoop last",body:"Set-down: caboose first, then front; release hoop last.",q:"Release order?",opts:[{t:"Hoop last after caboose set-down",ok:true},{t:"Drop hoop first",ok:false},{t:"No set-down protocol",ok:false}],secret:true},
+{emoji:"🔐",tag:"HELPER-SECRET · Assess",title:"Before cue",body:"App checklist starts with assess: animal calm? child ready? space clear? then cue.",q:"First checklist step?",opts:[{t:"Assess calm/ready/clear",ok:true},{t:"Grab and go",ok:false},{t:"Skip to spin wheel",ok:false}],secret:true}
+];
+let filter = "all", deck = [], idx = 0, locked = false, mode = "fact";
+
+function tab(id, btn) {
+  document.querySelectorAll(".tabs .tab").forEach(t => { if (t.dataset.tab) t.classList.remove("on"); });
+  if (btn) btn.classList.add("on");
+  ["home","hoop","facts","incidents"].forEach(x => {
+    const el = document.getElementById("tab-" + x);
+    if (el) el.classList.toggle("on", x === id);
+  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function setFactFilter(f, btn) {
+  filter = f;
+  btn.parentElement.querySelectorAll(".tab").forEach(t => t.classList.remove("on"));
+  btn.classList.add("on");
+}
+function build() {
+  if (filter === "public") deck = ALL.filter(x => !x.secret);
+  else if (filter === "secret") deck = ALL.filter(x => x.secret);
+  else deck = ALL.slice();
+}
+function startFacts() {
+  build(); idx = 0; locked = false;
+  document.getElementById("fact-shell").hidden = true;
+  document.getElementById("fact-play").hidden = false;
+  document.getElementById("quiz-box").hidden = true;
+  document.getElementById("btn-quiz").hidden = false;
+  render();
+}
+function pct() { return Math.round(((idx + 1) / deck.length) * 100); }
+function render() {
+  const f = deck[idx];
+  document.getElementById("fp").textContent = "Fact " + (idx + 1) + " of " + deck.length;
+  document.getElementById("fm").style.width = pct() + "%";
+  document.getElementById("fkind").textContent = f.secret ? "HELPER-SECRET" : "Public twin";
+  document.getElementById("fe").textContent = f.emoji;
+  document.getElementById("ft").textContent = f.tag;
+  document.getElementById("ftitle").textContent = f.title;
+  document.getElementById("fb").textContent = f.body;
+}
+function showQuiz() {
+  const f = deck[idx]; locked = false;
+  document.getElementById("btn-quiz").hidden = true;
+  document.getElementById("quiz-box").hidden = false;
+  document.getElementById("fq").textContent = f.q;
+  document.getElementById("fc").innerHTML = f.opts.map((o, i) =>
+    '<button type="button" class="choice" onclick="answer(' + i + ')">' + o.t + "</button>"
+  ).join("");
+  const fb = document.getElementById("ffb");
+  fb.hidden = true; fb.textContent = ""; fb.className = "feedback";
+  document.getElementById("fn").hidden = true;
+}
+function answer(i) {
+  if (locked) return; locked = true;
+  const f = deck[idx];
+  [...document.querySelectorAll("#fc .choice")].forEach((b, n) => {
+    if (f.opts[n].ok) b.classList.add("good");
+    if (n === i && !f.opts[n].ok) b.classList.add("bad");
+  });
+  const ok = f.opts[i].ok;
+  const fb = document.getElementById("ffb");
+  fb.hidden = false;
+  fb.className = "feedback " + (ok ? "ok" : "no");
+  fb.textContent = ok ? "Locked in." : "Reset — check the card again.";
+  const n = document.getElementById("fn");
+  n.hidden = false;
+  n.textContent = idx >= deck.length - 1 ? "Done" : "Next fact";
+}
+function nextFact() {
+  if (idx >= deck.length - 1) {
+    document.getElementById("fact-play").hidden = true;
+    document.getElementById("fact-shell").hidden = false;
+    document.getElementById("fact-shell").innerHTML = '<div class="hero" style="text-align:center"><span class="pill teal">DONE</span><h1 style="margin-top:.4rem">Nice work.</h1><p class="lead" style="margin:.5rem 0 1rem">Re-run anytime. Incidents tab has late / escape / scare / weather / no-show stubs.</p><button class="btn btn-primary btn-block" onclick="startFacts()">Replay</button></div>';
+    return;
+  }
+  idx++; locked = false;
+  document.getElementById("quiz-box").hidden = true;
+  document.getElementById("btn-quiz").hidden = false;
+  render();
+}
+</script>
+</body>
+</html>
