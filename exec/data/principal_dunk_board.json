@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-27T18:03:00-04:00",
-  "board_version": "2.9.11",
+  "as_of": "2026-09-28T02:15:00-04:00",
+  "board_version": "Board v2.9.7 \u00b7 Sep 28 \u00b7 scheduled activity + message reconcile",
   "label": "Principal dunk board v2.9 \u2014 Friday weekend programmers + Jax universities + Corporate Friday",
   "rule": "Compose-only. Friday filter = weekend programmers (church / CDD amenity / apartments / corporate-district) + secondary consumer rebook. University = separate filter, NOT Friday default. Published emails only. Done key sheehan_principal_dunk_done_v2 \u00b7 Notes sheehan_dunk_notes_v1.",
   "compose_authuser": "sheehanhomestead@gmail.com",
@@ -14,7 +14,7 @@
     "enterprise": 20,
     "owe_followup": 16,
     "local_forms_optional": 19,
-    "mailto_total": 642,
+    "mailto_total": 650,
     "by_persona": {
       "senior": 49,
       "other": 60,
@@ -42,7 +42,7 @@
     "premium": 32,
     "premium_map_gaps": 5,
     "rcsa": 13,
-    "consumer": 174,
+    "consumer": 179,
     "consumer_customers": 31,
     "consumer_warm": 60,
     "consumer_likely_reviewed": 0,
@@ -90,8 +90,7 @@
       "Vesta": 41,
       "GMS": 17,
       "MAY": 3
-    },
-    "rows_total": 665
+    }
   },
   "dedupe": {
     "deduped_as_of": "2026-09-25 15:35 ET",
@@ -123,9 +122,6 @@
     "premium_tagged_existing": 19
   },
   "next40_ids": [
-    "owe-westminster-kori-dual-mini",
-    "owe-westminster-l-ratley-julington",
-    "owe-vesta-group-oct-checkin",
     "president-landrumpto-com-alice-b-landrum-middle-school-pto-pto-president",
     "alimacanipta-gmail-com-alimacani-elementary-pta-pta-president-vp-programs-even",
     "atlanticcoasthsptsa-gmail-com-atlantic-coast-high-ptsa-ptsa-president",
@@ -162,201 +158,58 @@
     "eva-taraseviciute-aircommunities-com-air-communities-jacksonville-region-regiona",
     "sherry-naydeck-greystar-com-aspire-at-silverleaf-greystar-leasing-manager",
     "rshoemaker-cimarronegolf-com-cimarrone-golf-club-general-manager",
-    "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy"
+    "josie-curtis-patriotrail-com-patriot-rail-vp-people-strategy",
+    "phyllis-ameliamuseum-org-amelia-island-museum-of-history-executive-director",
+    "mary-anne-thomas-ascension-org-ascension-st-vincent-s-foundation-director-major-gifts",
+    "paul-poirrier-ascension-org-ascension-st-vincent-s-foundation-director-of-major-and-planned-"
   ],
   "sections": [
     {
       "id": "owe",
       "title": "Owe / Slam / Follow-up",
-      "hint": "PINNED TOP: Westminster $275 in-thread replies. Drafts only \u2014 you open and Send.",
+      "hint": "Close these first. Verbal / promised / overdue resends. Open email \u2192 Send. Done grays out.",
       "rows": [
         {
-          "phone": "",
-          "city": "St. Augustine",
-          "segment": "Senior / Activities",
-          "persona": "senior",
+          "id": "owe-julie-pettigrew-nov7",
+          "account": "Julie Pettigrew \u2014 Mobile Mini Nov 7 (BOOKED)",
+          "contact": "Julie Pettigrew",
+          "title": "BOOKED \u00b7 deposit paid",
+          "email": "jpettigrew713@gmail.com",
+          "phone": "931-999-3833",
+          "city": "Jacksonville \u00b7 8202 Elsdon St",
+          "segment": "Slam / Follow-up",
+          "persona": "consumer",
           "kind": "mailto",
           "lane": "owe",
           "tier": "S",
-          "id": "owe-westminster-kori-dual-mini",
-          "account": "Westminster St. Augustine",
-          "contact": "Kori Montague",
-          "title": "Director of Activities and Volunteer Services",
-          "email": "kmontague@wservices.org",
-          "website": "https://www.westminsterstaugustinefl.org/",
-          "subject": "RE: November Monday double dip",
-          "owe_reason": "PINNED TOP \u00b7 IN-THREAD \u00b7 no budget $375 \u00b7 counter: mini 90min @$275 OR Bunny Haven @$199 \u00b7 50% Violet partial \u00b7 .org \u00b7 drafts only",
-          "why": "Highest priority \u00b7 open mailto (same subject = nest in this morning's thread) or open Gmail thread and Reply. Drafts only.",
-          "form_url": "https://westminstercommunitiesfl.org/westminster-woods/contact-us/",
-          "quick_body": "Hey Kori,\n\nNo worries \u2014 budgets are what they are. We were trying to give you a full petting zoo at the mini price. Let's try the next rung down: a mini for the cost of a Bunny Haven \u2014 $275 for 90 minutes. A mini still gets you at least six animals, and that's a 50% partial donation off our standard list pricing, thanks to the Violet ticket for qualifying orgs. Let us know if that works for you guys as is, or if we need to keep at it.\n",
-          "quick_email": true,
-          "legacy_tier": 1,
-          "area": "St. Johns \u00b7 Westminster",
-          "chip_tags": [
-            "PINNED",
-            "In-thread",
-            "$275 mini",
-            ".org",
-            "Westminster",
-            "$199 Bunny Haven",
-            "Violet 50%"
-          ],
-          "lead_source": "Gmail \u00b7 RE: November Monday double dip",
-          "lead_source_type": "gmail",
-          "lead_source_detail": "Inbound reply Sep 27 2026 to Sep 23 dual-campus $375 offer",
-          "lead_source_date": "2026-09-27",
-          "is_org": true,
-          "org_domain": true,
-          "partial_donation_fit": true,
-          "reply_thread_id": "1a0cf6c24e38d432",
-          "reply_to_message_id": "1a0e2f4313c2e652",
-          "cc": "LRATLEY@wservices.org",
-          "mailto": "mailto:kmontague@wservices.org?cc=LRATLEY%40wservices.org&subject=RE%3A%20November%20Monday%20double%20dip&body=Hey%20Kori%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A",
-          "pinned": true,
-          "pin_priority": 1,
-          "priority_rank": 1,
-          "thread_url": "https://mail.google.com/mail/?authuser=sheehanhomestead@gmail.com#all/thread-f:1877146459103089714",
-          "gmail_compose": "https://mail.google.com/mail/?authuser=sheehanhomestead%40gmail.com&view=cm&fs=1&to=kmontague%40wservices.org&cc=LRATLEY%40wservices.org&su=RE%3A%20November%20Monday%20double%20dip&body=Hey%20Kori%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A",
-          "pricing_counter": {
-            "mini_90": 275,
-            "bunny_haven": 199,
-            "rejected": 375
-          }
-        },
-        {
-          "id": "owe-westminster-l-ratley-julington",
-          "account": "Westminster \u2014 Julington Creek",
-          "contact": "L. Ratley",
-          "title": "Activity director \u00b7 Julington Creek",
-          "email": "LRATLEY@wservices.org",
-          "phone": "",
-          "city": "Julington Creek / Jax",
-          "segment": "Senior / Activities",
-          "persona": "senior",
-          "kind": "mailto",
-          "lane": "owe",
-          "tier": "S",
-          "website": "https://westminstercommunitiesfl.org/",
-          "subject": "RE: November Monday double dip",
-          "owe_reason": "PINNED TOP \u00b7 IN-THREAD \u00b7 no budget $375 \u00b7 counter: mini 90min @$275 OR Bunny Haven @$199 \u00b7 50% Violet partial \u00b7 .org \u00b7 drafts only",
-          "why": "Highest priority \u00b7 open mailto (same subject = nest in this morning's thread) or open Gmail thread and Reply. Drafts only.",
-          "quick_body": "Hi there,\n\nNo worries \u2014 budgets are what they are. We were trying to give you a full petting zoo at the mini price. Let's try the next rung down: a mini for the cost of a Bunny Haven \u2014 $275 for 90 minutes. A mini still gets you at least six animals, and that's a 50% partial donation off our standard list pricing, thanks to the Violet ticket for qualifying orgs. Let us know if that works for you guys as is, or if we need to keep at it.\n",
-          "quick_email": true,
-          "chip_tags": [
-            "PINNED",
-            "In-thread",
-            "$275 mini",
-            ".org",
-            "Westminster",
-            "$199 Bunny Haven",
-            "Violet 50%"
-          ],
-          "lead_source": "Gmail \u00b7 CC on RE: November Monday double dip",
-          "lead_source_type": "gmail",
-          "lead_source_detail": "CC\u2019d Sep 27 2026 by Kori Montague \u00b7 LRATLEY@wservices.org",
-          "lead_source_date": "2026-09-27",
-          "area": "Duval/St. Johns \u00b7 Westminster Julington",
-          "friday": false,
-          "is_org": true,
-          "org_domain": true,
-          "partial_donation_fit": true,
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "Nov 7 mobile mini \u2014 confirm details",
+          "owe_reason": "BOOKED \u00b7 Nov 7 11am \u00b7 $175 deposit / $349.99 total \u00b7 logistics",
+          "why": "New GoDaddy booking Sep 27 \u00b7 Sat Nov 7 11:00 AM 75-min mobile mini \u00b7 8202 Elsdon Street Jax 32219 \u00b7 deposit paid.",
           "form_url": "",
-          "reply_thread_id": "1a0cf6c24e38d432",
-          "reply_to_message_id": "1a0e2f4313c2e652",
-          "cc": "kmontague@wservices.org",
-          "mailto": "mailto:LRATLEY@wservices.org?cc=kmontague%40wservices.org&subject=RE%3A%20November%20Monday%20double%20dip&body=Hi%20there%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A",
-          "pinned": true,
-          "pin_priority": 2,
-          "priority_rank": 2,
-          "thread_url": "https://mail.google.com/mail/?authuser=sheehanhomestead@gmail.com#all/thread-f:1877146459103089714",
-          "gmail_compose": "https://mail.google.com/mail/?authuser=sheehanhomestead%40gmail.com&view=cm&fs=1&to=LRATLEY%40wservices.org&cc=kmontague%40wservices.org&su=RE%3A%20November%20Monday%20double%20dip&body=Hi%20there%2C%0A%0ANo%20worries%20%E2%80%94%20budgets%20are%20what%20they%20are.%20We%20were%20trying%20to%20give%20you%20a%20full%20petting%20zoo%20at%20the%20mini%20price.%20Let%27s%20try%20the%20next%20rung%20down%3A%20a%20mini%20for%20the%20cost%20of%20a%20Bunny%20Haven%20%E2%80%94%20%24275%20for%2090%20minutes.%20A%20mini%20still%20gets%20you%20at%20least%20six%20animals%2C%20and%20that%27s%20a%2050%25%20partial%20donation%20off%20our%20standard%20list%20pricing%2C%20thanks%20to%20the%20Violet%20ticket%20for%20qualifying%20orgs.%20Let%20us%20know%20if%20that%20works%20for%20you%20guys%20as%20is%2C%20or%20if%20we%20need%20to%20keep%20at%20it.%0A",
-          "pricing_counter": {
-            "mini_90": 275,
-            "bunny_haven": 199,
-            "rejected": 375
-          }
-        },
-        {
-          "id": "owe-vesta-group-oct-checkin",
-          "account": "Vesta group (Ross Ruben)",
-          "contact": "Ross Ruben",
-          "title": "Director of Lifestyle \u00b7 NE FL amenity network",
-          "email": "rruben@vestapropertyservices.com",
-          "phone": "904-355-1831",
-          "city": "Jacksonville / St. Johns",
-          "segment": "CDD / Amenity \u00b7 Vesta",
-          "persona": "cdd",
-          "kind": "mailto",
-          "lane": "owe",
-          "tier": "S",
-          "friday": true,
-          "pinned": true,
-          "pin_priority": 3,
-          "priority_rank": 3,
+          "quick_body": "Hi Julie,\n\nYou're on the calendar for Saturday Nov 7 at 11:00 AM for the 75-minute mobile mini at 8202 Elsdon Street.\n\nAnything you need from us before then (gate code, setup notes, remaining balance timing)?\n",
           "quick_email": true,
-          "subject": "Durbin was fun \u2014 soft Oct date for the group?",
-          "quick_body": "Hey Ross,\n\nQuick one \u2014 Ann-Marie crushed it at Durbin Crossing today. Here\u2019s a peek: https://www.facebook.com/sheehan.homestead\n\nIf any of the other communities want an October date, happy to hold one. No pressure.\n\n(Cool leftover from Durbin if useful: https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/)\n",
-          "mailto": "mailto:rruben@vestapropertyservices.com?subject=Durbin%20was%20fun%20%E2%80%94%20soft%20Oct%20date%20for%20the%20group%3F&body=Hey%20Ross%2C%0A%0AQuick%20one%20%E2%80%94%20Ann-Marie%20crushed%20it%20at%20Durbin%20Crossing%20today.%20Here%E2%80%99s%20a%20peek%3A%20https%3A//www.facebook.com/sheehan.homestead%0A%0AIf%20any%20of%20the%20other%20communities%20want%20an%20October%20date%2C%20happy%20to%20hold%20one.%20No%20pressure.%0A%0A%28Cool%20leftover%20from%20Durbin%20if%20useful%3A%20https%3A//onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/%29%0A",
-          "owe_reason": "OVERDUE \u00b7 tomorrow (Mon) casual check-in \u00b7 Durbin FB social proof \u00b7 soft Oct date \u00b7 goal=book a date. Ross supportive (foam). Keep light.",
-          "why": "Vesta group overdue. Plan: Ann-Marie Durbin FB link + soft October ask + one cool extra (wheel). Drafts only.",
+          "area": "Metro Jax \u00b7 NW / 32219",
+          "role_chip": "BOOKED",
           "chip_tags": [
-            "PINNED",
-            "Vesta",
-            "Ross",
-            "OVERDUE",
-            "Tomorrow",
-            "Draft only"
+            "BOOKED",
+            "Nov 7",
+            "Deposit paid",
+            "GoDaddy"
           ],
-          "lead_source": "Voice \u00b7 Sep 27 pipeline dump",
-          "lead_source_date": "2026-09-27",
-          "area": "Metro Jax \u00b7 Vesta portfolio",
-          "website": "https://www.vestapropertyservices.com/",
-          "fb_link_note": "Swap FB URL to exact Ann-Marie Durbin Crossing post when it goes live",
-          "cool_extra": "https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/"
-        },
-        {
-          "id": "owe-heather-anthem-lakes-waterview-followup",
-          "account": "Anthem Lakes Waterview Senior Living",
-          "contact": "Heather",
-          "title": "Contact (texted; will pass info along)",
-          "email": "life@anthemlakes.com",
-          "phone": "904-853-8796",
-          "city": "Atlantic Beach",
-          "segment": "Senior / IL-AL",
-          "persona": "senior",
-          "kind": "sms",
-          "lane": "owe",
-          "tier": "A",
-          "website": "https://anthemlakes.com/",
-          "linkedin": "",
-          "form_url": "https://anthemlakes.com/contact-us/",
-          "subject": "",
-          "owe_reason": "FOLLOW UP in a few days if nothing comes back \u00b7 Heather texted 2026-09-27 saying she'd pass Michael's info to the right people \u00b7 phone 904-853-8796 \u00b7 drafts only \u2014 do not auto-message",
-          "why": "Warm handoff pending \u00b7 wait a few days \u00b7 then ping Heather if silence \u00b7 drafts only.",
-          "quick_email": false,
-          "legacy_tier": 2,
-          "area": "Beaches \u00b7 Atlantic Beach",
-          "chip_tags": [
-            "Follow-up",
-            "Anthem Lakes",
-            "Heather",
-            "Texted",
-            "Senior",
-            "Few days"
-          ],
-          "lead_source": "Voice \u00b7 Heather texted Michael 2026-09-27",
-          "lead_source_type": "voice",
-          "lead_source_detail": "Heather (Anthem Lakes Waterview) texted; will pass info to right people. Follow up in a few days if nothing back.",
-          "lead_source_date": "2026-09-27",
-          "do_not_auto_message": true
+          "friday": true,
+          "lead_source": "GoDaddy booking \u00b7 Sep 27",
+          "lead_source_type": "godaddy",
+          "lead_source_detail": "Order C-3C67EBAF16DE409E \u00b7 PayPal $175",
+          "lead_source_date": "2026-09-27"
         },
         {
           "id": "owe-beatrix-mali-vai-apology-reconnect",
           "account": "MaliVai Washington Youth Foundation",
           "contact": "Beatrix",
-          "title": "Partner / reconnect",
+          "title": "Partner / reschedule tour",
           "email": "beatrix@malwashington.com",
-          "phone": "",
+          "phone": "904-359-5437",
           "city": "Jacksonville",
           "segment": "Partner / Other",
           "persona": "other",
@@ -364,25 +217,145 @@
           "lane": "owe",
           "tier": "S",
           "website": "https://www.malwashington.com/",
-          "subject": "Reschedule MWYF tour \u2014 Oct / Nov dates",
-          "owe_reason": "RESCHEDULE \u00b7 Beatrix offered Oct 6, Oct 22, Nov 17 at 3pm after Sep 15 cancel.",
-          "why": "Reply to Sep 15 reschedule email \u2014 pick one of her three tour dates. Warm, short, human.",
-          "quick_body": "Hi Beatrix,\n\nSorry again about the cancel \u2014 small-business life.\n\nAny of these work for a reschedule?\n\u2022 Tue Oct 6 at 3:00pm\n\u2022 Wed Oct 22 at 3:00pm\n\u2022 Mon Nov 17 at 3:00pm\n\nJust say which one and I\u2019ll lock it.\n",
+          "subject": "MaliVai tour \u2014 Oct 6 / Oct 22 / Nov 17?",
+          "owe_reason": "RESCHEDULE \u00b7 tour options Oct 6 \u00b7 Oct 22 \u00b7 Nov 17 @ 3pm \u2014 reply still owed",
+          "why": "RESCHEDULE OPTIONS open (unread Sep 15): Oct 6 / Oct 22 / Nov 17 @ 3pm MaliVai tour \u00b7 pick a date + keep partner reconnect tone.",
+          "quick_body": "Hi Beatrix,\n\nThank you again for the grace on the Sep 15 tour \u2014 and for the reschedule options.\n\nOf Oct 6, Oct 22, and Nov 17 at 3pm, which still works on your side? Happy to lock whichever is easiest.\n\nStill want to stay connected as partners around referrals / sensory-friendly / family resources \u2014 not lead with a pitch.\n",
           "quick_email": true,
           "form_url": "",
           "area": "Metro Jax \u00b7 MaliVai",
           "role_chip": "Partner",
           "chip_tags": [
-            "Reschedule",
+            "Apology",
             "Partner",
-            "MaliVai"
+            "RESCHEDULE",
+            "Tour options open"
           ],
           "friday": false,
-          "lead_source": "Gmail \u00b7 MWYF tour thread",
-          "lead_source_type": "partner",
-          "lead_source_detail": "Beatrix listed Oct 6 / Oct 22 / Nov 17 at 3:00pm",
+          "lead_source": "Gmail \u00b7 reschedule options Sep 15",
+          "lead_source_type": "prior",
+          "lead_source_detail": "Beatrix offered Oct 6 / Oct 22 / Nov 17 @ 3pm after Sep 15 cancel",
           "lead_source_date": "2026-09-15",
           "lead_events": []
+        },
+        {
+          "phone": "(904) 201-7063",
+          "city": "St. Augustine / Julington Creek",
+          "segment": "Slam / Follow-up",
+          "persona": "senior",
+          "kind": "mailto",
+          "lane": "owe",
+          "tier": "S",
+          "id": "owe-westminster-kori-dual-mini",
+          "account": "Westminster \u2014 dual mini Mondays (SLAM)",
+          "contact": "Kori Montague",
+          "title": "Activities \u00b7 budget decline / $275 counter",
+          "email": "Kmontague@wservices.org",
+          "website": "https://westminstercommunitiesfl.org/",
+          "subject": "mini @ $275 \u2014 does that work?",
+          "owe_reason": "BUDGET DECLINE \u2192 counter $275 pending \u00b7 dual Nov Mondays still open if they accept",
+          "why": "BUDGET DECLINE on $375 dual Mondays (Sep 27) \u00b7 Kori + LRATLEY (Julington Creek) \u00b7 Michael counter $275 mini/Bunny Haven price sent Sep 27 5:54 PM ET \u2014 awaiting reply.",
+          "form_url": "https://westminstercommunitiesfl.org/westminster-woods/contact-us/",
+          "quick_body": "Hi Kori,\n\nJust checking whether the $275 mini (90 min / 6+ animals, Violet partial donation) works for either or both campuses, or if we should keep shaping something that fits the budget.\n\nHappy to include Loretta on Julington Creek too.\n",
+          "quick_email": true,
+          "legacy_tier": 1,
+          "area": "St. Johns \u00b7 Westminster",
+          "chip_tags": [
+            "BUDGET DECLINE",
+            "Counter $275 sent",
+            "Awaiting reply"
+          ],
+          "lead_source": "Gmail \u00b7 budget decline Sep 27",
+          "lead_source_type": "prior",
+          "lead_source_detail": "Kori Montague decline $375 \u00b7 CC LRATLEY@wservices.org \u00b7 counter $275 mini sent",
+          "lead_source_date": "2026-09-27"
+        },
+        {
+          "id": "owe-rachael-jergensen-homeschool",
+          "account": "Rachael Jergensen \u2014 kindergarten co-op / Homeschool tour",
+          "contact": "Rachael Jergensen",
+          "title": "Homeschool / co-op inbound",
+          "email": "rcjergensen@gmail.com",
+          "phone": "",
+          "city": "",
+          "segment": "Slam / Follow-up",
+          "persona": "consumer",
+          "kind": "mailto",
+          "lane": "owe",
+          "tier": "S",
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "homeschool / co-op farm tour",
+          "owe_reason": "INBOUND \u00b7 Homeschool tour ask Sep 25 \u00b7 Michael offered call/text \u2014 awaiting her call",
+          "why": "Inbound Sep 25: small kindergarten co-op looking for a farm tour + prices. Michael asked her to text/call 914-263-1311. No phone on file yet.",
+          "form_url": "",
+          "quick_body": "Hi Rachael,\n\nHappy to help with a farm tour for your kindergarten co-op. Easiest if you text or call 914-263-1311 and we can match group size + date.\n\nTypical visit includes animal meet/greet, light farm STEM, and time with the bunnies/goats \u2014 pricing depends on headcount and length.\n",
+          "quick_email": true,
+          "area": "Metro Jax \u00b7 Homeschool",
+          "role_chip": "Homeschool",
+          "chip_tags": [
+            "INBOUND",
+            "Homeschool tour",
+            "Awaiting call"
+          ],
+          "friday": true,
+          "lead_source": "Gmail inbound \u00b7 Sep 25",
+          "lead_source_type": "form",
+          "lead_source_detail": "Homeschool tour \u00b7 Rachael Jergensen \u00b7 rcjergensen@gmail.com",
+          "lead_source_date": "2026-09-25",
+          "lead_events": [
+            {
+              "type": "inbound",
+              "label": "Homeschool tour ask",
+              "date": "2026-09-25",
+              "subject": "Homeschool tour",
+              "thread_id": "1a0d8a98b1e83310",
+              "source": "gmail_inbound"
+            }
+          ]
+        },
+        {
+          "id": "owe-heather-foran-anthem-lakes",
+          "account": "Anthem Lakes Waterview Senior Living",
+          "contact": "Heather Foran",
+          "title": "Director of Sales \u00b7 inbound ack Sep 22",
+          "email": "heather.foran@anthemlakes.com",
+          "phone": "",
+          "city": "Atlantic Beach",
+          "segment": "Slam / Follow-up",
+          "persona": "senior",
+          "kind": "mailto",
+          "lane": "owe",
+          "tier": "S",
+          "website": "https://www.anthemlakes.com/",
+          "subject": "petting zoo / resident program dates?",
+          "owe_reason": "INBOUND ACK \u00b7 Heather Foran auto/reply Sep 22 \u2014 will reach out; chase Life Enrichment date",
+          "why": "Heather Foran (Director of Sales) acknowledged vendor outreach Sep 22 and said she would reach out. Follow for activities/resident programming date.",
+          "form_url": "",
+          "quick_body": "Hi Heather,\n\nFollowing up on your note \u2014 happy to share a one-pager and open fall/winter dates for a small mobile petting zoo or Bunny Haven visit for residents.\n\nIf Life Enrichment has a better inbox, glad to include them.\n",
+          "quick_email": true,
+          "area": "Beaches \u00b7 Anthem Lakes",
+          "role_chip": "Sales / Activities",
+          "chip_tags": [
+            "INBOUND REPLY",
+            "Awaiting programming date",
+            "Senior"
+          ],
+          "friday": true,
+          "friday_class": "senior",
+          "lead_source": "Gmail \u00b7 Heather Foran Sep 22",
+          "lead_source_type": "form",
+          "lead_source_detail": "Thanks for reaching out! \u00b7 Director of Sales Anthem Lakes Waterview",
+          "lead_source_date": "2026-09-22",
+          "lead_events": [
+            {
+              "type": "reply",
+              "label": "Inbound ack \u00b7 Heather Foran",
+              "date": "2026-09-22",
+              "subject": "Thanks for reaching out!",
+              "thread_id": "1a0ca10a53234175",
+              "source": "gmail_inbound"
+            }
+          ]
         },
         {
           "phone": "",
@@ -445,23 +418,18 @@
           "kind": "mailto",
           "lane": "owe",
           "quick_email": true,
-          "subject": "Community / Family Focus \u2014 Sheehan Homestead (Callahan)",
-          "why": "No inbound Action News Jax thread in Gmail \u2014 refreshed shoutout draft from dunk card. Open mailto; you hit Send.",
-          "owe_reason": "MEDIA \u00b7 shoutout draft ready \u00b7 no inbound reply thread found",
+          "subject": "Community feature request \u2014 Sheehan Homestead / Critters on Call (Callahan)",
+          "why": "Media dunk \u00b7 professional community-feature ask (toned 2026-09-26). Card in chat for Send. Tags: media \u00b7 Family Focus \u00b7 newsletter.",
+          "owe_reason": "Tone-up ready \u00b7 send from chat DraftExternalMessage card",
           "tier": "A",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
-          "quick_body": "Hi Action News Jax team,\n\nThank you for highlighting Northeast Florida businesses and community stories.\n\nWe\u2019re Sheehan Homestead / Critters on Call in Callahan \u2014 mobile petting zoo and farm STEM for metro Jacksonville. We\u2019re deep in fall events and would love a Family Focus or community mention if it fits.\n\nHappy to send a short blurb, photos, or bring animals for a quick segment.\n\nRecent local clips:\n\u2022 Jacksonville Buzz: https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n\u2022 Brian Sexton: https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n\u2022 Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nWebsite: https://www.sheehanhomestead.com/\nText / call: 914-263-1311\n\nThank you for considering us.\n",
+          "quick_body": "Hi Action News Jax team,\n\nThank you for the work you already do highlighting Northeast Florida businesses and agritourism.\n\nWe are Sheehan Homestead / Critters on Call, based in Callahan \u2014 a mobile petting zoo and STEM-on-the-farm program serving metro Jacksonville. We are deep in fall community events (including trunk-or-treats) and would be grateful for a community or Family Focus mention if it is a fit for your calendar or newsletter.\n\nHappy to provide a short blurb, photos, or bring animals for a brief on-camera segment if that is useful to your producers.\n\nRecent local coverage for context:\n\u2022 Jacksonville Buzz: https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n\u2022 Brian Sexton: https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n\u2022 Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nWebsite: https://www.sheehanhomestead.com/\nPhone / text: 914-263-1311\n\nThank you for considering us.",
           "tags": [
             "media",
             "Family Focus",
             "professional",
             "Michael dunk"
-          ],
-          "chip_tags": [
-            "Media",
-            "Action News Jax",
-            "Family Focus"
           ]
         },
         {
@@ -498,11 +466,25 @@
           "persona": "school",
           "kind": "mailto",
           "lane": "owe",
-          "why": "CALL_OFFERED \u2014 await Tabatha call/text reply (ToT Oct 30 + science night Nov 13). Spelling TABATHA.",
-          "owe_reason": "Pipeline CALL_OFFERED \u00b7 Michael offered call Sep 25",
+          "why": "REPLYED Sep 25 \u00b7 Tabatha (PTA Pres) wants info for ToT Oct 30 + Science Night Nov 13 \u00b7 Michael offered call; she said she'd call that afternoon \u2014 date still not locked.",
+          "owe_reason": "REPLYED / CALL_OFFERED \u00b7 lock ToT Oct 30 and/or Science Night Nov 13",
           "tier": "S",
           "legacy_tier": 1,
-          "area": "Metro Jax \u00b7 Bartram"
+          "area": "Metro Jax \u00b7 Bartram",
+          "subject": "ToT Oct 30 / Science Night Nov 13 \u2014 lock?",
+          "chip_tags": [
+            "REPLIED",
+            "CALL_OFFERED",
+            "ToT Oct 30",
+            "Science Night Nov 13"
+          ],
+          "lead_source": "Gmail reply \u00b7 Tabatha Sep 25",
+          "lead_source_type": "prior",
+          "lead_source_detail": "bseptapres@gmail.com \u00b7 phone 904-755-7230 verified in pipeline",
+          "lead_source_date": "2026-09-25",
+          "quick_body": "Hi Tabatha,\n\nJust circling back on Trunk-or-Treat Oct 30 and Science Night Nov 13 \u2014 happy to hold either or both.\n\nWant me to text a couple package options, or jump on a quick call?\n",
+          "quick_email": true,
+          "role_chip": "PTA President"
         },
         {
           "id": "owe-brooks-kate-bartram",
@@ -599,25 +581,33 @@
           "id": "owe-rcs-lauren",
           "account": "River City Science Academy",
           "contact": "Lauren Burnett",
-          "title": "Activities",
+          "title": "Extended Day Coordinator \u00b7 BOOKED Oct 2",
           "email": "lburnette@rivercityscience.org",
           "city": "Jacksonville",
           "segment": "School",
           "persona": "school",
           "kind": "mailto",
           "lane": "owe",
-          "why": "Sep 27 email \u201cSheehan Homestead\u201d: excited for Incentive Day Oct 2; back field setup; asked arrival time; CC Lockey/McKnight/Erdogan/Dijana. Do not auto-reply.",
-          "owe_reason": "CONFIRMED Oct 2 Violet Package \u00b7 team looped \u00b7 AWAITING our arrival time \u00b7 invoice path via McKnight",
+          "why": "BOOKED \u00b7 Oct 2 Incentive Day Violet Package (8:20\u201311:20) at RCSA Innovations \u00b7 Lauren accepted calendar + looping Lockey/McKnight/Erdogan/Dijana \u00b7 invoice path with Business Office.",
+          "owe_reason": "BOOKED \u00b7 Violet Package Oct 2 \u00b7 confirm arrival time + invoice with McKnight",
           "tier": "S",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Southside",
           "role_chip": "Activities",
           "rcsa": true,
-          "lead_source": "PayPal invoice \u00b7 Sep 24",
-          "lead_source_type": "invoice",
-          "lead_source_detail": "PayPal invoice \u00b7 Sep 22 \u00b7 +1 more",
-          "lead_source_date": "2026-09-24",
+          "lead_source": "Calendar \u00b7 Oct 2 Mobile PZ \u00b7 BOOKED",
+          "lead_source_type": "calendar",
+          "lead_source_detail": "Lauren Burnette thank-you Sep 27 \u00b7 Accepted: Mobile PZ Sep 22 \u00b7 Violet Package Incentive Day",
+          "lead_source_date": "2026-09-27",
           "lead_events": [
+            {
+              "type": "booked",
+              "label": "BOOKED \u00b7 Oct 2 Violet Package",
+              "date": "2026-09-27",
+              "subject": "Sheehan Homestead \u2014 Incentive Day loop",
+              "thread_id": "1a0e4bce37adefde",
+              "source": "gmail_inbound"
+            },
             {
               "type": "invoice",
               "label": "PayPal invoice \u00b7 Sep 24",
@@ -642,18 +632,13 @@
             }
           ],
           "chip_tags": [
-            "PayPal invoice \u00b7 Sep 24",
-            "RCSA",
-            "Oct 2",
-            "Violet",
-            "Arrival time"
+            "BOOKED",
+            "Oct 2 confirmed",
+            "Calendar accepted"
           ],
           "phone": "240-561-0782",
-          "phone_updated": "2026-09-27 16:58 ET",
-          "pipeline_status": "confirmed_awaiting_arrival_time",
-          "event_date": "2026-10-02",
-          "subject": "RE: Sheehan Homestead",
-          "board_note": "Reply when ready: arrival time only. Drafts only / explicit permission."
+          "phone_updated": "2026-09-28 2:15 AM ET",
+          "subject": "Oct 2 Incentive Day \u2014 arrival time?"
         }
       ]
     },
@@ -673,29 +658,35 @@
           "id": "rcsa-lauren-burnette",
           "account": "RCSA \u00b7 Lauren Burnette (Owe/Slam)",
           "contact": "Lauren Burnett",
-          "title": "Activities / campus booker",
+          "title": "Extended Day Coordinator \u00b7 BOOKED Oct 2",
           "email": "lburnette@rivercityscience.org",
           "website": "https://www.rivercityscience.org/",
-          "subject": "Oct 2 petting zoo \u2014 lock details?",
-          "why": "Sep 27 email \u201cSheehan Homestead\u201d: excited for Incentive Day Oct 2; back field setup; asked arrival time; CC Lockey/McKnight/Erdogan/Dijana. Do not auto-reply.",
-          "owe_reason": "CONFIRMED Oct 2 Violet Package \u00b7 team looped \u00b7 AWAITING our arrival time \u00b7 invoice path via McKnight",
+          "subject": "Oct 2 Incentive Day \u2014 arrival time?",
+          "why": "BOOKED \u00b7 Oct 2 Incentive Day Violet Package (8:20\u201311:20) at RCSA Innovations \u00b7 Lauren accepted calendar + looping Lockey/McKnight/Erdogan/Dijana \u00b7 invoice path with Business Office.",
+          "owe_reason": "BOOKED \u00b7 Violet Package Oct 2 \u00b7 confirm arrival time + invoice with McKnight",
           "form_url": "",
           "area": "Metro Jax \u00b7 Southside",
           "role_chip": "Activities",
           "fancy": false,
           "rcsa": true,
           "chip_tags": [
-            "PayPal invoice \u00b7 Sep 24",
-            "RCSA",
-            "Oct 2",
-            "Violet",
-            "Arrival time"
+            "BOOKED",
+            "Oct 2 confirmed",
+            "Calendar accepted"
           ],
-          "lead_source": "PayPal invoice \u00b7 Sep 24",
-          "lead_source_type": "invoice",
-          "lead_source_detail": "PayPal invoice \u00b7 Sep 22 \u00b7 +1 more",
-          "lead_source_date": "2026-09-24",
+          "lead_source": "Calendar \u00b7 Oct 2 Mobile PZ \u00b7 BOOKED",
+          "lead_source_type": "calendar",
+          "lead_source_detail": "Lauren Burnette thank-you Sep 27 \u00b7 Accepted: Mobile PZ Sep 22 \u00b7 Violet Package Incentive Day",
+          "lead_source_date": "2026-09-27",
           "lead_events": [
+            {
+              "type": "booked",
+              "label": "BOOKED \u00b7 Oct 2 Violet Package",
+              "date": "2026-09-27",
+              "subject": "Sheehan Homestead \u2014 Incentive Day loop",
+              "thread_id": "1a0e4bce37adefde",
+              "source": "gmail_inbound"
+            },
             {
               "type": "invoice",
               "label": "PayPal invoice \u00b7 Sep 24",
@@ -719,10 +710,7 @@
               "source": "consumer_inbound"
             }
           ],
-          "phone_updated": "2026-09-27 16:58 ET",
-          "pipeline_status": "confirmed_awaiting_arrival_time",
-          "event_date": "2026-10-02",
-          "board_note": "Reply when ready: arrival time only. Drafts only / explicit permission."
+          "phone_updated": "2026-09-28 2:15 AM ET"
         },
         {
           "phone": "904-489-4037",
@@ -1048,6 +1036,269 @@
       "hint": "ONE primary ask per card: MONEY (rebook) \u00b7 LEAD (referral) \u00b7 BARTER (review/testimonial). Lanes A\u2013G from proven history only; Unknown-past = generic rebook. Reviewers \u2192 APP FIRST thanks \u2014 never re-ask review. Google scrape gap \u2192 review_status unknown.",
       "rows": [
         {
+          "id": "cons-cust-alexaowens25-gmail-com",
+          "account": "Alexa Owens \u00b7 Mommy & Me Oct 1",
+          "contact": "Alexa Owens",
+          "title": "C \u00b7 BOOKED Oct 1",
+          "email": "alexaowens25@gmail.com",
+          "phone": "618-975-4968",
+          "phone_updated": "2026-09-28 2:15 AM ET",
+          "city": "Callahan / Jax",
+          "segment": "Consumer",
+          "persona": "consumer",
+          "kind": "mailto",
+          "lane": "consumer",
+          "tier": "S",
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "see you Oct 1 at 11:30",
+          "why": "BOOKED \u00b7 Mommy & Me Thu Oct 1 at 11:30 (moved from 10am; Alexa confirmed) \u00b7 paid $25 GoDaddy \u00b7 calendar attendee alexaowens25@gmail.com.",
+          "owe_reason": "BOOKED \u00b7 Oct 1 Mommy & Me",
+          "form_url": "",
+          "area": "Metro Jax \u00b7 Consumer",
+          "role_chip": "Customer",
+          "fancy": false,
+          "rcsa": false,
+          "chip_tags": [
+            "BOOKED",
+            "Oct 1 11:30",
+            "Mommy & Me",
+            "GoDaddy",
+            "Consumer"
+          ],
+          "quick_body": "Hi Alexa,\n\nJust confirming \u2014 see you Thursday Oct 1 at 11:30 for Mommy & Me at the farm.\n\nAnything you need before then?\n",
+          "quick_email": true,
+          "consumer_lane": "customers",
+          "purchase_status": "bought",
+          "review_status": "unknown",
+          "review_match_confidence": "none",
+          "history_lane": "booked_no_review",
+          "history_lane_label": "C \u00b7 BOOKED Oct 1",
+          "north_star": "money",
+          "north_star_label": "BOOKED \u00b7 Oct 1 Mommy & Me",
+          "history_proven": true,
+          "friday": false,
+          "lead_source": "GoDaddy booking \u00b7 Sep 23",
+          "lead_source_type": "godaddy",
+          "lead_source_detail": "Order C-6C24449247B84C2B \u00b7 confirmed 11:30 Oct 1 by email",
+          "lead_source_date": "2026-09-23",
+          "lead_events": [
+            {
+              "type": "godaddy",
+              "label": "Mommy & Me booking",
+              "date": "2026-09-23",
+              "thread_id": "1a0cbd26095ade2f",
+              "source": "gmail_godaddy"
+            },
+            {
+              "type": "calendar",
+              "label": "Calendar \u00b7 Oct 1 Mommy & Me 11:30",
+              "date": "2026-10-01",
+              "source": "google_calendar"
+            }
+          ]
+        },
+        {
+          "id": "cons-cust-ajslangley-gmail-com",
+          "account": "Ashlee Langley \u00b7 Mommy & Me",
+          "contact": "Ashlee Langley",
+          "title": "C \u00b7 REVIEWED",
+          "email": "ajslangley@gmail.com",
+          "phone": "561-603-2050",
+          "phone_updated": "2026-09-28 2:15 AM ET",
+          "city": "Callahan / Jax",
+          "segment": "Consumer",
+          "persona": "consumer",
+          "kind": "mailto",
+          "lane": "consumer",
+          "tier": "S",
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "thanks for the review \u2014 another Saturday?",
+          "why": "REVIEWED \u00b7 5\u2605 Google Sep 27 after Mommy & Me Sat Sep 26 (paid $25) \u00b7 APP-FIRST rebook.",
+          "owe_reason": "MONEY \u00b7 APP-FIRST rebook (reviewed)",
+          "form_url": "",
+          "area": "Metro Jax \u00b7 Consumer",
+          "role_chip": "Customer",
+          "fancy": false,
+          "rcsa": false,
+          "chip_tags": [
+            "REVIEWED",
+            "Mommy & Me",
+            "GoDaddy",
+            "Consumer",
+            "APP-FIRST"
+          ],
+          "quick_body": "Hi Ashlee,\n\nThank you for the Google review \u2014 so glad the boys loved Mommy & Me.\n\nWant another Saturday this fall? Happy to hold one.\n",
+          "quick_email": true,
+          "consumer_lane": "customers",
+          "purchase_status": "bought",
+          "review_status": "likely_reviewed",
+          "review_match_confidence": "high",
+          "history_lane": "prior_mobile",
+          "history_lane_label": "C \u00b7 REVIEWED Mommy & Me",
+          "north_star": "money",
+          "north_star_label": "MONEY \u00b7 APP-FIRST rebook",
+          "history_proven": true,
+          "friday": true,
+          "friday_class": "consumer_rebook",
+          "lead_source": "Google review \u00b7 Sep 27",
+          "lead_source_type": "godaddy",
+          "lead_source_detail": "Mommy & Me Sep 26 paid \u00b7 5\u2605 Ashlee Langley",
+          "lead_source_date": "2026-09-27",
+          "lead_events": [
+            {
+              "type": "review",
+              "label": "5\u2605 Google review",
+              "date": "2026-09-27",
+              "thread_id": "1a0e299250579c77",
+              "source": "gmail_gbp"
+            },
+            {
+              "type": "godaddy",
+              "label": "Mommy & Me booking Sep 26",
+              "date": "2026-09-25",
+              "thread_id": "1a0d98f5b2a20805",
+              "source": "gmail_godaddy"
+            }
+          ]
+        },
+        {
+          "id": "cons-cust-nramnaraine-gmail-com",
+          "account": "Nalinie Ramnaraine \u00b7 Mommy & Me",
+          "contact": "Nalinie Ramnaraine",
+          "title": "C \u00b7 REVIEWED",
+          "email": "nramnaraine@gmail.com",
+          "phone": "954-397-2915",
+          "phone_updated": "2026-09-28 2:15 AM ET",
+          "city": "Callahan / Jax",
+          "segment": "Consumer",
+          "persona": "consumer",
+          "kind": "mailto",
+          "lane": "consumer",
+          "tier": "S",
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "thanks for the review \u2014 another date?",
+          "why": "REVIEWED \u00b7 5\u2605 Google Sep 27 after Mommy & Me Sat Sep 26 (paid $25) \u00b7 also photos added \u00b7 APP-FIRST (no review ask) \u00b7 soft next date / bunny haven downtown thread still open historically.",
+          "owe_reason": "MONEY \u00b7 APP-FIRST rebook (reviewed)",
+          "form_url": "",
+          "area": "Metro Jax \u00b7 Consumer",
+          "role_chip": "Customer",
+          "fancy": false,
+          "rcsa": false,
+          "chip_tags": [
+            "REVIEWED",
+            "Mommy & Me",
+            "GoDaddy",
+            "Consumer",
+            "APP-FIRST"
+          ],
+          "quick_body": "Hi Nalinie,\n\nThank you so much for the kind Google review and photos \u2014 means a lot.\n\nIf you want another Mommy & Me Saturday or a farm visit this fall, happy to hold a spot.\n",
+          "quick_email": true,
+          "consumer_lane": "customers",
+          "purchase_status": "bought",
+          "review_status": "likely_reviewed",
+          "review_match_confidence": "high",
+          "history_lane": "prior_mobile",
+          "history_lane_label": "C \u00b7 REVIEWED Mommy & Me",
+          "north_star": "money",
+          "north_star_label": "MONEY \u00b7 APP-FIRST rebook",
+          "history_proven": true,
+          "friday": true,
+          "friday_class": "consumer_rebook",
+          "lead_source": "Google review \u00b7 Sep 27",
+          "lead_source_type": "godaddy",
+          "lead_source_detail": "Mommy & Me Sep 26 paid \u00b7 5\u2605 review Nalinie Ramnaraine \u00b7 photos on GBP",
+          "lead_source_date": "2026-09-27",
+          "lead_events": [
+            {
+              "type": "review",
+              "label": "5\u2605 Google review",
+              "date": "2026-09-27",
+              "thread_id": "1a0e299250579c77",
+              "source": "gmail_gbp"
+            },
+            {
+              "type": "godaddy",
+              "label": "Mommy & Me booking Sep 26",
+              "date": "2026-09-22",
+              "thread_id": "1a0c94caa0a97759",
+              "source": "gmail_godaddy"
+            }
+          ]
+        },
+        {
+          "id": "cons-cust-jpettigrew713-gmail-com",
+          "account": "Julie Pettigrew \u00b7 Mobile Mini Nov 7",
+          "contact": "Julie Pettigrew",
+          "title": "C \u00b7 BOOKED Nov 7",
+          "email": "jpettigrew713@gmail.com",
+          "phone": "931-999-3833",
+          "phone_updated": "2026-09-28 2:15 AM ET",
+          "city": "Jacksonville",
+          "address": "8202 Elsdon Street, Jacksonville, FL 32219",
+          "segment": "Consumer",
+          "persona": "consumer",
+          "kind": "mailto",
+          "lane": "consumer",
+          "tier": "S",
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "Nov 7 mobile mini \u2014 anything you need?",
+          "why": "BOOKED \u00b7 Sat Nov 7 11:00 AM \u00b7 75 Min Mobile Mini \u00b7 deposit $175 of $349.99 \u00b7 address 8202 Elsdon St Jax 32219 \u00b7 GoDaddy order C-3C67EBAF16DE409E Sep 27.",
+          "owe_reason": "BOOKED \u00b7 confirm logistics / balance",
+          "form_url": "",
+          "area": "Metro Jax \u00b7 NW / 32219",
+          "role_chip": "Customer",
+          "fancy": false,
+          "rcsa": false,
+          "chip_tags": [
+            "BOOKED",
+            "Nov 7",
+            "Deposit paid",
+            "GoDaddy",
+            "Consumer",
+            "Friday"
+          ],
+          "quick_body": "Hi Julie,\n\nYou're on the calendar for Saturday Nov 7 at 11:00 AM for the 75-minute mobile mini at 8202 Elsdon Street.\n\nAnything you need from us before then (gate code, setup notes, remaining balance timing)?\n",
+          "quick_email": true,
+          "consumer_lane": "customers",
+          "purchase_status": "bought",
+          "review_status": "unknown",
+          "review_match_confidence": "none",
+          "history_lane": "booked_no_review",
+          "history_lane_label": "C \u00b7 BOOKED Nov 7",
+          "north_star": "money",
+          "north_star_label": "BOOKED \u00b7 Nov 7 mini",
+          "history_proven": true,
+          "friday": true,
+          "friday_class": "consumer_rebook",
+          "lead_source": "GoDaddy booking \u00b7 Sep 27 \u00b7 $349.99",
+          "lead_source_type": "godaddy",
+          "lead_source_detail": "Deposit $175 \u00b7 calendar Mobile PZ Nov 7 \u00b7 PayPal payment received",
+          "lead_source_date": "2026-09-27",
+          "lead_events": [
+            {
+              "type": "godaddy",
+              "label": "GoDaddy booking confirmed",
+              "date": "2026-09-27",
+              "subject": "Order # C-3C67EBAF16DE409E: Booking Confirmed",
+              "thread_id": "1a0e2cfe6857dac9",
+              "source": "gmail_godaddy"
+            },
+            {
+              "type": "calendar",
+              "label": "Calendar \u00b7 Nov 7 Mobile PZ",
+              "date": "2026-11-07",
+              "source": "google_calendar"
+            },
+            {
+              "type": "invoice",
+              "label": "PayPal deposit $175",
+              "date": "2026-09-27",
+              "amount": 175.0,
+              "source": "gmail_paypal"
+            }
+          ]
+        },
+        {
           "phone": "904-591-5351",
           "city": "",
           "segment": "Daycare",
@@ -1112,6 +1363,62 @@
               "date": "2026-10-24",
               "subject": "Accepted: Eartha mobile petting zoo",
               "source": "gmail_calendar"
+            }
+          ]
+        },
+        {
+          "id": "cons-warm-rcjergensen-gmail-com",
+          "account": "Rachael Jergensen",
+          "contact": "Rachael Jergensen",
+          "title": "Warm \u00b7 Homeschool tour",
+          "email": "rcjergensen@gmail.com",
+          "phone": "",
+          "city": "",
+          "segment": "Consumer",
+          "persona": "consumer",
+          "kind": "mailto",
+          "lane": "consumer",
+          "tier": "A",
+          "website": "https://www.sheehanhomestead.com/services",
+          "subject": "homeschool / co-op farm tour",
+          "why": "Warm inbound Sep 25 \u2014 kindergarten co-op farm tour + pricing. Call/text offered.",
+          "owe_reason": "MONEY \u00b7 first farm visit",
+          "form_url": "",
+          "area": "Metro Jax \u00b7 Homeschool",
+          "role_chip": "Warm",
+          "fancy": false,
+          "rcsa": false,
+          "chip_tags": [
+            "Warm",
+            "Homeschool",
+            "Inbound",
+            "Consumer"
+          ],
+          "quick_body": "Hi Rachael,\n\nHappy to help with a farm tour for your kindergarten co-op. Easiest if you text or call 914-263-1311 and we can match group size + date.\n\nTypical visit includes animal meet/greet, light farm STEM, and time with the bunnies/goats \u2014 pricing depends on headcount and length.\n",
+          "quick_email": true,
+          "consumer_lane": "warm",
+          "purchase_status": "warm",
+          "review_status": "unknown",
+          "review_match_confidence": "none",
+          "history_lane": "warm_inbound",
+          "history_lane_label": "Warm \u00b7 Homeschool",
+          "north_star": "money",
+          "north_star_label": "MONEY \u00b7 first visit",
+          "history_proven": false,
+          "friday": true,
+          "friday_class": "consumer_rebook",
+          "lead_source": "Gmail inbound \u00b7 Sep 25",
+          "lead_source_type": "form",
+          "lead_source_detail": "Homeschool tour",
+          "lead_source_date": "2026-09-25",
+          "lead_events": [
+            {
+              "type": "inbound",
+              "label": "Homeschool tour ask",
+              "date": "2026-09-25",
+              "subject": "Homeschool tour",
+              "thread_id": "1a0d8a98b1e83310",
+              "source": "gmail_inbound"
             }
           ]
         },
@@ -1199,9 +1506,9 @@
           "title": "C \u00b7 Prior mobile",
           "email": "marieljaster@gmail.com",
           "website": "https://www.sheehanhomestead.com/services",
-          "subject": "mobile petting zoo \u2014 another date?",
-          "why": "Sep 27: Mariel agreed to leave a Google review; link sent; waiting. Do not nag yet.",
-          "owe_reason": "REVIEW \u00b7 agreed \u00b7 link sent \u00b7 pending",
+          "subject": "thanks again \u2014 quick Google review?",
+          "why": "COMPLETED Sep 26 mini PZ (paid) \u00b7 soft Google review ask OR another mobile date. Balance confirmed paid via PayPal invoice.",
+          "owe_reason": "MONEY \u00b7 review ask OR rebook",
           "form_url": "",
           "area": "Metro Jax \u00b7 Consumer",
           "role_chip": "Customer",
@@ -1212,23 +1519,23 @@
             "Consumer",
             "Prior mobile",
             "Friday",
-            "Review pending",
-            "Link sent"
+            "COMPLETED Sep 26",
+            "Ask review"
           ],
-          "quick_body": "Hi there,\n\nWant another mobile date this fall (weekday or Saturday)? Happy to hold whatever works on our side.\n",
+          "quick_body": "Hi Mariel,\n\nThanks again for Saturday \u2014 glad we could keep the 75 minutes with the option to extend.\n\nIf you have 30 seconds, a Google review helps other local families find us: https://g.page/r/CbXwVQ7PiVNJgLFAa/review\n\nAnd if you want another mobile date this fall, happy to hold one.\n",
           "quick_email": true,
           "consumer_lane": "customers",
           "purchase_status": "bought",
-          "review_status": "agreed_link_sent_pending",
+          "review_status": "no_review_seen",
           "review_match_confidence": "none",
           "history_lane": "prior_mobile",
           "history_lane_label": "C \u00b7 Prior mobile",
-          "north_star": "review",
-          "north_star_label": "Review pending",
+          "north_star": "money",
+          "north_star_label": "MONEY \u00b7 review / rebook",
           "history_proven": true,
           "friday": true,
           "friday_class": "consumer_rebook",
-          "lead_source": "PayPal invoice \u00b7 Sep 26 \u00b7 $386.9",
+          "lead_source": "Completed \u00b7 Sep 26 mini \u00b7 paid",
           "lead_source_type": "invoice",
           "lead_source_detail": "Action queue / booked \u00b7 +3 more",
           "lead_source_date": "2026-09-26",
@@ -10904,9 +11211,7 @@
             "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
             "Friday",
             "Vesta",
-            "Site booker",
-            "Durbin Sep 27",
-            "Delivered"
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
           "lead_source_type": "invoice",
@@ -10938,7 +11243,7 @@
           "management_company": "Vesta",
           "ross_type": "Site booker",
           "wallet_class": "A",
-          "board_note": "Sep 27 Durbin Crossing delivery day \u00b7 wheel live \u00b7 expand Oct soft ask via Ross group draft",
+          "board_note": "Durbin site booker \u2014 money lands here; converts without Ross/Mindy on thread.",
           "role_chip": "Site booker"
         },
         {
@@ -11669,15 +11974,12 @@
           "chip_tags": [
             "Friday",
             "Vesta",
-            "Ross-type",
-            "Supportive",
-            "Foam",
-            "OVERDUE follow-up"
+            "Ross-type"
           ],
           "management_company": "Vesta",
           "ross_type": "Ross-type",
           "wallet_class": "A",
-          "board_note": "Sep 27: Ross supportive; hooked up foam people. Vesta group check-in overdue \u2192 see owe-vesta-group-oct-checkin (tomorrow).",
+          "board_note": "List intro \u2014 not every Vesta buy. Pair with site bookers for money. Mindy = HQ L&L/pizza door; Winslow = NE Amenity Ops.",
           "role_chip": "Ross-type"
         },
         {
@@ -12642,10 +12944,10 @@
           "email": "news@actionnewsjax.com",
           "website": "https://www.actionnewsjax.com/family-focus/community-calendar/",
           "form_url": "https://www.actionnewsjax.com/doinggood/",
-          "subject": "Community / Family Focus \u2014 Sheehan Homestead (Callahan)",
+          "subject": "Community feature request \u2014 Sheehan Homestead / Critters on Call (Callahan)",
           "why": "Media dunk \u00b7 professional community-feature ask (toned 2026-09-26). Card in chat for Send. Tags: media \u00b7 Family Focus \u00b7 newsletter.",
           "owe_reason": "Tone-up ready \u00b7 send from chat DraftExternalMessage card",
-          "quick_body": "Hi Action News Jax team,\n\nThank you for highlighting Northeast Florida businesses and community stories.\n\nWe\u2019re Sheehan Homestead / Critters on Call in Callahan \u2014 mobile petting zoo and farm STEM for metro Jacksonville. We\u2019re deep in fall events and would love a Family Focus or community mention if it fits.\n\nHappy to send a short blurb, photos, or bring animals for a quick segment.\n\nRecent local clips:\n\u2022 Jacksonville Buzz: https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n\u2022 Brian Sexton: https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n\u2022 Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nWebsite: https://www.sheehanhomestead.com/\nText / call: 914-263-1311\n\nThank you for considering us.\n",
+          "quick_body": "Hi Action News Jax team,\n\nThank you for the work you already do highlighting Northeast Florida businesses and agritourism.\n\nWe are Sheehan Homestead / Critters on Call, based in Callahan \u2014 a mobile petting zoo and STEM-on-the-farm program serving metro Jacksonville. We are deep in fall community events (including trunk-or-treats) and would be grateful for a community or Family Focus mention if it is a fit for your calendar or newsletter.\n\nHappy to provide a short blurb, photos, or bring animals for a brief on-camera segment if that is useful to your producers.\n\nRecent local coverage for context:\n\u2022 Jacksonville Buzz: https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc/\n\u2022 Brian Sexton: https://buzztvnews.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3/\n\u2022 Ann-Marie solo: https://buzztvnews.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call/\n\nWebsite: https://www.sheehanhomestead.com/\nPhone / text: 914-263-1311\n\nThank you for considering us.",
           "bucket": "media_collab",
           "legacy_tier": 1,
           "area": "Metro Jax \u00b7 Jacksonville",
@@ -15502,10 +15804,10 @@
         {
           "id": "life-anthemlakes-com-anthem-lakes-waterview-senior-living-life-enrichment-director",
           "account": "Anthem Lakes Waterview Senior Living",
-          "contact": "Heather",
+          "contact": "",
           "title": "Life Enrichment Director",
           "email": "life@anthemlakes.com",
-          "phone": "904-853-8796",
+          "phone": "(904) 746-7220",
           "city": "Atlantic Beach",
           "segment": "Senior / IL-AL",
           "persona": "senior",
@@ -15515,17 +15817,12 @@
           "linkedin": "",
           "form_url": "",
           "kind": "mailto",
-          "why": "Heather texted 2026-09-27 \u2014 will pass info to right people. Cell 904-853-8796. Follow up in a few days if silence. Main line was (904) 746-7220.",
+          "why": "Life Enrichment public seat \u00b7 also chase Heather Foran (Sales) who acknowledged Sep 22 \u2014 see owe-heather-foran-anthem-lakes.",
           "legacy_tier": 2,
           "area": "Beaches \u00b7 Atlantic Beach",
-          "phone_main_alt": "(904) 746-7220",
           "chip_tags": [
-            "Heather",
-            "Follow-up",
-            "904-853-8796"
-          ],
-          "lead_source": "Voice \u00b7 Heather text 2026-09-27",
-          "lead_source_date": "2026-09-27"
+            "Heather Foran ack Sep 22"
+          ]
         },
         {
           "id": "pchambers-acpjax-com-argyle-christian-preschool-x",
@@ -18528,9 +18825,7 @@
             "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
             "Friday",
             "Vesta",
-            "Site booker",
-            "Durbin Sep 27",
-            "Delivered"
+            "Site booker"
           ],
           "lead_source": "PayPal invoice \u00b7 Apr 24 \u00b7 $1256.66",
           "lead_source_type": "invoice",
@@ -18562,7 +18857,7 @@
           "management_company": "Vesta",
           "ross_type": "Site booker",
           "wallet_class": "A",
-          "board_note": "Sep 27 Durbin Crossing delivery day \u00b7 wheel live \u00b7 expand Oct soft ask via Ross group draft",
+          "board_note": "Durbin site booker \u2014 money lands here; converts without Ross/Mindy on thread.",
           "role_chip": "Site booker"
         },
         {
@@ -18962,15 +19257,12 @@
           "chip_tags": [
             "Friday",
             "Vesta",
-            "Ross-type",
-            "Supportive",
-            "Foam",
-            "OVERDUE follow-up"
+            "Ross-type"
           ],
           "management_company": "Vesta",
           "ross_type": "Ross-type",
           "wallet_class": "A",
-          "board_note": "Sep 27: Ross supportive; hooked up foam people. Vesta group check-in overdue \u2192 see owe-vesta-group-oct-checkin (tomorrow).",
+          "board_note": "List intro \u2014 not every Vesta buy. Pair with site bookers for money. Mindy = HQ L&L/pizza door; Winslow = NE Amenity Ops.",
           "role_chip": "Ross-type"
         },
         {
@@ -22495,7 +22787,7 @@
       "church": 38
     }
   },
-  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only. | v2.9.2: clean copy; org greetings\u2192Hi there; McD consumer removed; B2B misfiles cleared of consumer_lane/quick_body | v2.9.3: lead_source chips from Gmail+inbound+PayPal+calendar; never invent | v2.9.4: Beatrix apology / partner reconnect card; mailto beatrix@malwashington.com; no auto-send | v2.9.5: local_forms rebuilt \u2014 19 screened FORM URLs with paste draft; dropped homepage/directory junk; exclude Primrose/Laura/Ross-only/Palagio-suppress. | v2.9.6: PM territory help strip + management_company/ross_type/board_note chips (Vesta\u2260all Ross; FCCMS=second Vesta; MAY Ross-gap; GMS phones; FSR/Nocatee/Wildlight own trees). No invented emails. | v2.9.8: Westminster Kori+Ratley budget/.org partial-donation; Beatrix reschedule dates; Action Jax shoutout shortened.",
+  "compose_note": "Mailto bodies omit signature \u2014 Gmail auto-signature only. | v2.9.2: clean copy; org greetings\u2192Hi there; McD consumer removed; B2B misfiles cleared of consumer_lane/quick_body | v2.9.3: lead_source chips from Gmail+inbound+PayPal+calendar; never invent | v2.9.4: Beatrix apology / partner reconnect card; mailto beatrix@malwashington.com; no auto-send | v2.9.5: local_forms rebuilt \u2014 19 screened FORM URLs with paste draft; dropped homepage/directory junk; exclude Primrose/Laura/Ross-only/Palagio-suppress. | v2.9.6: PM territory help strip + management_company/ross_type/board_note chips (Vesta\u2260all Ross; FCCMS=second Vesta; MAY Ross-gap; GMS phones; FSR/Nocatee/Wildlight own trees). No invented emails.",
   "v292": {
     "as_of": "2026-09-25 6:50 PM ET",
     "mcd_consumer_removed": true,
@@ -22683,108 +22975,48 @@
     "mindy_note": "Mindy DeAngelis covered in territory help strip (HQ L&L/pizza door). Map lists mdeangelis@vestapropertyservices.com \u00b7 904-747-0181 x625 \u2014 no new dunk mailto added (account-vesta caution: verify before compose)."
   },
   "v297": {
-    "action_toneup": true
-  },
-  "v298": {
-    "as_of": "2026-09-27",
-    "change": "Westminster dual leads + Beatrix reschedule + Action Jax draft refresh",
-    "cards": [
-      "owe-westminster-kori-dual-mini",
-      "owe-westminster-l-ratley-julington",
-      "owe-beatrix-mali-vai-apology-reconnect",
-      "owe-action-news-jax-shoutout"
-    ]
-  },
-  "pin_note": "TOP: Westminster Kori+Ratley (in-thread $275/$199) \u00b7 then Vesta Ross Oct check-in (tomorrow). Drafts only.",
-  "outbound_policy": "DRAFTS ONLY \u00b7 never auto-send without Michael explicit permission",
-  "board_pins": [
-    "owe-westminster-kori-dual-mini",
-    "owe-westminster-l-ratley-julington",
-    "owe-vesta-group-oct-checkin"
-  ],
-  "day_status_2026_09_27": {
-    "as_of": "2026-09-27 17:57 ET",
-    "google_reviews_showing": 87,
-    "google_reviews_est_total": 105,
-    "google_reviews_delta_since_start": 60,
-    "mariel_jasterzenski": "Agreed to review \u00b7 link sent \u00b7 pending",
-    "vesta_group": "OVERDUE \u00b7 plan Mon Sep 28: casual check-in + Ann-Marie Durbin FB + soft Oct date \u00b7 Ross supportive (foam people). Goal=date. Keep light.",
-    "ross_ruben": "Supportive \u00b7 hooked up foam people \u00b7 Vesta portfolio gatekeeper",
-    "westminster": {
-      "kori": "kmontague@wservices.org",
-      "ratley": "LRATLEY@wservices.org",
-      "note": "No budget for $375. In-thread counter drafted (pinned TOP): mini 90min @$275 each OR Bunny Haven @$199 \u00b7 50% Violet partial donation \u00b7 .org"
-    },
-    "lauren_burnett_rcsa": "Oct 2 Violet Package CONFIRMED \u00b7 team looped (Lockey/McKnight/Erdogan/Dijana) \u00b7 AWAITING arrival time from us \u00b7 phone 240-561-0782",
-    "competitors_started": [
-      "Jax Carriage / Bonnie Doone",
-      "Pinto Carriage Works",
-      "Diamond D",
-      "Critter Caravan (stale)"
-    ],
-    "contacts_saved": {
-      "Corey Dahlberg": "386-986-6977",
-      "Lauren Burnett": "240-561-0782",
-      "Mariel Jasterzenski": "570-574-6819"
-    },
-    "pricing": {
-      "full_90min_consumer": 499,
-      "mini_90min": 275,
-      "bunny_haven": "150-250 (counter uses ~199)"
-    },
-    "product_sketches": "Homestead Facts + Step Right Up reorg DONE not shipped; membership/Ann-Marie lessons flagged later",
-    "idea_stage": [
-      "Physical wheel + testimonial ticket",
-      "App play party"
-    ],
-    "outbound_policy": "DRAFTS ONLY \u00b7 never auto-send"
-  },
-  "campaign_metrics": {
-    "google_reviews_showing": 87,
-    "google_reviews_est_total": 105,
-    "google_reviews_gained_since_start": 60,
-    "as_of": "2026-09-27"
-  },
-  "pricing_ref": {
-    "full_90min_consumer": 499,
-    "mini_90min": 275,
-    "bunny_haven_range": [
-      150,
-      250
-    ],
-    "bunny_haven_counter_example": 199
-  },
-  "competitors_jax_2026_09_27": {
-    "status": "started",
-    "names": [
-      "Jax Carriage / Bonnie Doone",
-      "Pinto Carriage Works (clearest direct)",
-      "Diamond D",
-      "Critter Caravan (stale)"
-    ],
-    "wedge": "mobile multi-species + STEM/education + homestead \u2014 not carriage-first"
-  },
-  "product_backlog": {
-    "shipped_sketches_not_live": [
-      "Homestead Facts quiz",
-      "Step Right Up resources reorg"
-    ],
-    "flagged_later": [
-      "Membership tier",
-      "Ann-Marie lessons"
-    ],
-    "idea_stage": [
-      "Physical wheel + testimonial ticket",
-      "App play party"
-    ]
-  },
-  "v2911": {
-    "note": "Heather Anthem Lakes Waterview 904-853-8796 \u2014 texted will pass info; dunk follow-up in a few days; drafts only",
+    "as_of": "2026-09-28 2:15 AM ET",
+    "change": "Reconcile scheduled activity + Gmail message state since ~Sep 20",
+    "action_toneup": true,
     "added": [
-      "owe-heather-anthem-lakes-waterview-followup"
+      "owe-heather-foran-anthem-lakes",
+      "cons-cust-jpettigrew713-gmail-com",
+      "owe-julie-pettigrew-nov7",
+      "cons-cust-nramnaraine-gmail-com",
+      "cons-cust-ajslangley-gmail-com",
+      "cons-cust-alexaowens25-gmail-com",
+      "owe-rachael-jergensen-homeschool",
+      "cons-warm-rcjergensen-gmail-com"
     ],
     "updated": [
-      "life-anthemlakes-com-anthem-lakes-waterview-senior-living-life-enrichment-director"
-    ]
+      "owe-rcs-lauren",
+      "rcsa-lauren-burnette",
+      "owe-westminster-kori-dual-mini",
+      "owe-beatrix-mali-vai-apology-reconnect",
+      "cons-cust-marieljaster-gmail-com",
+      "life-anthemlakes-com-anthem-lakes-waterview-senior-living-life-enrichment-director",
+      "owe-tabatha-bartram-springs-pta"
+    ],
+    "delta": [
+      "UPDATE owe-rcs-lauren: WAITING_YES \u2192 BOOKED Oct 2 Violet Package",
+      "UPDATE rcsa-lauren-burnette: WAITING_YES \u2192 BOOKED Oct 2 Violet Package",
+      "UPDATE Westminster/Kori: SLAM \u2192 BUDGET DECLINE + $275 counter pending (phone verified)",
+      "UPDATE Beatrix: apology \u2192 RESCHEDULE options Oct 6/22 + Nov 17 (phone verified)",
+      "UPDATE Mariel: rebook \u2192 COMPLETED Sep 26 + ask review",
+      "ADDED Heather Foran / Anthem Lakes (heather.foran@anthemlakes.com)",
+      "UPDATE Tabatha Bartram Springs PTA: refresh REPLIED / still unlock dates",
+      "ADDED Julie Pettigrew BOOKED Nov 7 mobile mini (phone+email verified)",
+      "ADDED owe pointer Julie Pettigrew Nov 7",
+      "ADDED Nalinie Ramnaraine REVIEWED (Mommy & Me) \u2014 'Nalini' match",
+      "ADDED Ashlee Langley REVIEWED (Mommy & Me)",
+      "ADDED Alexa Owens BOOKED Mommy & Me Oct 1 11:30",
+      "ADDED Rachael Jergensen Homeschool tour inbound"
+    ],
+    "sources": [
+      "google_calendar next~6w",
+      "gmail after:2026/09/20 read-only"
+    ],
+    "hard_refresh": "?v=297",
+    "live_url": "https://onchainoffgrid-hub.github.io/sheehan-exec-suite/principal-dunk.html?v=297"
   }
 }
