@@ -2,7 +2,7 @@
 
 Sheehan Homestead · Callahan, FL
 
-Sales aid: **Book · Track · Spin · Gold/Deals · Pricing**
+Sales aid: **Book · Track · Stead Spin · Gold/Deals · Pricing**
 
 Pricing (Family Menu locked Sep 16): https://Code4CrittersonCallApps.github.io/critters-on-call/pricing.html
 
@@ -15,17 +15,17 @@ http://localhost:8766/
 ## Live
 - Home: https://Code4CrittersonCallApps.github.io/critters-on-call/
 - **Games:** https://Code4CrittersonCallApps.github.io/critters-play/
-- **Wheel:** https://Code4CrittersonCallApps.github.io/critters-on-call/wheel.html
+- **Stead Spin:** https://Code4CrittersonCallApps.github.io/critters-on-call/wheel.html
 - **Gold:** https://Code4CrittersonCallApps.github.io/critters-on-call/gold.html
 
-## Durbin Crossing event wheel (Sep 27, 2026)
+## Durbin Crossing event Stead Spin (Sep 27, 2026)
 - **Live:** https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
 - Goat QRs: `?goat=01` … `?goat=12` — see `events/durbin-crossing-2026-09-27/QR-STICKERS.md`
 - Staff CSV: `events/durbin-crossing-2026-09-27/admin.html` (PIN 0927)
 - Outline (CRM + mom app): `events/durbin-crossing-2026-09-27/OUTLINE.md`
 - **Claim paths:** Text `PRIZE` to `914-263-1311`; DM **Sheehan Homestead** on Facebook; email `sheehanhomestead@gmail.com`; or use https://www.sheehanhomestead.com/booking-help
 
-## Prize wheel (“How Sweet It Is”)
+## Stead Spin (“How Sweet It Is”)
 Eight slices: spin-again (Priceless) ×2 · Gold Membership ($50) ×2 · free farm gift ($25) · free thrift gift ($25) · free farm tour ($25) · Gold Pro nomination ($299).
 
 First spin in a browser always lands on spin-again. After that, fair random among all eight. Claim gifts/tours in person; Gold / Gold Pro via `gold.html`. Soft upsell: screenshot + Critters game review + signed waiver for a free farm visit.
