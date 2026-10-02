@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#c9a227" />
-<meta name="description" content="Critters on Call Farm Spin — 16 chances to win. Three spins a month. Claim at Sheehan Homestead." />
+<meta name="description" content="Critters on Call Stead Spin — 16 chances to win. Three spins a month. Claim at Sheehan Homestead." />
 <meta name="robots" content="noindex, nofollow" />
-<meta property="og:title" content="Farm Spin · Critters on Call" />
-<meta property="og:description" content="16 chances to win on Farm Spin. Three spins a month — claim at Sheehan Homestead." />
+<meta property="og:title" content="Stead Spin · Critters on Call" />
+<meta property="og:description" content="16 chances to win on Stead Spin. Three spins a month — claim at Sheehan Homestead." />
 <meta property="og:type" content="website" />
-<title>Farm Spin · Critters on Call</title>
+<title>Stead Spin · Critters on Call</title>
 <link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs4" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -271,7 +271,7 @@
         <img class="brand-logo dc-brand-logo" src="assets/brand-chicken.png?v=20261002fs4" alt="" width="36" height="36" />
         <span>
           <span class="brand-title">Critters on Call</span>
-          <span class="brand-sub">Farm Spin</span>
+          <span class="brand-sub">Stead Spin</span>
         </span>
       </a>
       <span class="event-badge" id="event-badge">16 chances to win</span>
@@ -281,13 +281,13 @@
   <main class="main">
     <div class="stack" style="gap:1.1rem">
       <div style="text-align:center">
-        <p class="tracker-kicker" style="margin:0">Sheehan Homestead · Farm Spin</p>
-        <h1 class="event-title"><span>Farm Spin</span></h1>
+        <p class="tracker-kicker" style="margin:0">Sheehan Homestead · Stead Spin</p>
+        <h1 class="event-title"><span>Stead Spin</span></h1>
         <p class="event-sub">16 chances to win · three spins a month</p>
-        <p class="soft-expiry" id="soft-expiry">Open through Jun 1, 2027 · 16 chances to win</p>
+        <p class="soft-expiry" id="soft-expiry">Prizes valid for the month of October 2026 · 16 chances to win</p>
         <div class="ended-banner" id="ended-banner" hidden>
           <strong>Season closed</strong>
-          <p>This Farm Spin closed after June 1, 2027. Thanks for spinning with Critters on Call.</p>
+          <p>This Stead Spin closed after October 31, 2026. Thanks for spinning with Critters on Call.</p>
         </div>
         <div class="event-details" id="event-details">
           <strong>Claim at Sheehan Homestead</strong><br />
@@ -306,7 +306,7 @@
         <div class="wheel-pointer" aria-hidden="true">▼</div>
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
-            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs5" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
+            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs6" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
           </span>
         </div>
       </div>
@@ -316,7 +316,7 @@
         <span>16 chances to win</span>
       </div>
 
-      <button class="btn btn-primary btn-block" type="button" id="spin-btn">Try Farm Spin</button>
+      <button class="btn btn-primary btn-block" type="button" id="spin-btn">Try Stead Spin</button>
       <p class="rules-note" id="rules-note">About 3 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
       <p class="backend-note" id="backend-note" hidden><!-- shown in DOM comment intent; kept for ops --></p>
@@ -379,14 +379,14 @@
 
   var EVENT_ID = "giving-wheel-16";
   var EVENT_DATE = "standing";
-  var EVENT_LABEL = "Farm Spin";
+  var EVENT_LABEL = "Stead Spin";
   /* Soft device lock: ~3 prize spins per calendar month (ET). Free Spin does not consume.
      IP / email hard lock needs a backend later — honor device-month localStorage for now. */
   var MAX_SPINS_PER_MONTH = 3;
-  /* Open through Jun 1, 2027 (expires Jun 2 ET) */
-  var EXPIRES_Y = 2027;
-  var EXPIRES_M = 6;
-  var EXPIRES_D = 2;
+  /* Prizes valid through October 31, 2026 (expires November 1 ET) */
+  var EXPIRES_Y = 2026;
+  var EXPIRES_M = 11;
+  var EXPIRES_D = 1;
   var STORE_DEVICE = "coc_farm_spin_month_v4_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
@@ -449,7 +449,7 @@
   var tryServiceCount = PRIZES.filter(function (p) { return p.id === "try-service"; }).length;
   var appBetaCount = PRIZES.filter(function (p) { return p.id === "sample-app"; }).length;
   if (PRIZES.length !== 16 || goldCardCount !== 1 || freeSpinCount !== 2 || gift50Count !== 2 || tryServiceCount !== 1 || appBetaCount !== 1) {
-    throw new Error("Farm Spin must be exactly 16 slices: 2 free spins, 1 Gold (~$100), 2× $50 gift, 1 try-a-service, 1 app beta");
+    throw new Error("Stead Spin must be exactly 16 slices: 2 free spins, 1 Gold (~$100), 2× $50 gift, 1 try-a-service, 1 app beta");
   }
 
   /* Equal weights — odds follow slice count. */
@@ -596,7 +596,7 @@
       spinsLeftEl.textContent = left === 1 ? "1 spin" : (left + " spins");
       spinBtn.disabled = false;
       spinBtn.classList.remove("is-locked");
-      spinBtn.textContent = "Try Farm Spin";
+      spinBtn.textContent = "Try Stead Spin";
     }
   }
 
@@ -731,8 +731,8 @@
   function fillClaimContacts() {
     var sms = "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent("PRIZE");
     var mail = "mailto:" + CLAIM_EMAIL +
-      "?subject=" + encodeURIComponent("PRIZE — Farm Spin claim") +
-      "&body=" + encodeURIComponent("PRIZE\n\n(Attach a screenshot of your Farm Spin win screen.)");
+      "?subject=" + encodeURIComponent("PRIZE — Stead Spin claim") +
+      "&body=" + encodeURIComponent("PRIZE\n\n(Attach a screenshot of your Stead Spin win screen.)");
     if (claimContactRow) {
       claimContactRow.innerHTML =
         '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta">' +
