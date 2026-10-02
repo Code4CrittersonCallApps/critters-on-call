@@ -50,6 +50,12 @@
   }
   .event-details strong { color: var(--card-gold); font-weight: 700; }
   .event-details .host { margin-top: 0.4rem; font-size: 0.7rem; color: var(--muted); }
+  .event-details .claim-place { color: inherit; text-decoration: none; display: inline-block; }
+  .event-details .claim-place strong { text-decoration: underline; text-underline-offset: 3px; }
+  .event-details .claim-fb {
+    display: inline-block; margin-top: 0.45rem; color: var(--card-gold);
+    font-weight: 700; font-size: 0.85rem;
+  }
   /* Hub: Critters on Call Gold Membership card art */
   .dc-wheel .wheel-hub {
     inset: 22%;
@@ -290,8 +296,11 @@
           <p>This Stead Spin closed after October 31, 2026. Thanks for spinning with Critters on Call.</p>
         </div>
         <div class="event-details" id="event-details">
-          <strong>Claim at Sheehan Homestead</strong><br />
-          <span class="host">Callahan, FL</span>
+          <a class="claim-place" href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">
+            <strong>Claim at Sheehan Homestead</strong><br />
+            <span class="host">Callahan, FL</span>
+          </a>
+          <a class="claim-fb" href="https://www.facebook.com/profile.php?id=61556795506312" target="_blank" rel="noopener">Facebook</a>
         </div>
         <!-- consumer: no code / goat chip -->
       </div>
