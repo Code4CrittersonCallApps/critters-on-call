@@ -4,17 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#c9a227" />
-<meta name="description" content="Critters on Call Giving Wheel — 16 slices. Free sample first, then buy the platter. Gold membership is 1 of 16. Not tied to one event." />
+<meta name="description" content="Critters on Call Farm Spin — 16 slices. Samples lead; Gold membership is rare (1 of 16). Not a guaranteed-win game. Not tied to one event." />
 <meta name="robots" content="noindex, nofollow" />
-<meta property="og:title" content="Giving Wheel · Critters on Call" />
-<meta property="og:description" content="16-slice Giving Wheel. Free sample, then buy the platter. One Gold grand prize." />
+<meta property="og:title" content="Farm Spin · Critters on Call" />
+<meta property="og:description" content="16-slice Farm Spin. Samples lead; Gold is rare (~1/16). Soft play prizes — not everyone always wins." />
 <meta property="og:type" content="website" />
-<title>Giving Wheel · Critters on Call</title>
-<link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20260930gw" />
+<title>Farm Spin · Critters on Call</title>
+<link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/styles.css?v=20260930gw" />
+<link rel="stylesheet" href="../css/styles.css?v=20261002fs" />
 <style>
   /* Forest greens sampled from wife chicken-in-circle logo — NOT website leaf. Hub uses real gold-card art. */
   :root {
@@ -101,54 +101,38 @@
     font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;
   }
   .spin-meta strong { color: var(--fg); }
-  /* 16 equal 22.5° wedges — midpoints at i*22.5+11.25. Keep the wheel itself
-     in the original equal green/gold palette; prize colors belong to the
-     square legend tiles below. */
+  /* 16 equal 22.5° wedges — midpoints at i*22.5+11.25.
+     Slice colors are set in JS from prize value rarity (common/mid/rare).
+     Critter Spin is an OK alt name in comments only; public brand is Farm Spin. */
   .prize-wheel.dc-wheel {
-    background: conic-gradient(
-      from 0deg,
-      #c9a227 0deg 22.5deg,
-      #4C6458 22.5deg 45deg,
-      #E8D48C 45deg 67.5deg,
-      #3A4F45 67.5deg 90deg,
-      #B8923A 90deg 112.5deg,
-      #5A7366 112.5deg 135deg,
-      #D4B84A 135deg 157.5deg,
-      #2F4038 157.5deg 180deg,
-      #c9a227 180deg 202.5deg,
-      #4C6458 202.5deg 225deg,
-      #E8D48C 225deg 247.5deg,
-      #3A4F45 247.5deg 270deg,
-      #B8923A 270deg 292.5deg,
-      #5A7366 292.5deg 315deg,
-      #D4B84A 315deg 337.5deg,
-      #2F4038 337.5deg 360deg
-    );
+    /* fallback before JS paints rarities */
+    background: #3A4F45;
     box-shadow:
       0 0 0 3px rgba(76,100,88,0.6),
       0 0 28px rgba(201,162,39,0.35),
       inset 0 0 0 2px rgba(0,0,0,0.35);
   }
-  .wheel-label.is-premium { color: #1a1508; font-weight: 800; }
-  .wheel-label.is-gift { color: #fff8e6; }
-  .wheel-label.is-again { color: #F3EEE4; font-weight: 700; }
-  .wheel-label.is-membership { color: #1a1508; font-weight: 800; }
-  /* Prize color is intentionally applied to the legend tiles, not wedges. */
-  .prize-list li[data-kind="grand"] {
-    background: #c9a227; border-color: #f0d878; color: #1a1508;
-  }
-  .prize-list li[data-kind="gift"] {
+  .wheel-label.is-on-dark { color: #F3EEE4; font-weight: 700; }
+  .wheel-label.is-on-light { color: #1a1508; font-weight: 700; }
+  .wheel-label.is-premium { color: #FFF5E8; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.45); }
+  /* Legend tiles color-ranked by prize VALUE rarity */
+  .prize-list li[data-tier="common"] {
     background: #4C6458; border-color: #86A093; color: #F3EEE4;
   }
-  .prize-list li[data-kind="again"] {
-    background: #E8D48C; border-color: #f0d878; color: #1a1508;
+  .prize-list li[data-tier="common"].is-cream {
+    background: #E8E0D0; border-color: #c9b896; color: #1a1508;
   }
-  .prize-list li[data-kind="ticket"] {
-    background: #5A7366; border-color: #9db5a5; color: #F3EEE4;
+  .prize-list li[data-tier="mid"] {
+    background: #C9A227; border-color: #f0d878; color: #1a1508;
   }
-  .prize-list li[data-kind] .muted { color: inherit; opacity: 0.82; }
-  .prize-list li[data-kind].is-won {
-    box-shadow: 0 0 0 2px rgba(240,216,120,0.9), 0 3px 10px rgba(0,0,0,0.24);
+  .prize-list li[data-tier="rare"] {
+    background: linear-gradient(145deg, #9C2F23 0%, #B8860B 55%, #9C2F23 100%);
+    border-color: #f0d878; color: #FFF5E8;
+    box-shadow: 0 0 0 1px rgba(157,48,39,0.55), 0 2px 8px rgba(157,48,39,0.35);
+  }
+  .prize-list li[data-tier] .muted { color: inherit; opacity: 0.82; }
+  .prize-list li[data-tier].is-won {
+    box-shadow: 0 0 0 2px rgba(240,216,120,0.95), 0 3px 10px rgba(0,0,0,0.28);
   }
   .field { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.75rem; }
   .field label { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
@@ -253,10 +237,7 @@
     word-break: break-word;
     transform: translateX(-50%);
   }
-  .prize-list li[data-kind="sample"] {
-    background: #2F4038; border-color: #c9a227; color: #F3EEE4;
-  }
-  .dc-wheel .wheel-label.is-sample { color: #F3EEE4; font-weight: 700; }
+  .dc-wheel .wheel-label.is-sample { color: inherit; }
   .platter-upsell {
     margin: 0.65rem auto 0; max-width: 22rem;
     padding: 0.7rem 0.85rem; border-radius: 0.85rem;
@@ -306,23 +287,23 @@
         <img class="brand-logo dc-brand-logo" src="assets/brand-chicken.png?v=20260930gw" alt="" width="36" height="36" />
         <span>
           <span class="brand-title">Critters on Call</span>
-          <span class="brand-sub">Giving Wheel</span>
+          <span class="brand-sub">Farm Spin</span>
         </span>
       </a>
-      <span class="event-badge" id="event-badge">16 slices · generic</span>
+      <span class="event-badge" id="event-badge">16 slices · samples lead</span>
     </div>
   </header>
 
   <main class="main">
     <div class="stack" style="gap:1.1rem">
       <div style="text-align:center">
-        <p class="tracker-kicker" style="margin:0">Giving Wheel · not one event</p>
-        <h1 class="event-title">Spin the <span>Giving Wheel</span></h1>
-        <p class="event-sub">Free sample first · then buy the platter · same wheel at any stop</p>
-        <p class="soft-expiry" id="soft-expiry">Standing wheel · open through Jun 1, 2027 · 2 free-spin slices = about 1 in 8</p>
+        <p class="tracker-kicker" style="margin:0">Farm Spin · not one event</p>
+        <h1 class="event-title"><span>Farm Spin</span></h1>
+        <p class="event-sub">Samples lead · Gold is rare (1 of 16) · not everyone always wins</p>
+        <p class="soft-expiry" id="soft-expiry">Standing wheel · open through Jun 1, 2027 · 2 free-spin slices ≈ 1 in 8 · same wheel at any stop</p>
         <div class="ended-banner" id="ended-banner" hidden>
           <strong>Season closed</strong>
-          <p>This Giving Wheel closed after June 1, 2027. Thanks for spinning with Critters on Call.</p>
+          <p>This Farm Spin closed after June 1, 2027. Thanks for spinning with Critters on Call.</p>
         </div>
         <div class="event-details" id="event-details">
           <strong>Sheehan Homestead · Callahan</strong><br />
@@ -336,18 +317,18 @@
         <div class="wheel-pointer" aria-hidden="true">▼</div>
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
-            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20260930gw" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
+            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
           </span>
         </div>
       </div>
 
       <div class="spin-meta">
         <span>Spins left: <strong id="spins-left">3</strong></span>
-        <span>Wheel: <strong>GIVING-16</strong></span>
+        <span>Wheel: <strong>FARM-16</strong></span>
       </div>
 
-      <button class="btn btn-primary btn-block" type="button" id="spin-btn">Spin the wheel</button>
-      <p class="rules-note">No email needed to spin · max 3 spins · Free Spin slices do not count against your 3 · Gold is 1 of 16</p>
+      <button class="btn btn-primary btn-block" type="button" id="spin-btn">Try Farm Spin</button>
+      <p class="rules-note">No email needed · max 3 spins · Free Spin slices do not count against your 3 · samples lead · Gold is rare (1 of 16)</p>
 
       <div class="win-card" id="win-card" hidden>
         <p class="tracker-kicker" id="win-kicker">You won</p>
@@ -381,8 +362,8 @@
         </div>
 
         <div class="review-prompt" id="review-prompt" hidden>
-          <a id="review-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">Like getting free gifts? Screenshot and share a 5-star Google review</a>
-          <p class="hint">Opens Sheehan Homestead on Google · screenshot your win + leave 5 stars</p>
+          <a id="review-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">Enjoyed your spin? Screenshot and leave a 5-star Google review</a>
+          <p class="hint">Opens Sheehan Homestead on Google · screenshot your result + leave 5 stars</p>
         </div>
 
         <div class="cta-row" id="win-ctas"></div>
@@ -402,7 +383,7 @@
 
   var EVENT_ID = "giving-wheel-16";
   var EVENT_DATE = "standing";
-  var EVENT_LABEL = "Giving Wheel";
+  var EVENT_LABEL = "Farm Spin";
   var MAX_SPINS = 3;
   /* Standing wheel through Jun 1, 2027 (expires Jun 2 ET) */
   var EXPIRES_Y = 2027;
@@ -444,31 +425,33 @@
 
   if (resetSpinStateIfRequested()) return;
 
-  /* 16 equal slices. Chance = slice count. Free spin 2/16 ≈ 1/8. Gold exactly 1/16. */
+  /* 16 equal slices (Farm Spin / Critter Spin). Chance = slice count.
+     Free spin 2/16 ≈ 1/8. Gold exactly 1/16 (rare).
+     tier: common = muted greens/cream; mid = gold/amber; rare = deep gold/red. */
   var PRIZES = [
-    { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not count against your 3", teaser: "about 1 in 8", kind: "again", fulfill: "Free Spin. This does not count against your 3-spin limit." },
-    { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not count against your 3", teaser: "about 1 in 8", kind: "again", fulfill: "Free Spin. This does not count against your 3-spin limit." },
-    { id: "gold-card", label: "Gold membership", short: "GOLD<br>CARD", value: "$50 membership + $25 gift + $25 ticket", teaser: "the only membership slice · 1 of 16", kind: "grand", fulfill: "GOLD grand prize. $50 Gold membership + $25 gift + $25 ticket. Tap Claim, then come to the farm. Spins close after this." },
-    { id: "ticket-10-a", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "small ticket · not the $25 farm tour", kind: "ticket", fulfill: "Free $10 ticket. Show this screen at the farm. Not a $25 tour." },
-    { id: "ticket-10-b", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "small ticket · not the $25 farm tour", kind: "ticket", fulfill: "Free $10 ticket. Show this screen at the farm. Not a $25 tour." },
-    { id: "ticket-10-c", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "small ticket · not the $25 farm tour", kind: "ticket", fulfill: "Free $10 ticket. Show this screen at the farm. Not a $25 tour." },
-    { id: "farm-10-a", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, slip, or farm-side gift", kind: "gift", fulfill: "Free $10 farm gift. Show this screen at the farm." },
-    { id: "farm-10-b", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, slip, or farm-side gift", kind: "gift", fulfill: "Free $10 farm gift. Show this screen at the farm." },
-    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", fulfill: "Free $10 thrift gift. Show this screen at the farm / thrift table." },
-    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", fulfill: "Free $10 thrift gift. Show this screen at the farm / thrift table." },
-    { id: "tour-25", label: "Free $25 farm tour", short: "$25<br>TOUR", value: "Free $25 farm tour / ticket", teaser: "the only $25 tour slice", kind: "ticket", fulfill: "Free $25 farm tour / ticket. Show this screen at the farm. One slice only — not a stack of comps." },
-    { id: "combo-25-a", label: "$25 thrift + $25 farm gift", short: "$25+$25<br>GIFTS", value: "$25 thrift gift + $25 farm gift", teaser: "both gifts · one spin", kind: "gift", fulfill: "$25 thrift gift and $25 farm gift together. Show this screen at the farm." },
-    { id: "combo-25-b", label: "$25 thrift + $25 farm gift", short: "$25+$25<br>GIFTS", value: "$25 thrift gift + $25 farm gift", teaser: "both gifts · one spin", kind: "gift", fulfill: "$25 thrift gift and $25 farm gift together. Show this screen at the farm." },
-    { id: "sample-swine", label: "Cut-the-twine", short: "MEET<br>SWINE", value: "Freemium sample · meet the swine", teaser: "free sample → buy the platter", kind: "sample", fulfill: "Sample only: cut-the-twine to meet the swine. Not a paid ticket. Like it? Buy the platter." },
-    { id: "sample-app", label: "App beta trial", short: "APP<br>BETA", value: "Freemium sample · app beta", teaser: "try the app · then buy the platter", kind: "sample", fulfill: "Sample only: app beta trial. Not a ticket and not a membership. Like it? Buy the platter." },
-    { id: "sample-cameo", label: "Farm cameo video", short: "FARM<br>CAMEO", value: "Freemium sample · short farm video", teaser: "cameo-style clip · then buy the platter", kind: "sample", fulfill: "Sample only: a short cameo-style farm video. Not a $25 ticket. Like it? Buy the platter." }
+    { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not count against your 3", teaser: "about 1 in 8", kind: "again", tier: "common", color: "#E8E0D0", fulfill: "Free Spin. This does not count against your 3-spin limit." },
+    { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not count against your 3", teaser: "about 1 in 8", kind: "again", tier: "common", color: "#F3EEE4", fulfill: "Free Spin. This does not count against your 3-spin limit." },
+    { id: "gold-card", label: "Gold membership", short: "GOLD<br>CARD", value: "$50 membership + $25 gift + $25 ticket", teaser: "rare · the only membership slice · 1 of 16", kind: "grand", tier: "rare", color: "#9C2F23", fulfill: "GOLD grand prize. $50 Gold membership + $25 gift + $25 ticket. Tap Claim, then come to the farm. Spins close after this." },
+    { id: "ticket-10-a", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "mid · small ticket · not the $25 farm tour", kind: "ticket", tier: "mid", color: "#C9A227", fulfill: "Free $10 ticket. Show this screen at the farm. Not a $25 tour." },
+    { id: "ticket-10-b", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "mid · small ticket · not the $25 farm tour", kind: "ticket", tier: "mid", color: "#D4B84A", fulfill: "Free $10 ticket. Show this screen at the farm. Not a $25 tour." },
+    { id: "ticket-10-c", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "mid · small ticket · not the $25 farm tour", kind: "ticket", tier: "mid", color: "#B8923A", fulfill: "Free $10 ticket. Show this screen at the farm. Not a $25 tour." },
+    { id: "farm-10-a", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "common · plant, eggs, slip, or farm-side gift", kind: "gift", tier: "common", color: "#4C6458", fulfill: "Free $10 farm gift. Show this screen at the farm." },
+    { id: "farm-10-b", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "common · plant, eggs, slip, or farm-side gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Show this screen at the farm." },
+    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "common · toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Show this screen at the farm / thrift table." },
+    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "common · toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Show this screen at the farm / thrift table." },
+    { id: "tour-25", label: "Free $25 farm tour", short: "$25<br>TOUR", value: "Free $25 farm tour / ticket", teaser: "mid · the only $25 tour slice", kind: "ticket", tier: "mid", color: "#C4A035", fulfill: "Free $25 farm tour / ticket. Show this screen at the farm. One slice only — not a stack of comps." },
+    { id: "combo-25-a", label: "$25 thrift + $25 farm gift", short: "$25+$25<br>GIFTS", value: "$25 thrift gift + $25 farm gift", teaser: "mid · both gifts · one spin", kind: "gift", tier: "mid", color: "#E8D48C", fulfill: "$25 thrift gift and $25 farm gift together. Show this screen at the farm." },
+    { id: "combo-25-b", label: "$25 thrift + $25 farm gift", short: "$25+$25<br>GIFTS", value: "$25 thrift gift + $25 farm gift", teaser: "mid · both gifts · one spin", kind: "gift", tier: "mid", color: "#D4B84A", fulfill: "$25 thrift gift and $25 farm gift together. Show this screen at the farm." },
+    { id: "sample-swine", label: "Cut-the-twine", short: "MEET<br>SWINE", value: "Freemium sample · meet the swine", teaser: "common sample → buy the platter", kind: "sample", tier: "common", color: "#4C6458", fulfill: "Sample only: cut-the-twine to meet the swine. Not a paid ticket. Like it? Buy the platter." },
+    { id: "sample-app", label: "App beta trial", short: "APP<br>BETA", value: "Freemium sample · app beta", teaser: "mid · try the app · then buy the platter", kind: "sample", tier: "mid", color: "#C9A227", fulfill: "Sample only: app beta trial. Not a ticket and not a membership. Like it? Buy the platter." },
+    { id: "sample-cameo", label: "Farm cameo video", short: "FARM<br>CAMEO", value: "Freemium sample · short farm video", teaser: "mid · cameo-style clip · then buy the platter", kind: "sample", tier: "mid", color: "#B8923A", fulfill: "Sample only: a short cameo-style farm video. Not a $25 ticket. Like it? Buy the platter." }
   ];
 
   var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
   var freeSpinCount = PRIZES.filter(function (p) { return p.kind === "again"; }).length;
   var tourCount = PRIZES.filter(function (p) { return p.id === "tour-25"; }).length;
   if (PRIZES.length !== 16 || goldCardCount !== 1 || freeSpinCount !== 2 || tourCount !== 1) {
-    throw new Error("Giving Wheel must be exactly 16 slices: 2 free spins, 1 Gold, 1 $25 tour");
+    throw new Error("Farm Spin must be exactly 16 slices: 2 free spins, 1 Gold, 1 $25 tour");
   }
 
   /* Weights sum 100. Gold Card is rare; free spin is more common; $25 wedges are rarer. */
@@ -635,23 +618,42 @@
     } else if (!spinning) {
       spinBtn.disabled = false;
       spinBtn.classList.remove("is-locked");
-      spinBtn.textContent = left === MAX_SPINS ? "Spin the wheel" : "Spin again (" + left + " left)";
+      spinBtn.textContent = left === MAX_SPINS ? "Try Farm Spin" : "Spin again (" + left + " left)";
     }
   }
 
+  function hexLuma(hex) {
+    var h = (hex || "#4C6458").replace("#", "");
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    var r = parseInt(h.slice(0, 2), 16) / 255;
+    var g = parseInt(h.slice(2, 4), 16) / 255;
+    var b = parseInt(h.slice(4, 6), 16) / 255;
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+
+  function paintWheelSlices() {
+    /* Color-code wedges by prize VALUE rarity — keeps CSS + PRIZES in sync. */
+    var stops = [];
+    PRIZES.forEach(function (p, i) {
+      var start = i * slice;
+      var end = (i + 1) * slice;
+      var c = p.color || "#4C6458";
+      stops.push(c + " " + start + "deg " + end + "deg");
+    });
+    wheel.style.background = "conic-gradient(from 0deg, " + stops.join(", ") + ")";
+  }
+
   function buildLabels() {
-    /* 16 equal 22.5° arcs. */
+    /* 16 equal 22.5° arcs. Public brand: Farm Spin (Critter Spin OK in comments). */
+    paintWheelSlices();
     PRIZES.forEach(function (p, i) {
       var deg = i * slice + slice / 2;
       var flip = deg > 90 && deg < 270;
       var el = document.createElement("span");
       var cls = "wheel-label ";
-      if (p.kind === "grand") cls += "is-premium";
-      else if (p.kind === "membership") cls += "is-membership";
-      else if (p.kind === "gift") cls += "is-gift";
-      else if (p.kind === "again") cls += "is-again";
-      else if (p.kind === "sample") cls += "is-sample";
-      else cls += (i % 2 === 0 ? "is-light" : "is-dark");
+      if (p.kind === "grand" || p.tier === "rare") cls += "is-premium";
+      else if (hexLuma(p.color) > 0.55) cls += "is-on-light";
+      else cls += "is-on-dark";
       el.className = cls;
       el.style.transform = "rotate(" + deg + "deg)";
       el.innerHTML = '<span' + (flip ? ' class="is-flipped"' : '') + '>' +
@@ -661,6 +663,22 @@
       var li = document.createElement("li");
       li.dataset.id = p.id;
       li.dataset.kind = p.kind;
+      li.dataset.tier = p.tier || "common";
+      if (p.tier === "common" && hexLuma(p.color) > 0.55) li.classList.add("is-cream");
+      if (p.color) {
+        li.style.background = p.color;
+        if (p.tier === "rare") {
+          li.style.background = "linear-gradient(145deg, #9C2F23 0%, #B8860B 55%, #9C2F23 100%)";
+          li.style.borderColor = "#f0d878";
+          li.style.color = "#FFF5E8";
+        } else if (hexLuma(p.color) > 0.55) {
+          li.style.color = "#1a1508";
+          li.style.borderColor = "#c9b896";
+        } else {
+          li.style.color = "#F3EEE4";
+          li.style.borderColor = p.tier === "mid" ? "#f0d878" : "#86A093";
+        }
+      }
       var teaser = p.teaser ? '<p class="text-xs muted teaser" style="margin:0.15rem 0 0">' + p.teaser + "</p>" : "";
       li.innerHTML = '<p class="text-xs" style="font-weight:600;margin:0">' + p.label +
         '</p><p class="text-xs muted" style="margin:0">' + p.value + "</p>" + teaser;
@@ -755,10 +773,10 @@
   }
 
   function claimMailHref(prizeLabel) {
-    var subject = "Giving Wheel prize — " + prizeLabel;
-    var body = "Hi Critters on Call —\n\nI spun the Giving Wheel and won:\n" + prizeLabel;
+    var subject = "Farm Spin prize — " + prizeLabel;
+    var body = "Hi Critters on Call —\n\nI spun Farm Spin and won:\n" + prizeLabel;
     if (goatId) body += "\nGoat sticker: #" + goatId;
-    body += "\nWheel: Giving Wheel (generic, not one event)";
+    body += "\nWheel: Farm Spin (generic, not one event)";
     body += "\nGift pickup (Google Maps): " + FARM_MAPS_URL + "\n";
     return "mailto:" + CLAIM_EMAIL +
       "?subject=" + encodeURIComponent(subject) +
@@ -766,7 +784,7 @@
   }
 
   function claimSmsHref(prizeLabel) {
-    var body = "Giving Wheel prize: " + prizeLabel;
+    var body = "Farm Spin prize: " + prizeLabel;
     return "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent(body);
   }
 
