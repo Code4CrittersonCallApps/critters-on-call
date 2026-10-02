@@ -10,11 +10,11 @@
 <meta property="og:description" content="16-slice Farm Spin. Samples lead; Gold is rare (~1/16). Soft play prizes — not everyone always wins." />
 <meta property="og:type" content="website" />
 <title>Farm Spin · Critters on Call</title>
-<link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs2" />
+<link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs3" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/styles.css?v=20261002fs2" />
+<link rel="stylesheet" href="../css/styles.css?v=20261002fs3" />
 <style>
   /* Forest greens from farm brand; hub uses Gold Membership card art. */
   :root {
@@ -90,10 +90,6 @@
   .dc-brand-logo {
     object-fit: contain;
     padding: 0.18rem;
-  }
-  .goat-chip {
-    text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--card-gold);
-    margin-top: 0.35rem;
   }
   .spin-meta {
     display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;
@@ -296,6 +292,22 @@
   }
   .review-prompt .hint { font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; }
   .teaser { font-size: 0.72rem; color: var(--muted); font-style: italic; }
+  .claim-steps {
+    margin: 0 0 0.75rem; padding: 0 0 0 1.15rem;
+    font-size: 0.78rem; line-height: 1.45; color: var(--cream);
+  }
+  .claim-steps li { margin: 0.35rem 0; }
+  .claim-steps strong { color: var(--card-gold); }
+  .day-lock-note {
+    text-align: center; font-size: 0.78rem; color: var(--muted);
+    line-height: 1.4; margin: 0.35rem 0 0;
+  }
+  .day-lock-note strong { color: var(--card-gold); }
+  .prize-tier-head {
+    list-style: none; margin: 0.55rem 0 0.25rem; padding: 0.2rem 0;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted); text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -303,7 +315,7 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a class="brand" href="../index.html">
-        <img class="brand-logo dc-brand-logo" src="assets/brand-chicken.png?v=20261002fs2" alt="" width="36" height="36" />
+        <img class="brand-logo dc-brand-logo" src="assets/brand-chicken.png?v=20261002fs3" alt="" width="36" height="36" />
         <span>
           <span class="brand-title">Critters on Call</span>
           <span class="brand-sub">Farm Spin</span>
@@ -329,25 +341,26 @@
           <span class="addr">Claim at the farm · 44065 Cushman Road<br />Callahan, FL 32011</span>
         </div>
         <p class="platter-upsell">Won a sample? Like it? <a href="https://www.sheehanhomestead.com/booking-help">Buy the full platter</a>.</p>
-        <p class="goat-chip" id="goat-chip" hidden></p>
+        <!-- consumer: no code / goat chip -->
       </div>
 
       <div class="wheel-wrap">
         <div class="wheel-pointer" aria-hidden="true">▼</div>
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
-            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs2" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
+            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs3" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
           </span>
         </div>
       </div>
 
       <div class="spin-meta">
-        <span>Spins left: <strong id="spins-left">3</strong></span>
+        <span>Today: <strong id="spins-left">1 spin</strong></span>
         <span>16 slices · samples lead</span>
       </div>
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn">Try Farm Spin</button>
-      <p class="rules-note">No email needed · max 3 spins · Free Spin slices do not count against your 3 · samples lead · Gold is rare (1 of 16)</p>
+      <p class="rules-note" id="rules-note">One prize spin per day on this device · Free Spin does not use your day · samples lead · Gold is rare (1 of 16)</p>
+      <p class="day-lock-note" id="day-lock-note" hidden><strong>Today&rsquo;s spin is used.</strong> Come back tomorrow for another try.</p>
 
       <div class="win-card" id="win-card" hidden>
         <p class="tracker-kicker" id="win-kicker">You won</p>
@@ -356,21 +369,26 @@
         <p class="teaser" id="win-teaser" style="margin-top:0.35rem"></p>
         <p class="text-sm muted" id="win-note" style="margin-top:0.45rem;line-height:1.45"></p>
         <div class="premium-banner" id="premium-banner" hidden>
-          <strong>Gold membership</strong>
-          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">$50 membership + $25 gift + $25 ticket. Rare — spins close after Gold.</p>
+          <strong>Gold membership · ~$100</strong>
+          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">Rare (1 of 16). Membership + gift + ticket — about $100 value. Spins close after Gold.</p>
         </div>
         <div class="again-banner" id="again-banner" hidden>
           <strong>Free spin!</strong>
-          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">This free spin does not count against your 3-spin limit. Hit Spin again.</p>
+          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">This does not use today&rsquo;s prize spin. Hit Spin again.</p>
         </div>
 
         <div class="cta-row" id="claim-cta-row"></div>
 
         <div class="claim-panel" id="claim-panel" hidden>
           <h3>Claim your prize</h3>
-          <p class="claim-sub">Tell us you won using <strong>any option below</strong>, then come to the farm. This page does <strong>not</strong> save claims by itself.</p>
+          <p class="claim-sub">Pick <strong>any one</strong> below, then bring this screen to the farm. This page does not save claims by itself.</p>
+          <ol class="claim-steps" id="claim-steps-list">
+            <li>Text a <strong>screenshot of this screen</strong> with the word <strong>PRIZE</strong> to <strong>914-263-1311</strong></li>
+            <li>Go to our <strong>booking-help</strong> page</li>
+            <li><strong>DM us</strong> on Facebook</li>
+          </ol>
           <div class="cta-row" id="claim-contact-row"></div>
-          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Message us, then show this screen at the farm to claim.</p>
+          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Then show this screen at the farm to pick up.</p>
         </div>
 
         <div class="farm-claim" id="farm-claim" hidden>
@@ -408,33 +426,30 @@
   var EVENT_ID = "giving-wheel-16";
   var EVENT_DATE = "standing";
   var EVENT_LABEL = "Farm Spin";
-  var MAX_SPINS = 3;
+  /* One meaningful (claimable) prize spin per device per calendar day (ET). */
+  var MAX_SPINS_PER_DAY = 1;
   /* Open through Jun 1, 2027 (expires Jun 2 ET) */
   var EXPIRES_Y = 2027;
   var EXPIRES_M = 6;
   var EXPIRES_D = 2;
-  var STORE_LEADS = "coc_dc_leads_v1";
-  var STORE_DEVICE = "coc_dc_device_v2_" + EVENT_ID;
+  var STORE_DEVICE = "coc_farm_spin_day_v3_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
-  var STORE_IDENTITY = "coc_dc_identity_spins_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
   var FARM_ADDRESS = "44065 Cushman Road, Callahan, FL 32011";
   var FARM_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=44065+Cushman+Road,+Callahan,+FL+32011";
-  var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
   var CLAIM_SMS = "9142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
   var BOOKING_URL = "https://www.sheehanhomestead.com/booking-help";
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
-  /* Optional ?reset=1 clears local spin counters for this wheel. */
+  /* Optional ?reset=1 clears local day lock for this wheel. */
   function resetSpinStateIfRequested() {
     try {
       var params = new URLSearchParams(location.search);
       if (params.get("reset") !== "1") return false;
       localStorage.removeItem(STORE_DEVICE);
-      localStorage.removeItem(STORE_IDENTITY);
       params.delete("reset");
       var cleanQuery = params.toString();
       var cleanUrl = location.pathname + (cleanQuery ? "?" + cleanQuery : "") + location.hash;
@@ -448,32 +463,36 @@
 
   if (resetSpinStateIfRequested()) return;
 
-  /* 16 equal slices. Free spin 2/16; Gold 1/16 (rare).
-     Tiers: common = sage/cream; mid = copper; rare = polished gold. */
+  /* 16 equal slices.
+     Sage = everyday ($10 / free spin / try-a-service)
+     Copper = mid ($10 ticket, $25, $50 gift, app / cameo samples)
+     Gold = rare membership (~$100), exactly 1
+     Free Spin ×2 · $50 gift is ONE combined gift (not $25+$25) */
   var PRIZES = [
-    { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not count against your 3", teaser: "extra spin", kind: "again", tier: "common", color: "#EDE6D9", fulfill: "Free Spin — does not count against your 3-spin limit." },
-    { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not count against your 3", teaser: "extra spin", kind: "again", tier: "common", color: "#F5F0E6", fulfill: "Free Spin — does not count against your 3-spin limit." },
-    { id: "gold-card", label: "Gold membership", short: "GOLD<br>CARD", value: "$50 membership + $25 gift + $25 ticket", teaser: "rare · 1 of 16", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold membership: $50 membership + $25 gift + $25 ticket. Tap Claim, then come to the farm. Spins close after Gold." },
-    { id: "ticket-10-a", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#B8956C", fulfill: "Free $10 ticket. Show this screen at the farm." },
-    { id: "ticket-10-b", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#C4A06A", fulfill: "Free $10 ticket. Show this screen at the farm." },
-    { id: "ticket-10-c", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#A8884E", fulfill: "Free $10 ticket. Show this screen at the farm." },
-    { id: "farm-10-a", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#4C6458", fulfill: "Free $10 farm gift. Show this screen at the farm." },
-    { id: "farm-10-b", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Show this screen at the farm." },
-    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Show this screen at the farm." },
-    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Show this screen at the farm." },
-    { id: "tour-25", label: "Free $25 farm tour", short: "$25<br>TOUR", value: "Free $25 farm tour", teaser: "$25 farm tour", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "Free $25 farm tour. Show this screen at the farm." },
-    { id: "combo-25-a", label: "$25 thrift + $25 farm gift", short: "$25+$25<br>GIFTS", value: "$25 thrift gift + $25 farm gift", teaser: "$25 thrift + $25 farm", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$25 thrift gift + $25 farm gift. Show this screen at the farm." },
-    { id: "combo-25-b", label: "$25 thrift + $25 farm gift", short: "$25+$25<br>GIFTS", value: "$25 thrift gift + $25 farm gift", teaser: "$25 thrift + $25 farm", kind: "gift", tier: "mid", color: "#C9A87A", fulfill: "$25 thrift gift + $25 farm gift. Show this screen at the farm." },
-    { id: "sample-swine", label: "Cut-the-twine", short: "MEET<br>SWINE", value: "Sample · meet the swine", teaser: "sample · meet the swine", kind: "sample", tier: "common", color: "#4C6458", fulfill: "Sample: cut-the-twine to meet the swine. Like it? Buy the platter." },
-    { id: "sample-app", label: "App beta trial", short: "APP<br>BETA", value: "Sample · app beta", teaser: "app beta sample", kind: "sample", tier: "mid", color: "#B89A5C", fulfill: "Sample: app beta trial. Like it? Buy the platter." },
-    { id: "sample-cameo", label: "Farm cameo video", short: "FARM<br>CAMEO", value: "Sample · short farm video", teaser: "short farm video sample", kind: "sample", tier: "mid", color: "#A8884E", fulfill: "Sample: a short farm video. Like it? Buy the platter." }
+    { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not use today", teaser: "extra spin", kind: "again", tier: "common", color: "#EDE6D9", fulfill: "Free Spin — does not use today’s prize spin. Spin again." },
+    { id: "farm-10-a", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#4C6458", fulfill: "Free $10 farm gift. Claim below, then show this screen at the farm." },
+    { id: "ticket-10-a", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#B8956C", fulfill: "Free $10 ticket. Claim below, then show this screen at the farm." },
+    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Claim below, then show this screen at the farm." },
+    { id: "tour-25", label: "Free $25 farm tour", short: "$25<br>TOUR", value: "Free $25 farm tour", teaser: "$25 farm tour", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "Free $25 farm tour. Claim below, then show this screen at the farm." },
+    { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Another spin · does not use today", teaser: "extra spin", kind: "again", tier: "common", color: "#F5F0E6", fulfill: "Free Spin — does not use today’s prize spin. Spin again." },
+    { id: "farm-10-b", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Claim below, then show this screen at the farm." },
+    { id: "gift-50-a", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift (thrift + farm)", teaser: "one $50 gift · thrift & farm", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$50 gift — thrift and farm together as one gift. Claim below, then show this screen at the farm." },
+    { id: "try-service", label: "Try a new service", short: "TRY<br>NEW", value: "Try a new service (e.g. meet the swine)", teaser: "sample · meet the swine / new experience", kind: "sample", tier: "common", color: "#4C6458", fulfill: "Try a new service — e.g. meet the swine / sample a new experience. Like it? Buy the full platter." },
+    { id: "ticket-10-b", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#C4A06A", fulfill: "Free $10 ticket. Claim below, then show this screen at the farm." },
+    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Claim below, then show this screen at the farm." },
+    { id: "sample-app", label: "App beta trial", short: "APP<br>BETA", value: "Try out one of our web apps", teaser: "app beta · try a web app", kind: "sample", tier: "mid", color: "#B89A5C", fulfill: "App beta trial — try out one of our web apps. Like it? Buy the platter." },
+    { id: "ticket-10-c", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#A8884E", fulfill: "Free $10 ticket. Claim below, then show this screen at the farm." },
+    { id: "gift-50-b", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift (thrift + farm)", teaser: "one $50 gift · thrift & farm", kind: "gift", tier: "mid", color: "#C9A87A", fulfill: "$50 gift — thrift and farm together as one gift. Claim below, then show this screen at the farm." },
+    { id: "sample-cameo", label: "Farm cameo video", short: "FARM<br>CAMEO", value: "Sample · short farm video", teaser: "short farm video sample", kind: "sample", tier: "mid", color: "#A8884E", fulfill: "Sample: a short farm video. Like it? Buy the platter." },
+    { id: "gold-card", label: "Gold membership", short: "GOLD<br>~$100", value: "Worth about $100 · rare (1 of 16)", teaser: "rare · ~$100 value", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold membership — worth about $100 (membership + gift + ticket). Claim below, then come to the farm. Spins close after Gold." }
   ];
 
   var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
   var freeSpinCount = PRIZES.filter(function (p) { return p.kind === "again"; }).length;
-  var tourCount = PRIZES.filter(function (p) { return p.id === "tour-25"; }).length;
-  if (PRIZES.length !== 16 || goldCardCount !== 1 || freeSpinCount !== 2 || tourCount !== 1) {
-    throw new Error("Farm Spin must be exactly 16 slices: 2 free spins, 1 Gold, 1 $25 tour");
+  var gift50Count = PRIZES.filter(function (p) { return p.id.indexOf("gift-50") === 0; }).length;
+  var tryServiceCount = PRIZES.filter(function (p) { return p.id === "try-service"; }).length;
+  if (PRIZES.length !== 16 || goldCardCount !== 1 || freeSpinCount !== 2 || gift50Count !== 2 || tryServiceCount !== 1) {
+    throw new Error("Farm Spin must be exactly 16 slices: 2 free spins, 1 Gold (~$100), 2× $50 gift, 1 try-a-service");
   }
 
   /* Equal weights — odds follow slice count. */
@@ -485,9 +504,8 @@
   var reduceMotion = false;
   var pending = null;
   var pendingClaimed = false;
-  var goatId = null;
   var claimFormOpen = false;
-  var topPrizeWon = !!readDevice().top_prize_won;
+  var topPrizeWon = false;
 
   var wheel = document.getElementById("prize-wheel");
   var spinBtn = document.getElementById("spin-btn");
@@ -506,7 +524,7 @@
   var farmClaim = document.getElementById("farm-claim");
   var prizeList = document.getElementById("prize-list");
   var toastEl = document.getElementById("toast");
-  var goatChip = document.getElementById("goat-chip");
+  var dayLockNote = document.getElementById("day-lock-note");
 
   try {
     reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -520,41 +538,18 @@
     toast._t = setTimeout(function () { toastEl.classList.remove("is-on"); }, 2800);
   }
 
-  function parseGoat() {
-    try {
-      var g = new URLSearchParams(location.search).get("goat") || "";
-      g = String(g).replace(/\D/g, "");
-      if (g.length === 1) g = "0" + g;
-      if (/^(0[1-9]|1[0-2])$/.test(g)) {
-        goatId = g;
-        goatChip.hidden = false;
-        goatChip.textContent = "Golden Goat sticker #" + g;
-      }
-    } catch (e) {}
-  }
-
-  function readLeads() {
-    try {
-      var raw = localStorage.getItem(STORE_LEADS);
-      var arr = raw ? JSON.parse(raw) : [];
-      return Array.isArray(arr) ? arr : [];
-    } catch (e) { return []; }
-  }
-
-  function writeLeads(arr) {
-    try { localStorage.setItem(STORE_LEADS, JSON.stringify(arr)); } catch (e) {}
+  function emptyDevice() {
+    return { event_id: EVENT_ID, claim_day: null, claimed_today: false, top_prize_won: false };
   }
 
   function readDevice() {
     try {
       var raw = localStorage.getItem(STORE_DEVICE);
       var obj = raw ? JSON.parse(raw) : null;
-      if (!obj || typeof obj !== "object") {
-        obj = { event_id: EVENT_ID, spins: 0, email_norm: null, phone_norm: null, lastLeadId: null, top_prize_won: false };
-      }
+      if (!obj || typeof obj !== "object") return emptyDevice();
       return obj;
     } catch (e) {
-      return { event_id: EVENT_ID, spins: 0, email_norm: null, phone_norm: null, lastLeadId: null, top_prize_won: false };
+      return emptyDevice();
     }
   }
 
@@ -562,85 +557,66 @@
     try { localStorage.setItem(STORE_DEVICE, JSON.stringify(obj)); } catch (e) {}
   }
 
-  function readIdentityMap() {
-    try {
-      var raw = localStorage.getItem(STORE_IDENTITY);
-      var obj = raw ? JSON.parse(raw) : {};
-      return obj && typeof obj === "object" ? obj : {};
-    } catch (e) { return {}; }
+  function etDateKey(d) {
+    var p = etParts(d || new Date());
+    return p.year + "-" + p.month + "-" + p.day;
   }
 
-  function writeIdentityMap(obj) {
-    try { localStorage.setItem(STORE_IDENTITY, JSON.stringify(obj)); } catch (e) {}
-  }
-
-  function identityKey(emailNorm, phoneNorm) {
-    if (emailNorm) return "e:" + emailNorm;
-    if (phoneNorm) return "p:" + phoneNorm;
-    return null;
-  }
-
-  function getIdentitySpins(emailNorm, phoneNorm) {
-    var map = readIdentityMap();
-    var max = 0;
-    if (emailNorm && map["e:" + emailNorm] != null) max = Math.max(max, map["e:" + emailNorm] | 0);
-    if (phoneNorm && map["p:" + phoneNorm] != null) max = Math.max(max, map["p:" + phoneNorm] | 0);
-    return max;
-  }
-
-  function setIdentitySpins(emailNorm, phoneNorm, spins) {
-    var map = readIdentityMap();
-    spins = Math.max(0, spins | 0);
-    if (emailNorm) map["e:" + emailNorm] = Math.max(map["e:" + emailNorm] | 0, spins);
-    if (phoneNorm) map["p:" + phoneNorm] = Math.max(map["p:" + phoneNorm] | 0, spins);
-    writeIdentityMap(map);
-  }
-
-  function normEmail(e) {
-    return String(e || "").trim().toLowerCase();
-  }
-
-  function normPhone(p) {
-    var d = String(p || "").replace(/\D/g, "");
-    if (d.length === 11 && d.charAt(0) === "1") d = d.slice(1);
+  function syncDayState() {
+    var d = readDevice();
+    var today = etDateKey();
+    if (d.claim_day !== today) {
+      d.claim_day = today;
+      d.claimed_today = false;
+      writeDevice(d);
+    }
     return d;
   }
 
-  function effectiveSpinsUsed() {
-    var d = readDevice();
-    var used = d.spins || 0;
-    if (d.email_norm || d.phone_norm) {
-      used = Math.max(used, getIdentitySpins(d.email_norm, d.phone_norm));
-    }
-    return used;
+  function hasClaimedToday() {
+    var d = syncDayState();
+    return !!d.claimed_today;
+  }
+
+  function markClaimedToday() {
+    var d = syncDayState();
+    d.claim_day = etDateKey();
+    d.claimed_today = true;
+    writeDevice(d);
   }
 
   function spinsRemaining() {
-    return Math.max(0, MAX_SPINS - effectiveSpinsUsed());
+    if (hasTopPrizeWon()) return 0;
+    return hasClaimedToday() ? 0 : MAX_SPINS_PER_DAY;
   }
 
   function hasTopPrizeWon() {
     return topPrizeWon || !!readDevice().top_prize_won;
   }
 
+  topPrizeWon = !!readDevice().top_prize_won;
+
   function refreshSpinUI() {
+    if (dayLockNote) dayLockNote.hidden = true;
     if (hasTopPrizeWon()) {
-      spinsLeftEl.textContent = "0";
+      spinsLeftEl.textContent = "closed";
       spinBtn.disabled = true;
       spinBtn.classList.add("is-locked");
       spinBtn.textContent = "Gold won — spins closed";
       return;
     }
     var left = spinsRemaining();
-    spinsLeftEl.textContent = String(left);
     if (left <= 0) {
+      spinsLeftEl.textContent = "used";
       spinBtn.disabled = true;
       spinBtn.classList.add("is-locked");
-      spinBtn.textContent = "No spins left";
+      spinBtn.textContent = "Come back tomorrow";
+      if (dayLockNote) dayLockNote.hidden = false;
     } else if (!spinning) {
+      spinsLeftEl.textContent = "1 spin";
       spinBtn.disabled = false;
       spinBtn.classList.remove("is-locked");
-      spinBtn.textContent = left === MAX_SPINS ? "Try Farm Spin" : "Spin again (" + left + " left)";
+      spinBtn.textContent = "Try Farm Spin";
     }
   }
 
@@ -666,7 +642,7 @@
   }
 
   function buildLabels() {
-    /* 16 equal arcs; labels + prize list. */
+    /* Wheel keeps physical slice order; list groups by value tier. */
     paintWheelSlices();
     PRIZES.forEach(function (p, i) {
       var deg = i * slice + slice / 2;
@@ -681,30 +657,46 @@
       el.innerHTML = '<span' + (flip ? ' class="is-flipped"' : '') + '>' +
         p.short + (p.kind === "grand" ? " ★" : "") + "</span>";
       wheel.appendChild(el);
+    });
 
-      var li = document.createElement("li");
-      li.dataset.id = p.id;
-      li.dataset.kind = p.kind;
-      li.dataset.tier = p.tier || "common";
-      if (p.tier === "common" && hexLuma(p.color) > 0.55) li.classList.add("is-cream");
-      if (p.color) {
-        li.style.background = p.color;
-        if (p.tier === "rare") {
-          li.style.background = "linear-gradient(145deg, #B8923A 0%, #E8C547 45%, #C9A227 100%)";
-          li.style.borderColor = "#f0d878";
-          li.style.color = "#1a1508";
-        } else if (hexLuma(p.color) > 0.55) {
-          li.style.color = "#1a1508";
-          li.style.borderColor = "#c9b896";
-        } else {
-          li.style.color = "#F3EEE4";
-          li.style.borderColor = p.tier === "mid" ? "#f0d878" : "#86A093";
+    var tierOrder = ["common", "mid", "rare"];
+    var tierTitle = {
+      common: "Sage · everyday ($10, Free Spin, try a service)",
+      mid: "Copper · mid ($10 ticket, $25, $50 gift, app samples)",
+      rare: "Gold · rare (membership ~$100)"
+    };
+    tierOrder.forEach(function (tier) {
+      var group = PRIZES.filter(function (p) { return (p.tier || "common") === tier; });
+      if (!group.length) return;
+      var head = document.createElement("li");
+      head.className = "prize-tier-head";
+      head.textContent = tierTitle[tier] || tier;
+      prizeList.appendChild(head);
+      group.forEach(function (p) {
+        var li = document.createElement("li");
+        li.dataset.id = p.id;
+        li.dataset.kind = p.kind;
+        li.dataset.tier = p.tier || "common";
+        if (p.tier === "common" && hexLuma(p.color) > 0.55) li.classList.add("is-cream");
+        if (p.color) {
+          li.style.background = p.color;
+          if (p.tier === "rare") {
+            li.style.background = "linear-gradient(145deg, #B8923A 0%, #E8C547 45%, #C9A227 100%)";
+            li.style.borderColor = "#f0d878";
+            li.style.color = "#1a1508";
+          } else if (hexLuma(p.color) > 0.55) {
+            li.style.color = "#1a1508";
+            li.style.borderColor = "#c9b896";
+          } else {
+            li.style.color = "#F3EEE4";
+            li.style.borderColor = p.tier === "mid" ? "#d4b896" : "#86A093";
+          }
         }
-      }
-      var teaser = p.teaser ? '<p class="text-xs muted teaser" style="margin:0.15rem 0 0">' + p.teaser + "</p>" : "";
-      li.innerHTML = '<p class="text-xs" style="font-weight:600;margin:0">' + p.label +
-        '</p><p class="text-xs muted" style="margin:0">' + p.value + "</p>" + teaser;
-      prizeList.appendChild(li);
+        var teaser = p.teaser ? '<p class="text-xs muted teaser" style="margin:0.15rem 0 0">' + p.teaser + "</p>" : "";
+        li.innerHTML = '<p class="text-xs" style="font-weight:600;margin:0">' + p.label +
+          '</p><p class="text-xs muted" style="margin:0">' + p.value + "</p>" + teaser;
+        prizeList.appendChild(li);
+      });
     });
   }
 
@@ -794,35 +786,16 @@
     } catch (e) {}
   }
 
-  function claimMailHref(prizeLabel) {
-    var subject = "Farm Spin prize — " + prizeLabel;
-    var body = "Hi Critters on Call —\n\nI spun Farm Spin and won:\n" + prizeLabel;
-    if (goatId) body += "\nGoat sticker: #" + goatId;
-    body += "\nWheel: Farm Spin";
-    body += "\nGift pickup (Google Maps): " + FARM_MAPS_URL + "\n";
-    return "mailto:" + CLAIM_EMAIL +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-  }
-
-  function claimSmsHref(prizeLabel) {
-    var body = "Farm Spin prize: " + prizeLabel;
-    return "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent(body);
-  }
-
   function fillClaimContacts() {
-    var label = pending ? pending.label : "prize";
-    var mail = claimMailHref(label);
     var sms = "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent("PRIZE");
     if (claimContactRow) {
       claimContactRow.innerHTML =
         '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta">' +
-          '<span>Text PRIZE to ' + CLAIM_SMS_DISPLAY + '</span>' +
-          '<small>Opens Messages</small>' +
+          '<span>Text screenshot + PRIZE</span>' +
+          '<small>to ' + CLAIM_SMS_DISPLAY + ' · Opens Messages</small>' +
         '</a>' +
-        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener">DM ' + FB_LABEL + ' on Facebook</a>' +
-        '<a class="btn-mail btn-block" href="' + mail + '" id="claim-mail-cta">Email ' + CLAIM_EMAIL + '</a>' +
-        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Website booking help</a>';
+        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Go to booking-help page</a>' +
+        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener">DM us on Facebook</a>';
     }
   }
 
@@ -837,7 +810,7 @@
     var reviewLink = document.getElementById("review-link");
     if (reviewLink) reviewLink.href = REVIEW_URL;
     if (reviewPrompt) reviewPrompt.hidden = false;
-    toast("Text · Facebook · email · or booking help — then come to the farm");
+    toast("Text · booking help · or Facebook — then come to the farm");
   }
 
   function showPrize(prize, claimed) {
@@ -884,9 +857,8 @@
     }
 
     if (isAgain) {
-      var left = spinsRemaining();
-      if (left > 0) {
-        winCtas.innerHTML = '<button class="btn btn-primary btn-block" type="button" id="again-spin-cta">Spin again (' + left + ' left)</button>';
+      if (spinsRemaining() > 0) {
+        winCtas.innerHTML = '<button class="btn btn-primary btn-block" type="button" id="again-spin-cta">Spin again</button>';
         document.getElementById("again-spin-cta").addEventListener("click", function () {
           spinBtn.click();
         });
@@ -895,24 +867,11 @@
       claimCtaRow.innerHTML =
         '<button class="btn btn-primary btn-block" type="button" id="open-claim-btn">Claim your prize</button>';
       document.getElementById("open-claim-btn").addEventListener("click", openClaimContacts);
-      var left2 = spinsRemaining();
-      if (!isGrand && left2 > 0) {
-        winCtas.innerHTML = '<button class="btn btn-outline btn-block" type="button" id="spin-more-cta">Spin again (' + left2 + ' left)</button>';
-        document.getElementById("spin-more-cta").addEventListener("click", function () {
-          spinBtn.click();
-        });
-      }
-    } else {
-      var left3 = spinsRemaining();
-      if (!isGrand && left3 > 0) {
-        winCtas.innerHTML = '<button class="btn btn-outline btn-block" type="button" id="spin-more-cta2">Spin again (' + left3 + ' left)</button>';
-        document.getElementById("spin-more-cta2").addEventListener("click", function () {
-          spinBtn.click();
-        });
-      }
+      /* Meaningful prize uses today's spin — no more until tomorrow. */
     }
 
     Array.prototype.forEach.call(prizeList.children, function (li) {
+      if (!li.dataset.id) return;
       li.classList.toggle("is-won", li.dataset.id === prize.id);
     });
 
@@ -930,18 +889,12 @@
     wheel.classList.remove("is-spinning");
     if (!pending) { refreshSpinUI(); return; }
 
-    /* Free spin does not count against the 3-spin limit */
+    /* Free Spin does not use today's meaningful prize claim */
     if (pending.kind !== "again") {
-      var d = readDevice();
-      d.spins = (d.spins || 0) + 1;
-      if (d.email_norm || d.phone_norm) {
-        setIdentitySpins(d.email_norm, d.phone_norm, d.spins);
-      }
-      writeDevice(d);
+      markClaimedToday();
     }
 
     refreshSpinUI();
-
     showPrize(pending, false);
   }
 
@@ -949,7 +902,7 @@
     if (spinning) return;
     if (hasTopPrizeWon()) { toast("Gold won — spins are closed"); return; }
     if (isExpired()) { toast("Event ended — wheel is closed"); applyExpiryUI(); return; }
-    if (spinsRemaining() <= 0) { toast("No spins left (max 3)"); return; }
+    if (spinsRemaining() <= 0) { toast("Today's spin is used — come back tomorrow"); return; }
 
     var index = pickIndex();
     pending = PRIZES[index];
@@ -980,7 +933,6 @@
     if (e.target === wheel && spinning) finishSpin();
   });
 
-  parseGoat();
   buildLabels();
   if (!applyExpiryUI()) {
     refreshSpinUI();
@@ -991,11 +943,11 @@
 
   window.COC_DC = {
     EVENT_ID: EVENT_ID,
-    STORE_LEADS: STORE_LEADS,
+    STORE_DEVICE: STORE_DEVICE,
     STORE_STATUE: STORE_STATUE,
     WEIGHTS: WEIGHTS,
     PRIZES: PRIZES,
-    readLeads: readLeads,
+    hasClaimedToday: hasClaimedToday,
     isExpired: isExpired,
     REVIEW_URL: REVIEW_URL,
     FARM_ADDRESS: FARM_ADDRESS,
