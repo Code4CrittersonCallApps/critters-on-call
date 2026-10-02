@@ -181,14 +181,11 @@
   }
   .btn-sms, .btn-mail, .btn-claim-link {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 0.15rem; text-decoration: none; text-align: center;
+    gap: 0.2rem; text-decoration: none; text-align: center;
     background: rgba(90,115,102,0.55); color: #F3EEE4 !important;
-    font-weight: 700; font-size: 0.95rem;
-    padding: 0.75rem 0.85rem; border-radius: 0.75rem;
-    border: 1px solid rgba(201,162,39,0.35);
-  }
-  .btn-mail, .btn-claim-link {
-    background: rgba(90,115,102,0.4); font-weight: 600; font-size: 0.9rem; padding: 0.7rem;
+    font-weight: 800; font-size: 1.15rem;
+    min-height: 5.5rem; padding: 1.15rem 1rem; border-radius: 1rem;
+    border: 2px solid rgba(201,162,39,0.55);
   }
   .btn-sms small, .btn-mail small {
     font-size: 0.72rem; font-weight: 600; opacity: 0.85; letter-spacing: 0.02em;
@@ -353,20 +350,13 @@
         <div class="farm-claim" id="farm-claim" hidden>
           <a class="btn-maps" id="farm-maps-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">
             Claim at Sheehan Homestead
-            <small>Opens Google</small>
+            <small>Opens Google Maps</small>
           </a>
         </div>
 
         <div class="claim-panel" id="claim-panel" hidden>
           <h3>How to claim</h3>
-          <p class="claim-sub">Send a <strong>screenshot of this screen</strong> with the word <strong>PRIZE</strong> — text, email, or Facebook DM. Or use booking-help. No codes.</p>
-          <ol class="claim-steps" id="claim-steps-list">
-            <li>Text screenshot + <strong>PRIZE</strong> to <strong>914-263-1311</strong></li>
-            <li>Or email screenshot + <strong>PRIZE</strong></li>
-            <li>Or <strong>DM us</strong> on Facebook · or open <strong>booking-help</strong></li>
-          </ol>
           <div class="cta-row" id="claim-contact-row"></div>
-          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Then show this screen at Sheehan Homestead when you pick up.</p>
         </div>
 
         <div class="review-prompt" id="review-prompt" hidden>
@@ -747,19 +737,13 @@
       "&body=" + encodeURIComponent("PRIZE\n\n(Attach a screenshot of your Stead Spin win screen.)");
     if (claimContactRow) {
       claimContactRow.innerHTML =
-        '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta">' +
-          '<span>Text screenshot + PRIZE</span>' +
-          '<small>to ' + CLAIM_SMS_DISPLAY + ' · Opens Messages</small>' +
-        '</a>' +
-        '<a class="btn-mail" href="' + mail + '" id="claim-email-cta">' +
-          '<span>Email screenshot + PRIZE</span>' +
-          '<small>' + CLAIM_EMAIL + '</small>' +
-        '</a>' +
-        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener">DM us on Facebook</a>' +
-        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Go to booking-help</a>';
+        '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta"><span>Text screenshot + PRIZE</span></a>' +
+        '<a class="btn-mail" href="' + mail + '" id="claim-email-cta"><span>Email screenshot + PRIZE</span></a>' +
+        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener"><span>DM screenshot + PRIZE</span></a>' +
+        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener"><span>Go to booking-help</span></a>';
     }
     var mapsLink = document.getElementById("farm-maps-link");
-    if (mapsLink) mapsLink.href = REVIEW_URL;
+    if (mapsLink) mapsLink.href = "https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL";
   }
 
   function openClaimContacts() {
