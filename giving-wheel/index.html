@@ -326,9 +326,9 @@
         <span>16 chances to win</span>
       </div>
 
-      <button class="btn btn-primary btn-block" type="button" id="spin-btn">Try Stead Spin</button>
+      <button class="btn btn-primary btn-block" type="button" id="reset-spins-btn">Reset spins</button>
+      <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
       <p class="rules-note" id="rules-note">About 3 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
-      <p style="text-align:center;margin:0.4rem 0 0"><button type="button" id="reset-spins-btn" style="background:none;border:0;color:#c9a227;font-weight:700;font-size:0.95rem;text-decoration:underline">Reset spins</button></p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
       <p class="backend-note" id="backend-note" hidden><!-- shown in DOM comment intent; kept for ops --></p>
 
@@ -391,7 +391,7 @@
   var EXPIRES_Y = 2026;
   var EXPIRES_M = 11;
   var EXPIRES_D = 1;
-  var STORE_DEVICE = "coc_farm_spin_month_v4_" + EVENT_ID;
+  var STORE_DEVICE = "coc_farm_spin_month_v5_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
