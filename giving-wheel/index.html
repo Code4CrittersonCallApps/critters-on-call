@@ -306,10 +306,12 @@
         <!-- consumer: no code / goat chip -->
       </div>
 
-      <ul class="tier-legend" aria-label="Gift colors">
-        <li><span class="tier-swatch is-common" aria-hidden="true"></span> Sage · a gift</li>
-        <li><span class="tier-swatch is-mid" aria-hidden="true"></span> Copper · a gift</li>
-        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Gold · rare</li>
+      <ul class="tier-legend" aria-label="What you can win">
+        <li><span class="tier-swatch" style="background:#F5F0E6;border-color:#c9b896" aria-hidden="true"></span> ∞ (free spin)</li>
+        <li><span class="tier-swatch is-common" aria-hidden="true"></span> $10 gift</li>
+        <li><span class="tier-swatch is-mid" aria-hidden="true"></span> $25 gift</li>
+        <li><span class="tier-swatch" style="background:#C9A87A;border-color:#d4b896" aria-hidden="true"></span> $50 gift</li>
+        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Gold card · $50 MSRP · ~$100 · ~40% off mobile orders</li>
       </ul>
 
       <div class="wheel-wrap">
@@ -338,8 +340,8 @@
         <p class="teaser" id="win-teaser" style="margin-top:0.35rem"></p>
         <p class="text-sm muted" id="win-note" style="margin-top:0.45rem;line-height:1.45"></p>
         <div class="premium-banner" id="premium-banner" hidden>
-          <strong>Gold membership · $50 MSRP · ~$100 value</strong>
-          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">Most valuable prize on the wheel (1 of 16). Membership + gift + ticket. Spins close after Gold.</p>
+          <strong>Gold card · $50 MSRP · ~$100 · ~40% off mobile orders</strong>
+          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">Membership, a gift, and a ticket. About 40% off mobile orders. Spins close after Gold.</p>
         </div>
         <div class="again-banner" id="again-banner" hidden>
           <strong>Nothing better than a free spin</strong>
@@ -450,7 +452,7 @@
     { id: "ticket-10-c", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#A8884E", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
     { id: "gift-50-b", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; combine or choose; anything except Gold membership)", teaser: "thrift gifts · farm gifts · petting zoo tickets", kind: "gift", tier: "mid", color: "#C9A87A", fulfill: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (combine or choose up to $50; anything except Gold membership). Claim below, then show this screen at Sheehan Homestead." },
     { id: "sample-cameo", label: "Personal farm video", short: "PERSONAL<br>VIDEO", value: "Personal farm video (think Cameo — celebrities wish you happy birthday)", teaser: "personal farm video · funny accents or voices", kind: "sample", tier: "mid", color: "#A8884E", fulfill: "Personal farm video (think Cameo — a birthday wish, funny accent, or voices). Claim below, then show this screen at Sheehan Homestead." },
-    { id: "gold-card", label: "Gold membership", short: "GOLD<br>~$100", value: "$50 MSRP · ~$100 value · rare (1 of 16)", teaser: "most valuable · membership + gift + ticket", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold membership — $50 MSRP / about $100 value (membership + gift + ticket). Claim below, then come to Sheehan Homestead. Spins close after Gold." }
+    { id: "gold-card", label: "Gold card", short: "GOLD<br>~$100", value: "$50 MSRP · ~$100 · ~40% off mobile orders", teaser: "membership · gift · ticket", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold card — $50 MSRP, about $100 value, about 40% off mobile orders (membership, a gift, and a ticket). Claim below, then come to Sheehan Homestead. Spins close after Gold." }
   ];
 
   var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
@@ -783,7 +785,7 @@
       writeDevice(topState);
     }
     document.getElementById("win-kicker").textContent =
-      isAgain ? "Free spin" : (isGrand ? "Gold membership" : "You won");
+      isAgain ? "Free spin" : (isGrand ? "Gold card" : "You won");
     winLabel.textContent = prize.label;
     winValue.textContent = prize.value;
     winTeaser.textContent = prize.teaser || "";
