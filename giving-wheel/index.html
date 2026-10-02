@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#c9a227" />
 <meta name="description" content="Critters on Call Stead Spin — 16 chances to win. Three spins a month. Claim at Sheehan Homestead." />
@@ -327,6 +328,7 @@
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn">Try Stead Spin</button>
       <p class="rules-note" id="rules-note">About 3 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
+      <p style="text-align:center;margin:0.4rem 0 0"><button type="button" id="reset-spins-btn" style="background:none;border:0;color:#c9a227;font-weight:700;font-size:0.95rem;text-decoration:underline">Reset spins</button></p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
       <p class="backend-note" id="backend-note" hidden><!-- shown in DOM comment intent; kept for ops --></p>
 
@@ -407,7 +409,14 @@
     try {
       var params = new URLSearchParams(location.search);
       if (params.get("reset") !== "1") return false;
-      localStorage.removeItem(STORE_DEVICE);
+      var keys = [];
+      for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+      keys.forEach(function (k) {
+        if (!k) return;
+        if (k.indexOf("coc_") === 0 || k.indexOf("farm_spin") !== -1 || k.indexOf("giving-wheel") !== -1) {
+          localStorage.removeItem(k);
+        }
+      });
       params.delete("reset");
       var cleanQuery = params.toString();
       var cleanUrl = location.pathname + (cleanQuery ? "?" + cleanQuery : "") + location.hash;
@@ -420,6 +429,18 @@
   }
 
   if (resetSpinStateIfRequested()) return;
+
+  document.getElementById("reset-spins-btn").addEventListener("click", function () {
+    var keys = [];
+    for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+    keys.forEach(function (k) {
+      if (!k) return;
+      if (k.indexOf("coc_") === 0 || k.indexOf("farm_spin") !== -1 || k.indexOf("giving-wheel") !== -1) {
+        localStorage.removeItem(k);
+      }
+    });
+    location.reload();
+  });
 
   /* 16 equal slices.
      Free Spin ×2 = TOP emotional (priceless redo)
