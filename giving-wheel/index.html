@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#c9a227" />
-<meta name="description" content="Critters on Call Farm Spin — 16 chances to win. Soft play prizes. Claim at Sheehan Homestead." />
+<meta name="description" content="Critters on Call Farm Spin — 16 chances to win. Three spins a month. Claim at Sheehan Homestead." />
 <meta name="robots" content="noindex, nofollow" />
 <meta property="og:title" content="Farm Spin · Critters on Call" />
-<meta property="og:description" content="16 chances to win on Farm Spin. Soft play prizes — claim at Sheehan Homestead." />
+<meta property="og:description" content="16 chances to win on Farm Spin. Three spins a month — claim at Sheehan Homestead." />
 <meta property="og:type" content="website" />
 <title>Farm Spin · Critters on Call</title>
 <link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs4" />
@@ -283,7 +283,7 @@
       <div style="text-align:center">
         <p class="tracker-kicker" style="margin:0">Sheehan Homestead · Farm Spin</p>
         <h1 class="event-title"><span>Farm Spin</span></h1>
-        <p class="event-sub">16 chances to win · soft play prizes</p>
+        <p class="event-sub">16 chances to win · three spins a month</p>
         <p class="soft-expiry" id="soft-expiry">Open through Jun 1, 2027 · 16 chances to win</p>
         <div class="ended-banner" id="ended-banner" hidden>
           <strong>Season closed</strong>
@@ -291,7 +291,7 @@
         </div>
         <div class="event-details" id="event-details">
           <strong>Claim at Sheehan Homestead</strong><br />
-          <span class="host">Callahan, FL · Google Maps &amp; reviews</span>
+          <span class="host">Callahan, FL</span>
         </div>
         <!-- consumer: no code / goat chip -->
       </div>
@@ -306,7 +306,7 @@
         <div class="wheel-pointer" aria-hidden="true">▼</div>
         <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
           <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
-            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs4" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
+            <img class="gold-card-art" src="assets/gold-card-hub.jpg?v=20261002fs5" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
           </span>
         </div>
       </div>
@@ -339,9 +339,9 @@
         <div class="cta-row" id="claim-cta-row"></div>
 
         <div class="farm-claim" id="farm-claim" hidden>
-          <a class="btn-maps" id="farm-maps-link" href="https://g.page/r/CS74JMTm3xrWEAE" target="_blank" rel="noopener">
+          <a class="btn-maps" id="farm-maps-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">
             Claim at Sheehan Homestead
-            <small>Opens Google · maps, reviews &amp; stars</small>
+            <small>Opens Google</small>
           </a>
         </div>
 
@@ -391,8 +391,8 @@
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
-  var FARM_PLACE_URL = "https://g.page/r/CS74JMTm3xrWEAE";
-  var FARM_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL";
+  var FARM_PLACE_URL = REVIEW_URL;
+  var FARM_MAPS_URL = REVIEW_URL;
   var CLAIM_SMS = "9142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
@@ -422,23 +422,23 @@
   /* 16 equal slices.
      Free Spin ×2 = TOP emotional (priceless redo)
      Gold ×1 = most $ valuable ($50 MSRP / ~$100)
-     $50 gift ×2 = choice of thrift / farm ticket
+     $50 gift ×2 = thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; anything except Gold membership)
      Rest mostly $10/$25 + Try a new service + App beta trial */
   var PRIZES = [
     { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#EDE6D9", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
     { id: "farm-10-a", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#4C6458", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "ticket-10-a", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#B8956C", fulfill: "Free $10 ticket. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "tour-25", label: "Free $25 farm tour", short: "$25<br>TOUR", value: "Free $25 farm tour", teaser: "$25 farm tour", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "Free $25 farm tour. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "ticket-10-a", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#B8956C", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "tour-25", label: "Free $25 petting zoo tour", short: "$25<br>TOUR", value: "Free $25 petting zoo / farm tour", teaser: "$25 petting zoo / farm tour", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "Free $25 petting zoo / farm tour. Claim below, then show this screen at Sheehan Homestead." },
     { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#F5F0E6", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
     { id: "farm-10-b", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "gift-50-a", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift (choice of thrift / farm ticket)", teaser: "combine or choose · ~$50", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$50 gift — choice of thrift / farm ticket (combine or pick to ~$50). Claim below, then show this screen at Sheehan Homestead." },
+    { id: "gift-50-a", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; combine or choose; anything except Gold membership)", teaser: "thrift gifts · farm gifts · petting zoo tickets", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (combine or choose up to $50; anything except Gold membership). Claim below, then show this screen at Sheehan Homestead." },
     { id: "try-service", label: "Try a new service", short: "TRY<br>NEW", value: "Try a new service (e.g. meet the swine)", teaser: "sample · meet the swine / new experience", kind: "sample", tier: "common", color: "#4C6458", fulfill: "Try a new service — e.g. meet the swine / sample a new experience. Claim below." },
-    { id: "ticket-10-b", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#C4A06A", fulfill: "Free $10 ticket. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "toy, comic, cards, or tumbler", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "ticket-10-b", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#C4A06A", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
     { id: "sample-app", label: "App beta trial", short: "APP<br>BETA", value: "Try out one of our web apps", teaser: "app beta · try a web app", kind: "sample", tier: "mid", color: "#B89A5C", fulfill: "App beta trial — try out one of our web apps. Claim below." },
-    { id: "ticket-10-c", label: "Free $10 ticket", short: "$10<br>TICKET", value: "Free $10 ticket", teaser: "$10 farm ticket", kind: "ticket", tier: "mid", color: "#A8884E", fulfill: "Free $10 ticket. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "gift-50-b", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift (choice of thrift / farm ticket)", teaser: "combine or choose · ~$50", kind: "gift", tier: "mid", color: "#C9A87A", fulfill: "$50 gift — choice of thrift / farm ticket (combine or pick to ~$50). Claim below, then show this screen at Sheehan Homestead." },
+    { id: "ticket-10-c", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#A8884E", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "gift-50-b", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; combine or choose; anything except Gold membership)", teaser: "thrift gifts · farm gifts · petting zoo tickets", kind: "gift", tier: "mid", color: "#C9A87A", fulfill: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (combine or choose up to $50; anything except Gold membership). Claim below, then show this screen at Sheehan Homestead." },
     { id: "sample-cameo", label: "Farm cameo video", short: "FARM<br>CAMEO", value: "Sample · short farm video", teaser: "short farm video sample", kind: "sample", tier: "mid", color: "#A8884E", fulfill: "Sample: a short farm video. Claim below." },
     { id: "gold-card", label: "Gold membership", short: "GOLD<br>~$100", value: "$50 MSRP · ~$100 value · rare (1 of 16)", teaser: "most valuable · membership + gift + ticket", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold membership — $50 MSRP / about $100 value (membership + gift + ticket). Claim below, then come to Sheehan Homestead. Spins close after Gold." }
   ];
@@ -747,7 +747,7 @@
         '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Go to booking-help</a>';
     }
     var mapsLink = document.getElementById("farm-maps-link");
-    if (mapsLink) mapsLink.href = FARM_PLACE_URL;
+    if (mapsLink) mapsLink.href = REVIEW_URL;
   }
 
   function openClaimContacts() {
