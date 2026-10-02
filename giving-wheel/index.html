@@ -306,9 +306,9 @@
         <!-- consumer: no code / goat chip -->
       </div>
 
-      <ul class="tier-legend" aria-label="Prize value colors">
-        <li><span class="tier-swatch is-common" aria-hidden="true"></span> Sage · everyday</li>
-        <li><span class="tier-swatch is-mid" aria-hidden="true"></span> Copper · mid</li>
+      <ul class="tier-legend" aria-label="Gift colors">
+        <li><span class="tier-swatch is-common" aria-hidden="true"></span> Sage · a gift</li>
+        <li><span class="tier-swatch is-mid" aria-hidden="true"></span> Copper · a gift</li>
         <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Gold · rare</li>
       </ul>
 
@@ -326,7 +326,6 @@
         <span>16 chances to win</span>
       </div>
 
-      <button class="btn btn-primary btn-block" type="button" id="reset-spins-btn">Reset spins</button>
       <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
       <p class="rules-note" id="rules-note">About 3 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
@@ -391,7 +390,7 @@
   var EXPIRES_Y = 2026;
   var EXPIRES_M = 11;
   var EXPIRES_D = 1;
-  var STORE_DEVICE = "coc_farm_spin_month_v5_" + EVENT_ID;
+  var STORE_DEVICE = "coc_farm_spin_month_v6_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
@@ -429,18 +428,6 @@
   }
 
   if (resetSpinStateIfRequested()) return;
-
-  document.getElementById("reset-spins-btn").addEventListener("click", function () {
-    var keys = [];
-    for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
-    keys.forEach(function (k) {
-      if (!k) return;
-      if (k.indexOf("coc_") === 0 || k.indexOf("farm_spin") !== -1 || k.indexOf("giving-wheel") !== -1) {
-        localStorage.removeItem(k);
-      }
-    });
-    location.reload();
-  });
 
   /* 16 equal slices.
      Free Spin ×2 = TOP emotional (priceless redo)
