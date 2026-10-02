@@ -3,7 +3,7 @@
 **Event ID:** `durbin-crossing-2026-09-27`  
 **Event date:** Sunday, September 27, 2026 (ET)  
 **Base URL (live after push):**  
-https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
+https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
 
 12 printed-in-house Golden Goat statues get distinct QR stickers. Same wheel page; `goat` query param tags which physical goat was scanned. Lead store saves `goat_id` with email/phone/prize.
 
@@ -11,18 +11,18 @@ https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-202
 
 | Goat | URL |
 |------|-----|
-| 01 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=01 |
-| 02 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=02 |
-| 03 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=03 |
-| 04 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=04 |
-| 05 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=05 |
-| 06 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=06 |
-| 07 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=07 |
-| 08 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=08 |
-| 09 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=09 |
-| 10 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=10 |
-| 11 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=11 |
-| 12 | https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=12 |
+| 01 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=01 |
+| 02 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=02 |
+| 03 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=03 |
+| 04 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=04 |
+| 05 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=05 |
+| 06 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=06 |
+| 07 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=07 |
+| 08 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=08 |
+| 09 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=09 |
+| 10 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=10 |
+| 11 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=11 |
+| 12 | https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?goat=12 |
 
 ## Local test
 

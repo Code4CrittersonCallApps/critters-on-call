@@ -10,6 +10,6 @@ Phone-first link-tree / game shells. **Not PDFs.**
 | Parent resources | `parents/` | Families · scholarships/VPK/PPEC/211 |
 | Investor / Michael | `investor/` | Same view: core four pins → dunk lists → investor pack → sales/tech |
 
-Live (GitHub Pages): https://onchainoffgrid-hub.github.io/critters-on-call/beta/
+Live (GitHub Pages): https://Code4CrittersonCallApps.github.io/critters-on-call/beta/
 
 PDFs under `/workspace/collateral/` preserved.

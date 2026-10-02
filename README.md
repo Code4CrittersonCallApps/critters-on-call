@@ -4,7 +4,7 @@ Sheehan Homestead · Callahan, FL
 
 Sales aid: **Book · Track · Spin · Gold/Deals · Pricing**
 
-Pricing (Family Menu locked Sep 16): https://onchainoffgrid-hub.github.io/critters-on-call/pricing.html
+Pricing (Family Menu locked Sep 16): https://Code4CrittersonCallApps.github.io/critters-on-call/pricing.html
 
 ## Open
 ```bash
@@ -13,13 +13,13 @@ python3 -m http.server 8766
 http://localhost:8766/
 
 ## Live
-- Home: https://onchainoffgrid-hub.github.io/critters-on-call/
-- **Games:** https://onchainoffgrid-hub.github.io/critters-play/
-- **Wheel:** https://onchainoffgrid-hub.github.io/critters-on-call/wheel.html
-- **Gold:** https://onchainoffgrid-hub.github.io/critters-on-call/gold.html
+- Home: https://Code4CrittersonCallApps.github.io/critters-on-call/
+- **Games:** https://Code4CrittersonCallApps.github.io/critters-play/
+- **Wheel:** https://Code4CrittersonCallApps.github.io/critters-on-call/wheel.html
+- **Gold:** https://Code4CrittersonCallApps.github.io/critters-on-call/gold.html
 
 ## Durbin Crossing event wheel (Sep 27, 2026)
-- **Live:** https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
+- **Live:** https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
 - Goat QRs: `?goat=01` … `?goat=12` — see `events/durbin-crossing-2026-09-27/QR-STICKERS.md`
 - Staff CSV: `events/durbin-crossing-2026-09-27/admin.html` (PIN 0927)
 - Outline (CRM + mom app): `events/durbin-crossing-2026-09-27/OUTLINE.md`
@@ -44,8 +44,8 @@ Consumer path from Critters Play unlocks:
 Demo re-show: `wheel.html?earn=gus&demo=1` (reopens claimed earn).
 
 ## Canonical investor / expansion surfaces
-- Jax investor geo: https://onchainoffgrid-hub.github.io/critters-on-call/exec/investor-jax-geo.html
-- Tampa expansion + map: https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-tampa.html · https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-tampa-map.html
-- Orlando expansion + map: https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-orlando.html · https://onchainoffgrid-hub.github.io/critters-on-call/exec/expansion-orlando-map.html
-- Operator dashboard: https://onchainoffgrid-hub.github.io/critters-on-call/exec/operator-dashboard.html
-- Peer cities: https://onchainoffgrid-hub.github.io/critters-on-call/exec/franchise-peer-cities.html
+- Jax investor geo: https://Code4CrittersonCallApps.github.io/critters-on-call/exec/investor-jax-geo.html
+- Tampa expansion + map: https://Code4CrittersonCallApps.github.io/critters-on-call/exec/expansion-tampa.html · https://Code4CrittersonCallApps.github.io/critters-on-call/exec/expansion-tampa-map.html
+- Orlando expansion + map: https://Code4CrittersonCallApps.github.io/critters-on-call/exec/expansion-orlando.html · https://Code4CrittersonCallApps.github.io/critters-on-call/exec/expansion-orlando-map.html
+- Operator dashboard: https://Code4CrittersonCallApps.github.io/critters-on-call/exec/operator-dashboard.html
+- Peer cities: https://Code4CrittersonCallApps.github.io/critters-on-call/exec/franchise-peer-cities.html

@@ -46,7 +46,7 @@ Calendar today (**Verified Cal**): Mommy & Me 10:00–11:00 @ 44065 Cushman · i
 - Kate Smith / Vesta CDD · animal pickup **8:45** (Crystal)  
 - Accepted: Kate Smith, Audrey, Crystal Oliver — **Verified Calendar**  
 - **Payment book: $1,256.66** Inv 172 Completed — **Verified Payments** (caller said $1,200 — use book)  
-- Wheel: https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
+- Wheel: https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
 
 ### Weather (outdoor) — honest conflict · **Estimated/forecast**
 - **Prefer:** Weather Underground hourly St. Augustine (Durbin corridor): mixed sun/cloud · High ~83°F · Low ~65°F · precip ~3% · wind NW 5–10 mph. Source: wunderground.com hourly date/2026-9-27  

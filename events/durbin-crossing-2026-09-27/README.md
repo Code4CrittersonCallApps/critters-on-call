@@ -9,7 +9,7 @@
 
 ## Live URL (MUST stay exact)
 
-https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
+https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/
 
 Goat variants: `?goat=01` … `?goat=12` — see `QR-STICKERS.md`.
 
@@ -38,7 +38,7 @@ http://localhost:8766/events/durbin-crossing-2026-09-27/
 
 Open this URL to clear the spin counters for this event and reload the wheel:
 
-https://onchainoffgrid-hub.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?reset=1
+https://Code4CrittersonCallApps.github.io/critters-on-call/events/durbin-crossing-2026-09-27/?reset=1
 
 The reset clears only these event-scoped localStorage keys:
 
