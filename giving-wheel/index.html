@@ -5,10 +5,10 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#c9a227" />
-<meta name="description" content="Critters on Call Stead Spin — 16 chances to win. Three spins a month. Claim at Sheehan Homestead." />
+<meta name="description" content="Critters on Call Stead Spin — 16 chances to win. Two spins a month. Claim at Sheehan Homestead." />
 <meta name="robots" content="noindex, nofollow" />
 <meta property="og:title" content="Stead Spin · Critters on Call" />
-<meta property="og:description" content="16 chances to win on Stead Spin. Three spins a month — claim at Sheehan Homestead." />
+<meta property="og:description" content="16 chances to win on Stead Spin. Two spins a month — claim at Sheehan Homestead." />
 <meta property="og:type" content="website" />
 <title>Stead Spin · Critters on Call</title>
 <link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs4" />
@@ -290,7 +290,7 @@
       <div style="text-align:center">
         <p class="tracker-kicker" style="margin:0">Sheehan Homestead · Stead Spin</p>
         <h1 class="event-title"><span>Stead Spin</span></h1>
-        <p class="event-sub">16 chances to win · three spins a month</p>
+        <p class="event-sub">16 chances to win · two spins a month</p>
         <p class="soft-expiry" id="soft-expiry">Prizes valid for the month of October 2026 · 16 chances to win</p>
         <div class="ended-banner" id="ended-banner" hidden>
           <strong>Season closed</strong>
@@ -324,12 +324,12 @@
       </div>
 
       <div class="spin-meta">
-        <span>This month: <strong id="spins-left">3 spins</strong></span>
+        <span>This month: <strong id="spins-left">2 spins</strong></span>
         <span>16 chances to win</span>
       </div>
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
-      <p class="rules-note" id="rules-note">About 3 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
+      <p class="rules-note" id="rules-note">About 2 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
       <p class="backend-note" id="backend-note" hidden><!-- shown in DOM comment intent; kept for ops --></p>
 
@@ -385,9 +385,9 @@
   var EVENT_ID = "giving-wheel-16";
   var EVENT_DATE = "standing";
   var EVENT_LABEL = "Stead Spin";
-  /* Soft device lock: ~3 prize spins per calendar month (ET). Free Spin does not consume.
+  /* Soft device lock: 2 prize spins per calendar month (ET) on the free wheel. Event wheels stay at 3. Free Spin does not consume.
      IP / email hard lock needs a backend later — honor device-month localStorage for now. */
-  var MAX_SPINS_PER_MONTH = 3;
+  var MAX_SPINS_PER_MONTH = 2;
   /* Prizes valid through October 31, 2026 (expires November 1 ET) */
   var EXPIRES_Y = 2026;
   var EXPIRES_M = 11;
