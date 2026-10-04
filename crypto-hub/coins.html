@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Coins · Crypto hub</title>
+<title>Coins · Investor hub</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--gold:#fde68a}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
@@ -10,11 +10,12 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
 .sub{color:var(--muted);font-size:.88rem;margin:0 0 14px}
 .filters{position:sticky;top:0;z-index:2;background:linear-gradient(180deg,var(--bg) 78%,transparent);padding:8px 0 10px}
-.checks{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
-.checks label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:8px 10px;font-size:.78rem;font-weight:700;min-height:40px}
-.checks input{accent-color:#3dd68c}
+.pick{display:flex;flex-direction:column;gap:6px;font-size:.78rem;font-weight:700;color:var(--muted);margin:0 0 8px}
+.pick select{width:100%;min-height:44px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:1rem;font-weight:700}
 #q{width:100%;min-height:44px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:1rem}
 .meta{font-size:.75rem;color:var(--muted);margin:8px 0}
+.banner{margin:0 0 10px;padding:12px 14px;border:1px solid #c9a22788;border-radius:12px;background:#241c10;color:#f5e6c8;font-size:.86rem}
+.banner a{color:#fde68a}
 .row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:0 0 8px;color:inherit;text-decoration:none}
 .row:hover{text-decoration:none;border-color:#3dd68c88}
 .tick{font-weight:800;letter-spacing:.02em}
@@ -27,20 +28,24 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
 .note a{color:#9ec1ff}
 </style></head>
 <body><div class="wrap">
-<p class="crumb"><a href="index.html">Crypto hub</a> → <b>Coins</b></p>
+<p class="crumb"><a href="index.html">Investor hub</a> → <b>Coins</b></p>
 <h1>Coins</h1>
-<p class="sub">Liquid names listed on at least two of these exchanges. Fetched 2026-10-04. Not every token, and not a price list.</p>
+<p class="sub">Same list as before: 40 coins, fetched 2026-10-04. The account picker starts at Uphold. Schwab has no coin list. Not a price list.</p>
 <div class="filters">
-  <div class="checks" id="checks">
-    <label><input type="checkbox" value="coinbase" checked/> Coinbase</label>
-    <label><input type="checkbox" value="robinhood" checked/> Robinhood</label>
-    <label><input type="checkbox" value="uphold" checked/> Uphold</label>
-    <label><input type="checkbox" value="kraken" checked/> Kraken</label>
-    <label><input type="checkbox" value="gemini" checked/> Gemini</label>
-  </div>
+  <label class="pick" for="account">Account
+    <select id="account">
+      <option value="uphold">Uphold</option>
+      <option value="schwab">Schwab IRA</option>
+      <option value="coinbase">Coinbase</option>
+      <option value="robinhood">Robinhood</option>
+      <option value="kraken">Kraken</option>
+      <option value="gemini">Gemini</option>
+    </select>
+  </label>
   <input id="q" type="search" placeholder="Filter by ticker or name" autocomplete="off"/>
 </div>
 <p class="meta" id="count"></p>
+<div id="schwab-note" class="banner" hidden>Schwab has no coin list on this page. Schwab's own self-directed page names stocks, ETFs, mutual funds, and options. The catalog is the Schwab account, not this list. <a href="schwab.html">Schwab notes</a></div>
 <div id="list"></div>
 <p class="note">Sources, read 2026-10-04:
   <a href="https://www.coinbase.com/legal/digital-asset-disclosures">Coinbase US trading assets</a> ·
@@ -50,25 +55,38 @@ h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
   <a href="https://support.gemini.com/hc/en-us/articles/115005868106-What-cryptos-are-supported-on-the-Gemini-Exchange">Gemini</a>
   (symbols from <a href="https://api.gemini.com/v1/symbols">api.gemini.com/v1/symbols</a>).
   Order among ties used CoinGecko market-cap rank the same day. Ranks are not shown.
-  Availability can change, and some coins are blocked in some states.</p>
+  Availability can change, and some coins are blocked in some states.
+  Strategy (MSTR) is still a stock stub, not a coin: <a href="asset.html?id=mstr">MSTR</a>.</p>
 <script src="coins.js"></script>
 <script>
 var labels = {coinbase:"Coinbase", robinhood:"Robinhood", uphold:"Uphold", kraken:"Kraken", gemini:"Gemini"};
-function selected(){
-  return Array.prototype.map.call(document.querySelectorAll("#checks input:checked"), function(el){ return el.value; });
+var order = ["uphold","schwab","coinbase","robinhood","kraken","gemini"];
+var account = document.getElementById("account");
+function accountFromUrl(){
+  var q = new URLSearchParams(location.search).get("account");
+  return order.indexOf(q) >= 0 ? q : "uphold";
 }
+account.value = accountFromUrl();
 function render(){
   var q = document.getElementById("q").value.trim().toLowerCase();
-  var on = selected();
+  var which = account.value;
   var list = document.getElementById("list");
+  var note = document.getElementById("schwab-note");
+  var count = document.getElementById("count");
+  if (which === "schwab"){
+    note.hidden = false;
+    list.innerHTML = "";
+    count.textContent = "Schwab IRA · no coin list";
+    return;
+  }
+  note.hidden = true;
   var shown = (window.COINS || []).filter(function(c){
     var hit = !q || c.ticker.toLowerCase().indexOf(q) >= 0 || c.name.toLowerCase().indexOf(q) >= 0;
-    var ex = c.exchanges.some(function(e){ return on.indexOf(e) >= 0; });
-    return hit && ex;
+    return hit && c.exchanges.indexOf(which) >= 0;
   });
-  document.getElementById("count").textContent = shown.length + " of " + (window.COINS||[]).length + " showing";
+  count.textContent = shown.length + " of " + (window.COINS||[]).length + " on " + labels[which];
   if (!shown.length){
-    list.innerHTML = '<p class="empty">Nothing matches. Turn an exchange back on or clear the text.</p>';
+    list.innerHTML = '<p class="empty">Nothing on ' + labels[which] + ' matches. Clear the text or pick another account. The coins are still in the list.</p>';
     return;
   }
   list.innerHTML = shown.map(function(c){
@@ -80,8 +98,13 @@ function render(){
       '<div class="ex">' + chips + '</div></a>';
   }).join("");
 }
+account.addEventListener("change", function(){
+  var url = new URL(location.href);
+  url.searchParams.set("account", account.value);
+  history.replaceState(null, "", url.pathname + url.search);
+  render();
+});
 document.getElementById("q").addEventListener("input", render);
-document.getElementById("checks").addEventListener("change", render);
 render();
 </script>
 </div></body></html>

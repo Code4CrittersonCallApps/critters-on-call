@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dashboard · Crypto hub</title>
+<title>Dashboard · Investor hub</title>
 <style>
 :root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--gold:#fde68a}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
@@ -15,7 +15,7 @@ h1{font-size:1.7rem;margin:0 0 8px;letter-spacing:-.02em}
 .note{color:var(--muted);font-size:.8rem}
 </style></head>
 <body><div class="wrap">
-<p class="crumb"><a href="index.html">Crypto hub</a> → <a href="coins.html">Coins</a> → <b id="crumb">Asset</b></p>
+<p class="crumb"><a href="index.html">Investor hub</a> → <a href="coins.html">Coins</a> → <b id="crumb">Asset</b></p>
 <p class="kicker" id="kicker">Stub</p>
 <h1 id="title">Asset</h1>
 <p class="note" id="sub"></p>
@@ -42,11 +42,11 @@ if (!asset){
   title.textContent = "Unknown asset";
   crumb.textContent = "Unknown";
   document.getElementById("sub").textContent = "That id is not on this hub.";
-  document.title = "Unknown · Crypto hub";
+  document.title = "Unknown · Investor hub";
 } else {
   title.textContent = asset.name + " (" + asset.ticker + ")";
   crumb.textContent = asset.ticker;
-  document.title = asset.ticker + " · Crypto hub";
+  document.title = asset.ticker + " · Investor hub";
   var line = asset.kind === "stock"
     ? "Strategy common stock. Dashboard not filled yet."
     : "Listed here as " + asset.name + ". Dashboard not filled yet.";
