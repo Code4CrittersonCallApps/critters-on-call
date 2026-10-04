@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Coins · Crypto hub</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--panel:#0e1626;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--accent:#3dd68c;--gold:#fde68a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:560px;margin:0 auto;padding:18px 14px 64px}
+.crumb{font-size:.82rem;color:var(--muted);margin:0 0 10px}.crumb a{color:#9ec1ff;font-weight:600}
+h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.88rem;margin:0 0 14px}
+.filters{position:sticky;top:0;z-index:2;background:linear-gradient(180deg,var(--bg) 78%,transparent);padding:8px 0 10px}
+.checks{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+.checks label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:8px 10px;font-size:.78rem;font-weight:700;min-height:40px}
+.checks input{accent-color:#3dd68c}
+#q{width:100%;min-height:44px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:1rem}
+.meta{font-size:.75rem;color:var(--muted);margin:8px 0}
+.row{display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:0 0 8px;color:inherit;text-decoration:none}
+.row:hover{text-decoration:none;border-color:#3dd68c88}
+.tick{font-weight:800;letter-spacing:.02em}
+.name{font-size:.92rem}
+.ex{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:.66rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 7px;color:#c5d0e6}
+.go{color:var(--gold);font-weight:800;font-size:.85rem}
+.empty{color:var(--muted);padding:18px 4px}
+.note{color:var(--muted);font-size:.75rem;margin-top:16px}
+.note a{color:#9ec1ff}
+</style></head>
+<body><div class="wrap">
+<p class="crumb"><a href="index.html">Crypto hub</a> → <b>Coins</b></p>
+<h1>Coins</h1>
+<p class="sub">Liquid names listed on at least two of these exchanges. Fetched 2026-10-04. Not every token, and not a price list.</p>
+<div class="filters">
+  <div class="checks" id="checks">
+    <label><input type="checkbox" value="coinbase" checked/> Coinbase</label>
+    <label><input type="checkbox" value="robinhood" checked/> Robinhood</label>
+    <label><input type="checkbox" value="uphold" checked/> Uphold</label>
+    <label><input type="checkbox" value="kraken" checked/> Kraken</label>
+    <label><input type="checkbox" value="gemini" checked/> Gemini</label>
+  </div>
+  <input id="q" type="search" placeholder="Filter by ticker or name" autocomplete="off"/>
+</div>
+<p class="meta" id="count"></p>
+<div id="list"></div>
+<p class="note">Sources, read 2026-10-04:
+  <a href="https://www.coinbase.com/legal/digital-asset-disclosures">Coinbase US trading assets</a> ·
+  <a href="https://robinhood.com/us/en/support/articles/coin-availability/">Robinhood coin availability</a> ·
+  <a href="https://api.uphold.com/v0/assets">Uphold asset list</a> ·
+  <a href="https://support.kraken.com/articles/360000678446-cryptocurrencies-available-on-kraken">Kraken</a> ·
+  <a href="https://support.gemini.com/hc/en-us/articles/115005868106-What-cryptos-are-supported-on-the-Gemini-Exchange">Gemini</a>
+  (symbols from <a href="https://api.gemini.com/v1/symbols">api.gemini.com/v1/symbols</a>).
+  Order among ties used CoinGecko market-cap rank the same day. Ranks are not shown.
+  Availability can change, and some coins are blocked in some states.</p>
+<script src="coins.js"></script>
+<script>
+var labels = {coinbase:"Coinbase", robinhood:"Robinhood", uphold:"Uphold", kraken:"Kraken", gemini:"Gemini"};
+function selected(){
+  return Array.prototype.map.call(document.querySelectorAll("#checks input:checked"), function(el){ return el.value; });
+}
+function render(){
+  var q = document.getElementById("q").value.trim().toLowerCase();
+  var on = selected();
+  var list = document.getElementById("list");
+  var shown = (window.COINS || []).filter(function(c){
+    var hit = !q || c.ticker.toLowerCase().indexOf(q) >= 0 || c.name.toLowerCase().indexOf(q) >= 0;
+    var ex = c.exchanges.some(function(e){ return on.indexOf(e) >= 0; });
+    return hit && ex;
+  });
+  document.getElementById("count").textContent = shown.length + " of " + (window.COINS||[]).length + " showing";
+  if (!shown.length){
+    list.innerHTML = '<p class="empty">Nothing matches. Turn an exchange back on or clear the text.</p>';
+    return;
+  }
+  list.innerHTML = shown.map(function(c){
+    var chips = c.exchanges.map(function(e){ return '<span class="chip">' + labels[e] + '</span>'; }).join("");
+    return '<a class="row" href="asset.html?id=' + encodeURIComponent(c.id) + '">' +
+      '<div class="tick">' + c.ticker + '</div>' +
+      '<div class="name">' + c.name + '</div>' +
+      '<div class="go">Open</div>' +
+      '<div class="ex">' + chips + '</div></a>';
+  }).join("");
+}
+document.getElementById("q").addEventListener("input", render);
+document.getElementById("checks").addEventListener("change", render);
+render();
+</script>
+</div></body></html>
