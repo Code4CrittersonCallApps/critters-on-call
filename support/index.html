@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How We Support You · Sheehan Homestead</title>
+<meta name="description" content="How Sheehan Homestead supports you: in person on the farm and at your event, by call or text, and with our free web apps. Callahan, FL.">
+<meta name="theme-color" content="#2F4F3E">
+<link rel="icon" href="assets/hen-mark-gold.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2F4F3E;--green-d:#22392d;--sage:#4F6559;--gold:#C9A227;--gold2:#D4B45A;--cream:#F3EEE4;--card:#FFFDF7;--ink:#1a241c;--line:#d9cfb8;--muted:#56614f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3",system-ui,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.5;font-size:17px}
+a{color:var(--green);font-weight:600}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--green);line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+header.hero{background:linear-gradient(180deg,var(--green) 0%,var(--green-d) 100%);color:#efe9da;border-bottom:4px solid var(--gold2);padding:22px 0 30px;text-align:center}
+.hero img.logo{width:170px;height:auto;display:block;margin:0 auto 6px}
+.hero .kicker{letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;font-weight:700;color:var(--gold2)}
+.hero h1{color:#fff;font-size:34px;margin:8px 0 10px}
+.hero p.lead{max-width:640px;margin:0 auto;font-size:18px;color:#e6dfcd}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;min-height:46px}
+.btn-gold{background:var(--gold2);color:var(--green-d)}
+.btn-ghost{border:2px solid var(--gold2);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+nav.lanes{position:sticky;top:0;z-index:5;background:rgba(243,238,228,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.lanes .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+nav.lanes a{flex:0 0 auto;text-decoration:none;font-size:15px;padding:8px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--green)}
+section{padding:38px 0 8px}
+.lane-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
+.lane-num{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:var(--green);color:var(--gold2);font-family:Lora,serif;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center}
+.lane-head h2{font-size:28px}
+.lane-head p{color:var(--muted);margin-top:4px;max-width:720px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:680px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid.g3{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.card h3{font-size:20px;margin-bottom:6px}
+.card p{font-size:16px}
+.card ul{margin:8px 0 0 18px;font-size:15.5px}
+.card li{margin:3px 0}
+.tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--sage);margin-bottom:4px}
+.app{display:flex;gap:14px;align-items:flex-start}
+.app .qr{flex:0 0 auto;width:104px;text-align:center}
+.app .qr img{width:104px;height:104px;border:1px solid var(--line);border-radius:10px;background:#fff;display:block}
+.app .qr span{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+.app .body{min-width:0}
+.app .link{display:inline-block;margin-top:8px;font-size:15px;word-break:break-all}
+.beta{font-size:11px;font-weight:700;background:var(--gold2);color:var(--green-d);padding:2px 7px;border-radius:999px;vertical-align:middle;margin-left:6px;letter-spacing:.05em}
+.callout{background:var(--green);color:#efe9da;border-radius:16px;padding:20px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:14px}
+.callout h3{color:#fff;font-size:22px}
+.callout p{color:#e6dfcd}
+.callout .qr img{width:96px;height:96px;border-radius:10px;display:block}
+.mix .card{padding:0;overflow:hidden}
+.mix .card img{width:100%;height:170px;object-fit:cover;display:block;border-bottom:3px solid var(--gold2)}
+.mix .card .in{padding:16px 18px 18px}
+.mix dl{margin-top:8px;font-size:15.5px}
+.mix dt{font-weight:700;color:var(--sage);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;margin-top:10px}
+.mix dd{margin:2px 0 0}
+footer{margin-top:40px;background:var(--green-d);color:#e6dfcd;padding:30px 0 36px;text-align:center;border-top:4px solid var(--gold2)}
+footer img{width:170px;display:block;margin:0 auto 8px}
+footer a{color:var(--gold2)}
+footer p{margin:4px 0;font-size:15.5px}
+.small{font-size:13.5px;color:#bfb8a6;margin-top:12px}
+@media(min-width:900px){.hero h1{font-size:46px}.hero img.logo{width:210px}body{font-size:18px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="assets/logo-wordmark.png" alt="Sheehan Homestead">
+    <div class="kicker">Critters on Call · Callahan, FL</div>
+    <h1>How we support you</h1>
+    <p class="lead">A real family farm, a real phone number, and a few free apps. Meet us in person, reach us by call or text, and keep the farm going at home on your phone. Use one, or mix all three.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="tel:+19142631311">Call 914-263-1311</a>
+      <a class="btn btn-ghost" href="sms:9142631311?&amp;body=GOAT">Text GOAT</a>
+      <a class="btn btn-ghost" href="https://www.sheehanhomestead.com/booking-help">Booking help</a>
+    </div>
+  </div>
+</header>
+
+<nav class="lanes" aria-label="Sections">
+  <div class="wrap">
+    <a href="#in-person">1 · In person</a>
+    <a href="#call-text">2 · Call &amp; text</a>
+    <a href="#apps">3 · Apps</a>
+    <a href="#mix">Mix and match</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- LANE 1 -->
+<section id="in-person">
+  <div class="lane-head">
+    <div class="lane-num">1</div>
+    <div>
+      <h2>In person</h2>
+      <p>Hands-on time with our goats, bunnies and chickens, at your place or ours. Our team guides every interaction.</p>
+    </div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><span class="tag">We come to you</span><h3>Mobile petting zoos</h3>
+      <p>The farm, delivered to your lawn. Gentle goats, bunnies and fowl in a fenced pen.</p>
+      <ul><li>Mini, Standard, and Standard plus a Full Side of seasonal babies</li><li>Fall fests, spring flings, pool days, school days, birthdays</li><li>We arrive early and set up in minutes</li></ul></div>
+    <div class="card"><span class="tag">Wellness</span><h3>Goat yoga</h3>
+      <p>A relaxed, all-levels session with our goats wandering, nibbling and sometimes climbing on board.</p>
+      <ul><li>At your community lawn or private on our farm</li><li>Boozy goat yoga for adult groups</li></ul></div>
+    <div class="card"><span class="tag">Learning</span><h3>STEM on Call</h3>
+      <p>Hands-on science and engineering challenges led by Ann-Marie Sheehan, M.Ed., a former public-school educator.</p>
+      <ul><li>Bridge, tower, flight and design builds</li><li>Nature and farm science lessons</li><li>Often paired with an animal visit</li></ul></div>
+    <div class="card"><span class="tag">Ages 0 to 5</span><h3>Mommy &amp; Me</h3>
+      <p>A gentle hour outdoors for little ones and their grown-ups: baby goats, sensory play and a calm farm stroll.</p>
+      <ul><li>On the farm Thursdays, 10:00 to 11:00 AM, and select Saturdays</li><li>Also available at your clubhouse or lawn</li></ul></div>
+    <div class="card"><span class="tag">Families &amp; co-ops</span><h3>Homeschool programs</h3>
+      <p>Nature, farm and STEM lessons with Ann-Marie on our Callahan farm, from single classes to co-op field trips.</p>
+      <ul><li>Step Up For Students reimbursement available for eligible families</li></ul></div>
+    <div class="card"><span class="tag">Come to the farm</span><h3>Visit Us</h3>
+      <p>Spend a morning on the homestead at 44065 Cushman Road, Callahan.</p>
+      <ul><li>By appointment, after 9:30 AM</li><li>Everyone signs a waiver on entry</li><li>Please leave pets at home</li></ul></div>
+    <div class="card"><span class="tag">Community care</span><h3>Senior, PPEC &amp; VPK visits</h3>
+      <p>Gentle, mobile animal visits for assisted living, memory care, adult day, PPEC medical daycares and VPK classrooms.</p>
+      <ul><li>About 60 minutes; bunnies are usually best</li><li>Standing monthly or lighter quarterly visits</li></ul></div>
+    <div class="card"><span class="tag">Take home</span><h3>Printed take-homes</h3>
+      <p>Something on paper when we leave.</p>
+      <ul><li>STEM leave-behind lesson with petting zoo visits</li><li>Event flyers and menus with QR codes to book</li><li>Critter Gold card for members</li></ul></div>
+  </div>
+</section>
+
+<!-- LANE 2 -->
+<section id="call-text">
+  <div class="lane-head">
+    <div class="lane-num">2</div>
+    <div>
+      <h2>Call &amp; text</h2>
+      <p>A real person on the other end. Michael and Ann-Marie answer your questions, help you pick dates and keep your plan on track.</p>
+    </div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><span class="tag">Ask the owners</span><h3>Call or text 914-263-1311</h3>
+      <p>Questions about animals, space, ages or what fits your event? Ask us directly.</p>
+      <a class="link" href="tel:+19142631311">Call now</a> · <a class="link" href="sms:9142631311">Send a text</a></div>
+    <div class="card"><span class="tag">Deals</span><h3>Text GOAT for discounts</h3>
+      <p>Text the word GOAT to 914-263-1311 to hear about current discounts and promotions.</p>
+      <a class="link" href="sms:9142631311?&amp;body=GOAT">Text GOAT</a></div>
+    <div class="card"><span class="tag">Scheduling help</span><h3>Book with help</h3>
+      <p>Use our booking help page online, or call or text and we will walk you through it.</p>
+      <a class="link" href="https://www.sheehanhomestead.com/booking-help">sheehanhomestead.com/booking-help</a></div>
+    <div class="card"><span class="tag">For communities</span><h3>One planning call</h3>
+      <p>A 20 to 30 minute call about your calendar, spaces and residents. Then we send a 12-month calendar with your dates held.</p></div>
+    <div class="card"><span class="tag">Before your event</span><h3>Reminder check-in</h3>
+      <p>We check in before each event to confirm headcount, space and add-ons. Weather problem? Weather reschedules are free.</p></div>
+    <div class="card"><span class="tag">Other ways</span><h3>Message or email</h3>
+      <p>Message <a href="https://www.facebook.com/profile.php?id=61556795506312">Sheehan Homestead on Facebook</a> or email <a href="mailto:sheehanhomestead@gmail.com">sheehanhomestead@gmail.com</a>.</p></div>
+  </div>
+  <div class="callout">
+    <div><h3>Scan to text GOAT</h3><p>Opens a text to 914-263-1311 on your phone.</p></div>
+    <div class="qr"><img src="assets/qr/text-goat.png" alt="QR code: text GOAT to 914-263-1311"></div>
+  </div>
+</section>
+
+<!-- LANE 3 -->
+<section id="apps">
+  <div class="lane-head">
+    <div class="lane-num">3</div>
+    <div>
+      <h2>Apps</h2>
+      <p>Free web apps that open on any phone. No download and no login. Scan a code or tap a link.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card app"><div class="qr"><img src="assets/qr/critters-play.png" alt="QR code for Critters Play"><span>Scan to play</span></div>
+      <div class="body"><span class="tag">Games</span><h3>Critters Play</h3>
+      <p>Wholesome farm games starring the homestead crew. Read a short farm fact, then play: Pyrenees Guard, Evade Elon, Barncat Defender, Ducks to Bed and Critter Match.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/critters-play/">Open Critters Play</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/farm-school.png" alt="QR code for Farm School"><span>Scan to learn</span></div>
+      <div class="body"><span class="tag">Lessons</span><h3>Farm School</h3>
+      <p>Short lessons on animals, plants, water and weather, each with a five-question check.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/critters-play/farm-school/">Open Farm School</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/stead-spin.png" alt="QR code for Stead Spin"><span>Scan to spin</span></div>
+      <div class="body"><span class="tag">Prize wheel</span><h3>Stead Spin</h3>
+      <p>Two free spins a month on your phone. Prizes are claimed in person at Sheehan Homestead.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/critters-on-call/giving-wheel/">Open Stead Spin</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/critter-gold.png" alt="QR code for Critter Gold"><span>Scan for deals</span></div>
+      <div class="body"><span class="tag">Membership</span><h3>Critter Gold &amp; Deals</h3>
+      <p>Our Critter Gold membership, Saturday Sale specials and how to claim Stead Spin wins. Ask at the homestead or text GOAT.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/critters-on-call/gold.html">Open Critter Gold</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/animal-facts.png" alt="QR code for Animal Facts"><span>Scan for facts</span></div>
+      <div class="body"><span class="tag">Kids</span><h3>Animal Facts <span class="beta">BETA</span></h3>
+      <p>Read a short homestead fact, then answer one gentle question. Bunnies are live now, with goats, chickens and ducks on the way.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/critters-on-call/beta/kids/">Open Animal Facts</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/parent-resources.png" alt="QR code for Parent Resources"><span>Scan for help</span></div>
+      <div class="body"><span class="tag">Parents</span><h3>Parent Resources <span class="beta">BETA</span></h3>
+      <p>Plain-words links to official Florida help: Step Up For Students scholarships, free VPK, PPEC medical daycare, KidCare, WIC and 211. We help you find the right site; we do not file for you.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/critters-on-call/beta/parents/">Open Parent Resources</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/step-right-up.png" alt="QR code for Step Right Up"><span>Scan to start</span></div>
+      <div class="body"><span class="tag">Scholarships</span><h3>Step Right Up</h3>
+      <p>A step-by-step guide to feel confident about Florida scholarship filing: Step Up For Students, PEP for homeschool, VPK and PPEC. Official applications stay at stepupforstudents.org.</p>
+      <a class="link" href="https://code4crittersoncallapps.github.io/step-right-up/">Open Step Right Up</a></div></div>
+    <div class="card app"><div class="qr"><img src="assets/qr/booking-help.png" alt="QR code for booking help"><span>Scan to book</span></div>
+      <div class="body"><span class="tag">Booking</span><h3>Book online</h3>
+      <p>Our booking help page on sheehanhomestead.com. See all services at sheehanhomestead.com/services.</p>
+      <a class="link" href="https://www.sheehanhomestead.com/booking-help">Open booking help</a></div></div>
+  </div>
+</section>
+
+<!-- MIX -->
+<section id="mix" class="mix">
+  <div class="lane-head">
+    <div class="lane-num">+</div>
+    <div>
+      <h2>Mix and match for your community</h2>
+      <p>One partner can use all three lanes. Here is how that can look.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card"><img src="assets/hoa-cartoon.jpg" alt="Illustration of a community event with farm animals"><div class="in">
+      <h3>CDD or HOA</h3>
+      <dl><dt>In person</dt><dd>Seasonal anchor events like a fall fest or spring fling, plus goat yoga or Mommy &amp; Me between them.</dd>
+      <dt>Call &amp; text</dt><dd>One planning call, a 12-month calendar with your dates held, and a check-in before each event.</dd>
+      <dt>Apps</dt><dd>Share Stead Spin and Critters Play with residents so the fun keeps going between events.</dd></dl></div></div>
+    <div class="card"><img src="assets/pta-fall-festival-cartoon.jpg" alt="Illustration of a school fall festival with farm animals"><div class="in">
+      <h3>School, VPK or PTA</h3>
+      <dl><dt>In person</dt><dd>A petting zoo at your festival or school day, or STEM on Call with a printed leave-behind lesson.</dd>
+      <dt>Call &amp; text</dt><dd>Call or text to pick a date, plan your space and confirm headcount.</dd>
+      <dt>Apps</dt><dd>Farm School and Animal Facts for follow-up learning in class or at home.</dd></dl></div></div>
+    <div class="card"><img src="assets/sr-visit-cartoon.jpg" alt="Illustration of a gentle animal visit at a senior center"><div class="in">
+      <h3>Senior center or memory care</h3>
+      <dl><dt>In person</dt><dd>A gentle visit of about 60 minutes, usually bunnies, on a monthly or quarterly schedule.</dd>
+      <dt>Call &amp; text</dt><dd>Set your visit rhythm with one call, and reach the owners directly for any changes.</dd>
+      <dt>Apps</dt><dd>Visiting grandkids can play Critters Play with their grandparents.</dd></dl></div></div>
+    <div class="card"><img src="assets/homeschool-farm-cartoon.jpg" alt="Illustration of a homeschool family on the farm"><div class="in">
+      <h3>Family or homeschool</h3>
+      <dl><dt>In person</dt><dd>Mommy &amp; Me Thursdays, a homeschool class or co-op field trip, or a Visit Us morning on the farm.</dd>
+      <dt>Call &amp; text</dt><dd>Text GOAT for discounts, or call to book your visit.</dd>
+      <dt>Apps</dt><dd>Step Right Up and Parent Resources for scholarships and VPK, then Stead Spin and Critters Play for fun.</dd></dl></div></div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <img src="assets/logo-wordmark-gold.png" alt="Sheehan Homestead">
+    <p><strong>Sheehan Homestead LLC</strong> · Family-run by Michael and Ann-Marie Sheehan</p>
+    <p>44065 Cushman Road, Callahan, FL 32011</p>
+    <p><a href="tel:+19142631311">914-263-1311</a> (call or text) · <a href="mailto:sheehanhomestead@gmail.com">sheehanhomestead@gmail.com</a></p>
+    <p><a href="https://www.sheehanhomestead.com/">sheehanhomestead.com</a> · <a href="https://www.facebook.com/profile.php?id=61556795506312">Facebook</a></p>
+    <p class="small">In Critters We Trust</p>
+  </div>
+</footer>
+</body>
+</html>
