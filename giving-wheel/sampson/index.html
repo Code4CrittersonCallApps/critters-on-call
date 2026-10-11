@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#c9a227" />
+<meta name="description" content="Critters on Call Stead Spin — 16 chances to win. Two spins a month. Claim at Sheehan Homestead." />
+<meta name="robots" content="noindex, nofollow" />
+<meta property="og:title" content="Stead Spin · Critters on Call" />
+<meta property="og:description" content="16 chances to win on Stead Spin. Two spins a month — claim at Sheehan Homestead." />
+<meta property="og:type" content="website" />
+<title>Stead Spin · Critters on Call</title>
+<link rel="icon" type="image/png" href="../assets/brand-chicken.png?v=20261002fs4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/styles.css?v=20261002fs4" />
+<style>
+  /* Forest greens from farm brand; hub uses Gold Membership card art. */
+  :root {
+    --forest: #4C6458;
+    --forest-deep: #3A4F45;
+    --sage: #5A7366;
+    --card-gold: #c9a227;
+    --gold-deep: #B8923A;
+    --cream: #F3EEE4;
+    --leaf: #4C6458;
+  }
+  .main { padding-bottom: calc(2rem + var(--safe-b)); }
+  .event-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    border-radius: 999px; border: 1px solid rgba(76,100,88,0.55);
+    background: rgba(76,100,88,0.4); color: #e8efe9;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0.35rem 0.75rem;
+  }
+  .event-title {
+    font-family: var(--display); font-size: 1.45rem; text-align: center;
+    margin: 0.5rem 0 0.2rem; line-height: 1.2;
+  }
+  .event-title span { color: var(--card-gold); }
+  .event-sub { text-align: center; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+  .event-details {
+    margin: 0.75rem auto 0; max-width: 22rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.85rem;
+    border: 1px solid rgba(201,162,39,0.4);
+    background: rgba(58,79,69,0.45);
+    text-align: center; font-size: 0.78rem; line-height: 1.45; color: #e8efe9;
+  }
+  .event-details strong { color: var(--card-gold); font-weight: 700; }
+  .event-details { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+  .event-details .host { display: block; margin-top: 0.15rem; font-size: 0.72rem; color: var(--muted); }
+  .event-details .claim-place {
+    color: inherit; text-decoration: none; display: block; text-align: center; width: 100%;
+  }
+  .event-details .claim-place strong { text-decoration: underline; text-underline-offset: 3px; }
+  .event-details .claim-fb {
+    display: block; margin-top: 0.35rem; color: var(--card-gold);
+    font-weight: 700; font-size: 0.8rem; text-align: center; text-decoration: none;
+  }
+  /* Hub: Critters on Call Gold Membership card art */
+  .dc-wheel .wheel-hub {
+    inset: 22%;
+    border: 2.5px solid #f0d878;
+    background: #1a1508;
+    box-shadow:
+      0 0 0 1px rgba(90,70,20,0.55),
+      inset 0 2px 4px rgba(255,255,255,0.25),
+      inset 0 -3px 6px rgba(80,60,10,0.45),
+      0 4px 14px rgba(0,0,0,0.35);
+    overflow: hidden;
+    padding: 0;
+  }
+  .dc-wheel .wheel-hub .gold-card-art {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 42%;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+  .dc-wheel .wheel-hub .gold-card-art {
+    animation: dc-hub-animal-breathe 4.2s ease-in-out infinite;
+    transform-origin: center center;
+  }
+  @keyframes dc-hub-animal-breathe {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-1px) scale(1.01); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dc-wheel .wheel-hub .gold-card-art { animation: none; }
+  }
+  .dc-brand-logo {
+    object-fit: contain;
+    padding: 0.18rem;
+  }
+  .spin-meta {
+    display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;
+    font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;
+  }
+  .spin-meta strong { color: var(--fg); }
+  .prize-wheel.dc-wheel {
+    background: #3A4F45;
+    box-shadow:
+      0 0 0 3px rgba(76,100,88,0.6),
+      0 0 28px rgba(201,162,39,0.35),
+      inset 0 0 0 2px rgba(0,0,0,0.35);
+  }
+  .wheel-label.is-on-dark { color: #F3EEE4; font-weight: 700; }
+  .wheel-label.is-on-light { color: #1a1508; font-weight: 700; }
+  .wheel-label.is-premium { color: #1a1508; font-weight: 800; text-shadow: 0 1px 0 rgba(255,245,220,0.55); }
+  .prize-list li[data-tier="common"] {
+    background: #4C6458; border-color: #86A093; color: #F3EEE4;
+  }
+  .prize-list li[data-tier="common"].is-cream {
+    background: #EDE6D9; border-color: #c9b896; color: #1a1508;
+  }
+  .prize-list li[data-tier="mid"] {
+    background: #B8956C; border-color: #d4b896; color: #1a1508;
+  }
+  .prize-list li[data-tier="rare"] {
+    background: linear-gradient(145deg, #B8923A 0%, #E8C547 45%, #C9A227 100%);
+    border-color: #f0d878; color: #1a1508;
+    box-shadow: 0 0 0 1px rgba(201,162,39,0.65), 0 2px 10px rgba(201,162,39,0.4);
+    font-weight: 700;
+  }
+  .prize-list li[data-tier] .muted { color: inherit; opacity: 0.82; }
+  .prize-list li[data-tier].is-won {
+    box-shadow: 0 0 0 2px rgba(240,216,120,0.95), 0 3px 10px rgba(0,0,0,0.28);
+  }
+  /* Tier KEY — small legend only (not section headers) */
+  .tier-legend {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 0.45rem;
+    margin: 0.35rem 0 0.55rem; padding: 0;
+    list-style: none;
+  }
+  .tier-legend li {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.68rem; font-weight: 600; color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .tier-swatch {
+    width: 0.85rem; height: 0.85rem; border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.2); flex-shrink: 0;
+  }
+  .tier-swatch.is-common { background: #4C6458; border-color: #86A093; }
+  .tier-swatch.is-mid { background: #B8956C; border-color: #d4b896; }
+  .tier-swatch.is-rare {
+    background: linear-gradient(145deg, #B8923A, #E8C547, #C9A227);
+    border-color: #f0d878;
+    box-shadow: 0 0 6px rgba(201,162,39,0.55);
+  }
+  .premium-banner {
+    border-radius: 0.85rem; border: 2px solid var(--card-gold);
+    background: linear-gradient(145deg, #2a2414, #1c1410);
+    padding: 0.85rem; text-align: center; margin-top: 0.5rem;
+  }
+  .premium-banner strong { color: var(--card-gold); }
+  .rules-note {
+    font-size: 0.72rem; color: var(--muted); text-align: center;
+    line-height: 1.4; margin: 0;
+  }
+  .btn.is-locked { opacity: 0.55; cursor: not-allowed; }
+  .cta-row { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+  .claim-panel {
+    margin-top: 0.85rem; padding: 0.9rem;
+    border-radius: 0.9rem;
+    border: 2px solid rgba(201,162,39,0.55);
+    background: linear-gradient(160deg, rgba(76,100,88,0.5), rgba(26,36,28,0.9));
+  }
+  .claim-panel h3 {
+    font-family: var(--display); font-size: 1.05rem; margin: 0 0 0.35rem;
+    color: var(--cream); text-align: center;
+  }
+  .claim-panel .claim-sub {
+    font-size: 0.72rem; color: var(--muted); text-align: center;
+    line-height: 1.35; margin: 0 0 0.75rem;
+  }
+  .btn-sms, .btn-mail, .btn-claim-link {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.2rem; text-decoration: none; text-align: center;
+    background: rgba(90,115,102,0.55); color: #F3EEE4 !important;
+    font-weight: 800; font-size: 1.15rem;
+    min-height: 5.5rem; padding: 1.15rem 1rem; border-radius: 1rem;
+    border: 2px solid rgba(201,162,39,0.55);
+  }
+  .btn-sms small, .btn-mail small {
+    font-size: 0.72rem; font-weight: 600; opacity: 0.85; letter-spacing: 0.02em;
+  }
+  .again-banner {
+    border-radius: 0.85rem; border: 2px dashed rgba(201,162,39,0.55);
+    background: rgba(76,100,88,0.4); padding: 0.85rem; text-align: center; margin-top: 0.5rem;
+  }
+  .again-banner strong { color: var(--card-gold); }
+  .farm-claim {
+    margin-top: 0.75rem; text-align: center;
+  }
+  .farm-claim .btn-maps {
+    display: block; text-decoration: none; text-align: center;
+    padding: 0.9rem 1rem; border-radius: 0.85rem;
+    border: 2px solid rgba(201,162,39,0.75);
+    background: linear-gradient(160deg, rgba(201,162,39,0.28), rgba(26,36,28,0.95));
+    color: var(--card-gold); font-weight: 800; font-size: 1rem;
+  }
+  .farm-claim .btn-maps small {
+    display: block; margin-top: 0.3rem;
+    font-size: 0.72rem; font-weight: 500; color: var(--muted);
+  }
+  .dc-wheel .wheel-label {
+    font-size: 0.34rem;
+    letter-spacing: 0;
+  }
+  .dc-wheel .wheel-label span {
+    top: 0.72rem;
+    width: 2.35rem;
+    max-width: 18%;
+    line-height: 1.05;
+    word-break: break-word;
+    transform: translateX(-50%);
+  }
+  .dc-wheel .wheel-label.is-sample { color: inherit; }
+  .dc-wheel .wheel-label span.is-flipped {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  .ended-banner {
+    margin: 0.75rem auto 0; max-width: 22rem;
+    padding: 1rem 0.9rem;
+    border-radius: 0.85rem;
+    border: 2px solid rgba(201,162,39,0.55);
+    background: rgba(26,36,28,0.92);
+    text-align: center;
+  }
+  .ended-banner strong { color: var(--card-gold); font-size: 1.05rem; display: block; margin-bottom: 0.35rem; }
+  .ended-banner p { font-size: 0.8rem; color: var(--muted); line-height: 1.4; margin: 0; }
+  .soft-expiry {
+    text-align: center; font-size: 0.72rem; color: var(--muted);
+    margin: 0.35rem 0 0; line-height: 1.35;
+  }
+  .review-prompt {
+    margin-top: 0.85rem; padding: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(201,162,39,0.4);
+    background: rgba(76,100,88,0.35);
+    text-align: center;
+  }
+  .review-prompt a {
+    color: var(--card-gold); font-weight: 700; font-size: 0.95rem;
+    text-decoration: underline;
+  }
+  .review-prompt .hint { font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; }
+  .teaser { font-size: 0.72rem; color: var(--muted); font-style: italic; }
+  .claim-steps {
+    margin: 0 0 0.75rem; padding: 0 0 0 1.15rem;
+    font-size: 0.78rem; line-height: 1.45; color: var(--cream);
+  }
+  .claim-steps li { margin: 0.35rem 0; }
+  .claim-steps strong { color: var(--card-gold); }
+  .month-lock-note {
+    text-align: center; font-size: 0.78rem; color: var(--muted);
+    line-height: 1.4; margin: 0.35rem 0 0;
+  }
+  .month-lock-note strong { color: var(--card-gold); }
+  .backend-note {
+    font-size: 0.65rem; color: var(--muted); text-align: center;
+    line-height: 1.35; margin: 0.5rem 0 0; opacity: 0.85;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo dc-brand-logo" src="../assets/brand-chicken.png?v=20261002fs4" alt="" width="36" height="36" />
+        <span>
+          <span class="brand-title">Critters on Call</span>
+          <span class="brand-sub">Stead Spin</span>
+        </span>
+      </a>
+      <span class="event-badge" id="event-badge">16 chances to win</span>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="stack" style="gap:1.1rem">
+      <div style="text-align:center">
+        <p class="tracker-kicker" style="margin:0">Sheehan Homestead · Sampson Creek Spin</p>
+        <p class="event-sub" style="font-weight:700;color:var(--card-gold);margin:0">Sampson Creek neighbors</p>
+        <h1 class="event-title"><span>Sampson Creek Spin</span></h1>
+        <p class="event-sub">16 chances to win · two spins a month</p>
+        <p class="soft-expiry" id="soft-expiry">Prizes valid for the month of October 2026 · 16 chances to win</p>
+        <div class="ended-banner" id="ended-banner" hidden>
+          <strong>Season closed</strong>
+          <p>This Stead Spin closed after October 31, 2026. Thanks for spinning with Critters on Call.</p>
+        </div>
+        <div class="event-details" id="event-details">
+          <a class="claim-place" href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">
+            <strong>Claim at Sheehan Homestead</strong>
+            <span class="host">Callahan, FL</span>
+          </a>
+          <a class="claim-fb" href="https://www.facebook.com/profile.php?id=61556795506312" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <!-- consumer: no code / goat chip -->
+      </div>
+
+      <ul class="tier-legend" aria-label="What you can win">
+        <li><span class="tier-swatch" style="background:#F5F0E6;border-color:#c9b896" aria-hidden="true"></span> ∞ (free spin)</li>
+        <li><span class="tier-swatch is-common" aria-hidden="true"></span> $10 gift</li>
+        <li><span class="tier-swatch is-mid" aria-hidden="true"></span> $25 gift</li>
+        <li><span class="tier-swatch" style="background:#C9A87A;border-color:#d4b896" aria-hidden="true"></span> $50 gift</li>
+        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Gold card · $50 MSRP · ~$100 · ~40% off mobile orders</li>
+      </ul>
+
+      <div class="wheel-wrap">
+        <div class="wheel-pointer" aria-hidden="true">▼</div>
+        <div class="prize-wheel dc-wheel" id="prize-wheel" style="transform:rotate(0deg)">
+          <span class="wheel-hub gold-card-hub" aria-label="Critters on Call Gold Membership card — Sophie and farm critters">
+            <img class="gold-card-art" src="../assets/gold-card-hub.jpg?v=20261002fs7" alt="Critters on Call Gold Membership card" width="160" height="160" decoding="async" />
+          </span>
+        </div>
+      </div>
+
+      <div class="spin-meta">
+        <span>This month: <strong id="spins-left">2 spins</strong></span>
+        <span>16 chances to win</span>
+      </div>
+
+      <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
+      <p class="rules-note" id="rules-note">About 2 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
+      <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
+      <p class="backend-note" id="backend-note" hidden><!-- shown in DOM comment intent; kept for ops --></p>
+
+      <div class="win-card" id="win-card" hidden>
+        <p class="tracker-kicker" id="win-kicker">You won</p>
+        <h2 class="font-display" id="win-label" style="font-size:1.25rem;margin-top:0.35rem"></h2>
+        <p class="text-sm" id="win-value" style="margin-top:0.25rem;color:var(--card-gold);font-weight:600"></p>
+        <p class="teaser" id="win-teaser" style="margin-top:0.35rem"></p>
+        <p class="text-sm muted" id="win-note" style="margin-top:0.45rem;line-height:1.45"></p>
+        <div class="premium-banner" id="premium-banner" hidden>
+          <strong>Gold card · $50 MSRP · ~$100 · ~40% off mobile orders</strong>
+          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">Membership, a gift, and a ticket. About 40% off mobile orders. Spins close after Gold.</p>
+        </div>
+        <div class="again-banner" id="again-banner" hidden>
+          <strong>Nothing better than a free spin</strong>
+          <p class="text-xs muted" style="margin-top:0.35rem;line-height:1.4">Life doesn’t always give a redo — the wheel does. This doesn’t use your monthly spins. Hit Spin again.</p>
+        </div>
+
+        <div class="cta-row" id="claim-cta-row"></div>
+
+        <div class="farm-claim" id="farm-claim" hidden>
+          <a class="btn-maps" id="farm-maps-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">
+            Claim at Sheehan Homestead
+            <small>Opens Google Maps</small>
+          </a>
+        </div>
+
+        <div class="claim-panel" id="claim-panel" hidden>
+          <h3>How to claim</h3>
+          <div class="cta-row" id="claim-contact-row"></div>
+        </div>
+
+        <div class="review-prompt" id="review-prompt" hidden>
+          <a id="review-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">Enjoyed your spin? Leave a 5-star Google review</a>
+          <p class="hint">Opens Sheehan Homestead on Google · screenshot your result + leave 5 stars</p>
+        </div>
+
+        <div class="cta-row" id="win-ctas"></div>
+      </div>
+
+      <ul class="prize-list" id="prize-list"></ul>
+
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  var EVENT_ID = "giving-wheel-16-sampson";
+  var EVENT_DATE = "standing";
+  var EVENT_LABEL = "Sampson Creek Spin";
+  /* Soft device lock: 2 prize spins per calendar month (ET) on the free wheel. Event wheels stay at 3. Free Spin does not consume.
+     IP / email hard lock needs a backend later — honor device-month localStorage for now. */
+  var MAX_SPINS_PER_MONTH = 2;
+  /* Prizes valid through October 31, 2026 (expires November 1 ET) */
+  var EXPIRES_Y = 2026;
+  var EXPIRES_M = 11;
+  var EXPIRES_D = 1;
+  var STORE_DEVICE = "coc_farm_spin_month_v6_" + EVENT_ID;
+  var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
+  var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
+  var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
+  var FARM_PLACE_URL = REVIEW_URL;
+  var FARM_MAPS_URL = REVIEW_URL;
+  var CLAIM_SMS = "9142631311";
+  var CLAIM_SMS_DISPLAY = "914-263-1311";
+  var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
+  var BOOKING_URL = "https://www.sheehanhomestead.com/booking-help";
+  var FB_LABEL = "Sheehan Homestead";
+  var WEBHOOK_STUB = "";
+
+  /* Optional ?reset=1 clears local month lock for this wheel. */
+  function resetSpinStateIfRequested() {
+    try {
+      var params = new URLSearchParams(location.search);
+      if (params.get("reset") !== "1") return false;
+      var keys = [];
+      for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+      keys.forEach(function (k) {
+        if (!k) return;
+        if (k.indexOf("coc_") === 0 || k.indexOf("farm_spin") !== -1 || k.indexOf("giving-wheel") !== -1) {
+          localStorage.removeItem(k);
+        }
+      });
+      params.delete("reset");
+      var cleanQuery = params.toString();
+      var cleanUrl = location.pathname + (cleanQuery ? "?" + cleanQuery : "") + location.hash;
+      history.replaceState(null, "", cleanUrl);
+      location.reload();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  if (resetSpinStateIfRequested()) return;
+
+  /* 16 equal slices.
+     Free Spin ×2 = TOP emotional (priceless redo)
+     Gold ×1 = most $ valuable ($50 MSRP / ~$100)
+     $50 gift ×2 = thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; anything except Gold membership)
+     Rest mostly $10/$25 + Try a new service + App beta trial */
+  var PRIZES = [
+    { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#EDE6D9", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
+    { id: "farm-10-a", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#4C6458", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "ticket-10-a", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#B8956C", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "thrift-10-a", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "tour-25", label: "Free $25 petting zoo tour", short: "$25<br>TOUR", value: "Free $25 petting zoo / farm tour", teaser: "$25 petting zoo / farm tour", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "Free $25 petting zoo / farm tour. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#F5F0E6", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
+    { id: "farm-10-b", label: "Free $10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "gift-50-a", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; combine or choose; anything except Gold membership)", teaser: "thrift gifts · farm gifts · petting zoo tickets", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (combine or choose up to $50; anything except Gold membership). Claim below, then show this screen at Sheehan Homestead." },
+    { id: "try-service", label: "Try a new service", short: "TRY<br>NEW", value: "Try a new service (e.g. meet the swine)", teaser: "sample · meet the swine / new experience", kind: "sample", tier: "common", color: "#4C6458", fulfill: "Try a new service — e.g. meet the swine / sample a new experience. Claim below." },
+    { id: "ticket-10-b", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#C4A06A", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "thrift-10-b", label: "Free $10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "sample-app", label: "Try one of our web apps", short: "APPS<br>TRY", value: "Try one of our web apps", teaser: "Apps for learning, games, and resources", kind: "sample", tier: "mid", color: "#B89A5C", fulfill: "Try one of our web apps — apps for learning, games, and resources. Claim below." },
+    { id: "ticket-10-c", label: "Free $10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#A8884E", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "gift-50-b", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (up to $50; combine or choose; anything except Gold membership)", teaser: "thrift gifts · farm gifts · petting zoo tickets", kind: "gift", tier: "mid", color: "#C9A87A", fulfill: "$50 gift — use on thrift gifts, farm gifts, or petting zoo / farm tickets (combine or choose up to $50; anything except Gold membership). Claim below, then show this screen at Sheehan Homestead." },
+    { id: "sample-cameo", label: "Personal farm video", short: "PERSONAL<br>VIDEO", value: "Personal farm video (think Cameo — celebrities wish you happy birthday)", teaser: "personal farm video · funny accents or voices", kind: "sample", tier: "mid", color: "#A8884E", fulfill: "Personal farm video (think Cameo — a birthday wish, funny accent, or voices). Claim below, then show this screen at Sheehan Homestead." },
+    { id: "gold-card", label: "Gold card", short: "GOLD<br>~$100", value: "$50 MSRP · ~$100 · ~40% off mobile orders", teaser: "membership · gift · ticket", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold card — $50 MSRP, about $100 value, about 40% off mobile orders (membership, a gift, and a ticket). Claim below, then come to Sheehan Homestead. Spins close after Gold." }
+  ];
+
+  var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
+  var freeSpinCount = PRIZES.filter(function (p) { return p.kind === "again"; }).length;
+  var gift50Count = PRIZES.filter(function (p) { return p.id.indexOf("gift-50") === 0; }).length;
+  var tryServiceCount = PRIZES.filter(function (p) { return p.id === "try-service"; }).length;
+  var appBetaCount = PRIZES.filter(function (p) { return p.id === "sample-app"; }).length;
+  if (PRIZES.length !== 16 || goldCardCount !== 1 || freeSpinCount !== 2 || gift50Count !== 2 || tryServiceCount !== 1 || appBetaCount !== 1) {
+    throw new Error("Stead Spin must be exactly 16 slices: 2 free spins, 1 Gold (~$100), 2× $50 gift, 1 try-a-service, 1 app beta");
+  }
+
+  /* Equal weights — odds follow slice count. */
+  var WEIGHTS = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+
+  var slice = 360 / PRIZES.length;
+  var rotation = 0;
+  var spinning = false;
+  var reduceMotion = false;
+  var pending = null;
+  var pendingClaimed = false;
+  var claimFormOpen = false;
+  var topPrizeWon = false;
+
+  var wheel = document.getElementById("prize-wheel");
+  var spinBtn = document.getElementById("spin-btn");
+  var spinsLeftEl = document.getElementById("spins-left");
+  var winCard = document.getElementById("win-card");
+  var winLabel = document.getElementById("win-label");
+  var winValue = document.getElementById("win-value");
+  var winTeaser = document.getElementById("win-teaser");
+  var winNote = document.getElementById("win-note");
+  var premiumBanner = document.getElementById("premium-banner");
+  var againBanner = document.getElementById("again-banner");
+  var claimPanel = document.getElementById("claim-panel");
+  var claimCtaRow = document.getElementById("claim-cta-row");
+  var claimContactRow = document.getElementById("claim-contact-row");
+  var winCtas = document.getElementById("win-ctas");
+  var farmClaim = document.getElementById("farm-claim");
+  var prizeList = document.getElementById("prize-list");
+  var toastEl = document.getElementById("toast");
+  var monthLockNote = document.getElementById("month-lock-note");
+
+  try {
+    reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (e) {}
+
+  function toast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-on");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { toastEl.classList.remove("is-on"); }, 2800);
+  }
+
+  function emptyDevice() {
+    return { event_id: EVENT_ID, claim_month: null, spins_used: 0, top_prize_won: false };
+  }
+
+  function readDevice() {
+    try {
+      var raw = localStorage.getItem(STORE_DEVICE);
+      var obj = raw ? JSON.parse(raw) : null;
+      if (!obj || typeof obj !== "object") return emptyDevice();
+      return obj;
+    } catch (e) {
+      return emptyDevice();
+    }
+  }
+
+  function writeDevice(obj) {
+    try { localStorage.setItem(STORE_DEVICE, JSON.stringify(obj)); } catch (e) {}
+  }
+
+  function etParts(d) {
+    var parts = {};
+    try {
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", second: "2-digit",
+        hour12: false
+      }).formatToParts(d || new Date()).forEach(function (p) {
+        if (p.type !== "literal") parts[p.type] = p.value;
+      });
+    } catch (e) {
+      var x = d || new Date();
+      parts.year = String(x.getFullYear());
+      parts.month = String(x.getMonth() + 1).padStart(2, "0");
+      parts.day = String(x.getDate()).padStart(2, "0");
+      parts.hour = String(x.getHours()).padStart(2, "0");
+    }
+    if (parts.hour === "24") parts.hour = "00";
+    return parts;
+  }
+
+  function etMonthKey(d) {
+    var p = etParts(d || new Date());
+    return p.year + "-" + p.month;
+  }
+
+  function syncMonthState() {
+    var d = readDevice();
+    var month = etMonthKey();
+    if (d.claim_month !== month) {
+      d.claim_month = month;
+      d.spins_used = 0;
+      writeDevice(d);
+    }
+    if (typeof d.spins_used !== "number" || d.spins_used < 0) {
+      d.spins_used = 0;
+      writeDevice(d);
+    }
+    return d;
+  }
+
+  function markPrizeSpinUsed() {
+    var d = syncMonthState();
+    d.claim_month = etMonthKey();
+    d.spins_used = (d.spins_used || 0) + 1;
+    writeDevice(d);
+  }
+
+  function spinsRemaining() {
+    if (hasTopPrizeWon()) return 0;
+    var d = syncMonthState();
+    var used = d.spins_used || 0;
+    return Math.max(0, MAX_SPINS_PER_MONTH - used);
+  }
+
+  function hasTopPrizeWon() {
+    return topPrizeWon || !!readDevice().top_prize_won;
+  }
+
+  topPrizeWon = !!readDevice().top_prize_won;
+
+  function refreshSpinUI() {
+    if (monthLockNote) monthLockNote.hidden = true;
+    if (hasTopPrizeWon()) {
+      spinsLeftEl.textContent = "closed";
+      spinBtn.disabled = true;
+      spinBtn.classList.add("is-locked");
+      spinBtn.textContent = "Gold won — spins closed";
+      return;
+    }
+    var left = spinsRemaining();
+    if (left <= 0) {
+      spinsLeftEl.textContent = "0 left";
+      spinBtn.disabled = true;
+      spinBtn.classList.add("is-locked");
+      spinBtn.textContent = "Come back next month";
+      if (monthLockNote) monthLockNote.hidden = false;
+    } else if (!spinning) {
+      spinsLeftEl.textContent = left === 1 ? "1 spin" : (left + " spins");
+      spinBtn.disabled = false;
+      spinBtn.classList.remove("is-locked");
+      spinBtn.textContent = "Try Stead Spin";
+    }
+  }
+
+  function hexLuma(hex) {
+    var h = (hex || "#4C6458").replace("#", "");
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    var r = parseInt(h.slice(0, 2), 16) / 255;
+    var g = parseInt(h.slice(2, 4), 16) / 255;
+    var b = parseInt(h.slice(4, 6), 16) / 255;
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+
+  function paintWheelSlices() {
+    var stops = [];
+    PRIZES.forEach(function (p, i) {
+      var start = i * slice;
+      var end = (i + 1) * slice;
+      var c = p.color || "#4C6458";
+      stops.push(c + " " + start + "deg " + end + "deg");
+    });
+    wheel.style.background = "conic-gradient(from 0deg, " + stops.join(", ") + ")";
+  }
+
+  function buildLabels() {
+    /* Tier KEY is the small legend above the wheel only — flat list, no section headers. */
+    paintWheelSlices();
+    PRIZES.forEach(function (p, i) {
+      var deg = i * slice + slice / 2;
+      var flip = deg > 90 && deg < 270;
+      var el = document.createElement("span");
+      var cls = "wheel-label ";
+      if (p.kind === "grand" || p.tier === "rare") cls += "is-premium";
+      else if (hexLuma(p.color) > 0.55) cls += "is-on-light";
+      else cls += "is-on-dark";
+      el.className = cls;
+      el.style.transform = "rotate(" + deg + "deg)";
+      el.innerHTML = '<span' + (flip ? ' class="is-flipped"' : '') + '>' +
+        p.short + (p.kind === "grand" ? " ★" : "") + "</span>";
+      wheel.appendChild(el);
+    });
+
+    PRIZES.forEach(function (p) {
+      var li = document.createElement("li");
+      li.dataset.id = p.id;
+      li.dataset.kind = p.kind;
+      li.dataset.tier = p.tier || "common";
+      if (p.tier === "common" && hexLuma(p.color) > 0.55) li.classList.add("is-cream");
+      if (p.color) {
+        li.style.background = p.color;
+        if (p.tier === "rare") {
+          li.style.background = "linear-gradient(145deg, #B8923A 0%, #E8C547 45%, #C9A227 100%)";
+          li.style.borderColor = "#f0d878";
+          li.style.color = "#1a1508";
+        } else if (hexLuma(p.color) > 0.55) {
+          li.style.color = "#1a1508";
+          li.style.borderColor = "#c9b896";
+        } else {
+          li.style.color = "#F3EEE4";
+          li.style.borderColor = p.tier === "mid" ? "#d4b896" : "#86A093";
+        }
+      }
+      var teaser = p.teaser ? '<p class="text-xs muted teaser" style="margin:0.15rem 0 0">' + p.teaser + "</p>" : "";
+      li.innerHTML = '<p class="text-xs" style="font-weight:600;margin:0">' + p.label +
+        '</p><p class="text-xs muted" style="margin:0">' + p.value + "</p>" + teaser;
+      prizeList.appendChild(li);
+    });
+  }
+
+  function isExpired() {
+    var p = etParts(new Date());
+    var y = parseInt(p.year, 10);
+    var m = parseInt(p.month, 10);
+    var d = parseInt(p.day, 10);
+    if (y > EXPIRES_Y) return true;
+    if (y < EXPIRES_Y) return false;
+    if (m > EXPIRES_M) return true;
+    if (m < EXPIRES_M) return false;
+    return d >= EXPIRES_D;
+  }
+
+  function pickIndex() {
+    var weights = WEIGHTS.slice();
+    var total = 0;
+    for (var i = 0; i < weights.length; i++) total += weights[i];
+    var r = Math.random() * total;
+    var acc = 0;
+    for (var j = 0; j < weights.length; j++) {
+      acc += weights[j];
+      if (r < acc) return j;
+    }
+    return 0;
+  }
+
+  function applyExpiryUI() {
+    var ended = isExpired();
+    var endedEl = document.getElementById("ended-banner");
+    var softEl = document.getElementById("soft-expiry");
+    var details = document.getElementById("event-details");
+    var wrap = document.querySelector(".wheel-wrap");
+    if (endedEl) endedEl.hidden = !ended;
+    if (softEl) softEl.hidden = ended;
+    if (ended) {
+      if (wrap) wrap.style.opacity = "0.45";
+      spinBtn.disabled = true;
+      spinBtn.classList.add("is-locked");
+      spinBtn.textContent = "Event ended";
+      if (details) details.style.opacity = "0.85";
+    }
+    return ended;
+  }
+
+  function targetRotation(index, current) {
+    var center = index * slice + slice / 2;
+    var normalized = ((current % 360) + 360) % 360;
+    var needed = ((360 - center) % 360 - normalized + 360) % 360;
+    var spins = 5 + Math.floor(Math.random() * 3);
+    return current + 360 * spins + needed;
+  }
+
+  function postWebhookStub(lead) {
+    if (!WEBHOOK_STUB) return;
+    try {
+      fetch(WEBHOOK_STUB, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(lead)
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  function fillClaimContacts() {
+    var sms = "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent("PRIZE");
+    var mail = "mailto:" + CLAIM_EMAIL +
+      "?subject=" + encodeURIComponent("PRIZE — Stead Spin claim") +
+      "&body=" + encodeURIComponent("PRIZE\n\n(Attach a screenshot of your Stead Spin win screen.)");
+    if (claimContactRow) {
+      claimContactRow.innerHTML =
+        '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta"><span>Text screenshot + PRIZE</span></a>' +
+        '<a class="btn-mail" href="' + mail + '" id="claim-email-cta"><span>Email screenshot + PRIZE</span></a>' +
+        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener"><span>DM screenshot + PRIZE</span></a>' +
+        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener"><span>Go to booking-help</span></a>';
+    }
+    var mapsLink = document.getElementById("farm-maps-link");
+    if (mapsLink) mapsLink.href = "https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL";
+  }
+
+  function openClaimContacts() {
+    claimFormOpen = true;
+    pendingClaimed = true;
+    claimPanel.hidden = false;
+    claimCtaRow.innerHTML = "";
+    fillClaimContacts();
+    if (farmClaim) farmClaim.hidden = false;
+    var reviewPrompt = document.getElementById("review-prompt");
+    var reviewLink = document.getElementById("review-link");
+    if (reviewLink) reviewLink.href = REVIEW_URL;
+    if (reviewPrompt) reviewPrompt.hidden = false;
+    toast("Claim at Sheehan Homestead · or text / email / FB");
+  }
+
+  function showPrize(prize, claimed) {
+    pending = prize;
+    pendingClaimed = !!claimed;
+    claimFormOpen = false;
+    winCard.hidden = false;
+
+    var isAgain = prize.kind === "again";
+    var isGrand = prize.kind === "grand";
+    if (isGrand) {
+      topPrizeWon = true;
+      var topState = readDevice();
+      topState.top_prize_won = true;
+      writeDevice(topState);
+    }
+    document.getElementById("win-kicker").textContent =
+      isAgain ? "Free spin" : (isGrand ? "Gold card" : "You won");
+    winLabel.textContent = prize.label;
+    winValue.textContent = prize.value;
+    winTeaser.textContent = prize.teaser || "";
+    winTeaser.hidden = !prize.teaser;
+    winNote.textContent = prize.fulfill;
+
+    premiumBanner.hidden = !isGrand;
+    againBanner.hidden = !isAgain;
+
+    claimCtaRow.innerHTML = "";
+    winCtas.innerHTML = "";
+
+    var reviewPrompt = document.getElementById("review-prompt");
+    var reviewLink = document.getElementById("review-link");
+    if (reviewLink) reviewLink.href = REVIEW_URL;
+
+    if (claimed && !isAgain) {
+      claimPanel.hidden = false;
+      fillClaimContacts();
+      farmClaim.hidden = false;
+      if (reviewPrompt) reviewPrompt.hidden = false;
+    } else {
+      claimPanel.hidden = true;
+      farmClaim.hidden = true;
+      if (reviewPrompt) reviewPrompt.hidden = true;
+    }
+
+    if (isAgain) {
+      if (!hasTopPrizeWon() && !isExpired()) {
+        /* Free Spin does not consume monthly allotment — offer another try */
+        winCtas.innerHTML = '<button class="btn btn-primary btn-block" type="button" id="again-spin-cta">Spin again</button>';
+        document.getElementById("again-spin-cta").addEventListener("click", function () {
+          spinBtn.disabled = false;
+          spinBtn.classList.remove("is-locked");
+          spinBtn.click();
+        });
+      }
+    } else if (!claimed) {
+      claimCtaRow.innerHTML =
+        '<button class="btn btn-primary btn-block" type="button" id="open-claim-btn">Claim your prize</button>';
+      document.getElementById("open-claim-btn").addEventListener("click", openClaimContacts);
+    }
+
+    Array.prototype.forEach.call(prizeList.children, function (li) {
+      if (!li.dataset.id) return;
+      li.classList.toggle("is-won", li.dataset.id === prize.id);
+    });
+
+    refreshSpinUI();
+    toast(prize.label);
+  }
+
+  function restoreLastClaim() {
+    /* Claims go through message channels; browser alone is not a claim. */
+  }
+
+  function finishSpin() {
+    spinning = false;
+    wheel.classList.remove("is-spinning");
+    if (!pending) { refreshSpinUI(); return; }
+
+    /* Free Spin does not consume a monthly prize spin */
+    if (pending.kind !== "again") {
+      markPrizeSpinUsed();
+    }
+
+    refreshSpinUI();
+    showPrize(pending, false);
+  }
+
+  spinBtn.addEventListener("click", function () {
+    if (spinning) return;
+    if (hasTopPrizeWon()) { toast("Gold won — spins are closed"); return; }
+    if (isExpired()) { toast("Season closed — wheel is closed"); applyExpiryUI(); return; }
+    if (spinsRemaining() <= 0) { toast("You’ve had your spins for this month — come back next month"); return; }
+
+    var index = pickIndex();
+    pending = PRIZES[index];
+    pendingClaimed = false;
+    winCard.hidden = true;
+    claimPanel.hidden = true;
+    farmClaim.hidden = true;
+    spinning = true;
+    spinBtn.disabled = true;
+    spinBtn.textContent = "Spinning…";
+    wheel.classList.add("is-spinning");
+
+    if (reduceMotion) {
+      var needed = ((360 - (index * slice + slice / 2)) - (rotation % 360) + 360) % 360;
+      rotation = rotation + needed;
+      wheel.style.transition = "none";
+      wheel.style.transform = "rotate(" + rotation + "deg)";
+      void wheel.offsetWidth;
+      wheel.style.transition = "";
+      finishSpin();
+      return;
+    }
+    rotation = targetRotation(index, rotation);
+    wheel.style.transform = "rotate(" + rotation + "deg)";
+  });
+
+  wheel.addEventListener("transitionend", function (e) {
+    if (e.target === wheel && spinning) finishSpin();
+  });
+
+  buildLabels();
+  if (!applyExpiryUI()) {
+    refreshSpinUI();
+    restoreLastClaim();
+  } else {
+    spinsLeftEl.textContent = "0";
+  }
+
+  window.COC_DC = {
+    EVENT_ID: EVENT_ID,
+    STORE_DEVICE: STORE_DEVICE,
+    STORE_STATUE: STORE_STATUE,
+    WEIGHTS: WEIGHTS,
+    PRIZES: PRIZES,
+    MAX_SPINS_PER_MONTH: MAX_SPINS_PER_MONTH,
+    spinsRemaining: spinsRemaining,
+    isExpired: isExpired,
+    REVIEW_URL: REVIEW_URL,
+    FARM_PLACE_URL: FARM_PLACE_URL,
+    FARM_MAPS_URL: FARM_MAPS_URL,
+    /* Device-month localStorage only. IP/email hard lock needs backend later. */
+    LOCK_NOTE: "Honor ~3 prize spins per device per calendar month (ET). Free Spin does not consume. IP/email hard lock needs backend."
+  };
+})();
+</script>
+</body>
+</html>
