@@ -262,18 +262,6 @@
     text-align: center; font-size: 0.72rem; color: var(--muted);
     margin: 0.35rem 0 0; line-height: 1.35;
   }
-  .review-prompt {
-    margin-top: 0.85rem; padding: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid rgba(201,162,39,0.4);
-    background: rgba(76,100,88,0.35);
-    text-align: center;
-  }
-  .review-prompt a {
-    color: var(--card-gold); font-weight: 700; font-size: 0.95rem;
-    text-decoration: underline;
-  }
-  .review-prompt .hint { font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; }
   .teaser { font-size: 0.72rem; color: var(--muted); font-style: italic; }
 </style>
 </head>
@@ -358,10 +346,6 @@
           </a>
         </div>
 
-        <div class="review-prompt" id="review-prompt" hidden>
-          <a id="review-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">Like getting free gifts? Screenshot and share a 5-star Google review</a>
-          <p class="hint">Opens Sheehan Homestead on Google · screenshot your win + leave 5 stars</p>
-        </div>
 
         <div class="cta-row" id="win-ctas"></div>
       </div>
@@ -391,7 +375,6 @@
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID; /* legacy key retained for compatibility; not used */
   var STORE_IDENTITY = "coc_dc_identity_spins_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
-  var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
   var FARM_ADDRESS = "44065 Cushman Road, Callahan, FL 32011";
   var FARM_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=44065+Cushman+Road,+Callahan,+FL+32011";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
@@ -826,10 +809,6 @@
     claimCtaRow.innerHTML = "";
     fillClaimContacts();
     if (farmClaim) farmClaim.hidden = false;
-    var reviewPrompt = document.getElementById("review-prompt");
-    var reviewLink = document.getElementById("review-link");
-    if (reviewLink) reviewLink.href = REVIEW_URL;
-    if (reviewPrompt) reviewPrompt.hidden = false;
     toast("Text · Facebook · email · or booking help — then come to the farm");
   }
 
@@ -861,19 +840,14 @@
     claimCtaRow.innerHTML = "";
     winCtas.innerHTML = "";
 
-    var reviewPrompt = document.getElementById("review-prompt");
-    var reviewLink = document.getElementById("review-link");
-    if (reviewLink) reviewLink.href = REVIEW_URL;
 
     if (claimed && !isAgain) {
       claimPanel.hidden = false;
       fillClaimContacts();
       farmClaim.hidden = false;
-      if (reviewPrompt) reviewPrompt.hidden = false;
     } else {
       claimPanel.hidden = true;
       farmClaim.hidden = true;
-      if (reviewPrompt) reviewPrompt.hidden = true;
     }
 
     if (isAgain) {
@@ -990,7 +964,6 @@
     PRIZES: PRIZES,
     readLeads: readLeads,
     isExpired: isExpired,
-    REVIEW_URL: REVIEW_URL,
     FARM_ADDRESS: FARM_ADDRESS,
     FARM_MAPS_URL: FARM_MAPS_URL
   };

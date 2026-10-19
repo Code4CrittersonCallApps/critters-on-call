@@ -240,18 +240,6 @@
     text-align: center; font-size: 0.72rem; color: var(--muted);
     margin: 0.35rem 0 0; line-height: 1.35;
   }
-  .review-prompt {
-    margin-top: 0.85rem; padding: 0.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid rgba(201,162,39,0.4);
-    background: rgba(76,100,88,0.35);
-    text-align: center;
-  }
-  .review-prompt a {
-    color: var(--card-gold); font-weight: 700; font-size: 0.95rem;
-    text-decoration: underline;
-  }
-  .review-prompt .hint { font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; }
   .teaser { font-size: 0.72rem; color: var(--muted); font-style: italic; }
   .claim-steps {
     margin: 0 0 0.75rem; padding: 0 0 0 1.15rem;
@@ -351,7 +339,7 @@
         <div class="cta-row" id="claim-cta-row"></div>
 
         <div class="farm-claim" id="farm-claim" hidden>
-          <a class="btn-maps" id="farm-maps-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">
+          <a class="btn-maps" id="farm-maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">
             Claim at Sheehan Homestead
             <small>Opens Google Maps</small>
           </a>
@@ -362,10 +350,6 @@
           <div class="cta-row" id="claim-contact-row"></div>
         </div>
 
-        <div class="review-prompt" id="review-prompt" hidden>
-          <a id="review-link" href="https://g.page/r/CS74JMTm3xrWEAE/review" target="_blank" rel="noopener">Enjoyed your spin? Leave a 5-star Google review</a>
-          <p class="hint">Opens Sheehan Homestead on Google · screenshot your result + leave 5 stars</p>
-        </div>
 
         <div class="cta-row" id="win-ctas"></div>
       </div>
@@ -395,9 +379,8 @@
   var STORE_DEVICE = "coc_farm_spin_month_v6_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
-  var REVIEW_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
-  var FARM_PLACE_URL = REVIEW_URL;
-  var FARM_MAPS_URL = REVIEW_URL;
+  var FARM_PLACE_URL = "https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL";
+  var FARM_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL";
   var CLAIM_SMS = "9142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
@@ -765,10 +748,6 @@
     claimCtaRow.innerHTML = "";
     fillClaimContacts();
     if (farmClaim) farmClaim.hidden = false;
-    var reviewPrompt = document.getElementById("review-prompt");
-    var reviewLink = document.getElementById("review-link");
-    if (reviewLink) reviewLink.href = REVIEW_URL;
-    if (reviewPrompt) reviewPrompt.hidden = false;
     toast("Claim at Sheehan Homestead · or text / email / FB");
   }
 
@@ -800,19 +779,14 @@
     claimCtaRow.innerHTML = "";
     winCtas.innerHTML = "";
 
-    var reviewPrompt = document.getElementById("review-prompt");
-    var reviewLink = document.getElementById("review-link");
-    if (reviewLink) reviewLink.href = REVIEW_URL;
 
     if (claimed && !isAgain) {
       claimPanel.hidden = false;
       fillClaimContacts();
       farmClaim.hidden = false;
-      if (reviewPrompt) reviewPrompt.hidden = false;
     } else {
       claimPanel.hidden = true;
       farmClaim.hidden = true;
-      if (reviewPrompt) reviewPrompt.hidden = true;
     }
 
     if (isAgain) {
@@ -910,7 +884,6 @@
     MAX_SPINS_PER_MONTH: MAX_SPINS_PER_MONTH,
     spinsRemaining: spinsRemaining,
     isExpired: isExpired,
-    REVIEW_URL: REVIEW_URL,
     FARM_PLACE_URL: FARM_PLACE_URL,
     FARM_MAPS_URL: FARM_MAPS_URL,
     /* Device-month localStorage only. IP/email hard lock needs backend later. */
