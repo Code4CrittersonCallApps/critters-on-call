@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Investors dunk list · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--ok:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--ok)}.wrap{max-width:720px;margin:0 auto;padding:14px 12px 72px}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 8px}.crumb a{color:#fde68a;text-decoration:none;font-weight:600}
+h1{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+.banner{padding:10px 12px;border:1px solid #c9a22788;border-radius:12px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.8rem;color:#fde68a;margin:0 0 12px}
+.banner b{color:#fff}.ver{display:block;font-size:.7rem;color:#9dffc5;font-weight:700;margin-top:4px}
+.sec{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 8px}
+.card.top{border-color:#c9a22788}.card.owe{border-color:#ffb02066}.card.closed{opacity:.72;border-color:#3dd68c44}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.meta{font-size:.78rem;color:var(--muted)}.meta b{color:#c5d0e6}
+.why{font-size:.78rem;color:#fde68a;margin-top:6px;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
+.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.wait{border-color:#c9a22788;color:#fde68a}.chip.sent{border-color:#3dd68c88;color:#9dffc5}.chip.closed{border-color:#3dd68c66;color:#9dffc5}
+.chip.chase{border-color:#ffb02088;color:#ffb020}
+.card.low{opacity:.65;border-color:#93a0b866}
+.chip.low{border-color:#93a0b888;color:#93a0b8}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none}
+a.btn.sec{background:#0e1626;border-color:var(--line);color:#c5d0e6;font-weight:600;font-size:.72rem;min-height:34px}
+.note{font-size:.72rem;color:var(--muted);margin-top:16px}
+.pipeline a{display:block;padding:8px 0;border-bottom:1px solid var(--line);color:#9dffc5;text-decoration:none;font-size:.88rem}
+.pipeline a:last-child{border:0}
+@media(max-width:640px){a.btn{min-height:48px;flex:1 1 100%}}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 12px}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.strip b{display:block;font-size:1.25rem;color:#fff}.strip span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.strip .w b{color:#fde68a}.strip .s b{color:#9dffc5}
+.grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px}
+.grp i{font-style:normal;color:#c5d0e6}
+.q{background:var(--card);border:1px solid #c9a22766;border-radius:12px;padding:10px;margin:0 0 8px}
+a.mbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;margin:0 0 8px}
+a.mbtn.call{background:linear-gradient(180deg,#5a4a1a,#2a2210);border-color:#c9a227aa}
+.who{font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-block;font-size:.62rem;padding:1px 7px;border-radius:999px;border:1px solid #c9a22788;color:#fde68a;vertical-align:middle;margin-left:4px}
+.sm{font-size:.76rem;color:var(--muted);margin-top:3px;word-break:break-word}.sm b{color:#c5d0e6;font-weight:600}
+a.tel{color:#9dffc5;font-weight:700;text-decoration:none}
+a.mini{font-size:.7rem;color:#c5d0e6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;text-decoration:none;margin-left:4px}
+.nt{font-size:.74rem;color:#fde68a;margin-top:4px}
+details.fold{background:#0e1626;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;padding:0 10px}
+details.fold summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:.85rem;color:#c5d0e6;list-style:none}
+details.fold summary .n{float:right;color:var(--muted);font-weight:600}
+.intro{font-size:.74rem;color:var(--muted);margin:0 0 8px}
+.row{border-top:1px solid var(--line);padding:8px 0;font-size:.82rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.tabs a{font-size:.74rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c5d0e6;text-decoration:none;background:#0e1626}
+.tabs a.on{border-color:#3dd68caa;color:#fff;background:#1a3d2e;font-weight:700}.tabs a i{font-style:normal;color:var(--muted);margin-left:3px}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.76rem;color:var(--muted);align-items:center}
+.ctl select{background:#0e1626;color:#e8eefc;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem}
+.tot{padding:10px 12px;border:1px solid #3dd68c66;border-radius:12px;background:#0e1f18;margin:0 0 10px;font-size:.84rem}.tot b{font-size:1.15rem;color:#9dffc5}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.lane{display:block;text-decoration:none;color:var(--text)}.lane b{color:#9dffc5}
+.draft{white-space:pre-wrap}
+</style></head><body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator</a> · <a href="principal-dunk.html?v=2933">Full dunk board</a> → <b>Investors dunk list</b></p>
+<h1>Investors dunk list</h1>
+<p class="sub">$1M post-money SAFE into On Call Brands at a $15M cap, $250k first close, family keeps at least 50.1%.</p>
+<div class="banner"><b>DRAFTS / MAILTO ONLY · never auto-send.</b> Nothing on this page sends mail.<span class="ver">Board v2.9.33 · Oct 21, 2026 · dunk lists split by lane · ?v=2933</span></div>
+<nav class="tabs"><a class="" href="dunk-list.html?v=2933">Hub</a><a class="" href="dunk-sales.html?v=2933">Sales<i>130</i></a><a class="" href="dunk-media.html?v=2933">Media<i>8</i></a><a class="" href="dunk-sponsors.html?v=2933">Sponsors<i>3</i></a><a class="" href="dunk-franchise.html?v=2933">Franchise<i>7</i></a><a class="on" href="dunk-investors.html?v=2933">Investors<i>2</i></a><a class="" href="dunk-consulting.html?v=2933">Consulting<i>4</i></a></nav>
+<div class="tot"><b>$1,250,000</b> in investor asks · 2 cards</div>
+<div class="ctl">Sort <select id="st"><option value="default">Board order</option><option value="amt">Amount: high to low</option><option value="date">Date: soonest</option><option value="type">Type / segment</option></select> Type <select id="ft"><option value="">All types</option></select> <span id="shown"></span></div>
+<div id="cards">
+<article class="q" data-amt="1000000" data-date="2026-11-06" data-type="Angel network" id="lane-nwa"><a class="mbtn" href="mailto:?subject=On%20Call%20Brands%3A%20%241M%20SAFE%2C%20Callahan-based%2C%207%20government%20clients&amp;body=Hi%20New%20World%20Angels%20team%2C%0A%0AOn%20Call%20Brands%20is%20the%20down-the-street%20everything%20app%2C%20analog%20Amazon.%20One%20membership%20books%20local%20family%2C%20school%2C%20senior%20and%20community%20experiences%2C%20delivered%20by%20mobile%20operators%20who%20run%20out%20of%20our%20hubs.%20Our%20flagship%20in%20Callahan%20has%20served%2078%20organizations%2C%20including%207%20Florida%20Community%20Development%20Districts%2C%20Jacksonville%20University%20and%20Safariland%2C%20with%2030%20repeat%20clients.%0A%0AWe%20are%20raising%20%241%2C000%2C000%20on%20a%20post-money%20SAFE%20at%20a%20%2415M%20post-money%20cap%2C%20with%20a%20%24250%2C000%20first%20close%20sized%20to%20your%20minimum%2C%20because%20we%20want%20the%20Jacksonville%20network%20in%20first.%20Our%20family%20keeps%20at%20least%2050.1%25%20of%20the%20company.%0A%0AWould%20you%20rather%20see%20the%20deck%20and%20proof%20wall%20first%2C%20or%20go%20straight%20to%20a%20screening%20call%3F%0A%0ACheers%2C%0AMichael%0A">$1M SAFE ($250k first close)</a><div class="who"><b>$1,000,000</b> · New World Angels / JaxAngels <span class="seg">Angel network</span></div><div class="nt">Why they say yes: Florida angel network with a Jax chapter and a $250k minimum. Our first close is sized to it, and the proof wall (7 CDDs, JU, Safariland) is local.</div><div class="sm">Terms: $1M post-money SAFE into On Call Brands, $15M post-money cap, $250k first close, family keeps at least 50.1%. Submit through the apply link; the email is the cover note. · send by 11/06</div><div class="sm"><a class="mini" href="mailto:?subject=On%20Call%20Brands%3A%20%241M%20SAFE%2C%20Callahan-based%2C%207%20government%20clients&amp;body=Hi%20New%20World%20Angels%20team%2C%0A%0AOn%20Call%20Brands%20is%20the%20down-the-street%20everything%20app%2C%20analog%20Amazon.%20One%20membership%20books%20local%20family%2C%20school%2C%20senior%20and%20community%20experiences%2C%20delivered%20by%20mobile%20operators%20who%20run%20out%20of%20our%20hubs.%20Our%20flagship%20in%20Callahan%20has%20served%2078%20organizations%2C%20including%207%20Florida%20Community%20Development%20Districts%2C%20Jacksonville%20University%20and%20Safariland%2C%20with%2030%20repeat%20clients.%0A%0AWe%20are%20raising%20%241%2C000%2C000%20on%20a%20post-money%20SAFE%20at%20a%20%2415M%20post-money%20cap%2C%20with%20a%20%24250%2C000%20first%20close%20sized%20to%20your%20minimum%2C%20because%20we%20want%20the%20Jacksonville%20network%20in%20first.%20Our%20family%20keeps%20at%20least%2050.1%25%20of%20the%20company.%0A%0AWould%20you%20rather%20see%20the%20deck%20and%20proof%20wall%20first%2C%20or%20go%20straight%20to%20a%20screening%20call%3F%0A%0ACheers%2C%0AMichael%0A">Open draft (no verified recipient yet: paste into the form or contact page)</a></div><details class="fold"><summary>Draft · Subject: On Call Brands: $1M SAFE, Callahan-based, 7 government clients</summary><div class="sm draft">Hi New World Angels team,
+
+On Call Brands is the down-the-street everything app, analog Amazon. One membership books local family, school, senior and community experiences, delivered by mobile operators who run out of our hubs. Our flagship in Callahan has served 78 organizations, including 7 Florida Community Development Districts, Jacksonville University and Safariland, with 30 repeat clients.
+
+We are raising $1,000,000 on a post-money SAFE at a $15M post-money cap, with a $250,000 first close sized to your minimum, because we want the Jacksonville network in first. Our family keeps at least 50.1% of the company.
+
+Would you rather see the deck and proof wall first, or go straight to a screening call?
+
+Cheers,
+Michael</div></details><div class="links"><a class="btn sec" href="https://www.newworldangels.com/entrepreneurs" target="_blank" rel="noopener">Apply: newworldangels.com/entrepreneurs</a><a class="btn sec" href="https://www.jaxangels.com/" target="_blank" rel="noopener">JaxAngels</a></div></article>
+<article class="q" data-amt="250000" data-date="2026-11-01" data-type="Accelerator" id="lane-7bridges"><a class="mbtn" href="mailto:?subject=Critters%20on%20Call%20/%20On%20Call%20Brands%20for%20the%202027%20cohort&amp;body=Hi%207%20Bridges%20team%2C%0A%0AAnn-Marie%20and%20I%20run%20Critters%20on%20Call%20and%20STEM%20on%20Call%20from%20our%20farm%20in%20Callahan.%20We%20serve%20churches%2C%20schools%2C%20senior%20communities%20and%207%20local%20CDDs%2C%20and%20we%20have%20built%20the%20business%20around%20serving%20families%20well.%20We%20are%20post-revenue%2C%20with%20246%20events%20booked%20since%202024%2C%20and%20we%20are%20building%20the%20app%20and%20hub%20model%20to%20take%20it%20across%20Florida.%0A%0AWe%20are%20applying%20for%20the%202027%20cohort%20and%20plan%20to%20raise%20a%20%24250%2C000%20first%20close%20at%20your%20Showcase%20on%20a%20SAFE%20at%20a%20%2415M%20cap%2C%20offered%20first%20to%20the%207%20Bridges%20network%20as%20First%20Coast%20partners.%0A%0AWould%20an%20interview%20this%20month%20work%2C%20or%20is%20early%20December%20better%3F%0A%0ACheers%2C%0AMichael%0A">$250k at the Showcase</a><div class="who"><b>$250,000</b> · 7 Bridges Collective (First Coast accelerator + angels) <span class="seg">Accelerator</span></div><div class="nt">Why they say yes: First Coast, faith-aligned and post-revenue under $2M ARR, which is us. Applications are open now (Sept to Dec).</div><div class="sm">Apply through the founders page ($500 fee, about a 10-minute form). The email is the application note. · send by 11/01</div><div class="sm"><a class="mini" href="mailto:?subject=Critters%20on%20Call%20/%20On%20Call%20Brands%20for%20the%202027%20cohort&amp;body=Hi%207%20Bridges%20team%2C%0A%0AAnn-Marie%20and%20I%20run%20Critters%20on%20Call%20and%20STEM%20on%20Call%20from%20our%20farm%20in%20Callahan.%20We%20serve%20churches%2C%20schools%2C%20senior%20communities%20and%207%20local%20CDDs%2C%20and%20we%20have%20built%20the%20business%20around%20serving%20families%20well.%20We%20are%20post-revenue%2C%20with%20246%20events%20booked%20since%202024%2C%20and%20we%20are%20building%20the%20app%20and%20hub%20model%20to%20take%20it%20across%20Florida.%0A%0AWe%20are%20applying%20for%20the%202027%20cohort%20and%20plan%20to%20raise%20a%20%24250%2C000%20first%20close%20at%20your%20Showcase%20on%20a%20SAFE%20at%20a%20%2415M%20cap%2C%20offered%20first%20to%20the%207%20Bridges%20network%20as%20First%20Coast%20partners.%0A%0AWould%20an%20interview%20this%20month%20work%2C%20or%20is%20early%20December%20better%3F%0A%0ACheers%2C%0AMichael%0A">Open draft (no verified recipient yet: paste into the form or contact page)</a></div><details class="fold"><summary>Draft · Subject: Critters on Call / On Call Brands for the 2027 cohort</summary><div class="sm draft">Hi 7 Bridges team,
+
+Ann-Marie and I run Critters on Call and STEM on Call from our farm in Callahan. We serve churches, schools, senior communities and 7 local CDDs, and we have built the business around serving families well. We are post-revenue, with 246 events booked since 2024, and we are building the app and hub model to take it across Florida.
+
+We are applying for the 2027 cohort and plan to raise a $250,000 first close at your Showcase on a SAFE at a $15M cap, offered first to the 7 Bridges network as First Coast partners.
+
+Would an interview this month work, or is early December better?
+
+Cheers,
+Michael</div></details><div class="links"><a class="btn sec" href="https://7bridges.org/founders" target="_blank" rel="noopener">Apply: 7bridges.org/founders</a></div></article>
+</div>
+<script>
+(function(){var box=document.getElementById('cards');if(!box)return;var orig=Array.prototype.slice.call(box.childNodes);
+var arts=Array.prototype.slice.call(box.querySelectorAll('article.q'));var sel=document.getElementById('ft'),srt=document.getElementById('st');
+var types={};arts.forEach(function(a){types[a.dataset.type]=(types[a.dataset.type]||0)+1});
+Object.keys(types).sort().forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t+' ('+types[t]+')';sel.appendChild(o)});
+function run(){var s=srt.value,f=sel.value;
+ if(s==='default'){orig.forEach(function(n){box.appendChild(n)});Array.prototype.forEach.call(box.querySelectorAll('.grp'),function(g){g.style.display=f?'none':''});}
+ else{var l=arts.slice();l.sort(function(a,b){if(s==='amt')return (+b.dataset.amt)-(+a.dataset.amt);
+  if(s==='date'){var x=a.dataset.date||'9999',y=b.dataset.date||'9999';return x<y?-1:x>y?1:0}
+  var p=a.dataset.type.localeCompare(b.dataset.type);return p||((+b.dataset.amt)-(+a.dataset.amt))});
+  Array.prototype.forEach.call(box.querySelectorAll('.grp'),function(g){g.style.display='none'});l.forEach(function(a){box.appendChild(a)});}
+ var n=0;arts.forEach(function(a){var v=!f||a.dataset.type===f;a.style.display=v?'':'none';if(v)n++});document.getElementById('shown').textContent=n+' shown';}
+srt.onchange=run;sel.onchange=run;run();})();
+</script>
+<p class="note">Board v2.9.33 · Oct 21, 2026 · split by lane · mailto only · no auto-send · ?v=2933</p>
+</div></body></html>

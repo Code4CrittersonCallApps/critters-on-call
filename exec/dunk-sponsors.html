@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sponsors dunk list · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--ok:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--ok)}.wrap{max-width:720px;margin:0 auto;padding:14px 12px 72px}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 8px}.crumb a{color:#fde68a;text-decoration:none;font-weight:600}
+h1{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+.banner{padding:10px 12px;border:1px solid #c9a22788;border-radius:12px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.8rem;color:#fde68a;margin:0 0 12px}
+.banner b{color:#fff}.ver{display:block;font-size:.7rem;color:#9dffc5;font-weight:700;margin-top:4px}
+.sec{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 8px}
+.card.top{border-color:#c9a22788}.card.owe{border-color:#ffb02066}.card.closed{opacity:.72;border-color:#3dd68c44}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.meta{font-size:.78rem;color:var(--muted)}.meta b{color:#c5d0e6}
+.why{font-size:.78rem;color:#fde68a;margin-top:6px;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
+.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.wait{border-color:#c9a22788;color:#fde68a}.chip.sent{border-color:#3dd68c88;color:#9dffc5}.chip.closed{border-color:#3dd68c66;color:#9dffc5}
+.chip.chase{border-color:#ffb02088;color:#ffb020}
+.card.low{opacity:.65;border-color:#93a0b866}
+.chip.low{border-color:#93a0b888;color:#93a0b8}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none}
+a.btn.sec{background:#0e1626;border-color:var(--line);color:#c5d0e6;font-weight:600;font-size:.72rem;min-height:34px}
+.note{font-size:.72rem;color:var(--muted);margin-top:16px}
+.pipeline a{display:block;padding:8px 0;border-bottom:1px solid var(--line);color:#9dffc5;text-decoration:none;font-size:.88rem}
+.pipeline a:last-child{border:0}
+@media(max-width:640px){a.btn{min-height:48px;flex:1 1 100%}}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 12px}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.strip b{display:block;font-size:1.25rem;color:#fff}.strip span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.strip .w b{color:#fde68a}.strip .s b{color:#9dffc5}
+.grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px}
+.grp i{font-style:normal;color:#c5d0e6}
+.q{background:var(--card);border:1px solid #c9a22766;border-radius:12px;padding:10px;margin:0 0 8px}
+a.mbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;margin:0 0 8px}
+a.mbtn.call{background:linear-gradient(180deg,#5a4a1a,#2a2210);border-color:#c9a227aa}
+.who{font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-block;font-size:.62rem;padding:1px 7px;border-radius:999px;border:1px solid #c9a22788;color:#fde68a;vertical-align:middle;margin-left:4px}
+.sm{font-size:.76rem;color:var(--muted);margin-top:3px;word-break:break-word}.sm b{color:#c5d0e6;font-weight:600}
+a.tel{color:#9dffc5;font-weight:700;text-decoration:none}
+a.mini{font-size:.7rem;color:#c5d0e6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;text-decoration:none;margin-left:4px}
+.nt{font-size:.74rem;color:#fde68a;margin-top:4px}
+details.fold{background:#0e1626;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;padding:0 10px}
+details.fold summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:.85rem;color:#c5d0e6;list-style:none}
+details.fold summary .n{float:right;color:var(--muted);font-weight:600}
+.intro{font-size:.74rem;color:var(--muted);margin:0 0 8px}
+.row{border-top:1px solid var(--line);padding:8px 0;font-size:.82rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.tabs a{font-size:.74rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c5d0e6;text-decoration:none;background:#0e1626}
+.tabs a.on{border-color:#3dd68caa;color:#fff;background:#1a3d2e;font-weight:700}.tabs a i{font-style:normal;color:var(--muted);margin-left:3px}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.76rem;color:var(--muted);align-items:center}
+.ctl select{background:#0e1626;color:#e8eefc;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem}
+.tot{padding:10px 12px;border:1px solid #3dd68c66;border-radius:12px;background:#0e1f18;margin:0 0 10px;font-size:.84rem}.tot b{font-size:1.15rem;color:#9dffc5}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.lane{display:block;text-decoration:none;color:var(--text)}.lane b{color:#9dffc5}
+.draft{white-space:pre-wrap}
+</style></head><body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator</a> · <a href="principal-dunk.html?v=2933">Full dunk board</a> → <b>Sponsors dunk list</b></p>
+<h1>Sponsors dunk list</h1>
+<p class="sub">Sponsorship asks from marketing budgets, not charity budgets.</p>
+<div class="banner"><b>DRAFTS / MAILTO ONLY · never auto-send.</b> Nothing on this page sends mail.<span class="ver">Board v2.9.33 · Oct 21, 2026 · dunk lists split by lane · ?v=2933</span></div>
+<nav class="tabs"><a class="" href="dunk-list.html?v=2933">Hub</a><a class="" href="dunk-sales.html?v=2933">Sales<i>130</i></a><a class="" href="dunk-media.html?v=2933">Media<i>8</i></a><a class="on" href="dunk-sponsors.html?v=2933">Sponsors<i>3</i></a><a class="" href="dunk-franchise.html?v=2933">Franchise<i>7</i></a><a class="" href="dunk-investors.html?v=2933">Investors<i>2</i></a><a class="" href="dunk-consulting.html?v=2933">Consulting<i>4</i></a></nav>
+<div class="tot"><b>$85,000</b> in sponsor asks · 3 cards</div>
+<div class="ctl">Sort <select id="st"><option value="default">Board order</option><option value="amt">Amount: high to low</option><option value="date">Date: soonest</option><option value="type">Type / segment</option></select> Type <select id="ft"><option value="">All types</option></select> <span id="shown"></span></div>
+<div id="cards">
+<article class="q" data-amt="50000" data-date="2026-11-20" data-type="Presenting sponsor" id="lane-dreamfinders"><a class="mbtn" href="mailto:?subject=Dream%20Finders%20Homes%3A%202027%20Presenting%20Season%20Sponsor%2C%20%2450%2C000&amp;body=Hi%20Dream%20Finders%20team%2C%0A%0AAnn-Marie%20and%20I%20run%20Critters%20on%20Call%20from%20our%20farm%20in%20Callahan.%20We%20bring%20petting%20zoos%2C%20farm%20days%20and%20STEM%20to%20the%20CDDs%20and%20master-planned%20communities%20where%20Jacksonville%20families%20are%20buying%20homes%2C%20plus%20schools%2C%20churches%20and%20senior%20communities.%0A%0AWe%27d%20love%20Dream%20Finders%20as%20our%202027%20Presenting%20Season%20Sponsor%20at%20%2450%2C000.%20That%20means%20%222027%20Season%20presented%20by%20Dream%20Finders%20Homes%22%20on%20every%20event%20banner%20and%20in%20our%20family%20app%2C%20homebuilder%20exclusivity%2C%20and%20four%20employee%20farm%20days.%20Your%20work%20for%20Jacksonville%20kids%2C%20like%20the%20Champions%20for%20Child%20Safety%20tournament%2C%20made%20you%20our%20first%20call.%0A%0AWould%20%2450k%20presenting%20work%2C%20or%20would%20a%20%2425k%20named%20farm%20sponsor%20be%20a%20better%20start%3F%0A%0ACheers%2C%0AMichael%0A">$50k Presenting Season Sponsor</a><div class="who"><b>$50,000</b> · Dream Finders Homes (Jacksonville HQ) <span class="seg">Presenting sponsor</span></div><div class="nt">Why they say yes: A Jax homebuilder ranked #8 among top Jax corporate philanthropists and title sponsor of a child-safety tournament. Our events happen in the CDDs where they sell homes.</div><div class="sm">No published sponsorship email. Verified paths are the Jacksonville office line (904-621-2257) and the contact page (HQ: 14701 Philips Hwy, Suite 300). Call for the marketing or community lead, then paste this in. · send by 11/20</div><div class="sm"><a class="mini" href="mailto:?subject=Dream%20Finders%20Homes%3A%202027%20Presenting%20Season%20Sponsor%2C%20%2450%2C000&amp;body=Hi%20Dream%20Finders%20team%2C%0A%0AAnn-Marie%20and%20I%20run%20Critters%20on%20Call%20from%20our%20farm%20in%20Callahan.%20We%20bring%20petting%20zoos%2C%20farm%20days%20and%20STEM%20to%20the%20CDDs%20and%20master-planned%20communities%20where%20Jacksonville%20families%20are%20buying%20homes%2C%20plus%20schools%2C%20churches%20and%20senior%20communities.%0A%0AWe%27d%20love%20Dream%20Finders%20as%20our%202027%20Presenting%20Season%20Sponsor%20at%20%2450%2C000.%20That%20means%20%222027%20Season%20presented%20by%20Dream%20Finders%20Homes%22%20on%20every%20event%20banner%20and%20in%20our%20family%20app%2C%20homebuilder%20exclusivity%2C%20and%20four%20employee%20farm%20days.%20Your%20work%20for%20Jacksonville%20kids%2C%20like%20the%20Champions%20for%20Child%20Safety%20tournament%2C%20made%20you%20our%20first%20call.%0A%0AWould%20%2450k%20presenting%20work%2C%20or%20would%20a%20%2425k%20named%20farm%20sponsor%20be%20a%20better%20start%3F%0A%0ACheers%2C%0AMichael%0A">Open draft (no verified recipient yet: paste into the form or contact page)</a> · <a class="tel" href="tel:+19046212257">Call 904-621-2257</a></div><details class="fold"><summary>Draft · Subject: Dream Finders Homes: 2027 Presenting Season Sponsor, $50,000</summary><div class="sm draft">Hi Dream Finders team,
+
+Ann-Marie and I run Critters on Call from our farm in Callahan. We bring petting zoos, farm days and STEM to the CDDs and master-planned communities where Jacksonville families are buying homes, plus schools, churches and senior communities.
+
+We&#x27;d love Dream Finders as our 2027 Presenting Season Sponsor at $50,000. That means &quot;2027 Season presented by Dream Finders Homes&quot; on every event banner and in our family app, homebuilder exclusivity, and four employee farm days. Your work for Jacksonville kids, like the Champions for Child Safety tournament, made you our first call.
+
+Would $50k presenting work, or would a $25k named farm sponsor be a better start?
+
+Cheers,
+Michael</div></details><div class="links"><a class="btn sec" href="https://dreamfindershomes.com/connect/" target="_blank" rel="noopener">Dream Finders contact page</a><a class="btn sec" href="https://dreamfindershomes.com/blog/building-more-than-homes-dream-finders-named-8-top-corporate-philanthropist/" target="_blank" rel="noopener">Why: #8 Jax philanthropist</a></div></article>
+<article class="q" data-amt="25000" data-date="2026-10-28" data-type="Season partner" id="lane-wildlight"><a class="mbtn" href="mailto:wes.hinton@wildlight.com?subject=Wildlight%202027%20Season%20Partner%2C%20%2425%2C000&amp;body=Hi%20Wes%2C%0A%0AWe%20have%20loved%20bringing%20the%20petting%20zoo%20to%20Wildlight%2C%20from%20the%20spring%20event%20to%20Trunk%20or%20Treat%20on%20Oct%2024%20with%20Elizabeth%27s%20team.%20We%20would%20like%20to%20make%20Wildlight%20our%202027%20Season%20Partner%3A%20your%20name%20on%20every%20Wildlight%20event%20we%20run%2C%20a%20family%20farm%20day%20for%20new%20homeowners%2C%20and%20Wildlight%20featured%20in%20our%20family%20app%20and%20calendar.%0A%0AThe%20Season%20Partner%20tier%20is%20%2425%2C000%20for%202027.%20That%20is%20half%20our%20%2450%2C000%20presenting%20rate%2C%20because%20Wildlight%20was%20one%20of%20our%20first%20community%20clients%20and%20we%20want%20you%20first%20in%20line.%0A%0AWould%20the%20full%202027%20season%20at%20%2425%2C000%20work%2C%20or%20would%20a%20fall-and-spring%20package%20at%20%2415%2C000%20be%20a%20better%20start%3F%0A%0ACheers%2C%0AMichael%0A">$25k 2027 Season Partner (or $15k fall + spring)</a><div class="who"><b>$25,000</b> · Wildlight / Rayonier, Wes Hinton (VP Wildlight) <span class="seg">Season partner</span></div><div class="nt">Why they say yes: An existing client community. Family events sell Wildlight homes, and Run Wild shows they fund community events.</div><div class="sm">BEST TO SEND ~OCT 28, after the Oct 24 Trunk or Treat. · send by 10/28</div><div class="sm"><a class="mini" href="mailto:wes.hinton@wildlight.com?subject=Wildlight%202027%20Season%20Partner%2C%20%2425%2C000&amp;body=Hi%20Wes%2C%0A%0AWe%20have%20loved%20bringing%20the%20petting%20zoo%20to%20Wildlight%2C%20from%20the%20spring%20event%20to%20Trunk%20or%20Treat%20on%20Oct%2024%20with%20Elizabeth%27s%20team.%20We%20would%20like%20to%20make%20Wildlight%20our%202027%20Season%20Partner%3A%20your%20name%20on%20every%20Wildlight%20event%20we%20run%2C%20a%20family%20farm%20day%20for%20new%20homeowners%2C%20and%20Wildlight%20featured%20in%20our%20family%20app%20and%20calendar.%0A%0AThe%20Season%20Partner%20tier%20is%20%2425%2C000%20for%202027.%20That%20is%20half%20our%20%2450%2C000%20presenting%20rate%2C%20because%20Wildlight%20was%20one%20of%20our%20first%20community%20clients%20and%20we%20want%20you%20first%20in%20line.%0A%0AWould%20the%20full%202027%20season%20at%20%2425%2C000%20work%2C%20or%20would%20a%20fall-and-spring%20package%20at%20%2415%2C000%20be%20a%20better%20start%3F%0A%0ACheers%2C%0AMichael%0A">Email wes.hinton@wildlight.com</a></div><details class="fold"><summary>Draft · Subject: Wildlight 2027 Season Partner, $25,000</summary><div class="sm draft">Hi Wes,
+
+We have loved bringing the petting zoo to Wildlight, from the spring event to Trunk or Treat on Oct 24 with Elizabeth&#x27;s team. We would like to make Wildlight our 2027 Season Partner: your name on every Wildlight event we run, a family farm day for new homeowners, and Wildlight featured in our family app and calendar.
+
+The Season Partner tier is $25,000 for 2027. That is half our $50,000 presenting rate, because Wildlight was one of our first community clients and we want you first in line.
+
+Would the full 2027 season at $25,000 work, or would a fall-and-spring package at $15,000 be a better start?
+
+Cheers,
+Michael</div></details><div class="links"><a class="btn sec" href="https://wildlight.com/whats-happening/news/running-wild-for-good/" target="_blank" rel="noopener">Run Wild for Good</a></div></article>
+<article class="q" data-amt="10000" data-date="2026-11-13" data-type="Senior circuit" id="lane-humana"><a class="mbtn" href="mailto:sponsorshiprequests@humana.com?subject=Senior%20wellness%20visits%20at%2011%20Jacksonville%20senior%20communities&amp;body=Hi%20Humana%20sponsorship%20team%2C%0A%0AWe%20run%20Bunny%20Haven%20animal-therapy%20visits%20at%2011%20senior%20and%20memory-care%20communities%20around%20Jacksonville%2C%20with%20112%20visits%20on%20the%20books%20from%202025%20to%202027.%20Humana%20already%20presents%20the%20City%27s%20senior%20events%2C%20so%20this%20felt%20like%20a%20natural%20fit.%0A%0AThe%20Senior%20Wellness%20Circuit%20Sponsor%20tier%20is%20%2410%2C000%20for%202027.%20It%20covers%20your%20name%20on%20every%20visit%2C%20wellness%20handouts%20you%20approve%2C%20and%20a%20quarterly%20visit%20report.%0A%0AWould%20the%20full%20year%20at%20%2410%2C000%20work%2C%20or%20would%20you%20rather%20start%20with%20a%20six-month%20pilot%20at%20%246%2C000%3F%0A%0ACheers%2C%0AMichael%0A">$10k Senior Wellness Circuit (or $6k pilot)</a><div class="who"><b>$10,000</b> · Humana sponsorship team <span class="seg">Senior circuit</span></div><div class="nt">Why they say yes: Humana already presents the City of Jacksonville senior events, and we are inside 11 senior communities with 112 visits booked.</div><div class="sm">Comes from the marketing budget, not the Humana Foundation (that one is 501(c)(3) only). · send by 11/13</div><div class="sm"><a class="mini" href="mailto:sponsorshiprequests@humana.com?subject=Senior%20wellness%20visits%20at%2011%20Jacksonville%20senior%20communities&amp;body=Hi%20Humana%20sponsorship%20team%2C%0A%0AWe%20run%20Bunny%20Haven%20animal-therapy%20visits%20at%2011%20senior%20and%20memory-care%20communities%20around%20Jacksonville%2C%20with%20112%20visits%20on%20the%20books%20from%202025%20to%202027.%20Humana%20already%20presents%20the%20City%27s%20senior%20events%2C%20so%20this%20felt%20like%20a%20natural%20fit.%0A%0AThe%20Senior%20Wellness%20Circuit%20Sponsor%20tier%20is%20%2410%2C000%20for%202027.%20It%20covers%20your%20name%20on%20every%20visit%2C%20wellness%20handouts%20you%20approve%2C%20and%20a%20quarterly%20visit%20report.%0A%0AWould%20the%20full%20year%20at%20%2410%2C000%20work%2C%20or%20would%20you%20rather%20start%20with%20a%20six-month%20pilot%20at%20%246%2C000%3F%0A%0ACheers%2C%0AMichael%0A">Email sponsorshiprequests@humana.com</a></div><details class="fold"><summary>Draft · Subject: Senior wellness visits at 11 Jacksonville senior communities</summary><div class="sm draft">Hi Humana sponsorship team,
+
+We run Bunny Haven animal-therapy visits at 11 senior and memory-care communities around Jacksonville, with 112 visits on the books from 2025 to 2027. Humana already presents the City&#x27;s senior events, so this felt like a natural fit.
+
+The Senior Wellness Circuit Sponsor tier is $10,000 for 2027. It covers your name on every visit, wellness handouts you approve, and a quarterly visit report.
+
+Would the full year at $10,000 work, or would you rather start with a six-month pilot at $6,000?
+
+Cheers,
+Michael</div></details><div class="links"><a class="btn sec" href="https://www.jacksonville.gov/departments/parks-and-recreation/senior-services/special-events-for-seniors" target="_blank" rel="noopener">COJ senior events (Humana presents)</a></div></article>
+</div>
+<script>
+(function(){var box=document.getElementById('cards');if(!box)return;var orig=Array.prototype.slice.call(box.childNodes);
+var arts=Array.prototype.slice.call(box.querySelectorAll('article.q'));var sel=document.getElementById('ft'),srt=document.getElementById('st');
+var types={};arts.forEach(function(a){types[a.dataset.type]=(types[a.dataset.type]||0)+1});
+Object.keys(types).sort().forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t+' ('+types[t]+')';sel.appendChild(o)});
+function run(){var s=srt.value,f=sel.value;
+ if(s==='default'){orig.forEach(function(n){box.appendChild(n)});Array.prototype.forEach.call(box.querySelectorAll('.grp'),function(g){g.style.display=f?'none':''});}
+ else{var l=arts.slice();l.sort(function(a,b){if(s==='amt')return (+b.dataset.amt)-(+a.dataset.amt);
+  if(s==='date'){var x=a.dataset.date||'9999',y=b.dataset.date||'9999';return x<y?-1:x>y?1:0}
+  var p=a.dataset.type.localeCompare(b.dataset.type);return p||((+b.dataset.amt)-(+a.dataset.amt))});
+  Array.prototype.forEach.call(box.querySelectorAll('.grp'),function(g){g.style.display='none'});l.forEach(function(a){box.appendChild(a)});}
+ var n=0;arts.forEach(function(a){var v=!f||a.dataset.type===f;a.style.display=v?'':'none';if(v)n++});document.getElementById('shown').textContent=n+' shown';}
+srt.onchange=run;sel.onchange=run;run();})();
+</script>
+<p class="note">Board v2.9.33 · Oct 21, 2026 · split by lane · mailto only · no auto-send · ?v=2933</p>
+</div></body></html>

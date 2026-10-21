@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Consulting / expert networks · Sheehan Homestead</title>
+<style>
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--ok:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--ok)}.wrap{max-width:720px;margin:0 auto;padding:14px 12px 72px}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 8px}.crumb a{color:#fde68a;text-decoration:none;font-weight:600}
+h1{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+.banner{padding:10px 12px;border:1px solid #c9a22788;border-radius:12px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.8rem;color:#fde68a;margin:0 0 12px}
+.banner b{color:#fff}.ver{display:block;font-size:.7rem;color:#9dffc5;font-weight:700;margin-top:4px}
+.sec{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 8px}
+.card.top{border-color:#c9a22788}.card.owe{border-color:#ffb02066}.card.closed{opacity:.72;border-color:#3dd68c44}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.meta{font-size:.78rem;color:var(--muted)}.meta b{color:#c5d0e6}
+.why{font-size:.78rem;color:#fde68a;margin-top:6px;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
+.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.wait{border-color:#c9a22788;color:#fde68a}.chip.sent{border-color:#3dd68c88;color:#9dffc5}.chip.closed{border-color:#3dd68c66;color:#9dffc5}
+.chip.chase{border-color:#ffb02088;color:#ffb020}
+.card.low{opacity:.65;border-color:#93a0b866}
+.chip.low{border-color:#93a0b888;color:#93a0b8}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none}
+a.btn.sec{background:#0e1626;border-color:var(--line);color:#c5d0e6;font-weight:600;font-size:.72rem;min-height:34px}
+.note{font-size:.72rem;color:var(--muted);margin-top:16px}
+.pipeline a{display:block;padding:8px 0;border-bottom:1px solid var(--line);color:#9dffc5;text-decoration:none;font-size:.88rem}
+.pipeline a:last-child{border:0}
+@media(max-width:640px){a.btn{min-height:48px;flex:1 1 100%}}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 12px}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.strip b{display:block;font-size:1.25rem;color:#fff}.strip span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.strip .w b{color:#fde68a}.strip .s b{color:#9dffc5}
+.grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px}
+.grp i{font-style:normal;color:#c5d0e6}
+.q{background:var(--card);border:1px solid #c9a22766;border-radius:12px;padding:10px;margin:0 0 8px}
+a.mbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;margin:0 0 8px}
+a.mbtn.call{background:linear-gradient(180deg,#5a4a1a,#2a2210);border-color:#c9a227aa}
+.who{font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-block;font-size:.62rem;padding:1px 7px;border-radius:999px;border:1px solid #c9a22788;color:#fde68a;vertical-align:middle;margin-left:4px}
+.sm{font-size:.76rem;color:var(--muted);margin-top:3px;word-break:break-word}.sm b{color:#c5d0e6;font-weight:600}
+a.tel{color:#9dffc5;font-weight:700;text-decoration:none}
+a.mini{font-size:.7rem;color:#c5d0e6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;text-decoration:none;margin-left:4px}
+.nt{font-size:.74rem;color:#fde68a;margin-top:4px}
+details.fold{background:#0e1626;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;padding:0 10px}
+details.fold summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:.85rem;color:#c5d0e6;list-style:none}
+details.fold summary .n{float:right;color:var(--muted);font-weight:600}
+.intro{font-size:.74rem;color:var(--muted);margin:0 0 8px}
+.row{border-top:1px solid var(--line);padding:8px 0;font-size:.82rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.tabs a{font-size:.74rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c5d0e6;text-decoration:none;background:#0e1626}
+.tabs a.on{border-color:#3dd68caa;color:#fff;background:#1a3d2e;font-weight:700}.tabs a i{font-style:normal;color:var(--muted);margin-left:3px}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.76rem;color:var(--muted);align-items:center}
+.ctl select{background:#0e1626;color:#e8eefc;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem}
+.tot{padding:10px 12px;border:1px solid #3dd68c66;border-radius:12px;background:#0e1f18;margin:0 0 10px;font-size:.84rem}.tot b{font-size:1.15rem;color:#9dffc5}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.lane{display:block;text-decoration:none;color:var(--text)}.lane b{color:#9dffc5}
+.draft{white-space:pre-wrap}
+</style></head><body><div class="wrap">
+<p class="crumb"><a href="index.html">Operator</a> · <a href="principal-dunk.html?v=2933">Full dunk board</a> → <b>Consulting / expert networks</b></p>
+<h1>Consulting / expert networks</h1>
+<p class="sub">Apply once, then take paid calls while the license deals close.</p>
+<div class="banner"><b>DRAFTS / MAILTO ONLY · never auto-send.</b> Nothing on this page sends mail.<span class="ver">Board v2.9.33 · Oct 21, 2026 · dunk lists split by lane · ?v=2933</span></div>
+<nav class="tabs"><a class="" href="dunk-list.html?v=2933">Hub</a><a class="" href="dunk-sales.html?v=2933">Sales<i>130</i></a><a class="" href="dunk-media.html?v=2933">Media<i>8</i></a><a class="" href="dunk-sponsors.html?v=2933">Sponsors<i>3</i></a><a class="" href="dunk-franchise.html?v=2933">Franchise<i>7</i></a><a class="" href="dunk-investors.html?v=2933">Investors<i>2</i></a><a class="on" href="dunk-consulting.html?v=2933">Consulting<i>4</i></a></nav>
+<div class="tot"><b>4</b> expert-network applications · paid by the hour (about $400/hr), no fixed $</div>
+<div class="ctl">Sort <select id="st"><option value="default">Board order</option><option value="amt">Amount: high to low</option><option value="date">Date: soonest</option><option value="type">Type / segment</option></select> Type <select id="ft"><option value="">All types</option></select> <span id="shown"></span></div>
+<div id="cards">
+<article class="q" data-amt="0" data-date="2026-10-22" data-type="Expert network" id="exp-dialectica"><a class="mbtn" href="https://www.dialectica.io/experts" target="_blank" rel="noopener">Apply: Dialectica</a><div class="who"><b>Dialectica</b> · expert network <span class="seg">Expert network</span></div><div class="nt">Why they say yes: niche operator know-how (CDD/HOA programming, agritainment unit economics) is what clients pay $700-$1,800/hr for. Experts typically earn $300-$500/hr, so the playbook rate is $400/hr.</div><div class="sm">Open self-apply (&quot;Become an expert&quot; form). No draft needed: apply, then paste the blurb.</div><details class="fold"><summary>Profile blurb (paste-ready)</summary><div class="sm draft">Founder of Sheehan Homestead LLC (Critters on Call / STEM on Call), Jacksonville FL. Built a mobile petting zoo, farm visit and STEM programming business to a six-figure run rate in under 36 months, selling B2B to CDDs, HOAs, master-planned communities, schools, VPK, PPEC, churches, senior centers and corporate clients. EMBA. Former top-performing SaaS seller. Background in compliance. Can speak to: agritainment and experiential unit economics, HOA/CDD lifestyle and amenity programming spend, kids enrichment demand, small-operator B2B go-to-market, and family membership apps for local experiences.</div><div class="sm">Topics: Mobile petting zoo / agritainment unit economics and pricing; HOA, CDD and master-planned-community lifestyle and amenity programming budgets; Kids enrichment and edutainment demand (VPK, schools, PPEC, churches); Senior-living and active-adult activity programming; Small-operator B2B go-to-market and outbound (ex-SaaS); Live-animal event compliance and insurance [ASSUMPTION: confirm your licenses before claiming]; Family membership / loyalty apps for local experiences (Critter Bucks, Gold); Florida and Jacksonville metro consumer and family spending.</div></details></article>
+<article class="q" data-amt="0" data-date="2026-10-22" data-type="Expert network" id="exp-glg"><a class="mbtn" href="https://glg.com/for-experts" target="_blank" rel="noopener">Apply: GLG</a><div class="who"><b>GLG</b> · expert network <span class="seg">Expert network</span></div><div class="nt">Why they say yes: niche operator know-how (CDD/HOA programming, agritainment unit economics) is what clients pay $700-$1,800/hr for. Experts typically earn $300-$500/hr, so the playbook rate is $400/hr.</div><div class="sm">Open. Register through glg.com/for-experts. No draft needed: apply, then paste the blurb.</div><details class="fold"><summary>Profile blurb (paste-ready)</summary><div class="sm draft">Founder of Sheehan Homestead LLC (Critters on Call / STEM on Call), Jacksonville FL. Built a mobile petting zoo, farm visit and STEM programming business to a six-figure run rate in under 36 months, selling B2B to CDDs, HOAs, master-planned communities, schools, VPK, PPEC, churches, senior centers and corporate clients. EMBA. Former top-performing SaaS seller. Background in compliance. Can speak to: agritainment and experiential unit economics, HOA/CDD lifestyle and amenity programming spend, kids enrichment demand, small-operator B2B go-to-market, and family membership apps for local experiences.</div><div class="sm">Topics: Mobile petting zoo / agritainment unit economics and pricing; HOA, CDD and master-planned-community lifestyle and amenity programming budgets; Kids enrichment and edutainment demand (VPK, schools, PPEC, churches); Senior-living and active-adult activity programming; Small-operator B2B go-to-market and outbound (ex-SaaS); Live-animal event compliance and insurance [ASSUMPTION: confirm your licenses before claiming]; Family membership / loyalty apps for local experiences (Critter Bucks, Gold); Florida and Jacksonville metro consumer and family spending.</div></details></article>
+<article class="q" data-amt="0" data-date="2026-10-22" data-type="Expert network" id="exp-guidepoint"><a class="mbtn" href="https://www.guidepoint.com/experts/" target="_blank" rel="noopener">Apply: Guidepoint</a><div class="who"><b>Guidepoint</b> · expert network <span class="seg">Expert network</span></div><div class="nt">Why they say yes: niche operator know-how (CDD/HOA programming, agritainment unit economics) is what clients pay $700-$1,800/hr for. Experts typically earn $300-$500/hr, so the playbook rate is $400/hr.</div><div class="sm">Open register-interest form (name, phone, email, LinkedIn, message). No draft needed: apply, then paste the blurb.</div><details class="fold"><summary>Profile blurb (paste-ready)</summary><div class="sm draft">Founder of Sheehan Homestead LLC (Critters on Call / STEM on Call), Jacksonville FL. Built a mobile petting zoo, farm visit and STEM programming business to a six-figure run rate in under 36 months, selling B2B to CDDs, HOAs, master-planned communities, schools, VPK, PPEC, churches, senior centers and corporate clients. EMBA. Former top-performing SaaS seller. Background in compliance. Can speak to: agritainment and experiential unit economics, HOA/CDD lifestyle and amenity programming spend, kids enrichment demand, small-operator B2B go-to-market, and family membership apps for local experiences.</div><div class="sm">Topics: Mobile petting zoo / agritainment unit economics and pricing; HOA, CDD and master-planned-community lifestyle and amenity programming budgets; Kids enrichment and edutainment demand (VPK, schools, PPEC, churches); Senior-living and active-adult activity programming; Small-operator B2B go-to-market and outbound (ex-SaaS); Live-animal event compliance and insurance [ASSUMPTION: confirm your licenses before claiming]; Family membership / loyalty apps for local experiences (Critter Bucks, Gold); Florida and Jacksonville metro consumer and family spending.</div></details></article>
+<article class="q" data-amt="0" data-date="2026-10-22" data-type="Expert network" id="exp-alphasights"><a class="mbtn" href="https://www.alphasights.com/experts/" target="_blank" rel="noopener">Apply: AlphaSights</a><div class="who"><b>AlphaSights</b> · expert network <span class="seg">Expert network</span></div><div class="nt">Why they say yes: niche operator know-how (CDD/HOA programming, agritainment unit economics) is what clients pay $700-$1,800/hr for. Experts typically earn $300-$500/hr, so the playbook rate is $400/hr.</div><div class="sm">Open, with a screen (10+ years of experience). No draft needed: apply, then paste the blurb.</div><details class="fold"><summary>Profile blurb (paste-ready)</summary><div class="sm draft">Founder of Sheehan Homestead LLC (Critters on Call / STEM on Call), Jacksonville FL. Built a mobile petting zoo, farm visit and STEM programming business to a six-figure run rate in under 36 months, selling B2B to CDDs, HOAs, master-planned communities, schools, VPK, PPEC, churches, senior centers and corporate clients. EMBA. Former top-performing SaaS seller. Background in compliance. Can speak to: agritainment and experiential unit economics, HOA/CDD lifestyle and amenity programming spend, kids enrichment demand, small-operator B2B go-to-market, and family membership apps for local experiences.</div><div class="sm">Topics: Mobile petting zoo / agritainment unit economics and pricing; HOA, CDD and master-planned-community lifestyle and amenity programming budgets; Kids enrichment and edutainment demand (VPK, schools, PPEC, churches); Senior-living and active-adult activity programming; Small-operator B2B go-to-market and outbound (ex-SaaS); Live-animal event compliance and insurance [ASSUMPTION: confirm your licenses before claiming]; Family membership / loyalty apps for local experiences (Critter Bucks, Gold); Florida and Jacksonville metro consumer and family spending.</div></details></article>
+</div>
+<script>
+(function(){var box=document.getElementById('cards');if(!box)return;var orig=Array.prototype.slice.call(box.childNodes);
+var arts=Array.prototype.slice.call(box.querySelectorAll('article.q'));var sel=document.getElementById('ft'),srt=document.getElementById('st');
+var types={};arts.forEach(function(a){types[a.dataset.type]=(types[a.dataset.type]||0)+1});
+Object.keys(types).sort().forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t+' ('+types[t]+')';sel.appendChild(o)});
+function run(){var s=srt.value,f=sel.value;
+ if(s==='default'){orig.forEach(function(n){box.appendChild(n)});Array.prototype.forEach.call(box.querySelectorAll('.grp'),function(g){g.style.display=f?'none':''});}
+ else{var l=arts.slice();l.sort(function(a,b){if(s==='amt')return (+b.dataset.amt)-(+a.dataset.amt);
+  if(s==='date'){var x=a.dataset.date||'9999',y=b.dataset.date||'9999';return x<y?-1:x>y?1:0}
+  var p=a.dataset.type.localeCompare(b.dataset.type);return p||((+b.dataset.amt)-(+a.dataset.amt))});
+  Array.prototype.forEach.call(box.querySelectorAll('.grp'),function(g){g.style.display='none'});l.forEach(function(a){box.appendChild(a)});}
+ var n=0;arts.forEach(function(a){var v=!f||a.dataset.type===f;a.style.display=v?'':'none';if(v)n++});document.getElementById('shown').textContent=n+' shown';}
+srt.onchange=run;sel.onchange=run;run();})();
+</script>
+<p class="note">Board v2.9.33 · Oct 21, 2026 · split by lane · mailto only · no auto-send · ?v=2933</p>
+</div></body></html>
