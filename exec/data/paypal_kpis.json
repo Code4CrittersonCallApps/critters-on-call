@@ -63,6 +63,21 @@
       }
     ],
     "received_incl_ebay": 48747.72,
-    "ebay_note": "Counts profit actually paid out only, per Michael eBay payouts screenshot 2026-10-21; replaces prior est net 2,979.11 / gross 3,524.43"
+    "ebay_note": "Michael 2026-10-21: eBay earnings report Feb1-Oct21 + payouts screenshot (7606805170 Jul 7 $947.90; 7659258394 Aug 4 $219.74; $2 fee each). Replaces prior est net 2,979.11 / gross 3,524.43.",
+    "ebay_profit": 1697.9,
+    "ebay_earnings_report": {
+      "window": "2026-02-01..2026-10-21",
+      "gross": 3956.58,
+      "expenses": 2063.99,
+      "refunds": 194.69,
+      "order_earnings": 1697.9,
+      "note": "item costs not entered"
+    },
+    "ebay_debited_total": 1171.64,
+    "ebay_unpaid_balance": 526.26,
+    "ebay_unpaid_note": "eBay earned not yet paid out / check eBay balance (collectible)",
+    "received_incl_ebay_cash": 48747.72,
+    "received_incl_ebay_profit": 49277.98,
+    "collectible_incl_ebay_balance": 8546.88
   }
 }
