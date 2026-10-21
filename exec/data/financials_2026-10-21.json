@@ -70,7 +70,29 @@
    "received_since_board_start_10_15": 659.66,
    "gap": 32220.34
   },
-  "due_by_nov1_collectible": 8020.62
+  "due_by_nov1_collectible": 8020.62,
+  "ebay_received": 1167.64,
+  "ebay_payout_fees": 4.0,
+  "ebay_payouts": [
+   {
+    "id": "7606805170",
+    "date": "2026-07-07",
+    "amount": 947.9,
+    "fee": 2.0,
+    "debited": 949.9,
+    "to": "Visa 3606"
+   },
+   {
+    "id": "7659258394",
+    "date": "2026-08-04",
+    "amount": 219.74,
+    "fee": 2.0,
+    "debited": 221.74,
+    "to": "Visa 3606"
+   }
+  ],
+  "received_incl_ebay": 48747.72,
+  "ebay_note": "Counts profit actually paid out only, per Michael eBay payouts screenshot 2026-10-21; replaces prior est net 2,979.11 / gross 3,524.43"
  },
  "monthly": {
   "2026-01": {
