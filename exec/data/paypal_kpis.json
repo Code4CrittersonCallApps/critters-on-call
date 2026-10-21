@@ -1,10 +1,11 @@
 {
-  "as_of": "2026-09-19",
+  "as_of": "2026-10-21",
   "sources": [
     "/workspace/Sheehan-Homestead-PayPal-H2-2025.xlsx",
     "data/paypal_monthly.json",
     "data/paypal_customers.json",
-    "PayPal BALANCE_RECONCILIATION_REPORT CSV Jan1\u2013Sep1 2026 \u2192 data/paypal_2026_ytd.json"
+    "PayPal BALANCE_RECONCILIATION_REPORT CSV Jan1\u2013Sep1 2026 \u2192 data/paypal_2026_ytd.json",
+    "Ann-Marie \"paypal report\" email 2026-10-21: PayPal statement 1/1-10/21 + unpaid invoice CSV; Drive Payments sheet 10/20; Gmail payment emails Oct 1-21 -> data/financials_2026-10-21.json"
   ],
   "note": "Owner transfers \u2260 customer revenue. Outside = customer sales only. Do not sum H2 total row with monthly rows.",
   "h2_2025": {
@@ -19,23 +20,27 @@
     "invoices_paid_count": 43
   },
   "ytd_2026": {
-    "window": "2026 YTD (Jan 1\u2013Sep 1 2026)",
-    "outside_gross": 20509.26,
-    "outside_net": 19846.62,
-    "outside_fees": -662.64,
+    "window": "2026 YTD (Jan 1-Oct 21 2026)",
+    "outside_gross": 27816.89,
+    "outside_net": 26630.38,
+    "outside_fees": -886.85,
     "owner_gross": 0,
-    "to_vystar": -20095.83,
+    "to_vystar": -26744.09,
     "paying_customers": 49
   },
-  "combined_outside_gross": 35917.92,
-  "combined_window": "Jul 2025\u2013Sep 1 2026 (H2 outside + 2026 YTD outside; no double-count)",
+  "combined_outside_gross": 43225.55,
+  "combined_window": "Jul 2025-Oct 21 2026 (H2 outside + 2026 YTD outside; no double-count)",
   "ops_book_unaudited": {
-    "label": "ops book \u00b7 unaudited",
-    "booked_ytd_approx": 42000,
-    "received_approx": 30000,
-    "ar_approx": 12000,
-    "paypal_of_received_approx": 20509.26,
-    "other_pipes_gap_approx": 9500,
-    "note": "Said/ops book \u2014 not proven. Awaiting Michael bookings truth. Proven PayPal received 2026 YTD = outside_gross $20,509.26"
+    "label": "pay sheet reconciled 2026-10-21",
+    "booked_2026_face": 60687.34,
+    "received_all_channels": 47580.08,
+    "received_unverified": 1256.66,
+    "open_2026": 13107.26,
+    "booked_2027_face": 11398.17,
+    "paypal_of_received": 27816.89,
+    "other_pipes": 19763.19,
+    "ar_paypal_unpaid_total": 18566.97,
+    "collectible_by_nov1": 8020.62,
+    "note": "Received = pay sheet (with evidence fixes) + off-sheet receipts. Other pipes = checks, GoDaddy, StepUp, cash, Cash App; not provable from email."
   }
 }

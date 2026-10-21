@@ -1,0 +1,599 @@
+{
+ "as_of": "2026-10-21",
+ "summary": {
+  "paypal_ytd_gross_statement": 27517.23,
+  "paypal_ytd_fees": -886.85,
+  "paypal_ytd_net_statement": 26630.38,
+  "paypal_post_statement": 299.66,
+  "paypal_ytd_gross_thru_1021": 27816.89,
+  "paypal_withdrawn_to_bank": -26744.09,
+  "paypal_ending_balance": 0.0,
+  "paypal_beginning_balance": 112.71,
+  "paypal_owner_family_flows": {
+   "mobile_payment_out_ann_marie_5_11": -110.0,
+   "bank_deposits_in": 111.0,
+   "google_verify_net": 0.0
+  },
+  "sheet_received_2026_27": 45294.54,
+  "offsheet_received": 2285.54,
+  "received_all": 47580.08,
+  "received_unverified": 1256.66,
+  "booked_2026_face": 60687.34,
+  "received_2026_events": 47580.08,
+  "open_2026": 13107.26,
+  "booked_2027_face": 11398.17,
+  "open_2027": 11398.17,
+  "ar_paypal_unpaid": {
+   "Past due (service date passed)": 2827.9,
+   "Due by Nov 1": 3425.81,
+   "Rest of 2026": 4376.75,
+   "2027": 7936.51
+  },
+  "ar_paypal_unpaid_total": 18566.97,
+  "ar_paypal_unpaid_count": 75,
+  "partial_balances_not_in_export": {
+   "0190 Liberty Landscape 10/24": 590.91,
+   "0236 Sunshine 10/23": 392.0,
+   "0237 Sunshine 10/29": 392.0,
+   "0238 Sunshine 10/30": 392.0
+  },
+  "partial_balances_total": 1766.91,
+  "oct_mtd": {
+   "paypal_statement": 3510.25,
+   "paypal_post": 299.66,
+   "sufs_stepup_ach": 450.0,
+   "godaddy": 670.0,
+   "cash_app": 100.0,
+   "owner_reported_cash": {
+    "0205 Beasley cash (sheet)": 324.0,
+    "card sale (Michael)": 200.0
+   },
+   "verified_total": 5029.91,
+   "with_owner_reported": 5553.91
+  },
+  "oct_wages": {
+   "madison": 455.0,
+   "audrey": 180.0,
+   "crystal": 135.0,
+   "helpers_total": 770.0,
+   "ann_marie_family": 600.0,
+   "source": "VyStar \"Confirmed: Your payment to ...\" emails 10/3-10/17"
+  },
+  "oct_other_expenses_seen": {
+   "Floaters Portable Sanitation 10/2": 123.05,
+   "Eventbrite (Jax Bump & Beyond expo) 10/17": 8.86,
+   "Xfinity autopay 10/20 (may be household)": 144.58,
+   "Meridian Waste 10/15, Meta 10/9 + 10/10, Printify 10/14": "amount in attachment, not pulled"
+  },
+  "nov1_board": {
+   "goal_weighted": 32880,
+   "received_since_board_start_10_15": 659.66,
+   "gap": 32220.34
+  },
+  "due_by_nov1_collectible": 8020.62
+ },
+ "monthly": {
+  "2026-01": {
+   "gross": 304.75,
+   "fees": -9.6,
+   "net": 295.15,
+   "payments": 1,
+   "to_bank": -407.0
+  },
+  "2026-02": {
+   "gross": 2014.22,
+   "fees": -62.68,
+   "net": 1951.54,
+   "payments": 5,
+   "to_bank": -1923.0
+  },
+  "2026-03": {
+   "gross": 4038.59,
+   "fees": -126.21,
+   "net": 3912.38,
+   "payments": 12,
+   "to_bank": -3732.55
+  },
+  "2026-04": {
+   "gross": 5156.21,
+   "fees": -165.3,
+   "net": 4990.91,
+   "payments": 16,
+   "to_bank": -4958.11
+  },
+  "2026-05": {
+   "gross": 4601.86,
+   "fees": -153.03,
+   "net": 4448.83,
+   "payments": 16,
+   "to_bank": -4690.86
+  },
+  "2026-06": {
+   "gross": 334.75,
+   "fees": -10.99,
+   "net": 323.76,
+   "payments": 2,
+   "to_bank": -267.04
+  },
+  "2026-07": {
+   "gross": 1295.94,
+   "fees": -42.63,
+   "net": 1253.31,
+   "payments": 5,
+   "to_bank": -1311.03
+  },
+  "2026-08": {
+   "gross": 1780.5,
+   "fees": -57.73,
+   "net": 1722.77,
+   "payments": 6,
+   "to_bank": -1722.77
+  },
+  "2026-09": {
+   "gross": 4480.16,
+   "fees": -149.26,
+   "net": 4330.9,
+   "payments": 17,
+   "to_bank": -4330.9
+  },
+  "2026-10": {
+   "gross": 3510.25,
+   "fees": -109.42,
+   "net": 3400.83,
+   "payments": 9,
+   "to_bank": -3400.83
+  }
+ },
+ "ar_open_invoices": [
+  {
+   "inv": "0288",
+   "due": "11/8/26",
+   "org": "saltchurch.us",
+   "amount_due": 500.0
+  },
+  {
+   "inv": "0287",
+   "due": "11/8/26",
+   "org": "gmail.com",
+   "amount_due": 317.99
+  },
+  {
+   "inv": "0286",
+   "due": "10/30/26",
+   "org": "yahoo.com",
+   "amount_due": 459.5
+  },
+  {
+   "inv": "0285",
+   "due": "11/11/26",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0283",
+   "due": "11/14/26",
+   "org": "gmail.com",
+   "amount_due": 370.99
+  },
+  {
+   "inv": "0282",
+   "due": "11/16/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0281",
+   "due": "10/28/26",
+   "org": "palagioseniorliving.com",
+   "amount_due": 307.4
+  },
+  {
+   "inv": "0279",
+   "due": "11/21/26",
+   "org": "brooksrehab.org",
+   "amount_due": 597.53
+  },
+  {
+   "inv": "0276",
+   "due": "12/16/27",
+   "org": "legendseniorliving.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0273",
+   "due": "12/21/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0271",
+   "due": "10/19/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0270",
+   "due": "9/21/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0269",
+   "due": "8/17/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0268",
+   "due": "7/20/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0267",
+   "due": "6/15/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0266",
+   "due": "5/18/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0265",
+   "due": "4/20/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0264",
+   "due": "3/16/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0263",
+   "due": "2/16/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0262",
+   "due": "1/19/27",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0259",
+   "due": "10/13/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0258",
+   "due": "9/8/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0257",
+   "due": "8/11/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0256",
+   "due": "7/14/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0255",
+   "due": "6/9/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0254",
+   "due": "5/12/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0253",
+   "due": "4/14/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0252",
+   "due": "3/11/27",
+   "org": "fletcherstendercare.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0247",
+   "due": "6/16/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0246",
+   "due": "12/9/27",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0245",
+   "due": "9/9/27",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0244",
+   "due": "6/10/27",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0243",
+   "due": "3/10/27",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0242",
+   "due": "12/15/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0241",
+   "due": "9/16/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0240",
+   "due": "3/15/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0239",
+   "due": "12/16/26",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0219",
+   "due": "12/20/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0218",
+   "due": "10/20/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0217",
+   "due": "8/25/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0216",
+   "due": "6/23/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0215",
+   "due": "4/21/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0214",
+   "due": "2/23/27",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0213",
+   "due": "12/22/26",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0212",
+   "due": "10/21/26",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  },
+  {
+   "inv": "0211",
+   "due": "9/15/27",
+   "org": "legendseniorliving.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0210",
+   "due": "6/17/27",
+   "org": "legendseniorliving.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0209",
+   "due": "3/17/27",
+   "org": "legendseniorliving.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0208",
+   "due": "12/16/26",
+   "org": "legendseniorliving.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0207",
+   "due": "10/28/26",
+   "org": "discoverymanagementgroup.com",
+   "amount_due": 159.0
+  },
+  {
+   "inv": "0203",
+   "due": "10/31/26",
+   "org": "bellsouth.net",
+   "amount_due": 600.0
+  },
+  {
+   "inv": "0201",
+   "due": "10/3/26",
+   "org": "jacksonville.edu",
+   "amount_due": 475.94
+  },
+  {
+   "inv": "0198",
+   "due": "10/24/26",
+   "org": "vestapropertyservices.com",
+   "amount_due": 1181.91
+  },
+  {
+   "inv": "0195",
+   "due": "10/25/26",
+   "org": "aol.com",
+   "amount_due": 318.0
+  },
+  {
+   "inv": "0186",
+   "due": "10/24/26",
+   "org": "gmail.com",
+   "amount_due": 400.0
+  },
+  {
+   "inv": "0183",
+   "due": "5/24/27",
+   "org": "yahoo.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0182",
+   "due": "2/22/27",
+   "org": "yahoo.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0181",
+   "due": "11/30/26",
+   "org": "yahoo.com",
+   "amount_due": 185.5
+  },
+  {
+   "inv": "0177",
+   "due": "3/28/27",
+   "org": "golfclubofamelia.com",
+   "amount_due": 485.11
+  },
+  {
+   "inv": "0172",
+   "due": "9/27/26",
+   "org": "vestapropertyservices.com",
+   "amount_due": 1256.66
+  },
+  {
+   "inv": "0163",
+   "due": "3/18/27",
+   "org": "elcduval.org",
+   "amount_due": 350.0
+  },
+  {
+   "inv": "0162",
+   "due": "3/16/27",
+   "org": "elcduval.org",
+   "amount_due": 350.0
+  },
+  {
+   "inv": "0161",
+   "due": "1/5/27",
+   "org": "elcduval.org",
+   "amount_due": 350.0
+  },
+  {
+   "inv": "0160",
+   "due": "12/29/26",
+   "org": "elcduval.org",
+   "amount_due": 350.0
+  },
+  {
+   "inv": "0159",
+   "due": "11/24/26",
+   "org": "elcduval.org",
+   "amount_due": 350.0
+  },
+  {
+   "inv": "0157",
+   "due": "12/15/26",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0156",
+   "due": "11/17/26",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0155",
+   "due": "10/20/26",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0153",
+   "due": "8/18/26",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0152",
+   "due": "7/21/26",
+   "org": "cypressvillageretirement.com",
+   "amount_due": 179.3
+  },
+  {
+   "inv": "0150",
+   "due": "12/5/26",
+   "org": "gmail.com",
+   "amount_due": 597.94
+  },
+  {
+   "inv": "0136",
+   "due": "12/15/26",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0135",
+   "due": "10/20/26",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0134",
+   "due": "8/18/26",
+   "org": "sincerisl.com",
+   "amount_due": 153.7
+  },
+  {
+   "inv": "0074",
+   "due": "3/11/26",
+   "org": "gardensmemorycare.com",
+   "amount_due": 125.0
+  }
+ ]
+}
