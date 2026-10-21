@@ -80,6 +80,7 @@
     offerNote.textContent = offer.note;
     estimateEl.textContent = C.money(offer.price);
     estimateHint.textContent = svc.trackable ? "Tax and travel not included" : "On the farm";
+    submitBtn.href = offer.book || svc.book || "https://sheehanhomestead.com/services";
   }
 
   function syncAddressVisibility() {
@@ -104,36 +105,10 @@
   renderOffers();
   syncAddressVisibility();
 
+  // Booking happens on sheehanhomestead.com. The Book now link opens the matching
+  // booking page in a new tab; Enter in the form opens the same page.
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var svc = C.findService(selectedServiceId);
-    var offer = C.findOffer(svc, selectedOfferId);
-    if (svc.trackable && !addressInput.value.trim()) {
-      C.toast("Add a service address");
-      return;
-    }
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Saving";
-    var booking = C.saveBooking({
-      serviceId: svc.id,
-      serviceName: svc.name + " · " + offer.label,
-      date: dateInput.value,
-      time: timeInput.value,
-      durationMin: offer.durationMin,
-      guests: Number(guestsInput.value) || 1,
-      address: svc.trackable ? addressInput.value.trim() : "Sheehan Homestead",
-      city: (cityInput.value || "Callahan, FL").trim(),
-      notes: notesInput.value.trim(),
-      price: offer.price,
-      trackable: svc.trackable
-    });
-    if (svc.trackable) {
-      C.toast("Booked — opening live track");
-      window.location.href = "track.html?code=" + encodeURIComponent(booking.id);
-    } else {
-      C.toast("Request saved — we will confirm · " + booking.id);
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Confirm";
-    }
+    window.open(submitBtn.href, "_blank", "noopener");
   });
 })();

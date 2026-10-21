@@ -23,8 +23,8 @@
       priceMin: 25,
       priceMax: 50,
       offers: [
-        { id: "two", label: "2-person ticket", durationMin: 60, price: 25, note: "60 min · 2 people. Poker-chip wheel prize lands here." },
-        { id: "car", label: "Whole car", durationMin: 60, price: 50, note: "60 min · up to 5 guests in one car." }
+        { id: "two", book: "https://sheehanhomestead.com/services/ola/services/full-farm-tour-interactions", label: "2-person ticket", durationMin: 60, price: 25, note: "60 min · 2 people. Poker-chip wheel prize lands here." },
+        { id: "car", book: "https://sheehanhomestead.com/services/ola/services/full-car-stem-petting-zoo", label: "Whole car", durationMin: 60, price: 50, note: "60 min · up to 5 guests in one car." }
       ]
     },
     {
@@ -36,7 +36,7 @@
       priceMin: 50,
       priceMax: 50,
       offers: [
-        { id: "gold", label: "Gold card", durationMin: 0, price: 50, note: "25% off services · 50% off travel · free 2-person farm + $25 gift · deposit toward mobile." }
+        { id: "gold", book: "https://sheehanhomestead.com/services", label: "Gold card", durationMin: 0, price: 50, note: "25% off services · 50% off travel · free 2-person farm + $25 gift · deposit toward mobile." }
       ]
     },
     {
@@ -48,8 +48,8 @@
       priceMin: 299,
       priceMax: 499,
       offers: [
-        { id: "small", label: "Small group", durationMin: 75, price: 299, note: "≤5 cars or ≤20 people · ~75 min." },
-        { id: "large", label: "Large group", durationMin: 90, price: 499, note: "≤10 cars or ≤40 people · ~90 min." }
+        { id: "small", book: "https://sheehanhomestead.com/services/ola/services/homeschool-field-trip-90-mins-5-cars-or-20-heads", label: "Small group", durationMin: 75, price: 299, note: "≤5 cars or ≤20 people · ~75 min." },
+        { id: "large", book: "https://sheehanhomestead.com/services/ola/services/copy-of-homeschool-field-trip-90-mins-10-cars-or-20-heads", label: "Large group", durationMin: 90, price: 499, note: "≤10 cars or ≤40 people · ~90 min." }
       ]
     },
     {
@@ -61,7 +61,7 @@
       priceMin: 25,
       priceMax: 25,
       offers: [
-        { id: "visit", label: "Per hour", durationMin: 60, price: 25, note: "On the farm in Callahan." }
+        { id: "visit", book: "https://sheehanhomestead.com/services/ola/services/mommy-me-thursdays", label: "Per hour", durationMin: 60, price: 25, note: "On the farm in Callahan." }
       ]
     },
     {
@@ -73,7 +73,7 @@
       priceMin: 40,
       priceMax: 40,
       offers: [
-        { id: "class", label: "90 min class", durationMin: 90, price: 40, note: "$40 per learner · composting, gardening, building, animal care." }
+        { id: "class", book: "https://sheehanhomestead.com/services/ola/services/homeschool-monday-farm-stem-classes-2", label: "90 min class", durationMin: 90, price: 40, note: "$40 per learner · composting, gardening, building, animal care." }
       ]
     },
     {
@@ -85,11 +85,11 @@
       priceMin: 150,
       priceMax: 699,
       offers: [
-        { id: "bunny", label: "Bunny Haven", durationMin: 60, price: 150, note: "60 min · bunnies, goats & friends. Weekend $235." },
-        { id: "mini", label: "Mini", durationMin: 75, price: 299, note: "75 min · ≥6 animals. Weekend $359." },
-        { id: "standard", label: "Standard", durationMin: 90, price: 359, note: "90 min · full backyard. Weekend $549." },
-        { id: "standard-full", label: "Standard + Full Side", durationMin: 90, price: 499, note: "Extra critters. Weekend $699." },
-        { id: "fullside", label: "Full Side add-on", durationMin: 0, price: 150, note: "Add more animals to Standard." }
+        { id: "bunny", book: "https://sheehanhomestead.com/services/ola/services/rabbit-haven-party", label: "Bunny Haven", durationMin: 60, price: 150, note: "60 min · bunnies, goats & friends. Weekend $235." },
+        { id: "mini", book: "https://sheehanhomestead.com/services/ola/services/pick-3-mobile", label: "Mini", durationMin: 75, price: 299, note: "75 min · ≥6 animals. Weekend $359." },
+        { id: "standard", book: "https://sheehanhomestead.com/services/ola/services/mini-farm-brought-to-you", label: "Standard", durationMin: 90, price: 359, note: "90 min · full backyard. Weekend $549." },
+        { id: "standard-full", book: "https://sheehanhomestead.com/services/ola/services/120-min-mobile-petting-zoo-with-side-of-critters", label: "Standard + Full Side", durationMin: 90, price: 499, note: "Extra critters. Weekend $699." },
+        { id: "fullside", book: "https://sheehanhomestead.com/services/ola/services/120-min-mobile-petting-zoo-with-side-of-critters", label: "Full Side add-on", durationMin: 0, price: 150, note: "Add more animals to Standard." }
       ]
     }
   ];
