@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>07-rv · Sheehan Homestead</title><style>
+@font-face{font-family:"Playfair Display";src:url("assets/PlayfairDisplay-Variable.ttf");font-weight:400 900}
+@font-face{font-family:"Playfair Display";src:url("assets/PlayfairDisplay-Italic-Variable.ttf");font-weight:400 900;font-style:italic}
+@font-face{font-family:"Source Sans 3";src:url("assets/SourceSans3-Variable.ttf");font-weight:200 900}
+@font-face{font-family:"Source Sans 3";src:url("assets/SourceSans3-Italic-Variable.ttf");font-weight:200 900;font-style:italic}
+@font-face{font-family:"Cinzel";src:url("assets/Cinzel-Variable.ttf");font-weight:400 900}
+:root{--sage:#4F6559;--accent:#2F4F3E;--cream:#F3EEE4;--gold:#D4B45A;--gold-deep:#B8923A;--ink:#1a241c;--muted:rgba(255,255,255,.82)}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:8.5in 11in;margin:0}
+html,body{background:#ddd;font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@media print{html,body{background:var(--sage);width:8.5in;height:11in}}
+.page{width:8.5in;height:11in;margin:0 auto;background:var(--sage);color:#fff;display:flex;flex-direction:column;overflow:hidden}
+.band{background:var(--accent);color:var(--gold);text-align:center;font-weight:750;letter-spacing:.16em;text-transform:uppercase;font-size:8.5pt;padding:.07in;border-bottom:1px solid rgba(212,180,90,.45)}
+.main{flex:1;padding:.22in .45in .12in;display:flex;flex-direction:column;gap:.13in;min-height:0}
+.head{display:flex;gap:.25in;align-items:flex-start}
+.head .txt{flex:1}
+.kicker{font-size:8pt;letter-spacing:.16em;font-weight:700;text-transform:uppercase;color:var(--gold);margin-bottom:.06in}
+h1{font-family:"Playfair Display",serif;font-weight:600;font-size:27pt;line-height:1.06;letter-spacing:-.01em}
+h1 em{color:var(--gold);font-style:italic}
+.sub{margin-top:.08in;font-size:11.2pt;line-height:1.35;color:var(--muted)}
+.mark{flex:0 0 1.15in;text-align:center}
+.mark img{width:.85in;display:block;margin:0 auto}
+.motto{background:var(--cream);color:var(--accent);border-radius:8px;padding:.1in .2in;display:flex;align-items:center;gap:.16in}
+.motto .q{font-family:"Playfair Display",serif;font-style:italic;font-size:15pt;font-weight:600;line-height:1.15}
+.motto .s{font-size:9.3pt;color:#3c4a41;line-height:1.3;flex:1}
+.motto img{width:.42in}
+h2{font-size:8pt;font-weight:750;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.06in}
+.gives{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.1in}
+.give{background:rgba(47,79,62,.55);border:1px solid rgba(212,180,90,.5);border-radius:7px;padding:.1in .12in}
+.give .n{font-family:"Playfair Display",serif;color:var(--gold);font-size:17pt;line-height:1}
+.give .t{font-weight:750;font-size:11.2pt;margin:.03in 0 .03in}
+.give .d{font-size:9.2pt;line-height:1.3;color:var(--muted)}
+.row{display:flex;gap:.16in;flex-shrink:0}
+.col{flex:1;display:flex;flex-direction:column;gap:.12in}
+.card{background:rgba(47,79,62,.42);border:1px solid rgba(212,180,90,.38);border-radius:7px;padding:.11in .14in}
+.card ul{list-style:none}
+.card li{font-size:9.6pt;line-height:1.32;padding:.025in 0 .025in .16in;position:relative}
+.card li:before{content:"";position:absolute;left:0;top:.075in;width:.06in;height:.06in;border-radius:50%;background:var(--gold)}
+.price{display:flex;justify-content:space-between;align-items:baseline;font-size:9.6pt;padding:.035in 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.price:last-of-type{border-bottom:0}
+.price b{font-family:"Playfair Display",serif;color:var(--gold);font-size:12.5pt;font-weight:600}
+.note{font-size:8.4pt;color:var(--muted);margin-top:.04in;line-height:1.3}
+.pic{border-radius:8px;overflow:hidden;border:3px solid var(--cream);background:var(--cream)}
+.pic img{width:100%;display:block}
+.horse{background:var(--gold);color:var(--ink);border-radius:8px;padding:.1in .16in;font-size:10.4pt;line-height:1.32}
+.horse b{font-family:"Playfair Display",serif;font-size:12.5pt}
+.foot{background:var(--accent);border-top:2px solid var(--gold);padding:.15in .45in;display:flex;align-items:center;gap:.22in}
+.foot .l{flex:1}
+.foot .k{font-size:7.6pt;letter-spacing:.15em;color:var(--gold);font-weight:750;text-transform:uppercase}
+.foot .big{font-family:"Playfair Display",serif;font-size:19pt;font-weight:600;margin:.03in 0}
+.foot .sm{font-size:9.2pt;color:var(--muted)}
+.qr{background:#fff;border-radius:7px;padding:.06in;text-align:center;color:var(--ink)}
+.qr img{width:.95in;display:block}
+.qr span{font-size:6.8pt;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+.five{background:var(--cream);color:var(--ink);border-radius:9px;padding:.14in .18in;display:flex;gap:.18in;align-items:center}
+.five .gc{flex:0 0 2.05in}
+.five .gc img{width:100%;border-radius:8px;display:block}
+.five .big{font-family:"Playfair Display",serif;font-size:19pt;font-weight:600;line-height:1.08;color:var(--accent)}
+.five .big em{color:var(--gold-deep)}
+.five ul{list-style:none;margin-top:.06in;display:grid;grid-template-columns:1fr 1fr;gap:.02in .14in}
+.five li{font-size:9.6pt;line-height:1.28;padding-left:.15in;position:relative}
+.five li:before{content:"";position:absolute;left:0;top:.06in;width:.065in;height:.065in;border-radius:50%;background:var(--gold-deep)}
+.five .credit{margin-top:.07in;font-size:9.8pt;font-style:italic;color:var(--accent)}
+
+.main{gap:.17in;padding-top:.28in}
+h1{font-size:28pt}
+.sub{font-size:11.6pt}
+.art{border-radius:9px;overflow:hidden;border:3px solid var(--cream);background:var(--cream);line-height:0}
+.art svg{width:100%;height:auto;display:block}
+.cfo{background:var(--gold);color:var(--ink);border-radius:8px;padding:.12in .16in;font-size:10.6pt;line-height:1.33}
+.cfo .w{font-size:7.6pt;letter-spacing:.15em;font-weight:800;text-transform:uppercase;color:var(--accent);margin-bottom:.03in}
+.cfo b{font-family:"Playfair Display",serif;font-size:11.5pt}
+dl{font-size:10.1pt;line-height:1.32}
+dt{font-weight:750;color:var(--gold);margin-top:.055in}
+dt:first-child{margin-top:0}
+dd{color:rgba(255,255,255,.9)}
+.card li{font-size:10.1pt;line-height:1.33;padding-top:.035in;padding-bottom:.035in}
+.unlock{background:var(--cream);color:var(--accent);border-radius:8px;padding:.1in .15in}
+.unlock h2{color:var(--gold-deep)}
+.unlock li{font-size:10.2pt;line-height:1.3;color:#24352b;list-style:none;padding:.02in 0 .02in .17in;position:relative}
+.unlock li:before{content:"";position:absolute;left:0;top:.06in;width:.07in;height:.07in;border-radius:50%;background:var(--gold-deep)}
+table.p{width:100%;border-collapse:collapse;font-size:10pt}
+table.p th{font-size:7.4pt;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:left;padding:.03in .04in;border-bottom:1px solid rgba(212,180,90,.5)}
+table.p td{padding:.035in .04in;border-bottom:1px solid rgba(255,255,255,.12)}
+table.p td.n{font-family:"Playfair Display",serif;color:var(--gold);font-size:11pt;white-space:nowrap}
+table.p tr.pick td{background:rgba(212,180,90,.16)}
+.src{font-size:7.6pt;color:var(--muted);line-height:1.28;margin-top:.04in}
+.next{font-family:"Playfair Display",serif;font-size:15pt;font-weight:600}
+.next em{color:var(--gold)}
+.rungs{display:grid;grid-template-columns:1fr;gap:.055in}
+.rg{display:flex;gap:.12in;align-items:center;background:rgba(47,79,62,.5);border:1px solid rgba(212,180,90,.45);border-radius:7px;padding:.1in .12in}
+.rg .n{font-family:"Playfair Display",serif;color:var(--gold);font-size:19pt;width:.32in;text-align:center;line-height:1}
+.rg .t{font-weight:750;font-size:11.4pt}
+.rg .d{font-size:9.8pt;color:var(--muted);line-height:1.25}
+.cols2{columns:2;column-gap:.25in;font-size:8.8pt;line-height:1.28}
+.cols2 p{break-inside:avoid;margin-bottom:.05in;color:rgba(255,255,255,.9)}
+.cols2 b{color:var(--gold)}
+.cols2 a{color:#fff}
+.page.pv .main{gap:.13in;padding-top:.2in}
+.priv{background:#7a2e2a;color:#fff;text-align:center;font-weight:800;letter-spacing:.14em;font-size:8.5pt;padding:.07in;text-transform:uppercase}
+.st{width:100%;border-collapse:collapse;font-size:9pt}
+.st td,.st th{padding:.04in .05in;border-bottom:1px solid rgba(255,255,255,.14);vertical-align:top;text-align:left}
+.st th{font-size:7.4pt;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.tag{display:inline-block;font-size:7.4pt;font-weight:800;letter-spacing:.08em;padding:.01in .06in;border-radius:4px;text-transform:uppercase}
+.ok{background:#3f7a4f}.un{background:#b8923a;color:#1a241c}.no{background:#7a2e2a}
+@media screen{.page{margin:18px auto;box-shadow:0 4px 24px rgba(0,0,0,.25)}}
+@media print{.page{page-break-after:always;break-after:page}.page:last-child{page-break-after:auto;break-after:auto}}
+.foot .mark img{height:.62in!important;width:auto!important}
+</style></head><body><div class="page"><div class="band">Critters on Call · Sheehan Homestead · The CFO Picture Book</div>
+<div class="main">
+ <div class="head"><div class="txt"><div class="kicker">Rung 7 of 7 · The top of the ladder</div><h1>At the top,<br><em>you get the RV.</em></h1><div class="sub">A rolling STEM classroom for schools and events, and glamping at the homestead for families who want to stay the night. It is the last rung because it needs every rung below it.</div></div></div>
+ <div class="row"><div class="col" style="flex:0 0 3.35in"><div class="art"><svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img">
+<rect width="320" height="220" fill="#F3EEE4"/>
+<circle cx="276" cy="40" r="20" fill="#D4B45A" opacity=".9"/>
+<path d="M0 172 Q80 156 160 168 T320 164 V220 H0Z" fill="#4F6559"/>
+<path d="M0 190 Q90 178 180 188 T320 186 V220 H0Z" fill="#2F4F3E"/>
+<g transform="translate(140,160) scale(1.0)">
+<path d="M-92 -54 H50 Q70 -54 76 -36 L84 -14 V12 H-92Z" fill="#ffffff" stroke="#2F4F3E" stroke-width="2.5"/>
+<path d="M50 -50 Q66 -48 72 -32 H50Z" fill="#cfe3e8" stroke="#2F4F3E" stroke-width="2"/>
+<rect x="-92" y="-22" width="176" height="9" fill="#D4B45A"/>
+<rect x="-80" y="-46" width="30" height="18" rx="3" fill="#cfe3e8" stroke="#2F4F3E" stroke-width="2"/>
+<rect x="-42" y="-46" width="30" height="18" rx="3" fill="#cfe3e8" stroke="#2F4F3E" stroke-width="2"/>
+<rect x="-2" y="-46" width="20" height="44" rx="2" fill="#4F6559"/>
+<text x="-60" y="4" font-family="Cinzel" font-weight="700" font-size="9" fill="#2F4F3E" letter-spacing="1">STEM ON CALL</text>
+<circle cx="-60" cy="14" r="12" fill="#1a241c"/><circle cx="-60" cy="14" r="4.5" fill="#F3EEE4"/>
+<circle cx="52" cy="14" r="12" fill="#1a241c"/><circle cx="52" cy="14" r="4.5" fill="#F3EEE4"/></g><g transform="translate(276,162) scale(0.8)"><path d="M-30 20 L0 -26 L30 20Z" fill="#D4B45A" stroke="#2F4F3E" stroke-width="2.5"/><path d="M0 -26 L-8 20 H8Z" fill="#2F4F3E"/></g><path transform="translate(70,56)" d="M0 -6 L1.7399999999999998 -2.4000000000000004 L5.699999999999999 -1.8599999999999999 L2.82 0.8999999999999999 L3.54 4.86 L0 3.0 L-3.54 4.86 L-2.82 0.8999999999999999 L-5.699999999999999 -1.8599999999999999 L-1.7399999999999998 -2.4000000000000004Z" fill="#D4B45A"/><path transform="translate(110,40)" d="M0 -4 L1.16 -1.6 L3.8 -1.24 L1.88 0.6 L2.36 3.24 L0 2.0 L-2.36 3.24 L-1.88 0.6 L-3.8 -1.24 L-1.16 -1.6Z" fill="#D4B45A"/></svg></div><div class="cfo"><div class="w">From your CFO</div><b>Buy it with cash flow or an equipment loan, never with hope.</b> The RV comes after payroll has run for a while and the books are clean, so a lender pays for most of it and the gigs pay the lender.</div></div>
+  <div class="col"><div class="card"><h2>Plain words</h2><dl><dt>Mobile classroom</dt><dd>An RV fitted for hands on STEM lessons that parks at a school or event. STEM on Call on wheels.</dd><dt>Glamping</dt><dd>Comfortable camping for guests at the farm. That makes you a lodging business, with its own rules.</dd><dt>Short term rental rules</dt><dd>County licensing, tourist tax and occupancy limits for paid overnight guests.</dd><dt>Habitational insurance</dt><dd>Coverage for people sleeping on your property. Farm policies often exclude paid stays.</dd><dt>Commercial RV coverage</dt><dd>An RV used for business needs a business policy. A personal RV policy usually won't cover paid work.</dd></dl></div></div></div>
+ <div class="row"><div class="col"><div class="card"><h2>Before the keys</h2><ul><li>Nassau County short term rental license and tourist tax before any paid overnight guest</li><li>Septic capacity, setbacks and fire access checked for trailers or RVs used as stays</li><li>Insurance bindable in writing before you list a single night</li><li>Keep guests and worker housing separate. If housing is part of anyone's pay, ask your CPA first.</li><li>Check the weight: at 26,001 pounds and up, Florida's commercial vehicle rules start</li></ul></div></div>
+  <div class="col" style="flex:0 0 2.75in"><div class="unlock"><h2>Once you have this, you get</h2><ul><li>Two more products: rolling STEM lessons and farm stays</li><li>Bigger school and district contracts</li><li>A visible brand on every road you drive</li><li>A business that looks like a franchise, ready for On Call Brands</li></ul></div></div></div>
+</div>
+<div class="foot"><div class="l"><div class="k">Next rung</div><div class="next">Last page: <em>sources and the side list.</em></div><div class="sm">Sources for every number are on the last page. Have your CPA, agent or lawyer confirm before you spend.</div></div>
+<div class="mark" style="flex:0 0 1in"><img src="assets/logo-wordmark-gold-tight.png" alt="Sheehan Homestead" style="width:.8in"></div></div>
+</div></body></html>
