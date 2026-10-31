@@ -312,6 +312,7 @@
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn">Spin the wheel</button>
       <p class="rules-note">No email needed to spin · max 3 spins · Free spin does not count against your 3</p>
+      <p class="rules-note" style="font-weight:700;font-size:0.95rem">Won something? Text PRIZE to 914 263 1311</p>
 
       <div class="win-card" id="win-card" hidden>
         <p class="tracker-kicker" id="win-kicker">You won</p>
@@ -334,6 +335,7 @@
           <h3>Claim your prize</h3>
           <p class="claim-sub">Tell us you won using <strong>any option below</strong>, then come see us at the farm.</p>
           <div class="cta-row" id="claim-contact-row"></div>
+          <p class="sms-fallback" id="sms-fallback" style="text-align:center;margin:0.75rem 0 0;font-size:1.15rem;font-weight:700;line-height:1.35">Or text PRIZE to <span style="white-space:nowrap;user-select:all;-webkit-user-select:all">914 263 1311</span><br><span style="font-size:0.85rem;font-weight:500">If the Text button does not open Messages, type that number in a new text.</span></p>
           <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. We confirm every prize from your text or email.</p>
         </div>
 
@@ -376,7 +378,7 @@
   var FARM_ADDRESS = "44065 Cushman Road, Callahan, FL 32011";
   var FARM_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=44065+Cushman+Road,+Callahan,+FL+32011";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
-  var CLAIM_SMS = "9142631311";
+  var CLAIM_SMS = "+19142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
   var BOOKING_URL = "https://sheehanhomestead.com/services";
   var FB_LABEL = "Sheehan Homestead";
@@ -427,6 +429,7 @@
   var slice = 360 / PRIZES.length;
   var rotation = 0;
   var spinning = false;
+  var spinFallbackTimer = null;
   var reduceMotion = false;
   var pending = null;
   var pendingClaimed = false;
@@ -713,8 +716,9 @@
   }
 
   function claimSmsHref(prizeLabel) {
-    var body = "PRIZE: " + prizeLabel;
-    return "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent(body);
+    /* Short plain ASCII body. "?&body=" works on both iOS Messages and Android. */
+    var body = "PRIZE " + String(prizeLabel).replace(/[^\x20-\x7E]/g, "");
+    return "sms:" + CLAIM_SMS + "?&body=" + encodeURIComponent(body);
   }
 
   function fillClaimContacts() {
@@ -824,6 +828,7 @@
   }
 
   function finishSpin() {
+    clearTimeout(spinFallbackTimer);
     spinning = false;
     wheel.classList.remove("is-spinning");
     if (!pending) { refreshSpinUI(); return; }
@@ -840,7 +845,7 @@
 
     refreshSpinUI();
 
-    showPrize(pending, false);
+    showPrize(pending, true);
   }
 
   spinBtn.addEventListener("click", function () {
@@ -872,6 +877,8 @@
     }
     rotation = targetRotation(index, rotation);
     wheel.style.transform = "rotate(" + rotation + "deg)";
+    clearTimeout(spinFallbackTimer);
+    spinFallbackTimer = setTimeout(function () { if (spinning) finishSpin(); }, 4800);
   });
 
   wheel.addEventListener("transitionend", function (e) {
