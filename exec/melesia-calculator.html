@@ -61,13 +61,13 @@ details.fold summary .n{float:right;color:var(--muted);font-weight:600}
 <div id="subbox"><label>Price per visit you quoted</label><input id="price" type="number" step="5"></div>
 <div id="evbox" style="display:none"><label>Service</label><select id="prod"></select><label>Day</label><select id="day"><option value="wd">Weekday</option><option value="we">Weekend</option></select>
 <div class="grid2"><div><label>Travel (list, from Michael)</label><input id="travel" type="number" value="150" step="25"></div><div><label>Hay fee (list)</label><input id="hay" type="number" value="40" step="5"></div></div>
-<label>On site marketing at the event (optional)</label><select id="mkt"><option value="0">No</option><option value="50">Yes, $50</option><option value="100">Yes, $100</option></select>
+<label>You work the event as B2C marketing (optional)</label><select id="mkt"><option value="0">No</option><option value="50">Yes, $50</option></select>
 <label id="chl" style="display:none"><input id="charity" type="checkbox" style="width:auto"> Small charity (include 3 to 5 Gold cards, Value $100 each)</label></div>
 <label id="cntl">How many accounts?</label><input id="count" type="number" value="10" min="1"></div>
 <div class="card"><div class="sm">Client price</div><div class="big" id="oPrice"></div><div class="sm" id="oPriceNote"></div>
 <div class="sm" style="margin-top:8px">Your floor</div><div id="oFloor" style="font-weight:700"></div>
 <div class="sm" style="margin-top:8px">You earn</div><div class="big" id="oComm"></div><div class="sm" id="oCommNote"></div><div class="fl" id="oWarn"></div></div>
-<p class="note">Rules: you are paid when Sheehan Homestead is paid. Events pay $100 per booking plus optional $50 to $100 for on site marketing (large custom deals: up to 25% of profit, Michael's call). Recurring pays $25 for every visit the client pays for, plus half of anything over the floor. Monthly floor $150. Quarterly floor $200 (Michael may approve down to $185). Violet is 50% off services and 75% off travel and fees. Custom work, STEM, assemblies and after school go to Michael.</p>
+<p class="note">Rules: you are paid when Sheehan Homestead is paid. Events pay 20% of the price the client pays, $100 minimum, plus an optional $50 if you work the event as B2C marketing. Recurring pays $25 for every visit the client pays for, plus half of anything over the floor. Monthly floor $150. Quarterly floor $200 (Michael may approve down to $185). Violet is 50% off services and 75% off travel and fees. Custom work, STEM, assemblies and after school go to Michael.</p>
 <script>
 const P=[["Bunny Haven, 60 min",235,235],["Bunny Haven, 90 min",315,315],["Bunny Haven, 2 hr",399,399],["Mini Petting Zoo, 60 min",335,null],["Mini Petting Zoo, 90 min",425,null],["Mini Petting Zoo, 2 hr",549,549],["Mini Petting Zoo, 3 hr",649,749],["Mini Petting Zoo, 4 hr",null,949],["Standard Petting Zoo, 2 hr",549,749],["Standard Petting Zoo, 3 hr",749,1049],["Standard Petting Zoo, 4 hr",949,1349],["Standard plus Full Side, 2 hr",null,998],["Standard plus Full Side, 3 hr",null,1298],["Standard plus Full Side, 4 hr",null,1598]];
 const $=id=>document.getElementById(id),f=n=>"$"+(Math.round(n*100)/100).toLocaleString(undefined,{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2});
@@ -87,7 +87,7 @@ function calc(){const m=$("mode").value,n=Math.max(1,+$("count").value||1);
   if(m==="v"){price=list*.5+tr*.25+hay*.25;note="Violet: "+f(list*.5)+" service + "+f(tr*.25)+" travel + "+f(hay*.25)+" hay. List would be "+f(full)+", so the partial donation is "+Math.round((1-price/full)*100)+"%."+($("charity").checked?" Plus 3 to 5 Gold cards (Value $100 each).":"")}
   $("oPrice").textContent=f(price)+" per event";$("oPriceNote").textContent=note+(n>1?" · "+f(price*n)+" for "+n+" events":"");
   $("oFloor").textContent=m==="v"?"Violet price is the floor. No further discounts without Michael.":"List price. Any discount goes to Michael.";
-  $("oComm").textContent=f((100+mk)*n);$("oCommNote").textContent="$100 per booked event"+(mk?" + "+f(mk)+" on site marketing":"")+" × "+n+", paid when the client pays";}
+  const cm=Math.max(100,price*.2);$("oComm").textContent=f((cm+mk)*n);$("oCommNote").textContent=(price*.2>=100?"20% of "+f(price)+" = "+f(cm):"20% of "+f(price)+" is "+f(price*.2)+", so the $100 minimum applies")+(mk?" + "+f(mk)+" marketing":"")+" × "+n+", paid when the client pays";}
 }
 document.querySelectorAll("select,input").forEach(x=>x.addEventListener("input",calc));calc();
 </script></div></body></html>
