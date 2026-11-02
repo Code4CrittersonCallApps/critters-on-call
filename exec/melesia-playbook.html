@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Melesia playbook · Sheehan Homestead</title><style>
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--ok:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--ok)}.wrap{max-width:720px;margin:0 auto;padding:14px 12px 72px}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 8px}.crumb a{color:#fde68a;text-decoration:none;font-weight:600}
+h1{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+.banner{padding:10px 12px;border:1px solid #c9a22788;border-radius:12px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.8rem;color:#fde68a;margin:0 0 12px}
+.banner b{color:#fff}.ver{display:block;font-size:.7rem;color:#9dffc5;font-weight:700;margin-top:4px}
+.sec{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 8px}
+.card.top{border-color:#c9a22788}.card.owe{border-color:#ffb02066}.card.closed{opacity:.72;border-color:#3dd68c44}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.meta{font-size:.78rem;color:var(--muted)}.meta b{color:#c5d0e6}
+.why{font-size:.78rem;color:#fde68a;margin-top:6px;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
+.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.wait{border-color:#c9a22788;color:#fde68a}.chip.sent{border-color:#3dd68c88;color:#9dffc5}.chip.closed{border-color:#3dd68c66;color:#9dffc5}
+.chip.chase{border-color:#ffb02088;color:#ffb020}
+.card.low{opacity:.65;border-color:#93a0b866}
+.chip.low{border-color:#93a0b888;color:#93a0b8}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none}
+a.btn.sec{background:#0e1626;border-color:var(--line);color:#c5d0e6;font-weight:600;font-size:.72rem;min-height:34px}
+.note{font-size:.72rem;color:var(--muted);margin-top:16px}
+.pipeline a{display:block;padding:8px 0;border-bottom:1px solid var(--line);color:#9dffc5;text-decoration:none;font-size:.88rem}
+.pipeline a:last-child{border:0}
+@media(max-width:640px){a.btn{min-height:48px;flex:1 1 100%}}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 12px}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.strip b{display:block;font-size:1.25rem;color:#fff}.strip span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.strip .w b{color:#fde68a}.strip .s b{color:#9dffc5}
+.grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px}
+.grp i{font-style:normal;color:#c5d0e6}
+.q{background:var(--card);border:1px solid #c9a22766;border-radius:12px;padding:10px;margin:0 0 8px}
+a.mbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;margin:0 0 8px}
+a.mbtn.call{background:linear-gradient(180deg,#5a4a1a,#2a2210);border-color:#c9a227aa}
+.who{font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-block;font-size:.62rem;padding:1px 7px;border-radius:999px;border:1px solid #c9a22788;color:#fde68a;vertical-align:middle;margin-left:4px}
+.sm{font-size:.76rem;color:var(--muted);margin-top:3px;word-break:break-word}.sm b{color:#c5d0e6;font-weight:600}
+a.tel{color:#9dffc5;font-weight:700;text-decoration:none}
+a.mini{font-size:.7rem;color:#c5d0e6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;text-decoration:none;margin-left:4px}
+.nt{font-size:.74rem;color:#fde68a;margin-top:4px}
+details.fold{background:#0e1626;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;padding:0 10px}
+details.fold summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:.85rem;color:#c5d0e6;list-style:none}
+details.fold summary .n{float:right;color:var(--muted);font-weight:600}
+.intro{font-size:.74rem;color:var(--muted);margin:0 0 8px}
+.row{border-top:1px solid var(--line);padding:8px 0;font-size:.82rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.tabs a{font-size:.74rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c5d0e6;text-decoration:none;background:#0e1626}
+.tabs a.on{border-color:#3dd68caa;color:#fff;background:#1a3d2e;font-weight:700}.tabs a i{font-style:normal;color:var(--muted);margin-left:3px}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.76rem;color:var(--muted);align-items:center}
+.ctl select{background:#0e1626;color:#e8eefc;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem}
+.tot{padding:10px 12px;border:1px solid #3dd68c66;border-radius:12px;background:#0e1f18;margin:0 0 10px;font-size:.84rem}.tot b{font-size:1.15rem;color:#9dffc5}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.lane{display:block;text-decoration:none;color:var(--text)}.lane b{color:#9dffc5}
+.draft{white-space:pre-wrap}
+.scr{white-space:pre-wrap;font-size:.82rem;background:#0e1626;border:1px solid var(--line);border-radius:10px;padding:10px;margin:6px 0}.lead{border-top:1px solid var(--line);padding:9px 0}.lead .o{font-weight:700;font-size:.9rem}.fl{font-size:.74rem;color:#fde68a;margin-top:3px}.dep{opacity:.72}.nd li{margin:0 0 4px;font-size:.82rem}table.t{width:100%;border-collapse:collapse;font-size:.82rem}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left}.conf{color:#fde68a;font-weight:700}</style></head><body><div class="wrap"><p class="crumb"><a href="dunk-list.html">Dunk lists</a> → <a href="melesia-kit.html">Melesia kit</a> → <b>Playbook</b></p>
+<h1>Melesia's playbook</h1><p class='sub'>Phone script, voicemail and three emails for each list. Copy, fill the name, send from your own email.</p>
+<div class="sec">The opener (every call)</div><div class="scr">Hi, I represent a family business that brings farm animals to events. You&#x27;re one of the premier programmers in the area. Do you have any dates coming up where bringing animals would make sense?</div>
+<div class="card"><b>If they say...</b><ul class="nd"><li><b>"Send me something."</b> Great. Get their email, send email 1 for that list, and attach the <a href="../brochures/melesia-2026-11-02/regional-subscription.pdf">Subscription</a> or <a href="../brochures/melesia-2026-11-02/violet-pricing.pdf">Violet</a> sheet.</li><li><b>"Too expensive."</b> Offer quarterly instead of monthly. You can go to $150 monthly or $200 quarterly. Anything lower, tell them you will check with Michael.</li><li><b>"Not right now."</b> Ask which month is better and put a reminder on your calendar.</li><li><b>STEM, assemblies, after school, custom.</b> "That one is built to order. Michael will call you with a quote." Then text Michael.</li></ul></div>
+<div class="sec">List 1 · Win back (past clients)</div><details class="fold" open><summary>Call</summary><div class="scr">Hi, I represent a family business that brings farm animals to events. You&#x27;re one of the premier programmers in the area. Do you have any dates coming up where bringing animals would make sense?
+
+If they remember us: &quot;You had our animals out at [Org] before, and your people loved it. We&#x27;d love to get you back on the calendar for 2027. Most of our communities keep a standing visit, $185 for a monthly visit or $250 for a quarterly one. Would monthly or quarterly fit you better?&quot;</div></details><details class="fold"><summary>Voicemail</summary><div class="scr">Hi [Name], this is Melesia with Sheehan Homestead, the family farm that brought animals out to [Org]. We&#x27;d love to get you back on the calendar. Call or text me at 904.903.8755. Again, that&#x27;s 904.903.8755. Thank you!</div></details>
+<details class="fold"><summary>Email 1: Intro</summary><div class="meta">Subject: <b>Bringing the animals back to [Org]</b></div><div class="scr">Hi [Name],
+
+It was such a joy having our animals at [Org]. Your [people] are a big part of why we love this work.
+
+I&#x27;d love to get you back on the calendar for 2027. Most of our communities keep a standing visit: $185 for a monthly visit or $250 for a quarterly one. We handle setup, the visit, and cleanup.
+
+Would a monthly or a quarterly rhythm fit you better? I&#x27;m happy to hold a date while you decide.
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<details class="fold"><summary>Email 2: Follow up (3 to 4 days later)</summary><div class="meta">Subject: <b>Quick follow up for [Org]</b></div><div class="scr">Hi [Name],
+
+Just floating this back to the top of your inbox. If the budget is tight, a quarterly visit is an easy way to keep the bunnies coming without a monthly commitment.
+
+Is there a month in early 2027 that would work for a first date?
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<details class="fold"><summary>Email 3: Last touch (a week later)</summary><div class="meta">Subject: <b>Should I keep a spot for [Org]?</b></div><div class="scr">Hi [Name],
+
+I don&#x27;t want to crowd your inbox, so this is my last note for now. Whenever animal visits are back on your list, just reply or call me and I&#x27;ll get you on the calendar quickly.
+
+Thank you again for having us. It meant a lot to our family.
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<div class="sec">List 2 · New subscription</div><details class="fold" open><summary>Call</summary><div class="scr">Hi, I represent a family business that brings farm animals to events. You&#x27;re one of the premier programmers in the area. Do you have any dates coming up where bringing animals would make sense?
+
+Then: &quot;Many of the communities we serve, like Cypress Village and Fletcher&#x27;s Tender Care, keep a standing visit. It&#x27;s $185 for a monthly visit or $250 for a quarterly one, and we set up, run the hour, and clean up. Could I pencil in a first date for you?&quot;</div></details><details class="fold"><summary>Voicemail</summary><div class="scr">Hi [Name], this is Melesia with Sheehan Homestead, a family farm in Callahan that brings gentle farm animals to senior communities, PPECs and preschools. I&#x27;d love to see if you have any dates coming up where animals would make sense. Call or text me at 904.903.8755. Again, that&#x27;s 904.903.8755. Thank you!</div></details>
+<details class="fold"><summary>Email 1: Intro</summary><div class="meta">Subject: <b>Monthly animal visits for [Org]</b></div><div class="scr">Hi [Name],
+
+I&#x27;m Melesia with Sheehan Homestead, a family farm in Callahan that brings gentle farm animals to senior communities, PPECs and preschools around Jacksonville.
+
+Places like Cypress Village, The Gardens and Fletcher&#x27;s Tender Care keep us on a standing schedule: $185 for a monthly visit or $250 for a quarterly one. We set up, run the hour, and clean up, so your team just gets to enjoy it.
+
+Would you like to try a first visit? I can send over a couple of dates.
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<details class="fold"><summary>Email 2: Follow up (3 to 4 days later)</summary><div class="meta">Subject: <b>A calm hour with bunnies for your [people]</b></div><div class="scr">Hi [Name],
+
+Following up on my note about animal visits. Our Bunny Haven is a favorite: soft, calm bunnies your [people] can hold and pet, brought right to you.
+
+One activities director told us, &quot;Sheehan Homestead has been a big blessing for my residents.&quot;
+
+Do you have a date in the next month or two where that would be fun?
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<details class="fold"><summary>Email 3: Last touch (a week later)</summary><div class="meta">Subject: <b>Last note from me</b></div><div class="scr">Hi [Name],
+
+I&#x27;ll keep this short since I know your days are full. If a monthly or quarterly animal visit ever fits your calendar, just reply or call and I&#x27;ll take care of the rest.
+
+Thank you for all you do for your [people].
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<div class="sec">List 3 · Violet (churches, schools, PTAs, charities)</div><details class="fold" open><summary>Call</summary><div class="scr">Hi, I represent a family business that brings farm animals to events. You&#x27;re one of the premier programmers in the area. Do you have any dates coming up where bringing animals would make sense?
+
+Then: &quot;Churches, schools and nonprofits get our Violet rate, half off the animals and 75 percent off travel and fees. A full petting zoo for a fall festival or family day usually comes to about $600 to $700. What events do you have coming up?&quot;</div></details><details class="fold"><summary>Voicemail</summary><div class="scr">Hi [Name], this is Melesia with Sheehan Homestead, a family farm in Callahan that brings friendly farm animals to church, school and community events at about half price. I&#x27;d love to see if you have any dates coming up. Call or text me at 904.903.8755. Again, that&#x27;s 904.903.8755. Thank you!</div></details>
+<details class="fold"><summary>Email 1: Intro</summary><div class="meta">Subject: <b>Farm animals for [Org] at about half price</b></div><div class="scr">Hi [Name],
+
+I&#x27;m Melesia with Sheehan Homestead, a family farm in Callahan that brings friendly farm animals to church, school and community events.
+
+Churches, schools and nonprofits get our Violet rate: half off the animals and 75 percent off travel and fees. A full petting zoo for a fall festival or family day usually comes to about $600 to $700, and we set up, run it, and clean up.
+
+Do you have any events coming up where animals would make sense? I&#x27;d be glad to send our Violet price sheet.
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<details class="fold"><summary>Email 2: Follow up (3 to 4 days later)</summary><div class="meta">Subject: <b>Animals for your spring events?</b></div><div class="scr">Hi [Name],
+
+Following up on my note. Spring is a great season for egg hunts, field days and family nights, and our weekends fill early.
+
+If you&#x27;re a small charity, ask me about the Gold memberships we include, a $100 value each, which make lovely raffle prizes or thank you gifts.
+
+Is there a date I can hold for you?
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<details class="fold"><summary>Email 3: Last touch (a week later)</summary><div class="meta">Subject: <b>Last note from me</b></div><div class="scr">Hi [Name],
+
+I don&#x27;t want to crowd your inbox, so this is my last note for now. Whenever you&#x27;re planning an event and want animals there, just reply or call and I&#x27;ll take it from there.
+
+Thank you for serving your community.
+
+Warmly,
+Melesia, Sheehan Homestead
+904.903.8755</div></details>
+<p class="note">Never mention yoga to a church. Keep it warm, short, and about their people.</p></div></body></html>
