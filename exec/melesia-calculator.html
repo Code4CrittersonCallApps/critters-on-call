@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Pricing calculator · Sheehan Homestead</title><style>
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--ok:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--ok)}.wrap{max-width:720px;margin:0 auto;padding:14px 12px 72px}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 8px}.crumb a{color:#fde68a;text-decoration:none;font-weight:600}
+h1{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+.banner{padding:10px 12px;border:1px solid #c9a22788;border-radius:12px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.8rem;color:#fde68a;margin:0 0 12px}
+.banner b{color:#fff}.ver{display:block;font-size:.7rem;color:#9dffc5;font-weight:700;margin-top:4px}
+.sec{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 8px}
+.card.top{border-color:#c9a22788}.card.owe{border-color:#ffb02066}.card.closed{opacity:.72;border-color:#3dd68c44}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.meta{font-size:.78rem;color:var(--muted)}.meta b{color:#c5d0e6}
+.why{font-size:.78rem;color:#fde68a;margin-top:6px;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
+.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.wait{border-color:#c9a22788;color:#fde68a}.chip.sent{border-color:#3dd68c88;color:#9dffc5}.chip.closed{border-color:#3dd68c66;color:#9dffc5}
+.chip.chase{border-color:#ffb02088;color:#ffb020}
+.card.low{opacity:.65;border-color:#93a0b866}
+.chip.low{border-color:#93a0b888;color:#93a0b8}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none}
+a.btn.sec{background:#0e1626;border-color:var(--line);color:#c5d0e6;font-weight:600;font-size:.72rem;min-height:34px}
+.note{font-size:.72rem;color:var(--muted);margin-top:16px}
+.pipeline a{display:block;padding:8px 0;border-bottom:1px solid var(--line);color:#9dffc5;text-decoration:none;font-size:.88rem}
+.pipeline a:last-child{border:0}
+@media(max-width:640px){a.btn{min-height:48px;flex:1 1 100%}}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 12px}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.strip b{display:block;font-size:1.25rem;color:#fff}.strip span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.strip .w b{color:#fde68a}.strip .s b{color:#9dffc5}
+.grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px}
+.grp i{font-style:normal;color:#c5d0e6}
+.q{background:var(--card);border:1px solid #c9a22766;border-radius:12px;padding:10px;margin:0 0 8px}
+a.mbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;margin:0 0 8px}
+a.mbtn.call{background:linear-gradient(180deg,#5a4a1a,#2a2210);border-color:#c9a227aa}
+.who{font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-block;font-size:.62rem;padding:1px 7px;border-radius:999px;border:1px solid #c9a22788;color:#fde68a;vertical-align:middle;margin-left:4px}
+.sm{font-size:.76rem;color:var(--muted);margin-top:3px;word-break:break-word}.sm b{color:#c5d0e6;font-weight:600}
+a.tel{color:#9dffc5;font-weight:700;text-decoration:none}
+a.mini{font-size:.7rem;color:#c5d0e6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;text-decoration:none;margin-left:4px}
+.nt{font-size:.74rem;color:#fde68a;margin-top:4px}
+details.fold{background:#0e1626;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;padding:0 10px}
+details.fold summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:.85rem;color:#c5d0e6;list-style:none}
+details.fold summary .n{float:right;color:var(--muted);font-weight:600}
+.intro{font-size:.74rem;color:var(--muted);margin:0 0 8px}
+.row{border-top:1px solid var(--line);padding:8px 0;font-size:.82rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.tabs a{font-size:.74rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c5d0e6;text-decoration:none;background:#0e1626}
+.tabs a.on{border-color:#3dd68caa;color:#fff;background:#1a3d2e;font-weight:700}.tabs a i{font-style:normal;color:var(--muted);margin-left:3px}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.76rem;color:var(--muted);align-items:center}
+.ctl select{background:#0e1626;color:#e8eefc;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem}
+.tot{padding:10px 12px;border:1px solid #3dd68c66;border-radius:12px;background:#0e1f18;margin:0 0 10px;font-size:.84rem}.tot b{font-size:1.15rem;color:#9dffc5}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.lane{display:block;text-decoration:none;color:var(--text)}.lane b{color:#9dffc5}
+.draft{white-space:pre-wrap}
+.scr{white-space:pre-wrap;font-size:.84rem;background:#0e1626;border:1px solid var(--line);border-radius:10px;padding:10px;margin:6px 0}.lead{border-top:1px solid var(--line);padding:9px 0}.lead .o{font-weight:700;font-size:.9rem}.fl{font-size:.74rem;color:#fde68a;margin-top:3px}.dep{opacity:.72}.nd li{margin:0 0 5px;font-size:.84rem}table.t{width:100%;border-collapse:collapse;font-size:.84rem}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}.conf{color:#fde68a;font-weight:700}label{display:block;font-size:.8rem;margin:8px 0 3px;color:var(--muted,#9aa)}select,input{width:100%;padding:8px;border-radius:8px;border:1px solid var(--line);background:#0e1626;color:inherit;font-size:.95rem}.big{font-size:1.5rem;font-weight:800}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}</style></head><body><div class="wrap"><p class="crumb"><a href="dunk-list.html">Dunk lists</a> → <a href="melesia-kit.html">Melesia kit</a> → <b>Calculator</b></p>
+<h1>Pricing calculator</h1><p class='sub'>Pick what you are selling and how many. It shows the price, your floor and what you earn.</p>
+<div class="card"><label>What are you selling?</label><select id="mode"><option value="m">Monthly subscription visit</option><option value="q">Quarterly subscription visit</option><option value="o">One time event (list price)</option><option value="v">Violet event (schools, churches, nonprofits)</option></select>
+<div id="subbox"><label>Price per visit you quoted</label><input id="price" type="number" step="5"></div>
+<div id="evbox" style="display:none"><label>Service</label><select id="prod"></select><label>Day</label><select id="day"><option value="wd">Weekday</option><option value="we">Weekend</option></select>
+<div class="grid2"><div><label>Travel (list, from Michael)</label><input id="travel" type="number" value="150" step="25"></div><div><label>Hay fee (list)</label><input id="hay" type="number" value="40" step="5"></div></div>
+<label>On site marketing at the event (optional)</label><select id="mkt"><option value="0">No</option><option value="50">Yes, $50</option><option value="100">Yes, $100</option></select>
+<label id="chl" style="display:none"><input id="charity" type="checkbox" style="width:auto"> Small charity (include 3 to 5 Gold cards, Value $100 each)</label></div>
+<label id="cntl">How many accounts?</label><input id="count" type="number" value="10" min="1"></div>
+<div class="card"><div class="sm">Client price</div><div class="big" id="oPrice"></div><div class="sm" id="oPriceNote"></div>
+<div class="sm" style="margin-top:8px">Your floor</div><div id="oFloor" style="font-weight:700"></div>
+<div class="sm" style="margin-top:8px">You earn</div><div class="big" id="oComm"></div><div class="sm" id="oCommNote"></div><div class="fl" id="oWarn"></div></div>
+<p class="note">Rules: you are paid when Sheehan Homestead is paid. Events pay $100 per booking plus optional $50 to $100 for on site marketing. Recurring pays $25 for every visit the client pays for, plus half of anything over the floor. Monthly floor $150. Quarterly floor $200 (Michael may approve down to $185). Violet is 50% off services and 75% off travel and fees. Custom work, STEM, assemblies and after school go to Michael.</p>
+<script>
+const P=[["Bunny Haven, 60 min",235,235],["Bunny Haven, 90 min",315,315],["Bunny Haven, 2 hr",399,399],["Mini Petting Zoo, 60 min",335,null],["Mini Petting Zoo, 90 min",425,null],["Mini Petting Zoo, 2 hr",549,549],["Mini Petting Zoo, 3 hr",649,749],["Mini Petting Zoo, 4 hr",null,949],["Standard Petting Zoo, 2 hr",549,749],["Standard Petting Zoo, 3 hr",749,1049],["Standard Petting Zoo, 4 hr",949,1349],["Standard plus Full Side, 2 hr",null,998],["Standard plus Full Side, 3 hr",null,1298],["Standard plus Full Side, 4 hr",null,1598]];
+const $=id=>document.getElementById(id),f=n=>"$"+(Math.round(n*100)/100).toLocaleString(undefined,{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2});
+P.forEach((p,i)=>{let o=document.createElement("option");o.value=i;o.textContent=p[0];$("prod").appendChild(o)});$("prod").value=9;$("day").value="we";
+let last="";
+function calc(){const m=$("mode").value,n=Math.max(1,+$("count").value||1);
+ if(m!==last){$("price").value=m==="m"?185:250;last=m}
+ const sub=m==="m"||m==="q";$("subbox").style.display=sub?"":"none";$("evbox").style.display=sub?"none":"";$("chl").style.display=m==="v"?"":"none";$("cntl").textContent=sub?"How many accounts?":"How many events?";$("oWarn").textContent="";
+ if(sub){const price=+$("price").value||0,floor=m==="m"?150:200,vis=m==="m"?12:4;let per=25+Math.max(0,price-floor)/2;
+  if(price<floor){per=25;$("oWarn").textContent=m==="q"&&price>=185?"Below $200: get Michael's OK first.":"Below your floor: Michael must approve this price."}
+  $("oPrice").textContent=f(price)+" per visit";$("oPriceNote").textContent=(m==="m"?"12":"4")+" visits a year per account · "+f(price*vis*n)+" a year for "+n+" account"+(n>1?"s":"");
+  $("oFloor").textContent=f(floor)+(m==="q"?" (Michael may approve down to $185)":"")+" · target "+f(m==="m"?185:250);
+  $("oComm").textContent=f(per*vis*n)+" a year";$("oCommNote").textContent=f(per)+" per paid visit ($25 residual"+(price>floor?" plus half of the "+f(price-floor)+" over the floor":"")+") × "+vis+" visits × "+n;}
+ else{const p=P[+$("prod").value],d=$("day").value;let list=d==="wd"?p[1]:p[2];if(list==null){list=p[1]??p[2];$("oWarn").textContent="This one is only offered "+(p[1]==null?"on weekends":"on weekdays")+"; showing that price."}
+  const tr=+$("travel").value||0,hay=+$("hay").value||0,mk=+$("mkt").value,full=list+tr+hay;
+  let price=full,note="List: "+f(list)+" service + "+f(tr)+" travel + "+f(hay)+" hay";
+  if(m==="v"){price=list*.5+tr*.25+hay*.25;note="Violet: "+f(list*.5)+" service + "+f(tr*.25)+" travel + "+f(hay*.25)+" hay. List would be "+f(full)+", so the partial donation is "+Math.round((1-price/full)*100)+"%."+($("charity").checked?" Plus 3 to 5 Gold cards (Value $100 each).":"")}
+  $("oPrice").textContent=f(price)+" per event";$("oPriceNote").textContent=note+(n>1?" · "+f(price*n)+" for "+n+" events":"");
+  $("oFloor").textContent=m==="v"?"Violet price is the floor. No further discounts without Michael.":"List price. Any discount goes to Michael.";
+  $("oComm").textContent=f((100+mk)*n);$("oCommNote").textContent="$100 per booked event"+(mk?" + "+f(mk)+" on site marketing":"")+" × "+n+", paid when the client pays";}
+}
+document.querySelectorAll("select,input").forEach(x=>x.addEventListener("input",calc));calc();
+</script></div></body></html>

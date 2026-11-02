@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheehan Homestead LLC | Services Catalogue 2026-2027</title>
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+:root { --green:#2F4F3E; --sage:#4F6559; --gold:#C9A227; --gold2:#D4B45A; --cream:#F3EEE4; --ink:#1a241c; --line:#d9cfb8; --brown:#6b5a2e; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { background:#8a8a8a; }
+body { font-family:"Source Sans 3","Source Sans Pro",Arial,sans-serif; color:var(--ink); font-size:11.6pt; line-height:1.4; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+@media print { html, body { background:none; } .page { margin:0 !important; box-shadow:none !important; } }
+.page { width:8.5in; height:11in; background:var(--cream); position:relative; overflow:hidden; margin:0 auto 0.25in; page-break-after:always; break-after:page; display:flex; flex-direction:column; box-shadow:0 2px 10px rgba(0,0,0,.25); }
+.page:last-child { page-break-after:auto; break-after:auto; }
+h1,h2,h3,h4 { font-family:"Lora",Georgia,serif; color:var(--green); line-height:1.12; }
+.runhead { background:var(--green); color:#e9e3d4; display:flex; align-items:center; justify-content:space-between; padding:0.1in 0.5in; border-bottom:3px solid var(--gold2); font-size:8.4pt; letter-spacing:.14em; text-transform:uppercase; font-weight:700; }
+.runhead .l { color:var(--gold2); }
+.runhead img { height:0.32in; margin:-0.06in 0; }
+.body { flex:1; padding:0.32in 0.5in 0.18in; display:flex; flex-direction:column; gap:0.2in; min-height:0; justify-content:space-between; }
+.foot { padding:0.08in 0.5in 0.16in; display:flex; justify-content:space-between; font-size:8pt; color:#5d5d5d; border-top:1px solid var(--line); margin:0 0.5in; padding-left:0; padding-right:0; }
+.foot b { color:var(--green); }
+.kick { font-size:8.4pt; letter-spacing:.18em; text-transform:uppercase; color:var(--brown); font-weight:700; }
+h2.title { font-size:26pt; margin-top:0.02in; }
+.lede { font-size:12.6pt; color:#2b352d; }
+.lede b { color:var(--green); }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:0.14in; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.12in; }
+.card { background:#fff; border:1.5px solid var(--line); border-radius:10px; padding:0.16in 0.19in; }
+.card h3 { font-size:14.5pt; margin-bottom:0.04in; }
+.card h4 { font-size:12.4pt; margin:0.05in 0 0.02in; }
+.card p + p { margin-top:0.05in; }
+.card.green { background:var(--green); color:#f1ece0; border-color:var(--green); }
+.card.green h3, .card.green h4 { color:var(--gold2); }
+.card.gold { border-color:var(--gold); box-shadow:inset 0 0 0 2px var(--gold2); }
+ul.dots { list-style:none; }
+ul.dots li { position:relative; padding-left:0.16in; margin:0.025in 0; }
+ul.dots li::before { content:""; position:absolute; left:0.02in; top:0.075in; width:0.065in; height:0.065in; border-radius:50%; background:#8a6a1e; }
+.card.green ul.dots li::before { background:var(--gold2); }
+ul.checks { list-style:none; }
+ul.checks li { position:relative; padding-left:0.2in; margin:0.035in 0; }
+ul.checks li::before { content:"\2713"; position:absolute; left:0; color:var(--sage); font-weight:800; }
+.tag { display:inline-block; font-size:7.6pt; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:0.015in 0.09in; border-radius:20px; background:var(--sage); color:#fff; margin-bottom:0.04in; }
+.tag.g { background:var(--gold); color:var(--ink); }
+.tbd { background:#fff3c4; color:#8a4b00; font-weight:700; padding:0 0.03in; border-radius:3px; font-size:0.84em; white-space:normal; }
+.card.green .tbd { background:#fff3c4; color:#8a4b00; }
+.chk { background:#e6eefc; color:#1f4a8a; font-weight:700; padding:0 0.03in; border-radius:3px; font-size:0.84em; }
+.art { width:100%; border-radius:10px; display:block; object-fit:cover; border:1.5px solid var(--line); }
+.cap { font-size:7.6pt; color:#6b6b6b; margin-top:0.03in; font-style:italic; }
+table.price { width:100%; border-collapse:collapse; font-size:10.8pt; }
+table.price th { text-align:left; font-size:7.8pt; text-transform:uppercase; letter-spacing:.08em; color:#fff; background:var(--sage); padding:0.04in 0.07in; }
+table.price th.r, table.price td.r { text-align:right; white-space:nowrap; }
+table.price td.p { white-space:nowrap; }
+table.price td { padding:0.05in 0.08in; border-bottom:1px solid #e7dfcc; vertical-align:top; }
+table.price tr:nth-child(even) td { background:#faf7f0; }
+table.price td.p { color:var(--green); font-weight:800; }
+table.price td small { color:#666; }
+table.price tr.sec td { background:#efe6cf !important; font-weight:800; color:var(--brown); font-size:8.2pt; letter-spacing:.08em; text-transform:uppercase; }
+.pill { display:inline-block; background:var(--gold); color:var(--ink); font-weight:800; border-radius:6px; padding:0.02in 0.08in; }
+.cta { background:var(--gold); border-radius:12px; padding:0.16in 0.22in; display:flex; gap:0.2in; align-items:center; }
+.cta .big { font-family:"Lora",serif; font-size:19pt; font-weight:700; line-height:1.05; color:var(--ink); }
+.steps { counter-reset:s; display:flex; flex-direction:column; gap:0.07in; }
+.step { display:flex; gap:0.14in; align-items:center; background:#fff; border:1.5px solid var(--line); border-radius:10px; padding:0.11in 0.15in; }
+.step .n { flex:0 0 0.42in; height:0.42in; border-radius:50%; background:var(--green); color:var(--gold2); font-family:"Lora",serif; font-weight:700; font-size:14pt; display:flex; align-items:center; justify-content:center; }
+.step h4 { font-size:12.6pt; }
+.small { font-size:10.3pt; }
+.muted { color:#5d5d5d; }
+.note { font-size:9.6pt; color:#4b4b4b; }
+/* cover */
+.cover { background:var(--green); color:#f1ece0; }
+.cover .top { padding:0.55in 0.6in 0; display:flex; flex-direction:column; align-items:center; text-align:center; }
+.cover .top img.logo { width:3.1in; margin:-0.25in 0 -0.2in; }
+.cover .eyebrow { margin-top:0.1in; font-size:9.5pt; letter-spacing:.3em; text-transform:uppercase; color:var(--gold2); font-weight:700; }
+.cover h1 { color:#fff; font-size:38pt; margin-top:0.14in; line-height:1.05; }
+.cover .promise { font-family:"Lora",serif; font-style:italic; font-size:14pt; color:#e9e3d4; margin-top:0.14in; max-width:6.2in; }
+.cover .hero { margin:0.3in 0.6in 0; position:relative; }
+.cover .hero img { width:100%; height:4.0in; object-fit:cover; border-radius:14px; border:4px solid var(--gold2); display:block; }
+.cover .hero .cap { color:#cfc8b6; text-align:center; }
+.cover .menu { display:flex; justify-content:center; gap:0.1in; flex-wrap:wrap; margin:0.22in 0.6in 0; }
+.cover .menu span { border:1.5px solid var(--gold2); color:#fff; border-radius:20px; padding:0.03in 0.12in; font-size:9.4pt; font-weight:600; }
+.cover .strip { margin-top:auto; background:var(--gold); color:var(--ink); padding:0.16in 0.6in; display:flex; justify-content:space-between; align-items:center; font-size:10pt; }
+.cover .strip b.ph { font-size:17pt; font-family:"Lora",serif; }
+/* calendar */
+.cal { display:grid; grid-template-columns:repeat(4,1fr); gap:0.08in; }
+.mo { background:#fff; border:1.5px solid var(--line); border-radius:8px; padding:0.08in 0.1in; min-height:1.3in; }
+.mo .m { font-family:"Lora",serif; font-weight:700; color:var(--green); font-size:12.5pt; border-bottom:1px solid #eadfc4; margin-bottom:0.03in; }
+.mo .a { background:var(--gold2); color:var(--ink); font-weight:700; border-radius:4px; padding:0.01in 0.05in; font-size:9.6pt; margin:0.03in 0; }
+.mo .r { background:#e3ebe5; color:var(--green); border-radius:4px; padding:0.01in 0.05in; font-size:9.6pt; margin:0.03in 0; }
+.legend { display:flex; gap:0.2in; font-size:8.6pt; align-items:center; }
+.legend i { display:inline-block; width:0.16in; height:0.11in; border-radius:3px; vertical-align:middle; margin-right:0.04in; }
+.tier .pricebox { margin-top:0.08in; border-top:1px dashed var(--line); padding-top:0.07in; font-size:10.6pt; }
+.tier .pricebox div { display:flex; justify-content:space-between; }
+.tier .pricebox b { color:var(--green); }
+.tier { display:flex; flex-direction:column; }
+.tier .grow { flex:1; }
+.quote { font-family:"Lora",serif; font-style:italic; font-size:11.8pt; color:var(--green); }
+.quote small { display:block; font-family:"Source Sans 3",sans-serif; font-style:normal; font-size:8pt; color:#666; margin-top:0.02in; }
+.bigstat { font-family:"Lora",serif; font-weight:700; font-size:30pt; color:var(--gold2); line-height:1; }
+.tbd,.chk{display:none!important}</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1: COVER ============ -->
+<section class="page cover">
+  <div class="top">
+    <img class="logo" src="assets/logo-wordmark-gold.png" alt="Sheehan Homestead logo">
+    <div class="eyebrow">Services Catalogue &middot; 2026-2027</div>
+    <h1>Your Community's<br>Farm Partner, All Year</h1>
+    <div class="promise">Plan your calendar once. We bring the animals, the learning, the setup and the smiles.</div>
+  </div>
+  <div class="hero">
+    <img src="assets/hoa-cartoon.jpg" alt="Illustration of kids meeting goats, bunnies and chickens on a community lawn">
+    <div class="cap">Illustration. <span class="tbd">[PHOTO TBD: swap for a real community-event photo with permission]</span></div>
+  </div>
+  <div class="menu">
+    <span>Mobile Petting Zoos</span><span>Goat Yoga</span><span>STEM on Call</span><span>Mommy &amp; Me</span><span>Homeschool Programs</span><span>Visit Us on the Farm</span>
+  </div>
+  <div class="strip">
+    <div><b>Sheehan Homestead LLC</b><br>44065 Cushman Road, Callahan, FL 32011<br>Family-run by Michael Sheehan &amp; Ann-Marie Sheehan, M.Ed.</div>
+    <div style="text-align:right">Call or text <b class="ph">914-263-1311</b><br>sheehanhomestead@gmail.com<br>sheehanhomestead.com/services</div>
+  </div>
+</section>
+
+<!-- ============ PAGE 2: WHO WE ARE ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Who we are</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div>
+      <div class="kick">A real family farm in Nassau County</div>
+      <h2 class="title">Hi, we're the Sheehans.</h2>
+    </div>
+    <p class="lede">Sheehan Homestead is a small, educationally focused family farm on the edge of Callahan, Florida. Our mission is simple: <b>create unique experiences and learning opportunities while spreading joy</b>. We bring our friendly goats, bunnies and chickens to your community, school or event, and we welcome families, co-ops and groups to visit us on the farm.</p>
+    <div class="grid2">
+      <div class="card">
+        <span class="tag g">Momtrepreneur &amp; educator</span>
+        <h3>Ann-Marie Sheehan, M.Ed.</h3>
+        <p>Co-owner and the heart of our programming. Ann-Marie spent 10+ years as a New Jersey public-school educator before bringing her classroom outdoors. She holds an M.Ed. in STEM Education Leadership and a BA in Geological &amp; Earth Sciences, and she leads STEM on Call, Mommy &amp; Me and our homeschool programs.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Founder &amp; your planning partner</span>
+        <h3>Michael Sheehan</h3>
+        <p>Co-owner. Michael leads sales and planning, so directors have one reliable point of contact from the first call to load-out. He is the one who will help you map out your whole year.</p>
+      </div>
+    </div>
+    <div class="grid2" style="grid-template-columns:1.1fr 1fr;">
+      <div>
+        <img class="art" style="height:2.95in" src="assets/montessori-festival-cartoon.jpg" alt="Illustration of a farm learning session with goats and bunnies">
+        <div class="cap">Illustration. <span class="tbd">[PHOTO TBD: family with the goats]</span></div>
+      </div>
+      <div class="card">
+        <h3>Meet the critters</h3>
+        <ul class="dots">
+          <li>Nigerian Dwarf goats</li>
+          <li>Bunnies (the gentlest greeters we have)</li>
+          <li>Chickens, including Serama and Silkie</li>
+          <li>Ducks, quail and Royal Palm turkeys</li>
+          <li>Seasonal babies: chicks, ducklings and kids when available</li>
+          <li>Great Pyrenees guardian dogs keep watch on the farm</li>
+        </ul>
+        <p class="note" style="margin-top:0.06in">Many of our animals are rescues. </p>
+      </div>
+    </div>
+    <div class="card green">
+      <div class="grid3" style="gap:0.2in">
+        <div><div class="bigstat">7</div>counties served across Metro Jacksonville: Nassau, Duval, St. Johns, Clay, Camden, Putnam &amp; Flagler</div>
+        <div><div class="bigstat">5.0&#9733;</div>Google rating <span class="chk">[CHECK review count: files show 24 and ~80-100]</span></div>
+        <div><div class="bigstat">2023</div>Sheehan Homestead LLC founded, Callahan, FL. Appointments 7 days a week, booked in advance.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>2</span></div>
+</section>
+
+
+<!-- ============ PAGE 3: GIVE TWICE (OUR GIVING) ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Our giving</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div>
+      <div class="kick">Our giving philosophy</div>
+      <h2 class="title">Give Twice. Our ad budget goes to you.</h2>
+    </div>
+    <p class="lede">Most companies spend seven to twelve percent of what they earn on advertising. <b>We set aside that same share and give it away instead</b>, to the families, schools, churches and causes that make our community worth living in. Our rule is simple: <b>give at least twice as much as you receive.</b> We don't buy billboards. We give, and the word travels from people who know who did a nice thing.</p>
+    <div class="grid2" style="grid-template-columns:1.05fr 1fr; align-items:stretch">
+      <div class="card gold">
+        <span class="tag g">Gold membership &middot; worth over $100</span>
+        <h3>We give Gold away.</h3>
+        <img class="art" style="height:1.55in;margin:0.06in 0;object-fit:contain;background:#1a241c" src="assets/gold-card.jpg" alt="Gold membership card">
+        <ul class="checks">
+          <li>A free farm tour for two</li>
+          <li>A $25 farm gift</li>
+          <li>About 40% off camp, the mobile zoo and field trips</li>
+          <li>Access to our app</li>
+        </ul>
+        <p class="note" style="margin-top:0.05in">We hand Gold memberships to churches, schools and nonprofits to auction, raffle 50/50, or give to a family who needs a lift.</p>
+      </div>
+      <div class="card green">
+        <span class="tag g">The Violet Ticket</span>
+        <h3>About 60% off for your cause.</h3>
+        <p>Named for our daughter. Schools, churches and qualifying nonprofits book the full experience at about 60% off our list price, confirmed per date. The difference is our gift to your cause.</p>
+        <img class="art" style="height:1.55in;margin-top:0.1in;border-color:var(--gold2)" src="assets/violet.jpg" alt="Violet Ticket">
+        <p class="small" style="margin-top:0.08in">Say <b style="color:var(--gold2)">Violet</b> when you call.</p>
+      </div>
+    </div>
+    <div class="grid3">
+      <div class="card"><h4>Stead Spin</h4><p class="small">Our giving wheel is free to play. Sixteen chances to win, from farm gifts to a Gold membership.</p></div>
+      <div class="card"><h4>Prizes for your fundraiser</h4><p class="small">Potted plants from our nursery, collectible comics, baseball cards and toys for your auction table, raffle or prize box.</p></div>
+      <div class="card"><h4>A visit on us</h4><p class="small">Can we come by with goats? A short visit for your class, congregation or volunteers, free when the calendar allows.</p></div>
+    </div>
+    <div class="cta">
+      <div class="big" style="flex:0 0 3.1in">The bigger we grow, the more we give.</div>
+      <div class="small">Our goal is free petting zoos for schools and shelters that could never budget one, and a free week of summer camp for the kids who need it most. Running a fundraiser, a church event or a school night? Call us first: <b>914-263-1311</b>.</div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>3</span></div>
+</section>
+
+<!-- ============ PAGE 4: PLAN YOUR YEAR ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Your year-round planning partner</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div>
+      <div class="kick">For CDDs, HOAs, clubs, schools &amp; community teams</div>
+      <h2 class="title">Plan your whole year with us, not three weeks before.</h2>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Sound familiar?</h3>
+        <ul class="dots">
+          <li>The event is three weeks out and the vendor list is still blank.</li>
+          <li>Peak dates go first: October Saturdays (fall fest, trunk-or-treat, Halloween) and spring/Easter weekends book up early. This fall, our Halloween weekend was fully booked until a reschedule opened a spot.</li>
+          <li>Every event means re-quoting, re-approving and re-filing paperwork.</li>
+          <li>Residents notice when programming feels "same old" or gets skipped.</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>The fix: one call, twelve months</h3>
+        <ul class="dots">
+          <li>One planning call, one 12-month calendar.</li>
+          <li>Your big days held before anyone else can grab them.</li>
+          <li>Partner rate on every booking: 25% off services, 50% off travel.</li>
+          <li>One point of contact and one set of paperwork for the year.</li>
+          <li>Seasonal anchors plus monthly or quarterly resident programming in between.</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0.06in">
+        <h3 style="font-size:14pt">A sample year on the farm calendar</h3>
+        <div class="legend"><span><i style="background:#D4B45A"></i>Seasonal anchor</span><span><i style="background:#e3ebe5;border:1px solid #b9cbbf"></i>Resident programming</span></div>
+      </div>
+      <div class="cal">
+        <div class="mo"><div class="m">January</div><div class="r">Goat yoga: new-year wellness</div><div class="r">Bunny Haven social</div></div>
+        <div class="mo"><div class="m">February</div><div class="r">Mommy &amp; Me morning</div><div class="r">STEM on Call</div></div>
+        <div class="mo"><div class="m">March</div><div class="a">Spring Fling</div><div class="r">Homeschool farm day</div></div>
+        <div class="mo"><div class="m">April</div><div class="a">Easter / egg hunt with baby chicks &amp; bunnies</div></div>
+        <div class="mo"><div class="m">May</div><div class="r">Goat yoga</div><div class="r">Mommy &amp; Me morning</div></div>
+        <div class="mo"><div class="m">June</div><div class="a">Pool-day petting zoo</div><div class="r">Summer camp day</div></div>
+        <div class="mo"><div class="m">July</div><div class="r">STEM on Call camp day</div><div class="r">Mini zoo social</div></div>
+        <div class="mo"><div class="m">August</div><div class="a">Back-to-school kickoff</div><div class="r">Mommy &amp; Me morning</div></div>
+        <div class="mo"><div class="m">September</div><div class="r">Goat yoga</div><div class="r">Homeschool field trip</div></div>
+        <div class="mo"><div class="m">October</div><div class="a">Fall fest / trunk-or-treat</div></div>
+        <div class="mo"><div class="m">November</div><div class="r">Goat yoga</div><div class="r">STEM on Call</div></div>
+        <div class="mo"><div class="m">December</div><div class="a">Holiday market / tree lighting with the animals</div></div>
+      </div>
+      <p class="note" style="margin-top:0.06in">Sample only. We build your real calendar around your amenity spaces, your residents' ages and the dates that matter most to your community.</p>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>4</span></div>
+</section>
+
+<!-- ============ PAGE 5: ANNUAL PARTNER PROGRAM ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">The annual partner program</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div>
+      <div class="kick">Lock your dates, lock your rate</div>
+      <h2 class="title">Become a year-round partner</h2>
+    </div>
+    <div class="card green" style="display:flex;gap:0.25in;align-items:center;padding:0.18in 0.22in">
+      <div style="text-align:center"><div class="bigstat">25%</div>off services</div>
+      <div style="text-align:center"><div class="bigstat">50%</div>off travel</div>
+      <div style="text-align:center"><div class="bigstat">~40%</div>off a typical all-in</div>
+      <div style="flex:1;font-size:10pt">Our partner rate for CDD, HOA and club partners. It applies automatically to every booking on your calendar. Example: Standard + Full Side, 3 hours, weekend list $1,298 becomes <b style="color:#D4B45A">$973.50</b> in services, and all-in with travel lands just under $1,200.</div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>What partners get</h3>
+        <ul class="checks">
+          <li><b>Priority date holds</b> on peak weekends, locked at your planning call</li>
+          <li><b>Partner rate</b> on every booking: 25% off services, 50% off travel</li>
+          <li><b>One point of contact</b> for the whole year</li>
+          <li><b>Paperwork once:</b> vendor packet and hold harmless on file for the year <span class="tbd">[CONFIRM list]</span></li>
+          <li><b>Reminder &amp; promo kit</b> before each event (flyer + resident email blurb) <span class="tbd">[CONFIRM we provide this]</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Resident perk: Critter Gold</h3>
+        <p>Residents can join our Critter Gold Membership ($50 list). Members get 25% off services and 50% off travel on their own bookings, plus a free 2-person farm visit and a $25 gift. Membership counts as a deposit toward a mobile invoice.</p>
+        <p class="note">Schools, VPKs, nonprofits and churches: ask about our Violet Card for good causes.</p>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:14pt;margin-bottom:0.07in">Partner package shapes</h3>
+      <div class="grid3">
+        <div class="card tier"><span class="tag">Seasonal 2</span><h4>Two anchor events</h4><p class="grow small">Your two biggest days, for example a Spring Fling and a Fall Fest.</p><div class="pricebox"><div><span>Annual package</span>Ask us</div></div></div>
+        <div class="card tier"><span class="tag">Seasonal 4</span><h4>Four anchor events</h4><p class="grow small">Spring, summer, fall and holiday anchors, held and priced together.</p><div class="pricebox"><div><span>Annual package</span>Ask us</div></div></div>
+        <div class="card tier gold"><span class="tag g">Year-Round</span><h4>Anchors + monthly programming</h4><p class="grow small">Four anchors plus monthly or quarterly resident programming: goat yoga, Mommy &amp; Me, STEM on Call, Bunny Haven socials.</p><div class="pricebox"><div><span>Annual package</span>Ask us</div></div></div>
+      </div>
+      <p class="note" style="margin-top:0.07in">Standing visit programs already on our price list: monthly $185 and quarterly visit $250 <span class="tbd">[CONFIRM what these include before printing; quarterly also shows as $215 on segment one-pagers]</span>. Until package pricing is set, every event on your calendar is priced at list minus the partner rate.</p>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>5</span></div>
+</section>
+
+<!-- ============ PAGE 6: MOBILE PETTING ZOO ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Mobile petting zoo &middot; Critters on Call</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:0.2in;align-items:center">
+      <div>
+        <div class="kick">We come to you</div>
+        <h2 class="title">The farm, delivered to your lawn</h2>
+        <p class="lede" style="margin-top:0.06in">Hands-on, family-run and set up in minutes. Kids (and grown-ups) meet gentle goats, bunnies and fowl in a fenced pen while our team guides every interaction. Pick the size that fits your event.</p>
+      </div>
+      <div><img class="art" style="height:2.2in" src="assets/mobile-backyard-cartoon.jpg" alt="Illustration of kids with goats, bunnies and chickens"><div class="cap">Illustration. <span class="tbd">[PHOTO TBD]</span></div></div>
+    </div>
+    <div class="grid3">
+      <div class="card tier">
+        <span class="tag">Lite</span>
+        <h3>Mini Petting Zoo</h3>
+        <div class="small" style="color:var(--brown);font-weight:700">Pool days, small socials, tight spaces</div>
+        <ul class="dots grow small" style="margin-top:0.05in">
+          <li>60 minutes to 4 hours</li>
+          <li>Usually up to 6 animals (about 2 goats, 2 bunnies, 2 fowl)</li>
+          <li>Mobile fencing</li>
+          <li>Tent and helper count <span class="tbd">[CONFIRM]</span></li>
+        </ul>
+        <div class="pricebox"><div><span>Weekday from</span><b>$335</b></div><div><span>Weekend from</span><b>$549</b></div></div>
+      </div>
+      <div class="card tier">
+        <span class="tag">Standard</span>
+        <h3>Standard Petting Zoo</h3>
+        <div class="small" style="color:var(--brown);font-weight:700">The community favorite</div>
+        <ul class="dots grow small" style="margin-top:0.05in">
+          <li>2, 3 or 4 hours</li>
+          <li>At least 9 animals: dwarf goats, bunnies &amp; specialty fowl</li>
+          <li>Mobile fencing and tent</li>
+          <li>At least 1 facilitator/helper</li>
+        </ul>
+        <div class="pricebox"><div><span>Weekday from</span><b>$549</b></div><div><span>Weekend from</span><b>$749</b></div></div>
+      </div>
+      <div class="card tier gold">
+        <span class="tag g">Signature</span>
+        <h3>Standard + Full Side</h3>
+        <div class="small" style="color:var(--brown);font-weight:700">Fall fests, spring flings, big days</div>
+        <ul class="dots grow small" style="margin-top:0.05in">
+          <li>Everything in Standard</li>
+          <li>Plus a Full Side of Critters: seasonal chicks, ducks or extra babies when available</li>
+          <li>2, 3 or 4 hours</li>
+          <li>Built for your biggest resident event</li>
+        </ul>
+        <div class="pricebox"><div><span>Weekend from</span><b>$998</b></div><div><span>Partner 3 hr services</span><b>$973.50</b></div></div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Extra small? Bunny Haven</h3>
+        <p>Soft and sweet for little ones, memory care and quiet corners. Bunnies (or a gentle substitute) for 60 minutes, 90 minutes or 2 hours. From $235.</p>
+      </div>
+      <div class="card">
+        <h3>Great for</h3>
+        <p>Spring flings, egg hunts, pool days, back-to-school bashes, fall festivals, trunk-or-treats, holiday markets, National Night Out, grand openings, school days and birthday parties.</p>
+      </div>
+    </div>
+    <div class="card green">
+      <h3>Why amenity managers book us</h3>
+      <div class="grid3" style="gap:0.18in;margin-top:0.04in">
+        <div><b style="color:#D4B45A">Residents still talk about it.</b> Weeks later at the pool, not a bounce house they forget by Monday.</div>
+        <div><b style="color:#D4B45A">Photos for the newsletter.</b> Real faces and real animals, ready for your community Facebook page.</div>
+        <div><b style="color:#D4B45A">Easy on your staff.</b> We bring the animals and run the hours. You keep the rest of the event moving.</div>
+      </div>
+    </div>
+    <p class="note">Full price ladders (weekday and weekend, with partner rates) are on the pricing pages. Weekend = Friday evening through Sunday.</p>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>6</span></div>
+</section>
+
+<!-- ============ PAGE 7: GOAT YOGA + STEM ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Goat yoga &middot; STEM on Call</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div class="card" style="padding:0.16in 0.2in">
+      <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:0.2in;align-items:start">
+        <div>
+          <span class="tag g">Resident wellness</span>
+          <h2 class="title" style="font-size:22pt">Goat Yoga</h2>
+          <p class="quote" style="margin-top:0.08in">"Our residents still talk about the goat yoga." <small>Amenity manager <span class="chk">[CHECK source &amp; permission]</span></small></p>
+        </div>
+        <div>
+          <p>A relaxed, all-levels yoga session with our friendly goats wandering, nibbling and (sometimes) climbing on board. It is the program residents talk about for weeks and share all over the community Facebook page.</p>
+          <ul class="dots" style="margin-top:0.06in">
+            <li><b>At your community:</b> about a 60-minute session on your lawn or event lawn</li>
+            <li><b>Boozy Goat Yoga:</b> an adult-friendly twist for clubs with bar service (alcohol and bartender provided by the venue)</li>
+            <li><b>On our farm:</b> private sessions for your group on the homestead, about 60 minutes</li>
+            <li>Double sessions on the same day available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="padding:0.16in 0.2in">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:0.2in;align-items:start">
+        <div>
+          <span class="tag">Led by Ann-Marie Sheehan, M.Ed.</span>
+          <h2 class="title" style="font-size:22pt">STEM on Call</h2>
+          <p style="margin-top:0.06in">Hands-on science, technology, engineering and math, taught by Ann-Marie, a former New Jersey public-school educator with an M.Ed. in STEM Education Leadership. Florida-standards-based challenges that get kids building, testing and problem-solving, often paired with an animal visit.</p>
+          <ul class="dots" style="margin-top:0.06in">
+            <li>Bridge building, tower builds, flight and design challenges</li>
+            <li>Nature and farm science lessons</li>
+            <li>STEM booth for festivals and community events</li>
+            <li>Summer camp days, after-school enrichment and school visits</li>
+            <li>Default pairing: petting zoo + a STEM leave-behind lesson</li>
+          </ul>
+        </div>
+        <div>
+          <img class="art" style="height:2.6in" src="assets/vpk-visit-cartoon.jpg" alt="Illustration of a teacher with children and bunnies">
+          <div class="cap">Illustration. <span class="tbd">[PHOTO TBD: STEM build photo]</span></div>
+          <p class="small" style="margin-top:0.08in"><b>Pricing:</b> Ask us</p>
+        </div>
+      </div>
+    </div>
+    <div class="card green">
+      <h3>Why directors pair these with the petting zoo</h3>
+      <div class="grid3" style="gap:0.18in;margin-top:0.04in">
+        <div><b style="color:#D4B45A">Adults get a program too.</b> Goat yoga gives residents without little kids a reason to show up.</div>
+        <div><b style="color:#D4B45A">Learning, not just fun.</b> STEM on Call turns an event into an enrichment day.</div>
+        <div><b style="color:#D4B45A">Easy between anchors.</b> Both fit monthly or quarterly slots on your calendar.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>7</span></div>
+</section>
+
+<!-- ============ PAGE 8: MOMMY & ME + HOMESCHOOL ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Mommy &amp; Me &middot; Homeschool programs</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div class="grid2" style="grid-template-columns:1.35fr 1fr;align-items:start">
+      <div>
+        <div class="kick">Designed by Ann-Marie for ages 0-5</div>
+        <h2 class="title">Mommy &amp; Me</h2>
+        <p style="margin-top:0.06in">A gentle hour outdoors for babies, toddlers and the grown-ups who love them. No rush, no pressure, just sunshine, curious hands and a calm farm pace.</p>
+        <ul class="checks" style="margin-top:0.05in">
+          <li>Gentle time with baby goats and farm friends</li>
+          <li>Water play and sensory stations</li>
+          <li>Guided farm stroll at little-legs speed</li>
+          <li>Music, movement and outdoor exploring</li>
+          <li>A welcoming spot for parents to connect</li>
+        </ul>
+        <p class="small" style="margin-top:0.06in"><b>On the farm:</b> public mornings, 10:00-11:00 AM (Thursdays and select Saturdays). <b>At your community:</b> a Mommy &amp; Me package for your clubhouse or lawn, a natural monthly program for young families.</p>
+      </div>
+      <div><img class="art" style="height:3.1in" src="assets/ppec-visit-cartoon.jpg" alt="Illustration of a gentle bunny visit"><div class="cap">Illustration. <span class="tbd">[PHOTO TBD: Mommy &amp; Me morning]</span></div></div>
+    </div>
+    <div>
+      <div class="kick">Homeschool families &amp; co-ops</div>
+      <h2 class="title" style="font-size:20pt">Homeschool programs: Lite, Middle, Heavy</h2>
+      <p class="small" style="margin:0.04in 0 0.08in">Hands-on nature, farm and STEM lessons with Ann-Marie on our Callahan farm. Step Up for Students reimbursement is available for eligible families. <span class="tbd">[CONFIRM tier names and what goes in each tier]</span></p>
+      <div class="grid3">
+        <div class="card tier"><span class="tag">Lite</span><h4>Homeschool Class</h4><p class="grow small">A scheduled 90-minute farm class. Drop in one session at a time on our posted class dates.</p><div class="pricebox"><div><span>Per session</span><b>$40</b></div></div></div>
+        <div class="card tier"><span class="tag">Middle</span><h4>Co-op Field Trip</h4><p class="grow small">A locked group package for your co-op: small (up to 20 guests, 5 cars, 75 min) or large (up to 40 guests, 10 cars, about 90 min).</p><div class="pricebox"><div><span>Small / Large</span><b>$299 / $499</b></div></div></div>
+        <div class="card tier gold"><span class="tag g">Heavy</span><h4>Little Farmers Enrichment</h4><p class="grow small">Ongoing enrichment, ages 5+, Tuesday to Thursday, 9:00 AM-12:00 PM drop-off. <span class="tbd">[CONFIRM enrolling]</span></p><div class="pricebox"><div><span>Tuition</span>Ask us</div></div></div>
+      </div>
+    </div>
+    <div class="card green">
+      <h3>Homeschool at a glance</h3>
+      <div class="grid2" style="gap:0.2in;margin-top:0.03in">
+        <ul class="dots small">
+          <li>On our Callahan farm, by appointment after 9:30 AM</li>
+          <li>Nature, farm and STEM engineering lessons designed by Ann-Marie</li>
+          <li>Goats, bunnies and chickens, hands-on for the kids</li>
+        </ul>
+        <ul class="dots small">
+          <li>Step Up for Students approved; reimbursement available for eligible families</li>
+          <li>Field trips: headcount and cars lock before the day</li>
+          <li>Low lift for organizers: you bring the families, we run the morning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>8</span></div>
+</section>
+
+<!-- ============ PAGE 9: VISIT US + COMMUNITY CARE + ADD-ONS ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Visit us &middot; Community care &middot; Add-ons</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div class="grid2" style="grid-template-columns:1fr 1.2fr;align-items:start">
+      <div><img class="art" style="height:3.0in" src="assets/homeschool-farm-cartoon.jpg" alt="Illustration of a family visiting the farm"><div class="cap">Illustration. <span class="tbd">[PHOTO TBD: farm visit]</span></div></div>
+      <div>
+        <div class="kick">Come to the farm</div>
+        <h2 class="title">Visit Us experiences</h2>
+        <p style="margin-top:0.05in">Spend a morning on the homestead with the goats, bunnies and chickens. Visits are by appointment after 9:30 AM, and everyone signs a waiver on entry (please leave pets at home).</p>
+        <ul class="dots" style="margin-top:0.05in">
+          <li><b>Farm tickets:</b> a pair ticket for two, or bring the whole car</li>
+          <li><b>Field trips:</b> group packages for schools, co-ops and clubs</li>
+          <li><b>Private goat yoga</b> on the farm for your group</li>
+          <li><b>Mommy &amp; Me</b> and <b>Homeschool Class</b> mornings</li>
+          <li><b>Boozy goat yoga</b> ticketed evenings for adults <span class="tbd">[CONFIRM schedule]</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <span class="tag">Senior centers &middot; PPEC &middot; VPK</span>
+        <h3>Community care visits</h3>
+        <img class="art" style="height:1.55in;margin:0.04in 0 0.07in" src="assets/sr-visit-cartoon.jpg" alt="Illustration of a gentle bunny visit with a senior resident">
+        <p>Gentle, mobile animal visits for assisted living, memory care, adult day, PPEC medical daycares and VPK classrooms. About 60 minutes; we bring the animals and run the hour. Bunnies are usually best, with goats and chickens available.</p>
+        <p class="small">Choose a standing monthly visit or a lighter quarterly cadence. We share calmer visits, engagement and joy, and we do not make medical claims.</p>
+      </div>
+      <div class="card">
+        <span class="tag g">Make it bigger</span>
+        <h3>Add-ons</h3>
+        <ul class="dots small">
+          <li><b>Full Side of Critters:</b> seasonal chicks, ducks or babies</li>
+          <li><b>Critters on Top:</b> a cameo animal moment</li>
+          <li><b>Cameo appearances</b> for photos and announcements</li>
+          <li><b>Goat yoga</b> or <b>Boozy goat yoga</b> session</li>
+          <li><b>Mommy &amp; Me</b> package</li>
+          <li><b>STEM on Call</b> booth or lesson</li>
+          <li><b>Extra hours</b> on any petting zoo</li>
+          <li><b>Hay</b> for parking lots and hardscape</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card green" style="display:flex;gap:0.2in;align-items:center">
+      <div style="flex:1"><h3>Promotional rates for good neighbors</h3><p>We offer promotional rates for homeschoolers, nonprofits, neighbors, military families, neurodivergent individuals and recurring or large groups. Just ask when you book.</p></div>
+      <div style="text-align:center;font-size:9pt"><b style="color:#D4B45A;font-size:12pt">Text GOAT</b><br>to 914-263-1311<br>for discounts</div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>9</span></div>
+</section>
+
+<!-- ============ PAGE 10: PRICING 1 PETTING ZOO ============ -->
+<section class="page" id="pricing-1">
+  <div class="runhead"><span class="l">Pricing &middot; Mobile petting zoos</span><span>2026 list &middot; partner rate</span></div>
+  <div class="body" style="gap:0.14in">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><div class="kick">2026 list prices</div><h2 class="title">Mobile petting zoo pricing</h2></div>
+      <div class="pill" style="font-size:9.6pt">Partner rate = 25% off services &middot; 50% off travel</div>
+    </div>
+    <table class="price">
+      <colgroup><col style="width:27%"><col style="width:11%"><col style="width:15.5%"><col style="width:15.5%"><col style="width:15.5%"><col style="width:15.5%"></colgroup>
+      <tr><th>Service</th><th>Length</th><th class="r">Weekday list</th><th class="r">Weekday partner</th><th class="r">Weekend list</th><th class="r">Weekend partner</th></tr>
+      <tr class="sec"><td colspan="6">Bunny Haven &middot; bunnies or a gentle substitute</td></tr>
+      <tr><td>Bunny Haven</td><td>60 min</td><td class="r">$235</td><td class="r p">$176.25</td><td class="r">$235</td><td class="r p">$176.25</td></tr>
+      <tr><td>Bunny Haven</td><td>90 min</td><td class="r">$315</td><td class="r p">$236.25</td><td class="r">$315</td><td class="r p">$236.25</td></tr>
+      <tr><td>Bunny Haven</td><td>2 hr</td><td class="r">$399</td><td class="r p">$299.25</td><td class="r">$399</td><td class="r p">$299.25</td></tr>
+      <tr class="sec"><td colspan="6">Lite &middot; Mini Petting Zoo &middot; usually up to 6 animals</td></tr>
+      <tr><td>Mini Petting Zoo</td><td>60 min</td><td class="r">$335</td><td class="r p">$251.25</td><td class="r">n/a</td><td class="r">n/a</td></tr>
+      <tr><td>Mini Petting Zoo</td><td>90 min</td><td class="r">$425</td><td class="r p">$318.75</td><td class="r">n/a</td><td class="r">n/a</td></tr>
+      <tr><td>Mini Petting Zoo</td><td>2 hr</td><td class="r">$549</td><td class="r p">$411.75</td><td class="r">$549</td><td class="r p">$411.75</td></tr>
+      <tr><td>Mini Petting Zoo</td><td>3 hr</td><td class="r">$649</td><td class="r p">$486.75</td><td class="r">$749</td><td class="r p">$561.75</td></tr>
+      <tr><td>Mini Petting Zoo</td><td>4 hr</td><td class="r">n/a</td><td class="r">n/a</td><td class="r">$949</td><td class="r p">$711.75</td></tr>
+      <tr class="sec"><td colspan="6">Standard &middot; Standard Petting Zoo &middot; at least 9 animals, fencing + tent, 1+ helper</td></tr>
+      <tr><td>Standard Petting Zoo</td><td>2 hr</td><td class="r">$549</td><td class="r p">$411.75</td><td class="r">$749</td><td class="r p">$561.75</td></tr>
+      <tr><td>Standard Petting Zoo</td><td>3 hr</td><td class="r">$749</td><td class="r p">$561.75</td><td class="r">$1,049</td><td class="r p">$786.75</td></tr>
+      <tr><td>Standard Petting Zoo</td><td>4 hr</td><td class="r">$949</td><td class="r p">$711.75</td><td class="r">$1,349</td><td class="r p">$1,011.75</td></tr>
+      <tr class="sec"><td colspan="6">Signature &middot; Standard + Full Side of Critters</td></tr>
+      <tr><td>Standard + Full Side</td><td>2 hr</td><td colspan="2" rowspan="3" style="vertical-align:middle;text-align:center;background:#fffbe8">Ask us<br><small>Weekday Standard + $249 Full Side add-on</small></td><td class="r">$998</td><td class="r p">$748.50</td></tr>
+      <tr><td>Standard + Full Side</td><td>3 hr</td><td class="r">$1,298</td><td class="r p">$973.50</td></tr>
+      <tr><td>Standard + Full Side</td><td>4 hr</td><td class="r">$1,598</td><td class="r p">$1,198.50</td></tr>
+    </table>
+    <div class="grid2">
+      <div class="card">
+        <h3>Most CDDs pick this</h3>
+        <p><b>Standard + Full Side, 3 hours, weekend.</b> List $1,298. Partner services $973.50. With partner travel, all-in typically lands <b>just under $1,200</b>.</p>
+        <p class="small muted">Standard 3 hours at the partner rate: $786.75 + travel.</p>
+      </div>
+      <div class="card">
+        <h3>Good to know</h3>
+        <ul class="dots small">
+          <li>Weekend / premium = Friday evening through Sunday. Weekday = our best-value daytime rates.</li>
+          <li>"n/a" means that length is not on our current list for that day; ask and we will quote it.</li>
+          <li>Travel is quoted by distance with your date; partners save 50%.</li>
+          <li>CDDs are typically tax-exempt (bring your certificate).</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Partner prices are list minus 25% on services. Travel, hay and early-arrival fees are separate. Prices are 2026 list.</p>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com/services</span><span>10</span></div>
+</section>
+
+<!-- ============ PAGE 11: PRICING 2 PROGRAMS ============ -->
+<section class="page" id="pricing-2">
+  <div class="runhead"><span class="l">Pricing &middot; Programs, add-ons &amp; farm</span><span>2026 list &middot; partner rate</span></div>
+  <div class="body" style="gap:0.14in">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><div class="kick">2026 list prices</div><h2 class="title">Programs, add-ons &amp; farm</h2></div>
+      <div class="pill" style="font-size:9.6pt">Partner rate = 25% off services &middot; 50% off travel</div>
+    </div>
+    <div class="grid2" style="align-items:start">
+      <table class="price">
+        <tr><th>Programs at your community</th><th class="r">List</th><th class="r">Partner</th></tr>
+        <tr><td>Goat Yoga, weekend session <span class="tbd">[CONFIRM $749 vs $599 on SKU sheet]</span></td><td class="r">$749</td><td class="r p">25% off</td></tr>
+        <tr><td>Goat Yoga, weekday session</td><td class="r">$499-$599</td><td class="r p">25% off</td></tr>
+        <tr><td>Goat Yoga, double session same day</td><td class="r">~$1,400</td><td class="r p">25% off</td></tr>
+        <tr><td>Boozy Goat Yoga, weekend <small>+ alcohol / bartender</small> <span class="tbd">[CONFIRM ~$949 vs $699+ on SKU sheet]</span></td><td class="r">~$949</td><td class="r p">25% off</td></tr>
+        <tr><td>Mommy &amp; Me package <span class="tbd">[CONFIRM vs $200/hr on large-event menu]</span></td><td class="r">$149-$299</td><td class="r p">25% off</td></tr>
+        <tr><td>STEM on Call (booth, camp, lesson)</td><td class="r" colspan="2">Ask us</td></tr>
+      </table>
+      <table class="price">
+        <tr><th>Add-ons</th><th class="r">List</th><th class="r">Partner</th></tr>
+        <tr><td>Full Side of Critters</td><td class="r">$249</td><td class="r p">$186.75</td></tr>
+        <tr><td>Critters on Top (cameo animal)</td><td class="r">$99</td><td class="r p">$74.25</td></tr>
+        <tr><td>Cameo appearance</td><td class="r">from $99</td><td class="r p">25% off</td></tr>
+        <tr><td>Travel, by distance from Callahan <span class="tbd">[CONFIRM published range: files show $50-$225+ and $100-$400]</span></td><td class="r">quoted</td><td class="r p">50% off</td></tr>
+        <tr><td>Hay fee (no grass / hardscape)</td><td class="r">$30-$50</td><td class="r">&nbsp;</td></tr>
+        <tr><td>Early-arrival fee (more than 30 min early)</td><td class="r" colspan="2">Ask us</td></tr>
+      </table>
+    </div>
+    <div class="grid2" style="align-items:start">
+      <table class="price">
+        <tr><th>Visit Us on the farm</th><th class="r">List</th></tr>
+        <tr><td>Pair ticket (2 people)</td><td class="r">$25</td></tr>
+        <tr><td>Whole car (up to 5 people in one car)</td><td class="r">$50</td></tr>
+        <tr><td>Field trip, small (up to 20, 5 cars, 75 min) <span class="tbd">[CONFIRM vs $250 older sheet]</span></td><td class="r">$299</td></tr>
+        <tr><td>Field trip, large (up to 40, 10 cars, ~90 min) <span class="tbd">[CONFIRM vs $500 older sheet]</span></td><td class="r">$499</td></tr>
+        <tr><td>Private goat yoga on the farm, weekday / weekend</td><td class="r">$150 / $300</td></tr>
+        <tr><td>Mommy &amp; Me ticket (1 adult + all children under 5)</td><td class="r">$25</td></tr>
+        <tr><td>Boozy goat yoga ticket, single / duo</td><td class="r">$25 / $40</td></tr>
+        <tr><td>Critter Gold Membership</td><td class="r">$50</td></tr>
+      </table>
+      <table class="price">
+        <tr><th>Homeschool &amp; community care</th><th class="r">List</th></tr>
+        <tr><td>Homeschool Lite: Homeschool Class, 90 min</td><td class="r">$40 / session</td></tr>
+        <tr><td>Homeschool Middle: Co-op field trip</td><td class="r">$299 / $499</td></tr>
+        <tr><td>Homeschool Heavy: Little Farmers Enrichment</td><td class="r">Ask us</td></tr>
+        <tr><td>Community care visit, monthly program (60 min)</td><td class="r">$185 / visit</td></tr>
+        <tr><td>Community care visit, quarterly <span class="tbd">[CONFIRM $225 vs $215]</span></td><td class="r">$250 / visit</td></tr>
+        <tr><td>Senior mini petting zoo, 75-120 min <span class="tbd">[CONFIRM still current]</span></td><td class="r">$275-$400</td></tr>
+        <tr class="sec"><td colspan="2">Annual partner packages</td></tr>
+        <tr><td>Seasonal 2 / Seasonal 4 / Year-Round</td><td class="r">Ask us</td></tr>
+      </table>
+    </div>
+    <p class="note">Partner rate applies to services booked by CDD, HOA and club partners. Schools, VPKs and nonprofits: ask about the Violet Card. Travel, hay and early-arrival fees are separate. "~" marks a target price we confirm when we quote.</p>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com/services</span><span>11</span></div>
+</section>
+
+<!-- ============ PAGE 12: HOW BOOKING WORKS + LOGISTICS ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">How booking works &middot; Logistics</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div><div class="kick">Simple from the first call</div><h2 class="title">How booking works</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h4>Planning call (20 to 30 minutes)</h4><p class="small">Your calendar, your spaces, your residents' ages and interests. Call or text 914-263-1311.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Your 12-month calendar</h4><p class="small">We send a calendar with suggested packages and your dates held.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>A deposit locks each date</h4><p class="small">Your invoice and deposit move a held date onto our route. <span class="tbd">[CONFIRM deposit terms: per-event vs annual; 50% noted in lead brief]</span></p></div></div>
+      <div class="step"><div class="n">4</div><div><h4>Paperwork once</h4><p class="small">Vendor packet, W-9, COI and hold harmless on file for the year. <span class="tbd">[CONFIRM list]</span></p></div></div>
+      <div class="step"><div class="n">5</div><div><h4>Reminder check-in</h4><p class="small">We check in before each event to confirm headcount, space and add-ons. <span class="tbd">[CONFIRM how many weeks before]</span></p></div></div>
+      <div class="step"><div class="n">6</div><div><h4>Event day and recap</h4><p class="small">We arrive early, set up fast and run the whole experience. Afterward, a quick recap and we adjust next season's plan.</p></div></div>
+    </div>
+    <div><h3 style="font-size:15pt">Logistics at a glance</h3></div>
+    <div class="grid2">
+      <div class="card">
+        <ul class="checks small">
+          <li><b>Space:</b> about 15-20 ft x 15-20 ft. We are light and mobile, and we once fit between two palm trees by a pre-K door.</li>
+          <li><b>Surface:</b> grass or dirt is best. Parking lot or concrete only? A hay fee of $30-$50 applies. A tarp is available when needed.</li>
+          <li><b>Arrival:</b> we arrive about 30 minutes early and set up in 10-15 minutes. Need us earlier? An early-arrival fee applies.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="checks small">
+          <li><b>Tax:</b> CDDs are usually tax-exempt. Please send your certificate.</li>
+          <li><b>Travel:</b> quoted by distance from Callahan; the furthest trips are typically about 1 hour each way. Partners save 50%.</li>
+          <li><b>Weather:</b> free weather reschedule. Reschedule or cancel with at least 48 hours notice for refund options (admin fee may apply).</li>
+          <li><b>Book online:</b> sheehanhomestead.com/services</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta">
+      <div class="big">Ready to plan?</div>
+      <div style="flex:1;font-size:11pt">Fall festival and spring Saturdays fill up first. Send us your event dates and we will hold them while we build your calendar.</div>
+      <div style="text-align:right;font-size:10.5pt"><b style="font-size:15pt">914-263-1311</b><br>sheehanhomestead@gmail.com</div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>12</span></div>
+</section>
+
+<!-- ============ PAGE 13: SAFETY + PROOF ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Safety &amp; insurance &middot; Proof points</span><span>Sheehan Homestead &middot; Callahan, FL</span></div>
+  <div class="body">
+    <div><div class="kick">Peace of mind for directors</div><h2 class="title">Safety, care &amp; insurance</h2></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Animal care &amp; event safety</h3>
+        <ul class="checks small">
+          <li>Fenced pen at every mobile event</li>
+          <li>Our team guides every interaction; supervision rules for kids <span class="tbd">[CONFIRM staff-to-guest ratios]</span></li>
+          <li>Healthy, well-loved animals from our own farm</li>
+          <li>Veterinary care and health certificates <span class="tbd">[CONFIRM vet / health-cert details]</span></li>
+          <li>Handwashing / sanitizer station <span class="tbd">[CONFIRM]</span></li>
+          <li>Petting zoo license <span class="tbd">[CONFIRM license type and number]</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Insurance &amp; paperwork</h3>
+        <ul class="checks small">
+          <li>General liability insurance <span class="tbd">[CONFIRM carrier and limits]</span></li>
+          <li>Certificate of insurance on request <span class="tbd">[CONFIRM]</span></li>
+          <li>Your CDD or club named as additional insured <span class="tbd">[CONFIRM]</span></li>
+          <li>Workers' compensation <span class="tbd">[CONFIRM]</span></li>
+          <li>W-9 and signed hold harmless on file</li>
+          <li>Farm visitors sign a waiver on entry</li>
+        </ul>
+      </div>
+    </div>
+    <div><div class="kick">What people say</div><h2 class="title" style="font-size:20pt">Proof points</h2></div>
+    <div class="grid2">
+      <div class="card">
+        <ul class="dots">
+          <li><b>5.0 stars on Google.</b> <span class="chk">[CHECK review count]</span></li>
+          <li><b>Featured on The Jacksonville Buzz</b> (BuzzTV): 2024 interview with Michael &amp; Ann-Marie and a 2025 Buzzworthy Businesses segment. <span class="chk">[CHECK]</span></li>
+          <li><b>RiverTown community</b> (Vesta Property Services): Spring Fling, March 28, 2026, Standard 3-hour; asked back for fall 2026. <span class="chk">[CHECK OK to name]</span></li>
+          <li><b>Wildlight community:</b> booked for Trunk-or-Treat, Saturday, October 24, 2026. <span class="chk">[CHECK OK to name]</span></li>
+          <li><b>STEM on Call:</b> summer camp tower-build for Oxford Preparatory Academy. <span class="chk">[CHECK OK to name]</span></li>
+          <li><b>Organizations on our website:</b> First Coast YMCA, Oxford Preparatory Academy, Amelia Island Montessori, Wild Oak Explorers. <span class="chk">[CHECK permission to print]</span></li>
+        </ul>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;gap:0.1in">
+        <p class="quote">"Able to work quickly with us to book a last minute petting zoo that was a hit with our guests and staff alike." <small>Google review, Fall Festival <span class="chk">[CHECK exact wording]</span></small></p>
+        <p class="quote">"Fair price and I was impressed how quickly you were able to setup and breakdown." <small>Amenity manager <span class="chk">[CHECK source &amp; permission]</span></small></p>
+        <p class="quote">"Reliable customer service and communication from a petting zoo for a change." <small>Amenity manager <span class="chk">[CHECK source &amp; permission]</span></small></p>
+        <p class="quote">"Nice to see such happy, chonky animals." <small>Event guest <span class="chk">[CHECK source &amp; permission]</span></small></p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>Sheehan Homestead LLC</b> &middot; 914-263-1311 &middot; sheehanhomestead.com</span><span>13</span></div>
+</section>
+
+<!-- ============ PAGE 14: CONTACT & CTA ============ -->
+<section class="page cover">
+  <div class="top" style="padding-top:0.6in">
+    <img class="logo" style="width:2.6in" src="assets/logo-wordmark-gold.png" alt="Sheehan Homestead logo">
+    <div class="eyebrow">Let's plan your year</div>
+    <h1 style="font-size:34pt">Book your planning call.</h1>
+    <div class="promise">Lock your 2027 dates before the fall and spring Saturdays go. One call, twelve months of resident joy.</div>
+  </div>
+  <div class="hero" style="margin-top:0.25in">
+    <img style="height:3.65in" src="assets/pta-fall-festival-cartoon.jpg" alt="Illustration of a fall festival with goats, bunnies and chickens">
+    <div class="cap">Illustration. <span class="tbd">[PHOTO TBD]</span></div>
+  </div>
+  <div style="margin:0.25in 0.6in 0;display:grid;grid-template-columns:1fr 1fr;gap:0.2in">
+    <div style="background:#fff;color:var(--ink);border-radius:12px;padding:0.18in 0.22in">
+      <div class="kick">Call or text</div>
+      <div style="font-family:Lora,serif;font-size:24pt;font-weight:700;color:var(--green)">914-263-1311</div>
+      <div class="small">Text <b>GOAT</b> for discounts</div>
+      <div style="margin-top:0.08in">sheehanhomestead@gmail.com<br>sheehanhomestead.com<br>sheehanhomestead.com/services</div>
+      <div class="small" style="margin-top:0.08in">44065 Cushman Road, Callahan, FL 32011<br>Michael Sheehan &amp; Ann-Marie Sheehan, M.Ed., co-owners</div>
+    </div>
+    <div style="display:flex;gap:0.16in;justify-content:center;align-items:center">
+      <div style="text-align:center"><img src="assets/qr-services.png" style="width:1.45in;border-radius:8px;border:4px solid #fff;display:block" alt="QR code for sheehanhomestead.com/services"><div class="small" style="margin-top:0.05in;color:#e9e3d4">Book online<br>sheehanhomestead.com/services</div></div>
+      <div style="text-align:center"><img src="assets/qr-facebook.png" style="width:1.45in;border-radius:8px;border:4px solid #fff;display:block" alt="QR code for the Sheehan Homestead Facebook page"><div class="small" style="margin-top:0.05in;color:#e9e3d4">Follow along<br>on Facebook</div></div>
+    </div>
+  </div>
+  <div class="strip" style="font-size:9pt">
+    <div>facebook.com/profile.php?id=61556795506312</div>
+    <div>Prices are 2026 list unless marked partner. Subject to change.</div>
+  </div>
+</section>
+
+</body>
+</html>
