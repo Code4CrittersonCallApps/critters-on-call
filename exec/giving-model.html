@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Give Twice giving model · Sheehan Homestead</title><style>
+:root{--bg:#0b1220;--card:#121a2b;--line:#1e2a44;--text:#e8eefc;--muted:#93a0b8;--ok:#3dd68c;--gold:#c9a227;--warn:#ffb020;--bad:#ff6b4a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--ok)}.wrap{max-width:720px;margin:0 auto;padding:14px 12px 72px}
+.crumb{font-size:.78rem;color:var(--muted);margin:0 0 8px}.crumb a{color:#fde68a;text-decoration:none;font-weight:600}
+h1{font-size:1.35rem;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:.84rem;margin:0 0 10px}
+.banner{padding:10px 12px;border:1px solid #c9a22788;border-radius:12px;background:linear-gradient(135deg,#2a2210,#121a2b);font-size:.8rem;color:#fde68a;margin:0 0 12px}
+.banner b{color:#fff}.ver{display:block;font-size:.7rem;color:#9dffc5;font-weight:700;margin-top:4px}
+.sec{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 8px}
+.card.top{border-color:#c9a22788}.card.owe{border-color:#ffb02066}.card.closed{opacity:.72;border-color:#3dd68c44}
+.card h3{margin:0 0 4px;font-size:.95rem}
+.meta{font-size:.78rem;color:var(--muted)}.meta b{color:#c5d0e6}
+.why{font-size:.78rem;color:#fde68a;margin-top:6px;padding:6px 8px;border-radius:8px;background:#2a221088;border:1px solid #c9a22744}
+.chip{display:inline-block;font-size:.62rem;padding:2px 7px;border-radius:999px;border:1px solid var(--line);margin:0 4px 4px 0;color:#c5d0e6}
+.chip.wait{border-color:#c9a22788;color:#fde68a}.chip.sent{border-color:#3dd68c88;color:#9dffc5}.chip.closed{border-color:#3dd68c66;color:#9dffc5}
+.chip.chase{border-color:#ffb02088;color:#ffb020}
+.card.low{opacity:.65;border-color:#93a0b866}
+.chip.low{border-color:#93a0b888;color:#93a0b8}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:.8rem;text-decoration:none}
+a.btn.sec{background:#0e1626;border-color:var(--line);color:#c5d0e6;font-weight:600;font-size:.72rem;min-height:34px}
+.note{font-size:.72rem;color:var(--muted);margin-top:16px}
+.pipeline a{display:block;padding:8px 0;border-bottom:1px solid var(--line);color:#9dffc5;text-decoration:none;font-size:.88rem}
+.pipeline a:last-child{border:0}
+@media(max-width:640px){a.btn{min-height:48px;flex:1 1 100%}}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 12px}
+.strip div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.strip b{display:block;font-size:1.25rem;color:#fff}.strip span{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.strip .w b{color:#fde68a}.strip .s b{color:#9dffc5}
+.grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:16px 0 6px}
+.grp i{font-style:normal;color:#c5d0e6}
+.q{background:var(--card);border:1px solid #c9a22766;border-radius:12px;padding:10px;margin:0 0 8px}
+a.mbtn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 12px;border-radius:10px;background:linear-gradient(180deg,#2f6b4f,#1a3d2e);border:1px solid #3dd68caa;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;margin:0 0 8px}
+a.mbtn.call{background:linear-gradient(180deg,#5a4a1a,#2a2210);border-color:#c9a227aa}
+.who{font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:inline-block;font-size:.62rem;padding:1px 7px;border-radius:999px;border:1px solid #c9a22788;color:#fde68a;vertical-align:middle;margin-left:4px}
+.sm{font-size:.76rem;color:var(--muted);margin-top:3px;word-break:break-word}.sm b{color:#c5d0e6;font-weight:600}
+a.tel{color:#9dffc5;font-weight:700;text-decoration:none}
+a.mini{font-size:.7rem;color:#c5d0e6;border:1px solid var(--line);border-radius:8px;padding:2px 6px;text-decoration:none;margin-left:4px}
+.nt{font-size:.74rem;color:#fde68a;margin-top:4px}
+details.fold{background:#0e1626;border:1px solid var(--line);border-radius:12px;margin:0 0 8px;padding:0 10px}
+details.fold summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:.85rem;color:#c5d0e6;list-style:none}
+details.fold summary .n{float:right;color:var(--muted);font-weight:600}
+.intro{font-size:.74rem;color:var(--muted);margin:0 0 8px}
+.row{border-top:1px solid var(--line);padding:8px 0;font-size:.82rem}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.tabs a{font-size:.74rem;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#c5d0e6;text-decoration:none;background:#0e1626}
+.tabs a.on{border-color:#3dd68caa;color:#fff;background:#1a3d2e;font-weight:700}.tabs a i{font-style:normal;color:var(--muted);margin-left:3px}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:.76rem;color:var(--muted);align-items:center}
+.ctl select{background:#0e1626;color:#e8eefc;border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:.78rem}
+.tot{padding:10px 12px;border:1px solid #3dd68c66;border-radius:12px;background:#0e1f18;margin:0 0 10px;font-size:.84rem}.tot b{font-size:1.15rem;color:#9dffc5}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+.lane{display:block;text-decoration:none;color:var(--text)}.lane b{color:#9dffc5}
+.draft{white-space:pre-wrap}
+
+table{width:100%}table.d{border-collapse:collapse;font-size:.76rem}table.d td,table.d th{border-top:1px solid var(--line);padding:6px 4px;vertical-align:top;text-align:left}table.d th{color:var(--muted);font-size:.66rem;text-transform:uppercase}
+table.t{width:100%;border-collapse:collapse;font-size:.78rem;margin:0 0 4px}
+table.t th{text-align:right;color:var(--muted);font-weight:600;font-size:.66rem;text-transform:uppercase;letter-spacing:.04em;padding:6px 5px;border-bottom:1px solid var(--line)}
+table.t th:first-child,table.t td:first-child{text-align:left}
+table.t td{text-align:right;padding:6px 5px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t tr.rec td{background:#2a221088;color:#fde68a;font-weight:700}
+table.t td.g{color:#9dffc5;font-weight:700}table.t td.b{color:#ff8a70}
+.scroll{overflow-x:auto}
+ul.l{margin:6px 0 0;padding-left:18px;font-size:.82rem}ul.l li{margin:3px 0}
+.src{font-size:.76rem}.src li{margin:4px 0}
+</style></head><body><div class="wrap">
+<p class="crumb"><a href="dunk-list.html">Dunk lists</a> · <a href="billionaire-playbook.html">Undercover Billionaire playbook</a> → <b>Giving model</b></p>
+<h1>Give Twice: giving is the ad budget</h1>
+<p class="sub">Mon Nov 2, 2026 · Sheehan Homestead · Critters on Call. Nothing on this page sends anything.</p>
+<div class="banner"><b>The number: 11% of revenue, called "Ten Plus One."</b> 10% goes out in kind (Gold memberships, Violet discounts, free visits, plants, collectibles, wheel prizes), counted at retail value. 1% goes out as cash to partner causes. That is <b>$55,000 a year at $500K</b> and <b>$220,000 a year at $2M</b>. The target is <b>5x ROAS</b> on the full 11%, with a floor of 3x. Any giving channel under 2x for 90 days gets cut and its budget moves to a channel that's working.<span class="ver">At 5x, 11% produces $275K of a $500K year and $1.1M of a $2M year. Rebookings, members and sponsors carry the rest.</span></div>
+<div class="strip"><div class="w"><b>11%</b><span>of revenue</span></div><div><b>$55K</b><span>at $500K</span></div><div><b>$220K</b><span>at $2M</span></div><div class="s"><b>5x</b><span>ROAS target</span></div></div>
+
+<div class="sec">Collateral, send-ready</div>
+<div class="card top"><h3>Give Twice one-pager (print, letter)</h3><div class="meta">One page on the philosophy: Gold giveaways, the Violet Ticket, Stead Spin, fundraiser prizes, a visit on us, and the growth goal of free petting zoos and summer camp. It does not name the percentage.</div>
+<div class="links"><a class="btn" href="../brochures/giving-2026-10-30/04-our-giving-give-twice.pdf">Open print PDF</a><a class="btn sec" href="../brochures/giving-2026-10-30/04-our-giving-give-twice.html">Web version</a><a class="btn sec" href="../brochures/giving-2026-10-30/index.html">All giving brochures</a></div></div>
+<div class="card"><h3>Services catalogue with Give Twice as page 3</h3><div class="meta">The giving page now sits right after "Who we are." The catalogue is 14 pages.</div>
+<div class="links"><a class="btn" href="../brochures/catalogue-2026-11-02/sheehan-homestead-services-catalogue-2026.pdf">Open catalogue PDF</a><a class="btn sec" href="../brochures/catalogue-2026-11-02/page-03-give-twice-preview-03.png">Preview page 3</a></div>
+<div class="why">Before the catalogue goes out, clear the yellow placeholder tags that were already in it: photo slots, the review count, and the line on sheep and mini donkeys. The Give Twice page has none.</div></div>
+
+<div class="sec">1 · Giving budget and what it returns</div>
+<div class="card scroll"><table class="t"><tr><th>Revenue and share</th><th>Giving</th><th>0.25x</th><th>1x</th><th>3x</th><th>5x</th></tr><tr><td>$500,000 at 7%</td><td>$35,000</td><td class="b">$8,750</td><td class="">$35,000</td><td class="">$105,000</td><td class="g">$175,000</td></tr><tr><td>$500,000 at 10%</td><td>$50,000</td><td class="b">$12,500</td><td class="">$50,000</td><td class="">$150,000</td><td class="g">$250,000</td></tr><tr class="rec"><td>$500,000 at 11%</td><td>$55,000</td><td class="b">$13,750</td><td class="">$55,000</td><td class="">$165,000</td><td class="g">$275,000</td></tr><tr><td>$500,000 at 12%</td><td>$60,000</td><td class="b">$15,000</td><td class="">$60,000</td><td class="">$180,000</td><td class="g">$300,000</td></tr><tr><td>$2M at 7%</td><td>$140,000</td><td class="b">$35,000</td><td class="">$140,000</td><td class="">$420,000</td><td class="g">$700,000</td></tr><tr><td>$2M at 10%</td><td>$200,000</td><td class="b">$50,000</td><td class="">$200,000</td><td class="">$600,000</td><td class="g">$1M</td></tr><tr class="rec"><td>$2M at 11%</td><td>$220,000</td><td class="b">$55,000</td><td class="">$220,000</td><td class="">$660,000</td><td class="g">$1.10M</td></tr><tr><td>$2M at 12%</td><td>$240,000</td><td class="b">$60,000</td><td class="">$240,000</td><td class="">$720,000</td><td class="g">$1.20M</td></tr></table>
+<div class="meta">ROAS is revenue returned per dollar given. The highlighted rows are the recommended 11%. Your math holds: $60K at 5x returns $300K, and at 0.25x it returns $15K.</div></div>
+
+<div class="sec">2 · Giving needed to produce the whole year from giving alone</div>
+<div class="card scroll"><table class="t"><tr><th>Revenue goal</th><th>0.25x</th><th>1x</th><th>3x</th><th>5x</th></tr><tr><td>$500,000</td><td class="b">$2M</td><td class="">$500,000</td><td class="">$166,667</td><td class="g">$100,000</td></tr><tr><td>$2M</td><td class="b">$8M</td><td class="">$2M</td><td class="">$666,667</td><td class="g">$400,000</td></tr></table>
+<div class="meta">$2M at 5x needs $400K of giving, which is 20% of revenue. At 0.25x it needs $8M, which no business can carry. If giving had to produce every dollar on an 11% budget, it would need 9.1x. That is why the plan uses giving to win new customers, and rebookings, Gold renewals and sponsors to carry the rest.</div></div>
+
+<div class="sec">3 · Where the 11% goes</div>
+<div class="card scroll"><table class="t"><tr><th>Line (counted at retail)</th><th>At $500K</th><th>At $2M</th></tr>
+<tr><td>Gold memberships given, at $50 each</td><td>$18,000 · 360 cards (30 a month)</td><td>$72,000 · 1,440 cards (120 a month)</td></tr>
+<tr><td>Violet Ticket discounts, about $330 given per booking</td><td>$20,000 · about 60 bookings</td><td>$80,000 · about 240 bookings</td></tr>
+<tr><td>Free visits and Steadshouts, about $359 each</td><td>$7,000 · about 20 visits</td><td>$28,000 · about 78 visits, or a free camp week</td></tr>
+<tr><td>Plants, comics, cards, toys, wheel prizes</td><td>$5,000</td><td>$20,000</td></tr>
+<tr><td>Cash to partner causes (the "plus one")</td><td>$5,000</td><td>$20,000</td></tr>
+<tr class="rec"><td>Total, 11%</td><td>$55,000</td><td>$220,000</td></tr></table>
+<div class="meta">Violet math: Standard weekend mobile zoo lists at $549. About 60% off gives about $330 and leaves about $220 collected. Visit value uses the $359 Standard weekday price. Most of this costs you time and inventory you already have, not cash. Your real out-of-pocket is the 1% cash plus gifts and fuel.</div></div>
+
+<div class="sec">4 · Value of the giveaway stack</div>
+<div class="card"><ul class="l">
+<li><b>Gold membership:</b> $50 price, over $100 in value. That's a $25 farm tour for two, a $25 farm gift, about 40% off big-ticket items (camp, mobile zoo, field trips) and app access. Book each gift at $50, the price a buyer pays, so the ledger never overstates.</li>
+<li><b>How many Gold cards equal the budget:</b> the full $55K would be 1,100 cards at $50 (550 at the $100 value). The full $220K would be 4,400 cards (2,200 at $100). The plan caps Gold at about a third of giving, which is 360 and 1,440 cards.</li>
+<li><b>Violet Ticket:</b> about 60% off list, confirmed per date. That's about $330 given on a $549 Standard weekend and about $300 on a $499 large field trip.</li>
+<li><b>Stead Spin:</b> free to play. Count a prize only when it's redeemed ($10, $25 or $50 gift, or a Gold card).</li>
+<li><b>Goods:</b> plants, comic books, baseball cards and toys are counted at fair resale value when they're given, never before.</li></ul></div>
+
+<div class="sec">5 · Guardrails so free Gold never eats paid Gold</div>
+<div class="card"><ul class="l">
+<li><b>Partners only.</b> Free Gold goes out through a church, school, nonprofit, auction or 50/50 raffle, never to someone who just asks. People who ask get the $50 price.</li>
+<li><b>Monthly cap.</b> 30 a month at $500K and 120 a month at $2M. When the month's cards are gone, the next partner gets a Violet date or plants.</li>
+<li><b>Gift cards carry no $50 booking credit.</b> Paid Gold keeps its $50 deposit toward a mobile invoice. That's the reason to buy instead of waiting for a gift.</li>
+<li><b>Activate in 60 days, valid 12 months.</b> Each gifted card ends after 12 months and is not resold.</li>
+<li><b>Each card is coded to its partner</b> (for example GOLD-CHURCHNAME-01), so every booking it brings in is credited to that partner. That is how ROAS gets measured.</li>
+<li><b>Score it monthly.</b> Bookings and Gold renewals from coded cards and Violet partners, divided by the retail value given. Keep anything at 3x or better, fix anything between 2x and 3x, and cut anything under 2x for 90 days.</li></ul></div>
+
+<div class="sec">6 · Benchmarks (checked Nov 2, 2026)</div>
+<div class="card src"><ul class="l">
+<li><b>Ad spend, small business:</b> 7 to 8% of revenue for firms under $5M, assuming 10 to 12% margins, with a range of 2 to 20%. This comes from the SBA Ascent marketing plan worksheet, as quoted by the <a href="https://www.scrantonsbdc.com/how-to-create-a-small-business-marketing-plan/">Scranton SBDC</a>, <a href="https://michigansbdc.org/management-tools/marketing-your-small-business/">Michigan SBDC</a> and <a href="https://boomp.net/blog/how-much-should-a-small-business-spend-on-marketing">boomp.net's read of the worksheet</a>. The <a href="https://www.sba.gov/counseling/manage-your-business/">SBA's own guide</a> says to compare marketing cost to the revenue it generates.</li>
+<li><b>The CMO Survey 2025 (Duke Fuqua):</b> marketing averages 9.4% of revenue, with a median of 3%. B2C services companies average 6.0%. <a href="https://cmosurvey.org/wp-content/uploads/2025/03/The_CMO_Survey-Topline_Report-2025.pdf">Topline report</a> · <a href="https://cmosurvey.org/cmosurvey_results/The_CMO_Survey-Highlights_and_Insights_Report-2025.pdf">Highlights</a></li>
+<li><b>Gartner CMO Spend Survey 2025:</b> 7.7% of revenue, with a median of 6.0% and a range of 4.0% to 10.5% (25th to 75th percentile). The sample is mostly companies over $1B. <a href="https://www.gartner.com/en/newsroom/press-releases/2025-05-12-gartner-2025-cmo-spend-survey-reveals-marketing-budgets-have-flatlined-at-seven-percent-of-overall-company-revenue">Press release</a></li>
+<li><b>ROAS for local services:</b> 4x is the common minimum and 6x or better is strong, according to <a href="https://simplydigitalmarketing.co/what-is-a-good-roas-for-a-service-business/">Simply Digital</a>. The usual range is 3x to 5x, according to <a href="https://webmarketinginternational.com/good-roas-benchmarks-by-industry/">Web Marketing International</a>. Google Local Services Ads closed at 7.84x across 888 contractors in February 2026, per <a href="https://searchlightdigital.io/google-local-service-ads-cost-per-lead/">SearchLight</a>. HVAC Google Ads had a median of 4.37x, with the bottom quartile under 2.77x, per <a href="https://pipelineon.com/blog/roas-home-service-businesses/">PipelineOn</a>. Break-even ROAS is 1 divided by your gross margin.</li>
+<li><b>ROAS across media:</b> Nielsen marketing mix studies put TV at $2.50, social at $2.29 and print at $1.91 per dollar (<a href="https://business.fetch.com/trends-and-insights/commissioned-nielsen-study-mmm-fetch-iroas-outperforms-traditional-channels">Fetch, commissioned Nielsen</a>). Google estimates a $2 direct return on Google Ads (<a href="https://economicimpact.google/methodology/">methodology</a>). So <b>5x is a top-tier target and 0.25x loses 75 cents of every dollar.</b></li>
+<li><b>Giving as marketing:</b> 88% of Americans would buy from a purpose-driven company, 85% would support one in their community, and 79% are more loyal to one (<a href="https://www.prnewswire.com/news-releases/americans-more-loyal-and-willing-to-defend-purpose-driven-brands-according-to-new-research-by-cone-300656014.html">2018 Cone/Porter Novelli Purpose Study</a>). 71% would choose a purpose-driven company when price and quality are equal (<a href="https://engageforgood.com/resource/porter-novellis-2021-purpose-perception-study/">Porter Novelli 2021</a>). 88% trust recommendations from people they know most of all (<a href="https://www.nielsen.com/insights/2021/beyond-martech-building-trust-with-consumers-and-engaging-where-sentiment-is-high/">Nielsen Trust in Advertising 2021</a>).</li>
+<li><b>Brands that give at scale:</b> Bombas passed 150 million donated items in 2025 with One Purchased = One Donated and is on track for about $500M in sales (<a href="https://beebetter.bombas.com/impact">Bombas impact</a>, <a href="https://www.bloomberg.com/news/features/2025-08-25/bombas-socks-now-selling-t-shirts-and-underwear-to-hit-500-million-in-sales">Bloomberg</a>). Patagonia's 1% for the Planet has more than 4,400 member businesses and over $939M given since 2002 (<a href="https://www.onepercentfortheplanet.org/frequently-asked-questions">FAQ</a>). TOMS One for One shows the risk: the model draws customers, but critics hit it when the gift doesn't fit the need (<a href="https://ssir.org/articles/entry/inside_the_buy_one_give_one_model">SSIR</a>). Give what partners ask for.</li>
+<li><b>Honest gap:</b> no public study puts a standard ROAS on giving. That's why the plan codes every gift to a partner and scores it monthly against the same 5x bar as paid ads.</li></ul></div>
+<p class="note">Built Nov 2, 2026. The Gold and Violet details come from the Oct 30 giving brochures, the Gold card brochure and the pricing page. Nothing was sent.</p>
+</div></body></html>
