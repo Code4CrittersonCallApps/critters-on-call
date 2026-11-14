@@ -12,9 +12,7 @@
 <meta property="og:type" content="website" />
 <title>Prize Wheel · Critters on Call</title>
 <link rel="icon" type="image/png" href="../assets/brand-chicken.png?v=20261104nov" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../css/fonts.css?v=1" />
 <link rel="stylesheet" href="../../css/styles.css?v=20261104nov" />
 <style>
   /* Forest greens from farm brand; hub uses Gold Membership card art. */
@@ -241,6 +239,10 @@
     margin: 0.35rem 0 0; line-height: 1.35;
   }
   .teaser { font-size: 0.72rem; color: var(--muted); font-style: italic; }
+  .rules-official { margin: 0.4rem 0 0; font-size: 0.78rem; color: var(--muted); }
+  .rules-official summary { cursor: pointer; font-weight: 600; }
+  .rules-official p { margin: 0.35rem 0 0; line-height: 1.45; }
+  .rules-legal { margin: 0.35rem 0 0; font-size: 0.76rem; color: var(--muted); text-align: center; }
   .claim-steps {
     margin: 0 0 0.75rem; padding: 0 0 0 1.15rem;
     font-size: 0.78rem; line-height: 1.45; color: var(--cream);
@@ -318,6 +320,11 @@
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
       <p class="rules-note" id="rules-note">About 2 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
+      <details class="rules-official" id="official-rules">
+        <summary>Official rules (short)</summary>
+        <p>Open to adults 18+. Spins are limited per device each calendar month and reset on the 1st (Eastern time). Free Spin doesn’t use one. Each slice shows its prize; odds vary by prize. Prizes are claimed in person at Sheehan Homestead or a Critters on Call event, have no cash value and are valid through the end of the month won. To claim, show the win screen to our staff or message us a screenshot. No review or purchase is ever required. Sponsor: Sheehan Homestead LLC, Callahan, FL.</p>
+      </details>
+      <p class="rules-legal"><strong>No purchase necessary. Google is not a sponsor.</strong></p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
       <p class="backend-note" id="backend-note" hidden><!-- shown in DOM comment intent; kept for ops --></p>
 
@@ -372,10 +379,7 @@
   /* Soft device lock: 2 prize spins per calendar month (ET) on the free wheel. Event wheels stay at 3. Free Spin does not consume.
      IP / email hard lock needs a backend later — honor device-month localStorage for now. */
   var MAX_SPINS_PER_MONTH = 2;
-  /* Generic event wheel: EXPIRES_* unused (isExpired always false). */
-  var EXPIRES_Y = 2026;
-  var EXPIRES_M = 12;
-  var EXPIRES_D = 1;
+  /* Generic event wheel: no expiry (isExpired always false). */
   var STORE_DEVICE = "coc_farm_spin_month_v6_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
@@ -385,35 +389,10 @@
   var CLAIM_SMS_DISPLAY = "914-263-1311";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
   var BOOKING_URL = "https://www.sheehanhomestead.com/services";
-  var REVIEW_CLAIM_URL = "https://g.page/r/CS74JMTm3xrWEAE/review";
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
-  /* Optional ?reset=1 clears local month lock for this wheel. */
-  function resetSpinStateIfRequested() {
-    try {
-      var params = new URLSearchParams(location.search);
-      if (params.get("reset") !== "1") return false;
-      var keys = [];
-      for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
-      keys.forEach(function (k) {
-        if (!k) return;
-        if (k.indexOf("coc_") === 0 || k.indexOf("farm_spin") !== -1 || k.indexOf("giving-wheel") !== -1) {
-          localStorage.removeItem(k);
-        }
-      });
-      params.delete("reset");
-      var cleanQuery = params.toString();
-      var cleanUrl = location.pathname + (cleanQuery ? "?" + cleanQuery : "") + location.hash;
-      history.replaceState(null, "", cleanUrl);
-      location.reload();
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  if (resetSpinStateIfRequested()) return;
+  /* No URL reset bypass: the monthly device lock can only reset on the 1st of the month (ET). */
 
   /* 16 equal slices.
      Free Spin ×2 = TOP emotional (priceless redo)
@@ -722,7 +701,7 @@
       "&body=" + encodeURIComponent("PRIZE\n\n(Attach a screenshot of your Stead Spin win screen.)");
     if (claimContactRow) {
       claimContactRow.innerHTML =
-        '<a class="btn-sms" href="' + REVIEW_CLAIM_URL + '" id="claim-google-cta" target="_blank" rel="noopener"><span>Claim your prize</span></a>' +
+        '<ol class="claim-steps" id="claim-steps"><li><strong>Screenshot</strong> this win screen.</li><li><strong>Show it to our staff</strong> at Sheehan Homestead or at a Critters on Call event, <strong>or message us</strong> the screenshot with the word PRIZE.</li><li>We confirm your prize and set up pickup. No purchase or review needed.</li></ol>' +
         '<a class="btn-mail" href="' + sms + '" id="claim-sms-cta"><span>Text screenshot + PRIZE</span></a>' +
         '<a class="btn-claim-link" href="' + mail + '" id="claim-email-cta"><span>Email screenshot + PRIZE</span></a>' +
         '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener"><span>DM screenshot + PRIZE</span></a>' +

@@ -12,9 +12,7 @@
 <meta property="og:type" content="website" />
 <title>High score wheel · draft</title>
 <link rel="icon" type="image/png" href="assets/brand-chicken.png?v=20261002fs4" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/fonts.css?v=1" />
 <link rel="stylesheet" href="../css/styles.css?v=20261002fs4" />
 <style>
   /* Forest greens from farm brand; hub uses Gold Membership card art. */
@@ -388,31 +386,7 @@
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
-  /* Optional ?reset=1 clears local month lock for this wheel. */
-  function resetSpinStateIfRequested() {
-    try {
-      var params = new URLSearchParams(location.search);
-      if (params.get("reset") !== "1") return false;
-      var keys = [];
-      for (var i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
-      keys.forEach(function (k) {
-        if (!k) return;
-        if (k.indexOf("coc_") === 0 || k.indexOf("farm_spin") !== -1 || k.indexOf("giving-wheel") !== -1) {
-          localStorage.removeItem(k);
-        }
-      });
-      params.delete("reset");
-      var cleanQuery = params.toString();
-      var cleanUrl = location.pathname + (cleanQuery ? "?" + cleanQuery : "") + location.hash;
-      history.replaceState(null, "", cleanUrl);
-      location.reload();
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
-
-  if (resetSpinStateIfRequested()) return;
+  /* No URL reset bypass: the monthly device lock can only reset on the 1st of the month (ET). */
 
   /* 16 equal slices.
      Free Spin ×2 = TOP emotional (priceless redo)
