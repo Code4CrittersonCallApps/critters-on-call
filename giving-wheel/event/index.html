@@ -388,7 +388,7 @@
   var CLAIM_SMS = "9142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
-  var BOOKING_URL = "https://www.sheehanhomestead.com/services";
+  var BOOKING_URL = "https://sheehanhomestead.com/booking-help";
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
@@ -695,20 +695,11 @@
   }
 
   function fillClaimContacts() {
-    var sms = "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent("PRIZE");
-    var mail = "mailto:" + CLAIM_EMAIL +
-      "?subject=" + encodeURIComponent("PRIZE — Stead Spin claim") +
-      "&body=" + encodeURIComponent("PRIZE\n\n(Attach a screenshot of your Stead Spin win screen.)");
     if (claimContactRow) {
       claimContactRow.innerHTML =
-        '<ol class="claim-steps" id="claim-steps"><li><strong>Screenshot</strong> this win screen.</li><li><strong>Show it to our staff</strong> at Sheehan Homestead or at a Critters on Call event, <strong>or message us</strong> the screenshot with the word PRIZE.</li><li>We confirm your prize and set up pickup. No purchase or review needed.</li></ol>' +
-        '<a class="btn-mail" href="' + sms + '" id="claim-sms-cta"><span>Text screenshot + PRIZE</span></a>' +
-        '<a class="btn-claim-link" href="' + mail + '" id="claim-email-cta"><span>Email screenshot + PRIZE</span></a>' +
-        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener"><span>DM screenshot + PRIZE</span></a>' +
-        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener"><span>See our services</span></a>';
+        '<ol class="claim-steps" id="claim-steps"><li><strong>Screenshot</strong> this win screen.</li><li><strong>Tap Claim your prize</strong> to open our booking page, or <strong>show the screen to our staff</strong> at Sheehan Homestead or at a Critters on Call event.</li><li>We confirm your prize and set up pickup. No purchase or review needed.</li></ol>' +
+        '<a class="btn btn-primary btn-block" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener"><span>Claim your prize</span></a>';
     }
-    var mapsLink = document.getElementById("farm-maps-link");
-    if (mapsLink) mapsLink.href = "https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL";
   }
 
   function openClaimContacts() {
@@ -718,7 +709,7 @@
     claimCtaRow.innerHTML = "";
     fillClaimContacts();
     if (farmClaim) farmClaim.hidden = false;
-    toast("Claim at Sheehan Homestead · or text / email / FB");
+    toast("Claim your prize on the booking page, or show this screen at the farm");
   }
 
   function showPrize(prize, claimed) {

@@ -334,9 +334,9 @@
 
         <div class="claim-panel" id="claim-panel" hidden>
           <h3>Claim your prize</h3>
-          <p class="claim-sub">Tell us you won using <strong>any option below</strong>, then come to the farm. This page does <strong>not</strong> save claims by itself.</p>
+          <p class="claim-sub">Tap <strong>Claim your prize</strong> to open the booking page, then show this screen at the farm. This page does <strong>not</strong> save claims by itself.</p>
           <div class="cta-row" id="claim-contact-row"></div>
-          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. Staff confirm by your message — not by anything stored in the browser alone.</p>
+          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. Staff confirm your claim — not by anything stored in the browser alone.</p>
         </div>
 
         <div class="farm-claim" id="farm-claim" hidden>
@@ -380,7 +380,7 @@
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
   var CLAIM_SMS = "9142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
-  var BOOKING_URL = "https://www.sheehanhomestead.com/booking-help";
+  var BOOKING_URL = "https://sheehanhomestead.com/booking-help";
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
@@ -787,18 +787,9 @@
   }
 
   function fillClaimContacts() {
-    var label = pending ? pending.label : "prize";
-    var mail = claimMailHref(label);
-    var sms = "sms:" + CLAIM_SMS + "?body=" + encodeURIComponent("PRIZE");
     if (claimContactRow) {
       claimContactRow.innerHTML =
-        '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta">' +
-          '<span>Text PRIZE to ' + CLAIM_SMS_DISPLAY + '</span>' +
-          '<small>Opens Messages</small>' +
-        '</a>' +
-        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener">DM ' + FB_LABEL + ' on Facebook</a>' +
-        '<a class="btn-mail btn-block" href="' + mail + '" id="claim-mail-cta">Email ' + CLAIM_EMAIL + '</a>' +
-        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Website booking help</a>';
+        '<a class="btn btn-primary btn-block" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener"><span>Claim your prize</span></a>';
     }
   }
 

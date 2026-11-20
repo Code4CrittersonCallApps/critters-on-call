@@ -312,7 +312,7 @@
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn">Spin the wheel</button>
       <p class="rules-note">No email needed to spin · max 3 spins · Free spin does not count against your 3</p>
-      <p class="rules-note" style="font-weight:700;font-size:0.95rem">Won something? Text PRIZE to 914 263 1311</p>
+      <p class="rules-note" style="font-weight:700;font-size:0.95rem">Won something? Claim your prize on the booking page</p>
 
       <div class="win-card" id="win-card" hidden>
         <p class="tracker-kicker" id="win-kicker">You won</p>
@@ -333,10 +333,9 @@
 
         <div class="claim-panel" id="claim-panel" hidden>
           <h3>Claim your prize</h3>
-          <p class="claim-sub">Tell us you won using <strong>any option below</strong>, then come see us at the farm.</p>
+          <p class="claim-sub">Tap <strong>Claim your prize</strong> to open the booking page, then show this screen at the farm.</p>
           <div class="cta-row" id="claim-contact-row"></div>
-          <p class="sms-fallback" id="sms-fallback" style="text-align:center;margin:0.75rem 0 0;font-size:1.15rem;font-weight:700;line-height:1.35">Or text PRIZE to <span style="white-space:nowrap;user-select:all;-webkit-user-select:all">914 263 1311</span><br><span style="font-size:0.85rem;font-weight:500">If the Text button does not open Messages, type that number in a new text.</span></p>
-          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. We confirm every prize from your text or email.</p>
+          <p class="claim-honest text-xs muted" style="text-align:center;margin:0.65rem 0 0;line-height:1.35">Show this screen at the farm. We confirm every prize when you claim.</p>
         </div>
 
         <div class="farm-claim" id="farm-claim" hidden>
@@ -380,7 +379,7 @@
   var CLAIM_EMAIL = "sheehanhomestead@gmail.com";
   var CLAIM_SMS = "+19142631311";
   var CLAIM_SMS_DISPLAY = "914-263-1311";
-  var BOOKING_URL = "https://sheehanhomestead.com/services";
+  var BOOKING_URL = "https://sheehanhomestead.com/booking-help";
   var FB_LABEL = "Sheehan Homestead";
   var WEBHOOK_STUB = "";
 
@@ -722,18 +721,9 @@
   }
 
   function fillClaimContacts() {
-    var label = pending ? pending.label : "prize";
-    var mail = claimMailHref(label);
-    var sms = claimSmsHref(label);
     if (claimContactRow) {
       claimContactRow.innerHTML =
-        '<a class="btn-sms" href="' + sms + '" id="claim-sms-cta">' +
-          '<span>Text PRIZE + what you won to ' + CLAIM_SMS_DISPLAY + '</span>' +
-          '<small>Opens Messages</small>' +
-        '</a>' +
-        '<a class="btn-claim-link" href="' + FB_URL + '" id="claim-fb-cta" target="_blank" rel="noopener">DM ' + FB_LABEL + ' on Facebook</a>' +
-        '<a class="btn-mail btn-block" href="' + mail + '" id="claim-mail-cta">Email ' + CLAIM_EMAIL + '</a>' +
-        '<a class="btn-claim-link" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener">Book a visit: sheehanhomestead.com/services</a>';
+        '<a class="btn btn-primary btn-block" href="' + BOOKING_URL + '" id="claim-book-cta" target="_blank" rel="noopener"><span>Claim your prize</span></a>';
     }
   }
 
@@ -744,7 +734,7 @@
     claimCtaRow.innerHTML = "";
     fillClaimContacts();
     if (farmClaim) farmClaim.hidden = false;
-    toast("Claim by text, email, Facebook, or booking help");
+    toast("Claim your prize on the booking page");
   }
 
   function showPrize(prize, claimed) {

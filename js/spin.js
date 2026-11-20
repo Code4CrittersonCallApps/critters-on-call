@@ -16,7 +16,7 @@
     "Free spin. How sweet it is."
   ];
   var SERVICES_URL = "https://www.sheehanhomestead.com/services";
-  var BOOK_HELP = "https://www.sheehanhomestead.com/booking-help";
+  var BOOK_HELP = "https://sheehanhomestead.com/booking-help";
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
   var SMS_HIGH_SCORE = "sms:9142631311?&body=" + encodeURIComponent("HIGH SCORE");
   var CAPS_KEY = "coc_play_caps_v1";
@@ -170,7 +170,7 @@
       activeEarn = null;
       earnBanner.hidden = false;
       earnBanner.textContent =
-        "Play reward from " + dogDisplayName(earn.dog) + " waiting — daily spin claim used. See our services, text HIGH SCORE, or come back tomorrow.";
+        "Play reward from " + dogDisplayName(earn.dog) + " waiting — daily spin claim used. Claim your prize on the booking page, or come back tomorrow.";
       if (spinBtn && !spinning) {
         spinBtn.disabled = true;
         spinBtn.textContent = "Come back tomorrow";
@@ -309,8 +309,8 @@
       winLabel.textContent = "How sweet it is";
       winValue.textContent = "Priceless";
       if (wasEarn) {
-        setNote("Spin claimed — soft digital win. See our services, then text HIGH SCORE. No free re-spin today.");
-        C.toast("Spin claimed · See our services");
+        setNote("Spin claimed — soft digital win. Claim your prize on the booking page. No free re-spin today.");
+        C.toast("Spin claimed · Claim your prize");
       } else {
         setNote(line);
         spinBtn.textContent = "Spin again";
@@ -323,31 +323,21 @@
       C.toast(pending.label + " · " + pending.value);
     }
 
-    /* Primary CTA always: See our services (real website) */
+    /* Primary CTA always: Claim your prize on the booking page */
     if (winServices) {
       winServices.hidden = false;
-      winServices.href = SERVICES_URL;
-      winServices.textContent = "See our services";
+      winServices.href = BOOK_HELP;
+      winServices.textContent = "Claim your prize";
       winServices.target = "_blank";
       winServices.rel = "noopener";
     }
     if (winSms) {
-      winSms.hidden = false;
-      winSms.href = SMS_HIGH_SCORE;
-      winSms.textContent = "Text HIGH SCORE to 914-263-1311";
+      winSms.hidden = true;
     }
 
-    /* Optional tertiary — booking help for visit-themed slices; hide Gold for soft path */
+    /* Avoid a second booking button next to the primary claim CTA */
     if (winBook) {
-      if (!pending.again && (pending.theme === "betty" || pending.id === "farm-invite" || pending.claim === "services")) {
-        winBook.hidden = false;
-        winBook.href = BOOK_HELP;
-        winBook.textContent = "Booking help (optional)";
-        winBook.target = "_blank";
-        winBook.rel = "noopener";
-      } else {
-        winBook.hidden = true;
-      }
+      winBook.hidden = true;
     }
     if (winGold) {
       winGold.hidden = true;
@@ -356,11 +346,11 @@
     if (!pending.again) {
       if (pending.claim === "services" || pending.theme) {
         setNote(
-          "Soft digital prize · limited · honor-system. Entertaining + learn a little — parents, See our services on the real website."
+          "Soft digital prize · limited · honor-system. Entertaining + learn a little — parents, claim your prize on the booking page."
           + (wasEarn ? " Or tap a door below." : "")
         );
       } else if (wasEarn) {
-        setNote("Nice land! Soft prize — See our services, or text HIGH SCORE with a screenshot.");
+        setNote("Nice land! Soft prize — claim your prize on the booking page.");
       }
     }
 
@@ -412,9 +402,11 @@
   var doorBook = document.getElementById("door-book");
   var doorSms = document.getElementById("door-sms");
   var doorFb = document.getElementById("door-fb");
-  if (doorServices) doorServices.href = SERVICES_URL;
+  if (doorServices) {
+    doorServices.href = BOOK_HELP;
+  }
   if (doorBook) doorBook.href = BOOK_HELP;
-  if (doorSms) doorSms.href = SMS_HIGH_SCORE;
+  if (doorSms) doorSms.hidden = true;
   if (doorFb) doorFb.href = FB_URL;
 
   resolveEarnFromQuery();
