@@ -63,9 +63,11 @@
     border-collapse: collapse;
     background: #fff;
     border: 2px solid var(--green);
-    font-size: clamp(12px, 1.25vw, 20px);
+    font-size: clamp(10px, 1.05vw, 16px);
     flex: 1;
   }
+  #comp td.ns { color: #8b9690; }
+  #comp td.notes { font-size: 0.92em; color: var(--muted); }
   #comp th, #comp td {
     text-align: left;
     padding: 0.7vh 0.8vw;
@@ -134,79 +136,84 @@
   <div id="stage">
     <img class="slide-img" id="slide" alt="Demo slide">
     <section id="comp">
-      <p class="kicker">Why did it come back this way</p>
-      <h1>A competitive look. Click a Facebook or Google page.</h1>
+      <p class="kicker">Why it came back this way</p>
+      <h1>The scoreboard. Click a page.</h1>
       <table>
         <thead>
           <tr>
             <th>Provider</th>
-            <th>Facebook</th>
-            <th>Google profile</th>
-            <th>Mobile goat yoga</th>
+            <th>Reviews</th>
+            <th>Rating</th>
+            <th>Yoga</th>
+            <th>STEM</th>
             <th>Step Up</th>
-            <th>8 gigs at once</th>
+            <th>8 gigs</th>
+            <th>Media</th>
+            <th>Facebook</th>
+            <th>Age</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
-<tr class="you"><th>Sheehan Homestead</th><td><a href="https://www.facebook.com/sheehan.homestead/" target="_blank" rel="noopener">Yes — almost 10,000</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">Yes — 100+ at 5.0</a></td><td>Yes, mobile</td><td>Yes</td><td>Yes — ran 8 at once</td></tr>
-<tr><th>Jax Carriage / Bonnie Doone</th><td><a href="https://www.facebook.com/BonnieDooneFarm/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Jacksonville+Carriage+Company+12558+Old+Kings+Rd" target="_blank" rel="noopener">Yes — 4.4 from 21</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>Pinto Carriage Works</th><td><a href="https://www.facebook.com/PintoCarriageWorks" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Pinto+Carriage+Works+Middleburg+FL" target="_blank" rel="noopener">Yes — about 4.8</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>Noah’s Landing</th><td><a href="https://www.facebook.com/noahslandingzooandponies/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Noah%27s+Landing+Petting+Zoo+Daytona+Beach" target="_blank" rel="noopener">Yes — public profile</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>Bella’s Little Farm</th><td><a href="https://www.facebook.com/bellaslittlefarm" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Bella%27s+Little+Farm+Umatilla+FL" target="_blank" rel="noopener">Yes — 4.7 from 135</a></td><td>Yes, mobile</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>The Barnyard Bunch</th><td><a href="https://www.facebook.com/106425227403708" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=The+Barnyard+Bunch+mobile+petting+zoo+Florida" target="_blank" rel="noopener">Unknown</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>Jaybird Hammock Farm</th><td><a href="https://www.facebook.com/profile.php?id=61553313116722" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Jaybird+Hammock+Farm+Fernandina+Beach+FL" target="_blank" rel="noopener">Yes — 5.0 from 186</a></td><td>On-site; mobile unknown</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>Little Peeps</th><td><a href="https://www.facebook.com/LittlePeepsFarmerForaDay/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Little+Peeps+Farmer+for+a+Day+Jacksonville+FL" target="_blank" rel="noopener">Unknown</a></td><td>On-site; mobile unknown</td><td>Unknown</td><td>Unknown</td></tr>
-<tr><th>Diamond D Ranch</th><td><a href="https://www.facebook.com/DiamondDRanchLLC/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Diamond+D+Ranch+Jacksonville+FL" target="_blank" rel="noopener">Yes — 4.7, 550+</a></td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
+<tr class="you"><th>Sheehan Homestead</th><td><a href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">100+</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">5.0</a></td><td>Yes, mobile</td><td>Yes</td><td>Yes</td><td>Yes</td><td>4</td><td><a href="https://www.facebook.com/sheehan.homestead/" target="_blank" rel="noopener">Almost 10,000</a></td><td>2 yrs</td><td class='notes'>Mobile, STEM, and on-farm</td></tr>
+<tr><th>Jax Carriage / Bonnie Doone</th><td><a href="https://www.google.com/maps/search/?api=1&query=Jacksonville+Carriage+Company+12558+Old+Kings+Rd" target="_blank" rel="noopener">21</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Jacksonville+Carriage+Company+12558+Old+Kings+Rd" target="_blank" rel="noopener">4.4</a></td><td class="ns">Not listed on site</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/BonnieDooneFarm/" target="_blank" rel="noopener">Page</a></td><td>41 yrs</td><td class='notes'>Carriage-first. Bonnie Doone, 28 yrs, on-site.</td></tr>
+<tr><th>Pinto Carriage Works</th><td><a href="https://www.google.com/maps/search/?api=1&query=Pinto+Carriage+Works+Middleburg+FL" target="_blank" rel="noopener">About 4.8*</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Pinto+Carriage+Works+Middleburg+FL" target="_blank" rel="noopener">About 4.8</a></td><td class="ns">Not listed on site</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/PintoCarriageWorks" target="_blank" rel="noopener">Page</a></td><td>17 yrs</td><td class='notes'>Horses and carriages. Directory counts conflict.</td></tr>
+<tr><th>Noah’s Landing</th><td><a href="https://www.google.com/maps/search/?api=1&query=Noah%27s+Landing+Petting+Zoo+Daytona+Beach" target="_blank" rel="noopener">Public profile</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Noah%27s+Landing+Petting+Zoo+Daytona+Beach" target="_blank" rel="noopener">Public profile</a></td><td class="ns">Not listed on site</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/noahslandingzooandponies/" target="_blank" rel="noopener">Page</a></td><td class="ns">Not shown</td><td class='notes'>Review count not locked.</td></tr>
+<tr><th>Bella’s Little Farm</th><td><a href="https://www.google.com/maps/search/?api=1&query=Bella%27s+Little+Farm+Umatilla+FL" target="_blank" rel="noopener">135</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Bella%27s+Little+Farm+Umatilla+FL" target="_blank" rel="noopener">4.7</a></td><td>Yes, mobile</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/bellaslittlefarm" target="_blank" rel="noopener">Page</a></td><td>About 4 yrs</td><td class='notes'>Central FL, about 4 yrs, 2 acres. Best of FL 2025 award. Franchise page, no franchisees on record. Serves Jax from 2.5 hrs away.</td></tr>
+<tr><th>The Barnyard Bunch</th><td class="ns"><a href="https://www.google.com/maps/search/?api=1&query=The+Barnyard+Bunch+mobile+petting+zoo+Florida" target="_blank" rel="noopener">Not shown</a></td><td class="ns"><a href="https://www.google.com/maps/search/?api=1&query=The+Barnyard+Bunch+mobile+petting+zoo+Florida" target="_blank" rel="noopener">Not shown</a></td><td class="ns">Not listed on site</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/106425227403708" target="_blank" rel="noopener">Page</a></td><td class="ns">Not shown</td><td class='notes'>—</td></tr>
+<tr><th>Jaybird Hammock Farm</th><td><a href="https://www.google.com/maps/search/?api=1&query=Jaybird+Hammock+Farm+Fernandina+Beach+FL" target="_blank" rel="noopener">186</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Jaybird+Hammock+Farm+Fernandina+Beach+FL" target="_blank" rel="noopener">5.0</a></td><td>On-site</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/profile.php?id=61553313116722" target="_blank" rel="noopener">Page</a></td><td class="ns">Not shown</td><td class='notes'>Final season. Closing Jan 2027, per their site.</td></tr>
+<tr><th>Little Peeps</th><td class="ns"><a href="https://www.google.com/maps/search/?api=1&query=Little+Peeps+Farmer+for+a+Day+Jacksonville+FL" target="_blank" rel="noopener">Not shown</a></td><td class="ns"><a href="https://www.google.com/maps/search/?api=1&query=Little+Peeps+Farmer+for+a+Day+Jacksonville+FL" target="_blank" rel="noopener">Not shown</a></td><td>On-site</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/LittlePeepsFarmerForaDay/" target="_blank" rel="noopener">Page</a></td><td class="ns">Not shown</td><td class='notes'>Come-here farm. Mobile not verified.</td></tr>
+<tr><th>Diamond D Ranch</th><td><a href="https://www.google.com/maps/search/?api=1&query=Diamond+D+Ranch+Jacksonville+FL" target="_blank" rel="noopener">550+</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Diamond+D+Ranch+Jacksonville+FL" target="_blank" rel="noopener">4.7</a></td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td class="ns">Not shown</td><td><a href="https://www.facebook.com/DiamondDRanchLLC/" target="_blank" rel="noopener">Page</a></td><td>Since 1958</td><td class='notes'>Farm visits, not mobile. 500 acres.</td></tr>
         </tbody>
       </table>
       <div class="foot"><span>914-263-1311</span><span>sheehanhomestead.com</span></div>
     </section>
   </div>
   <div class="hud" id="hud"></div>
-  <div class="print-page"><img src="demo-slide-01-opening.png?v=1121t" alt="Slide 1"></div>
-  <div class="print-page"><img src="demo-slide-02-the-market.png?v=1121t" alt="Slide 2"></div>
-  <div class="print-page"><img src="demo-slide-03-taste-test.png?v=1121t" alt="Slide 3"></div>
-  <div class="print-page"><img src="demo-slide-04-the-players.png?v=1121t" alt="Slide 4"></div>
-  <div class="print-page"><img src="demo-slide-05a-search-statewide.png?v=1121t" alt="Slide 5"></div>
-  <div class="print-page"><img src="demo-slide-05b-search-region.png?v=1121t" alt="Slide 6"></div>
-  <div class="print-page"><img src="demo-slide-06-the-reveal.png?v=1121t" alt="Slide 7"></div>
-  <div class="print-page"><img src="demo-slide-07-ann-marie.png?v=1121t" alt="Slide 8"></div>
-  <div class="print-page"><img src="demo-slide-08-the-turn.png?v=1121t" alt="Slide 9"></div>
-  <div class="print-page"><img src="demo-slide-09-michael.png?v=1121t" alt="Slide 10"></div>
-  <div class="print-page"><img src="demo-slide-10-category-owner.png?v=1121t" alt="Slide 11"></div>
-  <div class="print-page"><img src="demo-slide-11-timeline.png?v=1121t" alt="Slide 12"></div>
-  <div class="print-page"><img src="demo-slide-12-competitive-analysis.png?v=1121t" alt="Slide 13"></div>
-  <div class="print-page"><img src="demo-slide-13-constraints.png?v=1121t" alt="Slide 14"></div>
-  <div class="print-page"><img src="demo-slide-14-public-proof.png?v=1121t" alt="Slide 15"></div>
-  <div class="print-page"><img src="demo-slide-15-market-math.png?v=1121t" alt="Slide 16"></div>
-  <div class="print-page"><img src="demo-slide-16-tech-enabled.png?v=1121t" alt="Slide 17"></div>
-  <div class="print-page"><img src="demo-slide-17-tease-dashboards.png?v=1121t" alt="Slide 18"></div>
-  <div class="print-page"><img src="demo-slide-18-tease-spin.png?v=1121t" alt="Slide 19"></div>
-  <div class="print-page"><img src="demo-slide-19-tease-gold.png?v=1121t" alt="Slide 20"></div>
-  <div class="print-page"><img src="demo-slide-20-the-asks.png?v=1121t" alt="Slide 21"></div>
+  <div class="print-page"><img src="demo-slide-01-opening.png?v=1121w" alt="Slide 1"></div>
+  <div class="print-page"><img src="demo-slide-02-the-market.png?v=1121w" alt="Slide 2"></div>
+  <div class="print-page"><img src="demo-slide-03-taste-test.png?v=1121w" alt="Slide 3"></div>
+  <div class="print-page"><img src="demo-slide-04-the-players.png?v=1121w" alt="Slide 4"></div>
+  <div class="print-page"><img src="demo-slide-05a-search-statewide.png?v=1121w" alt="Slide 5"></div>
+  <div class="print-page"><img src="demo-slide-05b-search-region.png?v=1121w" alt="Slide 6"></div>
+  <div class="print-page"><img src="demo-slide-06-the-reveal.png?v=1121w" alt="Slide 7"></div>
+  <div class="print-page"><img src="demo-slide-07-ann-marie.png?v=1121w" alt="Slide 8"></div>
+  <div class="print-page"><img src="demo-slide-08-the-turn.png?v=1121w" alt="Slide 9"></div>
+  <div class="print-page"><img src="demo-slide-09-complementary.png?v=1121w" alt="Slide 10"></div>
+  <div class="print-page"><img src="demo-slide-10-timeline.png?v=1121w" alt="Slide 11"></div>
+  <div class="print-page"><img src="demo-slide-11-scoreboard.png?v=1121w" alt="Slide 12"></div>
+  <div class="print-page"><img src="demo-slide-12-ecosystem.png?v=1121w" alt="Slide 13"></div>
+  <div class="print-page"><img src="demo-slide-13-constraints.png?v=1121w" alt="Slide 14"></div>
+  <div class="print-page"><img src="demo-slide-14-public-proof.png?v=1121w" alt="Slide 15"></div>
+  <div class="print-page"><img src="demo-slide-15-momentum.png?v=1121w" alt="Slide 16"></div>
+  <div class="print-page"><img src="demo-slide-16-tech-anchor.png?v=1121w" alt="Slide 17"></div>
+  <div class="print-page"><img src="demo-slide-17-tech-gtm.png?v=1121w" alt="Slide 18"></div>
+  <div class="print-page"><img src="demo-slide-18-tech-ops.png?v=1121w" alt="Slide 19"></div>
+  <div class="print-page"><img src="demo-slide-19-tech-customer.png?v=1121w" alt="Slide 20"></div>
+  <div class="print-page"><img src="demo-slide-20-the-asks.png?v=1121w" alt="Slide 21"></div>
 <script>
   const slides = [
-    {src: "demo-slide-01-opening.png?v=1121t", html: false},
-    {src: "demo-slide-02-the-market.png?v=1121t", html: false},
-    {src: "demo-slide-03-taste-test.png?v=1121t", html: false},
-    {src: "demo-slide-04-the-players.png?v=1121t", html: false},
-    {src: "demo-slide-05a-search-statewide.png?v=1121t", html: false},
-    {src: "demo-slide-05b-search-region.png?v=1121t", html: false},
-    {src: "demo-slide-06-the-reveal.png?v=1121t", html: false},
-    {src: "demo-slide-07-ann-marie.png?v=1121t", html: false},
-    {src: "demo-slide-08-the-turn.png?v=1121t", html: false},
-    {src: "demo-slide-09-michael.png?v=1121t", html: false},
-    {src: "demo-slide-10-category-owner.png?v=1121t", html: false},
-    {src: "demo-slide-11-timeline.png?v=1121t", html: false},
-    {src: "demo-slide-12-competitive-analysis.png?v=1121t", html: true},
-    {src: "demo-slide-13-constraints.png?v=1121t", html: false},
-    {src: "demo-slide-14-public-proof.png?v=1121t", html: false},
-    {src: "demo-slide-15-market-math.png?v=1121t", html: false},
-    {src: "demo-slide-16-tech-enabled.png?v=1121t", html: false},
-    {src: "demo-slide-17-tease-dashboards.png?v=1121t", html: false},
-    {src: "demo-slide-18-tease-spin.png?v=1121t", html: false},
-    {src: "demo-slide-19-tease-gold.png?v=1121t", html: false},
-    {src: "demo-slide-20-the-asks.png?v=1121t", html: false}
+    {src: "demo-slide-01-opening.png?v=1121w", html: false},
+    {src: "demo-slide-02-the-market.png?v=1121w", html: false},
+    {src: "demo-slide-03-taste-test.png?v=1121w", html: false},
+    {src: "demo-slide-04-the-players.png?v=1121w", html: false},
+    {src: "demo-slide-05a-search-statewide.png?v=1121w", html: false},
+    {src: "demo-slide-05b-search-region.png?v=1121w", html: false},
+    {src: "demo-slide-06-the-reveal.png?v=1121w", html: false},
+    {src: "demo-slide-07-ann-marie.png?v=1121w", html: false},
+    {src: "demo-slide-08-the-turn.png?v=1121w", html: false},
+    {src: "demo-slide-09-complementary.png?v=1121w", html: false},
+    {src: "demo-slide-10-timeline.png?v=1121w", html: false},
+    {src: "demo-slide-11-scoreboard.png?v=1121w", html: true},
+    {src: "demo-slide-12-ecosystem.png?v=1121w", html: false},
+    {src: "demo-slide-13-constraints.png?v=1121w", html: false},
+    {src: "demo-slide-14-public-proof.png?v=1121w", html: false},
+    {src: "demo-slide-15-momentum.png?v=1121w", html: false},
+    {src: "demo-slide-16-tech-anchor.png?v=1121w", html: false},
+    {src: "demo-slide-17-tech-gtm.png?v=1121w", html: false},
+    {src: "demo-slide-18-tech-ops.png?v=1121w", html: false},
+    {src: "demo-slide-19-tech-customer.png?v=1121w", html: false},
+    {src: "demo-slide-20-the-asks.png?v=1121w", html: false}
   ];
   let i = 0;
   const img = document.getElementById("slide");
@@ -241,6 +248,10 @@
       e.preventDefault(); show(0);
     } else if (e.key === "End") {
       e.preventDefault(); show(slides.length - 1);
+    } else if (e.key === "a" || e.key === "A") {
+      e.preventDefault(); show(slides.length - 1);
+    } else if (e.key === "t" || e.key === "T") {
+      e.preventDefault(); show(16);
     }
   });
   show(0);
