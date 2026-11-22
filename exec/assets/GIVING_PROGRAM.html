@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Give Twice · Our Giving Program · Critters on Call</title>
+<style>
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Italic-Variable.ttf") format("truetype");font-weight:400 900;font-style:italic}
+@font-face{font-family:"Source Sans 3";src:url("local-goat/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900}
+@font-face{font-family:"Cinzel";src:url("local-goat/Cinzel-Variable.ttf") format("truetype");font-weight:400 900}
+:root{--sage:#4F6559;--accent:#2F4F3E;--cream:#F3EEE4;--gold:#D4B45A;--gold-deep:#B8923A;--ink:#1a241c;--muted:rgba(255,255,255,.86)}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:Letter;margin:0}
+html,body{width:8.5in;height:11in;background:var(--sage);color:#fff;font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;display:flex;flex-direction:column;overflow:hidden;background:var(--sage)}
+.band{background:var(--accent);color:var(--gold);text-align:center;font-weight:750;letter-spacing:.16em;text-transform:uppercase;font-size:8pt;padding:.06in;border-bottom:2px solid var(--gold)}
+.main{flex:1;padding:.12in .38in .08in;display:flex;flex-direction:column;gap:.08in;min-height:0}
+.head{display:flex;gap:.16in;align-items:flex-start}
+.head .txt{flex:1}
+.kicker{font-size:7.5pt;letter-spacing:.16em;font-weight:700;text-transform:uppercase;color:var(--gold);margin-bottom:.03in}
+h1{font-family:"Playfair Display",serif;font-weight:600;font-size:23pt;line-height:1.04;letter-spacing:-.01em}
+h1 em{color:var(--gold);font-style:italic}
+.sub{margin-top:.05in;font-size:10pt;line-height:1.28;color:var(--muted);max-width:44rem}
+.mark{flex:0 0 .95in;text-align:center}
+.mark img{width:.84in;height:.84in;border-radius:50%;border:2.5px solid var(--gold);object-fit:cover;background:#fff;display:block;margin:0 auto}
+.mark .co{font-family:"Cinzel",serif;font-size:6pt;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:.03in;line-height:1.15}
+
+.todate{background:var(--cream);color:var(--accent);border-radius:8px;padding:.07in .14in;display:flex;align-items:center;gap:.16in}
+.todate .n{font-family:"Source Sans 3",sans-serif;font-size:17pt;font-weight:800;color:var(--gold-deep);line-height:1;white-space:nowrap;letter-spacing:-.01em}
+.todate p{font-size:9pt;line-height:1.28;margin:0}
+
+.frame{display:grid;grid-template-columns:1.15fr .85fr .85fr .85fr;gap:.07in}
+.frame div{background:rgba(47,79,62,.55);border:1px solid rgba(212,180,90,.5);border-radius:7px;padding:.07in .09in;text-align:center}
+.frame b{display:block;font-family:"Playfair Display",serif;color:var(--gold);font-size:13.5pt;line-height:1.05;font-weight:600}
+.frame span{display:block;font-size:7.6pt;line-height:1.2;color:var(--muted);margin-top:.015in}
+
+h2{font-size:7.6pt;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.05in}
+.buckets{display:grid;grid-template-columns:1fr 1fr;gap:.10in}
+.bucket{background:rgba(47,79,62,.5);border:1px solid rgba(212,180,90,.5);border-radius:8px;padding:.09in .12in .1in;display:flex;flex-direction:column}
+.bucket .tag{font-family:"Cinzel",serif;font-size:7pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.bucket h3{font-family:"Playfair Display",serif;font-size:14.5pt;font-weight:600;line-height:1.1;margin:.02in 0 .02in}
+.bucket .amt{font-size:9.2pt;color:var(--gold-light,#E8D48C);font-weight:700;margin-bottom:.05in}
+.bucket ul{list-style:none;margin:0}
+.bucket li{font-size:8.7pt;line-height:1.28;padding:.03in 0 .03in .16in;position:relative;color:#fff}
+.bucket li:before{content:"";position:absolute;left:0;top:.12in;width:.06in;height:.06in;border-radius:50%;background:var(--gold)}
+.bucket li b{color:var(--gold)}
+
+.sponsors h2{margin-top:.02in}
+.spgrid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-auto-flow:column;gap:.06in .16in}
+.sp{font-size:8.7pt;line-height:1.28;padding:.05in 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.sp b{color:var(--gold)}
+.spnote{font-size:7.5pt;color:var(--muted);margin-top:.03in;line-height:1.25}
+
+.foot{background:var(--accent);border-top:2px solid var(--gold);padding:.09in .38in;display:flex;align-items:center;gap:.18in}
+.foot .l{flex:1}
+.foot .k{font-size:7.2pt;letter-spacing:.14em;color:var(--gold);font-weight:750;text-transform:uppercase}
+.foot .big{font-family:"Playfair Display",serif;font-size:16.5pt;font-weight:600;margin:.015in 0}
+.foot .sm{font-size:8.4pt;color:var(--muted)}
+.qr{background:#fff;border-radius:7px;padding:.04in;text-align:center;color:var(--ink)}
+.qr img{width:.78in;height:.78in;display:block}
+.qr span{font-size:6.2pt;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band">Critters on Call · Sheehan Homestead · Callahan, FL · Giving program 2027</div>
+  <div class="main">
+    <div class="head">
+      <div class="txt">
+        <div class="kicker">Our giving program</div>
+        <h1>Give Twice.<br><em>Two eighths of the year, given away.</em></h1>
+        <div class="sub">Most companies spend seven to twelve percent of what they earn on advertising. We set aside that share — and another eighth besides — and give it away, to the families, schools, churches and causes that make our community worth living in.</div>
+      </div>
+      <div class="mark">
+        <img src="local-goat/sophie-logo.png" alt="Sophie the Great Pyrenees and the Critters on Call animal family">
+        <div class="co">Critters on Call<br>Sheehan Homestead</div>
+      </div>
+    </div>
+
+    <div class="todate">
+      <div class="n">More than 1,000 gifts given</div>
+      <p>To date: about 100 gold and bronze Hall of Fame goat statues, a few hundred upcycled poker chips, plus Gold memberships, farm gifts, comics, Stead Spin prizes and more. We honor local businesses that serve the same families we do.</p>
+    </div>
+
+    <div class="frame">
+      <div><b>$2M</b><span>2027 revenue target</span></div>
+      <div><b>$250k each</b><span>Two buckets, 12.5% apiece</span></div>
+      <div><b>$500k</b><span>Total giving at the target</span></div>
+      <div><b>~$20.8k</b><span>Per month, per bucket</span></div>
+    </div>
+
+    <div class="buckets">
+      <div class="bucket">
+        <div class="tag">Bucket 1 · marketing</div>
+        <h3>Promotional giving</h3>
+        <div class="amt">$250,000 at the $2M target · about $20.8k a month</div>
+        <ul>
+          <li><b>Facebook Marketplace gifting</b> — gifts that start conversations</li>
+          <li><b>The event prize wheel</b> — Stead Spin, free to play</li>
+          <li><b>Social media campaigns</b> — sign-ups and the like</li>
+          <li><b>Copycat drives</b> on Indeed and similar — volunteers and testers, to build the marketing list, deals and clicks</li>
+          <li><b>Shenanigans tickets</b> and video-game high-score prizes</li>
+        </ul>
+      </div>
+      <div class="bucket">
+        <div class="tag">Bucket 2 · causes</div>
+        <h3>Philanthropic giving</h3>
+        <div class="amt">$250,000 at the $2M target · about $20.8k a month</div>
+        <ul>
+          <li><b>Donated memberships</b> and their parts: the animal experience, the app, the $25 farm or plant gift, and the STEM kit</li>
+          <li><b>Stead Shout</b> — a freemium, light ad package, given free</li>
+          <li><b>The Violet Ticket</b> — we donate 60%, and help find a sponsor to match</li>
+          <li><b>Co-sponsored giving</b> — a sponsor funds memberships or kits for a whole class or school, and co-sponsors giving events</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h2>Co-sponsor prospects · class and school memberships and kits</h2>
+      <div class="spgrid">
+        <div class="sp"><b>Tom Bush Family of Dealerships</b> — John Bush. Family foundation for children and families; 60+ nonprofit events a year.</div>
+        <div class="sp"><b>Paul Clark Ford, Yulee</b> — Paul and Beth Clark. Family-owned since 1993; backs local schools and youth programs.</div>
+        <div class="sp"><b>Duval Ford</b> — Hampton and Alex Graham. Fourth generation; a children's charitable fund. They kept the Ford store after 2024.</div>
+        <div class="sp"><b>The Loop Pizza Grill</b> — Mike and Terry Schneider. Nassau-born; a school-and-teacher give-back program.</div>
+        <div class="sp"><b>Community First Credit Union</b> — Sam Inman; Katie Komarek. Already writes School of the Month checks, including in Nassau.</div>
+        <div class="sp"><b>Beaver Cares</b> — Mike and Linda Beaver. Youth sports, festivals, scholarships and monthly pet adoptions.</div>
+        <div class="sp"><b>Garber Automotive Group</b> — Richard J. Garber Jr. Family-owned since 1907; they publish $1.5M+ a year in giving, including little league.</div>
+        <div class="sp"><b>Hanania Automotive Group</b> — Jack Hanania. Holiday giveback for children's hunger, plus Nemours and Blessings in a Backpack.</div>
+        <div class="sp"><b>Al's Pizza</b> — Al Mansur. “Al Gives Back” already supports local schools and Habitat.</div>
+        <div class="sp"><b>Brightway Insurance</b> — David Miller. Jacksonville-born; Together Strong Community Fund has passed $1M in grants.</div>
+      </div>
+      <p class="spnote">Giving sponsors only — not capital, not SBA, not investors. Prospects for co-sponsoring memberships or STEM kits for a class or school. Nothing has been sent.</p>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="l">
+      <div class="k">Say Violet when you call · Metro Jax</div>
+      <div class="big">Call or text 914-263-1311</div>
+      <div class="sm">sheehanhomestead.com · Text GOAT for discounts · Callahan, FL, serving Metro Jacksonville</div>
+    </div>
+    <div class="qr">
+      <img src="local-goat/qr-services.png" alt="QR code to sheehanhomestead.com/services">
+      <span>Scan for services</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

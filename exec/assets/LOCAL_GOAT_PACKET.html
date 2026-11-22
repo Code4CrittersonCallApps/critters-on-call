@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Local GOAT packet · Critters on Call</title>
+<style>
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Italic-Variable.ttf") format("truetype");font-weight:400 900;font-style:italic}
+@font-face{font-family:"Source Sans 3";src:url("local-goat/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900}
+@font-face{font-family:"Cinzel";src:url("local-goat/Cinzel-Variable.ttf") format("truetype");font-weight:400 900}
+:root{
+  --forest:#3A4F45; --forest-mid:#4C6458; --gold:#c9a227; --gold-light:#E8D48C;
+  --cream:#F3EEE4; --white:#FFFdf8; --ink:#1a241c; --muted:#5A6B62;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:Letter;margin:0}
+html,body{width:8.5in;background:#e8e2d4;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;background:var(--cream);overflow:hidden;position:relative;page-break-after:always}
+.page:last-child{page-break-after:auto}
+.sheet-label{
+  position:absolute;top:0.12in;left:0.28in;right:0.28in;
+  font-size:7.5pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);
+  display:flex;justify-content:space-between;
+}
+.sheet-label span{color:var(--muted);font-weight:600;letter-spacing:0;text-transform:none}
+
+/* ---- Page 1: 8 Who-we-are cards, 2x4. Print duplex, flip on LONG edge. Back is CTA. ---- */
+.grid8{
+  position:absolute;top:0.38in;left:0.5in;
+  width:7.5in;height:10.24in;
+  display:grid;grid-template-columns:3.5in 3.5in;grid-template-rows:repeat(4,2in);
+  gap:0.08in 0.5in;
+}
+.card{
+  width:3.5in;height:2in;
+  background:var(--white);
+  border:1.5px solid var(--forest);
+  outline:1px solid var(--gold);
+  outline-offset:-4px;
+  padding:0.08in 0.10in 0.07in;
+  position:relative;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.card.cta{
+  background:var(--forest);
+  color:var(--cream);
+  outline-color:var(--gold);
+}
+.who-top{display:flex;gap:0.08in;align-items:center;margin-bottom:0.04in}
+.who-top img{width:0.42in;height:0.42in;border-radius:50%;border:1.5px solid var(--gold);object-fit:cover;flex-shrink:0;background:#fff}
+.who-name{font-family:"Cinzel",serif;font-weight:800;font-size:8.2pt;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);line-height:1.15}
+.who-sub{font-size:7pt;font-weight:650;color:var(--muted);line-height:1.15}
+.who-body{font-size:7.6pt;line-height:1.22;color:var(--ink);flex:1}
+.who-body b{color:var(--forest)}
+.who-foot{font-size:7pt;font-weight:700;color:var(--forest);letter-spacing:.01em;border-top:1px solid rgba(58,79,69,.25);padding-top:0.03in;margin-top:0.03in}
+
+.cta .k{font-family:"Cinzel",serif;font-size:7pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.03in}
+.cta ol{margin:0 0 0.04in 0.16in;font-size:7.3pt;line-height:1.22}
+.cta li{margin:0 0 0.015in}
+.cta .qrs{display:flex;gap:0.10in;align-items:flex-end;margin-top:auto}
+.cta .qrbox{text-align:center}
+.cta .qrbox img{width:0.52in;height:0.52in;background:#fff;padding:2px;display:block}
+.cta .qrbox span{display:block;font-size:5.5pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-light);margin-top:1px}
+.cta .phone{font-size:7.5pt;font-weight:800;color:var(--gold-light);line-height:1.2;margin-left:auto}
+
+/* crop marks */
+.crop{position:absolute;width:0.08in;height:0.08in;pointer-events:none}
+/* skip — cards have clear borders for cutting */
+
+/* ---- Page 2: stat cards, comics slip, C slip, note scripts ---- */
+.p2{padding:0.38in 0.32in 0.28in;display:flex;flex-direction:column;gap:0.12in;height:11in}
+.sec-h{font-family:"Cinzel",serif;font-size:8pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--forest);border-bottom:2px solid var(--gold);padding-bottom:0.03in;margin-bottom:0.06in}
+.sec-h small{float:right;font-family:"Source Sans 3",sans-serif;font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);font-size:7.5pt}
+.statgrid{display:grid;grid-template-columns:3.5in 3.5in;gap:0.10in 0.36in;justify-content:center}
+.statcard{
+  width:3.5in;height:2in;
+  background:var(--white);
+  border:1.5px solid var(--forest);
+  outline:1px solid var(--gold);
+  outline-offset:-4px;
+  padding:0.09in 0.12in;
+  display:flex;flex-direction:column;
+}
+.statcard .k{font-family:"Cinzel",serif;font-size:8pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:0.02in}
+.statcard h3{font-family:"Playfair Display",serif;font-size:16pt;font-weight:800;color:var(--forest);line-height:1;margin-bottom:0.06in}
+.statcard .line{font-size:8pt;font-weight:700;color:var(--forest);margin-bottom:0.03in}
+.statcard .blank{border-bottom:1px solid var(--forest);height:0.22in;margin:0.02in 0}
+.statcard .opt{font-size:6.6pt;line-height:1.25;color:var(--muted);font-style:italic;margin-top:auto}
+
+.slips{display:grid;grid-template-columns:1fr 1fr;gap:0.12in}
+.slip{
+  background:var(--white);
+  border:1.5px solid var(--forest);
+  outline:1px solid var(--gold);
+  outline-offset:-4px;
+  padding:0.10in 0.12in;
+  min-height:2.15in;
+}
+.slip.c{background:var(--forest);color:var(--cream);outline-color:var(--gold)}
+.slip .k{font-family:"Cinzel",serif;font-size:7.5pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.04in}
+.slip.c .k{color:var(--gold-light)}
+.slip h3{font-family:"Playfair Display",serif;font-size:13pt;font-weight:800;color:var(--forest);line-height:1.1;margin-bottom:0.05in}
+.slip.c h3{color:var(--gold-light)}
+.slip p{font-size:8.6pt;line-height:1.3}
+.slip .blank{border-bottom:1px solid var(--gold-light);height:0.24in;margin:0.06in 0 0.08in}
+.slip .fine{font-size:7.5pt;margin-top:0.06in;opacity:.9}
+
+.notes{
+  background:var(--white);
+  border:1.5px dashed var(--forest);
+  padding:0.10in 0.14in 0.12in;
+  margin-top:auto;
+}
+.notes .warn{font-size:7.5pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a3b2f;margin-bottom:0.04in}
+.notes ol{margin:0 0 0 0.2in}
+.notes li{font-size:9.5pt;line-height:1.35;margin:0 0 0.05in}
+.notes .sig{font-size:9pt;margin-top:0.04in}
+.notes .sig b{color:var(--forest)}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 FRONT: Who we are cards. For a single PDF preview we show FRONT then BACK as page 2, then inserts as page 3.
+     Print instruction: pages 1–2 are the duplex card sheet (flip on the long edge). Page 3 is the insert sheet. -->
+<div class="page">
+  <div class="sheet-label">Who we are · front · cut on the borders <span>Print pages 1–2 double-sided, flip on the long edge. Default packet: goat + note + your card + this card.</span></div>
+  <div class="grid8">
+    <!-- 8 identical cards -->
+        <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+    <div class="card"><div class="who-top">
+  <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+  <div>
+    <div class="who-name">Critters on Call</div>
+    <div class="who-sub">Sheehan Homestead · Callahan, FL</div>
+  </div>
+</div>
+<div class="who-body">The #1-ranked Jacksonville mobile petting zoo and goat yoga people in blind AI search tests. Almost 10,000 Facebook followers · about 1M views · 100+ Google reviews. A small-acre homestead serving the same families you do.</div>
+<div class="who-foot">914-263-1311 · sheehanhomestead.com</div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="sheet-label">CTA · back · should land behind each Who-we-are card <span>Align to the same 2×4 grid. Flip on the long edge.</span></div>
+  <div class="grid8">
+        <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+    <div class="card cta"><div class="k">Three ways to use this gift</div>
+<ol>
+  <li>Keep it, or re-gift it to a kid. Please don't throw it away.</li>
+  <li>Free: come by for a reel with an animal, or I'll bring an animal to you.</li>
+  <li>Book a reel ad, a party, Gold membership, or a $25 STEM kit.</li>
+</ol>
+<div class="qrs">
+  <div class="qrbox"><img src="local-goat/qr-website.png" alt="QR to sheehanhomestead.com"><span>Website</span></div>
+  <div class="qrbox"><img src="local-goat/qr-services.png" alt="QR to book"><span>Book</span></div>
+  <div class="phone">Text or call<br>914-263-1311</div>
+</div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="p2">
+    <div>
+      <div class="sec-h">Local GOAT stat cards <small>Fill in the line. Tuck with the handwritten note. All tiers.</small></div>
+      <div class="statgrid">
+                <div class="statcard"><div class="k">Presented to</div>
+<h3>Local GOAT</h3>
+<div class="blank"></div>
+<div class="line">You're a Local GOAT because:</div>
+<div class="blank"></div>
+<div class="opt">From the #1-ranked Jacksonville mobile petting zoo and goat yoga people, in blind AI search tests. We're honoring local businesses that serve the same families we do.</div></div>
+        <div class="statcard"><div class="k">Presented to</div>
+<h3>Local GOAT</h3>
+<div class="blank"></div>
+<div class="line">You're a Local GOAT because:</div>
+<div class="blank"></div>
+<div class="opt">From the #1-ranked Jacksonville mobile petting zoo and goat yoga people, in blind AI search tests. We're honoring local businesses that serve the same families we do.</div></div>
+        <div class="statcard"><div class="k">Presented to</div>
+<h3>Local GOAT</h3>
+<div class="blank"></div>
+<div class="line">You're a Local GOAT because:</div>
+<div class="blank"></div>
+<div class="opt">From the #1-ranked Jacksonville mobile petting zoo and goat yoga people, in blind AI search tests. We're honoring local businesses that serve the same families we do.</div></div>
+        <div class="statcard"><div class="k">Presented to</div>
+<h3>Local GOAT</h3>
+<div class="blank"></div>
+<div class="line">You're a Local GOAT because:</div>
+<div class="blank"></div>
+<div class="opt">From the #1-ranked Jacksonville mobile petting zoo and goat yoga people, in blind AI search tests. We're honoring local businesses that serve the same families we do.</div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-h">Envelope slips <small>B = comics slip in the manila envelope. C = named STEM delivery slip. Do not use on A stops.</small></div>
+      <div class="slips">
+        <div class="slip b">
+          <div class="k">Tier B · tuck in the manila envelope</div>
+          <h3>This is a gift for you to re-gift.</h3>
+          <p>Three Superman comics — a gift we value at about $25 — for a nephew, a cousin, a classroom, or any kid who would love them. Please pass them on. Don't throw them away.</p>
+          <p class="fine">Critters on Call · Sheehan Homestead · Callahan, FL · 914-263-1311</p>
+        </div>
+        <div class="slip c">
+          <div class="k">Tier C · personal delivery</div>
+          <h3>A personal gift. Please make sure this person gets it.</h3>
+          <div class="blank"></div>
+          <p>This STEM kit is a $25 gift from our farm, made for the person named above — with thanks for the way they show up for Jacksonville families.</p>
+          <p class="fine">Critters on Call · Sheehan Homestead · 914-263-1311</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <div class="warn">For you only — do not put this strip in the packet. Copy one line by hand on your stationery. Tape your card in.</div>
+      <ol>
+        <li>Thanks for being a local GOAT! We're honoring Jax businesses that serve families like we do.</li>
+        <li>Thanks for being a local GOAT! We're honoring Jacksonville businesses that serve families like we do — and you made the list.</li>
+        <li>Thanks for being a local GOAT! From our small-acre homestead in Callahan, we're honoring Jax businesses that serve families like we do.</li>
+      </ol>
+      <div class="sig">Sign every note: <b>Cheers, Michael</b></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

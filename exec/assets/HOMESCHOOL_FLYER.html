@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homeschool Field Trips · Visit Us · Critters on Call</title>
+<style>
+@font-face {
+  font-family: "Playfair Display";
+  src: url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("local-goat/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("local-goat/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --forest: #4C6458;
+  --forest-deep: #3A4F45;
+  --sage: #5A7366;
+  --gold: #c9a227;
+  --gold-deep: #B8923A;
+  --gold-light: #E8D48C;
+  --cream: #F3EEE4;
+  --white: #FFFdf8;
+  --ink: #1a241c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in; height: 11in;
+  background: var(--cream); color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: Letter; margin: 0; }
+
+.page {
+  width: 8.5in; height: 11in;
+  background: var(--cream);
+  display: flex; flex-direction: column;
+  overflow: hidden; position: relative;
+  border: 0.105in solid var(--forest-deep);
+  outline: 0.055in solid var(--gold);
+  outline-offset: -0.175in;
+}
+
+.why {
+  flex: 0 0 auto;
+  background: linear-gradient(180deg, #E8D48C 0%, #c9a227 50%, #B8923A 100%);
+  color: var(--forest-deep);
+  text-align: center;
+  padding: 0.10in 0.18in 0.09in;
+  border-bottom: 0.055in solid var(--forest-deep);
+}
+.why .kicker {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  font-size: 11pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  margin-bottom: 0.02in;
+}
+.why .headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 52pt;
+  line-height: 0.88;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  text-shadow:
+    0 0.012in 0 rgba(255,253,248,0.55),
+    0 0.03in 0 rgba(58,79,69,0.18);
+}
+
+.event {
+  flex: 0 0 auto;
+  background: var(--forest-deep);
+  color: var(--cream);
+  text-align: center;
+  padding: 0.08in 0.16in;
+  font-family: "Cinzel", serif;
+  font-size: 13pt; font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  border-bottom: 0.045in solid var(--gold);
+}
+.event .gold { color: var(--gold-light); }
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0.16in 0.28in 0.10in;
+  min-height: 0;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(201,162,39,0.16) 0%, transparent 62%),
+    var(--cream);
+}
+
+.art {
+  width: 100%;
+  height: 2.85in;
+  overflow: hidden;
+  border: 0.035in solid var(--forest-deep);
+  box-shadow: 0 0 0 0.03in var(--gold), 0 0.04in 0.10in rgba(26,36,28,0.25);
+  background: #fff;
+  flex: 0 0 auto;
+}
+.art img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr 1.15fr;
+  gap: 0.10in;
+  margin: 0.14in 0 0.12in;
+  flex: 0 0 auto;
+}
+.fact {
+  background: var(--white);
+  border: 1px solid rgba(58,79,69,0.22);
+  border-top: 0.045in solid var(--gold);
+  border-radius: 0.06in;
+  padding: 0.09in 0.10in 0.10in;
+  text-align: center;
+}
+.fact b {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 16.5pt;
+  color: var(--forest-deep);
+  line-height: 1.05;
+  margin-bottom: 0.03in;
+}
+.fact span {
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.bookrow {
+  display: grid;
+  grid-template-columns: 2.05in 1fr;
+  gap: 0.16in;
+  align-items: center;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.qr-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scan-shout {
+  font-family: "Cinzel", serif;
+  font-size: 11pt; font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: var(--forest-deep);
+  padding: 0.05in 0.12in;
+  border: 0.025in solid var(--gold);
+  margin-bottom: 0.07in;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+}
+.qr-frame {
+  width: 1.85in; height: 1.85in;
+  background: #fff;
+  border: 0.06in solid var(--forest-deep);
+  box-shadow:
+    0 0 0 0.035in var(--gold),
+    0 0 0 0.07in var(--forest-deep);
+  padding: 0.08in;
+}
+.qr-frame img { width: 100%; height: 100%; display: block; }
+.qr-cap {
+  margin-top: 0.05in;
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: var(--forest-deep);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.copy h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 20pt;
+  color: var(--forest-deep);
+  line-height: 1.1;
+  margin-bottom: 0.06in;
+}
+.copy p {
+  font-size: 11.5pt;
+  line-height: 1.28;
+  margin: 0 0 0.07in;
+}
+.copy p strong { color: var(--forest-deep); font-weight: 800; }
+.proof {
+  display: flex;
+  gap: 0.08in;
+  flex-wrap: wrap;
+  margin-top: 0.02in;
+}
+.chip {
+  background: var(--forest-deep);
+  color: var(--cream);
+  font-family: "Cinzel", serif;
+  font-size: 8.5pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.04in 0.09in;
+  border: 1px solid var(--gold);
+}
+
+.foot {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.12in;
+  padding: 0.08in 0.22in 0.09in;
+  background: var(--forest-deep);
+  color: var(--cream);
+  border-top: 0.035in solid var(--gold);
+}
+.foot img.sophie {
+  width: 0.72in; height: 0.72in;
+  border-radius: 50%;
+  border: 0.02in solid var(--gold);
+  object-fit: cover;
+  background: #fff;
+  flex-shrink: 0;
+}
+.foot .brand {
+  flex: 1;
+  min-width: 0;
+}
+.foot .brand .name {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  font-size: 11pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  line-height: 1.15;
+}
+.foot .brand .sub {
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.25;
+  margin-top: 0.015in;
+}
+.foot .phone {
+  text-align: right;
+  font-weight: 800;
+  font-size: 12.5pt;
+  color: var(--gold-light);
+  line-height: 1.15;
+  font-family: "Source Sans 3", sans-serif;
+  flex-shrink: 0;
+}
+.foot .phone small {
+  display: block;
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="why">
+    <div class="kicker">Homeschool field trips</div>
+    <div class="headline">Visit Us</div>
+  </div>
+  <div class="event">
+    Homeschool Farm &amp; STEM <span class="gold">·</span> $40 a ticket <span class="gold">·</span> About 90 minutes
+  </div>
+  <div class="main">
+    <div class="art">
+      <img src="local-goat/homeschool-farm-cartoon.jpg" alt="Homeschool family visiting goats, bunnies, and chickens on the Callahan farm">
+    </div>
+    <div class="facts">
+      <div class="fact"><b>At least 8 animals</b><span>Goats, bunnies, chickens and friends on our small-acre homestead</span></div>
+      <div class="fact"><b>Hands-on STEM</b><span>A farm science lesson with Ann-Marie, M.Ed. in STEM Education Leadership</span></div>
+      <div class="fact"><b>100+ Google reviews</b><span>Almost 10,000 Facebook followers · Callahan, FL</span></div>
+    </div>
+    <div class="bookrow">
+      <div class="qr-wrap">
+        <div class="scan-shout">Scan to book</div>
+        <div class="qr-frame">
+          <img src="local-goat/qr-services.png" alt="QR code to book at sheehanhomestead.com/services">
+        </div>
+        <div class="qr-cap">sheehanhomestead.com/services</div>
+      </div>
+      <div class="copy">
+        <h2>Bring your homeschool morning to the farm.</h2>
+        <p>Come to Critters on Call at Sheehan Homestead in Callahan. Meet <strong>at least 8 animals</strong>, stay for a hands-on STEM lesson, and head home with a morning your kids will talk about.</p>
+        <p><strong>Your price: $40 a ticket.</strong> About 90 minutes. Parents stay with kids. Step Up for Students reimbursement is available for eligible families.</p>
+        <div class="proof">
+          <span class="chip">100+ Google reviews</span>
+          <span class="chip">Almost 10,000 on Facebook</span>
+          <span class="chip">Callahan, FL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <img class="sophie" src="local-goat/sophie-logo.png" alt="Sophie the Great Pyrenees and the Critters on Call animal family">
+    <div class="brand">
+      <div class="name">Critters on Call · Sheehan Homestead</div>
+      <div class="sub">44065 Cushman Road, Callahan, FL 32011 · sheehanhomestead.com</div>
+    </div>
+    <div class="phone">914-263-1311<small>Call or text</small></div>
+  </div>
+</div>
+</body>
+</html>
