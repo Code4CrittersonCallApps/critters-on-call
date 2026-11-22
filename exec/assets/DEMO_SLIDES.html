@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A blind search of this market</title>
+<title>A look at this market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --green:#3A4F45; --gold:#c9a227; --gold-lt:#E8D48C;
+    --cream:#F3EEE4; --ink:#1f2a24; --muted:#5A6B62; --line:#e2dacb;
+  }
   @page { size: 13.333in 7.5in; margin: 0; }
   html, body {
     margin: 0; padding: 0; height: 100%;
@@ -17,13 +24,88 @@
     display: flex; align-items: center; justify-content: center;
     background: #1f2a24;
     cursor: pointer;
+    position: relative;
   }
-  #stage img {
+  #stage img.slide-img {
     width: 100vw; height: 100vh;
     object-fit: contain;
-    background: #F3EEE4;
+    background: var(--cream);
     display: block;
   }
+  #comp {
+    display: none;
+    width: 100vw; height: 100vh;
+    box-sizing: border-box;
+    background: var(--cream);
+    color: var(--ink);
+    padding: 3.2vh 4vw 8vh;
+    overflow: hidden;
+    cursor: default;
+  }
+  #comp.show { display: flex; flex-direction: column; }
+  #comp .kicker {
+    font-size: clamp(12px, 1.4vw, 18px);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 0.4vh;
+  }
+  #comp h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(22px, 2.6vw, 40px);
+    margin: 0 0 1.6vh;
+    color: var(--ink);
+  }
+  #comp table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 2px solid var(--green);
+    font-size: clamp(12px, 1.25vw, 20px);
+    flex: 1;
+  }
+  #comp th, #comp td {
+    text-align: left;
+    padding: 0.7vh 0.8vw;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  #comp thead th {
+    background: var(--green);
+    color: var(--cream);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  #comp tbody th {
+    font-weight: 700;
+    color: var(--green);
+    white-space: nowrap;
+  }
+  #comp tr.you { background: #FCF8EC; }
+  #comp tr.you th { color: var(--green); }
+  #comp a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-underline-offset: 3px;
+  }
+  #comp a:hover { color: var(--ink); }
+  #comp .foot {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 6.2vh;
+    background: var(--green);
+    border-top: 5px solid var(--gold);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 4vw;
+    color: var(--cream);
+    font-weight: 600;
+    font-size: clamp(12px, 1.3vw, 18px);
+    box-sizing: border-box;
+  }
+  #comp .foot span:first-child { color: var(--gold-lt); }
   .hud {
     position: fixed; right: 24px; bottom: 20px;
     color: #E8D48C; letter-spacing: 0.16em;
@@ -31,12 +113,12 @@
     text-transform: uppercase;
     opacity: 0.75;
     pointer-events: none;
-    z-index: 2;
+    z-index: 3;
   }
   .print-page { display: none; }
   @media print {
-    html, body { background: #F3EEE4; height: auto; overflow: visible; }
-    #stage, .hud { display: none !important; }
+    html, body { background: var(--cream); height: auto; overflow: visible; }
+    #stage, .hud, #comp { display: none !important; }
     .print-page {
       display: block;
       width: 13.333in; height: 7.5in;
@@ -44,48 +126,112 @@
       margin: 0; padding: 0;
     }
     .print-page:last-child { page-break-after: auto; }
-    .print-page img {
-      width: 13.333in; height: 7.5in;
-      display: block;
-    }
+    .print-page img { width: 13.333in; height: 7.5in; display: block; }
   }
 </style>
 </head>
 <body>
-  <div id="stage"><img id="slide" alt="Demo slide"></div>
+  <div id="stage">
+    <img class="slide-img" id="slide" alt="Demo slide">
+    <section id="comp">
+      <p class="kicker">Why did it come back this way</p>
+      <h1>A competitive look. Click a Facebook or Google page.</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Facebook</th>
+            <th>Google profile</th>
+            <th>Mobile goat yoga</th>
+            <th>Step Up</th>
+            <th>8 gigs at once</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr class="you"><th>Sheehan Homestead</th><td><a href="https://www.facebook.com/sheehan.homestead/" target="_blank" rel="noopener">Yes — almost 10,000</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">Yes — 100+ at 5.0</a></td><td>Yes, mobile</td><td>Yes</td><td>Yes — ran 8 at once</td></tr>
+<tr><th>Jax Carriage / Bonnie Doone</th><td><a href="https://www.facebook.com/BonnieDooneFarm/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Jacksonville+Carriage+Company+12558+Old+Kings+Rd" target="_blank" rel="noopener">Yes — 4.4 from 21</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Pinto Carriage Works</th><td><a href="https://www.facebook.com/PintoCarriageWorks" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Pinto+Carriage+Works+Middleburg+FL" target="_blank" rel="noopener">Yes — about 4.8</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Noah’s Landing</th><td><a href="https://www.facebook.com/noahslandingzooandponies/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Noah%27s+Landing+Petting+Zoo+Daytona+Beach" target="_blank" rel="noopener">Yes — public profile</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Bella’s Little Farm</th><td><a href="https://www.facebook.com/bellaslittlefarm" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Bella%27s+Little+Farm+Umatilla+FL" target="_blank" rel="noopener">Yes — 4.7 from 135</a></td><td>Yes, mobile</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>The Barnyard Bunch</th><td><a href="https://www.facebook.com/106425227403708" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=The+Barnyard+Bunch+mobile+petting+zoo+Florida" target="_blank" rel="noopener">Unknown</a></td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Jaybird Hammock Farm</th><td><a href="https://www.facebook.com/profile.php?id=61553313116722" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Jaybird+Hammock+Farm+Fernandina+Beach+FL" target="_blank" rel="noopener">Yes — 5.0 from 186</a></td><td>On-site; mobile unknown</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Little Peeps</th><td><a href="https://www.facebook.com/LittlePeepsFarmerForaDay/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Little+Peeps+Farmer+for+a+Day+Jacksonville+FL" target="_blank" rel="noopener">Unknown</a></td><td>On-site; mobile unknown</td><td>Unknown</td><td>Unknown</td></tr>
+<tr><th>Diamond D Ranch</th><td><a href="https://www.facebook.com/DiamondDRanchLLC/" target="_blank" rel="noopener">Yes — page</a></td><td><a href="https://www.google.com/maps/search/?api=1&query=Diamond+D+Ranch+Jacksonville+FL" target="_blank" rel="noopener">Yes — 4.7, 550+</a></td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
+        </tbody>
+      </table>
+      <div class="foot"><span>914-263-1311</span><span>sheehanhomestead.com</span></div>
+    </section>
+  </div>
   <div class="hud" id="hud"></div>
-  <div class="print-page"><img src="demo-slide-01-experiment.png?v=1121r" alt="Slide 1"></div>
-  <div class="print-page"><img src="demo-slide-02-the-market.png?v=1121r" alt="Slide 2"></div>
-  <div class="print-page"><img src="demo-slide-03-the-players.png?v=1121r" alt="Slide 3"></div>
-  <div class="print-page"><img src="demo-slide-04-what-usually-wins.png?v=1121r" alt="Slide 4"></div>
-  <div class="print-page"><img src="demo-slide-05-the-keywords.png?v=1121r" alt="Slide 5"></div>
-  <div class="print-page"><img src="demo-slide-06-live-search.png?v=1121r" alt="Slide 6"></div>
-  <div class="print-page"><img src="demo-slide-07-something-to-explain.png?v=1121r" alt="Slide 7"></div>
-  <div class="print-page"><img src="demo-slide-08-young-farm.png?v=1121r" alt="Slide 8"></div>
-  <div class="print-page"><img src="demo-slide-09-the-asks.png?v=1121r" alt="Slide 9"></div>
+  <div class="print-page"><img src="demo-slide-01-opening.png?v=1121t" alt="Slide 1"></div>
+  <div class="print-page"><img src="demo-slide-02-the-market.png?v=1121t" alt="Slide 2"></div>
+  <div class="print-page"><img src="demo-slide-03-taste-test.png?v=1121t" alt="Slide 3"></div>
+  <div class="print-page"><img src="demo-slide-04-the-players.png?v=1121t" alt="Slide 4"></div>
+  <div class="print-page"><img src="demo-slide-05a-search-statewide.png?v=1121t" alt="Slide 5"></div>
+  <div class="print-page"><img src="demo-slide-05b-search-region.png?v=1121t" alt="Slide 6"></div>
+  <div class="print-page"><img src="demo-slide-06-the-reveal.png?v=1121t" alt="Slide 7"></div>
+  <div class="print-page"><img src="demo-slide-07-ann-marie.png?v=1121t" alt="Slide 8"></div>
+  <div class="print-page"><img src="demo-slide-08-the-turn.png?v=1121t" alt="Slide 9"></div>
+  <div class="print-page"><img src="demo-slide-09-michael.png?v=1121t" alt="Slide 10"></div>
+  <div class="print-page"><img src="demo-slide-10-category-owner.png?v=1121t" alt="Slide 11"></div>
+  <div class="print-page"><img src="demo-slide-11-timeline.png?v=1121t" alt="Slide 12"></div>
+  <div class="print-page"><img src="demo-slide-12-competitive-analysis.png?v=1121t" alt="Slide 13"></div>
+  <div class="print-page"><img src="demo-slide-13-constraints.png?v=1121t" alt="Slide 14"></div>
+  <div class="print-page"><img src="demo-slide-14-public-proof.png?v=1121t" alt="Slide 15"></div>
+  <div class="print-page"><img src="demo-slide-15-market-math.png?v=1121t" alt="Slide 16"></div>
+  <div class="print-page"><img src="demo-slide-16-tech-enabled.png?v=1121t" alt="Slide 17"></div>
+  <div class="print-page"><img src="demo-slide-17-tease-dashboards.png?v=1121t" alt="Slide 18"></div>
+  <div class="print-page"><img src="demo-slide-18-tease-spin.png?v=1121t" alt="Slide 19"></div>
+  <div class="print-page"><img src="demo-slide-19-tease-gold.png?v=1121t" alt="Slide 20"></div>
+  <div class="print-page"><img src="demo-slide-20-the-asks.png?v=1121t" alt="Slide 21"></div>
 <script>
   const slides = [
-    "demo-slide-01-experiment.png?v=1121r",
-    "demo-slide-02-the-market.png?v=1121r",
-    "demo-slide-03-the-players.png?v=1121r",
-    "demo-slide-04-what-usually-wins.png?v=1121r",
-    "demo-slide-05-the-keywords.png?v=1121r",
-    "demo-slide-06-live-search.png?v=1121r",
-    "demo-slide-07-something-to-explain.png?v=1121r",
-    "demo-slide-08-young-farm.png?v=1121r",
-    "demo-slide-09-the-asks.png?v=1121r"
+    {src: "demo-slide-01-opening.png?v=1121t", html: false},
+    {src: "demo-slide-02-the-market.png?v=1121t", html: false},
+    {src: "demo-slide-03-taste-test.png?v=1121t", html: false},
+    {src: "demo-slide-04-the-players.png?v=1121t", html: false},
+    {src: "demo-slide-05a-search-statewide.png?v=1121t", html: false},
+    {src: "demo-slide-05b-search-region.png?v=1121t", html: false},
+    {src: "demo-slide-06-the-reveal.png?v=1121t", html: false},
+    {src: "demo-slide-07-ann-marie.png?v=1121t", html: false},
+    {src: "demo-slide-08-the-turn.png?v=1121t", html: false},
+    {src: "demo-slide-09-michael.png?v=1121t", html: false},
+    {src: "demo-slide-10-category-owner.png?v=1121t", html: false},
+    {src: "demo-slide-11-timeline.png?v=1121t", html: false},
+    {src: "demo-slide-12-competitive-analysis.png?v=1121t", html: true},
+    {src: "demo-slide-13-constraints.png?v=1121t", html: false},
+    {src: "demo-slide-14-public-proof.png?v=1121t", html: false},
+    {src: "demo-slide-15-market-math.png?v=1121t", html: false},
+    {src: "demo-slide-16-tech-enabled.png?v=1121t", html: false},
+    {src: "demo-slide-17-tease-dashboards.png?v=1121t", html: false},
+    {src: "demo-slide-18-tease-spin.png?v=1121t", html: false},
+    {src: "demo-slide-19-tease-gold.png?v=1121t", html: false},
+    {src: "demo-slide-20-the-asks.png?v=1121t", html: false}
   ];
   let i = 0;
   const img = document.getElementById("slide");
+  const comp = document.getElementById("comp");
   const hud = document.getElementById("hud");
+  const stage = document.getElementById("stage");
   function show(n) {
     i = (n + slides.length) % slides.length;
-    img.src = slides[i];
+    const s = slides[i];
+    if (s.html) {
+      img.style.display = "none";
+      comp.classList.add("show");
+    } else {
+      comp.classList.remove("show");
+      img.style.display = "block";
+      img.src = s.src;
+    }
     hud.textContent = (i + 1) + " / " + slides.length;
   }
   function next() { show(i + 1); }
   function prev() { show(i - 1); }
-  document.getElementById("stage").addEventListener("click", next);
+  stage.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;
+    next();
+  });
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown" || e.key === "Enter") {
       e.preventDefault(); next();

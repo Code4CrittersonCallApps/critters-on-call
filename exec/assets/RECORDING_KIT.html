@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Recording Kit · Blind AI Demo · Critters on Call</title>
+<title>Recording Kit · 9–11 and 20–30 · Critters on Call</title>
 <style>
 :root{
   --ink:#14202e;--muted:#5d6b7a;--line:#e3e8ee;--card:#f6f8fa;
@@ -13,13 +13,13 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);line-height:1.45;background:#fff}
-.wrap{max-width:880px;margin:0 auto;padding:28px 22px 80px}
+.wrap{max-width:980px;margin:0 auto;padding:28px 22px 80px}
 .k{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:800}
 h1{font-size:2.15rem;letter-spacing:-.03em;line-height:1.1;margin:8px 0 10px}
 h2{font-size:1.35rem;letter-spacing:-.02em;margin:36px 0 10px;padding-top:8px}
 h3{font-size:1.05rem;margin:22px 0 8px}
 p{margin:0 0 12px}
-.lede{font-size:1.2rem;font-weight:650;background:var(--soft);border-left:5px solid var(--green);border-radius:10px;padding:14px 18px;margin:0 0 18px}
+.lede{font-size:1.15rem;font-weight:650;background:var(--soft);border-left:5px solid var(--green);border-radius:10px;padding:14px 18px;margin:0 0 18px}
 .note,.warn,.stop{border-radius:12px;padding:14px 16px;margin:14px 0 18px;font-size:.98rem}
 .note{background:var(--card)}
 .warn{background:var(--warnbg);border-left:5px solid var(--gold)}
@@ -27,441 +27,285 @@ p{margin:0 0 12px}
 .note b,.warn b,.stop b{display:block;margin-bottom:4px}
 nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px;position:sticky;top:0;background:#fffc;backdrop-filter:blur(8px);padding:10px 0;z-index:5;border-bottom:1px solid var(--line)}
 nav.toc a{display:inline-block;text-decoration:none;color:var(--green);font-weight:700;font-size:.82rem;background:var(--soft);border-radius:999px;padding:6px 12px}
-nav.toc a:hover{background:#dce9de}
 .check{list-style:none;padding:0;margin:0}
 .check li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border-radius:12px;padding:12px 14px;margin:0 0 8px;font-size:1.02rem}
 .check input{margin-top:4px;width:18px;height:18px;accent-color:var(--green);flex-shrink:0}
-.steps{counter-reset:step;list-style:none;padding:0;margin:0}
-.steps li{position:relative;padding:12px 14px 12px 58px;background:var(--card);border-radius:12px;margin:0 0 8px}
-.steps li:before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center}
-.prompt{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;margin:0 0 14px}
-.prompt .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 8px}
-.tag{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;background:var(--soft);color:var(--green);border-radius:999px;padding:3px 8px}
-.tag.gold{background:var(--warnbg);color:var(--gold)}
-.tag.mute{background:var(--card);color:var(--muted)}
-.prompt blockquote{margin:0;font-size:1.15rem;font-weight:650;line-height:1.35;letter-spacing:-.01em}
-.rowbtns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-button.copy,button.sec{border:0;cursor:pointer;border-radius:10px;padding:8px 12px;font-weight:700;font-size:.9rem;font-family:inherit}
-button.copy{background:var(--green);color:#fff}
-button.copy.done{background:#1e4d28}
-button.sec{background:var(--card);color:var(--ink)}
-.script{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 4px 8px;margin:0 0 18px}
-.line{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.prompt{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.prompt blockquote{margin:0;font-size:1.15rem;font-weight:650;line-height:1.35}
+.tag{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;background:var(--soft);color:var(--green);border-radius:999px;padding:3px 8px;margin-right:6px}
+button.copy{border:0;cursor:pointer;border-radius:10px;padding:8px 12px;font-weight:700;font-size:.9rem;font-family:inherit;background:var(--green);color:#fff;margin-top:10px}
+.script{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0;margin:0 0 18px;overflow:auto}
+.line{display:grid;grid-template-columns:88px 88px 1fr;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
 .line:last-child{border-bottom:0}
-.line .t{font-size:.8rem;font-weight:800;color:var(--green);letter-spacing:.04em}
-.line p{margin:0;font-size:1.05rem}
+.line.head{background:var(--soft);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:var(--green)}
+.line .t{font-size:.8rem;font-weight:800;color:var(--green);letter-spacing:.02em}
+.line .skip{color:var(--muted);font-weight:600}
+.line p{margin:0;font-size:1.02rem}
 .line .dir{color:var(--muted);font-style:italic;font-weight:500}
-.obj{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
-.obj div{background:var(--card);border-radius:12px;padding:14px 16px}
-.obj h3{margin:0 0 6px;font-size:.95rem}
-.obj p{margin:0;font-size:.95rem}
-.visuals img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);margin:0 0 8px;background:var(--card)}
-.cap{font-size:.85rem;color:var(--muted);margin:0 0 22px}
 table{width:100%;border-collapse:collapse;font-size:.92rem;margin:0 0 16px}
 th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
-.src{font-size:.82rem;color:var(--muted)}
+.src{font-size:.9rem}
 .src a{color:var(--green)}
+code,a.live{color:var(--green);word-break:break-all}
 hr{border:0;border-top:1px solid var(--line);margin:28px 0}
 @media (max-width:720px){
   h1{font-size:1.7rem}
-  .obj{grid-template-columns:1fr}
   .line{grid-template-columns:1fr;gap:4px}
 }
 @media print{
   nav.toc{display:none}
   .wrap{padding:0;max-width:none}
-  body{font-size:12.5px;color:#000}
-  h1{font-size:1.7rem;margin-bottom:8px}
-  h2{break-after:avoid;break-inside:avoid;margin-top:20px;padding-top:0}
-  h3{break-after:avoid}
-  .prompt, .script, .note, .warn, .stop, .check li, .steps li, .obj div, .line, tr{break-inside:avoid}
-  button.copy,button.sec{display:none}
+  h2,h3{break-after:avoid}
+  .prompt,.script,.note,.warn,.stop,.check li,.line,tr{break-inside:avoid}
+  button.copy{display:none}
   a{color:#000;text-decoration:none}
-  h2#close,h2#visuals,h2#sources{break-before:page}
-  .visuals{break-before:auto}
-  .visuals h3{break-after:avoid;margin-top:8px}
-  .visuals .block{break-inside:avoid;break-before:page}
-  .visuals .block:first-of-type{break-before:auto}
-  img{max-height:6.6in;width:100%;object-fit:contain;margin:0 0 4px}
-  .cap{margin-bottom:10px}
-  @page{margin:11mm}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<div class="k">Critters on Call · Recording kit · November 21, 2026</div>
-<h1>Blind AI demo.<br>Show the playbook, then make the asks.</h1>
-<p class="lede">Open as an experiment. Do not name your business, and do not hint at an outcome, until after the search. Show the field visuals first, paste the questions into a logged-out incognito window, and point at whatever comes back.</p>
+<p class="k">Sheehan Homestead · Critters on Call · Recording kit</p>
+<h1>Two cuts. One deck.</h1>
+<p class="lede">The main recording is a 9–11 minute cliff-notes cut: opening through the category-owner beat, then jump to the asks. The 20–30 minute expanded cut uses the same slides plus the appendix. Misdirection stays in place until the reveal. ChatGPT, logged out, is the live search tool.</p>
 
 <nav class="toc">
-  <a href="#preflight">Pre-flight</a>
+  <a href="#cuts">Two cuts</a>
+  <a href="#setup">Setup</a>
   <a href="#prompts">Prompts</a>
-  <a href="#sec90">90 seconds</a>
-  <a href="#sec210">3.5 minutes</a>
-  <a href="#clips">Clips</a>
-  <a href="#ifthis">If this happens</a>
-  <a href="#objections">Objections</a>
-  <a href="#close">Close</a>
-  <a href="#visuals">Visuals</a>
-  <a href="#sources">Sources</a>
+  <a href="#script">Script</a>
+  <a href="#live">Live URLs</a>
+  <a href="#facts">Facts</a>
+  <a href="#table">Competitors</a>
 </nav>
 
 <div class="stop">
-  <b>Confirm before you say it on camera</b>
-  Acreage: say “a couple of acres.” Official partner materials say about 3 acres (the 1.5-acre farm plus two Critter Glades acres, residence excluded). Other notes have said a 4-acre farm with 2 usable acres, or “1 of 4 working.” Do not pick a precise split on camera until you lock one number.
-  <br><br>
-  Age — after the reveal only: “First customer, late 2023: under 3 years in business. Mobile petting zoo since summer 2024, just over 2 years.” Those count from the first customer, not the August 2, 2023 LLC filing. On the age-versus-rank beat: just over 2 years versus Jacksonville Carriage at 41 years. Do not mention your business before the search.
-  <br><br>
-  “28 to 149 years”: the 28 is Bonnie Doone (founded 1998, their site). The 41 is Jacksonville Carriage Co. (since 1985, their site). I could not verify a 149-year-old competitor. Do not say 149 unless you can name who that is.
-  <br><br>
-  Question 4 of the locked cold set was truncated in the saved record after “Which seems most credible t…”. Recommended wording below: “Which seems most credible, and why?” Confirm if you remember a different ending.
-  <br><br>
-  Critter Caravan: their Florida corporation was administratively dissolved September 23, 2022. Directory listings and a LinkedIn profile still exist. Do not say “out of business” as a hard fact.
-  <br><br>
-  Little Peeps Farm is Jacksonville come-here goat yoga, not a mobile operator. Do not put them in the competitor comparison. Have a beat ready if they appear in a goat-yoga result.
+  <b>Do not say this before the reveal</b>
+  Your name, the business name, logos, rankings, or that you “win.” Point at whatever appears on screen. Do not claim a live ranking in the script. Do not run a farm-visit / Diamond D surprise round.
 </div>
 
-<h2 id="preflight" class="first-print">Pre-flight checklist</h2>
-<p>Do this once, before you hit record. Leave this kit open on a phone or a second screen. The recording window should look clean.</p>
-<ul class="check" id="checks"></ul>
+<h2 id="cuts">How the two cuts work</h2>
+<p>The presenter is 21 slides. Arrow keys, Space, or Enter advance. Click advances except on a link. Home goes to slide 1. <b>End jumps to the asks</b> (slide 21).</p>
+<ul class="check">
+  <li><input type="checkbox"><div><b>9–11 min cliff-notes (main cut).</b> Play slides 1–11 (opening through “category owner”). Then press <b>End</b> and close on the asks. Skip the appendix.</div></li>
+  <li><input type="checkbox"><div><b>20–30 min expanded cut.</b> Play every slide in order. After “category owner,” stay in the deck: timeline, competitive table, constraints, public proof, market math, tech meaning, then three “pull it up live” teasers, then the asks.</div></li>
+</ul>
+<div class="note">
+  <b>Presenter</b>
+  <a class="live" href="https://code4crittersoncallapps.github.io/critters-on-call/exec/assets/DEMO_SLIDES.html?v=1121t">DEMO_SLIDES.html?v=1121t</a><br>
+  PDF: <a class="live" href="https://code4crittersoncallapps.github.io/critters-on-call/exec/assets/DEMO_SLIDES.pdf?v=1121t">DEMO_SLIDES.pdf?v=1121t</a>
+</div>
 
-<h3>Tab order, recording window only</h3>
-<ol class="steps">
-  <li><b>ChatGPT in a fresh incognito window, logged out.</b> No chat history, no custom instructions, no memory about the farm. If ChatGPT forces a login, do not use an account that has already talked about Sheehan Homestead. Fall back to Google AI Overview first so the “blind” frame still holds.</li>
-  <li><b>Google in a second incognito window, logged out.</b> Ready for the same prompt, so you can point at an AI Overview.</li>
-  <li><b>Nothing else in that window yet.</b> Do not pre-open the website, Facebook, LinkedIn, or these visuals in the recording window. If a viewer sees you tab past your own brand before the search, the demo looks rigged.</li>
-</ol>
-<div class="note"><b>Before the search:</b> show the generic landscape and “Why the older players usually rank.” They describe the field and set the expectation that a long-time horse shop should come up. They name no one.<br><br><b>After the reveal only:</b> the named competitor snapshot, then — if you have time — LinkedIn with Ann-Marie, Facebook, the prize wheel, the dashboards, or the app/game.</div>
+<h2 id="setup">Pre-flight</h2>
+<ul class="check">
+  <li><input type="checkbox"><div>Incognito / fresh window. ChatGPT logged out. No account. Camera off on the ChatGPT window if you are sharing a screen.</div></li>
+  <li><input type="checkbox"><div>Presenter in a 16:9 window, ready at slide 1. Prompts copied below, ready to paste.</div></li>
+  <li><input type="checkbox"><div>If you are doing the long cut, also have these live tabs ready, not visible until the tease slides: Growth dashboard, Stead Spin, Gold, Track.</div></li>
+  <li><input type="checkbox"><div>Do not mention the business, the website, or the phone number until after the reveal.</div></li>
+  <li><input type="checkbox"><div>Acreage on camera: “a couple of acres.” Animal counts: “at least.” Facebook: “almost 10,000.” Reviews: “100+ at 5.0.”</div></li>
+</ul>
 
-<h2 id="prompts">Prompts, in run order</h2>
-<p>Two sets. The locked cold four are the cleaner “blind” test. The complementary-keyword set is the software-demo story: show the combo, then drop a keyword to make it fairer. Do not call the combo a fully cold test — “Metro,” “and,” and “Callahan” all lean a little.</p>
+<h2 id="prompts">Paste these into ChatGPT, logged out</h2>
+<div class="prompt">
+  <span class="tag">Statewide · two keywords</span>
+  <blockquote>What is the top-rated mobile petting zoo and the best mobile goat yoga in Florida?</blockquote>
+  <button class="copy" data-copy="What is the top-rated mobile petting zoo and the best mobile goat yoga in Florida?">Copy</button>
+</div>
+<div class="prompt">
+  <span class="tag">Region · one keyword</span>
+  <blockquote>Best mobile petting zoo in Jacksonville</blockquote>
+  <button class="copy" data-copy="Best mobile petting zoo in Jacksonville">Copy</button>
+</div>
+<div class="warn">
+  <b>Use ChatGPT, not that Google petting-zoo query</b>
+  A November 22 Jacksonville-IP blind test put ChatGPT #1 on these prompts. Google organic for “mobile petting zoo jacksonville fl” came in at #2, so do not use that Google query for the live part. If the live result is different, narrate what is on the screen. Do not force a win.
+</div>
 
-<div class="warn"><b>How to use them</b> For a 90-second cut, run only Prompt 1, then the same words in Google. For a 3.5-minute cut, run Prompts 1, 2, then 6, then Google. Save 3–5, 7, and 8 for the longer teaser or for a second take.</div>
+<h2 id="script">Script, with both clocks</h2>
+<p>Times are cues, not a stopwatch. The short column is the 9–11 minute cut. The long column is the 20–30 minute cut. “Skip” means jump over that slide in the short cut.</p>
 
-<!-- LOCKED COLD + COMPLEMENTARY, numbered in recommended demo order -->
-
-<article class="prompt" data-copy="What is the best option for mobile goat yoga and mobile petting zoo in Metro Jacksonville, Florida?">
-  <div class="meta"><span class="tag">1 · Lead, both cuts</span><span class="tag gold">Complementary combo</span></div>
-  <blockquote>What is the best option for mobile goat yoga and mobile petting zoo in Metro Jacksonville, Florida?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">Start here for the complementary-keyword story. After it returns, say you knew this one might show strong because the two offers travel together — then make it fairer with Prompt 2.</p>
-</article>
-
-<article class="prompt" data-copy="What is the best mobile goat yoga option in Metro Jacksonville, Florida?">
-  <div class="meta"><span class="tag">2 · 3.5-min cut</span><span class="tag gold">Drop a keyword</span></div>
-  <blockquote>What is the best mobile goat yoga option in Metro Jacksonville, Florida?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">This is the “make it fairer” beat. You dropped the bigger petting-zoo keyword. Point at whatever is still on top.</p>
-</article>
-
-<article class="prompt" data-copy="Best mobile petting zoo in Jacksonville, FL?">
-  <div class="meta"><span class="tag">3 · Locked cold #1</span><span class="tag mute">Cleaner blind test</span></div>
-  <blockquote>Best mobile petting zoo in Jacksonville, FL?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">Use this as the opener instead of Prompt 1 if you want the strict cold test, or run it in a fresh incognito chat after the combo so nobody can say the first prompt led the model.</p>
-</article>
-
-<article class="prompt" data-copy="What about mobile goat yoga?">
-  <div class="meta"><span class="tag">4 · Locked cold #2</span><span class="tag mute">Follow-up, same thread</span></div>
-  <blockquote>What about mobile goat yoga?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-</article>
-
-<article class="prompt" data-copy="Best mobile petting zoo in Metro Jacksonville or Callahan, Florida?">
-  <div class="meta"><span class="tag">5 · Optional</span><span class="tag gold">Slightly leading — has Callahan</span></div>
-  <blockquote>Best mobile petting zoo in Metro Jacksonville or Callahan, Florida?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">Skip this in the tight cuts. “Callahan” is your city. If you use it, don’t call the test blind.</p>
-</article>
-
-<article class="prompt" data-copy="Which of these has the most momentum online, and when was each one founded?">
-  <div class="meta"><span class="tag">6 · 3.5-min cut</span><span class="tag mute">Locked cold #3 · same thread</span></div>
-  <blockquote>Which of these has the most momentum online, and when was each one founded?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">This is the age-versus-rank beat. Let the model say the founding years. Then bring up the named snapshot if you need to correct or tighten what it got wrong.</p>
-</article>
-
-<article class="prompt" data-copy="Which seems most credible, and why?">
-  <div class="meta"><span class="tag">7 · Long teaser</span><span class="tag gold">Locked cold #4 · wording to confirm</span></div>
-  <blockquote>Which seems most credible, and why?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">Saved record was cut off after “Which seems most credible t…”. If you remember “to book” or “to invest in,” use that instead.</p>
-</article>
-
-<article class="prompt" data-copy="Who offers both mobile goat yoga and a mobile petting zoo in the Jacksonville, Florida area?">
-  <div class="meta"><span class="tag">8 · Long teaser or #2 backup</span></div>
-  <blockquote>Who offers both mobile goat yoga and a mobile petting zoo in the Jacksonville, Florida area?</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-  <p class="cap" style="margin:8px 0 0">Use this if a horse-and-carriage shop took #1 on a single-keyword search. It brings the complementary offer back without arguing.</p>
-</article>
-
-<article class="prompt" data-copy="Rank the top mobile petting zoos and goat yoga providers that serve the Jacksonville, FL metro area.">
-  <div class="meta"><span class="tag">9 · Long teaser</span></div>
-  <blockquote>Rank the top mobile petting zoos and goat yoga providers that serve the Jacksonville, FL metro area.</blockquote>
-  <div class="rowbtns"><button class="copy" type="button">Copy</button></div>
-</article>
-
-<div class="note"><b>Google AI Overview, same window, new tab</b> Paste Prompt 1 — or locked cold #1, if that is the test you want to show. Do not add extra words. If an Overview appears, point at it. If it does not, do not apologize; point at the ordinary local pack or the first organic results and keep moving.</div>
-
-<h2 id="sec90">90-second cut — word for word</h2>
-<p>About 180 spoken words, plus waiting on the model. If the model is slow, use Path A (one search, then the close). If it is moving, use Path B (same prompt in Google after ChatGPT).</p>
-
-<h3>Path A — one search, then the ask</h3>
 <div class="script">
-  <div class="line"><div class="t">0:00</div><p>We’re going to run a quick experiment and search a few keywords: mobile petting zoo, mobile goat yoga.</p></div>
-  <div class="line"><div class="t">0:08</div><p>Plenty of providers have been doing this a long time. There are some big ranches and decades-old horse operations out there. We’re specifically looking for mobile petting zoo and mobile goat yoga. You’d expect one of the usual shops to come up. Let’s see what happens.</p></div>
-  <div class="line"><div class="t">0:24</div><p>This is a fresh incognito window. I’m logged out.</p></div>
-  <div class="line"><div class="t">0:28</div><p class="dir">Paste Prompt 1. Wait. Do not talk over the first result. When it settles, point.</p></div>
-  <div class="line"><div class="t">0:48</div><p class="dir">After the reveal — keep this short. You can add more later.</p></div>
-  <div class="line"><div class="t">0:50</div><p>First customer, late 2023: under 3 years in business. Mobile petting zoo since summer 2024, just over 2 years — versus Jacksonville Carriage at 41 years.</p></div>
-  <div class="line"><div class="t">1:10</div><p>If you want in, I have a 49 percent partner seat in the flagship, and I have a sponsorship path. I’ll leave the one-pager.</p></div>
+<div class="line head"><div>9–11 min</div><div>20–30 min</div><div>Slide and words</div></div>
+
+<div class="line"><div class="t">0:00</div><div class="t">0:00</div><div>
+<p><b>1 · Opening.</b></p>
+<p>“I’ll get to who I am. I was a lit major, and we believe in show, don’t tell. So let me show you.”</p>
+</div></div>
+
+<div class="line"><div class="t">0:25</div><div class="t">0:30</div><div>
+<p><b>2 · The market.</b></p>
+<p>“Let’s start with the market. This is the part of the market I’m interested in, not the whole thing. Metro Jacksonville. About 1.8 million people. Let’s run a little test.”</p>
+<p class="dir">Census Vintage 2025, Jacksonville FL MSA, 1,785,500, rounded to 1.8 million. Don’t invent CDD or school counts.</p>
+</div></div>
+
+<div class="line"><div class="t">0:50</div><div class="t">1:10</div><div>
+<p><b>3 · The taste test.</b></p>
+<p>“No Forrester Wave exists for this category, so here’s a blind AI taste test. Two keywords, statewide. Then one keyword, for the region. ChatGPT, logged out.”</p>
+</div></div>
+
+<div class="line"><div class="t">1:15</div><div class="t">1:40</div><div>
+<p><b>4 · The big farms.</b></p>
+<p>“These are the providers you’d expect. Long-time operators. Big ranches. Horses. Forty-one years. Twenty-eight years. Seventeen years. A ranch that’s been in the family since 1958, on 500 acres.”</p>
+<p class="dir">No names. This is the misdirection landscape.</p>
+</div></div>
+
+<div class="line"><div class="t">1:50</div><div class="t">2:30</div><div>
+<p><b>5a · Statewide search, live.</b></p>
+<p>“Fresh window. No account. I’m going to paste this.” Paste the statewide prompt. Wait. Then: “Let’s look at what it actually says.” Narrate the screen, including whoever is named first.</p>
+</div></div>
+
+<div class="line"><div class="t">3:10</div><div class="t">4:00</div><div>
+<p><b>5b · Regional search, live.</b></p>
+<p>“Same window rules. Now one keyword, for the region.” Paste the Jacksonville prompt. Wait. Narrate the screen.</p>
+</div></div>
+
+<div class="line"><div class="t">4:20</div><div class="t">5:20</div><div>
+<p><b>6 · The reveal.</b> Logos may start here.</p>
+<p>“Actually, it’s this little homestead. Interesting. Who are they? As you might have guessed, it’s me.”</p>
+</div></div>
+
+<div class="line"><div class="t">4:50</div><div class="t">5:50</div><div>
+<p><b>7 · Ann-Marie first.</b></p>
+<p>“It went well because of these founders. Ann-Marie. A great educator. And it was her idea.”</p>
+<p class="dir">Wife and co-founder. Keep her first. The mobile petting zoo was her idea.</p>
+</div></div>
+
+<div class="line"><div class="t">5:40</div><div class="t">6:50</div><div>
+<p><b>8 · The turn.</b></p>
+<p>“But how does a middle school teacher with a backyard farm and few LinkedIn connections beat multi-decade family farms?”</p>
+</div></div>
+
+<div class="line"><div class="t">6:00</div><div class="t">7:15</div><div>
+<p><b>9 · Michael.</b></p>
+<p>“She learned and worked hard, and she married this guy.” Then, as your claims, not as a third-party bio: you worked at VC- and PE-backed companies, won key deals, built lead-gen departments at companies with successful exits, Exec MBA, built a software company, RevOps and sales-enablement background.</p>
+<p class="dir">No company names on this recording unless you choose to add one you can stand behind. MBA on Call can be spoken; the slide says Exec MBA.</p>
+</div></div>
+
+<div class="line"><div class="t">7:10</div><div class="t">8:40</div><div>
+<p><b>10 · Category owner.</b></p>
+<p>“He doesn’t call himself a small business owner. He calls himself a category owner: a tech-enabled agritainment franchise. And you just saw a demonstration of that.”</p>
+<p class="dir">Short cut: press <b>End</b> now, and go to the asks. Long cut: keep going.</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">9:10</div><div>
+<p><b>11 · Timeline.</b></p>
+<p>“November 2023: first on-call customer, a Montessori school. July and August 2024: first volunteered mobile petting zoo prototype. Today: still a young farm. Just over two years of the zoo.”</p>
+<p class="dir">Prefer the real dates. Just over two years of the zoo versus 41 years for the oldest player, if you make the contrast.</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">10:10</div><div>
+<p><b>12 · Competitive look.</b> Clickable in the HTML presenter.</p>
+<p>“This is why it came back this way.” Walk the columns. Clicks open Facebook or Google profiles in a new tab. Where a cell says Unknown or Not listed on site, say that. Never invent a “no.”</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">12:30</div><div>
+<p><b>13 · Constraints.</b></p>
+<p>“On paper, the disadvantages. A couple of acres. No horses or exotics yet. Still on a New York cell number. A young farm. And still this much reputation, this fast.”</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">13:20</div><div>
+<p><b>14 · Public proof.</b></p>
+<p>“Almost 10,000 Facebook followers. Daily News Network appearances. SEO and blogs. Multiple socials, and photos. 100+ Google reviews at 5.0. And a blue-chip institutional review: Elizabeth Bricknell, Wildlight CDD trunk-or-treat — ‘10/10 would recommend for your next event.’ The American Legion came back a second year in a row.”</p>
+<p class="dir">Do not put a media-appearance count on camera. Four Daily News Network URLs are verified in records; list them if asked, don’t inflate to eight. Do not say Wildlight booked multiple times — that isn’t in the review file.</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">15:00</div><div>
+<p><b>15 · Market math.</b></p>
+<p>“This is the slice where we have penetration, a small piece of a much broader market. You don’t need much: 10–20 families spending around $10k and you’re on the road. An ecosystem of complementary, cohesive services, engineered by a RevOps and sales-enablement operator.”</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">16:20</div><div>
+<p><b>16 · What tech-enabled means.</b></p>
+<p>“The prize wheel. The app. The dashboards. Operational excellence, wrapped in technology. Go-to-market excellence, wrapped in technology. Customer centricity, wrapped in technology.”</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">17:00</div><div>
+<p><b>17 · Exec dashboards. Pull it up live.</b></p>
+<p>Switch to the Growth dashboard. One short look: this is the operating system, not a slide mock. Then back to the deck.</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">18:20</div><div>
+<p><b>18 · Stead Spin. Pull it up live.</b></p>
+<p>Switch to the prize wheel. Spin if you want. Then back.</p>
+</div></div>
+
+<div class="line"><div class="t skip">Skip</div><div class="t">19:40</div><div>
+<p><b>19 · Gold card and the mini-zoo app. Pull it up live.</b></p>
+<p>Gold membership on one tab. Track on the other. “A customer list, and a tracker: it tracks the run without a login.” On Track, click <b>Run live demo</b>.</p>
+</div></div>
+
+<div class="line"><div class="t">8:00</div><div class="t">22:00</div><div>
+<p><b>21 · The asks.</b></p>
+<p>“If you want in. A 49% silent-partner seat in Franchise Zero. Or a sponsorship. I’ll leave the one-pager.”</p>
+<p class="dir">Short cut lands here around minute 8–10. Long cut lands here around minute 22–28, with room to take questions.</p>
+</div></div>
 </div>
 
-<h3>Path B — ChatGPT, then Google, same prompt</h3>
-<div class="script">
-  <div class="line"><div class="t">0:00</div><p>Same open as Path A, through “You’d expect one of the usual shops to come up. Let’s see what happens.”</p></div>
-  <div class="line"><div class="t">0:18</div><p>Fresh incognito, logged out. Same question a parent would type.</p></div>
-  <div class="line"><div class="t">0:24</div><p class="dir">Paste Prompt 1. Wait. Point at the result.</p></div>
-  <div class="line"><div class="t">0:42</div><p>Now the same words in Google, also incognito, also logged out. I don’t have a Gartner for petting zoos. This is the closest thing to a third-party expert.</p></div>
-  <div class="line"><div class="t">0:52</div><p class="dir">Paste Prompt 1 into Google. Wait for the AI Overview if it appears. Point.</p></div>
-  <div class="line"><div class="t">1:10</div><p>You don’t have to believe I take this all the way. If you want in, I have a 49 percent partner seat in the flagship, and I have a sponsorship path.</p></div>
-</div>
-
-<div class="warn"><b>If the result is not #1</b> Do not force it. Use the #2 beat in “If this happens,” then go to the close. Never say “we always come up first” before the live result, and never paper over a miss.</div>
-
-<h2 id="sec210">3.5-minute cut — word for word</h2>
-<p>This is the main take. Open as the experiment, show the field visuals, then Prompts 1, 2, 6, then Google. The named snapshot comes out after the search, not before.</p>
-<div class="script">
-  <div class="line"><div class="t">0:00</div><p>We’re going to run a quick experiment and search a few keywords: mobile petting zoo, mobile goat yoga.</p></div>
-  <div class="line"><div class="t">0:08</div><p>Plenty of providers have been doing this a long time. There are some big ranches and decades-old horse operations out there. We’re specifically looking for mobile petting zoo and mobile goat yoga. You’d expect one of the usual shops to come up.</p></div>
-  <div class="line"><div class="t">0:22</div><p class="dir">Put up the generic landscape, then “Why the older players usually rank.” Do not name anyone. Do not say who you are.</p></div>
-  <div class="line"><div class="t">0:28</div><p>On paper, these are the operators that should come up first. Let’s see what happens.</p></div>
-  <div class="line"><div class="t">0:36</div><p>This is incognito. I’m logged out. I’m going to paste a question and let you watch.</p></div>
-  <div class="line"><div class="t">0:48</div><p class="dir">Paste Prompt 1 into ChatGPT. Wait in silence. Point when it settles.</p></div>
-  <div class="line"><div class="t">1:10</div><p>That’s us. I knew a combined question might show strong, because the two offers travel together. So let’s make it fairer and drop the bigger keyword.</p></div>
-  <div class="line"><div class="t">1:20</div><p class="dir">Paste Prompt 2 in the same thread, or in a fresh incognito chat if you want it cleaner. Wait. Point.</p></div>
-  <div class="line"><div class="t">1:40</div><p>Still us — or still near the top. Now the question that makes the age gap obvious.</p></div>
-  <div class="line"><div class="t">1:46</div><p class="dir">Paste Prompt 6. Wait. Point at the founding years the model gives you. Correct only a clear miss, and only with a sourced fact.</p></div>
-  <div class="line"><div class="t">2:05</div><p>Same words in Google, also incognito. If an AI Overview comes up, that’s a second engine, not my account.</p></div>
-  <div class="line"><div class="t">2:12</div><p class="dir">Paste Prompt 1 into Google. Point at the Overview, or at the local pack if no Overview appears.</p></div>
-  <div class="line"><div class="t">2:25</div><p class="dir">After the reveal only: share the named snapshot. Keep the rest short. You can add more later.</p></div>
-  <div class="line"><div class="t">2:28</div><p>First customer, late 2023: under 3 years in business. Mobile petting zoo since summer 2024, just over 2 years — versus Jacksonville Carriage at 41 years.</p></div>
-  <div class="line"><div class="t">2:48</div><p>Ann-Marie is a teacher. She built the STEM curriculum. If you want in, there are a few ways to say yes. A 49 percent silent-partner seat in the flagship, which we call Franchise Zero. Or a sponsorship. I’ll leave the one-pager.</p></div>
-</div>
-
-<div class="note"><b>Optional LinkedIn close, if you still have 15 seconds</b> “That’s Ann-Marie and me. She’s the teacher who built the STEM piece. I spent my last career in software sales, including teaser demos that got us into rooms we had not been invited to. This is the same move.”</div>
-
-<h2 id="clips">Clip split, and the 10–15 minute teaser</h2>
-<p>If you would rather ship several short videos than one take, cut here. Each clip should stand alone, with a one-line open and a one-line close.</p>
-
+<h2 id="live">Live URLs for the tease</h2>
 <table>
-  <thead><tr><th>Clip</th><th>Time</th><th>What happens</th><th>In / out lines</th></tr></thead>
-  <tbody>
-    <tr><td>1. Experiment</td><td>45–60s</td><td>The experiment opening, then the field visuals. No search yet. Do not name the business.</td><td>In: “We’re going to run a quick experiment and search a few keywords: mobile petting zoo, mobile goat yoga.” Out: “You’d expect one of the usual shops to come up. Let’s see what happens.”</td></tr>
-    <tr><td>2. Blind demo</td><td>2–3 min</td><td>Incognito. Prompt 1. Point.</td><td>In: “This is incognito. I’m logged out.” Out: Point at the result. Do not preview it.</td></tr>
-    <tr><td>3. Make it fairer</td><td>2–3 min</td><td>Prompt 2, then Google on Prompt 1.</td><td>In: “Let’s drop the bigger keyword.” Out: “A second engine, not my account.”</td></tr>
-    <tr><td>4. Teardown</td><td>2–3 min</td><td>Prompt 6, then the two visuals.</td><td>In: “Now look at when each one was founded.” Out: “Horses and decades usually win. We still showed up.”</td></tr>
-    <tr><td>5. STEM, app, asks</td><td>90s–2 min</td><td>Ann-Marie, STEM, homeschool, dashboards and game, then the ask menu.</td><td>In: “Here’s the rest of what we’ve already built.” Out: “Partner seat, or sponsorship. I’ll leave the one-pager.”</td></tr>
-  </tbody>
+  <tr><th>What</th><th>Open this</th></tr>
+  <tr><td>Presenter</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/exec/assets/DEMO_SLIDES.html?v=1121t">…/exec/assets/DEMO_SLIDES.html?v=1121t</a></td></tr>
+  <tr><td>Exec hub</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/exec/">…/exec/</a></td></tr>
+  <tr><td>Growth dashboard (tease screenshot)</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/exec/growth-home.html">…/exec/growth-home.html</a></td></tr>
+  <tr><td>Stead Spin</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/giving-wheel/">…/giving-wheel/</a></td></tr>
+  <tr><td>Stead Spin alternates</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/spin.html">spin.html</a> · <a href="https://code4crittersoncallapps.github.io/critters-on-call/wheel.html">wheel.html</a></td></tr>
+  <tr><td>Gold card</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/gold.html">…/gold.html</a></td></tr>
+  <tr><td>Track / mini-zoo app</td><td><a href="https://code4crittersoncallapps.github.io/critters-on-call/track.html">…/track.html</a> — click Run live demo</td></tr>
 </table>
-
-<h3>10–15 minute teaser — run of show, not a word-for-word script</h3>
-<ol class="steps">
-  <li><b>Open, 1 minute.</b> The experiment opening, word for word. No mention of your business. No hint of the outcome.</li>
-  <li><b>The field, 1 minute.</b> Show the generic landscape and “Why the older players usually rank.” Plenty of long-time providers, big ranches, decades-old horse operations. You’re looking specifically for mobile petting zoo and mobile goat yoga. The audience should expect one of the usual shops to come up.</li>
-  <li><b>Problems, 2 minutes.</b> Parenting is hard — we turn good parents into goat parents. The juicy one is B2B event budgets, a professional market that repeats across Florida. Small-business owners struggle, so marketing and media placement is another line.</li>
-  <li><b>Blind demo, 4–5 minutes.</b> Prompts 1 and 2, then locked cold #1 in a fresh chat if you want a cleaner test, then Prompts 6 and 7, then Prompt 8 if a horse shop took a single-keyword search, then Google. Stay quiet while results load. Point, don’t over-narrate.</li>
-  <li><b>Teardown, 2 minutes.</b> Named snapshot and “Why the older players usually rank.” Bella’s is far. Barnyard Bunch is a homeschool family, in their own words. Critter Caravan’s corporation was dissolved in 2022 — don’t overclaim. Little Peeps is come-here, not mobile.</li>
-  <li><b>STEM, app, proof, 2 minutes.</b> Ann-Marie and the STEM curriculum. Homeschool. 100+ Google reviews. Facebook at almost 10,000 followers. Dashboards, dunk lists, prize wheel, and a game that leads people back to the farm. The Play Store launch is a marketing stunt you can turn on — don’t say it is already live unless it is.</li>
-  <li><b>Several ways to win, then the asks, 2 minutes.</b> “You don’t have to believe I take the ball the whole way. A regional Florida player already makes money.” Then Franchise Zero at 49 percent, or sponsorship. Invite the real meeting. Stop.</li>
-</ol>
-
-<h2 id="ifthis">If this happens</h2>
-<div class="obj">
-  <div>
-    <h3>You are #2, or tied</h3>
-    <p>“Second is still the surprise. Look at who is first — if it’s a horse-and-carriage shop that’s been here for decades, that is the expected default.” Then paste Prompt 8, who does both, and let that result talk.</p>
-  </div>
-  <div>
-    <h3>Pinto is first</h3>
-    <p>“Pinto Carriage Works is a real Middleburg operator, filed in 2009, with ponies and carriages. Their site does not offer mobile goat yoga. That’s why the combined question is the fair test of the offer.”</p>
-  </div>
-  <div>
-    <h3>Jacksonville Carriage or Bonnie Doone is first</h3>
-    <p>“That’s the 1985 carriage-and-pony business, or the 1998 farm at the same address. They should win a horse search. They do not offer mobile goat yoga on their site.” Then Prompt 8.</p>
-  </div>
-  <div>
-    <h3>LittleOne Zoo is first</h3>
-    <p>“That’s a Gainesville operator that travels a wide radius, including Jacksonville. They’ve self-reported 30 years and they do ponies. Different offer. Let’s see who does both.” Then Prompt 8.</p>
-  </div>
-  <div>
-    <h3>Bella’s is first or in the mix</h3>
-    <p>“Bella’s Little Farm is real, and they do offer mobile goat yoga. They are based in Umatilla, more than two hours south, and they charge a travel fee to reach Jacksonville.”</p>
-  </div>
-  <div>
-    <h3>Barnyard Bunch is in the mix</h3>
-    <p>“That’s a real mobile petting zoo. In their own words, they are a homeschool family who bring the farm to you. Different scale, and I have not seen mobile goat yoga on their site.”</p>
-  </div>
-  <div>
-    <h3>Critter Caravan appears</h3>
-    <p>“Their Florida corporation was dissolved in September 2022. Old listings still float around. I would not treat them as a live competitor unless someone can show they are still booking.”</p>
-  </div>
-  <div>
-    <h3>Little Peeps appears</h3>
-    <p>“That’s a Jacksonville come-here farm, not a mobile operator. Different category. I’m asking about who comes to you.”</p>
-  </div>
-  <div>
-    <h3>No AI Overview in Google</h3>
-    <p>Don’t apologize. “Sometimes it gives an Overview, sometimes it doesn’t. Look at the local pack and the first results instead.” Keep moving.</p>
-  </div>
-  <div>
-    <h3>ChatGPT demands a login</h3>
-    <p>Do not use an account that has already talked about the farm. Switch the demo to Google incognito, or to a clean throwaway login, and say so out loud: “I’m not using an account that knows us.”</p>
-  </div>
-  <div>
-    <h3>The model invents a founding year</h3>
-    <p>Don’t fight it at length. “I’m going to put the sourced years on screen.” Then the named snapshot. Never invent a correction you cannot source.</p>
-  </div>
-  <div>
-    <h3>You want to mention prior tests</h3>
-    <p>Only after a live result, and only as optional color: “That’s the same pattern I’ve seen in earlier cold tests, including Google’s AI Overview.” If today’s result missed, do not reach for old tests to paper over it.</p>
-  </div>
+<div class="warn">
+  <b>Don’t share the bookings or dunk-list pages in this recording</b>
+  Those surfaces include customer names and phone numbers. Stick to the hub, Growth, the wheel, Gold, and Track.
 </div>
 
-<h2 id="objections">Objections, one-line answers</h2>
-<div class="obj">
-  <div>
-    <h3>“You gamed this. It’s just SEO.”</h3>
-    <p>This is incognito, logged out, no account history. You’re watching a question a parent would type.</p>
-  </div>
-  <div>
-    <h3>“ChatGPT is just guessing.”</h3>
-    <p>That’s why we run the same words in Google. Two engines, same question, not my account.</p>
-  </div>
-  <div>
-    <h3>“You’re small, and you don’t have horses.”</h3>
-    <p>That’s the point. The older shops have horses and decades. If a young farm still shows up, the playbook is doing the work.</p>
-  </div>
-  <div>
-    <h3>“This is only Jacksonville.”</h3>
-    <p>You don’t have to believe I take it all the way. A professional event market already exists across Florida. A regional player makes money.</p>
-  </div>
-</div>
+<h2 id="facts">Locked wording</h2>
+<ul>
+  <li>Facebook: almost 10,000 (about 7.7k counted November 20, 2026; “almost 10,000” is the approved line).</li>
+  <li>Google: 100+ reviews at 5.0 (104 as of October 31, 2026).</li>
+  <li>Acreage on camera: “a couple of acres.”</li>
+  <li>Phone, after the reveal: 914-263-1311, a New York cell. Site: sheehanhomestead.com.</li>
+  <li>Timeline: first on-call customer, a Montessori school, November 2023. First volunteered mobile petting zoo prototype, July–August 2024. The zoo is just over two years old as of November 22, 2026. Do not use the LLC filing date (August 2, 2023) as the on-camera start.</li>
+  <li>Wildlight quote, from the investor-proof review file: Elizabeth Bricknell, “10/10 would recommend for your next event.” American Legion is a separate, verified repeat (“second year in a row”).</li>
+  <li>Step Up certified may be said on your row. “8 gigs at once” is your account; competitors stay Unknown.</li>
+  <li>Four verified Daily News Network appearances, if someone asks for the list:
+    <ul>
+      <li><a href="https://dailynewsnetwork.com/2024/shows/jacksonville-buzz/the-jacksonville-buzz-with-michael-ann-marie-sheehan-of-sheehan-homestead-llc">Jacksonville Buzz, 2024, Michael and Ann-Marie</a></li>
+      <li><a href="https://dailynewsnetwork.com/2026/shows/buzzworthy-businesses/buzzworthy-businesses-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call">Buzzworthy Businesses, 2026, Ann-Marie</a></li>
+      <li><a href="https://dailynewsnetwork.com/2026/shows/finding-your-frequency/finding-your-frequency-with-michael-sheehan-of-sheehan-homestead-3">Finding Your Frequency, 2026, Michael (Voice of the Jags)</a></li>
+      <li><a href="https://dailynewsnetwork.com/2026/shows/industry-champions/industry-champions-with-ann-marie-sheehan-of-sheehan-homestead-llc-dba-critters-on-call">Industry Champions, 2026, Ann-Marie</a></li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="close">The close, and the asks</h2>
-<p>End on a menu, not a single take-it-or-leave-it ask. Keep terms light in the 90-second and 3.5-minute cuts. Save the structure for the meeting that this demo is trying to earn.</p>
-<div class="script">
-  <div class="line"><div class="t">Menu</div><p>If you want in, there are a few ways to say yes. A 49 percent silent-partner seat in the flagship operation, which we call Franchise Zero. Or a sponsorship. I’ll leave the one-pager.</p></div>
-  <div class="line"><div class="t">If they lean in</div><p>The partner seat is a lease of the working acres — not the house — plus the animals, the vehicles, the list, the dashboards, and the code. Profit share is quarterly. There is a buyback window. We can walk the term lengths in the next meeting.</p></div>
-  <div class="line"><div class="t">If they hesitate</div><p>You don’t have to buy that I’m a tech company. Buy a professional operation in a market that already repeats across Florida, with a playbook you just watched work.</p></div>
-  <div class="line"><div class="t">Stop</div><p>Don’t add a third ask. Don’t keep talking. Leave the one-pager and ask for the real meeting.</p></div>
-</div>
-
-<h2 id="visuals">Visuals</h2>
-<p>Show (a) and (c) before you paste a prompt. They describe the field and set the expectation that a long-time horse shop should come up. The named snapshot (b) is after the reveal only. All three are 16:9 for a screen share.</p>
-
-<div class="visuals">
-  <div class="block">
-  <h3>(a) Generic field — before the search, no names, no highlight</h3>
-  <img src="generic-underdog-landscape.png" alt="Anonymous Metro Jacksonville field: Player A 41 years, Player B 28 years, Player C 17 years, and Player D under 3 years on a couple of acres">
-  <p class="cap">generic-underdog-landscape.png · Show this before the search. Every card has the same weight. It does not name anyone, and it does not hint who is who.</p>
-  </div>
-
-  <div class="block">
-  <h3>(b) Named competitor snapshot</h3>
-  <img src="named-competitor-snapshot.png" alt="Named Metro Jacksonville competitor snapshot with founding years and offerings">
-  <p class="cap">named-competitor-snapshot.png · After the reveal only. First customer, late 2023: under 3 years in business. Mobile petting zoo since summer 2024, just over 2 years, versus Jacksonville Carriage at 41 years.</p>
-  </div>
-
-  <div class="block">
-  <h3>(c) Why the older players usually rank</h3>
-  <img src="why-older-players-rank.png" alt="Four reasons older players usually rank, and the opening they usually leave">
-  <p class="cap">why-older-players-rank.png · Show this before the search, with the generic field. It sets the expectation that the old horse operations should come up first.</p>
-  </div>
-</div>
-
-<h2 id="sources">Sources, checked November 21, 2026</h2>
+<h2 id="table">Competitor table — unknowns and sources</h2>
+<p>Full source log: keep <code>COMPETITOR_TABLE_SOURCES.md</code> with the build. Verified November 22, 2026. Facebook follower counts for competitors were not available from an unauthenticated fetch (login wall). Never turn an unknown into a “no.”</p>
 <table>
-  <thead><tr><th>Operator</th><th>Fact used</th><th>Source</th></tr></thead>
-  <tbody>
-    <tr><td>Jacksonville Carriage Co. (Jack’s)</td><td>Mobile petting zoo, ponies, carriages; “since 1985”; 12558 Old Kings Rd, Jacksonville</td><td><a href="https://www.jaxcarriage.com/">jaxcarriage.com</a></td></tr>
-    <tr><td>Bonnie Doone Farm</td><td>Founded 1998; 80+ acres; 40+ horses; same address and carriage email as above</td><td><a href="https://www.bonniedoonejax.com/">bonniedoonejax.com</a></td></tr>
-    <tr><td>Pinto Carriage Works</td><td>Mobile zoo, ponies, carriages; Middleburg; Florida LLC filed May 12, 2009; no goat yoga on the site</td><td><a href="https://pintocarriageworks.com/">pintocarriageworks.com</a>; Florida LLC L09000046166</td></tr>
-    <tr><td>Azalea Ponies</td><td>Mobile pony rides and petting zoo; Green Cove Springs; Florida LLC filed 2015</td><td>Florida LLC L15000066587; Explore Clay / Fun 4 Clay Kids listings</td></tr>
-    <tr><td>LittleOne Zoo</td><td>Gainesville / Bell; pony rides and mobile zoo; travels up to 200 miles; recent Jacksonville-area bookings; “30 years” is their own GigSalad wording — independent founding year unverified</td><td><a href="https://www.gigsalad.com/littleone_zoo_bell">GigSalad vendor page</a></td></tr>
-    <tr><td>The Barnyard Bunch</td><td>“We are a homeschool family who loves to farm and raise animals”; mobile petting zoo; founding year unverified</td><td><a href="https://thebarnyardbunch.com/">thebarnyardbunch.com</a></td></tr>
-    <tr><td>Bella’s Little Farm</td><td>Based in Umatilla; founded / filed 2022; offers mobile “Yoat Goga”; travel fee $150 for 2–3 hours, and they advertise Jacksonville with that fee</td><td><a href="https://bellaslittlefarm.com/">bellaslittlefarm.com</a>; Florida LLC L22000047805</td></tr>
-    <tr><td>Critter Caravan</td><td>Florida corporation filed August 16, 2010; administratively dissolved September 23, 2022. Public site returned an error when checked. LinkedIn still listed the owner as current. Status: stale, not a proven closure</td><td>Florida corp P10000067350; site check Nov 21, 2026</td></tr>
-    <tr><td>Little Peeps Farm</td><td>On-site goat yoga in Jacksonville, widely reported from 2019. Not a mobile operator. Leave off the comparison card</td><td>News4Jax, Feb 25, 2019; Flagler College Gargoyle</td></tr>
-    <tr><td>Sheehan Homestead LLC</td><td>Florida LLC filed August 2, 2023, 44065 Cushman Road, Callahan. First Facebook/website customer late 2023 (under 3 years in business as of Nov 21, 2026); mobile petting zoo prototype July/August 2024 (just over 2 years, about 28 months). Those ages count from the first customer, not the LLC filing.</td><td>Florida LLC L23000363396; timeline from Michael, Nov 21, 2026</td></tr>
-    <tr><td>Farm To You Revue / Noah’s Landing</td><td>Real Florida mobile zoos (Dunnellon, 2016; Daytona Beach, 2000) but based well south of Metro Jacksonville. Not on the snapshot</td><td>Sunbiz L16000120271; Noah’s Landing site / BBB</td></tr>
-  </tbody>
+  <tr><th>Provider</th><th>Facebook</th><th>Google</th><th>Mobile goat yoga</th><th>Step Up</th><th>8 gigs</th></tr>
+  <tr><td>Sheehan Homestead</td><td>Yes — almost 10,000</td><td>Yes — 100+ at 5.0</td><td>Yes, mobile</td><td>Yes</td><td>Yes — ran 8 at once (your account)</td></tr>
+  <tr><td>Jax Carriage / Bonnie Doone</td><td>Yes — page</td><td>Yes — 4.4 from 21</td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>Pinto Carriage Works</td><td>Yes — page</td><td>Yes — about 4.8</td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>Noah’s Landing</td><td>Yes — page</td><td>Yes — public profile</td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>Bella’s Little Farm</td><td>Yes — page</td><td>Yes — 4.7 from 135</td><td>Yes, mobile</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>The Barnyard Bunch</td><td>Yes — page</td><td>Unknown</td><td>Not listed on site</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>Jaybird Hammock Farm</td><td>Yes — page</td><td>Yes — 5.0 from 186</td><td>On-site; mobile unknown</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>Little Peeps</td><td>Yes — page</td><td>Unknown</td><td>On-site; mobile unknown</td><td>Unknown</td><td>Unknown</td></tr>
+  <tr><td>Diamond D Ranch</td><td>Yes — page</td><td>Yes — 4.7, 550+</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
 </table>
-<p class="src">Google reviews: say “100+” (104 as of October 31, 2026). Facebook: about 7,700 followers; “almost 10,000” is approved wording. Animal counts, if you mention them, always say “at least.” No Grok branding on any of this.</p>
-
-<hr>
-<p class="src">Recording kit for a screen-recorded elevator pitch. Nothing in this document was sent to anyone. Visuals were rebuilt for this kit; the earlier image files from the other thread were not found on this machine.</p>
-</div>
+<p class="src">Google figures for competitors come from public directories and maps searches on November 22, 2026, and may move. Pinto’s review counts conflict across directories (treat as “about 4.8”). Noah’s Landing has a public profile; the count was not locked. Jaybird’s site says a final season, closing January 2027 — not a table column.</p>
 
 <script>
-(function(){
-  const items = [
-    "Phone on Do Not Disturb. Close Slack, email, and anything with a badge.",
-    "Log out of ChatGPT and Google in a normal window first, then open a new incognito window.",
-    "Confirm the incognito ChatGPT session has no custom instructions, no memory, and no prior farm chats.",
-    "Confirm Google incognito is logged out — no Maps profile, no prior ‘Sheehan’ search in that session.",
-    "Copy Prompt 1 onto the clipboard, then come back to this page or your second screen.",
-    "Generic landscape and ‘Why the older players usually rank’ are ready to show before the search. The named snapshot stays closed until after the reveal.",
-    "One-pager for the close is on the desk or in a folder you can open after the asks.",
-    "Decide the take: Path A (90s), Path B (90s), 3.5-minute, or the long teaser.",
-    "After the reveal only: a couple of acres; first customer, late 2023: under 3 years in business; mobile petting zoo since summer 2024, just over 2 years, versus Jacksonville Carriage at 41 years; no 149; no ‘out of business’ for Critter Caravan.",
-    "Do a dry run with the recorder off. Time it. Then record."
-  ];
-  const ul = document.getElementById('checks');
-  const key = 'recording-kit-preflight-v1';
-  let state = {};
-  try { state = JSON.parse(localStorage.getItem(key) || '{}'); } catch(e){ state = {}; }
-  items.forEach((label, i) => {
-    const li = document.createElement('li');
-    const box = document.createElement('input');
-    box.type = 'checkbox';
-    box.checked = !!state[i];
-    box.addEventListener('change', () => {
-      state[i] = box.checked;
-      localStorage.setItem(key, JSON.stringify(state));
-    });
-    const span = document.createElement('span');
-    span.textContent = label;
-    li.appendChild(box);
-    li.appendChild(span);
-    ul.appendChild(li);
+document.querySelectorAll("button.copy").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const text = btn.getAttribute("data-copy") || "";
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = "Copied";
+      setTimeout(() => { btn.textContent = "Copy"; }, 1500);
+    } catch (e) {
+      btn.textContent = "Select and copy";
+    }
   });
-
-  document.querySelectorAll('.prompt').forEach(article => {
-    const btn = article.querySelector('button.copy');
-    if (!btn) return;
-    btn.addEventListener('click', async () => {
-      const text = article.getAttribute('data-copy') || '';
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch(e) {
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        ta.remove();
-      }
-      const prev = btn.textContent;
-      btn.textContent = 'Copied';
-      btn.classList.add('done');
-      setTimeout(() => { btn.textContent = prev; btn.classList.remove('done'); }, 1500);
-    });
-  });
-})();
+});
 </script>
+</div>
 </body>
 </html>
