@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo slides · a blind search of this market</title>
+<style>
+:root{--ink:#14202e;--muted:#5d6b7a;--line:#e3e8ee;--card:#fff;--green:#2f6b3a;--soft:#eef5ef;--paper:#f7f8fa}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#1a222c;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink)}
+.frame{width:min(100vw,calc(100vh * 16 / 9));height:min(100vh,calc(100vw * 9 / 16));margin:auto;background:var(--paper);position:relative;overflow:hidden}
+.slide{display:none;position:absolute;inset:0;padding:6.5% 7%;flex-direction:column;justify-content:center}
+.slide.on{display:flex}
+.k{font-size:clamp(14px,1.8vw,22px);letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:800;margin:0 0 .8em}
+h1{font-size:clamp(42px,5.6vw,92px);letter-spacing:-.04em;line-height:1.02;margin:0 0 .35em;font-weight:800}
+.sub{font-size:clamp(22px,2.4vw,36px);color:var(--muted);font-weight:550;line-height:1.3;margin:0 0 1.2em;max-width:22em}
+.kw{list-style:none;padding:0;margin:0}
+.kw li{font-size:clamp(36px,4.6vw,72px);font-weight:750;letter-spacing:-.03em;line-height:1.15;margin:0 0 .2em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4vw;margin-top:.4em}
+.card{background:#fff;border:1px solid var(--line);border-radius:1.1vw;padding:1.6vw 1.5vw 1.7vw}
+.card .yrs{font-size:clamp(32px,3.4vw,54px);font-weight:800;letter-spacing:-.04em;line-height:1;margin:.15em 0 .35em}
+.card p{margin:0;font-size:clamp(16px,1.7vw,26px);line-height:1.35;color:var(--ink)}
+.prompts{display:grid;gap:1.2vw;margin-top:.2em}
+.prompt{background:#fff;border:1px solid var(--line);border-radius:1.1vw;padding:1.5vw 1.6vw;font-size:clamp(22px,2.4vw,38px);font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.story{list-style:none;padding:0;margin:0;font-size:clamp(22px,2.5vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.35}
+.story li{margin:0 0 .45em}
+.story b{font-weight:800}
+.asks{list-style:none;padding:0;margin:0}
+.asks li{font-size:clamp(26px,2.8vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.25;margin:0 0 .55em}
+.cue{margin-top:auto;padding-top:1.2em;font-size:clamp(15px,1.5vw,22px);color:var(--muted);font-weight:550;max-width:40em;line-height:1.35}
+.bar{position:absolute;left:7%;right:7%;bottom:3.2%;display:flex;align-items:center;justify-content:space-between;font-size:clamp(11px,1.15vw,16px);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.bar b{color:var(--green)}
+.dots{display:flex;gap:.45vw}
+.dots i{width:.7vw;height:.7vw;min-width:8px;min-height:8px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--green)}
+.searchbox{background:#fff;border:2px solid var(--green);border-radius:1.1vw;padding:1.6vw 1.7vw;margin:.3em 0 0}
+.searchbox p{margin:0;font-size:clamp(24px,2.6vw,40px);font-weight:750;letter-spacing:-.02em;line-height:1.3}
+.steps{margin:.9em 0 0;font-size:clamp(16px,1.7vw,26px);color:var(--muted);font-weight:550}
+#help{position:fixed;right:12px;bottom:12px;color:#9aa3ad;font:600 11px/1.3 Inter,sans-serif;letter-spacing:.04em;z-index:2}
+@media print{
+  @page{size:13.333in 7.5in;margin:0}
+  html,body{background:#fff;height:auto;overflow:visible}
+  #help,.bar{display:none}
+  .frame{width:auto;height:auto;margin:0;overflow:visible;position:static}
+  .slide{display:flex!important;position:relative;inset:auto;width:13.333in;height:7.5in;padding:0.7in 0.85in;break-after:page;break-inside:avoid;overflow:hidden}
+}
+</style>
+</head>
+<body>
+<div class="frame" id="frame">
+
+<section class="slide on" data-id="1">
+  <div class="k">A blind search of this market</div>
+  <h1>Metro Jacksonville</h1>
+  <p class="sub">A few keywords:</p>
+  <ul class="kw">
+    <li>mobile petting zoo</li>
+    <li>mobile goat yoga</li>
+  </ul>
+  <p class="cue">“We’re going to run a quick experiment and search a few keywords: mobile petting zoo, mobile goat yoga.”</p>
+</section>
+
+<section class="slide" data-id="2">
+  <div class="k">The usual suspects</div>
+  <h1>Long-time operators.</h1>
+  <p class="sub">Big ranches. Decades-old horse operations. On paper, one of these should come up first.</p>
+  <div class="cards">
+    <div class="card"><div class="yrs">41 years</div><p>Horses, carriages, and a mobile petting zoo.</p></div>
+    <div class="card"><div class="yrs">28 years</div><p>80+ acres. 40+ horses. On-site farm visits.</p></div>
+    <div class="card"><div class="yrs">17 years</div><p>Horses, carriages, and a mobile petting zoo.</p></div>
+  </div>
+  <p class="cue">“Plenty of providers have been doing this a long time. We’re specifically looking for mobile petting zoo and mobile goat yoga. You’d expect one of the usual shops to come up.”</p>
+</section>
+
+<section class="slide" data-id="search">
+  <div class="k">Live search</div>
+  <h1>Incognito. Logged out.</h1>
+  <p class="sub">Paste this. Wait. Don’t talk over the first result. When it settles, point.</p>
+  <div class="searchbox">
+    <p>What is the best option for mobile goat yoga and mobile petting zoo in Metro Jacksonville, Florida?</p>
+  </div>
+  <p class="steps">Fresh incognito window. No account that already knows the farm. Then: “Let’s see what happens.”</p>
+</section>
+
+<section class="slide" data-id="3">
+  <div class="k">After the result</div>
+  <h1>Now we have something to explain.</h1>
+  <p class="sub">An objective outside analysis. Anyone can confirm it by asking the same tool.</p>
+  <div class="prompts">
+    <div class="prompt">Why does this provider rank?</div>
+    <div class="prompt">Which of these has the most momentum online, and when was each one founded?</div>
+  </div>
+  <p class="cue">“This isn’t me talking. Anyone can ask the same questions and see what comes back.”</p>
+</section>
+
+<section class="slide" data-id="4">
+  <div class="k">Sheehan Homestead · Critters on Call</div>
+  <h1>A young farm.</h1>
+  <ul class="story">
+    <li>First customer, late 2023 — about <b>2.5 years</b> in business.</li>
+    <li>Mobile petting zoo since summer 2024 — about <b>16 months</b>.</li>
+    <li>A couple of acres. No horses or exotics yet.</li>
+    <li>Versus Jacksonville Carriage at <b>41 years</b>.</li>
+  </ul>
+</section>
+
+<section class="slide" data-id="asks">
+  <div class="k">A few ways to say yes</div>
+  <h1>If you want in.</h1>
+  <ul class="asks">
+    <li>A 49% silent-partner seat in the flagship — Franchise Zero.</li>
+    <li>Or a sponsorship.</li>
+    <li>I’ll leave the one-pager.</li>
+  </ul>
+</section>
+
+<div class="bar" id="bar"><span id="leftlabel">A blind search of this market</span><span class="dots" id="dots"></span><span id="pos"></span></div>
+</div>
+<div id="help">← → or space · click to advance</div>
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const labels=['1','2','Search','3','4','Asks'];
+  const dots=document.getElementById('dots');
+  const pos=document.getElementById('pos');
+  let i=0;
+  slides.forEach((_,n)=>{const el=document.createElement('i');if(n===0)el.className='on';dots.appendChild(el);});
+  function show(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach((s,k)=>s.classList.toggle('on',k===i));
+    [...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i));
+    pos.textContent=labels[i]+'  /  6';
+    document.getElementById('leftlabel').textContent = i>=3 ? 'Sheehan Homestead' : 'A blind search of this market';
+  }
+  function next(){show(i+1)}
+  function prev(){show(i-1)}
+  show(0);
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();next()}
+    if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){e.preventDefault();prev()}
+    if(e.key==='Home'){e.preventDefault();show(0)}
+    if(e.key==='End'){e.preventDefault();show(slides.length-1)}
+  });
+  document.getElementById('frame').addEventListener('click',e=>{
+    if(window.matchMedia('print').matches)return;
+    const x=e.clientX, mid=window.innerWidth/2;
+    if(x<mid) prev(); else next();
+  });
+})();
+</script>
+</body>
+</html>
