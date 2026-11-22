@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Three rules, in pictures · Day care, Santa, drop-off homeschool · Critters on Call</title>
+<style>
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Italic-Variable.ttf") format("truetype");font-weight:400 900;font-style:italic}
+@font-face{font-family:"Source Sans 3";src:url("local-goat/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900}
+@font-face{font-family:"Cinzel";src:url("local-goat/Cinzel-Variable.ttf") format("truetype");font-weight:400 900}
+:root{
+  --forest:#2F4F3E;
+  --forest-deep:#24382C;
+  --sage:#3A4F45;
+  --cream:#F3EEE4;
+  --cream-2:#EFE8DA;
+  --gold:#D4B45A;
+  --gold-deep:#B8923A;
+  --gold-lt:#E8D48C;
+  --ink:#1A241C;
+  --muted:#5A6B62;
+  --line:#D9D0C0;
+  --ok:#2E6B45;
+  --ok-bg:#E4F0E6;
+  --ok-bd:#8FBF9A;
+  --gray:#9A7A1A;
+  --gray-bg:#F8EFC8;
+  --gray-bd:#D4B45A;
+  --stop:#8B3A2F;
+  --stop-bg:#F6E4DF;
+  --stop-bd:#C9897E;
+  --card:#FFFcf7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:13.333in 7.5in;margin:0}
+html,body{
+  background:var(--forest-deep);
+  color:var(--ink);
+  font-family:"Source Sans 3",sans-serif;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+body{margin:0}
+@media screen{
+  html,body{overflow:auto;height:auto;padding:20px 0 40px}
+  .slide{margin:0 auto 24px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+}
+@media print{
+  html,body{overflow:hidden;background:#fff;padding:0}
+  .slide{margin:0;box-shadow:none}
+}
+.slide{
+  width:13.333in;
+  height:7.5in;
+  background:var(--cream);
+  position:relative;
+  overflow:hidden;
+  page-break-after:always;
+  break-after:page;
+  display:flex;
+  flex-direction:column;
+}
+.slide:last-child{page-break-after:auto;break-after:auto}
+.top{
+  background:var(--forest);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 .42in;
+  height:.46in;
+  border-bottom:3px solid var(--gold);
+  flex:none;
+}
+.top .brand{
+  font-family:"Cinzel",serif;
+  font-size:8.5pt;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.top .where{
+  font-size:8.2pt;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:650;
+  color:var(--gold-lt);
+}
+.foot{
+  background:var(--forest);
+  border-top:3px solid var(--gold);
+  height:.42in;
+  padding:0 .42in;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--cream);
+  font-size:8pt;
+  font-weight:600;
+  flex:none;
+}
+.foot .disc{color:rgba(243,238,228,.78);font-weight:500;font-size:7.4pt}
+.foot .pg{color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:8pt}
+.main{
+  flex:1;
+  padding:.22in .42in .16in;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+}
+.kicker{
+  font-family:"Cinzel",serif;
+  font-size:8pt;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  font-weight:700;
+  margin-bottom:.04in;
+}
+h1{
+  font-family:"Playfair Display",serif;
+  font-weight:600;
+  font-size:26pt;
+  line-height:1.05;
+  letter-spacing:-.01em;
+  color:var(--forest);
+}
+h1 em{font-style:italic;color:var(--gold-deep)}
+h1.sm{font-size:22pt}
+.lede{margin-top:.06in;font-size:11.5pt;line-height:1.35;color:var(--muted);max-width:11.6in}
+h2{
+  font-family:"Cinzel",serif;
+  font-size:7.6pt;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  font-weight:700;
+  margin:0 0 .06in;
+}
+/* traffic pills */
+.legend{display:flex;gap:.14in;margin-top:.2in}
+.pill{
+  flex:1;
+  border-radius:8px;
+  padding:.12in .16in;
+  border:1.5px solid;
+}
+.pill b{display:block;font-size:11pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.03in}
+.pill p{font-size:11pt;line-height:1.3;margin:0}
+.pill.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok)}
+.pill.ok p{color:var(--ink)}
+.pill.gy{background:var(--gray-bg);border-color:var(--gray-bd);color:var(--gray)}
+.pill.gy p{color:var(--ink)}
+.pill.st{background:var(--stop-bg);border-color:var(--stop-bd);color:var(--stop)}
+.pill.st p{color:var(--ink)}
+/* cover extras */
+.cover-row{display:flex;gap:.22in;align-items:stretch;margin-top:.18in;flex:1;min-height:0}
+.cover-left{flex:1;display:flex;flex-direction:column}
+.mark{
+  width:2.35in;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding-top:.04in;
+}
+.mark img{
+  width:1.85in;height:1.85in;
+  border-radius:50%;
+  border:3px solid var(--gold);
+  object-fit:cover;
+  background:#fff;
+  display:block;
+}
+.mark .co{
+  font-family:"Cinzel",serif;
+  font-size:7.2pt;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--gold-deep);
+  margin-top:.08in;
+  line-height:1.3;
+  font-weight:700;
+}
+.topics{display:flex;gap:.1in;margin-top:.18in}
+.topics span{
+  background:var(--forest);
+  color:var(--gold-lt);
+  border-radius:20px;
+  padding:.05in .14in;
+  font-size:9.5pt;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.note-box{
+  margin-top:.16in;
+  background:var(--forest);
+  color:var(--cream);
+  border-radius:8px;
+  padding:.12in .16in;
+  font-size:9.5pt;
+  line-height:1.35;
+}
+.note-box b{color:var(--gold)}
+.maprow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.12in;margin-top:.2in}
+.maprow div{background:#fff;border:1.5px solid var(--line);border-top:5px solid var(--forest);border-radius:8px;padding:.12in .14in}
+.maprow .n{font-family:"Cinzel",serif;font-size:7.2pt;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:.03in}
+.maprow h3{font-family:"Playfair Display",serif;font-size:14pt;color:var(--forest);font-weight:600;line-height:1.1;margin-bottom:.04in}
+.maprow p{font-size:10.5pt;line-height:1.3;color:var(--ink);margin:0}
+/* three col traffic */
+.tri{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.12in;flex:1;min-height:0;margin-top:.1in}
+.col{
+  border-radius:8px;
+  padding:.1in .12in .12in;
+  border:1.5px solid;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+.col.ok{background:var(--ok-bg);border-color:var(--ok-bd)}
+.col.gy{background:var(--gray-bg);border-color:var(--gray-bd)}
+.col.st{background:var(--stop-bg);border-color:var(--stop-bd)}
+.col h3{
+  font-size:9pt;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:.06in;
+  padding-bottom:.04in;
+  border-bottom:1.5px solid currentColor;
+}
+.col.ok h3{color:var(--ok)}
+.col.gy h3{color:var(--gray)}
+.col.st h3{color:var(--stop)}
+.col ul{list-style:none;margin:0}
+.col li{
+  font-size:8.7pt;
+  line-height:1.28;
+  padding:.035in 0 .035in .13in;
+  position:relative;
+  color:var(--ink);
+}
+.col li:before{
+  content:"";
+  position:absolute;
+  left:0;top:.13in;
+  width:.06in;height:.06in;
+  border-radius:50%;
+  background:currentColor;
+}
+.col.ok li:before{background:var(--ok)}
+.col.gy li:before{background:var(--gold-deep)}
+.col.st li:before{background:var(--stop)}
+.col li b{font-weight:750}
+.path{
+  margin-top:.1in;
+  background:var(--forest);
+  color:var(--cream);
+  border-radius:8px;
+  padding:.09in .16in;
+  font-size:10pt;
+  line-height:1.32;
+}
+.path b{color:var(--gold)}
+.path .lab{
+  font-family:"Cinzel",serif;
+  font-size:7.2pt;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+  display:block;
+  margin-bottom:.02in;
+}
+/* flows */
+.flow{display:flex;flex-direction:column;gap:.08in;margin-top:.1in;flex:none;min-height:0}
+.flow.fill{flex:1}
+.q{
+  background:var(--forest);
+  color:var(--cream);
+  border-radius:8px;
+  padding:.08in .14in;
+  font-size:11pt;
+  font-weight:650;
+  line-height:1.25;
+}
+.q span{color:var(--gold);font-weight:800}
+.branches{display:grid;gap:.1in}
+.branches.two{grid-template-columns:1fr 1fr}
+.branches.three{grid-template-columns:1fr 1fr 1fr}
+.box{
+  border-radius:8px;
+  padding:.08in .11in;
+  border:1.5px solid;
+  background:var(--card);
+}
+.box .tag{
+  font-size:7.4pt;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:.03in;
+}
+.box p{font-size:9.2pt;line-height:1.28;color:var(--ink);margin:0}
+.box.ok{border-color:var(--ok-bd);background:var(--ok-bg)}
+.box.ok .tag{color:var(--ok)}
+.box.gy{border-color:var(--gray-bd);background:var(--gray-bg)}
+.box.gy .tag{color:var(--gray)}
+.box.st{border-color:var(--stop-bd);background:var(--stop-bg)}
+.box.st .tag{color:var(--stop)}
+.box.nv{border-color:var(--line);background:#fff}
+.box.nv .tag{color:var(--forest)}
+.caps{display:grid;grid-template-columns:repeat(4,1fr);gap:.08in;margin-top:.08in}
+.cap{
+  background:var(--forest);
+  color:var(--cream);
+  border-radius:7px;
+  padding:.07in .09in;
+  text-align:center;
+}
+.cap b{display:block;font-family:"Playfair Display",serif;font-size:13pt;color:var(--gold);font-weight:600;line-height:1.05}
+.cap span{display:block;font-size:7.6pt;line-height:1.2;color:rgba(243,238,228,.88);margin-top:.02in}
+.fine{font-size:8.2pt;line-height:1.3;color:var(--muted);margin-top:.07in}
+.arrow{display:flex;align-items:center;gap:.12in;color:var(--gold-deep);font-size:8pt;font-weight:800;letter-spacing:.12em;line-height:1;margin:.01in 0}
+.arrow:before,.arrow:after{content:"";flex:1;height:1.5px;background:var(--gold);opacity:.85}
+.box .if{display:inline-block;background:var(--forest);color:var(--gold-lt);font-size:6.8pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:8px;padding:.015in .07in;margin-right:.05in;vertical-align:1px}
+/* sources */
+.srcgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.12in;margin-top:.12in;flex:none;align-items:start}
+.src{
+  background:#fff;
+  border:1.5px solid var(--line);
+  border-radius:8px;
+  padding:.1in .12in;
+}
+.src h3{
+  font-family:"Playfair Display",serif;
+  font-size:13pt;
+  color:var(--forest);
+  font-weight:600;
+  margin-bottom:.06in;
+  padding-bottom:.04in;
+  border-bottom:2px solid var(--gold);
+}
+.src a,.src p{
+  display:block;
+  font-size:8.6pt;
+  line-height:1.38;
+  color:var(--ink);
+  text-decoration:none;
+  padding:.03in 0;
+}
+.src a{color:var(--forest);font-weight:650}
+.src a:hover{text-decoration:underline}
+/* bottom-line cards */
+.bl{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.14in;margin-top:.16in;flex:none;align-items:stretch}
+.bl .card{
+  background:#fff;
+  border:1.5px solid var(--line);
+  border-top:6px solid var(--forest);
+  border-radius:8px;
+  padding:.14in .16in .16in;
+}
+.bl h3{
+  font-family:"Playfair Display",serif;
+  font-size:17pt;
+  color:var(--forest);
+  font-weight:600;
+  margin-bottom:.1in;
+  line-height:1.1;
+}
+.bl ol{margin:0 0 0 .2in;padding:0}
+.bl li{font-size:11.5pt;line-height:1.38;margin:0 0 .1in;color:var(--ink)}
+.bl li b{color:var(--forest)}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">Callahan · Nassau · Jax · St. Johns · Nov 22, 2026</div>
+  </div>
+  <div class="main">
+    <div class="cover-row">
+      <div class="cover-left">
+        <div class="kicker">Field briefing · not legal advice</div>
+        <h1>Three rules, <em>in pictures.</em></h1>
+        <p class="lede">What Florida actually requires — and the gray area people usually operate in — for in-home day care, playing Santa or other characters, and drop-off homeschool. Written for our small-acre homestead in Callahan, and for the Duval and St. Johns jobs we already run.</p>
+        <div class="topics">
+          <span>1 · In-home day care</span>
+          <span>2 · Santa and characters</span>
+          <span>3 · Drop-off homeschool</span>
+        </div>
+        <div class="legend">
+          <div class="pill ok"><b>Strict · green</b><p>What the 2026 Florida Statutes, DCF, or the local ordinance actually require.</p></div>
+          <div class="pill gy"><b>Gray · gold</b><p>What operators commonly do, and the realistic chance it gets enforced.</p></div>
+          <div class="pill st"><b>Tripwire · red</b><p>What usually triggers a license, an inspection, a school badge, or a claim.</p></div>
+        </div>
+        <div class="maprow">
+          <div><div class="n">Slides 2–3</div><h3>In-home day care</h3><p>The decision flow first, then the license bar: training, screening, insurance, and the fastest clean path at the homestead.</p></div>
+          <div><div class="n">Slide 4</div><h3>Santa and characters</h3><p>No Santa license. The real gates are trademarks, school badges, sales tax, and event insurance.</p></div>
+          <div><div class="n">Slides 5–6</div><h3>Drop-off homeschool</h3><p>Parent-present farm days versus paid drop-off, and the only exemptions that actually exist.</p></div>
+        </div>
+        <div class="note-box">This is a planning brief, <b>not legal advice</b> and not a substitute for a Florida attorney or a call to the DCF licensing office. Confirm anything you will rely on. Sources and links are on the last slide. Statutes cited are the 2026 Florida Statutes, checked November 22, 2026 (America/New_York).</div>
+      </div>
+      <div class="mark">
+        <img src="local-goat/sophie-logo.png" alt="Sophie the Great Pyrenees and the Critters on Call animal family">
+        <div class="co">Critters on Call<br>Sheehan Homestead</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div>In-home day care · Santa and characters · Drop-off homeschool</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">1 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">1 of 3 · In-home day care · Decision flow</div>
+  </div>
+  <div class="main">
+    <div class="kicker">In-home day care</div>
+    <h1 class="sm">The first question is not “can I.” <em>It is “what am I actually doing.”</em></h1>
+    <div class="flow">
+      <div class="q">Start here: is this <span>paid, regular care</span> (a fee, on a schedule), with the parent leaving the child with you? Florida defines child care that way in FS 402.302(1).</div>
+      <div class="arrow">▼  THEN ASK WHO IS IN CARE</div>
+      <div class="branches three">
+        <div class="box ok"><div class="tag">Green · usually not day care</div><p><span class="if">If no</span> Parents stay for a farm day, a class, or goat yoga. Or it is unpaid, occasional, and not on a regular schedule. That is an activity, not a day-care home.</p></div>
+        <div class="box gy"><div class="tag">Gold · one other family</div><p><span class="if">If yes, one family</span> Paid, regular care for children from <b>only one unrelated family</b> (plus your own) is not a “family child care home” under FS 402.302(8). The line is real. It disappears the day a second family is added. Still get a liability endorsement.</p></div>
+        <div class="box st"><div class="tag">Red · two or more families</div><p><span class="if">If yes, two+ families</span> Paid, regular care in your occupied home for children from <b>at least two unrelated families</b> is a family child care home. In <b>Nassau, Duval, and St. Johns, a LICENSE is required</b>. DCF registration is not allowed in these counties.</p></div>
+      </div>
+      <div class="arrow">▼  TWO MORE CHECKS, EITHER WAY</div>
+      <div class="branches two">
+        <div class="box nv"><div class="tag">A further tripwire</div><p><b>More than five children unrelated to you</b>, anywhere you operate, is a child care <b>facility</b> under FS 402.302(2), unless a listed exemption fits. That is a different, heavier license than a family home.</p></div>
+        <div class="box nv"><div class="tag">Who licenses us here</div><p>Nassau, Duval, and St. Johns require licensure of family homes, but <b>DCF is still the licensing agency</b> (only Broward, Palm Beach, Pinellas, and Sarasota run their own). Apply in CARES, pay the fee, pass a pre-license inspection. Unlicensed operation is a first-degree misdemeanor: FS 402.319.</p></div>
+      </div>
+      <div class="caps">
+        <div class="cap"><b>4</b><span>Infants, birth to 12 months, if that is the whole group</span></div>
+        <div class="cap"><b>6</b><span>Max if 3 infants plus others — or 6 preschool, all over 12 months</span></div>
+        <div class="cap"><b>10</b><span>Max if no more than 5 are preschool, and of those, no more than 2 are under 12 months</span></div>
+        <div class="cap"><b>+1</b><span>Your daughter, under 13, counts in the cap whenever she is on the premises</span></div>
+      </div>
+      <p class="fine">Those caps are FS 402.302(8), and they include household children under 13. A “large family child care home” (up to 12, with two staff) is a later license: two years as a licensed family home, a CDA or equivalent for one year, and a 40-hour group-care course — FS 402.302(11) and 402.3131. Zoning: a licensed family home is a valid residential use. Counties and cities may not require a special permit or a zoning fee over $50 (FS 125.0109 and 166.0445). Nassau’s land-development code already lists licensed family homes as a permitted use in every residential district. HOA covenants are not preempted. If the homestead sits inside Town of Callahan limits, the town’s home-occupation rules may also appear; the state residential-use protection still applies to a licensed family home.</p>
+    </div>
+  </div>
+  <div class="foot">
+    <div>FS 402.302, 402.313, 402.319, 125.0109, 166.0445 · DCF family-home list · Nassau LDC § 28.14</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">2 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">1 of 3 · In-home day care · Strict, gray, tripwires</div>
+  </div>
+  <div class="main">
+    <div class="kicker">In-home day care</div>
+    <h1 class="sm">If it is a family child care home, <em>here is the real bar.</em></h1>
+    <div class="tri">
+      <div class="col ok">
+        <h3>Strict · required</h3>
+        <ul>
+          <li><b>License, not registration,</b> in Nassau, Duval, and St. Johns. DCF issues it.</li>
+          <li><b>30-hour</b> intro course and exam, plus a one-time <b>5-hour early-literacy</b> course, before caring for children (35 hours total). The <b>40-hour</b> course is for large homes and centers, not this first license.</li>
+          <li><b>Level 2 screening</b> for the operator, substitutes, and household members 18 and older. Ages 12–17: delinquency screen, no fingerprints. FS 402.313(3).</li>
+          <li>A written <b>emergency substitute</b> plan, current immunization records, an annual health-and-safety self-check given to parents, and <b>10 hours / 1 CEU</b> every year.</li>
+          <li>Your <b>homeowner’s policy does not cover day-care claims</b> unless a rider or commercial liability policy says so. FS 627.70161. The insurer cannot cancel the house policy just because you are licensed, but it can if you are unlicensed, over capacity, or have no liability cover.</li>
+          <li><b>CACFP</b> meal reimbursements are optional, through a sponsor, once you are licensed. Not a license requirement.</li>
+        </ul>
+      </div>
+      <div class="col gy">
+        <h3>Gray · common practice</h3>
+        <ul>
+          <li>The <b>one-family</b> arrangement is the statutory gap operators use. It is real. It is also the first thing DCF will ask about if someone complains.</li>
+          <li>“Just helping a friend” only stays outside the statute if it is not regular paid care for two or more unrelated families.</li>
+          <li>People often skip the commercial liability rider and hope the house policy holds. After a claim, it usually will not. FS 627.70161 says so in plain language.</li>
+          <li>Informal evening or weekend sitting, with no advertising and no regular fee, is less likely to draw a licensing visit — until there is an injury or a neighbor complaint.</li>
+        </ul>
+      </div>
+      <div class="col st">
+        <h3>Tripwires</h3>
+        <ul>
+          <li>A <b>second family’s</b> children, a regular fee, and parents who drop off.</li>
+          <li>Advertising “daycare,” “aftercare,” or “drop-off” at the homestead.</li>
+          <li><b>More than five</b> children unrelated to you — that is a facility, not a family home.</li>
+          <li>An injury, plus no license, plus a misrepresentation to a parent. If a child is badly hurt, FS 402.319(2) can make that a <b>second-degree felony</b>.</li>
+          <li>A neighbor or HOA call to DCF. HOA covenants can still prohibit the use even when zoning cannot.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="path"><span class="lab">Fastest legit path for us</span><b>Do not turn the homestead into multi-family paid day care unless you want a DCF license.</b> Keep farm days parent-present. Watching one other family, plus your own daughter, stays outside the family-home definition — still add a liability endorsement. If you want real day care later: apply to DCF for a licensed family child care home, finish the 35 hours, screen the household, and buy the rider. Zoning is already on your side. Your daughter counts in the cap whenever she is home.</div>
+  </div>
+  <div class="foot">
+    <div>FS 402.313, 402.3131, 402.319, 627.70161 · DCF training pages · 65C-20, F.A.C.</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">3 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">2 of 3 · Santa and other characters</div>
+  </div>
+  <div class="main">
+    <div class="kicker">Santa and other characters</div>
+    <h1 class="sm">Florida does not license Santa. <em>Schools, trademarks, and tax still do.</em></h1>
+    <div class="q" style="margin:.08in 0 .1in">There is <span>no state license</span> to appear as Santa, Mrs. Claus, or a generic holiday character. The gates that actually matter are trademark, school screening, sales tax, and insurance.</div>
+    <div class="tri">
+      <div class="col ok">
+        <h3>Strict · required</h3>
+        <ul>
+          <li>A local <b>business tax receipt</b> where the city or county requires one (ch. 205, F.S.).</li>
+          <li>If you sell <b>prints, albums, or a USB</b> of photos-with-Santa, collect Florida sales tax (6% plus the county surtax) on the whole charge, including a sitting fee tied to that sale. Fla. Admin. Code 12A-1.041. Digital-only delivery (email or download, no physical medium) is generally not taxable.</li>
+          <li>The state does not require liability insurance to “be Santa.” Venues and schools almost always do. Carry a certificate.</li>
+          <li><b>School grounds, students present:</b> Jessica Lunsford Act. Contractors with student contact or control of school funds need Level 2 screening, FS 1012.465. Other contractors on campus when students are present need a fingerprint check, FS 1012.467. In Duval, vendors go through Applicant Services; volunteers go through <b>ADDitions</b> (registry screen; Level 2 for unsupervised or chaperone roles).</li>
+          <li>A child-care or school contract can also trigger Level 2 under ch. 435 / 402.</li>
+        </ul>
+      </div>
+      <div class="col gy">
+        <h3>Gray · common practice</h3>
+        <ul>
+          <li>A farm Santa, a parade, or a private party does not need a character license.</li>
+          <li>Trademarked names and looks — <b>Disney, Marvel, Elsa, Spider-Man</b> and the rest — cannot be used in ads, flyers, invoices, or “as if licensed” meet-and-greets. Operators commonly use generic wording: “a princess,” “a superhero,” “holiday character,” “inspired-by.” That lowers, but does not erase, IP risk if the costume is an obvious copy and you charge for it.</li>
+          <li>A one-off farm Santa with parents present is not child care.</li>
+          <li>Neighborhood appearances without a school contract usually skip Level 2 — until a venue or district asks for the badge.</li>
+        </ul>
+      </div>
+      <div class="col st">
+        <h3>Tripwires</h3>
+        <ul>
+          <li>A flyer or Facebook ad that says <b>“Meet Elsa”</b> or <b>“Spider-Man photos.”</b></li>
+          <li>Walking onto a school campus without the district vendor or volunteer badge.</li>
+          <li>Selling prints and not collecting sales tax.</li>
+          <li>A character left alone with children, or a drop-off “visit with Santa.”</li>
+          <li>Claiming you are “licensed,” “official,” or bonded when you are not.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="path"><span class="lab">Fastest legit path for us</span><b>Farm Santa is the clean version:</b> generic Santa and farm helpers, parents stay, our event liability is current, the local business tax receipt is current, and we tax the prints. For school visits, get the vendor Level 2 / district badge first (Duval Applicant Services; the same idea in Nassau and St. Johns). Do not advertise official characters unless the rights holder has licensed you.</div>
+  </div>
+  <div class="foot">
+    <div>FS 1012.465, 1012.467 · ch. 205 · Fla. Admin. Code 12A-1.041 · DCPS ADDitions / Applicant Services</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">4 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">3 of 3 · Drop-off homeschool · Decision flow</div>
+  </div>
+  <div class="main">
+    <div class="kicker">Drop-off homeschool</div>
+    <h1 class="sm">Home education is parent-directed. <em>Drop-off is a different legal box.</em></h1>
+    <div class="flow">
+      <div class="q">FS 1002.41 is the parent’s program: they notify the district superintendent, keep a portfolio, and file an annual evaluation. No required hours, no teaching certificate. <span>We do not become their home-ed provider</span> just because they come to the farm. The question is whether parents leave and we take over supervision, for a fee, on a regular schedule — that is child care under FS 402.302(1).</div>
+      <div class="arrow">▼  DO PARENTS STAY, OR DO THEY DROP OFF?</div>
+      <div class="branches two">
+        <div class="box ok"><div class="tag">Green · the clean path</div><p><span class="if">If parents stay</span> <b>Parents stay</b> for Homeschool Farm Days, or a parent-volunteer of an enrolled child is on site the whole time and still in charge. The parent remains the 1002.41 provider. This is an enrichment visit, not drop-off care.</p></div>
+        <div class="box st"><div class="tag">Red · regular paid drop-off</div><p><span class="if">If they drop off</span> Parents leave, you supervise, a fee is paid, and it happens on a schedule. In the home, two or more unrelated families → family child care home license (required in Nassau). More than five unrelated children, anywhere → facility license, unless a statutory exemption actually fits.</p></div>
+      </div>
+      <div class="arrow">▼  IF IT IS DROP-OFF, THESE ARE THE ONLY BOXES THAT SOMETIMES FIT</div>
+      <div class="branches" style="grid-template-columns:1.15fr 1fr 1fr 1fr">
+        <div class="box nv"><div class="tag">Private school · FS 1002.42 / 402.3025</div><p>Register with FLDOE (annual survey, owner fingerprints). Programs for <b>5-year-old kindergarten and grades 1+</b> are not child care. <b>Under 3 is always child care.</b> Ages 3–4 avoid facility licensure only if the school operates and staffs the program, a majority of the school’s enrollment is 5 or older, and staff are screened.</p></div>
+        <div class="box nv"><div class="tag">Church · FS 402.316</div><p>Only if the program is an <b>integral part</b> of a church or parochial school with regularly scheduled classes, and is accredited by — or a member of — an organization that publishes and requires health, safety, and sanitation standards. Level 2 screening still required. The statutory disclosure must appear on the website and in materials.</p></div>
+        <div class="box nv"><div class="tag">Summer camp · 402.302(2)</div><p><b>Summer day camps</b> and vacation Bible schools are excluded from the child-care-facility definition. That is a summer fact, not a year-round loophole. Do not stretch “camp” into the school year.</p></div>
+        <div class="box nv"><div class="tag">Other boxes that look tempting</div><p><b>Membership organizations</b> (FS 402.301(6)) are the Scout / YMCA shape: national, nonprofit, nominal annual fee, and they “do not provide child care.” Not a for-profit farm. <b>Drop-in</b> care: parent must remain, max 4 hours, and it still has to meet facility rules unless separately exempted.</p></div>
+      </div>
+      <p class="fine">There is no general “under X hours” cap that turns regular paid drop-off into non-care. The four-hour figures apply to drop-in care (parent must stay) and to indoor recreational facilities (which are still licensed). A signed paper saying “the parent remains the educational provider” only helps if the facts match — the parent is actually responsible, not dropping children for the day.</p>
+    </div>
+    <div class="path"><span class="lab">Fastest legit path for us</span><b>Keep parents on site.</b> That is already how Homeschool Farm Days work, and it is the only path that does not require a new license, a private-school filing, or a church-school structure.</div>
+  </div>
+  <div class="foot">
+    <div>FS 1002.41, 1002.42, 402.301(6), 402.302, 402.3025, 402.316</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">5 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">3 of 3 · Drop-off homeschool · Strict, gray, tripwires</div>
+  </div>
+  <div class="main">
+    <div class="kicker">Drop-off homeschool</div>
+    <h1 class="sm">What hybrids actually do, <em>and what gets them in trouble.</em></h1>
+    <div class="tri">
+      <div class="col ok">
+        <h3>Strict · required</h3>
+        <ul>
+          <li>A Florida home education program belongs to the <b>parent</b>, not to a farm, a co-op, or a teacher they hire. FS 1002.41.</li>
+          <li>Paid, regular drop-off is <b>child care</b> unless a listed exemption in ch. 402 actually applies. The label — “enrichment,” “co-op,” “hybrid,” “farm school” — does not decide it. The facts do.</li>
+          <li>Opening a <b>private school</b> means the FLDOE survey, owner fingerprints, and a real educational program. It does not legalize infant or toddler drop-off. FS 1002.42 and 402.3025.</li>
+          <li>A church exemption is lost if screening is skipped, and the program must print the statutory “not licensed by DCF” disclosure. FS 402.316(6).</li>
+          <li>Personnel who care for children <b>15 hours or more a week</b> in a school, membership organization, or 402.316-exempt program are still in the screening net. FS 402.302(3).</li>
+        </ul>
+      </div>
+      <div class="col gy">
+        <h3>Gray · common practice</h3>
+        <ul>
+          <li>The usual Northeast Florida hybrid keeps <b>parents on site</b>, or rotates parent-volunteers so a parent is always present. That is the model that holds up.</li>
+          <li>Families sign that the parent remains the 1002.41 provider and the farm is a class or field trip. Useful only when parents are not actually leaving.</li>
+          <li>A “church umbrella” is commonly claimed. It only works if the program truly is an integral church or parochial school under 402.316 — not a rented name.</li>
+          <li>“We stay under X hours, so it isn’t day care” is mostly <b>folklore</b>. There is no general hour cap for that.</li>
+          <li>Summer “camp” branding in June and July is widely used. Using it in October is a tripwire.</li>
+        </ul>
+      </div>
+      <div class="col st">
+        <h3>Tripwires</h3>
+        <ul>
+          <li>Advertising <b>“drop-off homeschool,”</b> “day camp” during the school year, or “aftercare.”</li>
+          <li>A regular weekly drop-off for a fee, even if you call it enrichment.</li>
+          <li><b>Children under 3</b> in a “school” program.</li>
+          <li>Claiming a church exemption you do not qualify for, or skipping the required disclosure.</li>
+          <li>An injury, a complaint to DCF, or taking School Readiness or scholarship money for a program that is not licensed for care.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="path"><span class="lab">Fastest legit path for us</span><b>Keep Homeschool Farm Days parent-present.</b> That is already the clean model, and it matches how Florida treats home education. If you later want true drop-off for school-age children, do it the long way: a licensed program, or a real private school under FS 1002.42 aimed at kindergarten and up, with screening — and still license any care for children under 3. Do not start drop-off preschool at the homestead without a DCF license.</div>
+  </div>
+  <div class="foot">
+    <div>FS 1002.41, 1002.42, 402.302, 402.3025, 402.316 · FLDOE Home Education FAQ</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">6 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 7 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">What this means at the homestead</div>
+  </div>
+  <div class="main">
+    <div class="kicker">The bottom line</div>
+    <h1 class="sm">Three decisions, <em>already in reach.</em></h1>
+    <p class="lede">This is the short version to operate from. The statutes and agency links are on the next slide.</p>
+    <div class="bl">
+      <div class="card">
+        <h3>In-home day care</h3>
+        <ol>
+          <li><b>Do not open a multi-family day care</b> at the homestead unless you are ready to get a DCF family child care home license. Nassau requires a license, not a registration.</li>
+          <li><b>One other family</b> is the statutory line; your daughter counts in the cap if you do license. Add a liability endorsement either way — the house policy will not cover this.</li>
+          <li><b>Keep farm days parent-present.</b> That is an activity, not day care, and it is the fastest clean path.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Santa and characters</h3>
+        <ol>
+          <li><b>Farm Santa is fine</b> with no character license: generic Santa, parents stay, event liability and the business tax receipt current, tax the prints.</li>
+          <li><b>Never advertise Elsa, Spider-Man, Disney, or Marvel</b> unless you are licensed by the rights holder. Say “a princess” or “a superhero.”</li>
+          <li><b>School visits need the badge first</b> — Level 2 / Jessica Lunsford for contractors on campus when students are present. In Duval, that is Applicant Services or ADDitions.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Drop-off homeschool</h3>
+        <ol>
+          <li><b>Parents stay.</b> They remain the FS 1002.41 provider; we host the farm day. This is the model to keep.</li>
+          <li><b>Regular paid drop-off is child care,</b> whatever we name it. There is no general “under X hours” escape hatch.</li>
+          <li><b>If drop-off is the goal later,</b> build a licensed program or a real K+ private school. Do not start drop-off preschool without a DCF license.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="path" style="margin-top:.18in"><span class="lab">Hold this while you decide</span>Farm days and farm Santa, with parents present, are already the clean versions of all three. License only if you want true drop-off or multi-family paid care. Confirm anything you will rely on with a Florida attorney or the DCF licensing office — this brief is not legal advice.</div>
+  </div>
+  <div class="foot">
+    <div>Sheehan Homestead · a small-acre homestead in Callahan, FL</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">7 / 8 · v=1122h</div>
+  </div>
+</section>
+
+<!-- SLIDE 8 -->
+<section class="slide">
+  <div class="top">
+    <div class="brand">Critters on Call · Sheehan Homestead</div>
+    <div class="where">Primary sources · 2026 Florida Statutes · checked Nov 22, 2026</div>
+  </div>
+  <div class="main">
+    <div class="kicker">Read the law, not a summary of it</div>
+    <h1 class="sm">Sources. <em>Every rule on this deck traces here.</em></h1>
+    <div class="srcgrid">
+      <div class="src">
+        <h3>In-home day care</h3>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/0402.302">FS 402.302 — definitions, caps, large home, drop-in, facility exclusions</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/402.313">FS 402.313 — family child care homes: license vs registration, 30-hour training, screening</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/0402.3131">FS 402.3131 — large family child care homes (40-hour course)</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/402.319">FS 402.319 — penalties, including unlicensed operation</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/0125.0109">FS 125.0109 and 166.0445 — family homes are a valid residential use</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/0627.70161">FS 627.70161 — house policy does not cover day-care liability</a>
+        <a href="https://www.myflfamilies.com/services/child-family/child-care/child-care-providers-and-staff/about-family-child-care-home">DCF — counties where registration is not permitted (includes Nassau, Duval, St. Johns)</a>
+        <a href="https://www.myflfamilies.com/services/licensing/child-care-licensure">DCF — child care licensure (DCF licenses 63 counties)</a>
+      </div>
+      <div class="src">
+        <h3>Santa and characters</h3>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/1012.465">FS 1012.465 — Level 2 for school contractors with student contact</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/1012.467">FS 1012.467 — fingerprint check for other contractors on campus when students are present</a>
+        <a href="https://www.fdle.state.fl.us/jla">FDLE — Jessica Lunsford Act information</a>
+        <a href="https://www.duvalschools.org/o/humanresources/page/frequently-asked-questions-family-and-community-engagement-volunteers">Duval Schools — ADDitions volunteer screening FAQ</a>
+        <a href="https://applicantservices.com/DCPS">Duval Schools — vendor / contractor fingerprinting</a>
+        <a href="https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-12A-1.041">Fla. Admin. Code 12A-1.041 — tax on photographs and prints</a>
+        <a href="https://floridarevenue.com/taxes/taxesfees/pages/sales_tax.aspx">Florida DOR — sales and use tax</a>
+        <p>Trademark: do not use Disney, Marvel, or other protected names or looks in advertising without a license from the rights holder. Generic wording (“a princess,” “a superhero”) is the usual operating practice, not a grant of rights.</p>
+      </div>
+      <div class="src">
+        <h3>Drop-off homeschool</h3>
+        <a href="https://leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=1000-1099%2F1002%2FSections%2F1002.41.html">FS 1002.41 — home education programs</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/1002.42">FS 1002.42 — private schools, annual survey, owner fingerprints</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/402.301">FS 402.301(6) — membership-organization exemption</a>
+        <a href="https://www.flsenate.gov/Laws/Statutes/2026/402.3025">FS 402.3025 — when a school program is, and is not, child care</a>
+        <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0400-0499%2F0402%2FSections%2F0402.316.html">FS 402.316 — church and parochial exemptions; required disclosure</a>
+        <a href="https://www.fldoe.org/core/fileparse.php/18379/urlt/ParentHomeEdFAQ.pdf">FLDOE — Parent Home Education FAQ (no hourly requirement)</a>
+        <a href="https://www.fldoe.org/schools/school-choice/private-schools/opening-a-private-school.stml">FLDOE — opening a private school</a>
+        <p>Nassau Land Development Code § 28.14(B)(6): licensed family child care homes are a permitted use in all residential districts. Chapter 2026-140 renamed “family day care home” to “family child care home.”</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div>Checked November 22, 2026 (America/New_York) against the 2026 Florida Statutes and the agency pages above.</div>
+    <div class="disc">Not legal advice. For planning only.</div>
+    <div class="pg">8 / 8 · v=1122h</div>
+  </div>
+</section>
+
+</body>
+</html>
