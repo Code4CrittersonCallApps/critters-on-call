@@ -2,241 +2,231 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Goat in a Note · Critters on Call</title>
+<title>Goat in a Note</title>
 <style>
-@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
-@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Italic-Variable.ttf") format("truetype");font-weight:400 900;font-style:italic}
-@font-face{font-family:"Source Sans 3";src:url("local-goat/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900}
-@font-face{font-family:"Cinzel";src:url("local-goat/Cinzel-Variable.ttf") format("truetype");font-weight:400 900}
-
-:root{
-  --forest:#3A4F45;
-  --gold:#c9a227;
-  --cream:#F3EEE4;
-  --ink:#1a241c;
-  --dash:rgba(58,79,69,0.38);
+@page { size: 8.5in 11in; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 8.5in;
+  height: 11in;
+  background: #fff;
+  color: #000;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-@page{size:Letter;margin:0}
-html,body{
-  width:8.5in;height:11in;margin:0;padding:0;
-  background:#fff;color:var(--ink);
-  font-family:"Source Sans 3","Liberation Sans",sans-serif;
-  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+.sheet {
+  position: relative;
+  width: 8.5in;
+  height: 11in;
+  overflow: hidden;
+  background: #fff;
 }
-.screen-note{display:none}
-@media screen{
-  html,body{width:auto;height:auto;background:#e8e2d4;padding:24px 16px 48px}
-  .screen-note{display:block;max-width:8.5in;margin:0 auto 14px;font-size:13px;color:var(--forest);line-height:1.4}
-  .page{margin:0 auto;box-shadow:0 8px 28px rgba(26,36,28,.18)}
+.grid {
+  display: grid;
+  grid-template-columns: 4.25in 4.25in;
+  grid-template-rows: repeat(4, 2.75in);
+  width: 8.5in;
+  height: 11in;
 }
-
-.page{width:8.5in;height:11in;background:var(--cream);position:relative;overflow:hidden}
-.grid{
-  width:8.5in;height:11in;
-  display:grid;
-  grid-template-columns:4.25in 4.25in;
-  grid-template-rows:repeat(4, 2.75in);
+.card {
+  width: 4.25in;
+  height: 2.75in;
+  padding: 0.16in 0.24in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #000;
+  background: #fff;
 }
-.cuts{position:absolute;inset:0;pointer-events:none;z-index:2}
-.cuts .v{position:absolute;top:0;bottom:0;left:4.25in;width:0;border-left:0.7pt dashed var(--dash);transform:translateX(-0.35pt)}
-.cuts .h{position:absolute;left:0;right:0;height:0;border-top:0.7pt dashed var(--dash);transform:translateY(-0.35pt)}
-.cuts .h1{top:2.75in}
-.cuts .h2{top:5.50in}
-.cuts .h3{top:8.25in}
-
-.note{
-  width:4.25in;height:2.75in;
-  padding:0.16in 0.18in 0.14in;
-  background:var(--cream);
-  color:var(--ink);
-  display:flex;flex-direction:column;
-  overflow:hidden;
+.thanks {
+  font-size: 13pt;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.1in;
 }
-.top{display:flex;align-items:flex-start;gap:0.09in;margin-bottom:0.10in}
-.top img{
-  width:0.36in;height:0.36in;border-radius:50%;
-  border:1.25px solid var(--gold);
-  object-fit:cover;background:#fff;flex-shrink:0;margin-top:0.02in;
+.bullets {
+  list-style: none;
+  font-size: 11pt;
+  line-height: 1.28;
 }
-.kicker{
-  font-family:"Cinzel",serif;font-weight:700;font-size:7pt;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
-  line-height:1;margin:0 0 0.03in;
+.bullets > li {
+  margin-bottom: 0.065in;
+  padding-left: 0.16in;
+  position: relative;
 }
-h1{
-  font-family:"Playfair Display",Georgia,serif;
-  font-weight:800;font-size:13.5pt;line-height:1.08;
-  color:var(--forest);letter-spacing:-0.02em;
+.bullets > li:last-child { margin-bottom: 0; }
+.bullets > li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-.thanks{
-  font-size:11pt;line-height:1.28;color:var(--ink);
-  margin:0 0 0.11in;
+.q { font-weight: bold; }
+.sub {
+  list-style: none;
+  margin-top: 0.03in;
+  padding-left: 0.12in;
 }
-.line{
-  font-size:10.5pt;line-height:1.32;color:var(--ink);
-  margin:0 0 0.10in;
+.sub li {
+  padding-left: 0.15in;
+  position: relative;
+  margin-top: 0.02in;
 }
-.line b{color:var(--forest);font-weight:700}
-.foot{
-  margin-top:auto;
-  border-top:0.7pt solid rgba(201,162,39,0.65);
-  padding-top:0.08in;
+.sub li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
 }
-.cheers{
-  font-family:"Playfair Display",Georgia,serif;
-  font-style:italic;font-weight:700;
-  font-size:13pt;color:var(--forest);line-height:1.1;
+.cheers {
+  margin-top: 0.1in;
+  font-size: 11pt;
+  line-height: 1.2;
 }
+.cuts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.cuts .v {
+  position: absolute;
+  top: 0;
+  left: 4.25in;
+  height: 11in;
+  border-left: 0.6pt dashed #bbb;
+}
+.cuts .h {
+  position: absolute;
+  left: 0;
+  width: 8.5in;
+  border-top: 0.6pt dashed #bbb;
+}
+.cuts .h1 { top: 2.75in; }
+.cuts .h2 { top: 5.5in; }
+.cuts .h3 { top: 8.25in; }
 </style>
 </head>
 <body>
-<p class="screen-note">Goat in a Note · print this letter page and cut on the dashed lines. Eight identical notes, 4.25 × 2.75 in. No QR code. Nothing has been sent.</p>
-<div class="page">
+<div class="sheet">
+  <div class="grid">
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+    <div class="card">
+      <div class="thanks">Thank you for making our community better.</div>
+      <ul class="bullets">
+        <li><span class="q">What is this?</span> A thank-you from a fellow local provider, and a keepsake.</li>
+        <li><span class="q">Do I have to do anything?</span> Nope.</li>
+        <li><span class="q">Can I?</span> Yes, two free gifts:
+          <ul class="sub">
+            <li>Your goat stands in for a Gold membership worth $100+. Gift it to anyone.</li>
+            <li>A free Stead Shout, a reel featuring you on our monetized page. We have almost 10,000 followers, and one of our videos hit 100,000 views.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="cheers">Cheers, Michael</div>
+    </div>
+  </div>
   <div class="cuts" aria-hidden="true">
     <div class="v"></div>
     <div class="h h1"></div>
     <div class="h h2"></div>
     <div class="h h3"></div>
-  </div>
-  <div class="grid">
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
-    <article class="note">
-      <div class="top">
-        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
-        <div>
-          <div class="kicker">Critters on Call</div>
-          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
-        </div>
-      </div>
-      <p class="thanks">Thanks for making our community better.</p>
-      <p class="line">Nothing required. Keep it, or give it to a kid.</p>
-      <p class="line">Want more? A free Gold membership ($100+) to gift, plus a Stead Shout reel.</p>
-      <p class="line">Let&#39;s team up: co-sponsor, cross-promote, almost 10,000 followers.</p>
-      <div class="foot">
-        <div class="cheers">Cheers, Michael</div>
-      </div>
-    </article>
-
   </div>
 </div>
 </body>
