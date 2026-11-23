@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Goat in a Note · Critters on Call</title>
+<style>
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Italic-Variable.ttf") format("truetype");font-weight:400 900;font-style:italic}
+@font-face{font-family:"Source Sans 3";src:url("local-goat/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900}
+@font-face{font-family:"Cinzel";src:url("local-goat/Cinzel-Variable.ttf") format("truetype");font-weight:400 900}
+
+:root{
+  --forest:#3A4F45;
+  --forest-mid:#4C6458;
+  --gold:#c9a227;
+  --gold-light:#E8D48C;
+  --cream:#F3EEE4;
+  --white:#FFFdf8;
+  --ink:#1a241c;
+  --muted:#5A6B62;
+  --dash:rgba(58,79,69,0.38);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:Letter;margin:0}
+html,body{
+  width:8.5in;height:11in;margin:0;padding:0;
+  background:#fff;color:var(--ink);
+  font-family:"Source Sans 3","Liberation Sans",sans-serif;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+.screen-note{display:none}
+@media screen{
+  html,body{width:auto;height:auto;background:#e8e2d4;padding:24px 16px 48px}
+  .screen-note{
+    display:block;max-width:8.5in;margin:0 auto 14px;
+    font-size:13px;color:var(--forest);line-height:1.4;
+  }
+  .page{margin:0 auto;box-shadow:0 8px 28px rgba(26,36,28,.18)}
+}
+
+.page{
+  width:8.5in;height:11in;
+  background:var(--cream);
+  position:relative;
+  overflow:hidden;
+}
+
+/* 2x4 of exact 4.25 x 2.75 in cards */
+.grid{
+  width:8.5in;height:11in;
+  display:grid;
+  grid-template-columns:4.25in 4.25in;
+  grid-template-rows:repeat(4, 2.75in);
+}
+
+/* Light dashed cut lines sit on the shared edges, drawn once so they align. */
+.cuts{position:absolute;inset:0;pointer-events:none;z-index:2}
+.cuts .v{
+  position:absolute;top:0;bottom:0;left:4.25in;
+  width:0;border-left:0.7pt dashed var(--dash);
+  transform:translateX(-0.35pt);
+}
+.cuts .h{
+  position:absolute;left:0;right:0;
+  height:0;border-top:0.7pt dashed var(--dash);
+  transform:translateY(-0.35pt);
+}
+.cuts .h1{top:2.75in}
+.cuts .h2{top:5.50in}
+.cuts .h3{top:8.25in}
+
+.note{
+  width:4.25in;height:2.75in;
+  padding:0.08in 0.13in 0.08in;
+  background:var(--cream);
+  color:var(--ink);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  position:relative;
+}
+
+.note header{
+  display:flex;align-items:flex-start;gap:0.07in;
+  margin-bottom:0.03in;
+}
+.note header img{
+  width:0.30in;height:0.30in;border-radius:50%;
+  border:1.25px solid var(--gold);
+  object-fit:cover;background:#fff;flex-shrink:0;
+  margin-top:0.01in;
+}
+.kicker{font-family:"Cinzel",serif;font-weight:700;font-size:6.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);line-height:1;margin:0 0 0.01in}
+.note h1{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:800;
+  font-size:10.8pt;
+  line-height:1.08;
+  color:var(--forest);
+  letter-spacing:-0.015em;
+}
+.sub{
+  font-size:8pt;
+  line-height:1.18;
+  color:var(--ink);
+  margin:0 0 0.045in;
+}
+.q{
+  font-family:"Source Sans 3",sans-serif;
+  font-weight:800;
+  font-size:8pt;
+  line-height:1.15;
+  color:var(--forest);
+  margin:0 0 0.015in;
+}
+.a{
+  font-size:8pt;
+  line-height:1.16;
+  margin:0 0 0.042in;
+}
+ul{
+  margin:0 0 0.042in;
+  padding:0 0 0 0.14in;
+}
+li{
+  font-size:8pt;
+  line-height:1.16;
+  margin:0 0 0.018in;
+}
+li::marker{color:var(--gold);font-size:0.85em}
+.foot{
+  margin-top:auto;
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:0.08in;
+  border-top:0.7pt solid rgba(201,162,39,0.65);
+  padding-top:0.04in;
+  flex-shrink:0;
+}
+.foot .call{
+  font-size:8pt;font-weight:800;color:var(--forest);line-height:1.1;
+}
+.foot .cheers{
+  font-family:"Playfair Display",Georgia,serif;
+  font-style:italic;font-weight:700;
+  font-size:10pt;color:var(--forest);
+  line-height:1.1;white-space:nowrap;
+}
+</style>
+</head>
+<body>
+<p class="screen-note">Goat in a Note · print this letter page and cut on the dashed lines. Eight identical notes, 4.25 × 2.75 in. No QR code — the business card is already in the envelope. Nothing has been sent.</p>
+<div class="page">
+  <div class="cuts" aria-hidden="true">
+    <div class="v"></div>
+    <div class="h h1"></div>
+    <div class="h h2"></div>
+    <div class="h h3"></div>
+  </div>
+  <div class="grid">
+    <!-- 8 identical notes, baked (no JS) -->
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+    <article class="note">
+      <header>
+        <img src="local-goat/sophie-logo.png" alt="Sophie and the Critters on Call animal family">
+        <div>
+          <div class="kicker">Critters on Call</div>
+          <h1>Congratulations, you&#39;re a Local GOAT!</h1>
+        </div>
+      </header>
+      <p class="sub">You&#39;re a local business that brings real value to our community. We wanted to spread some positive vibes and say thanks.</p>
+      <div class="q">Do I have to do anything?</div>
+      <p class="a">No. Nothing&#39;s required. Most people put the goat by the register or on a desk, or give it to a kid.</p>
+      <div class="q">Want more free vibes?</div>
+      <ul>
+        <li>Your goat is more than a keepsake: it&#39;s a Gold membership worth $100+, and you&#39;re free to gift it to anyone.</li>
+        <li>A free Stead Shout: we&#39;ll feature you in a reel to our almost 10,000 followers.</li>
+      </ul>
+      <div class="q">Want to go bigger? Let&#39;s team up.</div>
+      <ul>
+        <li>Co-sponsor an event or a gift for local families</li>
+        <li>Cross-promotion on our social, website, app and video game</li>
+        <li>We do the social media marketing, you get the reach: almost 10,000 followers and 200,000+ eyeballs, at no cost to you.</li>
+      </ul>
+      <div class="foot">
+        <div class="call">Text or call Michael &nbsp;914-263-1311</div>
+        <div class="cheers">Cheers, Michael</div>
+      </div>
+    </article>
+
+  </div>
+</div>
+</body>
+</html>
