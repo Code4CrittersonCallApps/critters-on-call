@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sent review · HOA / CDD / club campaign · Nov 23</title>
+<style>
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Variable.ttf") format("truetype");font-weight:400 900}
+@font-face{font-family:"Playfair Display";src:url("local-goat/PlayfairDisplay-Italic-Variable.ttf") format("truetype");font-weight:400 900;font-style:italic}
+@font-face{font-family:"Source Sans 3";src:url("local-goat/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900}
+@font-face{font-family:"Cinzel";src:url("local-goat/Cinzel-Variable.ttf") format("truetype");font-weight:400 900}
+:root{
+  --forest:#3A4F45; --forest-mid:#4C6458; --gold:#c9a227; --gold-light:#E8D48C;
+  --cream:#F3EEE4; --white:#FFFdf8; --ink:#1a241c; --muted:#5A6B62;
+  --far:#8a3b2c; --line:#d9d0be;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#e8e2d4;color:var(--ink);font-family:"Source Sans 3",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 64px}
+.mast{background:var(--forest);color:var(--cream);padding:28px 32px 24px;border-radius:16px;position:relative;overflow:hidden}
+.mast:after{content:"";position:absolute;inset:8px;border:1px solid rgba(201,162,39,.55);border-radius:10px;pointer-events:none}
+.kicker{font-family:"Cinzel",serif;letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:var(--gold-light);font-weight:700}
+h1{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(28px,4vw,42px);margin:8px 0 6px;letter-spacing:-.02em;line-height:1.1}
+.lede{max-width:62ch;color:#e7e0d2;font-size:16px;line-height:1.45;margin:0}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0 0}
+.stat{background:rgba(255,253,248,.08);border:1px solid rgba(232,212,140,.25);border-radius:10px;padding:10px 12px}
+.stat b{display:block;font-family:"Playfair Display",serif;font-size:28px;line-height:1;color:var(--gold-light)}
+.stat span{display:block;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:#d9d2c4;margin-top:4px}
+h2{font-family:"Playfair Display",serif;font-size:26px;margin:32px 0 10px;color:var(--forest)}
+h3{font-family:"Cinzel",serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--forest);margin:0 0 8px}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch;margin-top:8px}
+.card{background:var(--white);border:1.5px solid var(--forest);box-shadow:inset 0 0 0 1px var(--gold);border-radius:14px;padding:20px 18px 16px}
+.barrow{display:grid;grid-template-columns:170px 1fr 36px;gap:8px;align-items:center;margin:8px 0}
+.blab b{display:block;font-size:13px}
+.blab span{display:block;font-size:11px;color:var(--muted)}
+.btrack{height:14px;background:#efe8d8;border-radius:99px;overflow:hidden}
+.bfill{height:100%;border-radius:99px}
+.bn{font-weight:700;text-align:right;font-size:15px;color:var(--forest)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:8px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.pbox{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.math{background:var(--cream);border-radius:10px;padding:12px 14px}
+.math b.big{font-family:"Playfair Display",serif;font-size:22px;color:var(--forest);display:block}
+.math p{margin:4px 0 0;font-size:13px;color:var(--muted);line-height:1.4}
+.rule{font-size:14px;line-height:1.5}
+.rule ol{margin:6px 0 0;padding-left:18px}
+.t8{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.t8:last-child{border:0}
+.t8 .n{font-family:"Playfair Display",serif;font-size:20px;color:var(--gold);font-weight:700}
+.t8 p{margin:3px 0 0;font-size:13px;line-height:1.4;color:var(--ink)}
+.sub{font-size:11px;color:var(--muted);font-weight:400}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--white)}
+th{text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--forest);border-bottom:2px solid var(--forest);padding:8px 6px;white-space:nowrap}
+td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.far td{background:#f8eee9}
+tr.ga-line td{background:#f6efd8}
+.pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:99px;padding:2px 7px;margin:1px}
+.pill.ga{background:#efe3b8;color:#5c4a1f}
+.pill.far{background:#f0d4cc;color:#8a3b2c}
+.pill.stale{background:#e4e0d6;color:#4a4030}
+.pill.share{background:#dce6dc;color:#3A4F45}
+.pill.est{background:#eee;color:#5A6B62}
+.foot{margin-top:22px;font-size:12px;color:var(--muted);line-height:1.5;max-width:90ch}
+.call{background:#f6efd8;border-left:4px solid var(--gold);padding:10px 14px;margin:10px 0 0;font-size:14px;line-height:1.45}
+@media (max-width:900px){
+  .stats,.grid2,.pbox{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+}
+@media (max-width:640px){
+  .stats,.grid2,.pbox{grid-template-columns:1fr}
+  .wrap{padding:14px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <div class="kicker">Critters on Call · Sheehan Homestead</div>
+    <h1>What went out, and how far it is.</h1>
+    <p class="lede">HOA, CDD, club, and amenity campaign emails from sheehanhomestead@gmail.com, Friday Nov 20 and Monday Nov 23, 2026. Drive times from the farm at 44065 Cushman Road, Callahan. America/New_York times.</p>
+    <div class="stats">
+      <div class="stat"><b>57</b><span>Campaign emails</span></div>
+      <div class="stat"><b>22</b><span>Sent today</span></div>
+      <div class="stat"><b>35</b><span>Sent Friday</span></div>
+      <div class="stat"><b>52</b><span>Unique accounts</span></div>
+      <div class="stat"><b>40 / 12</b><span>New / past accounts</span></div>
+      <div class="stat"><b>123</b><span>Community rows still unsent</span></div>
+    </div>
+  </header>
+
+  <h2>Geography</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Sends by drive time</h3>
+      <div class="barrow">
+      <div class="blab"><b>≤45 min</b><span>Local — travel waived</span></div>
+      <div class="btrack"><div class="bfill" style="width:33.3%;background:#3A4F45"></div></div>
+      <div class="bn">13</div>
+    </div><div class="barrow">
+      <div class="blab"><b>45–75 min</b><span>Travel add starts</span></div>
+      <div class="btrack"><div class="bfill" style="width:100.0%;background:#c9a227"></div></div>
+      <div class="bn">39</div>
+    </div><div class="barrow">
+      <div class="blab"><b>75+ min</b><span>Far — high add, or pass</span></div>
+      <div class="btrack"><div class="bfill" style="width:12.8%;background:#8a3b2c"></div></div>
+      <div class="bn">5</div>
+    </div><div class="barrow">
+      <div class="blab"><b>Georgia, just over</b><span>OK if priced; GA minimum</span></div>
+      <div class="btrack"><div class="bfill" style="width:2.6%;background:#5c4a1f"></div></div>
+      <div class="bn">1</div>
+    </div>
+      <div class="call"><b>Georgia in this batch: one, and it is just over the line.</b> Laurel Island Links in Kingsland is about 43 minutes / 32 miles. That is Camden County, not Brunswick, St. Simons, or Savannah. No deep-Georgia emails went out in this campaign. Still unsent on the rain list: two just-over St. Marys contacts (Osprey Cove, Cumberland Harbour) and five deep-Georgia contacts on St. Simons (Sea Palms, Frederica, and the Golden Isles HOA managers). Skip the deep-Georgia five unless a bundle is on the table and they will pay a $400 travel minimum. </div>
+    </div>
+    <div class="card mapwrap">
+      <h3>From the farm</h3>
+      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Drive-time map from the farm">
+  <rect width="520" height="420" fill="#EFE8D8" rx="10"/>
+  <line x1="16" x2="504" y1="60.0" y2="60.0" stroke="#5c4a1f" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <text x="92.4" y="52.0" fill="#5c4a1f" font-size="11" font-family="Source Sans 3, sans-serif" font-weight="700" letter-spacing="0.08em">GEORGIA</text>
+  <text x="57.2" y="321.2" fill="#3A4F45" font-size="11" font-family="Source Sans 3, sans-serif" font-weight="700" letter-spacing="0.08em">FLORIDA</text>
+  <circle cx="255.7" cy="222.0" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Durbin Crossing CDD · 57 min</title></circle><circle cx="295.1" cy="171.8" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Tamaya / Beach CDD · 46 min</title></circle><circle cx="247.5" cy="145.4" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Yellow Bluff / Tisons Landing CDD · 30 min</title></circle><circle cx="347.2" cy="242.0" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Palencia / Marshall Creek CDD · 68 min</title></circle><circle cx="335.2" cy="186.4" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Marsh Landing Country Club · 56 min</title></circle><circle cx="284.8" cy="184.4" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Boggy Branch CDD · 46 min</title></circle><circle cx="221.9" cy="225.9" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Aberdeen CDD · 61 min</title></circle><circle cx="285.8" cy="167.8" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Wynnfield Lakes CDD · 41 min</title></circle><circle cx="335.5" cy="159.9" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Atlantic Beach Country Club · 51 min</title></circle><circle cx="260.3" cy="235.2" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Brandy Creek CDD · 57 min</title></circle><circle cx="252.7" cy="87.0" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Amelia Concourse CDD · 32 min</title></circle><circle cx="311.1" cy="252.4" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Southaven CDD (Markland) · 64 min</title></circle><circle cx="298.2" cy="229.5" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Beacon Lake / Meadow View at Twin Creeks CDD · 60 min</title></circle><circle cx="301.6" cy="178.5" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Jacksonville Golf &amp; Country Club · 47 min</title></circle><circle cx="299.1" cy="182.3" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Glen Kernan Golf &amp; Country Club · 48 min</title></circle><circle cx="233.3" cy="222.6" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Julington Creek Plantation CDD · 55 min</title></circle><circle cx="343.8" cy="203.0" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>MAY Management (Ponte Vedra book) · 62 min</title></circle><circle cx="227.5" cy="86.4" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>GMS district manager (Nassau + TrailMark) · 29 min</title></circle><circle cx="73.1" cy="206.5" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Eagle Landing (Troon) at OakLeaf · 46 min</title></circle><circle cx="147.3" cy="248.2" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Cross Creek North CDD (and related Rizzetta CDDs) · 60 min</title></circle><circle cx="251.4" cy="201.4" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>FirstService Residential (regional lifestyle) · 47 min</title></circle><circle cx="281.0" cy="219.2" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Bartram Springs CDD · 59 min</title></circle><circle cx="311.4" cy="251.0" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Bannon Lakes CDD · 63 min</title></circle><circle cx="252.7" cy="87.0" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Amelia Walk CDD · 32 min</title></circle><circle cx="74.1" cy="204.3" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>OakLeaf Plantation · 44 min</title></circle><circle cx="158.3" cy="182.4" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Epping Forest Yacht Club · 37 min</title></circle><circle cx="215.1" cy="234.6" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>RiverTown (Vesta) · 57 min</title></circle><circle cx="198.7" cy="87.1" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Wildlight (CCMC) · 23 min</title></circle><circle cx="277.2" cy="237.2" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>St. Johns Golf &amp; CC / Sampson Creek (Vesta) · 61 min</title></circle><circle cx="346.5" cy="185.0" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Ponte Vedra Inn &amp; Club · 52 min</title></circle><circle cx="311.4" cy="94.1" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Golf Club of Amelia (Concert Golf) · 45 min</title></circle><circle cx="170.9" cy="91.0" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Tributary / Three Rivers CDD · 19 min</title></circle><circle cx="262.7" cy="259.2" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Heritage Landing CDD · 73 min</title></circle><circle cx="286.6" cy="258.7" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>MuraBella / Turnbull Creek CDD · 65 min</title></circle><circle cx="115.0" cy="204.9" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Wilford Preserve CDD · 45 min</title></circle><circle cx="269.3" cy="239.9" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Glen St. Johns CDD · 63 min</title></circle><circle cx="246.4" cy="231.6" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Stillwater Golf &amp; CC (55+) · 64 min</title></circle><circle cx="152.1" cy="220.6" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Eagle Harbor (Talons / Hampton Golf) · 47 min</title></circle><circle cx="241.3" cy="239.3" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Shearwater / Trout Creek CDD · 62 min</title></circle><circle cx="475.5" cy="368.4" r="7" fill="#8a3b2c" stroke="#F3EEE4" stroke-width="1.4"><title>Grand Haven CDD, Palm Coast · 108 min</title></circle><circle cx="309.3" cy="263.8" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Grand Oaks CDD · 69 min</title></circle><circle cx="76.5" cy="219.2" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Two Creeks CDD · 49 min</title></circle><circle cx="77.0" cy="216.7" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Pine Ridge Plantation CDD · 50 min</title></circle><circle cx="437.6" cy="380.9" r="7" fill="#8a3b2c" stroke="#F3EEE4" stroke-width="1.4"><title>Cypress Knoll Golf &amp; CC · 108 min</title></circle><circle cx="353.7" cy="200.1" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Sawgrass Country Club · 61 min</title></circle><circle cx="302.5" cy="93.3" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Amelia River Club · 46 min</title></circle><circle cx="273.2" cy="159.8" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Blue Sky Golf Club · 46 min</title></circle><circle cx="212.4" cy="41.7" r="7" fill="#5c4a1f" stroke="#F3EEE4" stroke-width="1.4"><title>Laurel Island Links · 43 min</title></circle><circle cx="275.5" cy="193.8" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>Sweetwater by Del Webb (55+) · 46 min</title></circle><circle cx="126.4" cy="205.4" r="5" fill="#3A4F45" stroke="#F3EEE4" stroke-width="1.4"><title>Orange Park Country Club HOA · 45 min</title></circle><circle cx="281.4" cy="266.4" r="5" fill="#c9a227" stroke="#F3EEE4" stroke-width="1.4"><title>TrailMark / Six Mile Creek CDD · 69 min</title></circle><circle cx="478.5" cy="373.7" r="7" fill="#8a3b2c" stroke="#F3EEE4" stroke-width="1.4"><title>Palm Coast Plantation HOA · 109 min</title></circle>
+  <polygon points="99.2,101.3 107.2,117.3 91.2,117.3" fill="#c9a227" stroke="#1a241c" stroke-width="1"/>
+  <text x="111.2" y="115.3" fill="#1a241c" font-size="11" font-family="Source Sans 3, sans-serif" font-weight="700">Farm, Callahan</text>
+</svg>
+      <div class="legend">
+        <span><i style="background:#3A4F45"></i> ≤45 min</span>
+        <span><i style="background:#c9a227"></i> 45–75 min</span>
+        <span><i style="background:#8a3b2c"></i> 75+ min</span>
+        <span><i style="background:#5c4a1f"></i> GA, just over</span>
+        <span><i style="background:#c9a227;clip-path:polygon(50% 0,100% 100%,0 100%)"></i> Farm</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>New vs past, and who can buy a season</h2>
+  <div class="grid2">
+    <div class="card">
+      <p class="rule">Of <b>52 unique accounts</b> reached (merging two contacts at the same club, and the three MAY Management emails as one company), <b>40 are new</b> and <b>12 are past or current buyers</b> (win-backs or already on the books).</p>
+      <p class="rule" style="margin-top:10px">Split by likely first yes: <b>40 bundle / 2+ event candidates</b> and <b>12 likely single-event</b>. The eight below are the ones that can become $20–30k accounts if the annual offer is right.</p>
+      <div style="margin-top:8px"><div class="t8">
+      <div class="n">1</div>
+      <div><b>Tributary / Three Rivers CDD</b>
+      <div class="sub">Lindy Barillas Hernandez · 19 min · Past / win-back · travel Waived</div>
+      <p>Closest strong CDD to the farm; past buyer (via Rebecca), residents already use you, and a Dec 18 proposal is still pending. This is a $20–30k win-back if the annual offer lands.</p></div>
+    </div><div class="t8">
+      <div class="n">2</div>
+      <div><b>Wildlight (CCMC)</b>
+      <div class="sub">Elizabeth Bricknell · 23 min · Past / win-back · travel Waived</div>
+      <p>Lifestyle director at the closest large master-planned CDD after Tributary; Oct 24 Trunk or Treat already paid.</p></div>
+    </div><div class="t8">
+      <div class="n">3</div>
+      <div><b>RiverTown (Vesta)</b>
+      <div class="sub">Kimberly A. Fatuch · 57 min · Past / win-back · travel $75</div>
+      <p>Past Spring Fling buyer at a large Vesta community with multiple villages (including WaterSong). A $20–30k annual is realistic if they take a season.</p></div>
+    </div><div class="t8">
+      <div class="n">4</div>
+      <div><b>Julington Creek Plantation CDD</b>
+      <div class="sub">Maddie Dorsey · 55 min · New · travel $75</div>
+      <p>Lifestyle director at one of the largest master-planned CDDs in the market; already asked about dates and said she would reach out for the future.</p></div>
+    </div><div class="t8">
+      <div class="n">5</div>
+      <div><b>Shearwater / Trout Creek CDD</b>
+      <div class="sub">Belynda Tharpe · 62 min · New · travel $150</div>
+      <p>Amenity general manager at a large FSR-run CDD with a full lifestyle calendar — a top $20–30k candidate if they take a season.</p></div>
+    </div><div class="t8">
+      <div class="n">6</div>
+      <div><b>St. Johns Golf &amp; CC / Sampson Creek (Vesta)</b>
+      <div class="sub">Julie A. Tallaksen · 61 min · Past / win-back · travel $150</div>
+      <p>Most frequent community buyer (6 events), including Nov 7 goat yoga and Oct 11 Fall Fest — already living the bundle.</p></div>
+    </div><div class="t8">
+      <div class="n">7</div>
+      <div><b>Eagle Landing (Troon) at OakLeaf</b>
+      <div class="sub">Danna Reyes · 46 min · New · travel $75</div>
+      <p>Community lifestyle manager at a full amenity club (kids club, camps, swim park, calendar) — a 5-date package fits how they already program.</p></div>
+    </div><div class="t8">
+      <div class="n">8</div>
+      <div><b>Palencia / Marshall Creek CDD</b>
+      <div class="sub">Kathlene McGovern · 68 min · Past / win-back · travel $150</div>
+      <p>Lifestyle coordinator with a full event calendar; Mar 28 Spring Fest paid, invoice sent this week for another zoo.</p></div>
+    </div></div>
+    </div>
+    <div class="card">
+      <h3>Distance rule, so staff get paid</h3>
+      <p class="rule">Labor budget is about $250 an event, plus Melesia’s 20% commission (minimum $100). The menu already quotes travel from $100, 50% off on a 3+ date bundle. Use this as the customer-facing list add, measured one-way from the farm:</p>
+      <ol class="rule">
+        <li><b>Waived inside 45 minutes.</b></li>
+        <li><b>+$75 per 15 minutes</b> (or portion) beyond 45.</li>
+        <li><b>Georgia, just over the line</b> (St. Marys, Kingsland, Folkston): the minute rule, <b>minimum $150</b>. Laurel Island is 43 minutes, so the GA minimum is the add — not a free local job.</li>
+        <li><b>Deep Georgia</b> (Brunswick, St. Simons, Savannah): <b>minimum $400</b>, and only if a bundle or annual is on the table. Do not go for a single $1,000 date.</li>
+        <li>On a 3+ date bundle, keep the menu’s <b>50% off travel</b>.</li>
+      </ol>
+      <p class="rule" style="margin-top:10px">Worked examples: Heritage Landing at 73 min → $150. MAY’s St. Augustine office at 91 min → $300. Palm Coast (Grand Haven, Cypress Knoll, Palm Coast Plantation) at ~108–109 min → $375. If they will not pay that, pass unless it is a real season.</p>
+    </div>
+  </div>
+
+  <h2>Pipeline math</h2>
+  <div class="card">
+    <p class="rule">Your model, applied to the real send: <b>30% reply</b>, <b>10–15 qualified leads per 100</b>, <b>$1,000 average per qualified</b> as the short-term floor, and <b>$30–50k over six months per 100 emails</b>. The bundle-weighted column uses the same close rates, but treats one-third of qualified leads as a “most booked” 5-date package at <b>$3,772.50</b> (your price) instead of $1,000, and lifts the six-month range for those bigger accounts. Starter 3 dates is $1,198.49; all-seasons 7 dates is $5,263.49. Tributary’s pending proposal is Standard $1,199 list / $899.25, or Standard + Full Side $1,448 / $1,086.</p>
+    <div class="pbox" style="margin-top:14px">
+      <div class="math">
+        <h3>On the 57 already sent</h3>
+        <b class="big">17 replies · 6–9 qualified</b>
+        <p>Short-term at your $1,000 floor: <b>$5,700–$8,550</b>. Bundle-weighted short-term: <b>$10,968–$16,452</b>. Six months at your 30–50k scale: <b>$17,100–$28,500</b>; bundle-weighted: <b>$19,665–$38,475</b>.</p>
+      </div>
+      <div class="math">
+        <h3>To finish a 100-email campaign, or send the rest</h3>
+        <b class="big">43 more reach 100 · 123 community rows remain</b>
+        <p>To hit your 100-email plan, send <b>43 more</b> (short-term floor <b>$10–15k</b>, six months <b>$30–50k</b>; bundle-weighted short-term about <b>$19–29k</b>). If every remaining community row also goes out, that is <b>180 total</b>: <b>54 replies</b>, <b>18–27 qualified</b>, short-term <b>$18,000–$27,000</b> at $1,000 or <b>$34,635–$51,952</b> bundle-weighted. The 173-email six-month range (<b>$54,000–$90,000</b>) stretches your 100-email math and includes more far Flagler and deep-Georgia names — do not treat it as the base case.</p>
+      </div>
+    </div>
+    <p class="rule" style="margin-top:12px">Dunk-list remainder: <b>122 of 145 rain-check-in rows</b> and <b>all 24 of the 24 new HOA / yacht-club rows</b> from today are still unsent (146 rows, of which 123 are HOA / CDD / club / amenity and 23 are schools, seniors, corporate, or parks). Two Friday emails may not land: <b>Peter Pasca left MAY in August</b>, and <b>Maribel Walther left Eagle Landing in September</b>. Jenna Brut is out until Monday Nov 30. Those still count as sent.</p>
+  </div>
+
+  <h2>Every send</h2>
+  <div class="card" style="padding:10px 8px 4px;overflow:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Name / community</th>
+          <th style="text-align:right">Miles / min</th>
+          <th>City</th>
+          <th>Flags</th>
+          <th>New / past</th>
+          <th>Tier</th>
+          <th style="text-align:right">Travel add</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="past near">
+      <td class="who"><b>Lindy Barillas Hernandez</b><div class="sub">Tributary / Three Rivers CDD</div></td>
+      <td class="num">13 mi<div class="sub">19 min</div></td>
+      <td>Yulee<div class="sub">Nassau · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="past near">
+      <td class="who"><b>Elizabeth Bricknell</b><div class="sub">Wildlight (CCMC)</div></td>
+      <td class="num">15 mi<div class="sub">23 min</div></td>
+      <td>Yulee<div class="sub">Nassau · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Daniel Laughlin</b><div class="sub">GMS district manager (Nassau + TrailMark)</div></td>
+      <td class="num">19 mi<div class="sub">29 min</div></td>
+      <td>Yulee<div class="sub">Nassau · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="past near">
+      <td class="who"><b>Elizabeth A. Myers-Hesford</b><div class="sub">Yellow Bluff / Tisons Landing CDD</div></td>
+      <td class="num">22 mi<div class="sub">30 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Kelly</b><div class="sub">Amelia Concourse CDD</div></td>
+      <td class="num">21 mi<div class="sub">32 min</div></td>
+      <td>Yulee<div class="sub">Nassau · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Chip Delllinger</b><div class="sub">Amelia Walk CDD</div></td>
+      <td class="num">21 mi<div class="sub">32 min</div></td>
+      <td>Yulee<div class="sub">Nassau · FL</div></td>
+      <td><span class="pill est">Est.</span></td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Rachel Ellison</b><div class="sub">Epping Forest Yacht Club</div></td>
+      <td class="num">24 mi<div class="sub">37 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Sierra Shelton</b><div class="sub">Epping Forest Yacht Club</div></td>
+      <td class="num">24 mi<div class="sub">37 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Lina F. Hernandez</b><div class="sub">Wynnfield Lakes CDD</div></td>
+      <td class="num">31 mi<div class="sub">41 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new ga-line">
+      <td class="who"><b>Ricky Kadhi</b><div class="sub">Laurel Island Links</div></td>
+      <td class="num">32 mi<div class="sub">43 min</div></td>
+      <td>Kingsland<div class="sub">Camden · GA</div></td>
+      <td><span class="pill ga">GA · just over</span></td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$150</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Wanda McReynolds</b><div class="sub">OakLeaf Plantation</div></td>
+      <td class="num">31 mi<div class="sub">44 min</div></td>
+      <td>Orange Park<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Kim Lang</b><div class="sub">Orange Park Country Club HOA</div></td>
+      <td class="num">29 mi<div class="sub">45 min</div></td>
+      <td>Orange Park<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">Waived</td>
+    </tr><tr class="past near share">
+      <td class="who"><b>Sheridan Regan</b><div class="sub">Golf Club of Amelia (Concert Golf)</div></td>
+      <td class="num">29 mi<div class="sub">45 min</div></td>
+      <td>Fernandina Beach<div class="sub">Nassau · FL</div></td>
+      <td><span class="pill share">Menu share</span></td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">Waived</td>
+    </tr><tr class="new near">
+      <td class="who"><b>Sayla Hicks</b><div class="sub">Wilford Preserve CDD</div></td>
+      <td class="num">30 mi<div class="sub">45 min</div></td>
+      <td>Orange Park<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">Waived</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Oliver E. Ingram</b><div class="sub">Tamaya / Beach CDD</div></td>
+      <td class="num">33 mi<div class="sub">46 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Christina Castor</b><div class="sub">Blue Sky Golf Club</div></td>
+      <td class="num">29 mi<div class="sub">46 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Michelle Miller</b><div class="sub">Amelia River Club</div></td>
+      <td class="num">29 mi<div class="sub">46 min</div></td>
+      <td>Fernandina Beach<div class="sub">Nassau · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Lindsay Beshero</b><div class="sub">Sweetwater by Del Webb (55+)</div></td>
+      <td class="num">36 mi<div class="sub">46 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Danna Reyes</b><div class="sub">Eagle Landing (Troon) at OakLeaf</div></td>
+      <td class="num">32 mi<div class="sub">46 min</div></td>
+      <td>Orange Park<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid stale">
+      <td class="who"><b>Maribel Walther</b><div class="sub">Eagle Landing (Troon) at OakLeaf</div></td>
+      <td class="num">32 mi<div class="sub">46 min</div></td>
+      <td>Orange Park<div class="sub">Clay · FL</div></td>
+      <td><span class="pill stale">Stale inbox</span></td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Vivian Carvalho</b><div class="sub">Boggy Branch CDD</div></td>
+      <td class="num">35 mi<div class="sub">46 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Jessica Morgan</b><div class="sub">Jacksonville Golf &amp; Country Club</div></td>
+      <td class="num">35 mi<div class="sub">47 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Jenna Brut</b><div class="sub">FirstService Residential (regional lifestyle)</div></td>
+      <td class="num">33 mi<div class="sub">47 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td><span class="pill est">Est.</span></td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Abi Cothren</b><div class="sub">Eagle Harbor (Crossings at Fleming Island CDD)</div></td>
+      <td class="num">34 mi<div class="sub">47 min</div></td>
+      <td>Fleming Island<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Vanessa Mandile</b><div class="sub">Eagle Harbor (Talons / Hampton Golf)</div></td>
+      <td class="num">34 mi<div class="sub">47 min</div></td>
+      <td>Fleming Island<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Patty Beatty</b><div class="sub">Glen Kernan Golf &amp; Country Club</div></td>
+      <td class="num">37 mi<div class="sub">48 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Marty Czako</b><div class="sub">Two Creeks CDD</div></td>
+      <td class="num">36 mi<div class="sub">49 min</div></td>
+      <td>Middleburg<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Maria Cranford</b><div class="sub">Pine Ridge Plantation CDD</div></td>
+      <td class="num">35 mi<div class="sub">50 min</div></td>
+      <td>Middleburg<div class="sub">Clay · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Laura Hazelwood</b><div class="sub">Atlantic Beach Country Club</div></td>
+      <td class="num">36 mi<div class="sub">51 min</div></td>
+      <td>Atlantic Beach<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Laura Yee</b><div class="sub">Ponte Vedra Inn &amp; Club</div></td>
+      <td class="num">42 mi<div class="sub">52 min</div></td>
+      <td>Ponte Vedra Beach<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Mike Keller</b><div class="sub">Ponte Vedra Inn &amp; Club</div></td>
+      <td class="num">42 mi<div class="sub">52 min</div></td>
+      <td>Ponte Vedra Beach<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Maddie Dorsey</b><div class="sub">Julington Creek Plantation CDD</div></td>
+      <td class="num">40 mi<div class="sub">55 min</div></td>
+      <td>Fruit Cove<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Isabella Grady</b><div class="sub">Marsh Landing Country Club</div></td>
+      <td class="num">42 mi<div class="sub">56 min</div></td>
+      <td>Ponte Vedra Beach<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Kate (Kaitlyn L.) Smith</b><div class="sub">Durbin Crossing CDD</div></td>
+      <td class="num">41 mi<div class="sub">57 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Kimberly A. Fatuch</b><div class="sub">RiverTown (Vesta)</div></td>
+      <td class="num">41 mi<div class="sub">57 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Georgia B. Hamilton</b><div class="sub">Brandy Creek CDD</div></td>
+      <td class="num">45 mi<div class="sub">57 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Single</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Danelle DeMarco</b><div class="sub">Bartram Springs CDD</div></td>
+      <td class="num">46 mi<div class="sub">59 min</div></td>
+      <td>Jacksonville<div class="sub">Duval · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$75</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Danielle Wasilewski</b><div class="sub">Cross Creek North CDD (and related Rizzetta CDDs)</div></td>
+      <td class="num">42 mi<div class="sub">60 min</div></td>
+      <td>Green Cove Springs<div class="sub">Clay · FL</div></td>
+      <td><span class="pill est">Est.</span></td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Jennifer Clark-Erickson</b><div class="sub">Beacon Lake / Meadow View at Twin Creeks CDD</div></td>
+      <td class="num">47 mi<div class="sub">60 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Melissa Bauer</b><div class="sub">Sawgrass Country Club</div></td>
+      <td class="num">46 mi<div class="sub">61 min</div></td>
+      <td>Ponte Vedra Beach<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Julie A. Tallaksen</b><div class="sub">St. Johns Golf &amp; CC / Sampson Creek (Vesta)</div></td>
+      <td class="num">47 mi<div class="sub">61 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Kate Trivelpiece</b><div class="sub">Aberdeen CDD</div></td>
+      <td class="num">43 mi<div class="sub">61 min</div></td>
+      <td>Fruit Cove<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Belynda Tharpe</b><div class="sub">Shearwater / Trout Creek CDD</div></td>
+      <td class="num">48 mi<div class="sub">62 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid stale">
+      <td class="who"><b>Peter Pasca</b><div class="sub">MAY Management (Ponte Vedra book)</div></td>
+      <td class="num">47 mi<div class="sub">62 min</div></td>
+      <td>Ponte Vedra Beach<div class="sub">St. Johns · FL</div></td>
+      <td><span class="pill stale">Stale inbox</span></td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Emily Wright</b><div class="sub">Bannon Lakes CDD</div></td>
+      <td class="num">52 mi<div class="sub">63 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Winslow Wheeler</b><div class="sub">Glen St. Johns CDD</div></td>
+      <td class="num">48 mi<div class="sub">63 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Lisa Licata</b><div class="sub">Southaven CDD (Markland)</div></td>
+      <td class="num">52 mi<div class="sub">64 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Alyssa Jane</b><div class="sub">Stillwater Golf &amp; CC (55+)</div></td>
+      <td class="num">48 mi<div class="sub">64 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Erick Hutchison</b><div class="sub">MuraBella / Turnbull Creek CDD</div></td>
+      <td class="num">53 mi<div class="sub">65 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="past mid">
+      <td class="who"><b>Kathlene McGovern</b><div class="sub">Palencia / Marshall Creek CDD</div></td>
+      <td class="num">53 mi<div class="sub">68 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>Past</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Elena Barron</b><div class="sub">TrailMark / Six Mile Creek CDD</div></td>
+      <td class="num">56 mi<div class="sub">69 min</div></td>
+      <td>St. Johns<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Robin Nixon</b><div class="sub">Grand Oaks CDD</div></td>
+      <td class="num">56 mi<div class="sub">69 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new mid">
+      <td class="who"><b>Todd Myhill</b><div class="sub">Heritage Landing CDD</div></td>
+      <td class="num">57 mi<div class="sub">73 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td>—</td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$150</td>
+    </tr><tr class="new far">
+      <td class="who"><b>Melanie Fletcher</b><div class="sub">MAY Management (community unconfirmed)</div></td>
+      <td class="num">71 mi<div class="sub">91 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td><span class="pill far">Far FL</span> <span class="pill est">Est.</span></td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$300</td>
+    </tr><tr class="new far">
+      <td class="who"><b>Diane Ascher</b><div class="sub">MAY Management (regional)</div></td>
+      <td class="num">71 mi<div class="sub">91 min</div></td>
+      <td>St. Augustine<div class="sub">St. Johns · FL</div></td>
+      <td><span class="pill far">Far FL</span> <span class="pill est">Est.</span></td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$300</td>
+    </tr><tr class="new far">
+      <td class="who"><b>John Lucansky</b><div class="sub">Grand Haven CDD, Palm Coast</div></td>
+      <td class="num">89 mi<div class="sub">108 min</div></td>
+      <td>Palm Coast<div class="sub">Flagler · FL</div></td>
+      <td><span class="pill far">Far FL</span></td>
+      <td>New</td>
+      <td>Bundle</td>
+      <td class="num">$375</td>
+    </tr><tr class="new far">
+      <td class="who"><b>Janice Reid</b><div class="sub">Cypress Knoll Golf &amp; CC</div></td>
+      <td class="num">91 mi<div class="sub">108 min</div></td>
+      <td>Palm Coast<div class="sub">Flagler · FL</div></td>
+      <td><span class="pill far">Far FL</span></td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$375</td>
+    </tr><tr class="new far">
+      <td class="who"><b>Jessica Cottier</b><div class="sub">Palm Coast Plantation HOA</div></td>
+      <td class="num">90 mi<div class="sub">109 min</div></td>
+      <td>Palm Coast<div class="sub">Flagler · FL</div></td>
+      <td><span class="pill far">Far FL</span></td>
+      <td>New</td>
+      <td>Single</td>
+      <td class="num">$375</td>
+    </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="foot">Drive times are OSRM road routes from 44065 Cushman Road, Callahan, FL 32011 (Census geocode). Pins marked Est. used a nearby road, office, or neighboring community when the amenity street was not in public geocoders. Campaign emails were read from sheehanhomestead@gmail.com Sent, Nov 15–23, 2026. Invoice, COI, and event-confirmation replies are not in this count. Menu prices are from the Communities &amp; Festivals Menu (customer “your price”). Far Flagler already sent: Grand Haven, Cypress Knoll, and Palm Coast Plantation, all about 108–109 minutes. 16 more Palm Coast / Hammock / Flagler / Ormond contacts remain on the unsent lists — use the same $375-class add, or skip them for a single date.</p>
+</div>
+</body>
+</html>
