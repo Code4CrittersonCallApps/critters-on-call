@@ -18,9 +18,9 @@ We're building a tech-enabled experiences and consulting firm, with an exit, in 
 
 ## 45-second elevator
 
-We're a tech-enabled experiences and consulting firm in a big, underserved market — with an exit. Call this person, ask this question, they'll give you this answer.
+We're a tech-enabled experiences and consulting firm in a big, underserved market — with an exit. Ask any Jacksonville lifestyle director who they call for animals and STEM, and you'll hear a short list with us on it.
 
-The trophy case is traction: a hundred and sixteen five-star Google reviews, almost 10,000 Facebook followers, 200,000-plus views in the last 28 days, number one in a blind Jacksonville search. Three years, no outside money — just my wife, a few friends, and PE- and VC-backed rigor.
+The trophy case is traction: a hundred and sixteen five-star Google reviews, almost 10,000 Facebook followers, 200,000-plus views in the last 28 days, number one in a blind Jacksonville search. About three years, no outside money — just my wife, a few friends, and PE- and VC-backed rigor.
 
 A year ago people laughed at the consolidation idea. Perpetual-license companies lost to SaaS on unit economics. We bring the good accountant.
 
@@ -42,7 +42,7 @@ The season is the frame around the ask, not the whole story: Black Friday, Cyber
 
 We're building a tech-enabled experiences and consulting firm — with an exit. This is the holiday window, and the package keeps getting better. But zoom out.
 
-Jacksonville is 1.8 million people, the largest city by land area in the contiguous U.S., up 11% since 2020. Florida is number two in people added. A $129 billion GDP — fourth in Florida, 39th in the country. Family households, employer businesses, kids under 18. That's a slice of a bigger, underserved market. The research is the kind you can check yourself: call this person, ask this question, they'll give you this answer. A new perspective is what transforms a market.
+Jacksonville is 1.8 million people, the largest city by land area in the contiguous U.S., up 11% since 2020. Florida is number two in people added. A $129 billion GDP — fourth in Florida, 39th in the country. Family households, employer businesses, kids under 18. That's a slice of a bigger, underserved market. The research is the kind you can check yourself: ask any lifestyle director who they call, and you'll hear a short list. A new perspective is what transforms a market.
 
 We started with agritainment because I own a homestead and my wife Ann-Marie is a teacher. The firm is bigger than the farm.
 
@@ -153,7 +153,7 @@ The team is complementary on purpose. Ann-Marie is an educator, a co-founder, an
 
 **Say:**
 
-Jacksonville is 1.8 million people, the largest city by land area in the contiguous U.S., up 11% since 2020. Florida is number two in people added. A $129 billion GDP — fourth in Florida, 39th in the country. That's a slice of a bigger, underserved market. The research is the kind you can check: call this person, ask this question, they'll give you this answer.
+Jacksonville is 1.8 million people, the largest city by land area in the contiguous U.S., up 11% since 2020. Florida is number two in people added. A $129 billion GDP — fourth in Florida, 39th in the country. That's a slice of a bigger, underserved market. The research is the kind you can check: ask any lifestyle director who they call, and you'll hear a short list.
 
 On the professional-programmer side, here's what is locked in the market math. In the four-county Jax area there are 98 CDDs and stewardship districts; we count 69 of those as having amenities. Florida has 1,046 CDDs. Public FY2026 special-events lines in a seven-budget Jax sample run a median of $40,000 and a mean of $109,000 — Julington Creek Plantation at $112,000, Tolomato / Nocatee at $475,000. So yes, some of these budgets are six figures. The named Jax working list is 7,616 organizations, 5,000 of them contactable.
 
@@ -169,7 +169,7 @@ This is the demo. Point at the screen. Do not hedge. If a live search doesn't sh
 
 **Say:**
 
-First customer was a Montessori school, November 2023 — STEM on Call. That's about three years from first customer to today. The first mobile petting zoo prototype was July 2024, on our small-acre homestead in Callahan. From that prototype to this ranking is about sixteen months — not a guess, the dates are on the line.
+First customer was a Montessori school, November 2023 — STEM on Call. That's about three years from first customer to today. The first mobile petting zoo prototype was July 2024, on our small-acre homestead in Callahan. From that prototype to this ranking is less than two and a half years — not a guess, the dates are on the line.
 
 **5:40–7:10 · Reviews, reach, institutions.** **Show:** Slide 15 (momentum), then slide 14 (public proof).
 
@@ -258,7 +258,7 @@ Pull only these. Do not inflate them on the fly. Do not mention any entity-statu
 | CDD / programmer budgets | 98 CDDs/SDs in Clay, Duval, Nassau, St. Johns; 69 assumed with amenities. Florida: 1,046 CDDs. Seven FY2026 adopted special-events lines: median $40,000, mean $109,000 (Durbin Crossing $50,000; Julington Creek Plantation $112,000; Tolomato / Nocatee $475,000). "Sometimes six figures" is verified for some public event lines. CDDs are public special-purpose districts; prefer "public CDD budgets," not "state-funded." | TAM_3_PROBLEMS.md, Nov 18, 2026 |
 | Org counts | Named Jax working list: 7,616 organizations, 5,000 contactable (Nov 15, 2026). [Michael's estimate: about 4,000 organizations do professional programming.] That 4,000 figure was not found as a locked census in the market-math files. Do not present it as counted. | TAM_3_PROBLEMS.md; Nov 24 direction |
 | Penetration / wallet | [Michael's estimate: current offerings can penetrate about 5%; about 10% if we won every budget we should.] Complementary services raise share of wallet and stickiness. Other file assumptions (0.75% events penetration, 20% share) are older and different — do not mix them in as if they were the same model. | Nov 24 direction; TAM_3_PROBLEMS.md |
-| Zoo prototype vs rank | First mobile petting zoo prototype: July 2024. Elapsed to Nov 24, 2026: about 16 months. First customer remains November 2023, about three years. Do not say "less than 2.5 years later." | RECORDING_KIT / DEMO_SLIDES timeline |
+| Zoo prototype vs rank | First mobile petting zoo prototype: July 2024. Elapsed to Nov 24, 2026: about 28 months (under 2.5 years). First customer remains November 2023, about three years. | RECORDING_KIT / DEMO_SLIDES timeline |
 | SAFE | On Call Brands, up to $150k, $750k post-money cap, 20% discount. At the cap, 20%. Michael keeps 80%, never below 51%. Farm untouched. | DEAL_SHEET.html?v=1122b |
 | Incubator village | Spoken offer, Nov 24: rent-equivalent, something like $3,000–$5,000 a month, or a down payment; no-frills hunting-cabin-style trailer, or bring your own for glamping; franchise partner zero, half of something real (a unit, not On Call Brands); close 4–5 for a high-ticket line. Not a DEAL_SHEET term. | Nov 24 direction |
 
