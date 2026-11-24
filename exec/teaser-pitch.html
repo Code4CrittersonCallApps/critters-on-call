@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elevator and 5-minute teaser · Critters on Call</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#3A4F45;
+  --green-deep:#2F4F3E;
+  --gold:#c9a227;
+  --gold-deep:#B8923A;
+  --cream:#F3EEE4;
+  --ink:#1f2a24;
+  --muted:#5A6B62;
+  --line:#e2dacb;
+  --card:#fffdf8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:"Source Sans 3",sans-serif;line-height:1.55}
+a{color:var(--green-deep);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--gold-deep)}
+.page{max-width:820px;margin:0 auto;padding:36px 24px 80px}
+.hero{display:flex;gap:22px;align-items:center;padding-bottom:22px;border-bottom:2px solid var(--gold);margin-bottom:28px}
+.hero img{width:96px;height:96px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;background:#fff;flex:0 0 96px}
+.kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin:0 0 6px}
+h1{font-family:"Playfair Display",serif;font-weight:600;font-size:clamp(1.8rem,4vw,2.45rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 8px;color:var(--green)}
+.lede{margin:0;color:var(--muted);font-size:1.05rem;max-width:62ch}
+h2{font-family:"Playfair Display",serif;font-weight:600;font-size:1.55rem;color:var(--green);margin:36px 0 10px;letter-spacing:-.015em}
+h3{font-size:1.05rem;margin:22px 0 8px;color:var(--green-deep)}
+.time{display:inline-block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);border:1px solid var(--gold);padding:2px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.script{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 22px;font-size:1.12rem;line-height:1.6;margin:12px 0 8px}
+.script p{margin:0 0 12px}
+.script p:last-child{margin:0}
+.note{font-size:.92rem;color:var(--muted);margin:8px 0 0}
+.note b{color:var(--ink);font-weight:650}
+.beat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0 0}
+.beat h3{margin-top:0}
+.show{background:var(--green);color:var(--cream);display:inline-block;font-size:.78rem;font-weight:650;letter-spacing:.04em;padding:3px 10px;border-radius:999px;margin:0 0 10px}
+.show a{color:#F8E7A8}
+.facts{width:100%;border-collapse:collapse;font-size:.88rem;margin:12px 0 0}
+.facts th,.facts td{text-align:left;vertical-align:top;padding:9px 8px;border-bottom:1px solid var(--line)}
+.facts th{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.foot{margin-top:40px;padding-top:16px;border-top:2px solid var(--gold);display:flex;gap:16px;align-items:center;color:var(--muted);font-size:.9rem}
+.foot img{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.btn{appearance:none;border:1px solid var(--gold);background:transparent;color:var(--green-deep);font:650 .8rem "Source Sans 3",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;cursor:pointer;margin:8px 0 0}
+.btn:hover{background:var(--green);color:var(--cream)}
+@media print{
+  body{background:#fff}
+  .page{padding:0}
+  .btn{display:none}
+  .beat,.script{break-inside:avoid}
+  a{text-decoration:none;color:inherit}
+  .hero{margin-bottom:16px}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <img src="assets/local-goat/sophie-logo.png" alt="Sophie, the Great Pyrenees, and the Critters on Call animal family">
+    <div>
+      <p class="kicker">Critters on Call · Sheehan Homestead · November 24, 2026</p>
+      <h1>Elevator pitch and 5-minute teaser</h1>
+      <p class="lede">A hallway line, a forty-five second elevator, and a five-minute teaser demo. Sponsorship first. SAFE only if they want in. Nothing here is a send.</p>
+    </div>
+  </header>
+
+  <p class="note">Open the deck beside this page: <a href="assets/DEMO_SLIDES.html?v=1122b">DEMO_SLIDES.html?v=1122b</a>. Speak it confident and warm, in your own rhythm, plain words, no hedging.</p>
+
+  <h2>15-second one-liner <span class="time">~15 sec</span></h2>
+  <div class="script" id="oneliner">
+    <p>Tech-enabled means I take the rigor I learned at PE- and VC-backed companies and apply it to any business. We started on our homestead. Look at the result. I can do this quickly, anywhere.</p>
+  </div>
+  <button class="btn" type="button" data-copy="oneliner">Copy one-liner</button>
+
+  <h2>45-second elevator <span class="time">~45 sec</span></h2>
+  <div class="script" id="elevator">
+    <p>Tech-enabled means I apply PE- and VC-backed rigor to any business. I built a lead-gen department to about 120 meetings a month, and sold to Fortune 37 through 500.</p>
+    <p>We started with agritainment because I own a homestead and my wife Ann-Marie is a teacher. Look at what I was able to do for her: a hundred and sixteen five-star Google reviews, almost 10,000 Facebook followers, 200,000-plus views in the last 28 days, and number one in a blind search for mobile petting zoo and goat yoga in Jacksonville. I can do this quickly, anywhere.</p>
+    <p>This holiday season, start as a sponsor. If you want in, it's a simple SAFE into On Call Brands.</p>
+  </div>
+  <button class="btn" type="button" data-copy="elevator">Copy elevator</button>
+
+  <h2>5-minute teaser demo <span class="time">5:00</span></h2>
+  <p class="note">Click, arrows, space, or Enter in the deck. <b>A</b> jumps to the asks (slide 21). <b>T</b> jumps to the tech anchor (slide 16). Keep a second tab ready for the Gold app, the wheel, and the locked search prompt. Do not open the booking tools, the dunk lists, or the dialer. If you open Growth, do not linger — money and pipeline figures are live on that page; slide 17 is the safe screenshot. The season is the frame, not the product: Black Friday, Cyber Week, and the Christmas run-up. Kits, petting zoos, flyers. The package keeps getting better.</p>
+
+  <article class="beat">
+    <h3>Beat 1 · Hook <span class="time">0:00–0:40</span></h3>
+    <div class="show">Show: slide 1, opening — then your face more than the slide</div>
+    <div class="script">
+      <p>This is the holiday window. We're selling kits, we're selling petting zoos, we're working the flyers, and as we round this out the package keeps getting better.</p>
+      <p>What does tech-enabled mean? It means I can apply the rigor I learned at PE- and VC-backed companies to literally any business. I built a lead-gen department to about 120 meetings a month. I sold to Fortune 37 through Fortune 500. We started with agritainment because I happen to own a homestead, and my wife happens to be a teacher. Look at what I was able to do for her.</p>
+    </div>
+  </article>
+
+  <article class="beat">
+    <h3>Beat 2 · Why agritainment / who we are <span class="time">0:40–1:20</span></h3>
+    <div class="show">Show: slide 6, the reveal → slide 7, Ann-Marie → slide 9, complementary founders. Ten seconds for slide 10, timeline, if you have them.</div>
+    <div class="script">
+      <p>That's us. Ann-Marie is a teacher and a co-founder. The farm was our idea. She wrote the STEM curriculum. I brought the GTM, the systems, and the software.</p>
+      <p>First customer was a Montessori school, November 2023 — STEM on Call. That's about three years from first customer to today. The mobile petting zoo came after, on our small-acre homestead in Callahan.</p>
+    </div>
+  </article>
+
+  <article class="beat">
+    <h3>Beat 3 · Look at this <span class="time">1:20–3:20</span></h3>
+    <p class="note">This is the demo. Point at the screen. One proof, then the next. Do not hedge. If a live search doesn't show us first, narrate what is on the screen and move.</p>
+
+    <h3>Reviews and reach <span class="time">1:20–1:50</span></h3>
+    <div class="show">Show: slide 15, momentum. Optionally click Google or Facebook and come right back.</div>
+    <div class="script">
+      <p>Look at the result. A hundred and sixteen five-star Google reviews. Almost 10,000 Facebook followers. In the last 28 days alone, 200,000-plus views, about 11,000 engagements, and about 2,500 new followers. That is a local farm business, built with the same rigor I'd put on a software book of business.</p>
+    </div>
+
+    <h3>Institutional clients <span class="time">1:50–2:20</span></h3>
+    <div class="show">Show: slide 14, public proof. Name the institutions. Don't invent a series or a headcount the review doesn't support.</div>
+    <div class="script">
+      <p>And it isn't only birthday parties. Wildlight CDD. Early Learning Coalition of Duval — they've booked us more than once and called us flexible and easy to work with. Marsh Landing Country Club. Safariland. A pediatric medical day care in St. Johns — 24 patients on that visit. That's institutional proof, on the books.</p>
+    </div>
+
+    <h3>Blind search <span class="time">2:20–2:50</span></h3>
+    <div class="show">Show: slide 5, live search. If you run it live, use the locked pair, statewide first, then Jacksonville: “Top rated mobile goat yoga and mobile petting zoo in Florida.” Then the same pair for Jacksonville. Never run petting zoo alone. Then cut to slide 6.</div>
+    <div class="script">
+      <p>Here's the taste test. Same prompt, cold, no login. When the query is mobile goat yoga and mobile petting zoo, we come back number one in Jacksonville. That's the engine sitting under the brand.</p>
+    </div>
+
+    <h3>The product in software <span class="time">2:50–3:20</span></h3>
+    <div class="show">Show: slide 17, Growth (the safe screenshot) → live <a href="giving-wheel/">giving-wheel</a> or <a href="gold.html">gold.html</a> → slide 18, ops, or <a href="helper-onboarding.html">helper-onboarding.html</a>. Optional: <a href="track.html">track.html</a> — click Run live demo. Do not linger on live Growth.</div>
+    <div class="script">
+      <p>This is the stack. Dashboards for the book of business. The Gold app. The prize wheel. The helper onboarding so we can run eight gigs at once. This is what “tech-enabled” looks like on a homestead operation — and this is why it repeats.</p>
+    </div>
+  </article>
+
+  <article class="beat">
+    <h3>Beat 4 · The repeatable model <span class="time">3:20–4:15</span></h3>
+    <div class="show">Show: slide 12, ecosystem / flywheel → slide 16, tech anchor</div>
+    <div class="script">
+      <p>We started here because we live here. The point is not that every business has goats. The point is the model: a vertically integrated ecosystem that feeds itself, born on software, not bolted on later. I can point this rigor at any business, and I can do it quickly.</p>
+    </div>
+  </article>
+
+  <article class="beat">
+    <h3>Beat 5 · The ask <span class="time">4:15–5:00</span></h3>
+    <div class="show">Show: slide 21, the asks. If they lean in, open <a href="assets/DEAL_SHEET.html?v=1122b">DEAL_SHEET.html?v=1122b</a>.</div>
+    <div class="script">
+      <p>Here's how to come in. The first ask is a sponsorship — ride this Black Friday, Cyber Week, and Christmas run-up with us. If you have a business, there's advertising in the return. If you're a philanthropist, you're welcome too.</p>
+      <p>If you want a stake, it's a simple SAFE into On Call Brands — Critters on Call, STEM on Call, Exec MBA on Call. Up to $150,000, a $750,000 post-money cap, a 20% discount. At the cap that's 20%. I keep 80%, and I never go below 51%. The farm stays untouched. This funds formation and access, not a buyout.</p>
+      <p>I'd love to have you with us this season.</p>
+    </div>
+  </article>
+
+  <h2>Facts, locked</h2>
+  <p class="note">Pull only these. Do not inflate them on the fly. Do not mention any entity-status issue. On camera: “small-acre homestead,” never “backyard.” On slide 7, stay with the deck line: “The farm was our idea. She wrote the curriculum.”</p>
+  <table class="facts">
+    <thead>
+      <tr><th>Proof</th><th>Locked wording</th><th>Source, as of</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Google reviews</td><td>116 five-star reviews; “100+” is the floor</td><td>RECORDING_KIT, Nov 22, 2026</td></tr>
+      <tr><td>Facebook followers</td><td>“Almost 10,000.” Dated kit point: ~7,700 on Nov 20, 2026</td><td>franchise-structure; RECORDING_KIT</td></tr>
+      <tr><td>Facebook, last 28 days</td><td>200k+ views, 11k engagements, 2.5k new followers</td><td>GOAT_IN_A_NOTE, Nov 23, 2026</td></tr>
+      <tr><td>First customer</td><td>Montessori school, November 2023. Age: about three years</td><td>RECORDING_KIT / DEMO_SLIDES ?v=1122b</td></tr>
+      <tr><td>AI ranking</td><td>#1 on the locked paired query (mobile goat yoga and mobile petting zoo), Jacksonville. Narrate the screen if you run it live.</td><td>RECORDING_KIT / DEMO_SLIDES</td></tr>
+      <tr><td>Concurrent gigs</td><td>8 gigs at once</td><td>RECORDING_KIT / DEMO_SLIDES</td></tr>
+      <tr><td>Institutional</td><td>Wildlight CDD; ELC Duval (multiple engagements); Marsh Landing Country Club; Safariland; TCMSJ St. John PPEC, 24 patients on that visit</td><td>investor-proof-reviews/INDEX.md, Oct 31, 2026 pack</td></tr>
+      <tr><td>Credentials</td><td>Built a lead-gen department to about 120 meetings a month; sold to Fortune 37 through 500</td><td>LinkedIn headlines file</td></tr>
+      <tr><td>SAFE</td><td>On Call Brands, up to $150k, $750k post-money cap, 20% discount. At the cap, 20%. Michael keeps 80%, never below 51%. Farm untouched.</td><td>DEAL_SHEET.html?v=1122b</td></tr>
+    </tbody>
+  </table>
+
+  <footer class="foot">
+    <img src="assets/local-goat/sophie-logo.png" alt="">
+    <div>
+      <div>Critters on Call · Sheehan Homestead · Callahan, FL</div>
+      <div>sheehanhomestead.com · (914) 263-1311 · Script ?v=1124a</div>
+    </div>
+  </footer>
+</main>
+<script>
+document.querySelectorAll(".btn[data-copy]").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var el = document.getElementById(btn.getAttribute("data-copy"));
+    var text = el ? el.innerText.trim() : "";
+    navigator.clipboard.writeText(text).then(function(){
+      btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = btn.getAttribute("data-copy") === "oneliner" ? "Copy one-liner" : "Copy elevator"; }, 1600);
+    });
+  });
+});
+</script>
+</body>
+</html>
