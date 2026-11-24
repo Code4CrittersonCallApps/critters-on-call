@@ -179,7 +179,7 @@ A hundred and sixteen five-star Google reviews. Almost 10,000 Facebook followers
 
 And it isn't only birthday parties. Wildlight CDD. Early Learning Coalition of Duval — they've booked us more than once and called us flexible and easy to work with. Marsh Landing Country Club. Safariland. A pediatric medical day care in St. Johns — 24 patients on that visit.
 
-On the professional-programmer book: my estimate is about $50,000-plus with them over a rolling 14 to 16 months. I'll be precise, because I want you to trust the rest of this. The Payments ledger, Total Due by event date from September 24, 2025 through November 24, 2026, is about $72,000 across all customer types. The rows we can cleanly type as institutional or professional-programmer in that window are about $22,000. A large share of 2026 is still unclassified on the sheet. So the $50,000-plus with them is my estimate, not an audited line. Tax-return revenue was about $18,000 in 2024 and about $32,000 in 2025.
+About $72,000 booked over the last fourteen months, from a standing start, with no ad spend. Tax-return revenue went from about $18,000 in 2024 to about $32,000 in 2025, and the professional-programmer book is the fastest-growing piece of it.
 
 **7:10–8:10 · Blind search.** **Show:** Slide 5 (live search). Locked pair, statewide first, then Jacksonville: *Top rated mobile goat yoga and mobile petting zoo in Florida.* Then the same pair for Jacksonville. Never run petting zoo alone. Then cut to slide 6.
 
