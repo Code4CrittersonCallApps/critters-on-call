@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Critter Gold Membership · Black Friday – Cyber Monday · Sheehan Homestead</title>
-<meta name="description" content="Critter Gold is $49.99 for the year. Itemized value: $25 farm tour, $25 farm gift or thrifty toy, the Gold web app, and 40% off camps, mobile petting zoos and field trips. Day-one gifts $50 plus $60 off a Bunny Haven weekday party is $110 in value. Gold pays for itself the first time you book. Nov 27 – Dec 1, 2026.">
+<meta name="description" content="Black Friday Buy One, Gift One: buy Critter Gold at $49.99 and gift a second membership free, Nov 27 to Dec 1, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off camps, mobile petting zoos and field trips.">
 <link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
 <style>
 @font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
@@ -23,31 +23,36 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3","Sourc
 .brand .side+.side{border-left:1px solid var(--line)}
 .brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:14pt;line-height:1.1;color:var(--green)}
 .rule{display:flex;height:5px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
-.body{flex:1;padding:.16in .55in .14in;display:flex;flex-direction:column;gap:.11in;min-height:0;justify-content:space-between}
+.body{flex:1;padding:.12in .55in .10in;display:flex;flex-direction:column;gap:.08in;min-height:0;justify-content:flex-start}
 .k{font-size:10pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.bogo{display:flex;align-items:center;gap:14px;background:#1f2a24;color:var(--cream);border-radius:14px;padding:8px 16px;border:2px solid var(--gold)}
+.bogo .tag{background:var(--gold);color:#1f2a24;font-weight:800;font-size:11.5pt;letter-spacing:.06em;text-transform:uppercase;border-radius:8px;padding:7px 12px;white-space:nowrap;text-align:center;line-height:1.15;font-family:Fraunces,Georgia,serif}
+.bogo .tag small{display:block;font-family:"Source Sans 3",sans-serif;font-size:8pt;letter-spacing:.12em;margin-top:2px}
+.bogo p{font-size:11.2pt;line-height:1.35}
+.bogo b{color:var(--gold-lt)}
 .hero{display:flex;gap:.28in;align-items:center}
 .hero .txt{flex:1.5}
-.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:36pt;line-height:1.0;color:var(--green);margin:5px 0 8px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:34pt;line-height:1.0;color:var(--green);margin:4px 0 6px}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p.lede{font-size:12.5pt;line-height:1.38;color:var(--ink)}
 .hero .card{flex:1;transform:rotate(-3deg);max-width:3.05in}
 .hero .card img{width:100%;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.28);display:block}
-.price{display:flex;align-items:center;gap:.22in;background:var(--green);color:var(--cream);border-radius:16px;padding:11px 20px;border-left:8px solid var(--gold)}
+.price{display:flex;align-items:center;gap:.22in;background:var(--green);color:var(--cream);border-radius:16px;padding:9px 20px;border-left:8px solid var(--gold)}
 .price .ylab{font-size:9.5pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt)}
 .price .now{font-family:Fraunces,Georgia,serif;font-size:34pt;font-weight:700;line-height:1;color:#fff}
 .price .now small{font-family:"Source Sans 3",sans-serif;font-size:12.5pt;font-weight:600;color:var(--gold-lt);margin-left:6px}
 .price .how{margin-left:auto;text-align:right;font-size:11.2pt;line-height:1.4}
 .price .how b{color:var(--gold-lt)}
-.price .save{display:inline-block;background:var(--gold);color:var(--green);font-weight:800;font-size:9.2pt;border-radius:20px;padding:3px 10px;margin-top:4px;max-width:3.55in;line-height:1.25}
+.price .save{display:inline-block;background:var(--gold);color:var(--green);font-weight:800;font-size:10pt;border-radius:20px;padding:2px 10px;margin-top:4px;line-height:1.25}
 .price .soon{display:inline-block;border:1px dashed var(--gold-lt);border-radius:20px;padding:1px 9px;font-size:9.5pt;margin-top:4px}
 h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17.5pt;color:var(--green);line-height:1.1}
 h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--green);border-radius:20px;padding:3px 11px;margin-left:8px;vertical-align:middle}
-.gifts{display:grid;grid-template-columns:repeat(4,1fr);gap:.11in;margin-top:7px}
+.gifts{display:grid;grid-template-columns:repeat(4,1fr);gap:.11in;margin-top:5px}
 .gift{background:#fff;border:1.5px solid var(--line);border-top:5px solid var(--gold);border-radius:12px;padding:8px 9px 9px;text-align:center}
 .gift .v{font-family:Fraunces,Georgia,serif;font-size:20pt;font-weight:700;color:var(--green);line-height:1;margin:2px 0 3px;white-space:nowrap}.gift .v.lg{font-size:17pt;letter-spacing:-0.02em}
 .gift h3{font-size:11.2pt;font-weight:800;color:var(--ink);line-height:1.2}
 .gift p{font-size:9.3pt;color:var(--muted);line-height:1.28;margin-top:3px}
-.totals{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:.10in;margin-top:8px}
+.totals{display:grid;grid-template-columns:1.1fr 1.25fr 1.15fr;gap:.10in;margin-top:6px}
 .tot-box{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:7px 10px 8px;text-align:center}
 .tot-box .l{display:block;font-size:8.6pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
 .tot-box .n{display:block;font-family:Fraunces,Georgia,serif;font-size:16pt;font-weight:700;color:var(--green);line-height:1.05;white-space:nowrap}
@@ -81,7 +86,7 @@ h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;le
 @media screen and (max-width:860px){
  html,body{background:var(--cream)}
  .page{width:100%;height:auto;margin:0}
- .hero,.price,.ft,.two,.totals{flex-direction:column;align-items:stretch}
+ .hero,.price,.ft,.two,.totals,.bogo{flex-direction:column;align-items:stretch}
  .hero h1{font-size:32pt}
  .hero .card{transform:none;max-width:360px;margin:0 auto}
  .price .how,.ft .ct{text-align:left;margin-left:0}
@@ -104,7 +109,7 @@ h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;le
       <div class="txt">
         <div class="k">Critter Gold Membership</div>
         <h1>Pay $49.99 once.<br><em>Play all year.</em></h1>
-        <p class="lede">One card opens a free farm tour, a free farm gift or thrifty toy, the Gold web app, and 40% off camps, mobile petting zoos and field trips.</p>
+        <p class="lede">Buy Gold at $49.99 and gift a second membership free. Two cards, $200 in day-one gifts, the Gold web app, and about 40% off camps, mobile petting zoos and field trips.</p>
       </div>
       <div class="card"><img src="assets/gold-poster/card.jpg" alt="The Critter Gold member card: In Critters We Trust"></div>
     </div>
@@ -116,23 +121,23 @@ h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;le
       </div>
       <div class="how">
         Get it in the <b>Gold web app</b> today<br>
-        <span class="save">One mobile petting zoo party at 40% off saves you $60</span><br>
+        <span class="save">Buy one, gift one free · Nov 27 – Dec 1</span><br>
         <span class="soon">Google Play Store · coming soon</span>
       </div>
+    </div>
+
+    <div class="bogo">
+      <span class="tag">Buy One,<br>Gift One<small>Nov 27 – Dec 1, 2026</small></span>
+      <p><b>Buy Gold at $49.99 and gift a second membership free.</b> Two memberships, $200 in day-one gifts, for $49.99. Nov 27 to Dec 1, 2026 only.</p>
     </div>
 
     <div>
       <h2>The value stack</h2>
       <div class="gifts">
         <div class="gift">
-          <div class="v">$25</div>
-          <h3>Farm tour for two</h3>
-          <p>An afternoon petting zoo farm tour at the homestead. Two-person ticket.</p>
-        </div>
-        <div class="gift">
-          <div class="v">$25</div>
-          <h3>Farm gift or thrifty toy</h3>
-          <p>Like an amaryllis, lemongrass, farm eggs, or a classic toy, claimed in person.</p>
+          <div class="v">$100</div>
+          <h3>Day-one gifts</h3>
+          <p>About $100 per membership: farm tour, STEM kit, farm gift, and thrift gift.</p>
         </div>
         <div class="gift">
           <div class="v lg">Included</div>
@@ -142,13 +147,18 @@ h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;le
         <div class="gift">
           <div class="v lg">40% off</div>
           <h3>Member pricing</h3>
-          <p>Camps, mobile petting zoos and field trips, all year.</p>
+          <p>About 40% off camps, mobile petting zoos and field trips, all year.</p>
+        </div>
+        <div class="gift">
+          <div class="v lg">Join 500+</div>
+          <h3>Members</h3>
+          <p>A year of the farm, the app, and member pricing, together.</p>
         </div>
       </div>
       <div class="totals">
-        <div class="tot-box"><span class="l">Day-one gifts</span><span class="n">$50</span></div>
+        <div class="tot-box"><span class="l">Two memberships</span><span class="n">Two</span></div>
+        <div class="tot-box ys"><span class="l">Day-one gifts</span><span class="n">$200</span><span class="sub">$100 in gifts × two cards</span></div>
         <div class="tot-box yp"><span class="l">Your price</span><span class="n">$49.99</span></div>
-        <div class="tot-box ys"><span class="l">Total value</span><span class="n">$110</span><span class="sub">$50 gifts + $60 zoo savings</span></div>
       </div>
     </div>
 
@@ -172,10 +182,6 @@ h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;le
       </div>
     </div>
 
-    <div class="bf">
-      <span class="tag">Black Friday<br>Nov 27 – Dec 1, 2026</span>
-      <p><b>The best Black Friday deal we have is Gold.</b> Day-one gifts are $50. One Bunny Haven weekday party at 40% off saves you $60 — that's $110 in value against your price of $49.99. Gold pays for itself the first time you book. It makes a great Christmas gift, too.</p>
-    </div>
   </div>
 
   <footer class="ft">
