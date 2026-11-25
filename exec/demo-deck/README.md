@@ -1,6 +1,6 @@
 # Interactive demo deck
 
-Open: https://code4crittersoncallapps.github.io/critters-on-call/exec/demo-deck/?v=1124g
+Open: https://code4crittersoncallapps.github.io/critters-on-call/exec/demo-deck/?v=1124i
 
 Keys: → / Space / click = next · ← = back · ☰ or M = index · A = appendix · N = speaker notes · B / Esc = back from a drill-down · F = fullscreen · H = hide controls for recording · 1–9 = jump.
 Add `?clean` to the URL to hide the controls, `?notes` to open notes on load. Deep links: `#precedent`, `#case-rover`, `#a-reviews`, etc.
