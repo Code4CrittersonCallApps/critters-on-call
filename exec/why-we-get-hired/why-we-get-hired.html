@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Vendor Qualification Standards · Sheehan Homestead &amp; Critters on Call</title>
+<style>
+@font-face{font-family:"Fraunces";src:url("assets/fraunces-normal-latin.woff2") format("woff2");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Source Sans 3";src:url("assets/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal}
+@page{size:letter portrait;margin:0}
+:root{
+  --green:#4e6558;
+  --deep:#26332b;
+  --forest:#3A4F45;
+  --gold:#c9a227;
+  --gold-lt:#E8D48C;
+  --cream:#F3EEE4;
+  --paper:#FFFDF8;
+  --ink:#1b241e;
+  --muted:#56645b;
+  --rule:#ded5c2;
+  --check-bg:#edf4ef;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  width:8.5in;
+  height:11in;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Source Sans 3",sans-serif;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+.page{
+  width:8.5in;
+  height:11in;
+  padding:0.38in 0.48in 0.34in;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:var(--cream);
+}
+
+/* Dual-Logo Co-Brand Header */
+.cobrand{
+  background:var(--paper);
+  border:1.5px solid var(--rule);
+  border-radius:12px 12px 0 0;
+  padding:10px 18px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:14px;
+}
+.brand-side{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.brand-side.right{justify-content:flex-end;text-align:right}
+.brand-side img{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  object-fit:cover;
+}
+.brand-side .bname{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:15px;
+  font-weight:700;
+  color:var(--deep);
+  line-height:1.12;
+}
+.brand-side .bsub{
+  font-size:10.5px;
+  color:var(--muted);
+  font-weight:600;
+}
+.brand-div{
+  width:1px;
+  height:36px;
+  background:var(--rule);
+}
+.split-bar{
+  height:4px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.split-bar .g{background:var(--green)}
+.split-bar .y{background:var(--gold)}
+
+/* Title Banner */
+.hero{
+  background:linear-gradient(135deg, var(--forest) 0%, var(--green) 100%);
+  color:#fff;
+  padding:14px 20px 13px;
+  border-radius:0 0 12px 12px;
+  border-bottom:3px solid var(--gold);
+}
+.hero .kicker{
+  font-size:9.5px;
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--gold-lt);
+  margin-bottom:3px;
+}
+.hero h1{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:23px;
+  font-weight:700;
+  line-height:1.12;
+  color:#fff;
+  margin-bottom:4px;
+}
+.hero p{
+  font-size:12.5px;
+  color:#e7efe9;
+  line-height:1.36;
+}
+
+/* Matrix Table matching demo-deck competitive slide */
+.matrix-wrap{
+  margin-top:11px;
+  background:var(--paper);
+  border:1.5px solid var(--green);
+  border-radius:11px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(38,51,43,0.06);
+}
+table.std{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+table.std thead th{
+  background:var(--green);
+  color:#fff;
+  font-size:10.5px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.11em;
+  padding:9px 12px;
+  text-align:left;
+  border-bottom:2.5px solid var(--gold);
+}
+table.std thead th.col-std{width:27%}
+table.std thead th.col-why{width:41%}
+table.std thead th.col-sh{
+  width:32%;
+  background:var(--deep);
+  color:var(--gold-lt);
+}
+table.std tbody td{
+  padding:9.2px 12px;
+  border-bottom:1px solid #e7dfd0;
+  vertical-align:middle;
+  font-size:11.6px;
+  line-height:1.3;
+}
+table.std tbody tr:last-child td{border-bottom:none}
+table.std tbody tr:nth-child(even) td{background:#faf7f0}
+table.std tbody td.col-std{
+  font-weight:700;
+  color:var(--deep);
+  font-size:12px;
+}
+table.std tbody td.col-why{
+  color:#414e46;
+}
+table.std tbody td.col-sh{
+  background:var(--check-bg) !important;
+  border-left:1.5px solid #c5d4cb;
+  color:var(--deep);
+  font-weight:600;
+}
+.chk{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+}
+.dot{
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background:var(--green);
+  color:#fff;
+  font-size:10.5px;
+  font-weight:800;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  margin-top:1px;
+  border:1px solid var(--gold);
+}
+.chk span b{color:var(--forest);font-weight:700}
+
+/* Takeaway Callout matching demo-deck #comp .take */
+.takeaway{
+  margin-top:10px;
+  background:var(--deep);
+  color:#fff;
+  border:1.5px solid var(--gold);
+  border-radius:10px;
+  padding:10px 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.takeaway .t-main{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:14.5px;
+  font-weight:700;
+  color:var(--gold-lt);
+  margin-bottom:2px;
+}
+.takeaway p{
+  font-size:11.8px;
+  color:#e7efe9;
+  line-height:1.35;
+}
+
+/* Footer with QR */
+.foot-card{
+  margin-top:9px;
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:10px;
+  padding:8px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.foot-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.foot-left img{
+  width:50px;
+  height:50px;
+  border:1px solid var(--rule);
+  border-radius:6px;
+  background:#fff;
+  padding:2px;
+}
+.foot-left .f-title{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--deep);
+}
+.foot-left .f-sub{
+  font-size:11.2px;
+  color:var(--muted);
+}
+.foot-right{
+  text-align:right;
+  font-size:11.5px;
+  color:var(--ink);
+  line-height:1.35;
+}
+.foot-right b{color:var(--green);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div>
+    <header class="cobrand">
+      <div class="brand-side">
+        <img src="assets/sh.png" alt="Sheehan Homestead">
+        <div>
+          <div class="bname">Sheehan Homestead</div>
+          <div class="bsub">Registered Florida Farm &amp; Education</div>
+        </div>
+      </div>
+      <div class="brand-div"></div>
+      <div class="brand-side right">
+        <div>
+          <div class="bname">Critters on Call</div>
+          <div class="bsub">Mobile Petting Zoos &amp; Community Events</div>
+        </div>
+        <img src="assets/coc.png" alt="Critters on Call">
+      </div>
+    </header>
+    <div class="split-bar"><span class="g"></span><span class="y"></span></div>
+
+    <section class="hero">
+      <div class="kicker">Community Event Bid &amp; Vendor Qualification Checklist</div>
+      <h1>What Communities Look For in an Animal Event Vendor</h1>
+      <p>A practical checklist for CDDs, HOAs, schools, and private clubs—designed to protect your residents, your board, and your event calendar before you sign.</p>
+    </section>
+
+    <div class="matrix-wrap">
+      <table class="std">
+        <thead>
+          <tr>
+            <th class="col-std">Vendor Standard</th>
+            <th class="col-why">Why It Matters for Your Community</th>
+            <th class="col-sh">Sheehan Homestead</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-std">Registered Business Entity</td>
+            <td class="col-why">Confirms a real, accountable legal entity for contracts and tax reporting.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Registered Florida LLC</b> (Doc.&nbsp;L23000363396)</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Liability Coverage &amp; Named Additional Insured</td>
+            <td class="col-why">Liability coverage at the limits leading NE Florida communities now require (Wildlight CDD, Amelia Island Plantation), with COI naming your community &amp; manager.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Hiscox CGL ($1M / $2M)</b> · Same-day Additional Insured COI</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">50+ Public Google Reviews</td>
+            <td class="col-why">Demonstrates consistent satisfaction across dozens of real local families and coordinators.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>100+ five-star Google reviews</b> (5.0★)</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">1,000+ Local Followers</td>
+            <td class="col-why">Established local brand recognition that helps community events draw strong turnout.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Almost 10,000 Facebook followers</b></span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Real Website &amp; Online Booking</td>
+            <td class="col-why">Published menus, clear policies, and dependable scheduling instead of informal DMs.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>sheehanhomestead.com</b> · Online booking &amp; menus</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Confirmed CDD, Agency &amp; Club Bookings</td>
+            <td class="col-why">Already vetted by peer boards, management companies, and public agencies in NE Florida.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Wildlight CDD, RiverTown, Amelia Island Plantation, Marsh Landing CC &amp; ELC Duval</b></span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Written Quote, W-9 &amp; CDD Tax-Exempt Billing</td>
+            <td class="col-why">Clean accounts-payable paper trail, itemized invoices, and $0 sales tax for CDDs.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>W-9 on file</b> · Itemized invoices &amp; $0 CDD tax</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Trained Handlers &amp; Containment Setup</td>
+            <td class="col-why">Dedicated facilitators, full fencing, 30-min early arrival, and turf/indoor protection.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Branded team, full pens</b> &amp; 30-min early setup</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Written Weather &amp; Reschedule Policy</td>
+            <td class="col-why">Protects community budgets and resident calendars when Florida weather hits.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Free weather reschedule</b> (48-hr preferred; 24-hr OK)</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-std">Verifiable Institutional References</td>
+            <td class="col-why">Named community, school, and club reviews you can verify before committing funds.</td>
+            <td class="col-sh"><div class="chk"><i class="dot">✓</i><span><b>Verified 5-star reviews</b> from CDDs, clubs &amp; schools</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <div class="takeaway">
+      <div>
+        <div class="t-main">Ready for your next vendor packet or RFP</div>
+        <p>Every item above is verified before event day—zero surprises for your board and a standout day for residents.</p>
+      </div>
+    </div>
+
+    <footer class="foot-card">
+      <div class="foot-left">
+        <img src="assets/qr-go.png" alt="Scan for reviews and booking">
+        <div>
+          <div class="f-title">Verify reviews, menus &amp; COI-ready booking</div>
+          <div class="f-sub">Scan the QR code or visit sheehanhomestead.com</div>
+        </div>
+      </div>
+      <div class="foot-right">
+        <b>914-263-1311</b><br>
+        sheehanhomestead@gmail.com<br>
+        Callahan, FL · Serving NE Florida CDDs &amp; Clubs
+      </div>
+    </footer>
+  </div>
+
+</div>
+</body>
+</html>
