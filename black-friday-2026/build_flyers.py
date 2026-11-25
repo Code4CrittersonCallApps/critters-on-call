@@ -92,11 +92,11 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3","Sourc
 .brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:13.5pt;line-height:1.1;color:var(--green)}
 .rule{display:flex;height:5px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
 
-.body{flex:1;padding:.14in .52in .11in;display:flex;flex-direction:column;gap:.10in;min-height:0;justify-content:space-between}
+.body{flex:1;padding:.20in .52in .16in;display:flex;flex-direction:column;gap:.20in;min-height:0;justify-content:center}
 .k{font-size:9.5pt;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);font-weight:800}
 .hero{display:flex;gap:.24in;align-items:center}
 .hero .txt{flex:1.42}
-.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:31pt;line-height:1.02;color:var(--green);margin:4px 0 7px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:34pt;line-height:1.05;color:var(--green);margin:0}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p.lede{font-size:11.3pt;line-height:1.36;color:var(--ink)}
 .hero .photo{flex:1;max-width:2.85in}
@@ -230,30 +230,24 @@ def wrap_html(title, desc, body_html, qr_img, qr_url, cta_title, cta_sub):
 
 GOLD_CROSS_SELL = """
     <div class="cross">
-      <span class="pill">Black Friday Gold<br>$49.99 BOGO</span>
-      <p><b>Critter Gold is $49.99 — Buy One, Gift One free (Nov 27 – Dec 1, 2026).</b> Two memberships, $200 in day-one gifts ($100 per card), the Gold web app (Google Play Store coming soon), and about 40% off camps, mobile petting zoos and field trips all year.</p>
+      <p><b>Black Friday:</b> Gold is $49.99 — Buy One, Gift One free, Nov 27 – Dec 1.</p>
     </div>
 """
 
-# 1. MOBILE-ONLY "KNOW YOUR DATE?" 50% OFF DEPOSIT FLYER
 def body_mobile_know_date():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">Mobile Petting Zoo &middot; Black Friday &amp; Cyber Monday</div>
         <h1>Know your date?<br><em>Lock it at 50% off.</em></h1>
-        <p class="lede">We bring the farm to your backyard across Callahan and Metro Jacksonville. Normally a 50% deposit holds your date — Nov 27 to Dec 1, 2026, just pay that 50% deposit and we waive the rest on the package.</p>
       </div>
       <div class="photo"><img src="assets/community-event.jpg" alt="Critters on Call mobile petting zoo under a tent"></div>
     </div>
-
     <div class="banner">
-      <span class="tag">50% Off<br>Package<small>Nov 27 – Dec 1</small></span>
-      <p><b>Pay only the 50% deposit to lock your 2026 or 2027 date.</b> Free weather reschedules with 48 hours' notice. Travel from Callahan is always quoted separately before you book.</p>
+      <span class="tag">50% Off<br>the Package<small>Nov 27 – Dec 1</small></span>
+      <p><b>Pay only the 50% deposit to lock your date.</b> Travel from Callahan is quoted separately. Free weather reschedules with 48 hours' notice.</p>
     </div>
-
     <div>
-      <h2>Pick your mobile petting zoo <span class="subh">Your price = 50% deposit paid in full on the package</span></h2>
+      <h2>Your price is the 50% deposit, paid in full</h2>
       <div class="tbl-wrap">
         <table class="menu">
           <thead>
@@ -265,496 +259,203 @@ def body_mobile_know_date():
           </thead>
           <tbody>
             <tr>
-              <td><span class="nm">Bunny Haven &middot; 60 min</span><span class="mt">Bunnies, goats &amp; friends for smaller backyards</span></td>
+              <td><span class="nm">Bunny Haven &middot; 60 min</span><span class="mt">Bunnies, goats &amp; friends</span></td>
               <td class="r"><span class="now">$75</span><span class="was">List $150</span><span class="ys">You save $75</span></td>
               <td class="r"><span class="now">$117.50</span><span class="was">List $235</span><span class="ys">You save $117.50</span></td>
             </tr>
-            <tr>
-              <td><span class="nm">Mini Petting Zoo &middot; 75 min</span><span class="mt">At least 6 animals: goats, bunnies &amp; fowl</span></td>
-              <td class="r"><span class="now">$149.50</span><span class="was">List $299</span><span class="ys">You save $149.50</span></td>
-              <td class="r"><span class="now">$179.50</span><span class="was">List $359</span><span class="ys">You save $179.50</span></td>
-            </tr>
             <tr class="hl">
-              <td><span class="nm">Standard Petting Zoo &middot; 90 min</span><span class="mt">At least 9 animals &middot; full birthday backyard package</span></td>
+              <td><span class="nm">Standard Petting Zoo &middot; 90 min</span><span class="mt">At least 9 animals &middot; full backyard package</span></td>
               <td class="r"><span class="now">$179.50</span><span class="was">List $359</span><span class="ys">You save $179.50</span></td>
               <td class="r"><span class="now">$274.50</span><span class="was">List $549</span><span class="ys">You save $274.50</span></td>
             </tr>
             <tr>
-              <td><span class="nm">Standard + Full Side &middot; bigger party</span><span class="mt">Extra critters added to our Standard backyard zoo</span></td>
+              <td><span class="nm">Standard + Full Side</span><span class="mt">Extra critters for a bigger party</span></td>
               <td class="r"><span class="now">$249.50</span><span class="was">List $499</span><span class="ys">You save $249.50</span></td>
               <td class="r"><span class="now">$349.50</span><span class="was">List $699</span><span class="ys">You save $349.50</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">Full Side Add-On</span><span class="mt">Add more animals to any Standard visit</span></td>
-              <td class="r" colspan="2"><span class="now">$75</span><span class="was">List $150</span><span class="ys">You save $75</span></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-
-    <div class="two">
-      <div class="box">
-        <h3>Why families book us</h3>
-        <ul>
-          <li><b>All-inclusive backyard setup:</b> pens, handlers &amp; cleanup</li>
-          <li><b>48-hour free weather reschedule</b> for peace of mind</li>
-          <li><b>Step Up LIVE</b> eligible on mobile visits</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>Trusted across Northeast Florida</h3>
-        <ul>
-          <li>Led by <b>Michael &amp; Ann-Marie Sheehan</b> in Callahan</li>
-          <li>Join our <b>almost 10,000 Facebook followers</b></li>
-          <li><b>100+ five-star Google reviews</b></li>
-        </ul>
-      </div>
-    </div>
     """ + GOLD_CROSS_SELL
 
-# 2. VISIT US · FARM TOURS & WHOLE-CAR CHRISTMAS GIFT EXPERIENCES
 def body_visit_us():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">Visit Us &middot; On the Farm in Callahan, FL</div>
         <h1>Gift the farm.<br><em>Skip the clutter.</em></h1>
-        <p class="lede">Bring the family out to 44065 Cushman Road in Callahan for hands-on animal time where every visit gives back more than you paid.</p>
       </div>
-      <div class="photo"><img src="assets/farm-field.jpg" alt="Visitors meeting animals on the farm at Sheehan Homestead"></div>
+      <div class="photo"><img src="assets/farm-field.jpg" alt="The farm at Sheehan Homestead in Callahan"></div>
     </div>
-
     <div class="banner">
-      <span class="tag">Nov 27 – Dec 1<br>Gift Guide<small>Christmas Ready</small></span>
-      <p><b>Every visit gives back more than you paid.</b> Go home with fresh farm memories and gifts — or pair your visit with Black Friday Gold Buy One, Gift One.</p>
+      <span class="tag">Visit Us<br>Callahan, FL<small>Nov 27 – Dec 1</small></span>
+      <p><b>Every visit gives back more than you paid.</b> Book a farm morning, or give Gold: Buy One, Gift One free.</p>
     </div>
-
-    <div>
-      <h2>On-farm tickets &amp; gift options <span class="subh">Locked family menu pricing</span></h2>
-      <div class="cards3">
-        <div class="card">
-          <div>
-            <div class="ck">Pair Ticket &middot; 60 Min</div>
-            <h3>Farm Tour for Two</h3>
-            <p class="desc">Guided afternoon petting zoo visit with our goats, bunnies, chickens &amp; livestock guardian dogs.</p>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price</span><span class="yp">$25</span></div>
-            <div class="sv-col"><span class="lst" style="text-decoration:none">Included free in Gold</span><span class="sv">Free w/ Gold ($25 value)</span></div>
-          </div>
-        </div>
-
-        <div class="card feat">
-          <div>
-            <div class="ck">Preferred Family Ticket &middot; 60 Min</div>
-            <h3>Whole-Car Farm Visit</h3>
-            <p class="desc">Up to 5 guests in one car. Meet the herd, snap Christmas photos, and leave with farm gifts.</p>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price</span><span class="yp">$50<small>/car</small></span></div>
-            <div class="sv-col"><span class="lst" style="text-decoration:none">Up to 5 guests</span><span class="sv">Over-delivers in gifts</span></div>
-          </div>
-        </div>
-
-        <div class="card feat">
-          <div>
-            <div class="ck">Best Christmas Gift &middot; BOGO</div>
-            <h3>Critter Gold (2 Cards)</h3>
-            <p class="desc">Two Gold memberships, two $25 farm tours for two, plus STEM kits, farm gifts &amp; thrift gifts.</p>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price</span><span class="yp">$49.99</span></div>
-            <div class="sv-col"><span class="lst" style="text-decoration:none">$200 in day-one gifts</span><span class="sv">You save $150.01</span></div>
-          </div>
-        </div>
+    <div class="cards3">
+      <div class="card">
+        <div class="ck">Pair Ticket &middot; 60 Min</div>
+        <h3>Farm Tour for Two</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price</span><span class="yp">$25</span></div>
+        <div class="sv-col"><span class="sv">Free w/ Gold</span></div></div>
       </div>
-    </div>
-
-    <div class="two">
-      <div class="box">
-        <h3>What you meet in Callahan</h3>
-        <ul>
-          <li>Friendly dairy goats, bunnies, pigs, ducks &amp; specialty chickens</li>
-          <li><b>Farm gifts in person:</b> amaryllis, lemongrass, farm eggs &amp; toys</li>
-          <li>Short country drive from Jacksonville (44065 Cushman Rd)</li>
-        </ul>
+      <div class="card feat">
+        <div class="ck">Preferred &middot; Up to 5 Guests</div>
+        <h3>Whole-Car Visit</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price</span><span class="yp">$50<small>/car</small></span></div>
+        <div class="sv-col"><span class="sv">Includes farm gifts</span></div></div>
       </div>
-      <div class="box">
-        <h3>Simple gift setup</h3>
-        <ul>
-          <li>Visits &amp; gift pickups are <b>scheduled by appointment</b></li>
-          <li>Call or text <b>914-263-1311</b> for same-week gift vouchers</li>
-          <li>Join our <b>almost 10,000 Facebook followers</b></li>
-        </ul>
+      <div class="card feat">
+        <div class="ck">Buy One, Gift One</div>
+        <h3>Two Gold Cards</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price</span><span class="yp">$49.99</span></div>
+        <div class="sv-col"><span class="lst" style="text-decoration:none">$200 in gifts</span><span class="sv">You save $150.01</span></div></div>
       </div>
     </div>
     """ + GOLD_CROSS_SELL
 
-# 3. MOMMY & ME · TODDLER & PRESCHOOL FARM MORNINGS
 def body_mommy_me():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">Mommy &amp; Me &middot; Early Childhood &amp; Playgroups</div>
         <h1>Little hands,<br><em>gentle animals.</em></h1>
-        <p class="lede">Unrushed hour-long mornings with goats, bunnies, and chicks for toddlers, parents, and grandparents — on our Callahan farm or at your neighborhood clubhouse.</p>
       </div>
-      <div class="photo"><img src="assets/kids-wagon.jpg" alt="Young child smiling with a silkie chicken at Sheehan Homestead"></div>
+      <div class="photo"><img src="assets/kids-wagon.jpg" alt="Young child with a silkie chicken at Sheehan Homestead"></div>
     </div>
-
     <div class="banner">
-      <span class="tag">Mommy &amp; Me<br>Nov 27 – Dec 1<small>Split Gold BOGO</small></span>
-      <p><b>Buy one Gold card ($49.99) and gift one free to your playgroup friend.</b> Each mom gets $100 in day-one gifts — including a free $25 farm tour for two.</p>
+      <span class="tag">Mommy &amp; Me<br>On the Farm<small>$25 / hour</small></span>
+      <p><b>Unhurried hours with goats, bunnies and chicks</b> — Thursdays and Saturdays at 10 AM in Callahan, for toddlers, parents and grandparents.</p>
     </div>
-
-    <div>
-      <h2>Mommy &amp; Me options <span class="subh">Locked farm &amp; clubhouse pricing</span></h2>
-      <div class="cards2">
-        <div class="card feat">
-          <div>
-            <div class="ck">On the Farm &middot; Thursdays &amp; Saturdays 10 AM</div>
-            <h3>Mommy &amp; Me on the Farm (60 Min)</h3>
-            <ul>
-              <li>Parent + little one with gentle bunnies, goats &amp; birds</li>
-              <li>Calm pace built for toddlers &amp; preschoolers</li>
-              <li>44065 Cushman Road, Callahan, FL</li>
-            </ul>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price</span><span class="yp">$25<small>/hr</small></span></div>
-            <div class="sv-col"><span class="lst" style="text-decoration:none">Or $49.99 Gold BOGO</span><span class="sv">2 cards + $200 gifts</span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ck">We Come to You &middot; Playgroups &amp; Clubhouses</div>
-            <h3>Mommy &amp; Me at Your Clubhouse (60 Min)</h3>
-            <ul>
-              <li>We bring gentle critters to your HOA or playgroup</li>
-              <li>Gold members save <b>25% on services &amp; 50% on travel</b></li>
-              <li>Travel quoted from Callahan before you book</li>
-            </ul>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price (w/ Gold 25% off)</span><span class="yp">$111.75<small>+</small></span></div>
-            <div class="sv-col"><span class="lst">$149–$299 list</span><span class="sv">You save $37.25–$74.75</span></div>
-          </div>
-        </div>
+    <div class="cards2">
+      <div class="card feat">
+        <div class="ck">On the Farm &middot; 60 Min</div>
+        <h3>Mommy &amp; Me</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price</span><span class="yp">$25<small>/hr</small></span></div></div>
       </div>
-    </div>
-
-    <div class="two">
-      <div class="box">
-        <h3>Why moms &amp; grandparents love it</h3>
-        <ul>
-          <li>Led by <b>Ann-Marie Sheehan, M.Ed.</b> &amp; farm educators</li>
-          <li>Outdoor fresh air, clean setup &amp; gentle first animal encounters</li>
-          <li>Pair with a <b>Whole-Car Farm Visit ($50)</b> for older siblings</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>Easy gift for young families</h3>
-        <ul>
-          <li>No noisy plastic toys — give an hour with baby goats &amp; bunnies</li>
-          <li>Free weather reschedules on mobile playgroups (48 hrs' notice)</li>
-          <li>Join our <b>almost 10,000 Facebook followers</b></li>
-        </ul>
+      <div class="card">
+        <div class="ck">Buy One, Gift One</div>
+        <h3>Two Gold Cards</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price</span><span class="yp">$49.99</span></div>
+        <div class="sv-col"><span class="lst" style="text-decoration:none">$200 in gifts</span><span class="sv">Split with a friend</span></div></div>
       </div>
     </div>
     """ + GOLD_CROSS_SELL
 
-# 4. HOMESCHOOL FARM & STEM · SCHEDULED FARM MORNINGS
 def body_homeschool():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">Homeschool Families &middot; Step Up LIVE Eligible</div>
         <h1>Real animals.<br><em>Real farm science.</em></h1>
-        <p class="lede">Scheduled 90-minute Homeschool Farm &amp; STEM mornings in Callahan — animal care, gardening, composting, and hands-on science led by Ann-Marie Sheehan, M.Ed.</p>
       </div>
-      <div class="photo"><img src="assets/kids-pen.jpg" alt="Kids learning with goats and bunnies in a petting pen" style="object-position:center 35%"></div>
+      <div class="photo"><img src="assets/kids-pen.jpg" alt="Kids learning with goats and bunnies" style="object-position:center 35%"></div>
     </div>
-
     <div class="banner">
-      <span class="tag">Homeschool<br>Save 40%<small>w/ Critter Gold</small></span>
-      <p><b>Critter Gold pays for itself in three homeschool mornings.</b> Drop your $40 morning to <b>$24</b> — and Nov 27–Dec 1, buy Gold at $49.99 and gift a second membership free to another homeschool family.</p>
+      <span class="tag">Homeschool<br>40% Off<small>with Gold</small></span>
+      <p><b>90-minute Farm &amp; STEM mornings in Callahan</b>, led by Ann-Marie Sheehan, M.Ed. Step Up LIVE eligible.</p>
     </div>
-
-    <div>
-      <h2>Homeschool family options <span class="subh">Locked farm pricing &middot; Step Up welcome</span></h2>
-      <div class="cards3">
-        <div class="card feat">
-          <div>
-            <div class="ck">Scheduled 90 Min &middot; Mon / Tue / Wed</div>
-            <h3>Homeschool Farm &amp; STEM</h3>
-            <p class="desc">Hands-on science + animal stewardship. Mon 10 AM/1 PM, Tue 10 AM, Wed 10 AM/1 PM.</p>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">$24</span></div>
-            <div class="sv-col"><span class="lst">$40 list</span><span class="sv">You save $16 (40% off)</span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ck">Day-One Gold Perk &middot; 60 Min</div>
-            <h3>Farm Tour for Two</h3>
-            <p class="desc">Try the homestead with your learner first — included free day one when you grab Gold.</p>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">FREE</span></div>
-            <div class="sv-col"><span class="lst">$25 list</span><span class="sv">You save $25</span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ck">Up to 5 Guests &middot; 60 Min</div>
-            <h3>Whole-Car Family Visit</h3>
-            <p class="desc">Bring siblings and both parents in one car. Every visit gives back more than you paid.</p>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price</span><span class="yp">$50<small>/car</small></span></div>
-            <div class="sv-col"><span class="lst" style="text-decoration:none">Up to 5 guests</span><span class="sv">Includes farm gifts</span></div>
-          </div>
-        </div>
+    <div class="cards2">
+      <div class="card feat">
+        <div class="ck">Scheduled 90 Min &middot; Mon / Tue / Wed</div>
+        <h3>Homeschool Farm &amp; STEM</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">$24</span></div>
+        <div class="sv-col"><span class="lst">$40 list</span><span class="sv">You save $16</span></div></div>
       </div>
-    </div>
-
-    <div class="two">
-      <div class="box">
-        <h3>Step Up For Students</h3>
-        <ul>
-          <li><b>Step Up LIVE</b> — eligible Florida families welcome</li>
-          <li>Standard list pricing applies on Step Up invoicing (discounts don't stack)</li>
-          <li>Ask us about the invoice path for your family</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>What learners actually do</h3>
-        <ul>
-          <li><b>Animal science:</b> goats, bunnies, chickens &amp; farm care</li>
-          <li><b>Homestead STEM:</b> composting, gardening &amp; building</li>
-          <li>Join our <b>almost 10,000 Facebook followers</b></li>
-        </ul>
+      <div class="card">
+        <div class="ck">Up to 5 Guests &middot; 60 Min</div>
+        <h3>Whole-Car Family Visit</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price</span><span class="yp">$50<small>/car</small></span></div>
+        <div class="sv-col"><span class="sv">Includes farm gifts</span></div></div>
       </div>
     </div>
     """ + GOLD_CROSS_SELL
 
-# 5. SCHOOL-BREAK CAMPS · THANKSGIVING & WINTER-BREAK FARM MORNINGS
 def body_camps():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">School-Break Camps &middot; Verified Local Dates</div>
         <h1>Winter break<br><em>on the farm.</em></h1>
-        <p class="lede">Trade holiday screen time for goats, bunnies, and hands-on farm STEM. Verified Duval &amp; Nassau break mornings in Callahan — small groups, limited spots.</p>
       </div>
-      <div class="photo"><img src="assets/festival-kids.jpg" alt="Kids gathered around bunnies and chicks on the farm"></div>
+      <div class="photo"><img src="assets/festival-kids.jpg" alt="Kids gathered around bunnies and chicks"></div>
     </div>
-
     <div class="banner">
-      <span class="tag">Break Mornings<br>Save 40%<small>w/ Critter Gold</small></span>
-      <p><b>Camp mornings are $40 list — or $24 with Critter Gold (40% off).</b> Nov 27–Dec 1, buy Gold at $49.99 and gift a second membership free to a cousin or classmate's family.</p>
+      <span class="tag">Break Mornings<br>$24 with Gold<small>40% off $40</small></span>
+      <p><b>90 minutes, 10:00–11:30 AM, in Callahan.</b> Verified Duval and Nassau break days. Small groups, limited spots.</p>
     </div>
-
-    <div>
-      <h2>2026 school-break dates &amp; pricing <span class="subh">10:00 – 11:30 AM (90 min) &middot; Callahan, FL</span></h2>
-      <div class="tbl-wrap">
-        <table class="menu">
-          <thead>
-            <tr>
-              <th>Verified School-Break Morning</th>
-              <th class="r">List</th>
-              <th class="r">With Gold (40% Off)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="hl">
-              <td><span class="nm">Black Friday Harvest Morning &middot; Fri Nov 27, 2026</span><span class="mt">10:00–11:30 AM &middot; Guided tour, animal encounters, harvest STEM &amp; craft</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$40 / child</span></td>
-              <td class="r"><span class="now">$24</span><span class="ys">You save $16</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">Winter Break Week 1 &middot; Mon–Wed Dec 21–23, 2026</span><span class="mt">10:00–11:30 AM &middot; Both Duval &amp; Nassau off &middot; outdoor farm STEM &amp; critters</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$40 / child</span></td>
-              <td class="r"><span class="now">$24</span><span class="ys">You save $16</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">Winter Break Week 2 &middot; Mon–Wed Dec 28–30, 2026</span><span class="mt">10:00–11:30 AM &middot; Both Duval &amp; Nassau off (plus optional Mon Jan 4, 2027)</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$40 / child</span></td>
-              <td class="r"><span class="now">$24</span><span class="ys">You save $16</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="two">
-      <div class="box">
-        <h3>What happens in 90 minutes</h3>
-        <ul>
-          <li>Guided farm walk with goats, bunnies, pigs &amp; poultry</li>
-          <li>Hands-on farm STEM lesson led by <b>Ann-Marie Sheehan, M.Ed.</b></li>
-          <li>Seasonal farm craft &amp; outdoor learning; small groups, limited spots</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>Good to know</h3>
-        <ul>
-          <li>Closed Thanksgiving Day, Dec 24–25 &amp; Dec 31–Jan&nbsp;1</li>
-          <li>Text or call <b>914-263-1311</b> to reserve your mornings</li>
-          <li>Join our <b>almost 10,000 Facebook followers</b></li>
-        </ul>
-      </div>
+    <div class="tbl-wrap">
+      <table class="menu">
+        <thead><tr><th>Morning</th><th class="r">List</th><th class="r">With Gold</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><span class="nm">Black Friday &middot; Fri Nov 27</span></td>
+            <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$40 / child</span></td>
+            <td class="r"><span class="now">$24</span><span class="ys">You save $16</span></td></tr>
+          <tr><td><span class="nm">Winter Break Week 1 &middot; Dec 21–23</span></td>
+            <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$40 / child</span></td>
+            <td class="r"><span class="now">$24</span><span class="ys">You save $16</span></td></tr>
+          <tr><td><span class="nm">Winter Break Week 2 &middot; Dec 28–30</span></td>
+            <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$40 / child</span></td>
+            <td class="r"><span class="now">$24</span><span class="ys">You save $16</span></td></tr>
+        </tbody>
+      </table>
     </div>
     """ + GOLD_CROSS_SELL
 
-# 6. GROUP FIELD TRIPS & CO-OP STEM ON CALL
 def body_field_trips():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">Co-Ops &middot; Private Schools &middot; Scouts &middot; Churches</div>
-        <h1 style="font-size:28pt">Field trips on the farm.<br><em>Or STEM at yours.</em></h1>
-        <p class="lede">Private 75–90 minute field trips in Callahan (Gold saves 40%), or our Violet giving rate bringing STEM enrichment and petting zoos to your co-op or school at 50% off services &amp; 75% off travel.</p>
+        <h1><span style="white-space:nowrap">Field trips on the farm.</span><br><em>Or STEM at yours.</em></h1>
       </div>
-      <div class="photo"><img src="assets/site-8.jpg" alt="Bunnies and a friendly goat on the grass"></div>
+      <div class="photo"><img src="assets/site-8.jpg" alt="Bunnies and a goat on the grass"></div>
     </div>
-
     <div class="banner">
       <span class="tag">Groups &amp; Co-Ops<br>40% – 50% Off<small>Nov 27 – Dec 1</small></span>
-      <p><b>Every field-trip organizer gets a free Critter Gold card.</b> Book on the farm with Gold (40% off) or qualify for Violet (50% off services, 75% off travel) when we come to you.</p>
+      <p><b>Every field-trip organizer gets Gold free.</b> 40% off on the farm with Gold, or Violet 50% off when we come to you.</p>
     </div>
-
-    <div>
-      <h2>Group &amp; co-op pricing <span class="subh">Locked field trip, Violet &amp; STEM Camp rates</span></h2>
-      <div class="tbl-wrap">
-        <table class="menu">
-          <thead>
-            <tr>
-              <th>Group Experience</th>
-              <th class="r">List</th>
-              <th class="r">Your Price &amp; Savings</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="hl">
-              <td><span class="nm">Small Field Trip on the Farm &middot; 75 min</span><span class="mt">Up to 5 cars or 20 guests &middot; Callahan, FL (w/ Gold 40% off)</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$299</span></td>
-              <td class="r"><span class="now">$179.40</span><span class="ys">You save $119.60</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">Large Field Trip on the Farm &middot; ~90 min</span><span class="mt">Up to 10 cars or 40 guests &middot; Callahan, FL (w/ Gold 40% off)</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$499</span></td>
-              <td class="r"><span class="now">$299.40</span><span class="ys">You save $199.60</span></td>
-            </tr>
-            <tr class="hl">
-              <td><span class="nm">STEM Enrichment at Your Co-Op or School (Violet 50% Off)</span><span class="mt">Hands-on science at your site &middot; first hour (then $110/hr vs $220/hr list)</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$368</span></td>
-              <td class="r"><span class="now">$184</span><span class="ys">You save $184</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">Mobile Mini Petting Zoo &middot; 2 hrs (Violet 50% Off)</span><span class="mt">At least 6 animals: goats, bunnies &amp; fowl &middot; + 75% off travel</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$549</span></td>
-              <td class="r"><span class="now">$274.50</span><span class="ys">You save $274.50</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">Mobile Standard Petting Zoo &middot; 2 hrs (Violet 50% Off)</span><span class="mt">At least 9 animals, at least one facilitator &middot; + 75% off travel</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$749</span></td>
-              <td class="r"><span class="now">$374.50</span><span class="ys">You save $374.50</span></td>
-            </tr>
-            <tr>
-              <td><span class="nm">STEM Camp Day Visit &middot; 2-Hr Partner Rate</span><span class="mt">Teacher-led 2-hr STEM session at your school, camp or community</span></td>
-              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$600</span></td>
-              <td class="r"><span class="now">$450</span><span class="ys">You save $150</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="fine-bar">
-      <span><b>Step Up accepted</b> on field trips (list price applies on Step Up invoicing). <b>50% deposit</b> holds mobile/group dates; free weather reschedules (48 hrs' notice).</span>
-      <span>Almost 10,000 Facebook followers &middot; COI &amp; W-9 on request.</span>
+    <div class="tbl-wrap">
+      <table class="menu">
+        <thead><tr><th>Group Experience</th><th class="r">List</th><th class="r">Your Price</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><span class="nm">Small Field Trip &middot; 75 min</span><span class="mt">Up to 5 cars or 20 guests &middot; 40% off with Gold</span></td>
+            <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$299</span></td>
+            <td class="r"><span class="now">$179.40</span><span class="ys">You save $119.60</span></td></tr>
+          <tr><td><span class="nm">Large Field Trip &middot; ~90 min</span><span class="mt">Up to 10 cars or 40 guests &middot; 40% off with Gold</span></td>
+            <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$499</span></td>
+            <td class="r"><span class="now">$299.40</span><span class="ys">You save $199.60</span></td></tr>
+          <tr><td><span class="nm">STEM Enrichment at Your Co-Op</span><span class="mt">First hour, Violet 50% off (then $110/hr vs $220/hr list)</span></td>
+            <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$368</span></td>
+            <td class="r"><span class="now">$184</span><span class="ys">You save $184</span></td></tr>
+        </tbody>
+      </table>
     </div>
     """ + GOLD_CROSS_SELL
 
-# 7. PRIVATE GOAT YOGA & GOATS & MIMOSAS
 def body_goat_yoga():
     return """
     <div class="hero">
       <div class="txt">
-        <div class="k">Private Group Wellness &middot; Celebrations &amp; Clubs</div>
         <h1>A real yoga class.<br><em>With goats.</em></h1>
-        <p class="lede">Gift a private 60-minute Goat Yoga flow or Goats &amp; Mimosas social led by a certified yoga instructor — on the homestead or at your venue.</p>
       </div>
       <div class="photo"><img src="assets/goat-yoga.jpg" alt="Outdoor goat yoga class with baby goats on mats"></div>
     </div>
-
     <div class="banner">
-      <span class="tag">Gold Member<br>Saves 25%<small>+ 50% Off Travel</small></span>
-      <p><b>Critter Gold ($49.99) saves $199.75 to $324.75 on one private Goat Yoga booking</b> — plus 50% off travel. Nov 27–Dec 1, buy Gold and gift a second card free.</p>
+      <span class="tag">Private Groups<br>25% Off<small>with Gold</small></span>
+      <p><b>60 minutes with a certified instructor.</b> Gold also takes 50% off travel from Callahan. A 50% deposit holds your date.</p>
     </div>
-
-    <div>
-      <h2>Private group packages <span class="subh">Locked event pricing &middot; Gold 25% service savings</span></h2>
-      <div class="cards2">
-        <div class="card feat">
-          <div>
-            <div class="ck">The Classic &middot; Private Group</div>
-            <h3>Private Goat Yoga (60 Min)</h3>
-            <ul>
-              <li>60-minute guided flow with a certified yoga instructor</li>
-              <li>Extra time to cuddle &amp; take photos with the goats before and after</li>
-              <li>Extra hours: <b>$359.25/hr</b> w/ Gold ($479/hr list)</li>
-            </ul>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">$599.25</span></div>
-            <div class="sv-col"><span class="lst">$799 list</span><span class="sv">You save $199.75</span></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="ck">21+ Grown-Up Events &amp; Celebrations</div>
-            <h3>Goats &amp; Mimosas (60 Min)</h3>
-            <ul>
-              <li>Full 60-minute goat yoga flow plus a mimosa bar</li>
-              <li>Our bartender runs the bar for bachelorettes, clubs &amp; socials</li>
-              <li>Extra hours: <b>$584.25/hr</b> w/ Gold ($779/hr list)</li>
-            </ul>
-          </div>
-          <div class="pr">
-            <div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">$974.25</span></div>
-            <div class="sv-col"><span class="lst">$1,299 list</span><span class="sv">You save $324.75</span></div>
-          </div>
-        </div>
+    <div class="cards2">
+      <div class="card feat">
+        <div class="ck">The Classic &middot; 60 Min</div>
+        <h3>Private Goat Yoga</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">$599.25</span></div>
+        <div class="sv-col"><span class="lst">$799 list</span><span class="sv">You save $199.75</span></div></div>
       </div>
-    </div>
-
-    <div class="two">
-      <div class="box">
-        <h3>Booking &amp; travel policy</h3>
-        <ul>
-          <li><b>50% deposit</b> holds your date; free weather reschedules (48 hrs' notice)</li>
-          <li>Need a flat lawn or field &amp; a water spigot nearby</li>
-          <li>Travel quoted from Callahan, FL before booking (<b>50% off w/ Gold</b>)</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>Why groups book Sheehan Homestead</h3>
-        <ul>
-          <li>Led by <b>Michael &amp; Ann-Marie Sheehan</b> &amp; certified instructors</li>
-          <li>Join our <b>almost 10,000 Facebook followers</b></li>
-          <li><b>100+ five-star Google reviews</b> across Northeast Florida</li>
-        </ul>
+      <div class="card">
+        <div class="ck">21+ &middot; 60 Min</div>
+        <h3>Goats &amp; Mimosas</h3>
+        <div class="pr"><div><span class="yp-lbl">Your price (w/ Gold)</span><span class="yp">$974.25</span></div>
+        <div class="sv-col"><span class="lst">$1,299 list</span><span class="sv">You save $324.75</span></div></div>
       </div>
     </div>
     """ + GOLD_CROSS_SELL
+
 
 FLYERS = [
     (
@@ -835,9 +536,9 @@ def build_index():
           <h3>Critter Gold Membership · Buy One, Gift One</h3>
           <p>Black Friday offer: buy Gold at $49.99 and gift a second membership free, Nov 27 to Dec 1, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off. Your price $49.99.</p>
           <div class="links">
-            <a class="btn btn-primary" href="black-friday-gold.html?v=1124l">Open Flyer</a>
-            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1124l">Direct PDF</a>
-            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1124l">Facebook PNG</a>
+            <a class="btn btn-primary" href="black-friday-gold.html?v=1125d">Open Flyer</a>
+            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125d">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125d">Facebook PNG</a>
           </div>
         </div>"""
 
@@ -863,9 +564,9 @@ def build_index():
           <h3>{heading}</h3>
           <p>{blurb}</p>
           <div class="links">
-            <a class="btn btn-primary" href="{slug}.html?v=1125c">Open Flyer</a>
-            <a class="btn btn-gold" href="{slug}.pdf?v=1125c">Direct PDF</a>
-            <a class="btn btn-outline" href="png/{slug}.png?v=1125c">Facebook PNG</a>
+            <a class="btn btn-primary" href="{slug}.html?v=1125e">Open Flyer</a>
+            <a class="btn btn-gold" href="{slug}.pdf?v=1125e">Direct PDF</a>
+            <a class="btn btn-outline" href="png/{slug}.png?v=1125e">Facebook PNG</a>
           </div>
         </div>""")
 
