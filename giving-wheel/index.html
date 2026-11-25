@@ -280,11 +280,11 @@
       <div style="text-align:center">
         <p class="tracker-kicker" style="margin:0">Sheehan Homestead · Stead Spin</p>
         <h1 class="event-title"><span>Stead Spin</span></h1>
-        <p class="event-sub">16 chances to win · two spins a month</p>
+        <p class="event-sub">16 chances to win · Nov 25 – Dec 6 · two spins a month</p>
         <p class="soft-expiry" id="soft-expiry">Spins reset on the 1st · prizes valid through the end of the month won</p>
         <div class="ended-banner" id="ended-banner" hidden>
           <strong>Season closed</strong>
-          <p>Thanks for spinning with Critters on Call.</p>
+          <p>This pop-up ended after Dec 6. Thanks for spinning with Critters on Call.</p>
         </div>
         <div class="event-details" id="event-details">
           <a class="claim-place" href="https://www.google.com/maps/search/?api=1&query=Sheehan+Homestead+Callahan+FL" target="_blank" rel="noopener">
@@ -319,10 +319,10 @@
       </div>
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
-      <p class="rules-note" id="rules-note">About 2 spins per month on this device · come back next month</p>
+      <p class="rules-note" id="rules-note">Open Nov 25 – Dec 6 · about 2 spins per month on this device</p>
       <details class="rules-official" id="official-rules">
         <summary>Official rules (short)</summary>
-        <p>Open to adults 18+. Spins are limited per device each calendar month and reset on the 1st (Eastern time). Each slice shows its prize; odds vary by prize. Prizes are claimed in person at Sheehan Homestead or a Critters on Call event, have no cash value and are valid through the end of the month won. To claim, show the win screen to our staff or message us a screenshot. No review or purchase is ever required. Sponsor: Sheehan Homestead LLC, Callahan, FL.</p>
+        <p>Open to adults 18+. This Stead Spin pop-up is open Nov 25 – Dec 6. Spins are limited per device each calendar month and reset on the 1st (Eastern time). Each slice shows its prize; odds vary by prize. Prizes are claimed in person at Sheehan Homestead or a Critters on Call event, have no cash value and are valid through the end of the month won. To claim, show the win screen to our staff or message us a screenshot. No review or purchase is ever required. Sponsor: Sheehan Homestead LLC, Callahan, FL.</p>
       </details>
       <p class="rules-legal"><strong>No purchase necessary. Google is not a sponsor.</strong></p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
@@ -379,7 +379,7 @@
   /* Soft device lock: 2 prize spins per calendar month (ET) on the free wheel. Event wheels stay at 3. Free Spin does not consume.
      IP / email hard lock needs a backend later — honor device-month localStorage for now. */
   var MAX_SPINS_PER_MONTH = 2;
-  /* Standing wheel: no season end. Spins reset monthly (ET) via the device-month lock; prizes are valid through the end of the month won. */
+  /* Pop-up window Nov 25 – Dec 6. Close at 2026-12-07T00:01 America/New_York. Spins still reset monthly (ET); prizes are valid through the end of the month won. */
   var STORE_DEVICE = "coc_farm_spin_month_v6_" + EVENT_ID;
   var STORE_STATUE = "coc_dc_gold_awards_v1_" + EVENT_ID;
   var FB_URL = "https://www.facebook.com/profile.php?id=61556795506312";
@@ -654,7 +654,16 @@
     });
   }
 
-  function isExpired() { return false; }
+  function isExpired() {
+    /* Offer printed Nov 25 – Dec 6; closes 2026-12-07T00:01 America/New_York. */
+    try {
+      var p = etParts(new Date());
+      var now = (parseInt(p.year, 10) * 100000000) + (parseInt(p.month, 10) * 1000000) + (parseInt(p.day, 10) * 10000) + (parseInt(p.hour, 10) * 100) + parseInt(p.minute || "0", 10);
+      return now >= 202612070001;
+    } catch (e) {
+      return false;
+    }
+  }
   (function monthLabel() {
     try {
       var el = document.getElementById("soft-expiry");

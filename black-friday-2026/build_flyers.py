@@ -231,7 +231,7 @@ def wrap_html(title, desc, body_html, qr_img, qr_url, cta_title, cta_sub):
 
 GOLD_CROSS_SELL = """
     <div class="cross">
-      <p><b>Black Friday:</b> Gold is $49.99 — Buy One, Gift One free, Nov 27 – Dec 1.</p>
+      <p><b>Black Friday:</b> Gold is $49.99 — Buy One, Gift One free, Nov 25 – Dec 6.</p>
     </div>
 """
 
@@ -245,7 +245,7 @@ def body_mobile_know_date():
       <div class="photo"><img src="assets/community-event.jpg" alt="Critters on Call mobile petting zoo under a tent"></div>
     </div>
     <div class="banner">
-      <span class="tag">50% Off<br>the Package<small>Nov 27 – Dec 1</small></span>
+      <span class="tag">50% Off<br>the Package<small>Nov 25 – Dec 6</small></span>
       <p><b>Pay only the 50% deposit to lock your date.</b> Travel from Callahan is quoted separately. Free weather reschedules with 48 hours' notice.</p>
     </div>
     <div>
@@ -290,7 +290,7 @@ def body_visit_us():
       <div class="photo"><img src="assets/farm-field.jpg" alt="The farm at Sheehan Homestead in Callahan"></div>
     </div>
     <div class="banner">
-      <span class="tag">Visit Us<br>Callahan, FL<small>Nov 27 – Dec 1</small></span>
+      <span class="tag">Visit Us<br>Callahan, FL<small>Nov 25 – Dec 6</small></span>
       <p><b>Every visit gives back more than you paid.</b> Book a farm morning, or give Gold: Buy One, Gift One free.</p>
     </div>
     <div class="cards3">
@@ -409,7 +409,7 @@ def body_field_trips():
       <div class="photo"><img src="assets/site-8.jpg" alt="Bunnies and a goat on the grass"></div>
     </div>
     <div class="banner">
-      <span class="tag">Groups &amp; Co-Ops<br>40% – 50% Off<small>Nov 27 – Dec 1</small></span>
+      <span class="tag">Groups &amp; Co-Ops<br>40% – 50% Off<small>Nov 25 – Dec 6</small></span>
       <p><b>Every field-trip organizer gets Gold free.</b> 40% off on the farm with Gold, or Violet 50% off when we come to you.</p>
     </div>
     <div class="tbl-wrap">
@@ -463,7 +463,7 @@ FLYERS = [
     (
         "mobile-petting-zoo-know-your-date",
         "Know Your Date? Mobile Petting Zoo 50% Off Deposit · Black Friday · Sheehan Homestead",
-        "Know your date? Lock any 2026 or 2027 mobile petting zoo at 50% off Nov 27 to Dec 1, 2026 — just pay the 50% deposit.",
+        "Know your date? Lock any 2026 or 2027 mobile petting zoo at 50% off Nov 25 to Dec 6, 2026 — just pay the 50% deposit.",
         body_mobile_know_date,
         "qr-mobile-date.png",
         "https://code4crittersoncallapps.github.io/critters-on-call/book/?product=birthday-party",
@@ -536,22 +536,22 @@ def build_index():
     idx_path = BASE_DIR / "index.html"
     gold_card = """        <div class="card">
           <h3>Critter Gold Membership · Buy One, Gift One</h3>
-          <p>Black Friday offer: buy Gold at $49.99 and gift a second membership free, Nov 27 to Dec 1, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off. Your price $49.99.</p>
+          <p>Black Friday offer: buy Gold at $49.99 and gift a second membership free, Nov 25 to Dec 6, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off. Your price $49.99.</p>
           <div class="links">
-            <a class="btn btn-primary" href="black-friday-gold.html?v=1125t">Open Flyer</a>
-            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125t">Direct PDF</a>
-            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125t">Facebook PNG</a>
+            <a class="btn btn-primary" href="black-friday-gold.html?v=1125y">Open Flyer</a>
+            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125y">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125y">Facebook PNG</a>
           </div>
         </div>"""
 
     cards = [gold_card]
     cards.append("""        <div class="card">
           <h3>Stead Spin · Invite-Only Digital Pop-Up</h3>
-          <p>Invite-only digital pop-up Nov 27 – Dec 1. Top grand prize is Double Gold, or a Gold card. Then $50 Whole-car farm tour, $25 STEM Kit and Farm tour ticket, Special perk, and $10 farm and thrift gifts. Scan to spin.</p>
+          <p>Invite-only digital pop-up Nov 25 – Dec 6. Top grand prize is Double Gold, or a Gold card. Then $50 Whole-car farm tour, $25 STEM Kit and Farm tour ticket, Special perk, and $10 farm and thrift gifts. Scan to spin.</p>
           <div class="links">
-            <a class="btn btn-primary" href="black-friday-spin-to-win.html?v=1125x">Open Flyer</a>
-            <a class="btn btn-gold" href="black-friday-spin-to-win.pdf?v=1125x">Direct PDF</a>
-            <a class="btn btn-outline" href="png/black-friday-spin-to-win.png?v=1125x">Facebook PNG</a>
+            <a class="btn btn-primary" href="black-friday-spin-to-win.html?v=1125y">Open Flyer</a>
+            <a class="btn btn-gold" href="black-friday-spin-to-win.pdf?v=1125y">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-spin-to-win.png?v=1125y">Facebook PNG</a>
           </div>
         </div>""")
     cards.append("""        <div class="card">
@@ -565,13 +565,13 @@ def build_index():
         </div>""")
     card_meta = [
         ("mobile-petting-zoo-know-your-date", "Mobile Petting Zoo · Know Your Date? 50% Off Deposit",
-         "Mobile-only Black Friday offer (Nov 27 – Dec 1): pay just the 50% deposit to lock your date and save 50% off Bunny Haven ($75/$117.50), Standard ($179.50/$274.50) &amp; Standard+Full Side ($249.50/$349.50). Free Critter Gold card included."),
+         "Mobile-only Black Friday offer (Nov 25 – Dec 6): pay just the 50% deposit to lock your date and save 50% off Bunny Haven ($75/$117.50), Standard ($179.50/$274.50) &amp; Standard+Full Side ($249.50/$349.50). Free Critter Gold card included."),
         ("visit-us-farm-tours", "Visit Us · Farm Tours &amp; Whole-Car Gift Vouchers",
          "On-farm Callahan tickets: $25 Farm Tour for Two (free day one w/ Gold), $50 Whole-Car Visit (up to 5 guests), or Critter Gold $49.99 Buy One, Gift One ($200 in day-one gifts)."),
         ("mommy-and-me", "Mommy &amp; Me · Farm &amp; Clubhouse Mornings",
          "Toddler &amp; preschool farm mornings at $25/hr, clubhouse playgroups from $111.75 w/ Gold ($149–$299 list), plus split-with-a-friend Gold BOGO at $49.99."),
         ("homeschool-farm-stem", "Homeschool Farm &amp; STEM · Step Up LIVE",
-         "90-minute Homeschool Farm &amp; STEM mornings in Callahan: $40 list or $24 with Gold (save $16). Step Up welcome. Gold $49.99 BOGO Nov 27 – Dec 1."),
+         "90-minute Homeschool Farm &amp; STEM mornings in Callahan: $40 list or $24 with Gold (save $16). Step Up welcome. Gold $49.99 BOGO Nov 25 – Dec 6."),
         ("school-break-camps", "School-Break Camps · Thanksgiving &amp; Winter Break",
          "Verified Duval &amp; Nassau break mornings (Nov 27, Dec 21–23, Dec 28–30): 90-min Farm &amp; STEM morning $40 list or $24 with Gold (save $16)."),
         ("field-trips-and-coop-stem", "Group Field Trips &amp; Co-Op STEM on Call",
@@ -580,7 +580,7 @@ def build_index():
          "Private 60-min Goat Yoga ($599.25 w/ Gold vs $799 list) and Goats &amp; Mimosas ($974.25 vs $1,299 list), plus 50% off travel with Gold."),
     ]
     for slug, heading, blurb in card_meta:
-        ver = "1125q" if slug == "mobile-petting-zoo-know-your-date" else "1125e"
+        ver = "1125y"
         cards.append(f"""        <div class="card">
           <h3>{heading}</h3>
           <p>{blurb}</p>
@@ -622,7 +622,7 @@ main {{ max-width:920px; margin:24px auto; padding:0 16px 40px; display:grid; ga
 <body>
 <header>
   <img src="assets/gold-poster/coc.png" alt="Critters on Call">
-  <h1>Black Friday &amp; Cyber Week &middot; Nov 27 – Dec 1, 2026</h1>
+  <h1>Black Friday &amp; Cyber Week &middot; Nov 25 – Dec 6, 2026</h1>
   <p>Sheehan Homestead &middot; Critters on Call &middot; Callahan, FL &middot; 914-263-1311</p>
 </header>
 <main>
