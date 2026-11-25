@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group Field Trips & Co-Op STEM on Call · Black Friday · Sheehan Homestead</title>
+<meta name="description" content="On-farm field trips ($179.40 / $299.40 w/ Gold) or Violet 50% off mobile petting zoos & STEM Enrichment at your co-op or school.">
+<link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
+<style>
+@font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#4e6558;
+  --green-deep:#3A4F45;
+  --gold:#c9a227;
+  --gold-lt:#E8D48C;
+  --cream:#F3EEE4;
+  --ink:#1f2a24;
+  --muted:#516157;
+  --line:#dfd7c7;
+}
+html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3","Source Sans Pro",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column;background:var(--cream);margin:0 auto}
+@media print{html,body{background:var(--cream);width:8.5in;height:11in}.page{margin:0}}
+.lg{display:inline-block;width:52px;height:52px;border-radius:50%;background-size:cover;background-position:center;flex:0 0 auto}
+.lg-sh{background-image:url("assets/gold-poster/sh.png")}
+.lg-coc{background-image:url("assets/gold-poster/coc.png");box-shadow:0 0 0 3px var(--gold)}
+.brand{display:flex;align-items:stretch;background:var(--cream)}
+.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;padding:.11in 0 .09in}
+.brand .side+.side{border-left:1px solid var(--line)}
+.brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:13.5pt;line-height:1.1;color:var(--green)}
+.rule{display:flex;height:5px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
+
+.body{flex:1;padding:.14in .52in .11in;display:flex;flex-direction:column;gap:.10in;min-height:0;justify-content:space-between}
+.k{font-size:9.5pt;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.hero{display:flex;gap:.24in;align-items:center}
+.hero .txt{flex:1.42}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:31pt;line-height:1.02;color:var(--green);margin:4px 0 7px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lede{font-size:11.3pt;line-height:1.36;color:var(--ink)}
+.hero .photo{flex:1;max-width:2.85in}
+.hero .photo img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;border:2.5px solid var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.20);display:block}
+.hero .photo.port img{aspect-ratio:4/4.3}
+
+.banner{display:flex;align-items:center;gap:14px;background:var(--green);color:var(--cream);border-radius:14px;padding:8px 16px;border-left:7px solid var(--gold)}
+.banner .tag{background:var(--gold);color:#1f2a24;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:10.5pt;letter-spacing:.04em;text-transform:uppercase;border-radius:8px;padding:6px 11px;white-space:nowrap;text-align:center;line-height:1.15}
+.banner .tag small{display:block;font-family:"Source Sans 3",sans-serif;font-size:7.8pt;font-weight:800;letter-spacing:.10em;margin-top:2px}
+.banner p{font-size:10.8pt;line-height:1.33}
+.banner b{color:var(--gold-lt)}
+
+h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16pt;color:var(--green);line-height:1.12}
+h2 .subh{font-family:"Source Sans 3",sans-serif;font-size:9.5pt;font-weight:700;color:var(--muted);margin-left:8px;letter-spacing:.02em}
+
+.cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:.13in;margin-top:6px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:.12in;margin-top:6px}
+.card{background:#fff;border:1.5px solid var(--line);border-top:4.5px solid var(--gold);border-radius:12px;padding:10px 12px 10px;display:flex;flex-direction:column;justify-content:space-between}
+.card.feat{border:1.5px solid var(--green);border-top:4.5px solid var(--gold);background:#fffdf7}
+.card .ck{font-size:8.2pt;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:#a07f1a;margin-bottom:2px}
+.card h3{font-family:Fraunces,Georgia,serif;font-size:13pt;font-weight:700;color:var(--green);line-height:1.15}
+.card .desc{font-size:9.5pt;color:var(--muted);line-height:1.3;margin:4px 0 7px}
+.card ul{list-style:none;margin:4px 0 7px}
+.card li{font-size:9.4pt;line-height:1.3;padding:1.5px 0 1.5px 12px;position:relative;color:var(--ink)}
+.card li:before{content:"";position:absolute;left:0;top:.58em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.pr{border-top:1px solid var(--line);padding-top:6px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.pr .yp-lbl{display:block;font-size:7.6pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pr .yp{font-family:Fraunces,Georgia,serif;font-size:19pt;font-weight:700;color:var(--green);line-height:1}
+.pr .yp small{font-family:"Source Sans 3",sans-serif;font-size:9.2pt;font-weight:600;color:var(--muted);margin-left:2px}
+.pr .sv-col{text-align:right}
+.pr .lst{display:block;font-size:8.6pt;color:var(--muted);text-decoration:line-through}
+.pr .sv{display:inline-block;background:var(--green);color:var(--gold-lt);font-size:8.2pt;font-weight:800;border-radius:20px;padding:2px 8px;margin-top:2px;white-space:nowrap}
+
+.tbl-wrap{background:#fff;border:1.5px solid var(--line);border-top:4.5px solid var(--gold);border-radius:12px;overflow:hidden;margin-top:6px}
+table.menu{width:100%;border-collapse:collapse}
+table.menu th{background:var(--green);color:var(--gold-lt);font-size:8.4pt;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:6px 11px;text-align:left}
+table.menu th.r{text-align:right}
+table.menu td{padding:7px 11px;border-top:1px solid var(--line);vertical-align:middle;font-size:9.8pt;line-height:1.25}
+table.menu tr.hl{background:#fffdf6}
+table.menu td .nm{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:11.2pt;color:var(--green);display:block}
+table.menu td .mt{font-size:8.8pt;color:var(--muted);display:block;margin-top:1px}
+table.menu td.r{text-align:right;white-space:nowrap}
+table.menu .now{font-family:Fraunces,Georgia,serif;font-size:13.5pt;font-weight:700;color:var(--green);display:block;line-height:1.05}
+table.menu .was{font-size:8.2pt;color:var(--muted);display:block}
+table.menu .ys{display:inline-block;background:#f3ecda;color:#7a5e0d;font-weight:800;font-size:7.9pt;border-radius:12px;padding:1px 6px;margin-top:1px}
+
+.two{display:flex;gap:.14in}
+.box{flex:1;background:#fff;border:1.5px solid var(--green);border-radius:12px;padding:8px 12px}
+.box h3{font-family:Fraunces,Georgia,serif;font-size:12.5pt;color:var(--green);margin-bottom:4px}
+.box ul{list-style:none}
+.box li{font-size:9.6pt;line-height:1.32;padding:1.5px 0 1.5px 14px;position:relative}
+.box li:before{content:"";position:absolute;left:0;top:.58em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.box li b{color:var(--green)}
+
+.cross{display:flex;align-items:center;gap:14px;background:#1f2a24;color:var(--cream);border-radius:12px;padding:8px 14px;border:1.5px solid var(--gold)}
+.cross .pill{background:var(--gold);color:#1f2a24;font-weight:800;font-size:8.4pt;letter-spacing:.08em;text-transform:uppercase;border-radius:7px;padding:5px 9px;white-space:nowrap;text-align:center;line-height:1.2}
+.cross p{font-size:9.8pt;line-height:1.34}
+.cross b{color:var(--gold-lt)}
+.cross a{color:var(--gold-lt);font-weight:700}
+
+.fine-bar{font-size:8.9pt;color:var(--muted);line-height:1.3;display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding-top:5px}
+
+.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.10in .52in;display:flex;align-items:center;gap:.20in}
+.ft .qr{background:#fff;border-radius:8px;padding:5px;flex:0 0 auto}
+.ft .qr img{width:82px;height:82px;display:block}
+.ft .cta{flex:1}
+.ft .cta b{font-family:Fraunces,Georgia,serif;font-size:15pt;color:var(--gold-lt);display:block;margin-bottom:2px}
+.ft .cta span{font-size:10pt;line-height:1.35;display:block}
+.ft .cta a{color:var(--cream)}
+.ft .ct{text-align:right;font-size:9.4pt;line-height:1.36}
+.ft .ct b.ph{display:block;font-family:Fraunces,Georgia,serif;font-size:16pt;color:var(--gold-lt);white-space:nowrap;line-height:1.1}
+.ft .ct a{color:var(--gold-lt);text-decoration:none}
+.gbadge{display:inline-flex;align-items:center;gap:5px;margin-top:4px;background:rgba(255,255,255,.95);color:#1f2a24;border-radius:20px;padding:2.5px 9px 2.5px 7px;font-size:8.2pt;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.gbadge .gicon{width:12px;height:12px;flex:0 0 auto;display:block}
+.gbadge .gstars{color:#d49d17;letter-spacing:.5px;font-size:8.8pt;line-height:1}
+
+@media screen and (max-width:860px){
+  html,body{background:var(--cream)}
+  .page{width:100%;height:auto;margin:0}
+  .hero,.banner,.two,.cross,.ft,.fine-bar{flex-direction:column;align-items:stretch}
+  .cards2,.cards3{grid-template-columns:1fr}
+  .hero h1{font-size:26pt}
+  .hero .photo{max-width:100%}
+  .ft .ct{text-align:left}
+  .body{padding:.22in .18in}.ft{padding:.18in}
+  .brand .nm{font-size:11.5pt}.lg{width:46px;height:46px}
+}
+</style>
+</head>
+<body>
+<section class="page">
+  <header class="brand">
+    <div class="side"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan<br>Homestead</div></div>
+    <div class="side"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters<br>on Call</div></div>
+  </header>
+  <div class="rule"><span class="g"></span><span class="y"></span></div>
+
+  <div class="body">
+    
+    <div class="hero">
+      <div class="txt">
+        <div class="k">Co-Ops &middot; Private Schools &middot; Scouts &middot; Churches</div>
+        <h1 style="font-size:28pt">Field trips on the farm.<br><em>Or STEM at yours.</em></h1>
+        <p class="lede">Private 75–90 minute field trips in Callahan (Gold saves 40%), or our Violet giving rate bringing STEM enrichment and petting zoos to your co-op or school at 50% off services &amp; 75% off travel.</p>
+      </div>
+      <div class="photo"><img src="assets/site-8.jpg" alt="Bunnies and a friendly goat on the grass"></div>
+    </div>
+
+    <div class="banner">
+      <span class="tag">Groups &amp; Co-Ops<br>40% – 50% Off<small>Nov 27 – Dec 1</small></span>
+      <p><b>Every field-trip organizer gets a free Critter Gold card.</b> Book on the farm with Gold (40% off) or qualify for Violet (50% off services, 75% off travel) when we come to you.</p>
+    </div>
+
+    <div>
+      <h2>Group &amp; co-op pricing <span class="subh">Locked field trip, Violet &amp; STEM Camp rates</span></h2>
+      <div class="tbl-wrap">
+        <table class="menu">
+          <thead>
+            <tr>
+              <th>Group Experience</th>
+              <th class="r">List</th>
+              <th class="r">Your Price &amp; Savings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hl">
+              <td><span class="nm">Small Field Trip on the Farm &middot; 75 min</span><span class="mt">Up to 5 cars or 20 guests &middot; Callahan, FL (w/ Gold 40% off)</span></td>
+              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$299</span></td>
+              <td class="r"><span class="now">$179.40</span><span class="ys">You save $119.60</span></td>
+            </tr>
+            <tr>
+              <td><span class="nm">Large Field Trip on the Farm &middot; ~90 min</span><span class="mt">Up to 10 cars or 40 guests &middot; Callahan, FL (w/ Gold 40% off)</span></td>
+              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$499</span></td>
+              <td class="r"><span class="now">$299.40</span><span class="ys">You save $199.60</span></td>
+            </tr>
+            <tr class="hl">
+              <td><span class="nm">STEM Enrichment at Your Co-Op or School (Violet 50% Off)</span><span class="mt">Hands-on science at your site &middot; first hour (then $110/hr vs $220/hr list)</span></td>
+              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$368</span></td>
+              <td class="r"><span class="now">$184</span><span class="ys">You save $184</span></td>
+            </tr>
+            <tr>
+              <td><span class="nm">Mobile Mini Petting Zoo &middot; 2 hrs (Violet 50% Off)</span><span class="mt">At least 6 animals: goats, bunnies &amp; fowl &middot; + 75% off travel</span></td>
+              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$549</span></td>
+              <td class="r"><span class="now">$274.50</span><span class="ys">You save $274.50</span></td>
+            </tr>
+            <tr>
+              <td><span class="nm">Mobile Standard Petting Zoo &middot; 2 hrs (Violet 50% Off)</span><span class="mt">At least 9 animals, at least one facilitator &middot; + 75% off travel</span></td>
+              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$749</span></td>
+              <td class="r"><span class="now">$374.50</span><span class="ys">You save $374.50</span></td>
+            </tr>
+            <tr>
+              <td><span class="nm">STEM Camp Day Visit &middot; 2-Hr Partner Rate</span><span class="mt">Teacher-led 2-hr STEM session at your school, camp or community</span></td>
+              <td class="r"><span class="was" style="text-decoration:none;font-weight:700">$600</span></td>
+              <td class="r"><span class="now">$450</span><span class="ys">You save $150</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="fine-bar">
+      <span><b>Step Up accepted</b> on field trips (list price applies on Step Up invoicing). <b>50% deposit</b> holds mobile/group dates; free weather reschedules (48 hrs' notice).</span>
+      <span>Almost 10,000 Facebook followers &middot; COI &amp; W-9 on request.</span>
+    </div>
+    
+    <div class="cross">
+      <span class="pill">Black Friday Gold<br>$49.99 BOGO</span>
+      <p><b>Critter Gold is $49.99 — Buy One, Gift One free (Nov 27 – Dec 1, 2026).</b> Two memberships, $200 in day-one gifts ($100 per card), the Gold web app (Google Play Store coming soon), and about 40% off camps, mobile petting zoos and field trips all year.</p>
+    </div>
+
+  </div>
+
+  <footer class="ft">
+    <a class="qr" href="https://code4crittersoncallapps.github.io/critters-on-call/book/?product=field-trip-small" target="_blank" rel="noopener"><img src="assets/qr-field-trip.png" alt="QR code to book"></a>
+    <div class="cta">
+      <b>Scan to book your group</b>
+      <span><a href="https://code4crittersoncallapps.github.io/critters-on-call/book/?product=field-trip-small">code4crittersoncallapps.github.io/critters-on-call/book/?product=field-trip-small</a></span>
+      <span>Call or text 914-263-1311 for dates, Violet rates or Step Up.</span>
+    </div>
+    <div class="ct">
+      <b class="ph"><a href="tel:9142631311">914-263-1311</a></b>
+      sheehanhomestead@gmail.com<br>
+      Sheehan Homestead &middot; Callahan, FL<br>
+      
+<div class="gbadge">
+  <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+  </svg>
+  <span class="gstars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  <span>100+ five-star Google reviews</span>
+</div>
+
+    </div>
+  </footer>
+</section>
+</body>
+</html>
