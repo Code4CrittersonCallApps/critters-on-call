@@ -297,7 +297,7 @@
       </div>
 
       <ul class="tier-legend" aria-label="What you can win">
-        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Grand prize · Gold card or Double Gold</li>
+        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Grand prize · Double Gold (top) or Gold card</li>
         <li><span class="tier-swatch" style="background:#2f4038;border-color:#86A093" aria-hidden="true"></span> $50 Whole-car farm tour</li>
         <li><span class="tier-swatch" style="background:#4e6558;border-color:#86A093" aria-hidden="true"></span> $25 STEM Kit · Farm tour ticket</li>
         <li><span class="tier-swatch" style="background:#b0753a;border-color:#d4b896" aria-hidden="true"></span> Special perk</li>
@@ -335,8 +335,8 @@
         <p class="teaser" id="win-teaser" style="margin-top:0.35rem"></p>
         <p class="text-sm muted" id="win-note" style="margin-top:0.45rem;line-height:1.45"></p>
         <div class="premium-banner" id="premium-banner" hidden>
-          <strong id="premium-banner-title">Gold card · Critter Gold Membership</strong>
-          <p class="text-xs muted" id="premium-banner-copy" style="margin-top:0.35rem;line-height:1.4">~40% off camps, mobile petting zoos, tutoring &amp; homeschool support. Spins close after Gold.</p>
+          <strong id="premium-banner-title">Double Gold · the top prize</strong>
+          <p class="text-xs muted" id="premium-banner-copy" style="margin-top:0.35rem;line-height:1.4">2 Critter Gold cards: over $200 in free gifts, plus about 40% off and the learning games. Spins close after Gold.</p>
         </div>
         <div class="again-banner" id="again-banner" hidden>
           <strong>Nothing better than a free spin</strong>
@@ -398,7 +398,7 @@
      Interleaved so like prizes are not adjacent; Gold card and Double Gold sit opposite (index 0 and 8).
      Colors: Grand #c9a227, $50 #2f4038, $25 #4e6558, Perk #b0753a, $10 #F3EEE4. */
   var PRIZES = [
-    { id: "gold-card", label: "Gold card", short: "GOLD<br>CARD", value: "$50 MSRP · ~$100 value · ~40% off camps, mobile petting zoos, tutoring & homeschool support", teaser: "Critter Gold Membership", kind: "grand", tier: "rare", color: "#c9a227", fulfill: "Gold card — $50 MSRP, about $100 value, ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
+    { id: "gold-card", label: "Gold card", short: "GOLD<br>CARD", value: "Over $100 in free gifts, plus about 40% off camps, mobile petting zoos, tutoring & homeschool support, and the learning game app.", teaser: "Critter Gold Membership", kind: "grand", tier: "rare", color: "#c9a227", fulfill: "Over $100 in free gifts, plus about 40% off camps, mobile petting zoos, tutoring & homeschool support, and the learning game app. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
     { id: "farm-10-a", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
     { id: "stem-kit-a", label: "$25 STEM Kit", short: "$25<br>STEM", value: "$25 STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#4e6558", fulfill: "$25 STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
     { id: "thrift-10-a", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
@@ -406,7 +406,7 @@
     { id: "special-perk-a", label: "Special perk", short: "SPECIAL<br>PERK", value: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below.", teaser: "video game tester · new animal experience", kind: "sample", tier: "mid", color: "#b0753a", fulfill: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below." },
     { id: "tour-25-a", label: "$25 Farm tour ticket", short: "$25<br>TOUR", value: "$25 Farm tour ticket", teaser: "a farm tour ticket", kind: "ticket", tier: "mid", color: "#4e6558", fulfill: "$25 Farm tour ticket. Claim below, then show this screen at Sheehan Homestead." },
     { id: "farm-10-b", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "double-gold", label: "Double Gold", short: "DOUBLE<br>GOLD", value: "2 Gold cards: one for you, one to gift", teaser: "two Critter Gold Memberships", kind: "grand", tier: "rare", color: "#c9a227", fulfill: "2 Gold cards: one for you, one to gift. Includes ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
+    { id: "double-gold", label: "Double Gold", short: "DOUBLE<br>GOLD", value: "2 Critter Gold cards: over $200 in free gifts, plus about 40% off and the learning games.", teaser: "the top prize", kind: "grand", tier: "rare", color: "#c9a227", fulfill: "2 Critter Gold cards: over $200 in free gifts, plus about 40% off and the learning games. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
     { id: "thrift-10-b", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
     { id: "stem-kit-b", label: "$25 STEM Kit", short: "$25<br>STEM", value: "$25 STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#4e6558", fulfill: "$25 STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
     { id: "farm-10-c", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
@@ -752,11 +752,11 @@
     var pbCopy = document.getElementById("premium-banner-copy");
     if (pbTitle && pbCopy && isGrand) {
       if (prize.id === "double-gold") {
-        pbTitle.textContent = "Double Gold · Two Critter Gold Memberships";
-        pbCopy.textContent = "2 Gold cards: one for you, one to gift. ~40% off camps, mobile petting zoos, tutoring & homeschool support. Spins close after Gold.";
+        pbTitle.textContent = "Double Gold · the top prize";
+        pbCopy.textContent = "2 Critter Gold cards: over $200 in free gifts, plus about 40% off and the learning games. Spins close after Gold.";
       } else {
-        pbTitle.textContent = "Gold Card · Critter Gold Membership";
-        pbCopy.textContent = "~40% off camps, mobile petting zoos, tutoring & homeschool support. Spins close after Gold.";
+        pbTitle.textContent = "Gold card";
+        pbCopy.textContent = "Over $100 in free gifts, plus about 40% off camps, mobile petting zoos, tutoring & homeschool support, and the learning game app. Spins close after Gold.";
       }
     }
     winLabel.textContent = prize.label;

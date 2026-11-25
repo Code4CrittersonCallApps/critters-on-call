@@ -56,8 +56,13 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .r-grand .tag{background:#1f2a24;color:var(--gold-lt);border:1.5px solid #1f2a24}
 .r-grand .art{flex:0 0 1.55in;width:1.55in}
 .r-grand .art img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(26,21,8,.28);display:block;border:1.5px solid #fff6d6}
-.r-grand .pair{gap:10px}
+.r-grand .grand-stack{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .r-grand .cell{background:rgba(255,249,228,.88);border-radius:10px;padding:7px 10px;border:1.5px solid rgba(26,21,8,.12)}
+.r-grand .cell-top{padding:8px 11px;border:2px solid #1f2a24;box-shadow:0 2px 6px rgba(26,21,8,.12)}
+.r-grand .cell-top strong{font-size:16pt}
+.r-grand .cell-top span{font-size:9.4pt;line-height:1.25;margin-top:2px}
+.r-grand .cell-gold strong{font-size:12.5pt}
+.r-grand .cell-gold span{font-size:8.6pt;line-height:1.22}
 
 /* $50 = deep green #2f4038 */
 .r-50{background:#2f4038;color:#F3EEE4}
@@ -91,7 +96,6 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .gold-strip .left{min-width:0;flex:1}
 .gold-strip .top{display:flex;align-items:center;flex-wrap:wrap;gap:7px}
 .gold-strip h3{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:12.5pt;color:var(--green);line-height:1.1}
-.gold-strip .price{display:inline-block;background:var(--gold);color:#1f2a24;font-weight:800;font-size:8pt;letter-spacing:.10em;text-transform:uppercase;border-radius:999px;padding:3px 8px 2px;line-height:1}
 .gold-strip p{font-size:9.3pt;font-weight:600;color:var(--green);line-height:1.25;margin-top:2px}
 .gold-strip .badges{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:0 0 auto}
 .gold-strip .rowb{display:flex;align-items:center;gap:5px}
@@ -154,14 +158,14 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
       <div class="row r-grand">
         <span class="tag">★ Grand Prize</span>
         <div class="art"><img src="assets/gold-poster/card.jpg" alt="Critter Gold member card"></div>
-        <div class="pair">
-          <div class="cell">
-            <strong>Gold card</strong>
-            <span>Critter Gold Membership</span>
-          </div>
-          <div class="cell">
+        <div class="grand-stack">
+          <div class="cell cell-top">
             <strong>Double Gold</strong>
-            <span>2 Gold cards: one for you, one to gift</span>
+            <span>2 Critter Gold cards: over $200 in free gifts, plus about 40% off and the learning games.</span>
+          </div>
+          <div class="cell cell-gold">
+            <strong>Gold card</strong>
+            <span>Over $100 in free gifts, plus about 40% off camps, mobile petting zoos, tutoring &amp; homeschool support, and the learning game app.</span>
           </div>
         </div>
       </div>
@@ -217,10 +221,9 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
     <div class="gold-strip">
       <div class="left">
         <div class="top">
-          <h3>Critter Gold Membership</h3>
-          <span class="price">Pay $49.99 once</span>
+          <h3>What Critter Gold includes</h3>
         </div>
-        <p>~40% off camps, mobile petting zoos, tutoring &amp; homeschool support.</p>
+        <p>Over $100 in free gifts · about 40% off camps, mobile petting zoos, tutoring &amp; homeschool support · learning game app</p>
       </div>
       <div class="badges">
         <div class="rowb">
