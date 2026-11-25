@@ -3,744 +3,190 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Critter Gold $1 + Black Friday Gift Card · Sheehan Homestead</title>
-<meta name="description" content="Black Friday Gold Membership ($1 vs $49.99) + $50 Gift Card at 50% Off ($25). Nov 27 - Dec 1, 2026.">
-<link rel="icon" type="image/png" href="assets/sophie-logo.png">
+<title>Critter Gold Membership · Black Friday – Cyber Monday · Sheehan Homestead</title>
+<meta name="description" content="Critter Gold is $49.99 for the year. Itemized value: $25 farm tour, $25 farm gift or thrifty toy, the Gold web app, and 40% off camps, mobile petting zoos and field trips. You save about $70 vs. $9.99 a month. Nov 27 – Dec 1, 2026.">
+<link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
 <style>
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("assets/PlayfairDisplay-Variable.ttf") format("truetype");
-  font-weight: 400 900; font-style: normal;
+@font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#3A4F45;--green2:#4C6458;--gold:#c9a227;--gold-lt:#E8D48C;--cream:#F3EEE4;--ink:#1f2a24;--muted:#5A6B62;--line:#e2dacb}
+html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3","Source Sans Pro",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column;background:var(--cream);margin:0 auto}
+@media print{html,body{background:var(--cream);width:8.5in;height:11in}.page{margin:0}}
+.lg{display:inline-block;width:54px;height:54px;border-radius:50%;background-size:cover;background-position:center;flex:0 0 auto}
+.lg-sh{background-image:url("assets/gold-poster/sh.png")}
+.lg-coc{background-image:url("assets/gold-poster/coc.png");box-shadow:0 0 0 3px var(--gold)}
+.brand{display:flex;align-items:stretch;background:var(--cream)}
+.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;padding:.12in 0 .10in}
+.brand .side+.side{border-left:1px solid var(--line)}
+.brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:14pt;line-height:1.1;color:var(--green)}
+.rule{display:flex;height:5px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
+.body{flex:1;padding:.16in .55in .14in;display:flex;flex-direction:column;gap:.11in;min-height:0;justify-content:space-between}
+.k{font-size:10pt;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.hero{display:flex;gap:.28in;align-items:center}
+.hero .txt{flex:1.5}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:36pt;line-height:1.0;color:var(--green);margin:5px 0 8px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lede{font-size:12.5pt;line-height:1.38;color:var(--ink)}
+.hero .card{flex:1;transform:rotate(-3deg);max-width:3.05in}
+.hero .card img{width:100%;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.28);display:block}
+.price{display:flex;align-items:center;gap:.22in;background:var(--green);color:var(--cream);border-radius:16px;padding:11px 20px;border-left:8px solid var(--gold)}
+.price .ylab{font-size:9.5pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt)}
+.price .now{font-family:Fraunces,Georgia,serif;font-size:34pt;font-weight:700;line-height:1;color:#fff}
+.price .now small{font-family:"Source Sans 3",sans-serif;font-size:12.5pt;font-weight:600;color:var(--gold-lt);margin-left:6px}
+.price .how{margin-left:auto;text-align:right;font-size:11.2pt;line-height:1.4}
+.price .how b{color:var(--gold-lt)}
+.price .save{display:inline-block;background:var(--gold);color:var(--green);font-weight:800;font-size:10pt;border-radius:20px;padding:2px 10px;margin-top:4px}
+.price .soon{display:inline-block;border:1px dashed var(--gold-lt);border-radius:20px;padding:1px 9px;font-size:9.5pt;margin-top:4px}
+h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17.5pt;color:var(--green);line-height:1.1}
+h2 .tot{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--green);border-radius:20px;padding:3px 11px;margin-left:8px;vertical-align:middle}
+.gifts{display:grid;grid-template-columns:repeat(4,1fr);gap:.11in;margin-top:7px}
+.gift{background:#fff;border:1.5px solid var(--line);border-top:5px solid var(--gold);border-radius:12px;padding:8px 9px 9px;text-align:center}
+.gift .v{font-family:Fraunces,Georgia,serif;font-size:20pt;font-weight:700;color:var(--green);line-height:1;margin:2px 0 3px;white-space:nowrap}.gift .v.lg{font-size:17pt;letter-spacing:-0.02em}
+.gift h3{font-size:11.2pt;font-weight:800;color:var(--ink);line-height:1.2}
+.gift p{font-size:9.3pt;color:var(--muted);line-height:1.28;margin-top:3px}
+.totals{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:.10in;margin-top:8px}
+.tot-box{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:7px 10px 8px;text-align:center}
+.tot-box .l{display:block;font-size:8.6pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.tot-box .n{display:block;font-family:Fraunces,Georgia,serif;font-size:16pt;font-weight:700;color:var(--green);line-height:1.05;white-space:nowrap}
+.tot-box .sub{display:block;font-family:"Source Sans 3",sans-serif;font-size:8pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:1px}
+.tot-box.yp{border:2px solid var(--gold);background:#fffdf6}
+.tot-box.ys{background:var(--green);border-color:var(--green);color:var(--cream)}
+.tot-box.ys .l,.tot-box.ys .sub{color:var(--gold-lt)}
+.tot-box.ys .n{color:#fff}
+.two{display:flex;gap:.16in}
+.box{flex:1;background:#fff;border:1.5px solid var(--green);border-radius:14px;padding:9px 13px}
+.box h2{font-size:13.5pt;margin-bottom:4px}
+.box ul{list-style:none}
+.box li{font-size:10.6pt;line-height:1.32;padding:2px 0 2px 16px;position:relative}
+.box li:before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.box li b{color:var(--green)}
+.box .pct{font-family:Fraunces,Georgia,serif;font-weight:700;color:var(--gold);font-size:12.5pt}
+.bf{display:flex;align-items:center;gap:14px;background:#1f2a24;color:var(--cream);border-radius:12px;padding:8px 14px}
+.bf .tag{background:var(--gold);color:#1f2a24;font-weight:800;font-size:9.2pt;letter-spacing:.10em;text-transform:uppercase;border-radius:6px;padding:5px 10px;white-space:nowrap;text-align:center;line-height:1.2}
+.bf p{font-size:10.8pt;line-height:1.35}
+.bf b{color:var(--gold-lt)}
+.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.11in .55in;display:flex;align-items:center;gap:.22in}
+.ft .qr{background:#fff;border-radius:8px;padding:5px;flex:0 0 auto}
+.ft .qr img{width:86px;height:86px;display:block}
+.ft .cta{flex:1}
+.ft .cta b{font-family:Fraunces,Georgia,serif;font-size:16pt;color:var(--gold-lt);display:block;margin-bottom:2px}
+.ft .cta span{font-size:11pt;line-height:1.4;display:block}
+.ft .cta a{color:var(--cream)}
+.ft .ct{text-align:right;font-size:10pt;line-height:1.45}
+.ft .ct b{display:block;font-size:17pt;color:var(--gold-lt);white-space:nowrap}
+.ft .ct a{color:var(--gold-lt);text-decoration:none}
+@media screen and (max-width:860px){
+ html,body{background:var(--cream)}
+ .page{width:100%;height:auto;margin:0}
+ .hero,.price,.ft,.two,.totals{flex-direction:column;align-items:stretch}
+ .hero h1{font-size:32pt}
+ .hero .card{transform:none;max-width:360px;margin:0 auto}
+ .price .how,.ft .ct{text-align:left;margin-left:0}
+ .gifts{grid-template-columns:1fr 1fr}
+ .body{padding:.25in .2in}.ft{padding:.2in}
+ .brand .nm{font-size:12pt}.lg{width:48px;height:48px}
 }
-@font-face {
-  font-family: "Playfair Display";
-  src: url("assets/PlayfairDisplay-Italic-Variable.ttf") format("truetype");
-  font-weight: 400 900; font-style: italic;
-}
-@font-face {
-  font-family: "Source Sans 3";
-  src: url("assets/SourceSans3-Variable.ttf") format("truetype");
-  font-weight: 200 900; font-style: normal;
-}
-@font-face {
-  font-family: "Cinzel";
-  src: url("assets/Cinzel-Variable.ttf") format("truetype");
-  font-weight: 400 900; font-style: normal;
-}
-
-:root {
-  --forest: #4C6458;
-  --forest-deep: #3A4F45;
-  --sage: #5A7366;
-  --gold: #c9a227;
-  --gold-deep: #B8923A;
-  --gold-light: #E8D48C;
-  --cream: #F3EEE4;
-  --white: #FFFDF8;
-  --ink: #1a241c;
-  --muted: #516157;
-  --line: rgba(58, 79, 69, 0.18);
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html, body {
-  background: #ded7c7;
-  color: var(--ink);
-  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-
-@page { size: Letter; margin: 0; }
-
-.page {
-  width: 8.5in;
-  height: 11in;
-  margin: 0 auto;
-  background: var(--cream);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  border: 0.105in solid var(--forest-deep);
-  outline: 0.055in solid var(--gold);
-  outline-offset: -0.175in;
-}
-
-@media print {
-  html, body { background: var(--cream); width: 8.5in; height: 11in; }
-  .page { margin: 0; }
-}
-
-.why {
-  flex: 0 0 auto;
-  background: linear-gradient(180deg, #E8D48C 0%, #c9a227 52%, #B8923A 100%);
-  color: var(--forest-deep);
-  text-align: center;
-  padding: 0.075in 0.22in 0.065in;
-  border-bottom: 0.045in solid var(--forest-deep);
-}
-.why .kicker {
-  font-family: "Cinzel", serif;
-  font-weight: 800;
-  font-size: 9pt;
-  letter-spacing: 0.19em;
-  text-transform: uppercase;
-  color: var(--forest-deep);
-  margin-bottom: 0.015in;
-}
-.why .headline {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  font-size: 31pt;
-  line-height: 0.96;
-  letter-spacing: -0.02em;
-  color: var(--forest-deep);
-  text-shadow: 0 1px 0 rgba(255,253,248,0.55);
-}
-.why .headline.xl { font-size: 34pt; }
-
-.event {
-  flex: 0 0 auto;
-  background: var(--forest-deep);
-  color: var(--cream);
-  text-align: center;
-  padding: 0.05in 0.14in;
-  font-family: "Cinzel", serif;
-  font-size: 8.9pt;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-bottom: 0.038in solid var(--gold);
-  white-space: nowrap;
-}
-.event .gold { color: var(--gold-light); }
-
-.main {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.10in 0.24in 0.085in;
-  gap: 0.07in;
-  min-height: 0;
-  background:
-    radial-gradient(ellipse at 50% 18%, rgba(201,162,39,0.16) 0%, transparent 62%),
-    var(--cream);
-}
-
-.hero-strip {
-  display: grid;
-  grid-template-columns: 1.32fr 1fr;
-  gap: 0.12in;
-  align-items: stretch;
-  flex: 0 0 auto;
-}
-
-.hero-box {
-  background: var(--forest-deep);
-  color: var(--cream);
-  border-radius: 7px;
-  padding: 0.095in 0.13in;
-  border: 2px solid var(--gold);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.hero-box .tag {
-  display: inline-block;
-  align-self: flex-start;
-  background: var(--gold);
-  color: var(--forest-deep);
-  font-family: "Cinzel", serif;
-  font-weight: 800;
-  font-size: 7.4pt;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: 4px;
-  margin-bottom: 0.04in;
-}
-.hero-box h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 16.5pt;
-  line-height: 1.06;
-  color: #fff;
-  margin-bottom: 0.04in;
-}
-.hero-box h2 em { font-style: normal; color: var(--gold-light); }
-.hero-box p {
-  font-size: 9.2pt;
-  line-height: 1.28;
-  color: rgba(243, 238, 228, 0.94);
-}
-.hero-price-line {
-  display: flex;
-  align-items: baseline;
-  gap: 0.08in;
-  margin-top: 0.05in;
-  padding-top: 0.045in;
-  border-top: 1px solid rgba(232,212,140,0.35);
-  flex-wrap: wrap;
-}
-.hero-price-line .yp-lab {
-  font-size: 8pt;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--gold-light);
-  font-weight: 700;
-}
-.hero-price-line .yp-val {
-  font-family: "Playfair Display", serif;
-  font-size: 20pt;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1;
-}
-.hero-price-line .yp-was {
-  font-size: 9pt;
-  color: rgba(243,238,228,0.78);
-}
-.hero-price-line .yp-save {
-  background: var(--gold);
-  color: var(--forest-deep);
-  font-weight: 800;
-  font-size: 8.4pt;
-  padding: 1.5px 7px;
-  border-radius: 999px;
-}
-
-.photo-card {
-  border: 0.028in solid var(--forest-deep);
-  box-shadow: 0 0 0 0.022in var(--gold), 0 3px 10px rgba(26,36,28,0.20);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #1a241c;
-  position: relative;
-  min-height: 1.45in;
-}
-.photo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.photo-card .cap {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  background: rgba(26, 36, 28, 0.86);
-  color: var(--gold-light);
-  font-size: 7.5pt;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  padding: 3px 6px;
-  text-align: center;
-}
-
-.photos-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.11in;
-  height: 1.42in;
-  flex: 0 0 auto;
-}
-.photos-2 .photo-card { min-height: 0; height: 100%; }
-
-.sec-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  border-bottom: 1.5px solid rgba(58,79,69,0.25);
-  padding-bottom: 0.02in;
-  margin-bottom: 0.04in;
-}
-.sec-head h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 13pt;
-  font-weight: 800;
-  color: var(--forest-deep);
-}
-.sec-head span {
-  font-size: 8pt;
-  font-weight: 700;
-  color: var(--sage);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-.deals-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.075in;
-  flex: 0 0 auto;
-}
-.deal {
-  background: var(--white);
-  border: 1px solid rgba(58,79,69,0.22);
-  border-top: 0.04in solid var(--gold);
-  border-radius: 6px;
-  padding: 0.065in 0.09in 0.065in;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.03in;
-}
-.deal.featured {
-  border: 1.5px solid var(--gold-deep);
-  border-top: 0.048in solid var(--forest-deep);
-  background: #FFFBF0;
-}
-.deal .dk {
-  font-size: 7pt;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--sage);
-}
-.deal h4 {
-  font-family: "Playfair Display", serif;
-  font-size: 11.2pt;
-  font-weight: 800;
-  color: var(--forest-deep);
-  line-height: 1.1;
-  margin-top: 1px;
-}
-.deal p.desc {
-  font-size: 8.4pt;
-  line-height: 1.22;
-  color: var(--ink);
-}
-.deal .pbox {
-  margin-top: 0.02in;
-  padding-top: 0.035in;
-  border-top: 1px dashed rgba(58,79,69,0.22);
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-.deal .yp {
-  font-size: 7.9pt;
-  font-weight: 700;
-  color: var(--forest-deep);
-}
-.deal .yp strong {
-  font-family: "Playfair Display", serif;
-  font-size: 13pt;
-  font-weight: 900;
-  color: var(--forest-deep);
-  margin-left: 2px;
-}
-.deal .ys {
-  font-size: 7.6pt;
-  font-weight: 800;
-  color: var(--forest-deep);
-  background: rgba(201,162,39,0.26);
-  border: 1px solid rgba(184,146,58,0.55);
-  border-radius: 999px;
-  padding: 1px 6px;
-  white-space: nowrap;
-}
-.deal .lst {
-  font-size: 7.6pt;
-  color: var(--muted);
-  width: 100%;
-  line-height: 1.15;
-}
-
-.perks-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.075in;
-  flex: 0 0 auto;
-}
-.perk {
-  background: var(--white);
-  border: 1px solid rgba(58,79,69,0.22);
-  border-top: 0.035in solid var(--forest-deep);
-  border-radius: 6px;
-  padding: 0.055in 0.065in;
-  text-align: center;
-}
-.perk .pv {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  font-size: 11.5pt;
-  color: var(--gold-deep);
-  line-height: 1.05;
-}
-.perk h4 {
-  font-size: 9pt;
-  font-weight: 800;
-  color: var(--forest-deep);
-  margin: 1px 0;
-  line-height: 1.12;
-}
-.perk p {
-  font-size: 7.8pt;
-  line-height: 1.2;
-  color: var(--muted);
-}
-
-.proof-bar {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.06in;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-}
-.chip {
-  background: var(--forest-deep);
-  color: var(--cream);
-  font-family: "Cinzel", serif;
-  font-size: 7.2pt;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.028in 0.075in;
-  border: 1px solid var(--gold);
-  border-radius: 3px;
-  white-space: nowrap;
-}
-.chip.light {
-  background: #FFFBF0;
-  color: var(--forest-deep);
-  border: 1px solid var(--gold-deep);
-}
-
-.bookrow {
-  display: grid;
-  grid-template-columns: 1.56in 1fr;
-  gap: 0.12in;
-  align-items: center;
-  background: var(--white);
-  border: 1.5px solid var(--forest-deep);
-  border-radius: 7px;
-  padding: 0.07in 0.11in;
-  flex: 0 0 auto;
-}
-.qr-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.scan-shout {
-  font-family: "Cinzel", serif;
-  font-size: 7.8pt;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  background: var(--forest-deep);
-  padding: 2.5px 6px;
-  border: 1px solid var(--gold);
-  margin-bottom: 3px;
-  width: 100%;
-  text-align: center;
-}
-.qr-frame {
-  display: block;
-  width: 1.18in;
-  height: 1.18in;
-  background: #fff;
-  border: 2.5px solid var(--forest-deep);
-  box-shadow: 0 0 0 1.5px var(--gold);
-  padding: 2px;
-}
-.qr-frame img { width: 100%; height: 100%; display: block; }
-.qr-cap {
-  margin-top: 2px;
-  font-size: 6.8pt;
-  font-weight: 700;
-  color: var(--forest-deep);
-  text-align: center;
-  line-height: 1.15;
-}
-
-.cta-copy h3 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 13.5pt;
-  color: var(--forest-deep);
-  line-height: 1.1;
-  margin-bottom: 3px;
-}
-.cta-copy p {
-  font-size: 8.8pt;
-  line-height: 1.24;
-  color: var(--ink);
-  margin-bottom: 5px;
-}
-.btn-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 2px;
-}
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 8.5pt;
-  padding: 4.5px 10px;
-  border-radius: 5px;
-  letter-spacing: 0.02em;
-}
-.btn-primary {
-  background: var(--forest-deep);
-  color: var(--gold-light);
-  border: 1.5px solid var(--gold);
-}
-.btn-gold {
-  background: var(--gold);
-  color: var(--forest-deep);
-  border: 1.5px solid var(--forest-deep);
-}
-.fine-note {
-  font-size: 7.2pt;
-  line-height: 1.2;
-  color: var(--muted);
-  margin-top: 4px;
-}
-
-.foot {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 0.10in;
-  padding: 0.065in 0.22in 0.07in;
-  background: var(--forest-deep);
-  color: var(--cream);
-  border-top: 0.032in solid var(--gold);
-}
-.foot img.sophie {
-  width: 0.56in;
-  height: 0.56in;
-  border-radius: 50%;
-  border: 0.02in solid var(--gold);
-  object-fit: cover;
-  background: #fff;
-  flex-shrink: 0;
-}
-.foot .brand { flex: 1; min-width: 0; }
-.foot .brand .name {
-  font-family: "Cinzel", serif;
-  font-weight: 800;
-  font-size: 9.8pt;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  line-height: 1.15;
-}
-.foot .brand .sub {
-  font-size: 8.2pt;
-  font-weight: 600;
-  color: var(--cream);
-  line-height: 1.22;
-  margin-top: 1px;
-}
-.foot .phone {
-  text-align: right;
-  font-weight: 800;
-  font-size: 11.5pt;
-  color: var(--gold-light);
-  line-height: 1.12;
-  flex-shrink: 0;
-}
-.foot .phone a { color: var(--gold-light); text-decoration: none; }
-.foot .phone small {
-  display: block;
-  font-size: 7.2pt;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--cream);
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 860px) {
-  html, body { background: var(--cream); }
-  .page {
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    border-width: 6px;
-    outline-width: 2px;
-    outline-offset: -10px;
-  }
-  .event { white-space: normal; }
-  .proof-bar { flex-wrap: wrap; }
-  .why .headline, .why .headline.xl { font-size: 24pt; }
-  .main { padding: 14px; gap: 12px; }
-  .hero-strip, .photos-2, .deals-grid, .perks-4, .bookrow {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-  .photo-card { min-height: 190px; }
-  .photos-2 .photo-card { height: 190px; }
-  .qr-frame { width: 148px; height: 148px; }
-  .foot { flex-direction: column; text-align: center; padding: 12px; }
-  .foot .phone { text-align: center; }
-}
-
 </style>
 </head>
 <body>
-<div class="page">
+<section class="page">
+  <header class="brand">
+    <div class="side"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan<br>Homestead</div></div>
+    <div class="side"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters<br>on Call</div></div>
+  </header>
+  <div class="rule"><span class="g"></span><span class="y"></span></div>
 
-  <div class="why">
-    <div class="kicker">Black Friday – Cyber Monday · Nov 27 – Dec 1, 2026</div>
-    <div class="headline xl">Critter Gold for $1</div>
-  </div>
-  <div class="event">
-    Black Friday Hero Deal <span class="gold">·</span> Gold Membership $1 + $50 Gift Card at 50% Off <span class="gold">·</span> Christmas Gift Ready
-  </div>
-  <div class="main">
-    <div class="hero-strip">
-      <div class="hero-box">
-        <span class="tag">Black Friday Hero Bundle</span>
-        <h2>Unlock Gold for <em>$1</em> + Half-Off Gift Card</h2>
-        <p>Skip the plastic clutter this Christmas — give a full year of farm mornings, animals, and big savings. Get Critter Gold (normally $49.99) for <strong>$1</strong>, and pair it with a <strong>$50 Homestead Gift Card at 50% off ($25)</strong>.</p>
-        <div class="hero-price-line">
-          <span class="yp-lab">Your price</span>
-          <span class="yp-val">$26</span>
-          <span class="yp-was"><s>$99.99</s> ($1 Gold + $25 Card)</span>
-          <span class="yp-save">You save $73.99</span>
-        </div>
+  <div class="body">
+    <div class="hero">
+      <div class="txt">
+        <div class="k">Critter Gold Membership</div>
+        <h1>Pay $49.99 once.<br><em>Play all year.</em></h1>
+        <p class="lede">One card opens a free farm tour, a free farm gift or thrifty toy, the Gold web app, and 40% off camps, mobile petting zoos and field trips.</p>
       </div>
-      <div class="photo-card">
-        <img src="assets/gold-card.jpg" alt="Critters on Call Gold Member Card — In Critters We Trust, 914-263-1311" style="object-fit:contain;background:#1a241c;padding:4px 6px 20px;">
-        <div class="cap">Critter Gold Member · Or get Gold alone for $1 (save $48.99)</div>
+      <div class="card"><img src="assets/gold-poster/card.jpg" alt="The Critter Gold member card: In Critters We Trust"></div>
+    </div>
+
+    <div class="price">
+      <div>
+        <div class="ylab">Your price</div>
+        <div class="now">$49.99<small>for the whole year</small></div>
+      </div>
+      <div class="how">
+        Get it in the <b>Gold web app</b> today<br>
+        <span class="save">You save about $70 vs. $9.99 a month</span><br>
+        <span class="soon">Google Play Store · coming soon</span>
       </div>
     </div>
 
     <div>
-      <div class="sec-head">
-        <h3>What Your $1 Gold Membership Includes</h3>
-        <span>Normally $49.99/yr · You save $48.99</span>
-      </div>
-      <div class="perks-4" >
-        <div class="perk">
-          <div class="pv">FREE</div>
-          <h4>2-Person Farm Tour</h4>
-          <p>$25 value. Meet at least 8 animals on our Callahan homestead.</p>
+      <h2>The value stack</h2>
+      <div class="gifts">
+        <div class="gift">
+          <div class="v">$25</div>
+          <h3>Farm tour for two</h3>
+          <p>An afternoon petting zoo farm tour at the homestead. Two-person ticket.</p>
         </div>
-        <div class="perk">
-          <div class="pv">FREE</div>
-          <h4>Farm Gift or Thrifty Toy</h4>
-          <p>Up to $25 value — farm eggs, plants, or a classic toy treasure in person.</p>
+        <div class="gift">
+          <div class="v">$25</div>
+          <h3>Farm gift or thrifty toy</h3>
+          <p>Like an amaryllis, lemongrass, farm eggs, or a classic toy, claimed in person.</p>
         </div>
-        <div class="perk">
-          <div class="pv">FREE</div>
-          <h4>Prototype App Access</h4>
-          <p>Play farm games, explore animal lessons &amp; spin Stead Spin online.</p>
+        <div class="gift">
+          <div class="v lg">Included</div>
+          <h3>The Gold web app</h3>
+          <p>Games, farm lessons and prizes. Google Play Store coming soon.</p>
         </div>
-        <div class="perk">
-          <div class="pv">40% OFF</div>
-          <h4>Big-Ticket Items</h4>
-          <p>40% off camps, mobile petting zoos &amp; field trips all year.</p>
+        <div class="gift">
+          <div class="v lg">40% off</div>
+          <h3>Member pricing</h3>
+          <p>Camps, mobile petting zoos and field trips, all year.</p>
         </div>
       </div>
-    </div>
-
-    <div>
-      <div class="sec-head">
-        <h3>Real Example Savings · Your Price vs. List</h3>
-        <span>Nov 27 – Dec 1, 2026</span>
-      </div>
-      <div class="deals-grid" >
-        <div class="deal featured">
-          <div>
-            <div class="dk">Option A · Gold Only</div>
-            <h4>Critter Gold Membership</h4>
-            <p class="desc">Free 2-person farm tour, free farm gift or thrifty toy, prototype app access, and 40% off camps, mobile zoos &amp; field trips.</p>
-          </div>
-          <div class="pbox">
-            <span class="yp">Your price:<strong>$1</strong></span>
-            <span class="ys">You save $48.99</span>
-            <div class="lst">Regularly $49.99/year</div>
-          </div>
-        </div>
-        <div class="deal featured">
-          <div>
-            <div class="dk">Option B · Hero Bundle</div>
-            <h4>$1 Gold + $50 Gift Card (50% Off)</h4>
-            <p class="desc">Everything in Gold plus $50 credit toward farm visits, Mommy &amp; Me, homeschool mornings, or a 2027 party.</p>
-          </div>
-          <div class="pbox">
-            <span class="yp">Your price:<strong>$26</strong></span>
-            <span class="ys">You save $73.99</span>
-            <div class="lst">Combined list value $99.99</div>
-          </div>
-        </div>
-        <div class="deal">
-          <div>
-            <div class="dk">Big-Ticket Savings Example</div>
-            <h4>Standard Weekend Mobile Zoo</h4>
-            <p class="desc">90-minute backyard party with at least 9 animals. Gold cuts 40% off big-ticket service rates.</p>
-          </div>
-          <div class="pbox">
-            <span class="yp">Your price:<strong>$329.40</strong></span>
-            <span class="ys">You save $219.60</span>
-            <div class="lst">List price $549 (+ travel from Callahan)</div>
-          </div>
-        </div>
-        <div class="deal">
-          <div>
-            <div class="dk">Christmas Stocking Stuffer</div>
-            <h4>$50 Gift Card Alone (50% Off)</h4>
-            <p class="desc">Use for a Whole-Car Farm Visit ($50 list, up to 5 guests) or two $25 Mommy &amp; Me mornings.</p>
-          </div>
-          <div class="pbox">
-            <span class="yp">Your price:<strong>$25</strong></span>
-            <span class="ys">You save $25</span>
-            <div class="lst">Face value $50 · Never expires</div>
-          </div>
-        </div>
+      <div class="totals">
+        <div class="tot-box"><span class="l">Day-one gifts</span><span class="n">$50</span></div>
+        <div class="tot-box yp"><span class="l">Your price</span><span class="n">$49.99</span></div>
+        <div class="tot-box ys"><span class="l">You save</span><span class="n">about $70</span><span class="sub">vs. $9.99 a month</span></div>
       </div>
     </div>
 
-    <div class="proof-bar">
-      <span class="chip">100+ Google reviews</span>
-      <span class="chip">Almost 10,000 Facebook followers</span>
-      <span class="chip">At least 8 farm animals</span>
-      <span class="chip light">Claim gifts in person · Callahan, FL</span>
+    <div class="two">
+      <div class="box">
+        <h2>The Gold web app, free</h2>
+        <ul>
+          <li><b>Games</b> that are actually fun</li>
+          <li><b>Farm lessons</b> and animal facts</li>
+          <li><b>Play to earn:</b> beat a real high score to win prizes</li>
+          <li>Google Play Store · coming soon</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2>Member pricing all year</h2>
+        <ul>
+          <li><span class="pct">40% off</span> camps</li>
+          <li><span class="pct">40% off</span> mobile petting zoos</li>
+          <li><span class="pct">40% off</span> field trips</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="bookrow">
-      <div class="qr-wrap">
-        <div class="scan-shout">Scan for Gold</div>
-        <a class="qr-frame" href="https://code4crittersoncallapps.github.io/gold/" target="_blank" rel="noopener">
-          <img src="assets/qr-gold.png" alt="QR code to Critter Gold web app">
-        </a>
-        <div class="qr-cap">code4crittersoncallapps.github.io<br>/gold/</div>
-      </div>
-      <div class="cta-copy">
-        <h3>Lock your $1 Gold &amp; Black Friday Gift Card (Nov 27 – Dec 1)</h3>
-        <p>Open the Gold prototype app right now, or reserve the Black Friday $50 Gift Card at 50% off online. Prefer a real human? Call or text <strong>GOAT</strong> to <strong>914-263-1311</strong> and we will set up your gift card or membership today.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="https://code4crittersoncallapps.github.io/gold/" target="_blank" rel="noopener">Open Gold App →</a>
-          <a class="btn btn-gold" href="https://code4crittersoncallapps.github.io/critters-on-call/book/?product=gift-card-deal" target="_blank" rel="noopener">Claim $25 Gift Card ($50 Value) →</a>
-        </div>
-        <div class="fine-note">Gifts and farm tours are redeemed in person by appointment in Callahan, FL (not mailed). Offer valid Nov 27 – Dec 1, 2026. Travel on mobile visits is quoted from Callahan before booking.</div>
-      </div>
+    <div class="bf">
+      <span class="tag">Black Friday<br>Nov 27 – Dec 1, 2026</span>
+      <p><b>The best Black Friday deal we have is Gold.</b> Day-one gifts are $50. Your price is $49.99 for the year. You save about $70 versus $9.99 a month — and you still get the web app and 40% off camps, mobile petting zoos and field trips all year. It makes a great Christmas gift, too.</p>
     </div>
   </div>
-  
-  <div class="foot">
-    <img class="sophie" src="assets/sophie-logo.png" alt="Sophie the Great Pyrenees and the Critters on Call animal family">
-    <div class="brand">
-      <div class="name">Critters on Call · Sheehan Homestead</div>
-      <div class="sub">44065 Cushman Road, Callahan, FL 32011 · sheehanhomestead.com · sheehanhomestead@gmail.com</div>
+
+  <footer class="ft">
+    <a class="qr" href="https://code4crittersoncallapps.github.io/gold/" target="_blank" rel="noopener"><img src="assets/gold-poster/qr-gold.png" alt="QR code to the Gold web app"></a>
+    <div class="cta">
+      <b>Scan to get Gold</b>
+      <span><a href="https://code4crittersoncallapps.github.io/gold/">code4crittersoncallapps.github.io/gold</a></span>
+      <span>Or call or text and we'll set it up for you.</span>
     </div>
-    <div class="phone"><a href="tel:9142631311">914-263-1311</a><small>Call or text GOAT</small></div>
-  </div>
-
-
-</div>
+    <div class="ct"><b><a href="tel:9142631311">914-263-1311</a></b>sheehanhomestead@gmail.com<br>Sheehan Homestead · Callahan, FL</div>
+  </footer>
+</section>
 </body>
 </html>
