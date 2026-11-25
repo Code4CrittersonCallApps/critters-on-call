@@ -108,6 +108,7 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3","Sourc
 .banner .tag small{display:block;font-family:"Source Sans 3",sans-serif;font-size:7.8pt;font-weight:800;letter-spacing:.10em;margin-top:2px}
 .banner p{font-size:10.8pt;line-height:1.33}
 .banner b{color:var(--gold-lt)}
+.incl{display:inline-block;margin-top:8px;background:var(--gold);color:#1f2a24;font-weight:800;font-size:9.5pt;letter-spacing:.08em;text-transform:uppercase;border-radius:8px;padding:6px 12px;line-height:1.2}
 
 h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16pt;color:var(--green);line-height:1.12}
 h2 .subh{font-family:"Source Sans 3",sans-serif;font-size:9.5pt;font-weight:700;color:var(--muted);margin-left:8px;letter-spacing:.02em}
@@ -239,6 +240,7 @@ def body_mobile_know_date():
     <div class="hero">
       <div class="txt">
         <h1>Know your date?<br><em>Lock it at 50% off.</em></h1>
+        <div class="incl">Free Critter Gold card included</div>
       </div>
       <div class="photo"><img src="assets/community-event.jpg" alt="Critters on Call mobile petting zoo under a tent"></div>
     </div>
@@ -545,7 +547,7 @@ def build_index():
     cards = [gold_card]
     card_meta = [
         ("mobile-petting-zoo-know-your-date", "Mobile Petting Zoo · Know Your Date? 50% Off Deposit",
-         "Mobile-only Black Friday offer (Nov 27 – Dec 1): pay just the 50% deposit to lock your date and save 50% off Bunny Haven ($75/$117.50), Mini ($149.50/$179.50), Standard ($179.50/$274.50) &amp; Standard+Full Side ($249.50/$349.50)."),
+         "Mobile-only Black Friday offer (Nov 27 – Dec 1): pay just the 50% deposit to lock your date and save 50% off Bunny Haven ($75/$117.50), Standard ($179.50/$274.50) &amp; Standard+Full Side ($249.50/$349.50). Free Critter Gold card included."),
         ("visit-us-farm-tours", "Visit Us · Farm Tours &amp; Whole-Car Gift Vouchers",
          "On-farm Callahan tickets: $25 Farm Tour for Two (free day one w/ Gold), $50 Whole-Car Visit (up to 5 guests), or Critter Gold $49.99 Buy One, Gift One ($200 in day-one gifts)."),
         ("mommy-and-me", "Mommy &amp; Me · Farm &amp; Clubhouse Mornings",
@@ -560,13 +562,14 @@ def build_index():
          "Private 60-min Goat Yoga ($599.25 w/ Gold vs $799 list) and Goats &amp; Mimosas ($974.25 vs $1,299 list), plus 50% off travel with Gold."),
     ]
     for slug, heading, blurb in card_meta:
+        ver = "1125q" if slug == "mobile-petting-zoo-know-your-date" else "1125e"
         cards.append(f"""        <div class="card">
           <h3>{heading}</h3>
           <p>{blurb}</p>
           <div class="links">
-            <a class="btn btn-primary" href="{slug}.html?v=1125e">Open Flyer</a>
-            <a class="btn btn-gold" href="{slug}.pdf?v=1125e">Direct PDF</a>
-            <a class="btn btn-outline" href="png/{slug}.png?v=1125e">Facebook PNG</a>
+            <a class="btn btn-primary" href="{slug}.html?v={ver}">Open Flyer</a>
+            <a class="btn btn-gold" href="{slug}.pdf?v={ver}">Direct PDF</a>
+            <a class="btn btn-outline" href="png/{slug}.png?v={ver}">Facebook PNG</a>
           </div>
         </div>""")
 
