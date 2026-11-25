@@ -1003,7 +1003,7 @@ body.rec .view.active{animation:none}
     return true;
   }
   function isDetail(v){return v&&v.dataset.group==='detail';}
-  function go(id){const t=document.getElementById(id);if(!t)return;show(id,isDetail(t)?'push':(isDetail(cur)?'push':'nav'));}
+  function go(id){const t=document.getElementById(id);if(!t)return;const jump=isDetail(t)||isDetail(cur)||(cur&&cur.dataset.group==='main'&&t.dataset.group==='appendix');show(id,jump?'push':'nav');}
   function back(){
     const id=stack.pop();
     if(id){show(id,'back');}
