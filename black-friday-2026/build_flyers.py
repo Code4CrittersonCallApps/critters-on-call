@@ -538,13 +538,31 @@ def build_index():
           <h3>Critter Gold Membership · Buy One, Gift One</h3>
           <p>Black Friday offer: buy Gold at $49.99 and gift a second membership free, Nov 27 to Dec 1, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off. Your price $49.99.</p>
           <div class="links">
-            <a class="btn btn-primary" href="black-friday-gold.html?v=1125p">Open Flyer</a>
+            <a class="btn btn-primary" href="black-friday-gold.html?v=1125t">Open Flyer</a>
             <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125t">Direct PDF</a>
             <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125t">Facebook PNG</a>
           </div>
         </div>"""
 
     cards = [gold_card]
+    cards.append("""        <div class="card">
+          <h3>Stead Spin · Spin to win this Black Friday</h3>
+          <p>Free prize wheel Nov 27 – Dec 1: farm gifts, a $25 farm tour, a STEM Kit, or a Critter Gold Membership. Scan to spin. Each prize also has a Gold Card Membership QR (scan to join).</p>
+          <div class="links">
+            <a class="btn btn-primary" href="black-friday-spin-to-win.html?v=1125r">Open Flyer</a>
+            <a class="btn btn-gold" href="black-friday-spin-to-win.pdf?v=1125r">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-spin-to-win.png?v=1125r">Facebook PNG</a>
+          </div>
+        </div>""")
+    cards.append("""        <div class="card">
+          <h3>Giving · Gold for your auction · Violet Ticket</h3>
+          <p>For schools, churches, nonprofits and PTAs: request up to 5 donated Critter Gold Memberships for your auction or raffle, a Violet Ticket (about half off, confirmed per date), or ask a local business to sponsor a mobile petting zoo visit.</p>
+          <div class="links">
+            <a class="btn btn-primary" href="black-friday-giving.html?v=1125r">Open Flyer</a>
+            <a class="btn btn-gold" href="black-friday-giving.pdf?v=1125r">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-giving.png?v=1125r">Facebook PNG</a>
+          </div>
+        </div>""")
     card_meta = [
         ("mobile-petting-zoo-know-your-date", "Mobile Petting Zoo · Know Your Date? 50% Off Deposit",
          "Mobile-only Black Friday offer (Nov 27 – Dec 1): pay just the 50% deposit to lock your date and save 50% off Bunny Haven ($75/$117.50), Standard ($179.50/$274.50) &amp; Standard+Full Side ($249.50/$349.50). Free Critter Gold card included."),

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spin to win this Black Friday · Stead Spin · Sheehan Homestead</title>
+<meta name="description" content="Stead Spin is free to play this Black Friday, Nov 27–Dec 1. Win farm gifts, a $25 farm tour, a STEM Kit, or a Critter Gold Membership. Across Metro Jax.">
+<link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
+<style>
+
+@font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#4e6558;--green-deep:#3A4F45;--gold:#c9a227;--gold-lt:#E8D48C;--cream:#F3EEE4;--ink:#1f2a24}
+html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column;background:var(--cream);margin:0 auto}
+@media print{html,body{background:var(--cream);width:8.5in;height:11in}.page{margin:0}}
+.lg{display:inline-block;width:58px;height:58px;border-radius:50%;background-size:cover;background-position:center;flex:0 0 auto}
+.lg-sh{background-image:url("assets/gold-poster/sh.png")}
+.lg-coc{background-image:url("assets/gold-poster/coc.png");box-shadow:0 0 0 3px var(--gold)}
+.brand{display:flex;align-items:stretch;background:var(--cream)}
+.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:14px;padding:.16in 0 .12in}
+.brand .side+.side{border-left:1px solid #e2dacb}
+.brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16pt;line-height:1.1;color:var(--green)}
+.rule{display:flex;height:6px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
+.body{flex:1;padding:.18in .52in .14in;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:.15in;min-height:0}
+.hero{display:flex;width:100%;align-items:center;gap:.20in}
+.hero .txt{flex:1;display:flex;align-items:center;min-width:0}
+.hero .lockup{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.eyebrow{font-size:10pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);line-height:1.15}
+.kicker{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:14pt;color:var(--green);line-height:1.15}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:26pt;line-height:1.05;color:var(--green);letter-spacing:-0.02em}
+.hero .photo{flex:0 0 3.05in;width:3.05in}
+.hero .photo img{width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.22);display:block;object-fit:cover;max-height:2.45in}
+.badge{background:#1f2a24;color:var(--gold-lt);border:2.5px solid var(--gold);border-radius:16px;padding:11px 20px;text-align:center;width:100%}
+.badge strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:18pt;letter-spacing:.03em;line-height:1.1;color:var(--gold-lt)}
+.badge span{display:block;font-size:11pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-top:3px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.11in;width:100%;align-items:stretch}
+.tiles.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tile{background:#fff;border:1.5px solid #e2dacb;border-top:6px solid var(--gold);border-radius:14px;padding:12px 8px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px}
+.tile svg.ic{width:52px;height:52px;flex:0 0 auto;stroke:var(--green);fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
+.tile h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:13pt;line-height:1.12;color:var(--green);max-width:100%}
+.tile .sub{font-family:"Source Sans 3",sans-serif;font-size:9.5pt;font-weight:600;line-height:1.2;color:var(--green);margin:0;padding:0;list-style:none;width:100%}
+.tile .cta{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:3px;padding-top:4px}
+.tile .cta img{width:.58in;height:.58in;display:block;background:#fff;border-radius:5px;padding:2px;border:1px solid #e2dacb}
+.tile .cta span{font-size:6.6pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);line-height:1.15;text-align:center;max-width:1.15in}
+.tile .cta,.upsell .mini{text-decoration:none;color:var(--green)}
+.tile .cta span,.upsell .mini span{color:var(--green);text-decoration:none;border:0}
+.upsell{display:flex;align-items:center;justify-content:space-between;gap:.14in;width:100%;background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:10px 14px}
+.upsell .copy{flex:1;min-width:0}
+.upsell .label{font-size:8.8pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.upsell h3{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14.5pt;color:var(--green);line-height:1.15}
+.upsell p{font-size:10.5pt;font-weight:600;color:var(--green);margin-top:2px;line-height:1.25}
+.upsell .mini{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none}
+.upsell .mini img{width:.70in;height:.70in;display:block;background:#fff;border-radius:6px;padding:3px;border:1px solid #e2dacb}
+.upsell .mini span{font-size:6.8pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);line-height:1.15;text-align:center}
+.soonrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:5px}
+.live{display:inline-block;background:var(--green);color:#fff;font-size:8pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 8px 3px;line-height:1}
+.soon{display:inline-block;background:var(--gold);color:var(--green-deep);font-size:8pt;font-weight:800;letter-spacing:.10em;text-transform:uppercase;border-radius:999px;padding:4px 8px 3px;line-height:1}
+.gp{display:inline-flex;align-items:center;gap:5px;background:#000;color:#fff;border-radius:5px;padding:3px 7px 3px 5px}
+.gp .tri{width:12px;height:14px;flex:0 0 auto;display:block}
+.gp b{font-size:8pt;font-weight:700;font-family:Arial,Helvetica,sans-serif;white-space:nowrap;color:#fff}
+.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.18in .52in;display:flex;align-items:center;justify-content:space-between;gap:.22in}
+.ft .left{display:flex;align-items:center;gap:.14in;flex:0 0 auto}
+.ft .qr{background:#fff;border-radius:12px;padding:8px;flex:0 0 auto;display:flex;align-items:center;line-height:0}
+.ft .qr img{width:1.3in;height:1.3in;display:block}
+.ft .scan{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:18pt;line-height:1.1;color:var(--gold-lt);white-space:nowrap}
+.ft .right{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:8px;flex:0 0 auto}
+.ft .ph{font-family:Fraunces,Georgia,serif;font-size:22pt;font-weight:700;color:var(--gold-lt);white-space:nowrap;line-height:1;text-align:right}
+.ft .ph a{color:var(--gold-lt);text-decoration:none}
+.metro{font-size:8.5pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-lt);text-align:right}
+.gbadge{display:flex;flex-direction:column;align-items:center;gap:3px;background:#fff;color:#1f2a24;border-radius:12px;padding:7px 10px 6px;box-shadow:0 1px 3px rgba(0,0,0,.16)}
+.gbadge .grow{display:flex;align-items:center;justify-content:center;gap:7px}
+.gbadge .gicon{width:20px;height:20px;flex:0 0 auto;display:block}
+.gbadge .gstars{color:#d49d17;letter-spacing:1px;font-size:14pt;line-height:1}
+.gbadge .gcaption{font-size:10pt;font-weight:700;color:#1f2a24;line-height:1.1;letter-spacing:.02em;white-space:nowrap}
+@media screen and (max-width:860px){
+  html,body{background:var(--cream)}
+  .page{width:100%;height:auto;margin:0}
+  .hero,.ft{flex-direction:column}
+  .tiles,.tiles.three{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:24pt}
+  .hero .txt{justify-content:center}
+  .hero .lockup{align-items:center;text-align:center}
+  .hero .photo{flex-basis:auto;width:min(320px,90%);margin:0 auto}
+  .body{padding:.22in .18in}
+  .ft{padding:.18in;gap:.14in;flex-wrap:wrap}
+  .ft .right{align-items:flex-start}
+  .ft .ph,.metro{text-align:left}
+}
+
+</style>
+</head>
+<body>
+<section class="page">
+  <header class="brand">
+    <div class="side"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan<br>Homestead</div></div>
+    <div class="side"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters<br>on Call</div></div>
+  </header>
+  <div class="rule"><span class="g"></span><span class="y"></span></div>
+  <div class="body">
+
+    <div class="hero">
+      <div class="txt">
+        <div class="lockup">
+          <div class="eyebrow">Stead Spin · Prize wheel · Free to play</div>
+          <h1>Spin to win this<br>Black Friday.</h1>
+          <div class="kicker">Across Metro Jax</div>
+        </div>
+      </div>
+      <div class="photo"><img src="assets/festival-kids.jpg" alt="Kids at a Sheehan Homestead event"></div>
+    </div>
+
+    <div class="badge">
+      <strong>WHAT YOU CAN WIN</strong>
+      <span>Nov 27 – Dec 1</span>
+    </div>
+
+    <div class="tiles">
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M5 11h14"/><path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.2 2.8 2.8 0 0 0 9.2 7H4v14h16V7Z"/></svg>
+        <h2>$10–$50 gifts</h2>
+        <ul class="sub">
+          <li>Farm gifts</li>
+          <li>Thrift gifts</li>
+          <li>Petting-zoo tickets</li>
+        </ul>
+                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
+          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
+          <span>Scan to join<br>Gold Card Membership</span>
+        </a>
+      </div>
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/><path d="M12 7v10"/></svg>
+        <h2>$25 farm tour</h2>
+        <p class="sub">A tour at the homestead in Callahan</p>
+                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
+          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
+          <span>Scan to join<br>Gold Card Membership</span>
+        </a>
+      </div>
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <h2>STEM Kit</h2>
+        <p class="sub">A take-home STEM on Call activity kit</p>
+                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
+          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
+          <span>Scan to join<br>Gold Card Membership</span>
+        </a>
+      </div>
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="8" cy="12.5" r="2"/><path d="M13 11h6M13 14h4"/></svg>
+        <h2>Gold card</h2>
+        <p class="sub">A Critter Gold Membership</p>
+                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
+          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
+          <span>Scan to join<br>Gold Card Membership</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="upsell">
+      <div class="copy">
+        <div class="label">Want more than a prize?</div>
+        <h3>Critter Gold Membership</h3>
+        <p>Everything in Gold, times two. One for you, one to gift. Pay $49.99 once. Includes ~40% off camps, mobile petting zoos, tutoring &amp; homeschool support.</p>
+                <div class="soonrow">
+          <span class="live">Prototype live now</span>
+          <span class="soon">Coming soon</span>
+          <span class="gp" aria-label="Coming soon on Google Play">            <svg class="tri" viewBox="0 0 18 20" aria-hidden="true">
+              <path fill="#EA4335" d="M.7 1.1 10.2 10 .7 18.9A1.6 1.6 0 0 1 0 17.6V2.4C0 1.6.3 1.2.7 1.1Z"/>
+              <path fill="#FBBC04" d="M13.2 7.1 10.2 10l3 2.9 3.9-2.2c.8-.5.8-1.3 0-1.8L13.2 7.1Z"/>
+              <path fill="#4285F4" d="M.7 18.9 10.2 10l3 2.9-12.5 7.2c-.5.3-1 0-1-.6v-.6Z"/>
+              <path fill="#34A853" d="M13.2 12.9 10.2 10 .7 1.1c.10.20.0.5 1-.2L13.2 7.1 17.1 9.3c.8.5.8 1.3 0 1.8l-3.9 1.8Z"/>
+            </svg><b>Google Play</b></span>
+        </div>
+      </div>
+      <a class="mini" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
+        <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
+        <span>Scan to join<br>Gold Card Membership</span>
+      </a>
+    </div>
+
+  </div>
+  <footer class="ft">
+    <div class="left">
+      <a class="qr" href="https://code4crittersoncallapps.github.io/critters-on-call/giving-wheel/" target="_blank" rel="noopener"><img src="assets/qr-spin.png" alt="QR code to the Stead Spin prize wheel"></a>
+      <div class="scan">Scan to spin</div>
+    </div>
+    <div class="right">
+      <div class="ph"><a href="tel:9142631311">914-263-1311</a></div>
+      <div class="metro">Across Metro Jax</div>
+            <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
+        <div class="grow">
+          <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+          </svg>
+          <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <div class="gcaption">100+ Google reviews</div>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>
