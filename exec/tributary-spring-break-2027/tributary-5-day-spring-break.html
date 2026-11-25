@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tributary 5-Day Spring Break Offer · Critters on Call &amp; STEM on Call</title>
+<title>Tributary Spring Break Offer · Every Answer Is a Yes</title>
 <style>
 @font-face{font-family:"Fraunces";src:url("assets/fraunces-normal-latin.woff2") format("woff2");font-weight:100 900;font-style:normal}
 @font-face{font-family:"Source Sans 3";src:url("assets/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal}
@@ -19,6 +19,7 @@
   --ink:#1b241e;
   --muted:#56645b;
   --rule:#ded5c2;
+  --violet:#5b3f8c;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
@@ -33,350 +34,264 @@ html,body{
 .page{
   width:8.5in;
   height:11in;
-  padding:0.42in 0.5in 0.36in;
+  padding:0.36in 0.46in 0.32in;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   background:var(--cream);
 }
 
-/* Top Dual Brand Strip + Hero Header matching Tributary Proposal Style */
+/* Header */
 .masthead{
   background:linear-gradient(135deg, var(--forest) 0%, var(--green) 100%);
   color:#fff;
-  border-radius:12px;
-  padding:16px 20px 15px;
-  border-bottom:4px solid var(--gold);
-  position:relative;
+  border-radius:11px;
+  padding:13px 18px 12px;
+  border-bottom:3.5px solid var(--gold);
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
+  gap:14px;
 }
-.masthead-left{flex:1}
 .kicker{
-  font-size:10px;
+  font-size:9.5px;
   font-weight:700;
-  letter-spacing:0.16em;
+  letter-spacing:0.15em;
   text-transform:uppercase;
   color:var(--gold-lt);
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 .masthead h1{
   font-family:"Fraunces",Georgia,serif;
-  font-size:25px;
+  font-size:22.5px;
   font-weight:700;
   line-height:1.12;
   color:#fff;
-  margin-bottom:5px;
+  margin-bottom:3px;
 }
 .masthead .sub{
-  font-size:13px;
+  font-size:12.2px;
   color:#e7efe9;
-  font-weight:500;
 }
-.masthead .sub strong{color:var(--gold-lt);font-weight:700}
-.dual-logos{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  flex-shrink:0;
-}
+.masthead .sub strong{color:var(--gold-lt)}
+.dual-logos{display:flex;align-items:center;gap:7px;flex-shrink:0}
 .dual-logos img{
-  width:52px;
-  height:52px;
-  border-radius:50%;
-  border:2px solid var(--gold-lt);
-  background:#fff;
-  object-fit:cover;
+  width:46px;height:46px;border-radius:50%;
+  border:2px solid var(--gold-lt);background:#fff;object-fit:cover;
 }
 
 /* Meta bar */
-.meta-bar{
+.meta{
+  margin-top:8px;
   background:var(--paper);
   border:1px solid var(--rule);
-  border-radius:9px;
-  padding:10px 16px;
-  display:grid;
-  grid-template-columns:1.25fr 1fr 0.9fr;
-  gap:12px;
-  margin-top:10px;
-}
-.meta-bar .lbl{
-  font-size:9.5px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.12em;
-  color:var(--green);
-  margin-bottom:2px;
-}
-.meta-bar .val{
-  font-size:12.5px;
-  font-weight:700;
-  color:var(--ink);
-  line-height:1.25;
-}
-.meta-bar .val span{
-  display:block;
-  font-weight:400;
-  font-size:11.5px;
+  border-radius:8px;
+  padding:7px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:11.6px;
   color:var(--muted);
 }
+.meta b{color:var(--deep)}
 
-/* Intro note */
-.intro{
-  margin-top:9px;
-  font-size:13.2px;
-  line-height:1.42;
-  color:var(--ink);
-  padding:0 2px;
-}
-.intro strong{color:var(--forest)}
-
-/* Two-column Option Cards */
-.options{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  margin-top:10px;
-}
-.card{
-  background:var(--paper);
-  border:1.5px solid var(--rule);
-  border-radius:11px;
-  padding:14px 16px 13px;
+/* Ladder Rungs */
+.ladder{
+  margin-top:8px;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  position:relative;
+  gap:10px;
 }
-.card.featured{
+.rung{
+  background:var(--paper);
+  border:1.5px solid var(--rule);
+  border-left:5px solid var(--green);
+  border-radius:9px;
+  padding:11.5px 14px;
+  display:grid;
+  grid-template-columns:138px 1fr 185px;
+  gap:12px;
+  align-items:center;
+}
+.rung.hero{
+  background:#eef4f0;
   border:2px solid var(--green);
-  box-shadow:0 4px 14px rgba(38,51,43,0.08);
+  border-left:6px solid var(--gold);
+  padding:13px 14px;
 }
-.badge{
+.rung.violet{border-left-color:var(--violet)}
+.rung.partner{border-left-color:var(--gold)}
+.rung.hold{border-left-color:#7d8c82;background:#faf7f0}
+
+.r-tag{
   display:inline-block;
-  font-size:9.5px;
-  font-weight:700;
+  font-size:8.8px;
+  font-weight:800;
   text-transform:uppercase;
-  letter-spacing:0.11em;
-  padding:3px 9px;
+  letter-spacing:0.1em;
+  padding:2.5px 7px;
   border-radius:99px;
-  margin-bottom:6px;
-  width:fit-content;
-}
-.card.featured .badge{
+  margin-bottom:3px;
   background:var(--green);
   color:var(--gold-lt);
 }
-.card.alt .badge{
-  background:#ebe3cf;
-  color:var(--deep);
-}
-.card h2{
-  font-family:"Fraunces",Georgia,serif;
-  font-size:18px;
-  line-height:1.18;
-  color:var(--deep);
-  margin-bottom:3px;
-}
-.card .tagline{
-  font-size:12px;
-  color:var(--muted);
-  margin-bottom:10px;
-  padding-bottom:8px;
-  border-bottom:1px solid var(--rule);
-}
-.schedule{
-  list-style:none;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  margin-bottom:11px;
-}
-.schedule li{
-  font-size:12.2px;
-  line-height:1.34;
-  color:var(--ink);
-  padding-left:14px;
-  position:relative;
-}
-.schedule li::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:6px;
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:var(--gold);
-}
-.schedule li b{color:var(--forest);font-weight:700}
+.rung.hero .r-tag{background:var(--deep);color:var(--gold-lt)}
+.rung.violet .r-tag{background:var(--violet);color:#fff}
+.rung.partner .r-tag{background:var(--gold);color:#1d2620}
+.rung.hold .r-tag{background:#6d7b72;color:#fff}
 
-/* Pricing Box: strictly Your price / You save */
-.price-box{
-  background:#f7f3ea;
-  border:1px solid #dfd3b6;
-  border-radius:9px;
-  padding:10px 12px;
+.r-name{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:14.5px;
+  font-weight:700;
+  color:var(--deep);
+  line-height:1.15;
 }
-.card.featured .price-box{
-  background:#eef4f0;
-  border-color:#b8cabf;
-}
-.price-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  font-size:11.8px;
+.r-when{
+  font-size:10.5px;
   color:var(--muted);
-  margin-bottom:3px;
+  margin-top:2px;
+  line-height:1.25;
 }
-.price-row .strike{text-decoration:line-through}
-.price-row.main{
-  margin-top:5px;
-  padding-top:6px;
-  border-top:1px dashed #c8bfa9;
-  align-items:center;
+
+.r-body{
+  font-size:11.6px;
+  line-height:1.35;
+  color:var(--ink);
 }
-.price-row.main .p-lbl{
-  font-size:12px;
+.r-body b{color:var(--forest)}
+.r-body .subline{
+  display:block;
+  margin-top:3px;
+  font-size:10.8px;
+  color:var(--muted);
+}
+
+.r-price{
+  text-align:right;
+  border-left:1px dashed #d3c9b4;
+  padding-left:10px;
+}
+.r-price .list{
+  font-size:10.5px;
+  color:var(--muted);
+}
+.r-price .list s{color:#8a7f6a}
+.r-price .yp-lbl{
+  font-size:9px;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:0.08em;
-  color:var(--deep);
-}
-.price-row.main .p-val{
-  font-family:"Fraunces",Georgia,serif;
-  font-size:25px;
-  font-weight:700;
   color:var(--green);
-  line-height:1;
+  margin-top:1px;
 }
-.save-pill{
-  margin-top:6px;
+.r-price .yp{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:21px;
+  font-weight:700;
+  color:var(--deep);
+  line-height:1.05;
+}
+.rung.hero .r-price .yp{font-size:24px;color:var(--green)}
+.r-price .save{
+  display:inline-block;
+  margin-top:3px;
   background:var(--gold);
   color:#1c251f;
-  border-radius:6px;
-  padding:4px 9px;
-  font-size:11.5px;
+  font-size:10.2px;
   font-weight:700;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  padding:2px 7px;
+  border-radius:5px;
 }
-.save-pill span.sub-note{
-  font-weight:600;
-  font-size:10.8px;
+.r-price .soft-pill{
+  display:inline-block;
+  margin-top:2px;
+  background:#ebe4d3;
+  color:var(--deep);
+  font-size:10.5px;
+  font-weight:700;
+  padding:3px 8px;
+  border-radius:5px;
+}
+.r-price .fine-p{
+  font-size:10px;
+  color:var(--muted);
+  margin-top:2px;
 }
 
-/* Partner Perks Strip */
-.perks{
+/* Bottom CTA */
+.cta{
+  margin-top:8px;
   background:var(--deep);
   color:#fff;
-  border-radius:10px;
   border:1.5px solid var(--gold);
-  padding:11px 16px;
-  margin-top:10px;
-}
-.perks h3{
-  font-family:"Fraunces",Georgia,serif;
-  font-size:13.5px;
-  color:var(--gold-lt);
-  margin-bottom:6px;
-}
-.perks-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:5px 18px;
-}
-.perks-grid div{
-  font-size:11.8px;
-  line-height:1.35;
-  color:#e7efe9;
-  padding-left:13px;
-  position:relative;
-}
-.perks-grid div::before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  top:0;
-  color:var(--gold-lt);
-  font-weight:700;
-}
-.perks-grid strong{color:#fff}
-
-/* Clear CTA + Footer */
-.cta-strip{
-  background:var(--paper);
-  border:1.5px solid var(--green);
   border-radius:10px;
   padding:10px 14px;
-  margin-top:10px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:14px;
+  gap:12px;
 }
-.cta-text{flex:1}
-.cta-text .ask{
+.cta-copy{flex:1}
+.cta-copy .ask{
   font-family:"Fraunces",Georgia,serif;
-  font-size:14px;
+  font-size:14.5px;
   font-weight:700;
-  color:var(--deep);
+  color:var(--gold-lt);
   margin-bottom:2px;
 }
-.cta-text p{
-  font-size:12px;
-  color:var(--muted);
-  line-height:1.35;
+.cta-copy p{
+  font-size:11.6px;
+  color:#e7efe9;
+  line-height:1.34;
 }
-.cta-text p b{color:var(--forest)}
-.qr-wrap{
+.cta-copy p b{color:#fff}
+.qr-row{
   display:flex;
+  gap:10px;
   align-items:center;
-  gap:9px;
   flex-shrink:0;
 }
-.qr-wrap img{
-  width:56px;
-  height:56px;
-  border:1px solid var(--rule);
-  border-radius:6px;
-  background:#fff;
-  padding:2px;
+.qr-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(232,212,140,0.35);
+  border-radius:7px;
+  padding:4px 7px;
 }
-.qr-cap{
-  font-size:10.5px;
-  color:var(--muted);
-  line-height:1.3;
-  max-width:110px;
+.qr-item img{
+  width:42px;height:42px;border-radius:4px;background:#fff;padding:2px;
 }
-.qr-cap b{display:block;color:var(--deep);font-size:11px}
+.qr-item span{
+  font-size:9.5px;
+  line-height:1.22;
+  color:#e7efe9;
+  max-width:68px;
+}
+.qr-item span b{display:block;color:var(--gold-lt);font-size:10px}
 
 .foot{
-  margin-top:8px;
+  margin-top:6px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  font-size:10.5px;
+  font-size:10px;
   color:var(--muted);
   border-top:1px solid var(--rule);
-  padding-top:6px;
+  padding-top:5px;
 }
 .foot strong{color:var(--forest)}
 </style>
 </head>
 <body>
 <div class="page">
-
   <div>
     <header class="masthead">
-      <div class="masthead-left">
+      <div>
         <div class="kicker">Sheehan Homestead · Critters on Call · STEM on Call</div>
-        <h1>Tributary 5-Day Spring Break Offer</h1>
-        <div class="sub"><strong>Monday, March 15 – Friday, March 19, 2027</strong> · Five consecutive days of programming</div>
+        <h1>Tributary Spring Break Offer: Every Option Is a Yes</h1>
+        <div class="sub"><strong>Monday, March 15 – Friday, March 19, 2027</strong> · Three Rivers CDD · Travel Waived · $0 CDD Tax</div>
       </div>
       <div class="dual-logos">
         <img src="assets/sh.png" alt="Sheehan Homestead">
@@ -384,111 +299,135 @@ html,body{
       </div>
     </header>
 
-    <div class="meta-bar">
-      <div>
-        <div class="lbl">Prepared For</div>
-        <div class="val">Tributary · Three Rivers CDD<span>Lindy Barillas · 76117 Tributary Dr, Yulee, FL</span></div>
-      </div>
-      <div>
-        <div class="lbl">Partner Rate Applied</div>
-        <div class="val">Returning Direct CDD Partner<span>Tax-Exempt ($0 Tax) · Travel Waived</span></div>
-      </div>
-      <div>
-        <div class="lbl">Farm Proximity</div>
-        <div class="val">Callahan, FL (~19 Min)<span>100+ five-star Google reviews</span></div>
-      </div>
+    <div class="meta">
+      <span><b>Prepared for:</b> Tributary · Lindy Barillas (Yulee, FL)</span>
+      <span><b>From farm:</b> ~19 min (Callahan)</span>
+      <span><b>Proof:</b> 100+ 5★ Google reviews · Almost 10,000 FB</span>
     </div>
 
-    <p class="intro">
-      Thank you for inviting us back to Tributary for <strong>Spring Break Week (March 15–19, 2027)</strong>! We built two turnkey 5-day packages at our direct CDD partner pricing—including <strong>waived travel all five days</strong> and <strong>zero sales tax</strong>—just like our partner programs at Wildlight CDD, RiverTown, and Amelia Island Plantation.
-    </p>
+    <div class="ladder">
 
-    <div class="options">
-      <!-- Option 1 -->
-      <section class="card featured">
+      <!-- 1. REAL DEAL -->
+      <section class="rung hero">
         <div>
-          <span class="badge">Option 1 · Best Value (44% Off)</span>
-          <h2>5-Day STEM + Critter Finale</h2>
-          <p class="tagline">Structured 5-day camp enrichment plus a Friday petting zoo celebration</p>
-          <ul class="schedule">
-            <li><b>Mon – Thu (2 hrs/day):</b> Hands-on STEM &amp; Farm Challenges led by Ann-Marie Sheehan, M.Ed. (all supplies included).</li>
-            <li><b>Friday Finale (2 hrs STEM + 2 hrs Critters):</b> Final STEM showcase followed by a <b>Mini Petting Zoo</b> (at least 6 friendly animals).</li>
-            <li><b>Friday Bonus:</b> Free <b>Stead Spin</b> prize wheel sign so families win farm prizes &amp; upgrades.</li>
-            <li><b>Turnkey Setup:</b> Full fencing, trained team, 30-min early setup, and indoor/turf protection options.</li>
-          </ul>
+          <span class="r-tag">1 · Real Deal (Best)</span>
+          <div class="r-name">5-Day Spring Break Week</div>
+          <div class="r-when">Full Mon–Fri March 15–19 resident lineup</div>
         </div>
-        <div class="price-box">
-          <div class="price-row"><span>List price (5×2h STEM $3,000 + Mini PZ $549)</span><span class="strike">$3,549.00</span></div>
-          <div class="price-row"><span>Travel (5 trips from Callahan)</span><span>Waived</span></div>
-          <div class="price-row"><span>Sales tax (Three Rivers CDD)</span><span>$0.00</span></div>
-          <div class="price-row main">
-            <span class="p-lbl">Your price</span>
-            <span class="p-val">$1,995.00</span>
-          </div>
-          <div class="save-pill">
-            <span>You save: $1,554.00 (44% off)</span>
-            <span class="sub-note">+ $500+ travel waived</span>
-          </div>
+        <div class="r-body">
+          <b>5-Day STEM + Critter Finale:</b> Mon–Thu 2-hr hands-on STEM (Ann-Marie Sheehan, M.Ed.) + Fri 2-hr STEM &amp; 2-hr Mini Petting Zoo (at least 6 animals) + free <b>Stead Spin</b> wheel.
+          <span class="subline">Prefer variety all 5 days? <b>All-Resident Lineup</b> (Bunny Haven, STEM, Mini PZ, Goat Yoga, Fri Std+Side): List <s>$3,345</s> · <b>Your price $2,508.75</b> · <b>You save $836.25 (25%)</b>.</span>
+        </div>
+        <div class="r-price">
+          <div class="list">List <s>$3,549.00</s> · Travel Waived</div>
+          <div class="yp-lbl">Your price</div>
+          <div class="yp">$1,995.00</div>
+          <div class="save">You save: $1,554.00 (44%)</div>
         </div>
       </section>
 
-      <!-- Option 2 -->
-      <section class="card alt">
+      <!-- 2. SMALL DEAL -->
+      <section class="rung">
         <div>
-          <span class="badge">Option 2 · Mix-and-Match Variety</span>
-          <h2>5-Day All-Resident Lineup</h2>
-          <p class="tagline">A different crowd-pleasing experience every day of Spring Break</p>
-          <ul class="schedule">
-            <li><b>Mon · Bunny Haven (2 hrs):</b> Gentle bunnies for toddlers, families &amp; shaded lawn spaces ($399 list).</li>
-            <li><b>Tue · STEM on Call (2 hrs):</b> Hands-on farm engineering &amp; critter science ($600 list).</li>
-            <li><b>Wed · Mini Petting Zoo (2 hrs):</b> At least 6 friendly goats, sheep &amp; bunnies ($549 list).</li>
-            <li><b>Thu · Goat Yoga (60–75 min):</b> Goats, fencing, facilitator &amp; yoga instructor ($799 list).</li>
-            <li><b>Fri Finale · Standard + Full Side (2 hrs):</b> At least 9 animals plus baby chicks/ducks ($998 list) + free Stead Spin wheel.</li>
-          </ul>
+          <span class="r-tag">2 · Small Deal</span>
+          <div class="r-name">Start with 1 or 2 Days</div>
+          <div class="r-when">Tighter budget, full CDD quality</div>
         </div>
-        <div class="price-box">
-          <div class="price-row"><span>List price (5 separate community programs)</span><span class="strike">$3,345.00</span></div>
-          <div class="price-row"><span>Travel (5 trips from Callahan)</span><span>Waived</span></div>
-          <div class="price-row"><span>Sales tax (Three Rivers CDD)</span><span>$0.00</span></div>
-          <div class="price-row main">
-            <span class="p-lbl">Your price</span>
-            <span class="p-val">$2,508.75</span>
-          </div>
-          <div class="save-pill">
-            <span>You save: $836.25 (25% off)</span>
-            <span class="sub-note">+ $500+ travel waived</span>
-          </div>
+        <div class="r-body">
+          Pick any 1–2 Spring Break days at our 25% partner rate: <b>Mini Petting Zoo</b> (2 hrs, at least 6 animals) or <b>Standard Petting Zoo</b> (2 hrs, at least 9 animals: List <s>$749</s> · Your price <b>$561.75</b> · You save $187.25).
+          <span class="subline"><b>Built-in resident bonus:</b> Includes free <b>Stead Spin</b> wheel + <b>Critter Gold</b> QR (25% off mobile / 50% travel for families).</span>
+        </div>
+        <div class="r-price">
+          <div class="list">Mini 2-hr List <s>$549.00</s></div>
+          <div class="yp-lbl">Your price (1 day from)</div>
+          <div class="yp">$411.75</div>
+          <div class="save">You save: $137.25 (25%)</div>
         </div>
       </section>
-    </div>
 
-    <div class="perks">
-      <h3>Why Direct CDD Partners Lock In the 5-Day Spring Break Week</h3>
-      <div class="perks-grid">
-        <div><strong>Travel Waived All Week:</strong> $0 travel fee across all 5 visits (saves $500+ at list rates).</div>
-        <div><strong>Free Weather Reschedule:</strong> No fee to move for rain (48 hrs preferred; 24 hrs OK).</div>
-        <div><strong>Flexible Mix &amp; Match:</strong> Swap days or build a 2–4 day schedule at 25% partner savings.</div>
-        <div><strong>COI &amp; Paperwork Ready:</strong> Hiscox CGL ($1M/$2M), Additional Insured COI, W-9 &amp; $0 CDD tax.</div>
-      </div>
-    </div>
+      <!-- 3. NO BUDGET? -->
+      <section class="rung violet">
+        <div>
+          <span class="r-tag">3 · No Budget?</span>
+          <div class="r-name">Promo or Giving Path</div>
+          <div class="r-when">Zero CDD dollars this quarter</div>
+        </div>
+        <div class="r-body">
+          <b>Marketing / Promo Day ($0):</b> Host our <b>Stead Spin</b> prize wheel + <b>Critter Gold</b> giveaways ($50 value: free 2-person farm visit + $25 gift + 25%/50% family booking code).
+          <span class="subline"><b>Violet Ticket (Good Causes):</b> Co-host with a school, church, or 501(c)(3) for <b>~60% off list</b> (≥50% off services, 75% off travel; <i>"Give at least twice as much as you receive"</i> — e.g. 3-hr Standard <b>$615</b> vs <s>$1,049</s>).</span>
+        </div>
+        <div class="r-price">
+          <div class="yp-lbl">Promo Day / Violet</div>
+          <div class="yp">$0 <span style="font-size:13px;font-weight:600;color:var(--muted)">to $459</span></div>
+          <div class="soft-pill">~60% off (Violet cause)</div>
+          <div class="fine-p">Or fully underwritten below</div>
+        </div>
+      </section>
 
-    <div class="cta-strip">
-      <div class="cta-text">
-        <div class="ask">Next Step: Reply with Option 1 or 2 to hold March 15–19, 2027</div>
-        <p>A <b>50% deposit</b> reserves your full Spring Break week. Call or text <b>914-263-1311</b> or email <b>sheehanhomestead@gmail.com</b>—and let us know your preferred daily time windows.</p>
-      </div>
-      <div class="qr-wrap">
-        <img src="assets/qr-go.png" alt="Scan for reviews and booking">
-        <div class="qr-cap"><b>Scan for reviews &amp; menus</b>100+ 5-star reviews · Almost 10,000 FB followers</div>
-      </div>
+      <!-- 4. PARTNER / SPONSOR -->
+      <section class="rung partner">
+        <div>
+          <span class="r-tag">4 · Partner / Sponsor</span>
+          <div class="r-name">Local Biz Underwrites It</div>
+          <div class="r-when">Tributary vendors fund the week</div>
+        </div>
+        <div class="r-body">
+          Invite local businesses around Tributary to sponsor the event via our ad &amp; giving packages: <b>Stead Shout</b> (Free), <b>Community Supporter ($25)</b>, <b>Animal Ambassador ($75)</b>, <b>GOAT Partner ($150)</b>, <b>Market Intelligence ($500)</b>, <b>Experience Sponsor ($1,000+)</b>, or <b>Community Event Co-Sponsor ($1,500+</b>, 60% partial donation).
+          <span class="subline">Sponsors get tagged animal reels, Gold memberships in their name &amp; 3D GOAT awards—and your residents get animals free.</span>
+        </div>
+        <div class="r-price">
+          <div class="yp-lbl">Sponsor Tiers</div>
+          <div class="yp">$25–$1,500+</div>
+          <div class="soft-pill">Your CDD cost: $0</div>
+          <div class="fine-p">Free Stead Shout starter</div>
+        </div>
+      </section>
+
+      <!-- 5. NOT YET? -->
+      <section class="rung hold">
+        <div>
+          <span class="r-tag">5 · Not Yet?</span>
+          <div class="r-name">Hold Future or Homestead</div>
+          <div class="r-when">Timing isn't March 15–19</div>
+        </div>
+        <div class="r-body">
+          <b>Hold a Future Date:</b> Lock <b>Summer Break</b> or <b>Fall Fest</b> at 25% CDD Partner savings—plus join our first-call list for <b>ponies &amp; nativity animals</b> (expected Spring 2027).
+          <span class="subline"><b>Animal Care Intake:</b> Have healthy goats, chickens, ducks, geese, or bunnies needing a caring homestead? We welcome animals we actually care for.</span>
+        </div>
+        <div class="r-price">
+          <div class="yp-lbl">Lock Future Date</div>
+          <div class="yp">$0 Hold</div>
+          <div class="soft-pill">Free weather reschedule</div>
+          <div class="fine-p">25% partner rate locked</div>
+        </div>
+      </section>
+
     </div>
   </div>
 
-  <footer class="foot">
-    <span><strong>Sheehan Homestead · Critters on Call · STEM on Call</strong> · Callahan, FL</span>
-    <span>914-263-1311 · sheehanhomestead.com · Direct CDD Partner Offer</span>
-  </footer>
+  <div>
+    <div class="cta">
+      <div class="cta-copy">
+        <div class="ask">One Quick Ask: Reply with Rung 1, 2, 3, 4, or 5 — or call/text 914-263-1311</div>
+        <p>50% deposit holds paid March 15–19 dates · $0 tax (Three Rivers CDD) · Free weather reschedule (48h preferred) · <b>Every answer gets your residents a win.</b></p>
+      </div>
+      <div class="qr-row">
+        <div class="qr-item">
+          <img src="assets/qr-spin.png" alt="Stead Spin QR">
+          <span><b>Stead Spin</b>Free resident wheel</span>
+        </div>
+        <div class="qr-item">
+          <img src="assets/qr-go.png" alt="Reviews and Gold QR">
+          <span><b>Gold &amp; Reviews</b>Menus &amp; 5★ proof</span>
+        </div>
+      </div>
+    </div>
 
+    <footer class="foot">
+      <span><strong>Sheehan Homestead · Critters on Call · STEM on Call</strong> · Callahan, FL</span>
+      <span>914-263-1311 · sheehanhomestead@gmail.com · sheehanhomestead.com</span>
+    </footer>
+  </div>
 </div>
 </body>
 </html>
