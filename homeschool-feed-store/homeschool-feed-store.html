@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homeschool Farm Days · Sheehan Homestead · Callahan, FL</title>
+<meta name="description" content="Parent-led homeschool farm days on a real working farm in Callahan. Hands-on science and life skills outdoors. Your price $24 with Gold ($40 list).">
+<link rel="icon" type="image/png" href="assets/coc.png">
+<style>
+@font-face{font-family:"Fraunces";src:url("assets/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#4e6558;
+  --green-deep:#3A4F45;
+  --gold:#c9a227;
+  --gold-lt:#E8D48C;
+  --cream:#F3EEE4;
+  --ink:#1f2a24;
+  --muted:#516157;
+  --line:#dfd7c7;
+}
+html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column;background:var(--cream);margin:0 auto}
+@media print{html,body{background:var(--cream);width:8.5in;height:11in}.page{margin:0}}
+
+.lg{display:inline-block;width:50px;height:50px;border-radius:50%;background-size:cover;background-position:center;flex:0 0 auto}
+.lg-sh{background-image:url("assets/sh.png")}
+.lg-coc{background-image:url("assets/coc.png");box-shadow:0 0 0 3px var(--gold)}
+.brand{display:flex;align-items:stretch;background:var(--cream);flex:0 0 auto}
+.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;padding:.10in 0 .08in}
+.brand .side+.side{border-left:1px solid var(--line)}
+.brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:14pt;line-height:1.1;color:var(--green)}
+.rule{display:flex;height:5px;flex:0 0 auto}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
+
+.body{flex:1;padding:.16in .42in .12in;display:flex;flex-direction:column;gap:.14in;min-height:0;justify-content:space-between}
+.eyebrow{font-size:10.5pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:center;line-height:1}
+h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:46pt;line-height:.95;color:var(--green);text-align:center;letter-spacing:-0.02em}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{font-size:13.5pt;line-height:1.28;color:var(--ink);text-align:center;max-width:7.2in;margin:0 auto}
+.lede b{color:var(--green)}
+
+.hero{display:flex;gap:.20in;align-items:center}
+.hero .photo{flex:0 0 3.35in}
+.hero .photo img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center 35%;border-radius:14px;border:2.5px solid var(--gold);box-shadow:0 8px 18px rgba(0,0,0,.18);display:block}
+.hero .copy{flex:1;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.hero .copy h1{font-size:44pt;text-align:left;line-height:.94}
+.hero .copy .lede{text-align:left;font-size:13.5pt;max-width:none}
+
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.10in;width:100%}
+.tile{background:#fff;border:1.5px solid var(--line);border-top:5px solid var(--gold);border-radius:14px;padding:14px 8px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:1.55in}
+.tile svg.ic{width:50px;height:50px;flex:0 0 auto;stroke:var(--green);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tile h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14pt;line-height:1.12;color:var(--green)}
+.tile p{font-size:9.4pt;font-weight:600;line-height:1.2;color:var(--muted)}
+
+.price{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--green);color:var(--cream);border-radius:14px;padding:12px 20px;border-left:7px solid var(--gold)}
+.price .yp-col{display:flex;flex-direction:column;gap:1px}
+.price .yl{font-size:9pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt)}
+.price .yp{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:40pt;line-height:.9;color:#fff}
+.price .yp small{font-family:"Source Sans 3",sans-serif;font-size:12pt;font-weight:700;color:var(--gold-lt);margin-left:6px;letter-spacing:0}
+.price .sv-col{text-align:right}
+.price .lst{display:block;font-size:12pt;color:#d7e0da;text-decoration:line-through}
+.price .sv{display:inline-block;background:var(--gold);color:#1f2a24;font-size:13pt;font-weight:800;border-radius:20px;padding:4px 12px;margin-top:4px;white-space:nowrap}
+
+.dates{text-align:center;font-size:13pt;font-weight:700;color:var(--green);line-height:1.25}
+.dates span{display:block;font-size:11pt;font-weight:600;color:var(--muted);margin-top:2px}
+
+.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.09in .42in;display:flex;align-items:center;gap:.16in;flex:0 0 auto}
+.ft .qr{background:#fff;border-radius:10px;padding:5px;flex:0 0 auto;line-height:0}
+.ft .qr img{width:1.05in;height:1.05in;display:block}
+.ft .scan{flex:1;min-width:0}
+.ft .scan b{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:20pt;color:var(--gold-lt);display:block;line-height:1.05}
+.ft .scan span{font-size:10.5pt;line-height:1.3;display:block;margin-top:3px}
+.ft .scan a{color:var(--cream);text-decoration:none}
+.ft .right{text-align:right;flex:0 0 auto}
+.ft .ph{font-family:Fraunces,Georgia,serif;font-size:22pt;font-weight:700;color:var(--gold-lt);white-space:nowrap;line-height:1}
+.ft .ph a{color:var(--gold-lt);text-decoration:none}
+.ft .addr{font-size:9.2pt;line-height:1.3;margin-top:2px}
+.gbadge{display:inline-flex;align-items:center;gap:5px;margin-top:4px;background:#fff;color:#1f2a24;border-radius:20px;padding:3px 9px 3px 7px;font-size:8.4pt;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.gbadge .gicon{width:13px;height:13px;flex:0 0 auto;display:block}
+.gbadge .gstars{color:#d49d17;letter-spacing:.5px;font-size:9.2pt;line-height:1}
+
+.tabs{display:flex;flex:0 0 1.22in;border-top:2px dashed var(--green);background:var(--cream)}
+.tab{flex:1;display:flex;align-items:center;justify-content:center;border-left:1.5px dashed var(--green);overflow:hidden;position:relative}
+.tab:first-child{border-left:0}
+.tab .t{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:4px 0}
+.tab .t b{font-family:"Source Sans 3",sans-serif;font-size:7.6pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);line-height:1.05;white-space:nowrap}
+.tab .t span{font-family:Fraunces,Georgia,serif;font-size:9.2pt;font-weight:700;color:var(--green-deep);white-space:nowrap;letter-spacing:.01em}
+.tab:after{content:"";position:absolute;top:3px;left:50%;transform:translateX(-50%);width:8px;height:8px;border:1.5px dashed var(--green);border-radius:50%;opacity:.55}
+
+@media screen and (max-width:860px){
+  html,body{background:var(--cream)}
+  .page{width:100%;height:auto;margin:0}
+  .hero,.ft,.price{flex-direction:column;align-items:stretch}
+  .tiles{grid-template-columns:1fr 1fr}
+  .hero .copy h1{font-size:32pt;text-align:center}
+  .hero .copy .lede,.dates{text-align:center}
+  .hero .photo{flex-basis:auto;max-width:100%}
+  .body{padding:.22in .18in}
+  .ft{padding:.18in}
+  .ft .right{text-align:left}
+  .brand .nm{font-size:11.5pt}.lg{width:46px;height:46px}
+  .tabs{flex-wrap:wrap;height:auto;flex-basis:auto}
+}
+</style>
+</head>
+<body>
+<section class="page">
+  <header class="brand">
+    <div class="side"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan<br>Homestead</div></div>
+    <div class="side"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters<br>on Call</div></div>
+  </header>
+  <div class="rule"><span class="g"></span><span class="y"></span></div>
+
+  <div class="body">
+    <div class="hero">
+      <div class="copy">
+        <div class="eyebrow">Independent · Parent-led · Callahan, FL</div>
+        <h1>Homeschool<br><em>Farm Days</em></h1>
+        <p class="lede">Hands-on science and life skills on a real working farm. Small groups, outdoors, led the way <b>you</b> choose.</p>
+      </div>
+      <div class="photo"><img src="assets/kids-pen.jpg" alt="Kids learning with goats and bunnies on the farm"></div>
+    </div>
+
+    <div class="tiles">
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10H4Z"/><path d="M9 19v-6h6v6"/><circle cx="8.5" cy="11" r="1.1"/><circle cx="15.5" cy="11" r="1.1"/></svg>
+        <h2>Real farm science</h2>
+        <p>Animals, lessons, 90 minutes</p>
+      </div>
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="8" r="2.4"/><circle cx="15.5" cy="8.2" r="2.1"/><path d="M3.6 18.5c.4-3 2.4-4.7 4.9-4.7s4.5 1.7 4.9 4.7"/><path d="M13.4 14.2c2-.2 3.6 1.1 4.2 3.6 0 .3.1.5.2.7"/></svg>
+        <h2>Small groups</h2>
+        <p>Kids learn side by side</p>
+      </div>
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6.2" r="2.1"/><path d="M12 8.4v3.2M8 20c.6-3.2 2-5.2 4-5.2s3.4 2 4 5.2"/><path d="M4.5 14.5c2.2-1.2 4.3-.6 5.3.6M19.5 14.5c-2.2-1.2-4.3-.6-5.3.6"/><path d="M3 21h18"/></svg>
+        <h2>Life skills outdoors</h2>
+        <p>Work, care, and wonder</p>
+      </div>
+      <div class="tile">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V6.5A1.5 1.5 0 0 1 5.5 5H9v14H4Z"/><path d="M15 19V8h3.5A1.5 1.5 0 0 1 20 9.5V19"/><path d="M9 5h6v14H9z"/></svg>
+        <h2>Ann-Marie Sheehan</h2>
+        <p>M.Ed. · STEM on Call<br>tutoring and co-op visits</p>
+      </div>
+    </div>
+
+    <div class="price">
+      <div class="yp-col">
+        <span class="yl">Your price with Gold</span>
+        <span class="yp">$24 <small>per farm day</small></span>
+      </div>
+      <div class="sv-col">
+        <span class="lst">$40 list</span>
+        <span class="sv">You save $16</span>
+      </div>
+    </div>
+
+    <p class="dates">Monthly homeschool farm days, call or scan for dates.
+      <span>Critter Gold Membership includes about 40% off and $100 in gifts.</span>
+    </p>
+  </div>
+
+  <footer class="ft">
+    <a class="qr" href="https://code4crittersoncallapps.github.io/critters-on-call/book/?product=homeschool-mon-10" target="_blank" rel="noopener"><img src="assets/qr-homeschool.png" alt="QR code to book a homeschool farm day"></a>
+    <div class="scan">
+      <b>Scan to book</b>
+      <span>Homeschool Farm &amp; STEM at Sheehan Homestead</span>
+    </div>
+    <div class="right">
+      <div class="ph"><a href="tel:9142631311">914-263-1311</a></div>
+      <div class="addr">44065 Cushman Rd, Callahan, FL</div>
+      <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
+        <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+          <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+        </svg>
+        <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>100+ Google reviews</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="tabs" aria-label="Tear-off phone tabs">
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+    <div class="tab"><div class="t"><b>Homeschool Farm Days</b><span>914-263-1311</span></div></div>
+  </div>
+</section>
+</body>
+</html>
