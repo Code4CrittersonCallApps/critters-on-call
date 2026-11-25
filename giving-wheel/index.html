@@ -301,7 +301,7 @@
         <li><span class="tier-swatch is-common" aria-hidden="true"></span> $10 gift</li>
         <li><span class="tier-swatch is-mid" aria-hidden="true"></span> $25 gift</li>
         <li><span class="tier-swatch" style="background:#C9A87A;border-color:#d4b896" aria-hidden="true"></span> $50 gift</li>
-        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Grand prize · Gold card or BOGO Gold card</li>
+        <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Grand prize · Gold card or Double Gold</li>
       </ul>
 
       <div class="wheel-wrap">
@@ -397,7 +397,7 @@
   /* 16 equal slices — two prize tiers + Free Spin ×2:
      - $10–$50 gifts (12): STEM Kit ×2, $25 farm tour / petting zoo tickets ×2, $10 petting zoo ticket ×2,
        $10 farm gift ×2, $10 thrift gift ×2, $50 gift ×1, Special perk ×1
-     - Grand prize (2): Gold card ×1, BOGO Gold card ×1
+     - Grand prize (2): Gold card ×1, Double Gold ×1
      - Free Spin ×2 (priceless redo; doesn’t use a monthly spin) */
   var PRIZES = [
     { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#EDE6D9", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
@@ -407,7 +407,7 @@
     { id: "tour-25-a", label: "$25 farm tour / petting zoo tickets", short: "$25<br>TOUR", value: "$25 farm tour / petting zoo tickets", teaser: "$25 farm tour or petting zoo tickets", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "$25 farm tour / petting zoo tickets. Claim below, then show this screen at Sheehan Homestead." },
     { id: "stem-kit-a", label: "STEM Kit", short: "STEM<br>KIT", value: "STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#7D5A36", fulfill: "STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
     { id: "thrift-10-b", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "bogo-gold-card", label: "BOGO Gold card", short: "BOGO<br>GOLD", value: "Buy one, gift one · Gold card for you plus one to gift", teaser: "two Critter Gold Memberships", kind: "grand", tier: "rare", color: "#DFBA3B", fulfill: "Gold card for you plus one to gift. Includes ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
+    { id: "double-gold", label: "Double Gold", short: "DOUBLE<br>GOLD", value: "2 Gold cards: one for you, one to gift", teaser: "two Critter Gold Memberships", kind: "grand", tier: "rare", color: "#DFBA3B", fulfill: "2 Gold cards: one for you, one to gift. Includes ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
     { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#F5F0E6", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
     { id: "farm-10-b", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
     { id: "gift-50", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — STEM Kit, thrift gift, farm gift, or farm tour / petting zoo tickets", teaser: "STEM · thrift · farm · petting zoo tickets (excludes Gold)", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$50 gift — choose STEM Kit, thrift gift, farm gift, or farm tour / petting zoo tickets (excludes Gold membership). Claim below, then show this screen at Sheehan Homestead." },
@@ -419,7 +419,7 @@
   ];
 
   var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
-  var bogoGoldCount = PRIZES.filter(function (p) { return p.id === "bogo-gold-card"; }).length;
+  var doubleGoldCount = PRIZES.filter(function (p) { return p.id === "double-gold"; }).length;
   var stemKitCount = PRIZES.filter(function (p) { return p.id.indexOf("stem-kit") === 0; }).length;
   var tour25Count = PRIZES.filter(function (p) { return p.id.indexOf("tour-25") === 0; }).length;
   var ticket10Count = PRIZES.filter(function (p) { return p.id.indexOf("ticket-10") === 0; }).length;
@@ -431,7 +431,7 @@
   if (
     PRIZES.length !== 16 ||
     goldCardCount !== 1 ||
-    bogoGoldCount !== 1 ||
+    doubleGoldCount !== 1 ||
     stemKitCount !== 2 ||
     tour25Count !== 2 ||
     ticket10Count !== 2 ||
@@ -441,7 +441,7 @@
     specialPerkCount !== 1 ||
     freeSpinCount !== 2
   ) {
-    throw new Error("Stead Spin must be 16 slices: 1 Gold, 1 BOGO Gold, 2× STEM Kit, 2× $25 tour, 2× $10 ticket, 2× $10 farm, 2× $10 thrift, 1× $50 gift, 1× Special perk, 2× Free Spin");
+    throw new Error("Stead Spin must be 16 slices: 1 Gold, 1 Double Gold, 2× STEM Kit, 2× $25 tour, 2× $10 ticket, 2× $10 farm, 2× $10 thrift, 1× $50 gift, 1× Special perk, 2× Free Spin");
   }
 
   /* Equal weights — odds follow slice count. */
@@ -750,13 +750,13 @@
       writeDevice(topState);
     }
     document.getElementById("win-kicker").textContent =
-      isAgain ? "Free spin" : (isGrand ? (prize.id === "bogo-gold-card" ? "BOGO Gold card" : "Gold card") : "You won");
+      isAgain ? "Free spin" : (isGrand ? (prize.id === "double-gold" ? "Double Gold" : "Gold card") : "You won");
     var pbTitle = document.getElementById("premium-banner-title");
     var pbCopy = document.getElementById("premium-banner-copy");
     if (pbTitle && pbCopy && isGrand) {
-      if (prize.id === "bogo-gold-card") {
-        pbTitle.textContent = "BOGO Gold Card · Two Critter Gold Memberships";
-        pbCopy.textContent = "Gold card for you plus one to gift. ~40% off camps, mobile petting zoos, tutoring & homeschool support. Spins close after Gold.";
+      if (prize.id === "double-gold") {
+        pbTitle.textContent = "Double Gold · Two Critter Gold Memberships";
+        pbCopy.textContent = "2 Gold cards: one for you, one to gift. ~40% off camps, mobile petting zoos, tutoring & homeschool support. Spins close after Gold.";
       } else {
         pbTitle.textContent = "Gold Card · Critter Gold Membership";
         pbCopy.textContent = "~40% off camps, mobile petting zoos, tutoring & homeschool support. Spins close after Gold.";

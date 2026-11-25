@@ -547,7 +547,7 @@ def build_index():
     cards = [gold_card]
     cards.append("""        <div class="card">
           <h3>Stead Spin · Invite-Only Digital Pop-Up</h3>
-          <p>Invite-only digital pop-up Nov 27 – Dec 1: $10–$50 gifts (STEM Kit, thrift gift, farm gift, farm tour / petting zoo tickets, special perk) or grand prize Gold Card / BOGO Gold Card. Scan to spin.</p>
+          <p>Invite-only digital pop-up Nov 27 – Dec 1: $10–$50 gifts (STEM Kit, thrift gift, farm gift, farm tour / petting zoo tickets, special perk) or grand prize Gold card / Double Gold. Scan to spin.</p>
           <div class="links">
             <a class="btn btn-primary" href="black-friday-spin-to-win.html?v=1125v">Open Flyer</a>
             <a class="btn btn-gold" href="black-friday-spin-to-win.pdf?v=1125v">Direct PDF</a>
