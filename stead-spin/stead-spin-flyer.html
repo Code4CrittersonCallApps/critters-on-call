@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SPIN AND WIN · Stead Spin</title>
+<style>
+@font-face {
+  font-family: "Playfair Display";
+  src: url("assets/PlayfairDisplay-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("assets/SourceSans3-Variable.ttf") format("truetype");
+  font-weight: 200 900; font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/Cinzel-Variable.ttf") format("truetype");
+  font-weight: 400 900; font-style: normal;
+}
+
+:root {
+  --forest: #4C6458;
+  --forest-deep: #3A4F45;
+  --sage: #5A7366;
+  --gold: #c9a227;
+  --gold-deep: #B8923A;
+  --gold-light: #E8D48C;
+  --cream: #F3EEE4;
+  --white: #FFFdf8;
+  --ink: #1a241c;
+  --chrome: #e8e4d8;
+  --chrome-deep: #9a9588;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 8.5in; height: 11in;
+  background: var(--cream); color: var(--ink);
+  font-family: "Source Sans 3", "Liberation Sans", sans-serif;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+@page { size: Letter; margin: 0; }
+
+.page {
+  width: 8.5in; height: 11in;
+  background: var(--cream);
+  display: flex; flex-direction: column;
+  overflow: hidden; position: relative;
+  border: 0.12in solid var(--forest-deep);
+  outline: 0.055in solid var(--gold);
+  outline-offset: -0.175in;
+}
+
+/* Eye-catching SPIN AND WIN stop-you-in-your-tracks header */
+.why {
+  flex: 0 0 auto;
+  background: linear-gradient(180deg, #E8D48C 0%, #c9a227 50%, #B8923A 100%);
+  color: var(--forest-deep);
+  text-align: center;
+  padding: 0.07in 0.12in 0.06in;
+  border-bottom: 0.055in solid var(--forest-deep);
+}
+.why .headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 54pt;
+  line-height: 0.88;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  text-shadow:
+    0 0.012in 0 rgba(255,253,248,0.55),
+    0 0.03in 0 rgba(58,79,69,0.18),
+    0 0.04in 0.08in rgba(26,36,28,0.22);
+}
+.why .headline .and {
+  display: inline-block;
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  font-size: 0.42em;
+  letter-spacing: 0.18em;
+  vertical-align: 0.28em;
+  margin: 0 0.08em;
+  opacity: 0.92;
+}
+
+.event {
+  flex: 0 0 auto;
+  background: var(--forest-deep);
+  color: var(--cream);
+  text-align: center;
+  padding: 0.05in 0.14in;
+  font-family: "Cinzel", serif;
+  font-size: 11.5pt; font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 0.045in solid var(--gold);
+}
+.event .gold { color: var(--gold); }
+
+.main {
+  flex: 1 1 auto;
+  display: flex; flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.02in;
+  padding: 0.02in 0.04in 0.01in;
+  min-height: 0;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(201,162,39,0.28) 0%, rgba(201,162,39,0.08) 48%, transparent 74%),
+    var(--cream);
+  position: relative;
+}
+
+.scan-shout {
+  font-family: "Cinzel", serif;
+  font-size: 18pt; font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: var(--forest-deep);
+  padding: 0.05in 0.22in;
+  border: 0.03in solid var(--gold);
+  box-shadow: 0 0.02in 0.06in rgba(26,36,28,0.25);
+  line-height: 1;
+  position: relative;
+  z-index: 8;
+}
+
+/* STAGE: Wheel of Fortune scale */
+.stage {
+  position: relative;
+  width: 7.55in;
+  height: 7.55in;
+  flex: 0 0 auto;
+  margin: -0.06in 0 -0.04in;
+}
+
+/* Soft loot glow behind wheel */
+.glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.45in; height: 7.45in;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(232,212,140,0.62) 0%,
+    rgba(201,162,39,0.32) 40%,
+    rgba(201,162,39,0.1) 64%,
+    transparent 76%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Prize wheel behind QR */
+.wheel {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-22.5deg);
+  width: 7.05in; height: 7.05in;
+  border-radius: 50%;
+  z-index: 1;
+  background: conic-gradient(
+    from 0deg,
+    #E8D48C 0deg 45deg,
+    #4C6458 45deg 90deg,
+    #c9a227 90deg 135deg,
+    #3A4F45 135deg 180deg,
+    #E8D48C 180deg 225deg,
+    #5A7366 225deg 270deg,
+    #c9a227 270deg 315deg,
+    #3A4F45 315deg 360deg
+  );
+  /* Thick gold/chrome rings */
+  box-shadow:
+    0 0 0 0.035in #f5efd6,
+    0 0 0 0.07in #c9a227,
+    0 0 0 0.1in #8a6a1e,
+    0 0 0 0.13in #e8e4d8,
+    0 0 0 0.165in #3A4F45,
+    0 0 0 0.2in #c9a227,
+    0 0 0 0.225in #f0d878,
+    0 0.08in 0.2in rgba(26,36,28,0.35),
+    0 0 0.35in rgba(201,162,39,0.35);
+}
+
+/* Segment divider ticks */
+.wheel::before {
+  content: "";
+  position: absolute;
+  inset: 0.06in;
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      transparent 0deg 44deg,
+      rgba(255,253,248,0.7) 44deg 45deg
+    );
+  pointer-events: none;
+}
+
+/* Inner chrome ring + hub jewel */
+.wheel::after {
+  content: "";
+  position: absolute;
+  inset: 0.42in;
+  border-radius: 50%;
+  border: 0.04in solid rgba(232,212,140,0.55);
+  box-shadow:
+    inset 0 0 0 0.02in rgba(58,79,69,0.35),
+    inset 0 0 0.25in rgba(26,36,28,0.15);
+  pointer-events: none;
+}
+
+/* SVG wedge labels + loot icons layer */
+.wheel-art {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-22.5deg);
+  width: 7.05in; height: 7.05in;
+  z-index: 2;
+  pointer-events: none;
+}
+.wheel-art text {
+  font-family: "Cinzel", "Source Sans 3", serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Game-show pointer */
+.pointer {
+  position: absolute;
+  top: 0.02in;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  width: 0.46in;
+  height: 0.6in;
+  filter: drop-shadow(0 2px 3px rgba(26,36,28,0.45));
+}
+.pointer svg { display: block; width: 100%; height: 100%; }
+
+/* Gold-card art: animals stay inside the gold card graphic */
+.animal-corner {
+  position: absolute;
+  left: 0.1in;
+  bottom: 0.38in; /* above Text PRIZE backup bar */
+  width: 1.78in;
+  height: 1.78in;
+  z-index: 9;
+  pointer-events: none;
+  filter: drop-shadow(0 0.04in 0.1in rgba(26,36,28,0.4));
+}
+.animal-corner img {
+  width: 100%; height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Loot ornaments around rim */
+/* Loot ornaments around rim (print-static carnival animation) */
+.loot {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  line-height: 1;
+  text-align: center;
+  filter: drop-shadow(0 1px 2px rgba(26,36,28,0.35));
+}
+.loot-buck {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 28pt;
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(232,212,140,0.95), 0 1px 0 #3A4F45, 0 0 2px #fff;
+}
+.loot-star {
+  font-size: 15pt;
+  color: #E8D48C;
+  text-shadow: 0 0 8px rgba(201,162,39,1);
+}
+.loot-coin-svg { width: 0.38in; height: 0.38in; display: block; }
+.loot-gift-svg { width: 0.4in; height: 0.4in; display: block; }
+
+/* orbit - between peeks, outside chrome */
+.loot-n  { top: -0.02in; left: 50%; transform: translateX(-50%); }
+.loot-n2 { top: 0.18in; left: 34%; }
+.loot-n3 { top: 0.18in; right: 34%; }
+.loot-e  { top: 50%; right: -0.06in; transform: translateY(-50%); }
+.loot-e2 { top: 38%; right: 0.02in; }
+.loot-e3 { top: 62%; right: 0.02in; }
+.loot-s  { bottom: -0.02in; left: 50%; transform: translateX(-50%); }
+.loot-s2 { bottom: 0.2in; left: 34%; }
+.loot-s3 { bottom: 0.2in; right: 34%; }
+.loot-w  { top: 50%; left: -0.06in; transform: translateY(-50%); }
+.loot-w2 { top: 38%; left: 0.02in; }
+.loot-w3 { top: 62%; left: 0.02in; }
+
+/* QR on top, phone-scannable */
+.qr-frame {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.85in; height: 3.85in;
+  background: #fff;
+  border: 0.085in solid var(--forest-deep);
+  box-shadow:
+    0 0 0 0.045in var(--gold),
+    0 0 0 0.09in var(--forest-deep),
+    0 0 0 0.115in var(--gold-light),
+    0 0.06in 0.16in rgba(26,36,28,0.4);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0.18in; /* white quiet zone */
+  z-index: 6;
+}
+.qr-frame img {
+  width: 100%; height: 100%;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.guarantee {
+  font-family: "Cinzel", serif;
+  font-size: 13pt; font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  text-align: center;
+  line-height: 1.15;
+  position: relative;
+  z-index: 8;
+  margin-top: 0;
+  padding: 0 1.7in; /* clear animal corner */
+}
+
+.backup {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0.045in 0.14in 0.055in;
+  font-size: 9.5pt; font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--sage);
+  border-top: 0.028in solid rgba(74,100,88,0.28);
+}
+.backup strong { color: var(--forest-deep); font-weight: 800; }
+
+
+/* Final print composition: use the printable sheet and keep the gold card self-contained. */
+.page { border-width: 0.105in; }
+.why { padding: 0.08in 0.12in 0.075in; }
+.why .headline { font-size: 57pt; }
+.event { padding: 0.06in 0.14in; font-size: 12pt; }
+.main { gap: 0.015in; padding: 0.025in 0.03in 0.015in; }
+.scan-shout { font-size: 18pt; padding: 0.06in 0.24in 0.055in; }
+.stage { width: 7.35in; height: 7.35in; margin: -0.04in 0 -0.02in; }
+.glow { width: 7.25in; height: 7.25in; }
+.wheel, .wheel-art { width: 6.9in; height: 6.9in; }
+.qr-frame { width: 3.3in; height: 3.3in; padding: 0.16in; }
+/* Membership Gold Card inset: proper card proportions, gold frame, and one clean animal face. */
+.gold-card {
+  position: absolute;
+  top: 0.34in; left: 50%;
+  transform: translateX(-50%);
+  width: 2.68in; height: 1.69in;
+  z-index: 5;
+  overflow: hidden;
+  border: 0.07in solid var(--gold);
+  border-radius: 0.11in;
+  background: #8a6a1e;
+  box-shadow:
+    0 0 0 0.025in var(--gold-light),
+    0 0 0 0.065in var(--forest-deep),
+    0 0 0 0.092in var(--cream),
+    0 0.05in 0.12in rgba(26,36,28,0.48);
+}
+.gold-card-art { position: absolute; inset: 0; overflow: hidden; background: #8a6a1e; }
+.gold-card-art > img:first-child { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; display: block; filter: saturate(0.95) contrast(1.08); }
+.gold-card-label {
+  position: absolute; left: 0.07in; right: 0.07in; top: 0.06in;
+  padding: 0.035in 0.05in 0.04in;
+  background: rgba(58,79,69,0.96);
+  border: 0.018in solid var(--gold-light);
+  color: var(--gold-light);
+  font-family: "Cinzel", serif; font-weight: 900; font-size: 11pt;
+  letter-spacing: 0.12em; text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+.guarantee {
+  width: 100%;
+  margin: 0.01in 0 0;
+  padding: 0.10in 0.16in 0.095in;
+  background: var(--forest-deep);
+  border: 0.035in solid var(--gold);
+  box-shadow: 0 0.025in 0.06in rgba(26,36,28,0.3);
+  color: var(--cream);
+  font-family: "Cinzel", serif;
+  font-size: 17pt;
+  font-weight: 900;
+  letter-spacing: 0.045em;
+  text-shadow: 0 0.012in 0 rgba(0,0,0,0.45);
+  line-height: 1.05;
+  z-index: 8;
+}
+.backup { padding: 0.065in 0.14in 0.07in; font-size: 9.4pt; font-weight: 700; color: var(--forest-deep); background: var(--cream); border-top: 0.028in solid var(--gold); }
+.backup strong { color: var(--forest-deep); font-weight: 900; }
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="why">
+    <div class="headline">Spin <span class="and">and</span> Win</div>
+  </div>
+
+  <div class="event">
+    Stead Spin <span class="gold">·</span> Critters on Call
+  </div>
+
+  <div class="main">
+    <div class="scan-shout">Scan to Spin</div>
+
+    <div class="stage" aria-label="Prize wheel, scan the QR code to spin">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wheel" aria-hidden="true"></div>
+
+      <!-- Wedge labels + rim loot sparkles (print-static animation) -->
+      <svg class="wheel-art" viewBox="0 0 655 655" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <path id="arc0" d="M 327.5,327.5 m 0,-268 a 268,268 0 0,1 189.5,78.4" fill="none"/>
+          <path id="arc1" d="M 327.5,327.5 m 189.5,-78.4 a 268,268 0 0,1 0,156.8" fill="none"/>
+          <path id="arc2" d="M 327.5,327.5 m 189.5,78.4 a 268,268 0 0,1 -189.5,78.4" fill="none"/>
+          <path id="arc3" d="M 327.5,327.5 m 0,268 a 268,268 0 0,1 -189.5,-78.4" fill="none"/>
+          <path id="arc4" d="M 327.5,327.5 m -189.5,78.4 a 268,268 0 0,1 0,-156.8" fill="none"/>
+          <path id="arc5" d="M 327.5,327.5 m -189.5,-78.4 a 268,268 0 0,1 189.5,-78.4" fill="none"/>
+        </defs>
+                <!-- Wedge mid angles at 22.5 + i*45; place text at r≈250 from center -->
+
+        <!-- gold/cream wedges: dark ink; forest wedges: cream ink -->
+
+        <g font-size="18" text-anchor="middle" font-family="Cinzel, serif" font-weight="800">
+          <text transform="rotate(22.5,327.5,327.5) translate(327.5,62)" fill="#1a241c">
+            <tspan x="0" dy="0">GOLD</tspan>
+            <tspan x="0" dy="18">CARD</tspan>
+          </text>
+          <text transform="rotate(67.5,327.5,327.5) translate(327.5,62)" fill="#FFFdf8">
+            <tspan x="0" dy="0">DOUBLE</tspan>
+            <tspan x="0" dy="18">GOLD</tspan>
+          </text>
+          <text transform="rotate(112.5,327.5,327.5) translate(327.5,62)" fill="#1a241c">
+            <tspan x="0" dy="0">$50</tspan>
+            <tspan x="0" dy="18">CARLOAD</tspan>
+          </text>
+          <text transform="rotate(157.5,327.5,327.5) translate(327.5,66) rotate(180)" fill="#FFFdf8">
+            <tspan x="0" dy="0">$25</tspan>
+            <tspan x="0" dy="18">STEM</tspan>
+          </text>
+          <text transform="rotate(202.5,327.5,327.5) translate(327.5,66) rotate(180)" fill="#1a241c">
+            <tspan x="0" dy="0">$25</tspan>
+            <tspan x="0" dy="18">TOUR</tspan>
+          </text>
+          <text transform="rotate(247.5,327.5,327.5) translate(327.5,66) rotate(180)" fill="#FFFdf8">
+            <tspan x="0" dy="0">SPECIAL</tspan>
+            <tspan x="0" dy="18">PERK</tspan>
+          </text>
+          <text transform="rotate(292.5,327.5,327.5) translate(327.5,62)" fill="#1a241c">
+            <tspan x="0" dy="0">$10</tspan>
+            <tspan x="0" dy="18">FARM</tspan>
+          </text>
+          <text transform="rotate(337.5,327.5,327.5) translate(327.5,62)" fill="#FFFdf8">
+            <tspan x="0" dy="0">$10</tspan>
+            <tspan x="0" dy="18">THRIFT</tspan>
+          </text>
+        </g>
+        <!-- Rim studs / sparkle dots -->
+        <g fill="#E8D48C" stroke="#8a6a1e" stroke-width="1">
+          <circle cx="327.5" cy="9.5" r="4.2"/>
+          <circle cx="409.8" cy="20.3" r="4.2"/>
+          <circle cx="486.5" cy="52.1" r="4.2"/>
+          <circle cx="552.4" cy="102.6" r="4.2"/>
+          <circle cx="602.9" cy="168.5" r="4.2"/>
+          <circle cx="634.7" cy="245.2" r="4.2"/>
+          <circle cx="645.5" cy="327.5" r="4.2"/>
+          <circle cx="634.7" cy="409.8" r="4.2"/>
+          <circle cx="602.9" cy="486.5" r="4.2"/>
+          <circle cx="552.4" cy="552.4" r="4.2"/>
+          <circle cx="486.5" cy="602.9" r="4.2"/>
+          <circle cx="409.8" cy="634.7" r="4.2"/>
+          <circle cx="327.5" cy="645.5" r="4.2"/>
+          <circle cx="245.2" cy="634.7" r="4.2"/>
+          <circle cx="168.5" cy="602.9" r="4.2"/>
+          <circle cx="102.6" cy="552.4" r="4.2"/>
+          <circle cx="52.1" cy="486.5" r="4.2"/>
+          <circle cx="20.3" cy="409.8" r="4.2"/>
+          <circle cx="9.5" cy="327.5" r="4.2"/>
+          <circle cx="20.3" cy="245.2" r="4.2"/>
+          <circle cx="52.1" cy="168.5" r="4.2"/>
+          <circle cx="102.6" cy="102.6" r="4.2"/>
+          <circle cx="168.5" cy="52.1" r="4.2"/>
+          <circle cx="245.2" cy="20.3" r="4.2"/>
+        </g>
+        <!-- tiny $ glints on rim between studs -->
+        <g font-family="Playfair Display, serif" font-size="13" font-weight="900" fill="#c9a227" text-anchor="middle">
+          <text x="380.5" y="27.1" dy="4">$</text>
+          <text x="577.3" y="152.6" dy="4">✦</text>
+          <text x="627.9" y="380.5" dy="4">$</text>
+          <text x="502.4" y="577.3" dy="4">✦</text>
+          <text x="274.5" y="627.9" dy="4">$</text>
+          <text x="77.7" y="502.4" dy="4">✦</text>
+          <text x="27.1" y="274.5" dy="4">$</text>
+          <text x="152.6" y="77.7" dy="4">✦</text>
+        </g>
+      </svg>
+
+      <div class="pointer" aria-hidden="true">
+        <svg viewBox="0 0 42 55" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="21,55 3,8 39,8" fill="#3A4F45" stroke="#c9a227" stroke-width="2.5"/>
+          <polygon points="21,48 10,14 32,14" fill="#c9a227"/>
+          <circle cx="21" cy="12" r="7" fill="#E8D48C" stroke="#3A4F45" stroke-width="2"/>
+          <circle cx="21" cy="12" r="3.2" fill="#3A4F45"/>
+        </svg>
+      </div>
+
+      <!-- Loot vibe around rim -->
+      <div class="loot loot-n loot-buck" aria-hidden="true">$</div>
+      <div class="loot loot-n2 loot-star" aria-hidden="true">✦</div>
+      <div class="loot loot-n3 loot-star" aria-hidden="true">✦</div>
+      <div class="loot loot-e" aria-hidden="true"><svg class="loot-gift-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="6" y="16" width="28" height="20" rx="2" fill="#4C6458" stroke="#c9a227" stroke-width="1.5"/>
+  <rect x="4" y="12" width="32" height="7" rx="1.5" fill="#c9a227" stroke="#3A4F45" stroke-width="1"/>
+  <rect x="17" y="12" width="6" height="24" fill="#E8D48C"/>
+  <path d="M20 12 C14 4, 8 8, 14 12" fill="none" stroke="#E8D48C" stroke-width="2"/>
+  <path d="M20 12 C26 4, 32 8, 26 12" fill="none" stroke="#E8D48C" stroke-width="2"/>
+</svg></div>
+      <div class="loot loot-e2" aria-hidden="true"><svg class="loot-coin-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="cg1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f5efd6"/><stop offset="45%" stop-color="#c9a227"/><stop offset="100%" stop-color="#8a6a1e"/>
+  </linearGradient></defs>
+  <circle cx="20" cy="20" r="18" fill="url(#cg1)" stroke="#3A4F45" stroke-width="2"/>
+  <circle cx="20" cy="20" r="13" fill="none" stroke="#E8D48C" stroke-width="1.5"/>
+  <text x="20" y="26" text-anchor="middle" font-family="Playfair Display,serif" font-size="18" font-weight="900" fill="#3A4F45">$</text>
+</svg></div>
+      <div class="loot loot-e3 loot-buck" aria-hidden="true">$</div>
+      <div class="loot loot-s" aria-hidden="true"><svg class="loot-gift-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="6" y="16" width="28" height="20" rx="2" fill="#4C6458" stroke="#c9a227" stroke-width="1.5"/>
+  <rect x="4" y="12" width="32" height="7" rx="1.5" fill="#c9a227" stroke="#3A4F45" stroke-width="1"/>
+  <rect x="17" y="12" width="6" height="24" fill="#E8D48C"/>
+  <path d="M20 12 C14 4, 8 8, 14 12" fill="none" stroke="#E8D48C" stroke-width="2"/>
+  <path d="M20 12 C26 4, 32 8, 26 12" fill="none" stroke="#E8D48C" stroke-width="2"/>
+</svg></div>
+      <div class="loot loot-s2 loot-star" aria-hidden="true">✦</div>
+      <div class="loot loot-s3" aria-hidden="true"><svg class="loot-coin-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="cg2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f5efd6"/><stop offset="45%" stop-color="#c9a227"/><stop offset="100%" stop-color="#8a6a1e"/>
+  </linearGradient></defs>
+  <circle cx="20" cy="20" r="18" fill="url(#cg2)" stroke="#3A4F45" stroke-width="2"/>
+  <circle cx="20" cy="20" r="13" fill="none" stroke="#E8D48C" stroke-width="1.5"/>
+  <text x="20" y="26" text-anchor="middle" font-family="Playfair Display,serif" font-size="18" font-weight="900" fill="#3A4F45">$</text>
+</svg></div>
+      <div class="loot loot-w" aria-hidden="true"><svg class="loot-gift-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="6" y="16" width="28" height="20" rx="2" fill="#4C6458" stroke="#c9a227" stroke-width="1.5"/>
+  <rect x="4" y="12" width="32" height="7" rx="1.5" fill="#c9a227" stroke="#3A4F45" stroke-width="1"/>
+  <rect x="17" y="12" width="6" height="24" fill="#E8D48C"/>
+  <path d="M20 12 C14 4, 8 8, 14 12" fill="none" stroke="#E8D48C" stroke-width="2"/>
+  <path d="M20 12 C26 4, 32 8, 26 12" fill="none" stroke="#E8D48C" stroke-width="2"/>
+</svg></div>
+      <div class="loot loot-w2 loot-buck" aria-hidden="true">$</div>
+      <div class="loot loot-w3" aria-hidden="true"><svg class="loot-coin-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="cg3" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f5efd6"/><stop offset="45%" stop-color="#c9a227"/><stop offset="100%" stop-color="#8a6a1e"/>
+  </linearGradient></defs>
+  <circle cx="20" cy="20" r="18" fill="url(#cg3)" stroke="#3A4F45" stroke-width="2"/>
+  <circle cx="20" cy="20" r="13" fill="none" stroke="#E8D48C" stroke-width="1.5"/>
+  <text x="20" y="26" text-anchor="middle" font-family="Playfair Display,serif" font-size="18" font-weight="900" fill="#3A4F45">$</text>
+</svg></div>
+
+      <div class="gold-card" aria-label="Gold Card featuring Critters on Call animals">
+        <div class="gold-card-art">
+          <img src="assets/gold-card-clean.jpg" alt="Critters on Call gold card">
+                  </div>
+        <div class="gold-card-label">GOLD CARD</div>
+      </div>
+
+      <div class="qr-frame">
+        <img src="assets/qr-stead-spin.png" alt="QR code: scan to spin">
+      </div>
+    </div>
+
+    <div class="guarantee">Every spin is a winner · Double Gold is over $200 in free gifts</div>
+  </div>
+
+  <div class="backup">
+    Grown-ups scan, kids watch, claim your prize · or text <strong>WHEEL</strong> to 914-263-1311 · Book us at <strong>sheehanhomestead.com/services</strong>
+  </div>
+</div>
+</body>
+</html>

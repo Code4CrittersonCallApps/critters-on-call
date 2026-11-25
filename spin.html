@@ -1,195 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#c9a227" />
-<meta name="description" content="How Sweet It Is — Stead Spin. Free spin, farm & thrift gifts opposite each other, poker chip, Golden Goatee, early app access. Claim in person at Sheehan Homestead." />
-<meta name="robots" content="noindex, nofollow" />
-<title>How Sweet It Is · Stead Spin · Critters on Call</title>
-<link rel="icon" type="image/png" href="assets/pyrenees-logo.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css" />
-<style>
-  .wheel-upsell {
-    border-radius: 0.85rem;
-    border: 1px dashed rgba(201,162,39,0.45);
-    background: rgba(201,162,39,0.08);
-    padding: 0.75rem 0.9rem;
-    text-align: center;
-  }
-  .wheel-upsell a {
-    color: var(--gold);
-    font-weight: 600;
-  }
-
-  .message-doors {
-    border-radius: 0.85rem;
-    border: 1px solid rgba(201,162,39,0.55);
-    background: rgba(201,162,39,0.1);
-    padding: 0.9rem 0.85rem 1rem;
-  }
-  .message-doors-title {
-    font-family: var(--display);
-    font-size: 1.1rem;
-    color: var(--gold);
-    text-align: center;
-    margin: 0 0 0.35rem;
-  }
-  .message-doors-lede {
-    font-size: 0.8rem;
-    color: var(--muted);
-    text-align: center;
-    margin: 0 0 0.75rem;
-    line-height: 1.4;
-  }
-  .message-doors-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .message-door {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0.75rem;
-    border: 1px solid rgba(201,162,39,0.45);
-    background: rgba(0,0,0,0.22);
-    padding: 0.7rem 0.85rem;
-    color: var(--fg, #f5f0e6);
-  }
-  .message-door:hover { border-color: var(--gold); }
-  .message-door-emoji { font-size: 1.35rem; display: block; margin-bottom: 0.15rem; }
-  .message-door-label { font-weight: 700; font-size: 0.95rem; color: var(--gold); display: block; }
-  .message-door-desc { font-size: 0.75rem; color: var(--muted); display: block; margin-top: 0.15rem; line-height: 1.35; }
-  .message-door-alt {
-    display: block;
-    text-align: center;
-    font-size: 0.72rem;
-    color: var(--gold);
-    margin-top: 0.35rem;
-    font-weight: 600;
-  }
-  #spin-btn.is-earn-spent {
-    opacity: 0.55;
-    cursor: not-allowed;
-  }
-
-  .earn-banner {
-    border-radius: 0.85rem;
-    border: 1px solid rgba(201,162,39,0.55);
-    background: rgba(201,162,39,0.14);
-    color: var(--gold);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0.65rem 0.85rem;
-    line-height: 1.4;
-  }
-</style>
+<meta charset="utf-8">
+<title>Stead Spin · Critters on Call</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0;url=https://code4crittersoncallapps.github.io/critters-on-call/stead-spin/">
+<link rel="canonical" href="https://code4crittersoncallapps.github.io/critters-on-call/stead-spin/">
+<script>
+(function () {
+  var dest = new URL('https://code4crittersoncallapps.github.io/critters-on-call/stead-spin/');
+  try {
+    var cur = new URL(window.location.href);
+    cur.searchParams.forEach(function (v, k) {
+      if (!dest.searchParams.has(k)) dest.searchParams.set(k, v);
+    });
+    if (cur.hash) dest.hash = cur.hash;
+  } catch (e) {}
+  location.replace(dest.pathname + dest.search + dest.hash);
+})();
+</script>
 </head>
 <body>
-<div class="app">
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a class="brand" href="index.html">
-        <img class="brand-logo" src="assets/pyrenees-logo.png" alt="" width="36" height="36" />
-        <span>
-          <span class="brand-title">Critters on Call</span>
-          <span class="brand-sub">Sheehan Homestead</span>
-        </span>
-      </a>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="stack" style="gap:1.25rem">
-      <div>
-        <h1 style="font-size:1.5rem">How Sweet It Is</h1>
-        <p class="text-sm muted" style="margin-top:0.25rem">Eight slices. Soft prizes are placeholders — <strong>prizes TBD</strong>. Play earns one spin/day. Win, then tap <strong>Claim your prize</strong>.</p>
-        <p class="text-xs muted" style="margin-top:0.35rem"><a href="wheel.html" style="color:var(--gold);font-weight:600">Open standalone Stead Spin →</a></p>
-      </div>
-
-      <div class="wheel-wrap">
-        <div class="wheel-pointer" aria-hidden="true">▼</div>
-        <div class="prize-wheel" id="prize-wheel" style="transform:rotate(0deg)">
-          <span class="wheel-hub">
-            <img src="assets/pyrenees-logo.png" alt="" width="64" height="64" />
-          </span>
-        </div>
-      </div>
-
-            <div class="earn-banner" id="earn-banner" hidden role="status"></div>
-
-      <button class="btn btn-primary btn-block" type="button" id="spin-btn">Spin</button>
-
-      <div class="win-card" id="win-card" hidden>
-        <p class="tracker-kicker">You won</p>
-        <h2 class="font-display" id="win-label" style="font-size:1.25rem;margin-top:0.35rem"></h2>
-        <p class="text-sm" id="win-value" style="margin-top:0.25rem;color:var(--gold);font-weight:600"></p>
-        <p class="text-sm muted" id="win-note" style="margin-top:0.45rem;line-height:1.45" hidden></p>
-        <a class="btn btn-primary btn-block" id="win-services" href="https://sheehanhomestead.com/booking-help" target="_blank" rel="noopener" hidden style="margin-top:0.75rem">Claim your prize</a>
-        <a class="btn btn-outline btn-block" id="win-book" href="https://sheehanhomestead.com/booking-help" target="_blank" rel="noopener" hidden style="margin-top:0.5rem">Book farm tour</a>
-        <a class="btn btn-primary btn-block" id="win-gold" href="gold.html" hidden style="margin-top:0.5rem">Claim Gold Card</a>
-      </div>
-
-      <div class="message-doors" id="message-doors" hidden>
-        <p class="message-doors-title">Three little doors 🚪</p>
-        <p class="message-doors-lede">Claim your prize on the booking page, or wave on Facebook.</p>
-        <div class="message-doors-grid">
-          <a class="message-door" id="door-book" href="https://sheehanhomestead.com/booking-help" target="_blank" rel="noopener">
-            <span class="message-door-emoji" aria-hidden="true">📅</span>
-            <span class="message-door-label">Claim your prize</span>
-            <span class="message-door-desc">Opens the booking page so we can lock in your prize.</span>
-          </a>
-          <a class="message-door-alt" id="door-book-alt" href="https://Code4CrittersonCallApps.github.io/critters-on-call/book.html?service=mobile" target="_blank" rel="noopener">or mobile book link →</a>
-          <a class="message-door" id="door-fb" href="https://www.facebook.com/profile.php?id=61556795506312" target="_blank" rel="noopener">
-            <span class="message-door-emoji" aria-hidden="true">💛</span>
-            <span class="message-door-label">Wave on Facebook</span>
-            <span class="message-door-desc">Say hi on the homestead page — we love a good comment.</span>
-          </a>
-        </div>
-      </div>
-
-
-      <p class="text-xs muted" id="prize-tbd-note" style="text-align:center;margin:0">Prize menu = soft placeholders · <strong>prize TBD</strong> · claim on the booking page.</p>
-      <ul class="prize-list" id="prize-list"></ul>
-
-      <p class="text-xs muted" style="text-align:center;display:flex;align-items:center;justify-content:center;gap:0.35rem">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--gold)" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
-        Claim prizes in person at the homestead.
-      </p>
-    </div>
-  </main>
-
-  <nav class="bottom-nav" aria-label="Primary">
-    <div class="bottom-nav-inner">
-      <a class="nav-link" href="index.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-        Home
-      </a>
-      <a class="nav-link" href="book.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
-        Book
-      </a>
-      <a class="nav-link" href="track.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
-        Track
-      </a>
-      <a class="nav-link is-active" href="spin.html" aria-current="page">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
-        Spin
-      </a>
-      <a class="nav-link" href="gold.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M2 9h20"/></svg>
-        Gold
-      </a>
-    </div>
-  </nav>
-</div>
-<script src="js/app.js"></script>
-<script src="js/spin.js"></script>
+<p><a href="https://code4crittersoncallapps.github.io/critters-on-call/stead-spin/">Continue to Stead Spin</a></p>
 </body>
 </html>
