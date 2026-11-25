@@ -7,12 +7,11 @@
 <meta name="description" content="Stead Spin is free to play this Black Friday, Nov 27–Dec 1. Win farm gifts, a $25 farm tour, a STEM Kit, or a Critter Gold Membership. Across Metro Jax.">
 <link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
 <style>
-
 @font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
 @font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
 @page{size:8.5in 11in;margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--green:#4e6558;--green-deep:#3A4F45;--gold:#c9a227;--gold-lt:#E8D48C;--cream:#F3EEE4;--ink:#1f2a24}
+:root{--green:#4e6558;--green-deep:#3A4F45;--gold:#c9a227;--gold-lt:#E8D48C;--cream:#F3EEE4;--ink:#1f2a24;--copper:#B57A3C;--sage:#6A8A72}
 html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column;background:var(--cream);margin:0 auto}
 @media print{html,body{background:var(--cream);width:8.5in;height:11in}.page{margin:0}}
@@ -24,7 +23,8 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .brand .side+.side{border-left:1px solid #e2dacb}
 .brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16pt;line-height:1.1;color:var(--green)}
 .rule{display:flex;height:6px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
-.body{flex:1;padding:.18in .52in .14in;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:.15in;min-height:0}
+
+.body{flex:1;padding:.16in .50in .12in;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:.14in;min-height:0}
 .hero{display:flex;width:100%;align-items:center;gap:.20in}
 .hero .txt{flex:1;display:flex;align-items:center;min-width:0}
 .hero .lockup{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
@@ -32,38 +32,49 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .kicker{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:14pt;color:var(--green);line-height:1.15}
 .hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:26pt;line-height:1.05;color:var(--green);letter-spacing:-0.02em}
 .hero .photo{flex:0 0 3.05in;width:3.05in}
-.hero .photo img{width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.22);display:block;object-fit:cover;max-height:2.45in}
+.hero .photo img{width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.22);display:block;object-fit:cover;max-height:2.20in}
+
 .badge{background:#1f2a24;color:var(--gold-lt);border:2.5px solid var(--gold);border-radius:16px;padding:11px 20px;text-align:center;width:100%}
 .badge strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:18pt;letter-spacing:.03em;line-height:1.1;color:var(--gold-lt)}
 .badge span{display:block;font-size:11pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-top:3px}
-.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.11in;width:100%;align-items:stretch}
-.tiles.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.tile{background:#fff;border:1.5px solid #e2dacb;border-top:6px solid var(--gold);border-radius:14px;padding:12px 8px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px}
-.tile svg.ic{width:52px;height:52px;flex:0 0 auto;stroke:var(--green);fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
-.tile h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:13pt;line-height:1.12;color:var(--green);max-width:100%}
-.tile .sub{font-family:"Source Sans 3",sans-serif;font-size:9.5pt;font-weight:600;line-height:1.2;color:var(--green);margin:0;padding:0;list-style:none;width:100%}
-.tile .cta{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:3px;padding-top:4px}
-.tile .cta img{width:.58in;height:.58in;display:block;background:#fff;border-radius:5px;padding:2px;border:1px solid #e2dacb}
-.tile .cta span{font-size:6.6pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);line-height:1.15;text-align:center;max-width:1.15in}
-.tile .cta,.upsell .mini{text-decoration:none;color:var(--green)}
-.tile .cta span,.upsell .mini span{color:var(--green);text-decoration:none;border:0}
-.upsell{display:flex;align-items:center;justify-content:space-between;gap:.14in;width:100%;background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:10px 14px}
+
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.12in;width:100%;align-items:stretch}
+.tile{background:#fff;border:1.5px solid #e2dacb;border-top:7px solid var(--gold);border-radius:16px;padding:16px 10px 14px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;min-height:3.05in}
+.tile.t-gifts{border-top-color:var(--gold);background:#FFFBF2}
+.tile.t-tour{border-top-color:var(--green);background:#F4F7F4}
+.tile.t-stem{border-top-color:var(--copper);background:#FBF6F0}
+.tile.t-gold{border-top-color:var(--gold);background:#FFF8E6}
+.well{width:92px;height:92px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-top:2px;box-shadow:0 4px 10px rgba(31,42,36,.12)}
+.tile.t-gifts .well{background:var(--gold)}
+.tile.t-tour .well{background:var(--green)}
+.tile.t-stem .well{background:var(--copper)}
+.tile.t-gold .well{background:var(--green-deep);box-shadow:0 0 0 3px var(--gold),0 4px 10px rgba(31,42,36,.16)}
+.well svg{width:52px;height:52px;display:block}
+.tile .val{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:26pt;line-height:.95;letter-spacing:-0.03em;color:var(--green);margin-top:4px}
+.tile.t-gifts .val{color:#8A6E12}
+.tile.t-tour .val{color:var(--green-deep)}
+.tile.t-stem .val{color:#8A5524}
+.tile.t-gold .val{color:#8A6E12}
+.tile h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14pt;line-height:1.1;color:var(--green);max-width:100%}
+.tile .sub{font-family:"Source Sans 3",sans-serif;font-size:9.75pt;font-weight:600;line-height:1.22;color:var(--green);margin:0;width:100%}
+
+.upsell{display:flex;align-items:center;gap:.16in;width:100%;background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:10px 16px 11px}
 .upsell .copy{flex:1;min-width:0}
-.upsell .label{font-size:8.8pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
-.upsell h3{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14.5pt;color:var(--green);line-height:1.15}
-.upsell p{font-size:10.5pt;font-weight:600;color:var(--green);margin-top:2px;line-height:1.25}
-.upsell .mini{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none}
-.upsell .mini img{width:.70in;height:.70in;display:block;background:#fff;border-radius:6px;padding:3px;border:1px solid #e2dacb}
-.upsell .mini span{font-size:6.8pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);line-height:1.15;text-align:center}
-.soonrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:5px}
+.upsell .topline{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:2px}
+.upsell h3{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:15pt;color:var(--green);line-height:1.1}
+.bogotag{display:inline-block;background:var(--gold);color:#1f2a24;font-weight:800;font-size:10pt;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:4px 10px 3px;line-height:1}
+.upsell p{font-size:10.5pt;font-weight:600;color:var(--green);line-height:1.3}
+.upsell p b{font-weight:800}
+.soonrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px}
 .live{display:inline-block;background:var(--green);color:#fff;font-size:8pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 8px 3px;line-height:1}
 .soon{display:inline-block;background:var(--gold);color:var(--green-deep);font-size:8pt;font-weight:800;letter-spacing:.10em;text-transform:uppercase;border-radius:999px;padding:4px 8px 3px;line-height:1}
 .gp{display:inline-flex;align-items:center;gap:5px;background:#000;color:#fff;border-radius:5px;padding:3px 7px 3px 5px}
 .gp .tri{width:12px;height:14px;flex:0 0 auto;display:block}
 .gp b{font-size:8pt;font-weight:700;font-family:Arial,Helvetica,sans-serif;white-space:nowrap;color:#fff}
-.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.18in .52in;display:flex;align-items:center;justify-content:space-between;gap:.22in}
+
+.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.18in .50in;display:flex;align-items:center;justify-content:space-between;gap:.22in}
 .ft .left{display:flex;align-items:center;gap:.14in;flex:0 0 auto}
-.ft .qr{background:#fff;border-radius:12px;padding:8px;flex:0 0 auto;display:flex;align-items:center;line-height:0}
+.ft .qr{background:#fff;border-radius:12px;padding:8px;flex:0 0 auto;display:flex;align-items:center;line-height:0;text-decoration:none}
 .ft .qr img{width:1.3in;height:1.3in;display:block}
 .ft .scan{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:18pt;line-height:1.1;color:var(--gold-lt);white-space:nowrap}
 .ft .right{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:8px;flex:0 0 auto}
@@ -75,11 +86,12 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .gbadge .gicon{width:20px;height:20px;flex:0 0 auto;display:block}
 .gbadge .gstars{color:#d49d17;letter-spacing:1px;font-size:14pt;line-height:1}
 .gbadge .gcaption{font-size:10pt;font-weight:700;color:#1f2a24;line-height:1.1;letter-spacing:.02em;white-space:nowrap}
+
 @media screen and (max-width:860px){
   html,body{background:var(--cream)}
   .page{width:100%;height:auto;margin:0}
   .hero,.ft{flex-direction:column}
-  .tiles,.tiles.three{grid-template-columns:1fr 1fr}
+  .tiles{grid-template-columns:1fr 1fr}
   .hero h1{font-size:24pt}
   .hero .txt{justify-content:center}
   .hero .lockup{align-items:center;text-align:center}
@@ -89,7 +101,6 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
   .ft .right{align-items:flex-start}
   .ft .ph,.metro{text-align:left}
 }
-
 </style>
 </head>
 <body>
@@ -118,68 +129,76 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
     </div>
 
     <div class="tiles">
-      <div class="tile">
-        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M5 11h14"/><path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.2 2.8 2.8 0 0 0 9.2 7H4v14h16V7Z"/></svg>
-        <h2>$10–$50 gifts</h2>
-        <ul class="sub">
-          <li>Farm gifts</li>
-          <li>Thrift gifts</li>
-          <li>Petting-zoo tickets</li>
-        </ul>
-                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
-          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
-          <span>Scan to join<br>Gold Card Membership</span>
-        </a>
+      <div class="tile t-gifts">
+        <div class="well" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.05 2.8 2.8 0 0 0 9.2 7H4v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7Z"/>
+            <path d="M12 7v14M4 11h16"/>
+          </svg>
+        </div>
+        <div class="val">$10–$50</div>
+        <h2>Gifts</h2>
+        <p class="sub">Farm · Thrift<br>Petting-zoo tickets</p>
       </div>
-      <div class="tile">
-        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/><path d="M12 7v10"/></svg>
-        <h2>$25 farm tour</h2>
-        <p class="sub">A tour at the homestead in Callahan</p>
-                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
-          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
-          <span>Scan to join<br>Gold Card Membership</span>
-        </a>
+      <div class="tile t-tour">
+        <div class="well" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20V11l9-7 9 7v9"/>
+            <path d="M9 20v-6h6v6"/>
+            <path d="M3 20h18"/>
+            <path d="M16.5 8.2V5.5h2.3"/>
+          </svg>
+        </div>
+        <div class="val">$25</div>
+        <h2>Farm tour</h2>
+        <p class="sub">At the homestead<br>in Callahan</p>
       </div>
-      <div class="tile">
-        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
-        <h2>STEM Kit</h2>
-        <p class="sub">A take-home STEM on Call activity kit</p>
-                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
-          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
-          <span>Scan to join<br>Gold Card Membership</span>
-        </a>
+      <div class="tile t-stem">
+        <div class="well" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3v6L5.2 16.4A3.2 3.2 0 0 0 8 21h8a3.2 3.2 0 0 0 2.8-4.6L15 9V3"/>
+            <path d="M8 3h8"/>
+            <path d="M8.5 13h7"/>
+          </svg>
+        </div>
+        <div class="val">STEM</div>
+        <h2>Activity kit</h2>
+        <p class="sub">A take-home<br>STEM on Call kit</p>
       </div>
-      <div class="tile">
-        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="8" cy="12.5" r="2"/><path d="M13 11h6M13 14h4"/></svg>
+      <div class="tile t-gold">
+        <div class="well" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8D48C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="6" width="19" height="12.5" rx="2"/>
+            <circle cx="8.2" cy="12.3" r="2.1" fill="#E8D48C" stroke="none"/>
+            <path d="M13 10.6h6M13 13.8h4.2"/>
+          </svg>
+        </div>
+        <div class="val">GOLD</div>
         <h2>Gold card</h2>
-        <p class="sub">A Critter Gold Membership</p>
-                <a class="cta" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
-          <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
-          <span>Scan to join<br>Gold Card Membership</span>
-        </a>
+        <p class="sub">A Critter Gold<br>Membership</p>
       </div>
     </div>
 
     <div class="upsell">
       <div class="copy">
-        <div class="label">Want more than a prize?</div>
-        <h3>Critter Gold Membership</h3>
-        <p>Everything in Gold, times two. One for you, one to gift. Pay $49.99 once. Includes ~40% off camps, mobile petting zoos, tutoring &amp; homeschool support.</p>
-                <div class="soonrow">
+        <div class="topline">
+          <h3>Critter Gold Membership</h3>
+          <span class="bogotag">BOGO</span>
+        </div>
+        <p><b>Pay $49.99 once.</b> One for you · one to gift. ~40% off camps, mobile petting zoos, tutoring &amp; homeschool support.</p>
+        <div class="soonrow">
           <span class="live">Prototype live now</span>
           <span class="soon">Coming soon</span>
-          <span class="gp" aria-label="Coming soon on Google Play">            <svg class="tri" viewBox="0 0 18 20" aria-hidden="true">
+          <span class="gp" aria-label="Coming soon on Google Play">
+            <svg class="tri" viewBox="0 0 18 20" aria-hidden="true">
               <path fill="#EA4335" d="M.7 1.1 10.2 10 .7 18.9A1.6 1.6 0 0 1 0 17.6V2.4C0 1.6.3 1.2.7 1.1Z"/>
               <path fill="#FBBC04" d="M13.2 7.1 10.2 10l3 2.9 3.9-2.2c.8-.5.8-1.3 0-1.8L13.2 7.1Z"/>
               <path fill="#4285F4" d="M.7 18.9 10.2 10l3 2.9-12.5 7.2c-.5.3-1 0-1-.6v-.6Z"/>
               <path fill="#34A853" d="M13.2 12.9 10.2 10 .7 1.1c.10.20.0.5 1-.2L13.2 7.1 17.1 9.3c.8.5.8 1.3 0 1.8l-3.9 1.8Z"/>
-            </svg><b>Google Play</b></span>
+            </svg><b>Google Play</b>
+          </span>
         </div>
       </div>
-      <a class="mini" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener">
-        <img src="assets/gold-poster/qr-gold-home.png" alt="QR to join Gold Card Membership at sheehanhomestead.com/home">
-        <span>Scan to join<br>Gold Card Membership</span>
-      </a>
     </div>
 
   </div>
@@ -191,7 +210,7 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
     <div class="right">
       <div class="ph"><a href="tel:9142631311">914-263-1311</a></div>
       <div class="metro">Across Metro Jax</div>
-            <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
+      <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
         <div class="grow">
           <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
