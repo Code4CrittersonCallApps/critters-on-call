@@ -536,9 +536,9 @@ def build_index():
           <h3>Critter Gold Membership · Buy One, Gift One</h3>
           <p>Black Friday offer: buy Gold at $49.99 and gift a second membership free, Nov 27 to Dec 1, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off. Your price $49.99.</p>
           <div class="links">
-            <a class="btn btn-primary" href="black-friday-gold.html?v=1125n">Open Flyer</a>
-            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125n">Direct PDF</a>
-            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125n">Facebook PNG</a>
+            <a class="btn btn-primary" href="black-friday-gold.html?v=1125o">Open Flyer</a>
+            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125o">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125o">Facebook PNG</a>
           </div>
         </div>"""
 
