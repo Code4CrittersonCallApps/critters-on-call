@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STEM Kit CTA Insert · 2-Up Half-Letter · STEM on Call · Critters on Call</title>
+<meta name="description" content="Printable 2-up half-letter insert for STEM on Call kits. Unlock Critter Gold Membership perks, book tutoring, gift Gold, play learning games, sponsor or book an event.">
+<link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
+<style>
+@font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#4e6558;
+  --green-deep:#3A4F45;
+  --gold:#c9a227;
+  --gold-lt:#E8D48C;
+  --cream:#F3EEE4;
+  --ink:#1f2a24;
+  --muted:#47564d;
+  --line:#e2dacb;
+}
+html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{width:8.5in;height:11in;margin:0 auto;background:var(--cream);display:flex;flex-direction:column;overflow:hidden;position:relative}
+@media print{html,body{background:var(--cream);width:8.5in;height:11in}.sheet{margin:0}}
+
+.card{
+  width:8.5in;
+  height:5.5in;
+  display:flex;
+  flex-direction:column;
+  background:var(--cream);
+  overflow:hidden;
+  position:relative;
+}
+
+.cutline{
+  position:absolute;
+  top:5.5in;
+  left:0;
+  right:0;
+  height:0;
+  border-top:1.25px dashed rgba(78,101,88,.48);
+  z-index:10;
+  pointer-events:none;
+}
+.cutline span{
+  position:absolute;
+  right:.35in;
+  top:-8px;
+  background:var(--cream);
+  color:rgba(78,101,88,.72);
+  font-size:6.8pt;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:0 6px;
+}
+
+/* Dual logo bar */
+.brand{display:flex;align-items:stretch;background:var(--cream);flex:0 0 auto}
+.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;padding:.08in .18in}
+.brand .side+.side{border-left:1px solid var(--line)}
+.lg{display:inline-block;width:30px;height:30px;border-radius:50%;background-size:cover;background-position:center;flex:0 0 auto}
+.lg-sh{background-image:url("assets/gold-poster/sh.png")}
+.lg-coc{background-image:url("assets/gold-poster/coc.png");box-shadow:0 0 0 2px var(--gold)}
+.brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:11pt;line-height:1.05;color:var(--green);white-space:nowrap}
+.brand .nm em{font-style:normal;color:#8a6b12;font-weight:700}
+.rule{display:flex;height:4px;flex:0 0 auto}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
+
+/* Body */
+.cbody{flex:1;padding:.12in .38in .12in;display:flex;flex-direction:column;justify-content:space-between;gap:.10in;min-height:0}
+
+.hero{display:flex;align-items:center;justify-content:space-between;gap:.20in;background:#fff;border:1.5px solid var(--line);border-left:6px solid var(--gold);border-radius:14px;padding:.10in .20in}
+.htxt{flex:1;min-width:0}
+.eyebrow{font-size:8pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);line-height:1.1;margin-bottom:2px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:21.5pt;line-height:1.04;color:var(--green);letter-spacing:-0.02em}
+.unlock{font-size:10.8pt;font-weight:600;color:var(--ink);margin-top:3px;line-height:1.2}
+.unlock strong{color:var(--green-deep);font-weight:800}
+
+.hcard{flex:0 0 1.48in;position:relative;transform:rotate(-2.5deg)}
+.hcard img{width:100%;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,.22);display:block}
+.pill-unlock{position:absolute;bottom:-7px;right:-6px;background:var(--ink);color:var(--gold-lt);border:1.5px solid var(--gold);border-radius:999px;font-size:6.8pt;font-weight:800;letter-spacing:.10em;text-transform:uppercase;padding:3px 8px;line-height:1;white-space:nowrap}
+
+/* 6 CTA Chips */
+.chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.09in;flex:1;align-content:stretch}
+.chip{background:#fff;border:1.3px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:9px 11px;display:flex;align-items:center;gap:10px;min-height:0}
+.ic-wrap{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ic-wrap svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ic-gold{background:var(--gold)}
+.ic-gold svg{stroke:var(--ink)}
+.ic-green{background:var(--green)}
+.ic-copper{background:#9A6B38}
+.ic-dark{background:var(--ink)}
+.ic-teal{background:#2D6A62}
+.ic-plum{background:#5C4663}
+
+.ctxt{min-width:0;display:flex;flex-direction:column;gap:3px}
+.ctxt strong{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:10.3pt;line-height:1.12;color:var(--green-deep)}
+.ctxt > span{font-size:8.4pt;font-weight:600;line-height:1.22;color:var(--muted)}
+
+.badges-inline{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:2px}
+.b-live{display:inline-block;background:var(--green);color:#fff;font-size:7pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 8px 2.5px;line-height:1}
+.b-gp{display:inline-flex;align-items:center;gap:4px;background:#000;color:#fff;font-size:7.2pt;font-weight:700;border-radius:5px;padding:3px 7px;line-height:1;white-space:nowrap}
+.b-gp svg{width:10px;height:11px;display:block;flex:0 0 auto}
+
+/* Footer */
+.ft{background:var(--green);color:var(--cream);border-top:4px solid var(--gold);padding:.09in .38in;display:flex;align-items:center;justify-content:space-between;gap:.18in;flex:0 0 auto}
+.ft .left{display:flex;align-items:center;gap:.12in}
+.ft .qr{background:#fff;border-radius:9px;padding:5px;display:flex;align-items:center;line-height:0;flex:0 0 auto}
+.ft .qr img{width:.86in;height:.86in;display:block}
+.ft .scan{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14pt;line-height:1.08;color:var(--gold-lt);white-space:nowrap}
+.ft .scan small{display:block;font-family:"Source Sans 3",sans-serif;font-size:9pt;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:#fff;margin-top:3px}
+.ft .right{display:flex;align-items:center;gap:14px}
+.ft .ph{text-align:right;line-height:1}
+.ft .ph a{display:block;font-family:Fraunces,Georgia,serif;font-size:16.5pt;font-weight:700;color:var(--gold-lt);white-space:nowrap;text-decoration:none}
+.ft .ph small{display:block;font-size:7.8pt;font-weight:700;color:rgba(243,238,228,.88);margin-top:3px;letter-spacing:.02em}
+
+.gbadge{display:flex;flex-direction:column;align-items:center;gap:2px;background:#fff;color:#1f2a24;border-radius:9px;padding:5px 9px 4px;box-shadow:0 1px 3px rgba(0,0,0,.16)}
+.gbadge .grow{display:flex;align-items:center;justify-content:center;gap:5px}
+.gbadge .gicon{width:15px;height:15px;flex:0 0 auto;display:block}
+.gbadge .gstars{color:#d49d17;letter-spacing:1px;font-size:11pt;line-height:1}
+.gbadge .gcaption{font-family:"Source Sans 3",sans-serif;font-size:8pt;font-weight:700;color:#1f2a24;line-height:1.05;white-space:nowrap}
+</style>
+</head>
+<body>
+<main class="sheet">
+  
+  <article class="card">
+    <header class="brand">
+      <div class="side"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan Homestead</div></div>
+      <div class="side"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters on Call <em>&middot; STEM on Call</em></div></div>
+    </header>
+    <div class="rule"><span class="g"></span><span class="y"></span></div>
+
+    <div class="cbody">
+      <div class="hero">
+        <div class="htxt">
+          <div class="eyebrow">STEM on Call &middot; Kit Insert</div>
+          <h1>You built it. Now keep going.</h1>
+          <p class="unlock">Unlock <strong>Critter Gold Membership</strong> perks with this kit.</p>
+        </div>
+        <div class="hcard">
+          <img src="assets/gold-poster/card.jpg" alt="Critter Gold Member Card">
+          <span class="pill-unlock">Unlock Gold</span>
+        </div>
+      </div>
+
+      <div class="chips">
+        <div class="chip">
+          <div class="ic-wrap ic-gold">
+            <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Join Gold &middot; ~40% Off</strong>
+            <span>Camps, mobile petting zoos, tutoring &amp; homeschool support</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-green">
+            <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v5l-4.5 8.5A2 2 0 0 0 7.2 19.5h9.6a2 2 0 0 0 1.7-3L14 8V3"/><path d="M7.5 14h9"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Book STEM on Call Tutoring</strong>
+            <span>1-on-1 &amp; small-group science &amp; math lessons</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-copper">
+            <svg viewBox="0 0 24 24"><path d="M12 7v14M5 11h14"/><path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.2 2.8 2.8 0 0 0 9.2 7H4v14h16V7Z"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Gift a Gold Card</strong>
+            <span>Out of town? Play our learning games in the Gold web app</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-dark">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 19h2"/><path d="M10 9l4 2.5-4 2.5V9Z"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Play Learning Games</strong>
+            <div class="badges-inline">
+              <div class="b-live">Prototype live now</div>
+              <div class="b-gp">
+                <svg viewBox="0 0 18 20"><path fill="#EA4335" d="M.7 1.1 10.2 10 .7 18.9A1.6 1.6 0 0 1 0 17.6V2.4C0 1.6.3 1.2.7 1.1Z"/><path fill="#FBBC04" d="M13.2 7.1 10.2 10l3 2.9 3.9-2.2c.8-.5.8-1.3 0-1.8L13.2 7.1Z"/><path fill="#4285F4" d="M.7 18.9 10.2 10l3 2.9-12.5 7.2c-.5.3-1 0-1-.6v-.6Z"/><path fill="#34A853" d="M13.2 12.9 10.2 10 .7 1.1c.1 0 .3 0 .5.1L13.2 7.1l3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 1.8Z"/></svg>
+                Google Play coming soon
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-teal">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9-8.8C1.5 9 3.6 5.5 7 5.5c1.9 0 3.6 1 5 2.7 1.4-1.7 3.1-2.7 5-2.7 3.4 0 5.5 3.5 4 6.7-2 4.4-9 8.8-9 8.8Z"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Sponsor a Kit or Visit</strong>
+            <span>Fund kits or a STEM visit for a local school</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-plum">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Book an Event</strong>
+            <span>Mobile petting zoo or STEM on Call at your school or group</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="ft">
+      <div class="left">
+        <a class="qr" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener"><img src="assets/gold-poster/qr-gold-home.png" alt="QR code to sheehanhomestead.com/home"></a>
+        <div class="scan">Scan to join<small>Gold Card Membership</small></div>
+      </div>
+      <div class="right">
+        <div class="ph"><a href="tel:9142631311">914-263-1311</a><small>sheehanhomestead.com &middot; stemoncall.com</small></div>
+        <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
+  <div class="grow">
+    <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+      <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+    </svg>
+    <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  </div>
+  <div class="gcaption">100+ Google reviews</div>
+</div>
+      </div>
+    </footer>
+  </article>
+  <div class="cutline"><span>&#9986; Cut here &middot; 2-up half-letter (8.5&Prime; &times; 5.5&Prime;)</span></div>
+  
+  <article class="card">
+    <header class="brand">
+      <div class="side"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan Homestead</div></div>
+      <div class="side"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters on Call <em>&middot; STEM on Call</em></div></div>
+    </header>
+    <div class="rule"><span class="g"></span><span class="y"></span></div>
+
+    <div class="cbody">
+      <div class="hero">
+        <div class="htxt">
+          <div class="eyebrow">STEM on Call &middot; Kit Insert</div>
+          <h1>You built it. Now keep going.</h1>
+          <p class="unlock">Unlock <strong>Critter Gold Membership</strong> perks with this kit.</p>
+        </div>
+        <div class="hcard">
+          <img src="assets/gold-poster/card.jpg" alt="Critter Gold Member Card">
+          <span class="pill-unlock">Unlock Gold</span>
+        </div>
+      </div>
+
+      <div class="chips">
+        <div class="chip">
+          <div class="ic-wrap ic-gold">
+            <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Join Gold &middot; ~40% Off</strong>
+            <span>Camps, mobile petting zoos, tutoring &amp; homeschool support</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-green">
+            <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v5l-4.5 8.5A2 2 0 0 0 7.2 19.5h9.6a2 2 0 0 0 1.7-3L14 8V3"/><path d="M7.5 14h9"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Book STEM on Call Tutoring</strong>
+            <span>1-on-1 &amp; small-group science &amp; math lessons</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-copper">
+            <svg viewBox="0 0 24 24"><path d="M12 7v14M5 11h14"/><path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.2 2.8 2.8 0 0 0 9.2 7H4v14h16V7Z"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Gift a Gold Card</strong>
+            <span>Out of town? Play our learning games in the Gold web app</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-dark">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 19h2"/><path d="M10 9l4 2.5-4 2.5V9Z"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Play Learning Games</strong>
+            <div class="badges-inline">
+              <div class="b-live">Prototype live now</div>
+              <div class="b-gp">
+                <svg viewBox="0 0 18 20"><path fill="#EA4335" d="M.7 1.1 10.2 10 .7 18.9A1.6 1.6 0 0 1 0 17.6V2.4C0 1.6.3 1.2.7 1.1Z"/><path fill="#FBBC04" d="M13.2 7.1 10.2 10l3 2.9 3.9-2.2c.8-.5.8-1.3 0-1.8L13.2 7.1Z"/><path fill="#4285F4" d="M.7 18.9 10.2 10l3 2.9-12.5 7.2c-.5.3-1 0-1-.6v-.6Z"/><path fill="#34A853" d="M13.2 12.9 10.2 10 .7 1.1c.1 0 .3 0 .5.1L13.2 7.1l3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 1.8Z"/></svg>
+                Google Play coming soon
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-teal">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9-8.8C1.5 9 3.6 5.5 7 5.5c1.9 0 3.6 1 5 2.7 1.4-1.7 3.1-2.7 5-2.7 3.4 0 5.5 3.5 4 6.7-2 4.4-9 8.8-9 8.8Z"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Sponsor a Kit or Visit</strong>
+            <span>Fund kits or a STEM visit for a local school</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="ic-wrap ic-plum">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <div class="ctxt">
+            <strong>Book an Event</strong>
+            <span>Mobile petting zoo or STEM on Call at your school or group</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="ft">
+      <div class="left">
+        <a class="qr" href="https://sheehanhomestead.com/home" target="_blank" rel="noopener"><img src="assets/gold-poster/qr-gold-home.png" alt="QR code to sheehanhomestead.com/home"></a>
+        <div class="scan">Scan to join<small>Gold Card Membership</small></div>
+      </div>
+      <div class="right">
+        <div class="ph"><a href="tel:9142631311">914-263-1311</a><small>sheehanhomestead.com &middot; stemoncall.com</small></div>
+        <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
+  <div class="grow">
+    <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+      <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+    </svg>
+    <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  </div>
+  <div class="gcaption">100+ Google reviews</div>
+</div>
+      </div>
+    </footer>
+  </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecosystem Flywheel · Critters on Call &times; STEM on Call · Critter Gold Hub</title>
+<meta name="description" content="Investor-grade ecosystem flywheel showing how Critters on Call and STEM on Call interlock around the Critter Gold Membership hub.">
+<link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
+<style>
+@font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
+@page{size:11in 8.5in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#4e6558;
+  --green-deep:#3A4F45;
+  --gold:#c9a227;
+  --gold-lt:#E8D48C;
+  --cream:#F3EEE4;
+  --ink:#1f2a24;
+  --muted:#47564d;
+  --line:#dfd6c4;
+  --copper:#8f6030;
+}
+html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:11in;height:8.5in;margin:0 auto;background:var(--cream);display:flex;flex-direction:column;overflow:hidden}
+@media print{html,body{background:var(--cream);width:11in;height:8.5in}.page{margin:0}}
+
+/* Brand Header */
+.brand{display:flex;align-items:center;justify-content:space-between;background:var(--cream);padding:.10in .34in .09in;flex:0 0 auto;gap:14px}
+.brand .logos{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brand .pair{display:flex;align-items:center;gap:8px}
+.brand .pair+.pair{padding-left:12px;border-left:1px solid var(--line)}
+.lg{display:inline-block;width:34px;height:34px;border-radius:50%;background-size:cover;background-position:center;flex:0 0 auto}
+.lg-sh{background-image:url("assets/gold-poster/sh.png")}
+.lg-coc{background-image:url("assets/gold-poster/coc.png");box-shadow:0 0 0 2px var(--gold)}
+.brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:10.5pt;line-height:1.05;color:var(--green);white-space:nowrap}
+.brand .nm small{display:block;font-family:"Source Sans 3",sans-serif;font-size:7pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.brand .hdr-right{text-align:right;flex:1;min-width:0}
+.brand .hdr-right .eyebrow{font-size:7.6pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);line-height:1}
+.brand .hdr-right h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:17.5pt;line-height:1.1;color:var(--green);letter-spacing:-0.02em;margin-top:2px;white-space:nowrap}
+.rule{display:flex;height:5px;flex:0 0 auto}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
+
+/* Main Diagram Canvas */
+.stage{
+  flex:1;
+  position:relative;
+  margin:.10in .28in .08in;
+  min-height:0;
+}
+
+/* Background SVG tracks & arrows */
+.tracks-svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Loop Headers */
+.loop-hdr{
+  position:absolute;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border-radius:999px;
+  padding:4px 13px;
+  font-size:8pt;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.loop-hdr.coc{left:8px;top:4px;background:var(--green);color:var(--gold-lt);border:1.5px solid var(--gold)}
+.loop-hdr.stem{right:8px;top:4px;background:var(--copper);color:#fff;border:1.5px solid var(--gold)}
+
+/* Node Cards on Left & Right Loops */
+.node{
+  position:absolute;
+  z-index:3;
+  width:2.24in;
+  background:#fff;
+  border:1.4px solid var(--line);
+  border-radius:12px;
+  padding:8px 9px;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  box-shadow:0 4px 14px rgba(31,42,36,.07);
+}
+.node.coc{border-top:4px solid var(--green)}
+.node.stem{border-top:4px solid var(--copper)}
+
+.nic{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-top:1px}
+.nic svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.nic.g{background:var(--green)}
+.nic.c{background:var(--copper)}
+
+.ntxt strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:9.8pt;line-height:1.12;color:var(--green-deep)}
+.ntxt span{display:block;font-size:7.8pt;font-weight:600;line-height:1.22;color:var(--muted);margin-top:2px}
+
+/* Node coordinates on ~10.44in x 6.55in stage (~1002px x 629px) */
+/* Left Loop: Critters on Call */
+.n-coc-1{left:4px;   top:52px;}
+.n-coc-2{left:4px;   top:196px;}
+.n-coc-3{left:4px;   top:340px;}
+.n-coc-4{left:4px;   top:484px;}
+
+/* Right Loop: STEM on Call */
+.n-stem-1{right:4px; top:52px;}
+.n-stem-2{right:4px; top:196px;}
+.n-stem-3{right:4px; top:340px;}
+.n-stem-4{right:4px; top:484px;}
+
+/* Center Hub: Critter Gold Membership (width 3.04in centered => leaves ~1.4in clear channel each side!) */
+.hub{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  z-index:4;
+  width:3.04in;
+  background:var(--ink);
+  color:var(--cream);
+  border:2.5px solid var(--gold);
+  border-radius:16px;
+  padding:10px 11px 9px;
+  box-shadow:0 16px 34px rgba(31,42,36,.28);
+}
+.hub-top{display:flex;align-items:center;gap:9px;padding-bottom:7px;border-bottom:1px solid rgba(232,212,140,.25)}
+.hub-card{width:56px;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.35);border:1px solid var(--gold);flex:0 0 auto}
+.hub-title .k{font-size:6.8pt;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);line-height:1}
+.hub-title h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:13.2pt;line-height:1.06;color:var(--gold-lt);margin-top:2px}
+.hub-title p{font-size:7.4pt;font-weight:600;color:rgba(243,238,228,.85);margin-top:2px}
+
+.hub-steps{display:flex;flex-direction:column;gap:4.5px;margin-top:7px}
+.hstep{display:flex;align-items:flex-start;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(201,162,39,.28);border-radius:8px;padding:4.5px 7px}
+.hnum{width:16px;height:16px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:8.5pt;line-height:16px;text-align:center;flex:0 0 auto;margin-top:1px}
+.htx strong{display:block;font-size:8.1pt;font-weight:800;color:var(--gold-lt);line-height:1.1}
+.htx span{display:block;font-size:7.2pt;font-weight:600;color:rgba(243,238,228,.88);line-height:1.18;margin-top:1px}
+.hub-loopback{margin-top:6px;text-align:center;font-size:7pt;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:var(--gold);border-top:1px dashed rgba(201,162,39,.35);padding-top:4px}
+
+/* Explicit Crossover Callout Pills (strictly inside open 1.4in side channels or top/bottom arcs) */
+.xover{
+  position:absolute;
+  z-index:5;
+  background:var(--gold-lt);
+  color:var(--ink);
+  border:1.5px solid var(--gold);
+  border-radius:999px;
+  padding:4px 10px;
+  font-size:7.4pt;
+  font-weight:800;
+  line-height:1.12;
+  box-shadow:0 3px 10px rgba(0,0,0,.14);
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+.xover b{color:var(--green-deep)}
+.x-top{left:50%;top:10px;transform:translateX(-50%)}
+.x-bot{left:50%;bottom:8px;transform:translateX(-50%)}
+.x-mid-l{
+  left:2.37in;
+  top:234px;
+  width:1.22in;
+  white-space:normal;
+  text-align:center;
+  justify-content:center;
+  border-radius:10px;
+  padding:5px 7px;
+  background:#fff;
+  border-color:var(--green);
+  color:var(--green-deep);
+  font-size:7.2pt;
+}
+.x-mid-r{
+  right:2.37in;
+  top:372px;
+  width:1.22in;
+  white-space:normal;
+  text-align:center;
+  justify-content:center;
+  border-radius:10px;
+  padding:5px 7px;
+  background:#fff;
+  border-color:var(--copper);
+  color:var(--copper);
+  font-size:7.2pt;
+}
+
+/* Footer */
+.ft{background:var(--green);color:var(--cream);border-top:4px solid var(--gold);padding:.08in .34in;display:flex;align-items:center;justify-content:space-between;gap:10px;flex:0 0 auto}
+.ft-l{display:flex;align-items:center;gap:10px;font-size:8.4pt;font-weight:700;white-space:nowrap;flex:0 0 auto}
+.ft-l .ph{font-family:Fraunces,Georgia,serif;font-size:13pt;font-weight:700;color:var(--gold-lt);white-space:nowrap}
+.ft-c{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}
+.kpi-pill{background:rgba(31,42,36,.48);border:1px solid rgba(201,162,39,.55);border-radius:999px;padding:3px 8px;font-size:7.5pt;font-weight:700;color:var(--gold-lt);white-space:nowrap}
+.kpi-pill b{color:#fff}
+
+.gbadge{display:flex;align-items:center;gap:6px;background:#fff;color:#1f2a24;border-radius:9px;padding:4px 9px;box-shadow:0 1px 3px rgba(0,0,0,.16);flex:0 0 auto}
+.gbadge .gicon{width:14px;height:14px;display:block}
+.gbadge .gstars{color:#d49d17;letter-spacing:1px;font-size:10pt;line-height:1}
+.gbadge .gcaption{font-size:8pt;font-weight:700;color:#1f2a24;white-space:nowrap}
+</style>
+</head>
+<body>
+<section class="page">
+  <header class="brand">
+    <div class="logos">
+      <div class="pair"><span class="lg lg-sh" role="img" aria-label="Sheehan Homestead"></span><div class="nm">Sheehan Homestead<small>Callahan, FL &middot; Metro Jax</small></div></div>
+      <div class="pair"><span class="lg lg-coc" role="img" aria-label="Critters on Call"></span><div class="nm">Critters on Call &times; STEM on Call<small>Two Brands &middot; One Shared Asset</small></div></div>
+    </div>
+    <div class="hdr-right">
+      <div class="eyebrow">Ecosystem Flywheel &middot; Business Engine</div>
+      <h1>Two Interlocking Loops. One Gold Hub.</h1>
+    </div>
+  </header>
+  <div class="rule"><span class="g"></span><span class="y"></span></div>
+
+  <div class="stage">
+    <!-- Vector Rings & Interlocking Arrows (viewBox ~ 1044 x 655) -->
+    <svg class="tracks-svg" viewBox="0 0 1044 655" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <marker id="arr-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="#4e6558"/>
+        </marker>
+        <marker id="arr-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="#8f6030"/>
+        </marker>
+        <marker id="arr-y" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="#c9a227"/>
+        </marker>
+      </defs>
+
+      <!-- Left Loop Orbit (Critters on Call) -->
+      <ellipse cx="265" cy="328" rx="195" ry="266" fill="rgba(78,101,88,0.045)" stroke="#4e6558" stroke-width="2.8" stroke-dasharray="7 5"/>
+      <!-- Right Loop Orbit (STEM on Call) -->
+      <ellipse cx="779" cy="328" rx="195" ry="266" fill="rgba(143,96,48,0.045)" stroke="#8f6030" stroke-width="2.8" stroke-dasharray="7 5"/>
+
+      <!-- Left Column Downward Loop Arrows -->
+      <path d="M 112 146 L 112 186" stroke="#4e6558" stroke-width="3" marker-end="url(#arr-g)"/>
+      <path d="M 112 290 L 112 330" stroke="#4e6558" stroke-width="3" marker-end="url(#arr-g)"/>
+      <path d="M 112 434 L 112 474" stroke="#4e6558" stroke-width="3" marker-end="url(#arr-g)"/>
+      <!-- Reviews -> Hub -->
+      <path d="M 232 536 C 296 536, 336 484, 362 436" fill="none" stroke="#4e6558" stroke-width="2.8" marker-end="url(#arr-g)"/>
+
+      <!-- Right Column Downward Loop Arrows -->
+      <path d="M 932 146 L 932 186" stroke="#8f6030" stroke-width="3" marker-end="url(#arr-c)"/>
+      <path d="M 932 290 L 932 330" stroke="#8f6030" stroke-width="3" marker-end="url(#arr-c)"/>
+      <path d="M 932 434 L 932 474" stroke="#8f6030" stroke-width="3" marker-end="url(#arr-c)"/>
+      <!-- Games -> Hub -->
+      <path d="M 812 536 C 748 536, 708 484, 682 436" fill="none" stroke="#8f6030" stroke-width="2.8" marker-end="url(#arr-c)"/>
+
+      <!-- Top Crossover Arc: Animal Visit -> Take-Home STEM Kit & Gold -->
+      <path d="M 236 74 C 365 18, 679 18, 808 74" fill="none" stroke="#c9a227" stroke-width="3.2" marker-end="url(#arr-y)"/>
+
+      <!-- Bottom Crossover Arc: School STEM Visit -> Mobile Petting Zoo -->
+      <path d="M 808 580 C 679 636, 365 636, 236 580" fill="none" stroke="#c9a227" stroke-width="3.2" marker-end="url(#arr-y)"/>
+
+      <!-- Mid-Left Crossover: Hub / STEM Kit -> Farm Tour -->
+      <path d="M 366 250 L 236 250" fill="none" stroke="#4e6558" stroke-width="2.8" marker-end="url(#arr-g)"/>
+      <!-- Mid-Left Return: Visit Us -> Hub -->
+      <path d="M 236 392 L 364 392" fill="none" stroke="#c9a227" stroke-width="2.6" marker-end="url(#arr-y)"/>
+
+      <!-- Mid-Right Entry: School STEM Visits -> Hub -->
+      <path d="M 808 250 L 680 250" fill="none" stroke="#8f6030" stroke-width="2.6" marker-end="url(#arr-c)"/>
+      <!-- Mid-Right Crossover: Hub / Gold -> Tutoring & Homeschool -->
+      <path d="M 678 392 L 808 392" fill="none" stroke="#c9a227" stroke-width="2.8" marker-end="url(#arr-y)"/>
+    </svg>
+
+    <div class="loop-hdr coc">Critters on Call Loop</div>
+    <div class="loop-hdr stem">STEM on Call Loop</div>
+
+    <!-- LEFT LOOP NODES -->
+    <div class="node coc n-coc-1">
+      <div class="nic g"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9Z"/></svg></div>
+      <div class="ntxt">
+        <strong>Mobile Petting Zoos</strong>
+        <span>Private events, CDDs, schools, senior centers &amp; clubs</span>
+      </div>
+    </div>
+
+    <div class="node coc n-coc-2">
+      <div class="nic g"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8Z"/></svg></div>
+      <div class="ntxt">
+        <strong>Farm Visits &amp; Tours</strong>
+        <span>Callahan homestead tours &amp; whole-car gift vouchers</span>
+      </div>
+    </div>
+
+    <div class="node coc n-coc-3">
+      <div class="nic g"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9-8.8C1.5 9 3.6 5.5 7 5.5c1.9 0 3.6 1 5 2.7 1.4-1.7 3.1-2.7 5-2.7 3.4 0 5.5 3.5 4 6.7-2 4.4-9 8.8-9 8.8Z"/></svg></div>
+      <div class="ntxt">
+        <strong>Visit Us Programs</strong>
+        <span>Goat Yoga, Mommy &amp; Me &amp; homeschool mornings</span>
+      </div>
+    </div>
+
+    <div class="node coc n-coc-4">
+      <div class="nic g"><svg viewBox="0 0 24 24"><path d="m12 2 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17l-5.9 3 1.2-6.5L2.5 8.9 9.1 8 12 2Z"/></svg></div>
+      <div class="ntxt">
+        <strong>Reviews &amp; Referrals</strong>
+        <span>100+ Google reviews &middot; #1 AI search &rarr; repeat bookings</span>
+      </div>
+    </div>
+
+    <!-- RIGHT LOOP NODES -->
+    <div class="node stem n-stem-1">
+      <div class="nic c"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v5l-4.5 8.5A2 2 0 0 0 7.2 19.5h9.6a2 2 0 0 0 1.7-3L14 8V3"/><path d="M7.5 14h9"/></svg></div>
+      <div class="ntxt">
+        <strong>STEM Kits</strong>
+        <span>Take-home science kits &middot; sold, gifted &amp; Gold-linked</span>
+      </div>
+    </div>
+
+    <div class="node stem n-stem-2">
+      <div class="nic c"><svg viewBox="0 0 24 24"><path d="M3 10l9-5 9 5-9 5-9-5Z"/><path d="M7 12.2V17c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4.8"/></svg></div>
+      <div class="ntxt">
+        <strong>School STEM Visits</strong>
+        <span>Teacher-led camps, co-ops, PTAs &amp; camp-week STEM</span>
+      </div>
+    </div>
+
+    <div class="node stem n-stem-3">
+      <div class="nic c"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div>
+      <div class="ntxt">
+        <strong>Tutoring &amp; Homeschool</strong>
+        <span>Ann-Marie Sheehan, M.Ed. &middot; Step Up &amp; 1-on-1 support</span>
+      </div>
+    </div>
+
+    <div class="node stem n-stem-4">
+      <div class="nic c"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M10 16h4"/><path d="m10 9 4 2.5-4 2.5V9Z"/></svg></div>
+      <div class="ntxt">
+        <strong>Learning Games &amp; Testers</strong>
+        <span>Gold web app, video game testers &amp; Google Play soon</span>
+      </div>
+    </div>
+
+    <!-- CENTER SHARED HUB -->
+    <div class="hub">
+      <div class="hub-top">
+        <img class="hub-card" src="assets/gold-poster/card.jpg" alt="Critter Gold Card">
+        <div class="hub-title">
+          <div class="k">Shared Conversion Hub</div>
+          <h2>Critter Gold Membership</h2>
+          <p>Compounding flywheel engine &middot; 500+ members</p>
+        </div>
+      </div>
+      <div class="hub-steps">
+        <div class="hstep">
+          <span class="hnum">1</span>
+          <div class="htx">
+            <strong>Entry Funnels</strong>
+            <span>Stead Spin wheel &middot; STEM kits &middot; FB Marketplace &middot; Giving / Violet</span>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnum">2</span>
+          <div class="htx">
+            <strong>Gold Web App &amp; Games</strong>
+            <span>Prototype live now &middot; out-of-market reach &middot; Google Play soon</span>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnum">3</span>
+          <div class="htx">
+            <strong>~40% Off Core Packages</strong>
+            <span>Camps, mobile petting zoos, tutoring &amp; homeschool support</span>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnum">4</span>
+          <div class="htx">
+            <strong>Sponsors &amp; Stead Shouts</strong>
+            <span>$25&ndash;$1,500+ sponsor ladder &middot; partner cross-promo</span>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnum">5</span>
+          <div class="htx">
+            <strong>Give Twice Engine</strong>
+            <span>Donated Gold cards, kits &amp; Violet Ticket (60% partial donation)</span>
+          </div>
+        </div>
+        <div class="hstep">
+          <span class="hnum">6</span>
+          <div class="htx">
+            <strong>Proof &rarr; New Players</strong>
+            <span>100+ Google reviews &amp; almost 10,000 FB followers &rarr; new leads</span>
+          </div>
+        </div>
+      </div>
+      <div class="hub-loopback">&#8635; Step 6 feeds Step 1 &middot; Every spin, kit &amp; event compounds</div>
+    </div>
+
+    <!-- EXPLICIT CROSSOVER CALLOUTS -->
+    <div class="xover x-top"><b>Crossover:</b> Animal Visit &rarr; Take-Home STEM Kit &amp; Gold</div>
+    <div class="xover x-mid-l">&larr; STEM Kit to Farm Tour</div>
+    <div class="xover x-mid-r">Gold to Tutoring &amp; Games &rarr;</div>
+    <div class="xover x-bot"><b>Crossover:</b> School STEM Visit &rarr; Mobile Petting Zoo</div>
+  </div>
+
+  <footer class="ft">
+    <div class="ft-l">
+      <span class="ph">914-263-1311</span>
+      <span>sheehanhomestead.com &middot; stemoncall.com</span>
+    </div>
+    <div class="ft-c">
+      <span class="kpi-pill"><b>Almost 10,000</b> FB followers</span>
+      <span class="kpi-pill"><b>500+</b> Gold members</span>
+      <span class="kpi-pill"><b>1,000+</b> gifts given</span>
+      <span class="kpi-pill"><b>#1</b> cold AI search (Jax)</span>
+    </div>
+    <div class="gbadge" aria-label="100+ Google reviews, 5 stars">
+      <svg class="gicon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+        <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+      </svg>
+      <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="gcaption">100+ Google reviews</span>
+    </div>
+  </footer>
+</section>
+</body>
+</html>
