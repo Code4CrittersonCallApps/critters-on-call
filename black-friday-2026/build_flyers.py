@@ -539,8 +539,8 @@ def build_index():
           <p>Black Friday offer: buy Gold at $49.99 and gift a second membership free, Nov 27 to Dec 1, 2026. Two memberships and $200 in day-one gifts, plus the Gold web app and about 40% off. Your price $49.99.</p>
           <div class="links">
             <a class="btn btn-primary" href="black-friday-gold.html?v=1125p">Open Flyer</a>
-            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125p">Direct PDF</a>
-            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125p">Facebook PNG</a>
+            <a class="btn btn-gold" href="black-friday-gold.pdf?v=1125s">Direct PDF</a>
+            <a class="btn btn-outline" href="png/black-friday-gold.png?v=1125s">Facebook PNG</a>
           </div>
         </div>"""
 
