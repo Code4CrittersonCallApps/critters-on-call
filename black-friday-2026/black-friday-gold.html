@@ -25,11 +25,10 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .rule{display:flex;height:6px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
 
 .body{flex:1;padding:.26in .55in .20in;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:.22in;min-height:0}
-.hero{display:flex;width:100%;align-items:center;gap:.32in}
-.hero .txt{flex:1;display:flex;align-items:center}
-.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:44pt;line-height:1.02;color:var(--green)}
-.hero h1 em{font-style:normal;color:var(--gold)}
-.hero .card{flex:0 0 3.55in;width:3.55in;transform:rotate(-3deg)}
+.hero{display:flex;width:100%;align-items:center;gap:.16in}
+.hero .txt{flex:1;display:flex;align-items:center;min-width:0}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:32pt;line-height:1;color:var(--green);white-space:nowrap;letter-spacing:-0.02em}
+.hero .card{flex:0 0 3.22in;width:3.22in;transform:rotate(-3deg)}
 .hero .card img{width:100%;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,.28);display:block}
 
 .bogo{background:#1f2a24;color:var(--gold-lt);border:2.5px solid var(--gold);border-radius:18px;padding:13px 24px;text-align:center;width:100%}
@@ -39,7 +38,10 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.12in;width:100%;align-items:stretch}
 .tile{background:#fff;border:1.5px solid #e2dacb;border-top:6px solid var(--gold);border-radius:16px;padding:18px 8px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:10px;min-height:2.58in}
 .tile svg.ic{width:80px;height:80px;flex:0 0 auto;stroke:var(--green);fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
-.tile h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14.5pt;line-height:1.16;letter-spacing:-0.01em;color:var(--green);max-width:100%}
+.tile h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14.5pt;line-height:1.12;letter-spacing:-0.01em;color:var(--green);max-width:100%}
+.tile .sub{font-family:"Source Sans 3",sans-serif;font-size:10pt;font-weight:600;line-height:1.22;color:var(--green);margin:0;padding:0;list-style:none;width:100%}
+.tile .sub.tight{line-height:1.16;font-size:9.75pt}
+.tile .caption{font-size:8.5pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:2px;line-height:1.1}
 .tile .extras{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:2px}
 .soon{display:inline-block;background:var(--gold);color:var(--green-deep);font-size:11pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 12px 4px;line-height:1;font-family:"Source Sans 3",sans-serif}
 .gp{display:inline-flex;align-items:center;gap:7px;background:#000;color:#fff;border-radius:7px;padding:6px 10px 6px 8px;text-decoration:none;max-width:100%}
@@ -66,7 +68,7 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
   .page{width:100%;height:auto;margin:0}
   .hero,.ft{flex-direction:column}
   .tiles{grid-template-columns:1fr 1fr}
-  .hero h1{font-size:40pt;text-align:center}
+  .hero h1{font-size:32pt;text-align:center;white-space:nowrap}
   .hero .txt{justify-content:center}
   .hero .card{transform:none;flex-basis:auto;width:min(320px,90%);margin:0 auto}
   .body{padding:.24in .2in}
@@ -87,7 +89,7 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
   <div class="body">
     <div class="hero">
       <div class="txt">
-        <h1><span style="white-space:nowrap">Pay $49.99</span><br><em>once.</em></h1>
+        <h1>Pay $49.99 once.</h1>
       </div>
       <div class="card"><img src="assets/gold-poster/card.jpg" alt="The Critter Gold member card: In Critters We Trust"></div>
     </div>
@@ -101,6 +103,13 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
       <div class="tile">
         <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M5 11h14"/><path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.2 2.8 2.8 0 0 0 9.2 7H4v14h16V7Z"/></svg>
         <h2>$100 in gifts</h2>
+        <ul class="sub">
+          <li>Farm tour for two</li>
+          <li>STEM kit</li>
+          <li>Farm gift</li>
+          <li>Thrift gift</li>
+        </ul>
+        <div class="caption">Four $25 gifts</div>
       </div>
       <div class="tile">
         <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 19h2"/></svg>
@@ -120,11 +129,18 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
       </div>
       <div class="tile">
         <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 8.5h-4.2a2 2 0 0 0 0 4H13a2 2 0 0 1 0 4H8.5M12 6.5V8.5m0 8V17.5"/></svg>
-        <h2>40% off<br>camps,<br>mobile zoos,<br>tutoring &amp;<br>homeschool support</h2>
+        <h2>40% off</h2>
+        <ul class="sub tight">
+          <li>camps</li>
+          <li>mobile zoos</li>
+          <li>tutoring</li>
+          <li>homeschool support</li>
+        </ul>
       </div>
       <div class="tile">
         <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="16.5" cy="8.5" r="2.4"/><path d="M3.5 19c.4-3.2 2.6-5 5.5-5s5.1 1.8 5.5 5"/><path d="M14 14.2c2.2-.2 3.9 1.1 4.5 3.8"/></svg>
         <h2>Join 500+ members</h2>
+        <p class="sub">Families across NE Florida</p>
       </div>
     </div>
 
