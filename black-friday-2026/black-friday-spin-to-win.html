@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>You’re Invited · Stead Spin Digital Pop-Up · Sheehan Homestead</title>
-<meta name="description" content="Invite-only Black Friday digital pop-up: Stead Spin prize wheel, Nov 27–Dec 1. Win $10–$50 gifts or a grand prize Gold card or Double Gold. Across Metro Jax.">
+<meta name="description" content="Invite-only Black Friday digital pop-up: Stead Spin prize wheel, Nov 27–Dec 1. Grand prize Gold card or Double Gold, plus $50 Whole-car farm tour, $25 prizes, Special perk, and $10 gifts. Across Metro Jax.">
 <link rel="icon" type="image/png" href="assets/gold-poster/coc.png">
 <style>
 @font-face{font-family:"Fraunces";src:url("assets/gold-poster/fraunces-normal-latin.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
 @font-face{font-family:"Source Sans 3";src:url("assets/gold-poster/SourceSans3-Variable.ttf") format("truetype");font-weight:200 900;font-style:normal;font-display:swap}
 @page{size:8.5in 11in;margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--green:#4e6558;--green-deep:#3A4F45;--gold:#c9a227;--gold-lt:#E8D48C;--cream:#F3EEE4;--ink:#1f2a24;--copper:#B57A3C;--teal:#2E6A5E;--plum:#6E4B63}
+:root{--green:#4e6558;--green-deep:#3A4F45;--gold:#c9a227;--gold-lt:#E8D48C;--cream:#F3EEE4;--ink:#1f2a24;--deep:#2f4038;--copper:#b0753a}
 html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:8.5in;height:11in;overflow:hidden;display:flex;flex-direction:column;background:var(--cream);margin:0 auto}
 @media print{html,body{background:var(--cream);width:8.5in;height:11in}.page{margin:0}}
@@ -20,78 +20,88 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 .lg-sh{background-image:url("assets/gold-poster/sh.png")}
 .lg-coc{background-image:url("assets/gold-poster/coc.png");box-shadow:0 0 0 3px var(--gold)}
 .brand{display:flex;align-items:stretch;background:var(--cream)}
-.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:14px;padding:.15in 0 .11in}
+.brand .side{flex:1;display:flex;align-items:center;justify-content:center;gap:14px;padding:.14in 0 .10in}
 .brand .side+.side{border-left:1px solid #e2dacb}
 .brand .nm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16pt;line-height:1.1;color:var(--green)}
 .rule{display:flex;height:6px}.rule .g{flex:1;background:var(--green)}.rule .y{flex:1;background:var(--gold)}
 
-.body{flex:1;padding:.16in .48in .13in;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:.13in;min-height:0}
+.body{flex:1;padding:.14in .46in .11in;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:.11in;min-height:0}
 
-/* Invite-only digital pop-up card */
-.invite{position:relative;background:linear-gradient(135deg,#19251e 0%,#2d4237 55%,#3A4F45 100%);border:2.5px solid var(--gold);border-radius:18px;padding:.16in .20in;display:flex;align-items:center;gap:.20in;box-shadow:0 10px 26px rgba(20,30,24,.22);overflow:hidden}
+.invite{position:relative;background:linear-gradient(135deg,#19251e 0%,#2d4237 55%,#3A4F45 100%);border:2.5px solid var(--gold);border-radius:18px;padding:.15in .18in;display:flex;align-items:center;gap:.18in;box-shadow:0 10px 26px rgba(20,30,24,.22);overflow:hidden}
 .invite::before{content:"";position:absolute;inset:6px;border:1px solid rgba(232,212,140,.35);border-radius:13px;pointer-events:none}
-.invite .txt{flex:1;min-width:0;position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:4px 0 4px 4px}
-.vip-pill{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#c9a227,#E8D48C,#c9a227);color:#1a1508;font-size:8.8pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-radius:999px;padding:5px 12px 4px;line-height:1}
-.invite .subkicker{font-size:10.5pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-lt);line-height:1.15;margin-top:2px}
-.invite h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:27pt;line-height:1.03;color:#fff;letter-spacing:-0.02em}
+.invite .txt{flex:1;min-width:0;position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:2px 0 2px 4px}
+.vip-pill{display:inline-flex;align-items:center;background:linear-gradient(90deg,#c9a227,#E8D48C,#c9a227);color:#1a1508;font-size:8.6pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-radius:999px;padding:5px 12px 4px;line-height:1}
+.invite .subkicker{font-size:10pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-lt);line-height:1.15}
+.invite h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:26pt;line-height:1.03;color:#fff;letter-spacing:-0.02em}
 .invite h1 span{color:var(--gold-lt)}
-.invite .dates{display:inline-flex;align-items:center;gap:8px;font-size:10.5pt;font-weight:700;color:var(--cream);margin-top:2px}
+.invite .dates{font-size:10.5pt;font-weight:700;color:var(--cream)}
 .invite .dates b{color:var(--gold-lt);font-weight:800;letter-spacing:.04em}
-.invite .photo{flex:0 0 2.75in;width:2.75in;position:relative;z-index:1}
-.invite .photo img{width:100%;height:1.95in;border-radius:13px;border:2px solid var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.35);display:block;object-fit:cover}
+.invite .photo{flex:0 0 2.55in;width:2.55in;position:relative;z-index:1}
+.invite .photo img{width:100%;height:1.78in;border-radius:13px;border:2px solid var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.35);display:block;object-fit:cover}
 
-/* Two-tier prize showcase */
-.tiers{display:grid;grid-template-columns:1.42fr 1fr;gap:.14in;width:100%;align-items:stretch}
+.tiers{display:flex;flex-direction:column;gap:8px;width:100%}
+.row{border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:12px}
+.row .tag{flex:0 0 auto;font-size:8pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:4px 9px 3px;line-height:1;white-space:nowrap}
+.row .val{flex:0 0 auto;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:22pt;line-height:1;letter-spacing:-0.03em;white-space:nowrap}
+.row .copy{flex:1;min-width:0}
+.row h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14.5pt;line-height:1.1}
+.row p{font-size:9.5pt;font-weight:600;line-height:1.2;margin-top:1px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1;min-width:0}
+.cell{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.cell strong{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:13.5pt;line-height:1.1}
+.cell span{font-size:9pt;font-weight:600;line-height:1.2;margin-top:1px}
 
-.tier-gifts{background:#fff;border:1.8px solid #dfd5c2;border-top:7px solid var(--green);border-radius:16px;padding:13px 13px 12px;display:flex;flex-direction:column;gap:9px}
-.tier-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;border-bottom:1.5px solid #efe7d8;padding-bottom:7px}
-.tier-head .tag{display:inline-block;background:var(--green);color:var(--gold-lt);font-size:8pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:4px 9px 3px;line-height:1}
-.tier-head h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19pt;line-height:1;color:var(--green)}
-.tier-sub{font-size:9.5pt;font-weight:700;color:var(--green);letter-spacing:.01em;margin-top:-2px}
+/* Grand = gold #c9a227, dark text */
+.r-grand{background:var(--gold);color:#1a1508;border:2px solid #a8881a;padding:11px 14px}
+.r-grand .tag{background:#1f2a24;color:var(--gold-lt);border:1.5px solid #1f2a24}
+.r-grand .art{flex:0 0 1.55in;width:1.55in}
+.r-grand .art img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(26,21,8,.28);display:block;border:1.5px solid #fff6d6}
+.r-grand .pair{gap:10px}
+.r-grand .cell{background:rgba(255,249,228,.88);border-radius:10px;padding:7px 10px;border:1.5px solid rgba(26,21,8,.12)}
 
-.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1}
-.chip{display:flex;align-items:center;gap:9px;background:#FAF7F0;border:1.2px solid #e6decb;border-radius:12px;padding:8px 9px}
-.chip.full{grid-column:1/-1;background:linear-gradient(90deg,#F8F3FA 0%,#FAF7F0 100%);border-color:#d8cad8}
-.cicon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:0 2px 6px rgba(0,0,0,.12)}
-.cicon svg{width:22px;height:22px;display:block}
-.c-stem .cicon{background:var(--copper)}
-.c-thrift .cicon{background:var(--green)}
-.c-farm .cicon{background:var(--gold)}
-.c-zoo .cicon{background:var(--teal)}
-.c-perk .cicon{background:var(--plum)}
-.chip .ctext{min-width:0}
-.chip .ctext strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:11pt;line-height:1.12;color:var(--ink)}
-.chip .ctext span{display:block;font-size:8.1pt;font-weight:600;line-height:1.18;color:var(--green);margin-top:2px}
+/* $50 = deep green #2f4038 */
+.r-50{background:#2f4038;color:#F3EEE4}
+.r-50 .tag{background:rgba(243,238,228,.16);color:#E8D48C}
+.r-50 .val{color:#E8D48C}
+.r-50 h2{color:#fff}
+.r-50 p{color:#E8D48C}
 
-/* Grand Prize card — big & gold */
-.tier-grand{position:relative;background:linear-gradient(155deg,#FFF9E4 0%,#F5DF92 52%,#E3BC44 100%);border:2.5px solid var(--gold);border-radius:16px;padding:13px 13px 12px;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:space-between;gap:7px;box-shadow:0 6px 18px rgba(184,146,58,.24)}
-.grand-pill{display:inline-block;background:#1f2a24;color:var(--gold-lt);font-size:8.5pt;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-radius:999px;padding:4px 12px 3px;line-height:1;border:1.5px solid var(--gold)}
-.grand-card-art{width:2.05in;position:relative;margin:2px 0}
-.grand-card-art img{width:100%;border-radius:12px;box-shadow:0 8px 18px rgba(26,21,8,.28);border:1.5px solid #fff6d6;display:block;transform:rotate(-2deg)}
-.grand-x2{position:absolute;top:-8px;right:-10px;width:36px;height:36px;border-radius:50%;background:#1f2a24;color:var(--gold-lt);border:2.5px solid var(--gold);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:13.5pt;line-height:31px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.28)}
-.grand-opts{width:100%;display:flex;flex-direction:column;gap:5px}
-.gopt{background:rgba(255,255,255,.86);border:1.5px solid rgba(154,123,74,.45);border-radius:10px;padding:6px 10px}
-.gopt strong{display:block;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:13pt;line-height:1.1;color:#1f2a24}
-.gopt span{display:block;font-size:9pt;font-weight:700;color:var(--green-deep);line-height:1.15;margin-top:1px}
-.or-line{font-size:8pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#6E5A2E;line-height:1}
-.grand-foot{font-size:8.5pt;font-weight:700;line-height:1.2;color:#1f2a24}
+/* $25 = brand green #4e6558 */
+.r-25{background:#4e6558;color:#F3EEE4}
+.r-25 .tag{background:rgba(243,238,228,.16);color:#E8D48C}
+.r-25 .val{color:#E8D48C}
+.r-25 .cell strong{color:#fff}
+.r-25 .cell span{color:#E8D48C}
 
-/* Tiny Gold strip without QR */
+/* Perk = copper #b0753a */
+.r-perk{background:#b0753a;color:#F3EEE4}
+.r-perk .tag{background:rgba(243,238,228,.18);color:#FFF3E0}
+.r-perk .val{color:#FFF3E0;font-size:16pt;letter-spacing:0}
+.r-perk h2{color:#fff}
+.r-perk p{color:#FFF3E0}
+
+/* $10 = cream #F3EEE4, dark-green text */
+.r-10{background:#F3EEE4;color:#2f4038;border:1.5px solid #c9b896}
+.r-10 .tag{background:#2f4038;color:#F3EEE4}
+.r-10 .val{color:#2f4038}
+.r-10 .cell strong{color:#2f4038}
+.r-10 .cell span{color:#3A4F45}
+
 .gold-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1.5px solid var(--gold);border-radius:12px;padding:8px 14px}
 .gold-strip .left{min-width:0;flex:1}
 .gold-strip .top{display:flex;align-items:center;flex-wrap:wrap;gap:7px}
 .gold-strip h3{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:12.5pt;color:var(--green);line-height:1.1}
-.gold-strip .bogo{display:inline-block;background:var(--gold);color:#1f2a24;font-weight:800;font-size:8pt;letter-spacing:.10em;text-transform:uppercase;border-radius:999px;padding:3px 8px 2px;line-height:1}
+.gold-strip .price{display:inline-block;background:var(--gold);color:#1f2a24;font-weight:800;font-size:8pt;letter-spacing:.10em;text-transform:uppercase;border-radius:999px;padding:3px 8px 2px;line-height:1}
 .gold-strip p{font-size:9.3pt;font-weight:600;color:var(--green);line-height:1.25;margin-top:2px}
 .gold-strip .badges{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:0 0 auto}
-.gold-strip .row{display:flex;align-items:center;gap:5px}
+.gold-strip .rowb{display:flex;align-items:center;gap:5px}
 .live{display:inline-block;background:var(--green);color:#fff;font-size:7.6pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 8px 2px;line-height:1;white-space:nowrap}
 .soon{display:inline-block;background:var(--gold);color:var(--green-deep);font-size:7.6pt;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:3px 8px 2px;line-height:1;white-space:nowrap}
 .gp{display:inline-flex;align-items:center;gap:5px;background:#000;color:#fff;border-radius:5px;padding:3px 7px 3px 5px}
 .gp .tri{width:11px;height:13px;flex:0 0 auto;display:block}
 .gp b{font-size:7.8pt;font-weight:700;font-family:Arial,Helvetica,sans-serif;white-space:nowrap;color:#fff}
 
-.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.17in .48in;display:flex;align-items:center;justify-content:space-between;gap:.22in}
+.ft{background:var(--green);color:var(--cream);border-top:5px solid var(--gold);padding:.16in .46in;display:flex;align-items:center;justify-content:space-between;gap:.22in}
 .ft .left{display:flex;align-items:center;gap:.14in;flex:0 0 auto}
 .ft .qr{background:#fff;border-radius:12px;padding:8px;flex:0 0 auto;display:flex;align-items:center;line-height:0;text-decoration:none}
 .ft .qr img{width:1.3in;height:1.3in;display:block}
@@ -109,8 +119,8 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
 @media screen and (max-width:860px){
   html,body{background:var(--cream)}
   .page{width:100%;height:auto;margin:0}
-  .invite,.ft,.gold-strip{flex-direction:column;align-items:stretch}
-  .tiers{grid-template-columns:1fr}
+  .invite,.ft,.gold-strip,.r-grand,.r-25,.r-10{flex-direction:column;align-items:stretch}
+  .pair{grid-template-columns:1fr}
   .invite .photo{flex-basis:auto;width:min(320px,100%);margin:0 auto}
   .invite .txt{align-items:center;text-align:center}
   .body{padding:.20in .18in}
@@ -141,96 +151,66 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
     </div>
 
     <div class="tiers">
-      <div class="tier-gifts">
-        <div class="tier-head">
-          <h2>$10–$50 gifts</h2>
-          <span class="tag">Each gift can be</span>
-        </div>
-        <div class="chips">
-          <div class="chip c-stem">
-            <div class="cicon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 3v6L5.2 16.4A3.2 3.2 0 0 0 8 21h8a3.2 3.2 0 0 0 2.8-4.6L15 9V3"/>
-                <path d="M8 3h8"/><path d="M8.5 13h7"/>
-              </svg>
-            </div>
-            <div class="ctext">
-              <strong>STEM Kit</strong>
-              <span>Take-home STEM activity kit</span>
-            </div>
-          </div>
-
-          <div class="chip c-thrift">
-            <div class="cicon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82Z"/>
-                <circle cx="7" cy="7" r="1.4" fill="#F3EEE4" stroke="none"/>
-              </svg>
-            </div>
-            <div class="ctext">
-              <strong>Thrift gift</strong>
-              <span>Collectible thrift finds</span>
-            </div>
-          </div>
-
-          <div class="chip c-farm">
-            <div class="cicon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#1f2a24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 7h-5.2A2.8 2.8 0 0 0 12 5.05 2.8 2.8 0 0 0 9.2 7H4v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7Z"/>
-                <path d="M12 7v14M4 11h16"/>
-              </svg>
-            </div>
-            <div class="ctext">
-              <strong>Farm gift</strong>
-              <span>Eggs, plants &amp; homestead goods</span>
-            </div>
-          </div>
-
-          <div class="chip c-zoo">
-            <div class="cicon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/>
-                <path d="M12 7v10"/>
-              </svg>
-            </div>
-            <div class="ctext">
-              <strong>Farm tour / petting zoo tickets</strong>
-              <span>Farm visit or zoo passes</span>
-            </div>
-          </div>
-
-          <div class="chip full c-perk">
-            <div class="cicon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#F3EEE4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-            </div>
-            <div class="ctext">
-              <strong>Special perk</strong>
-              <span>Video game tester / new animal experience</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tier-grand">
-        <span class="grand-pill">★ Grand Prize ★</span>
-        <div class="grand-card-art">
-          <img src="assets/gold-poster/card.jpg" alt="Critter Gold member card">
-          <span class="grand-x2">×2</span>
-        </div>
-        <div class="grand-opts">
-          <div class="gopt">
+      <div class="row r-grand">
+        <span class="tag">★ Grand Prize</span>
+        <div class="art"><img src="assets/gold-poster/card.jpg" alt="Critter Gold member card"></div>
+        <div class="pair">
+          <div class="cell">
             <strong>Gold card</strong>
             <span>Critter Gold Membership</span>
           </div>
-          <div class="or-line">or</div>
-          <div class="gopt">
+          <div class="cell">
             <strong>Double Gold</strong>
             <span>2 Gold cards: one for you, one to gift</span>
           </div>
         </div>
-        <div class="grand-foot">Full-year Critter Gold Membership perks</div>
+      </div>
+
+      <div class="row r-50">
+        <span class="tag">$50 prize</span>
+        <div class="val">$50</div>
+        <div class="copy">
+          <h2>Whole-car farm tour</h2>
+          <p>The whole carload visits the farm</p>
+        </div>
+      </div>
+
+      <div class="row r-25">
+        <span class="tag">$25 prizes</span>
+        <div class="val">$25</div>
+        <div class="pair">
+          <div class="cell">
+            <strong>STEM Kit</strong>
+            <span>Take-home STEM on Call activity kit</span>
+          </div>
+          <div class="cell">
+            <strong>Farm tour ticket</strong>
+            <span>A ticket for a farm tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row r-perk">
+        <span class="tag">Special perk</span>
+        <div class="copy">
+          <h2>Special perk</h2>
+          <p>Video game tester / new animal experience</p>
+        </div>
+      </div>
+
+      <div class="row r-10">
+        <span class="tag">$10 gifts</span>
+        <div class="val">$10</div>
+        <div class="pair">
+          <div class="cell">
+            <strong>Farm gift</strong>
+            <span>Eggs, plants &amp; homestead goods</span>
+          </div>
+          <div class="cell">
+            <strong>Thrift gift</strong>
+            <span>Collectible thrift finds</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -238,16 +218,16 @@ html,body{background:#d9d2c3;color:var(--ink);font-family:"Source Sans 3",sans-s
       <div class="left">
         <div class="top">
           <h3>Critter Gold Membership</h3>
-          <span class="bogo">BOGO · $49.99 once</span>
+          <span class="price">Pay $49.99 once</span>
         </div>
         <p>~40% off camps, mobile petting zoos, tutoring &amp; homeschool support.</p>
       </div>
       <div class="badges">
-        <div class="row">
+        <div class="rowb">
           <span class="live">Prototype live now</span>
           <span class="soon">Coming soon</span>
         </div>
-        <div class="row">
+        <div class="rowb">
           <span class="gp" aria-label="Coming soon on Google Play">
             <svg class="tri" viewBox="0 0 18 20" aria-hidden="true">
               <path fill="#EA4335" d="M.7 1.1 10.2 10 .7 18.9A1.6 1.6 0 0 1 0 17.6V2.4C0 1.6.3 1.2.7 1.1Z"/>

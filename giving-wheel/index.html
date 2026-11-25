@@ -109,7 +109,7 @@
       inset 0 0 0 2px rgba(0,0,0,0.35);
   }
   .wheel-label.is-on-dark { color: #F3EEE4; font-weight: 700; }
-  .wheel-label.is-on-light { color: #1a1508; font-weight: 700; }
+  .wheel-label.is-on-light { color: #2f4038; font-weight: 700; }
   .wheel-label.is-premium { color: #1a1508; font-weight: 800; text-shadow: 0 1px 0 rgba(255,245,220,0.55); }
   .prize-list li[data-tier="common"] {
     background: #4C6458; border-color: #86A093; color: #F3EEE4;
@@ -297,11 +297,11 @@
       </div>
 
       <ul class="tier-legend" aria-label="What you can win">
-        <li><span class="tier-swatch" style="background:#F5F0E6;border-color:#c9b896" aria-hidden="true"></span> ∞ (free spin)</li>
-        <li><span class="tier-swatch is-common" aria-hidden="true"></span> $10 gift</li>
-        <li><span class="tier-swatch is-mid" aria-hidden="true"></span> $25 gift</li>
-        <li><span class="tier-swatch" style="background:#C9A87A;border-color:#d4b896" aria-hidden="true"></span> $50 gift</li>
         <li><span class="tier-swatch is-rare" aria-hidden="true"></span> Grand prize · Gold card or Double Gold</li>
+        <li><span class="tier-swatch" style="background:#2f4038;border-color:#86A093" aria-hidden="true"></span> $50 Whole-car farm tour</li>
+        <li><span class="tier-swatch" style="background:#4e6558;border-color:#86A093" aria-hidden="true"></span> $25 STEM Kit · Farm tour ticket</li>
+        <li><span class="tier-swatch" style="background:#b0753a;border-color:#d4b896" aria-hidden="true"></span> Special perk</li>
+        <li><span class="tier-swatch" style="background:#F3EEE4;border-color:#c9b896" aria-hidden="true"></span> $10 farm gift · thrift gift</li>
       </ul>
 
       <div class="wheel-wrap">
@@ -319,10 +319,10 @@
       </div>
 
       <button class="btn btn-primary btn-block" type="button" id="spin-btn" style="margin-top:0.5rem">Try Stead Spin</button>
-      <p class="rules-note" id="rules-note">About 2 spins per month on this device · Free Spin doesn’t use one · come back next month</p>
+      <p class="rules-note" id="rules-note">About 2 spins per month on this device · come back next month</p>
       <details class="rules-official" id="official-rules">
         <summary>Official rules (short)</summary>
-        <p>Open to adults 18+. Spins are limited per device each calendar month and reset on the 1st (Eastern time). Free Spin doesn’t use one. Each slice shows its prize; odds vary by prize. Prizes are claimed in person at Sheehan Homestead or a Critters on Call event, have no cash value and are valid through the end of the month won. To claim, show the win screen to our staff or message us a screenshot. No review or purchase is ever required. Sponsor: Sheehan Homestead LLC, Callahan, FL.</p>
+        <p>Open to adults 18+. Spins are limited per device each calendar month and reset on the 1st (Eastern time). Each slice shows its prize; odds vary by prize. Prizes are claimed in person at Sheehan Homestead or a Critters on Call event, have no cash value and are valid through the end of the month won. To claim, show the win screen to our staff or message us a screenshot. No review or purchase is ever required. Sponsor: Sheehan Homestead LLC, Callahan, FL.</p>
       </details>
       <p class="rules-legal"><strong>No purchase necessary. Google is not a sponsor.</strong></p>
       <p class="month-lock-note" id="month-lock-note" hidden><strong>You’ve had your spins for this month.</strong> Come back next month for another try.</p>
@@ -394,55 +394,52 @@
 
   /* No URL reset bypass: the monthly device lock can only reset on the 1st of the month (ET). */
 
-  /* 16 equal slices — two prize tiers + Free Spin ×2:
-     - $10–$50 gifts (12): STEM Kit ×2, $25 farm tour / petting zoo tickets ×2, $10 petting zoo ticket ×2,
-       $10 farm gift ×2, $10 thrift gift ×2, $50 gift ×1, Special perk ×1
-     - Grand prize (2): Gold card ×1, Double Gold ×1
-     - Free Spin ×2 (priceless redo; doesn’t use a monthly spin) */
+  /* 16 equal slices — no Free Spin slice, no $10 petting zoo ticket, no generic $50 gift.
+     Interleaved so like prizes are not adjacent; Gold card and Double Gold sit opposite (index 0 and 8).
+     Colors: Grand #c9a227, $50 #2f4038, $25 #4e6558, Perk #b0753a, $10 #F3EEE4. */
   var PRIZES = [
-    { id: "free-spin-a", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#EDE6D9", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
-    { id: "farm-10-a", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#4C6458", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "ticket-10-a", label: "$10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#B8956C", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "thrift-10-a", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#5A7366", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "tour-25-a", label: "$25 farm tour / petting zoo tickets", short: "$25<br>TOUR", value: "$25 farm tour / petting zoo tickets", teaser: "$25 farm tour or petting zoo tickets", kind: "ticket", tier: "mid", color: "#9A7B4A", fulfill: "$25 farm tour / petting zoo tickets. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "stem-kit-a", label: "STEM Kit", short: "STEM<br>KIT", value: "STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#7D5A36", fulfill: "STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
-    { id: "thrift-10-b", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#2F4038", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "double-gold", label: "Double Gold", short: "DOUBLE<br>GOLD", value: "2 Gold cards: one for you, one to gift", teaser: "two Critter Gold Memberships", kind: "grand", tier: "rare", color: "#DFBA3B", fulfill: "2 Gold cards: one for you, one to gift. Includes ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
-    { id: "free-spin-b", label: "Free Spin", short: "FREE<br>SPIN", value: "Priceless redo · doesn’t use a monthly spin", teaser: "nothing better than a free spin", kind: "again", tier: "common", color: "#F5F0E6", fulfill: "Nothing better than a free spin. Life doesn’t always give a redo — the wheel does. Spin again (doesn’t use your monthly spins)." },
-    { id: "farm-10-b", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#3A4F45", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "gift-50", label: "$50 gift", short: "$50<br>GIFT", value: "$50 gift — STEM Kit, thrift gift, farm gift, or farm tour / petting zoo tickets", teaser: "STEM · thrift · farm · petting zoo tickets (excludes Gold)", kind: "gift", tier: "mid", color: "#D4B896", fulfill: "$50 gift — choose STEM Kit, thrift gift, farm gift, or farm tour / petting zoo tickets (excludes Gold membership). Claim below, then show this screen at Sheehan Homestead." },
-    { id: "special-perk", label: "Special perk", short: "SPECIAL<br>PERK", value: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below.", teaser: "video game tester · new animal experience", kind: "sample", tier: "mid", color: "#6E5A2E", fulfill: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below." },
-    { id: "ticket-10-b", label: "$10 petting zoo ticket", short: "$10<br>TICKET", value: "Free $10 petting zoo ticket", teaser: "$10 petting zoo ticket", kind: "ticket", tier: "mid", color: "#C4A06A", fulfill: "Free $10 petting zoo ticket. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "tour-25-b", label: "$25 farm tour / petting zoo tickets", short: "$25<br>TOUR", value: "$25 farm tour / petting zoo tickets", teaser: "$25 farm tour or petting zoo tickets", kind: "ticket", tier: "mid", color: "#4C6458", fulfill: "$25 farm tour / petting zoo tickets. Claim below, then show this screen at Sheehan Homestead." },
-    { id: "stem-kit-b", label: "STEM Kit", short: "STEM<br>KIT", value: "STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#A8884E", fulfill: "STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
-    { id: "gold-card", label: "Gold card", short: "GOLD<br>CARD", value: "$50 MSRP · ~$100 value · ~40% off camps, mobile petting zoos, tutoring & homeschool support", teaser: "Critter Gold Membership", kind: "grand", tier: "rare", color: "#E8C547", fulfill: "Gold card — $50 MSRP, about $100 value, ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." }
+    { id: "gold-card", label: "Gold card", short: "GOLD<br>CARD", value: "$50 MSRP · ~$100 value · ~40% off camps, mobile petting zoos, tutoring & homeschool support", teaser: "Critter Gold Membership", kind: "grand", tier: "rare", color: "#c9a227", fulfill: "Gold card — $50 MSRP, about $100 value, ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
+    { id: "farm-10-a", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "stem-kit-a", label: "$25 STEM Kit", short: "$25<br>STEM", value: "$25 STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#4e6558", fulfill: "$25 STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
+    { id: "thrift-10-a", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "whole-car-a", label: "$50 Whole-car farm tour", short: "$50<br>CARLOAD", value: "$50 Whole-car farm tour — the whole carload visits the farm", teaser: "the whole carload visits the farm", kind: "ticket", tier: "mid", color: "#2f4038", fulfill: "$50 Whole-car farm tour: the whole carload visits the farm. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "special-perk-a", label: "Special perk", short: "SPECIAL<br>PERK", value: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below.", teaser: "video game tester · new animal experience", kind: "sample", tier: "mid", color: "#b0753a", fulfill: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below." },
+    { id: "tour-25-a", label: "$25 Farm tour ticket", short: "$25<br>TOUR", value: "$25 Farm tour ticket", teaser: "a farm tour ticket", kind: "ticket", tier: "mid", color: "#4e6558", fulfill: "$25 Farm tour ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "farm-10-b", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "double-gold", label: "Double Gold", short: "DOUBLE<br>GOLD", value: "2 Gold cards: one for you, one to gift", teaser: "two Critter Gold Memberships", kind: "grand", tier: "rare", color: "#c9a227", fulfill: "2 Gold cards: one for you, one to gift. Includes ~40% off camps, mobile petting zoos, tutoring & homeschool support. Claim below, then come to Sheehan Homestead. Spins close after Gold." },
+    { id: "thrift-10-b", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "stem-kit-b", label: "$25 STEM Kit", short: "$25<br>STEM", value: "$25 STEM Kit: a take-home STEM on Call activity kit", teaser: "hands-on science to take home", kind: "gift", tier: "mid", color: "#4e6558", fulfill: "$25 STEM Kit: a take-home STEM on Call activity kit. Claim below, then show this screen to pick it up." },
+    { id: "farm-10-c", label: "$10 farm gift", short: "$10<br>FARM", value: "Free $10 farm gift", teaser: "plant, eggs, or farm gift", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 farm gift. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "whole-car-b", label: "$50 Whole-car farm tour", short: "$50<br>CARLOAD", value: "$50 Whole-car farm tour — the whole carload visits the farm", teaser: "the whole carload visits the farm", kind: "ticket", tier: "mid", color: "#2f4038", fulfill: "$50 Whole-car farm tour: the whole carload visits the farm. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "special-perk-b", label: "Special perk", short: "SPECIAL<br>PERK", value: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below.", teaser: "video game tester · new animal experience", kind: "sample", tier: "mid", color: "#b0753a", fulfill: "Special perk: be a video game tester for our education game, or try a new animal experience. Claim below." },
+    { id: "tour-25-b", label: "$25 Farm tour ticket", short: "$25<br>TOUR", value: "$25 Farm tour ticket", teaser: "a farm tour ticket", kind: "ticket", tier: "mid", color: "#4e6558", fulfill: "$25 Farm tour ticket. Claim below, then show this screen at Sheehan Homestead." },
+    { id: "thrift-10-c", label: "$10 thrift gift", short: "$10<br>THRIFT", value: "Free $10 thrift gift", teaser: "thrift collectibles · Goodwill vibes", kind: "gift", tier: "common", color: "#F3EEE4", fulfill: "Free $10 thrift gift. Claim below, then show this screen at Sheehan Homestead." }
   ];
 
   var goldCardCount = PRIZES.filter(function (p) { return p.id === "gold-card"; }).length;
   var doubleGoldCount = PRIZES.filter(function (p) { return p.id === "double-gold"; }).length;
+  var wholeCarCount = PRIZES.filter(function (p) { return p.id.indexOf("whole-car") === 0; }).length;
   var stemKitCount = PRIZES.filter(function (p) { return p.id.indexOf("stem-kit") === 0; }).length;
   var tour25Count = PRIZES.filter(function (p) { return p.id.indexOf("tour-25") === 0; }).length;
-  var ticket10Count = PRIZES.filter(function (p) { return p.id.indexOf("ticket-10") === 0; }).length;
+  var specialPerkCount = PRIZES.filter(function (p) { return p.id.indexOf("special-perk") === 0; }).length;
   var farm10Count = PRIZES.filter(function (p) { return p.id.indexOf("farm-10") === 0; }).length;
   var thrift10Count = PRIZES.filter(function (p) { return p.id.indexOf("thrift-10") === 0; }).length;
-  var gift50Count = PRIZES.filter(function (p) { return p.id === "gift-50"; }).length;
-  var specialPerkCount = PRIZES.filter(function (p) { return p.id === "special-perk"; }).length;
   var freeSpinCount = PRIZES.filter(function (p) { return p.kind === "again"; }).length;
   if (
     PRIZES.length !== 16 ||
     goldCardCount !== 1 ||
     doubleGoldCount !== 1 ||
+    wholeCarCount !== 2 ||
     stemKitCount !== 2 ||
     tour25Count !== 2 ||
-    ticket10Count !== 2 ||
-    farm10Count !== 2 ||
-    thrift10Count !== 2 ||
-    gift50Count !== 1 ||
-    specialPerkCount !== 1 ||
-    freeSpinCount !== 2
+    specialPerkCount !== 2 ||
+    farm10Count !== 3 ||
+    thrift10Count !== 3 ||
+    freeSpinCount !== 0
   ) {
-    throw new Error("Stead Spin must be 16 slices: 1 Gold, 1 Double Gold, 2× STEM Kit, 2× $25 tour, 2× $10 ticket, 2× $10 farm, 2× $10 thrift, 1× $50 gift, 1× Special perk, 2× Free Spin");
+    throw new Error("Stead Spin must be 16 slices: 1 Gold card, 1 Double Gold, 2× $50 Whole-car farm tour, 2× $25 STEM Kit, 2× $25 Farm tour ticket, 2× Special perk, 3× $10 farm gift, 3× $10 thrift gift (no Free Spin)");
   }
+
 
   /* Equal weights — odds follow slice count. */
   var WEIGHTS = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
